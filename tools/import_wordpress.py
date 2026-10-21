@@ -246,8 +246,8 @@ def kop(titel, beschrijving, canonical, root, afbeelding=None, extra=""):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="{root}assets/css/site.css">
-  <link rel="stylesheet" href="{root}partners/slider.css?v=3">
-  <script src="{root}partners/slider.js?v=3" defer></script>{extra}
+  <link rel="stylesheet" href="{root}partners/slider.css?v=4">
+  <script src="{root}partners/slider.js?v=4" defer></script>{extra}
 </head>
 <body>
   <div class="testbalk">Dit is een testomgeving. De echte pagina staat op <a href="{canonical}">www.nijmegenonline.nl</a>.</div>

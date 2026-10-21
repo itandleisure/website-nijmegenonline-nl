@@ -15,7 +15,6 @@ dezelfde partners willen tonen.
   "naam": "Naam zoals bezoekers hem zien",
   "url": "https://www.website-van-partner.nl/",
   "afbeelding": "img/bestand.webp",
-  "achtergrond": "#222222",
   "plaatsingen": ["alle"],
   "start": "2026-11-01",
   "eind": "2027-01-31",
