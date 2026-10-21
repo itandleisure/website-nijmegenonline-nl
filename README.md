@@ -48,6 +48,8 @@ pagina die `<!-- zijbalk --><!-- /zijbalk -->` bevat. Op desktop staat de zijbal
 blijven de partners onderaan in beeld tijdens het scrollen; op mobiel komt hij onder het artikel,
 zonder partners (die staan daar al in de tekst).
 
+Zie [LIVEGANG.md](LIVEGANG.md) voor de stappen naar www.nijmegenonline.nl.
+
 ## Belangrijk zolang dit een test is
 
 - Geen `CNAME`-bestand toevoegen: dat koppelt het domein en zou de echte site vervangen.
