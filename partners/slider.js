@@ -4,6 +4,7 @@
  *   <link rel="stylesheet" href="…/partners/slider.css">
  *   <div class="partner-slider" data-plaatsing="blog"></div>
  *   <script src="…/partners/slider.js" defer></script>
+ * Voor de zijbalk: <div class="partner-slider" data-plaatsing="zijbalk" data-weergave="verticaal"></div>
  * De partners komen uit partners.json naast dit script.
  */
 (function () {
@@ -31,8 +32,17 @@
       .map(function (x) { return x.p; });
   }
 
-  function perKeer() {
+  function isVerticaal(el) {
+    return el.getAttribute('data-weergave') === 'verticaal';
+  }
+
+  function perKeer(el) {
+    if (isVerticaal(el)) return parseInt(el.getAttribute('data-per-keer'), 10) || 2;
     return window.matchMedia('(max-width: 600px)').matches ? 1 : 3;
+  }
+
+  function isZichtbaar(el) {
+    return el.offsetParent !== null;
   }
 
   function meld(actie, p) {
@@ -41,10 +51,35 @@
     }
   }
 
-  function bouw(el, partners) {
-    var plaatsing = el.getAttribute('data-plaatsing') || 'alle';
-    var lijst = hussel(partners.filter(function (p) { return isActief(p, plaatsing); }));
+  // Staan er meerdere sliders tegelijk in beeld (tekst + zijbalk op desktop),
+  // dan krijgt elke slider andere partners, zodat niemand hetzelfde logo twee keer ziet.
+  function verdeel(sliders, partners) {
+    var zichtbaar = sliders.filter(isZichtbaar);
+    var lijsten = sliders.map(function () { return []; });
+    var beurt = 0;
+    hussel(partners).forEach(function (p) {
+      if (zichtbaar.length < 2) {
+        sliders.forEach(function (el, i) {
+          if (isActief(p, el.getAttribute('data-plaatsing') || 'alle')) lijsten[i].push(p);
+        });
+        return;
+      }
+      for (var k = 0; k < zichtbaar.length; k++) {
+        var el = zichtbaar[(beurt + k) % zichtbaar.length];
+        if (isActief(p, el.getAttribute('data-plaatsing') || 'alle')) {
+          lijsten[sliders.indexOf(el)].push(p);
+          beurt = (beurt + k + 1) % zichtbaar.length;
+          return;
+        }
+      }
+    });
+    return lijsten;
+  }
+
+  function bouw(el, lijst) {
     if (!lijst.length) { el.hidden = true; return; }
+    var verticaal = isVerticaal(el);
+    if (verticaal) el.classList.add('partner-slider--verticaal');
 
     el.innerHTML =
       '<p class="partner-slider__label">Partners</p>' +
@@ -75,14 +110,16 @@
     var timer = null;
 
     function aantalStappen() {
-      return Math.max(1, lijst.length - perKeer() + 1);
+      return Math.max(1, lijst.length - perKeer(el) + 1);
     }
 
     function teken() {
-      var n = perKeer();
+      var n = perKeer(el);
       el.style.setProperty('--per-keer', n);
       if (stap >= aantalStappen()) stap = 0;
-      rij.style.transform = 'translateX(' + (-stap * 100 / n) + '%)';
+      rij.style.transform = verticaal
+        ? 'translateY(calc(' + (-stap) + ' * var(--item-hoogte)))'
+        : 'translateX(' + (-stap * 100 / n) + '%)';
       stippen.innerHTML = '';
       if (aantalStappen() > 1) {
         for (var i = 0; i < aantalStappen(); i++) {
@@ -112,16 +149,17 @@
 
     teken();
     start();
-    lijst.forEach(function (p) { meld('partner_vertoning', p); });
+    if (isZichtbaar(el)) lijst.forEach(function (p) { meld('partner_vertoning', p); });
   }
 
   function init() {
-    var sliders = document.querySelectorAll('.partner-slider');
+    var sliders = Array.prototype.slice.call(document.querySelectorAll('.partner-slider'));
     if (!sliders.length) return;
     fetch(new URL('partners.json', basis), { cache: 'no-cache' })
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        sliders.forEach(function (el) { bouw(el, data.partners || []); });
+        var lijsten = verdeel(sliders, data.partners || []);
+        sliders.forEach(function (el, i) { bouw(el, lijsten[i]); });
       })
       .catch(function () {
         sliders.forEach(function (el) { el.hidden = true; });

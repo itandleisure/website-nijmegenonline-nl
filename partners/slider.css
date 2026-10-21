@@ -16,3 +16,11 @@
 }
 .partner-slider__stippen button[aria-current="true"] { background: #539c20; }
 @media (prefers-reduced-motion: reduce) { .partner-slider__rij { transition: none; } }
+
+/* Verticale weergave (zijbalk): partners onder elkaar, schuift omhoog */
+.partner-slider--verticaal { --item-hoogte: 190px; margin: 0; }
+.partner-slider--verticaal .partner-slider__venster { height: calc(var(--per-keer, 2) * var(--item-hoogte)); }
+.partner-slider--verticaal .partner-slider__rij { flex-direction: column; }
+.partner-slider--verticaal .partner-slider__item { flex: 0 0 var(--item-hoogte); height: var(--item-hoogte); padding: 0 0 10px; }
+.partner-slider--verticaal .partner-slider__item a { height: 100%; min-height: 0; }
+.partner-slider--verticaal .partner-slider__item img { max-height: 100%; }
