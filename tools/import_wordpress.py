@@ -87,6 +87,8 @@ def partner_domeinen():
 
 
 PARTNERS = partner_domeinen()
+# Oud-partners: hun banners staan nog in oude artikelen, maar horen er niet meer in
+OUD_PARTNERS = {"fotowandelingnijmegen.nl", "danscentrumvermeulen.nl", "modelspoorwebshop.nl"}
 TOEGESTAAN = {
     "a": {"href"}, "img": {"src", "alt", "width", "height"},
     "td": {"colspan", "rowspan"}, "th": {"colspan", "rowspan"},
@@ -113,7 +115,7 @@ def schoon(content, slugs, root, gesponsord):
             t.decompose()
     # Bannerlinks van partners: die staan nu in de partnerslider
     for a in soup.find_all("a", href=True):
-        if a.find("img") and domein(a["href"]) in PARTNERS:
+        if a.find("img") and domein(a["href"]) in PARTNERS | OUD_PARTNERS:
             a.decompose()
     for h in soup.find_all("h1"):
         h.name = "h2"
@@ -123,6 +125,14 @@ def schoon(content, slugs, root, gesponsord):
         i.name = "em"
     for t in soup.find_all(["div", "section", "span", "u", "font", "center"]):
         t.unwrap()
+    # Koppen die WordPress in een losse lijst zette (gaf een los nummer of bolletje ervoor)
+    for lijst in soup.find_all(["ul", "ol"]):
+        items = lijst.find_all("li", recursive=False)
+        if items and all(li.find(re.compile(r"^h[2-6]$")) and not li.get_text(strip=True).replace(
+                li.find(re.compile(r"^h[2-6]$")).get_text(strip=True), "") for li in items):
+            for li in items:
+                li.unwrap()
+            lijst.unwrap()
     for t in soup.find_all(True):
         keep = TOEGESTAAN.get(t.name, set())
         t.attrs = {k: v for k, v in t.attrs.items() if k in keep}
