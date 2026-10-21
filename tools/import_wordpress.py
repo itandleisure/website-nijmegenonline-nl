@@ -99,6 +99,11 @@ def partner_domeinen():
 
 PARTNERS = partner_domeinen()
 # Oud-partners: hun banners staan nog in oude artikelen, maar horen er niet meer in
+# Eigen keuze voor de uitgelichte foto, waar WordPress er geen (openbare) heeft
+EIGEN_FOTO = {
+    "museums-in-nijmegen-wat-ga-jij-ontdekken": ("/wp-content/uploads/2023/09/zja-vrijheidsmuseum-groesbeek-8-kleiner.jpg",
+                                                 "Het Vrijheidsmuseum in Groesbeek bij Nijmegen"),
+}
 OUD_PARTNERS = {"fotowandelingnijmegen.nl", "danscentrumvermeulen.nl", "modelspoorwebshop.nl"}
 TOEGESTAAN = {
     "a": {"href"}, "img": {"src", "alt", "width", "height"},
@@ -508,6 +513,10 @@ def main(bron):
 
     # Uitgelichte foto: ontbreekt (media niet openbaar) of is dezelfde als bij een ander artikel?
     # Dan de eerste andere foto uit de tekst. Het artikel met het meeste verkeer houdt de foto.
+    for a in artikelen:
+        if a["slug"] in EIGEN_FOTO:
+            pad, alt = EIGEN_FOTO[a["slug"]]
+            a["img"] = {"src": SITE + pad, "w": 1400, "h": 350, "alt": alt}
     gebruikt = set()
     for a in sorted(artikelen, key=lambda a: -a["verkeer"]):
         if a["img"] and a["img"]["src"] not in gebruikt:
