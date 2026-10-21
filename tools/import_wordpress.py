@@ -32,11 +32,14 @@ SEO = {r["url"]: r for r in csv.DictReader(
     open(ROOT / "data" / "seo-artikelen.csv", encoding="utf-8"), delimiter=";")}
 # Gidsen: themapagina's die artikelen over één onderwerp bundelen (bestaande WordPress-URL's)
 GIDSEN = json.load(open(ROOT / "data" / "gidsen.json", encoding="utf-8"))
-ARTIKEL_GIDS = {}
+ARTIKEL_GIDS = {}   # slug -> eerste gids
+ARTIKEL_GIDSEN = {}  # slug -> alle gidsen waar het artikel in staat
 for _g in GIDSEN:
     for _sec in _g["secties"]:
         for _slug in _sec["artikelen"]:
             ARTIKEL_GIDS.setdefault(_slug, _g)
+            if _g not in ARTIKEL_GIDSEN.setdefault(_slug, []):
+                ARTIKEL_GIDSEN[_slug].append(_g)
 HANDGEMAAKT = {"kerstmarkten-in-nijmegen"}  # deze pagina's niet overschrijven
 
 RUBRIEKEN = [
@@ -279,6 +282,37 @@ def kaart(a, root):
             % (root, a["slug"], img, esc(a["titel"]), esc(a["samenvatting"])))
 
 
+def link_naar_gids(tekst, g, root):
+    """Linkt de eerste keer dat de gidsnaam in een alinea of opsomming staat naar de gids.
+    Niet in koppen of bestaande links, en niet als het artikel al naar de gids linkt."""
+    doel = root + g["url"].lstrip("/")
+    if 'href="%s"' % doel in tekst:
+        return tekst
+    zoek = re.compile(r"\b%s\b" % re.escape(g["naam"]), re.I)
+    stukken = re.split(r"(<[^>]+>)", tekst)
+    open_ = []
+    for i, st in enumerate(stukken):
+        if st.startswith("<"):
+            m = re.match(r"<(/?)([a-z0-9]+)", st, re.I)
+            if m:
+                tag = m.group(2).lower()
+                if m.group(1):
+                    if tag in open_:
+                        del open_[len(open_) - 1 - open_[::-1].index(tag)]
+                elif not st.endswith("/>") and tag not in ("img", "br", "hr", "source", "input"):
+                    open_.append(tag)
+            continue
+        if any(t in open_ for t in ("a", "h1", "h2", "h3", "h4", "h5", "h6", "figcaption", "button")):
+            continue
+        if not any(t in open_ for t in ("p", "li")):
+            continue
+        m = zoek.search(st)
+        if m:
+            stukken[i] = st[:m.start()] + '<a href="%s">%s</a>' % (doel, m.group(0)) + st[m.end():]
+            return "".join(stukken)
+    return tekst
+
+
 def artikel_pagina(a, gerelateerd):
     root = "../"
     canonical = "%s/%s/" % (SITE, a["slug"])
@@ -305,15 +339,20 @@ def artikel_pagina(a, gerelateerd):
         bij += ", bijgewerkt op %s" % datum_nl(a["modified"])
     out.append('        <p class="bijgewerkt">%s</p>' % bij)
     gids = ARTIKEL_GIDS.get(a["slug"])
-    if gids:
-        out.append('        <p class="gidslabel">Onderdeel van de gids <a href="%s%s">%s</a></p>'
-                   % (root, gids["url"].lstrip("/"), esc(gids["naam"])))
+    gidsen = ARTIKEL_GIDSEN.get(a["slug"], [])
+    if gidsen:
+        links = ['<a href="%s%s">%s</a>' % (root, x["url"].lstrip("/"), esc(x["naam"])) for x in gidsen]
+        out.append('        <p class="gidslabel">Onderdeel van de gids %s</p>'
+                   % (links[0] if len(links) == 1 else ", ".join(links[:-1]) + " en " + links[-1]))
     if a["img"] and not a["img"].get("uit_tekst"):
         out.append('        <figure><img src="%s" alt="%s"%s></figure>' % (
             esc(a["img"]["src"]), esc(goede_alt(a["img"]["alt"], a["img"]["src"], a["titel"])),
             ' width="%s" height="%s"' % (a["img"]["w"], a["img"]["h"]) if a["img"]["w"] else ""))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
-    out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % a["html"])
+    tekst = a["html"]
+    for x in gidsen:
+        tekst = link_naar_gids(tekst, x, root)
+    out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>")
     if gerelateerd:
         kopje = ("Meer uit de gids " + gids["naam"]) if gids else "Meer over %s" % (
@@ -381,6 +420,14 @@ def gids_pagina(g, per_slug):
         for x in subs:
             out.append('          <li><a href="%s%s">%s</a></li>' % (root, x["url"].lstrip("/"), esc(x["naam"])))
         out.append("        </ul></section>")
+    groep = next(((n, urls) for n, urls in GIDS_GROEPEN if g["url"] in urls), None)
+    buren = [x for x in GIDSEN if groep and x["url"] in groep[1] and x["url"] != g["url"]
+             and x["url"] != g.get("hoofdgids") and x not in subs]
+    if buren:
+        out.append('        <section class="gids-sectie"><h2>Andere gidsen: %s</h2><ul class="gids-lijst">' % esc(groep[0].lower()))
+        for x in buren:
+            out.append('          <li><a href="%s%s">%s</a></li>' % (root, x["url"].lstrip("/"), esc(x["naam"])))
+        out.append("        </ul></section>")
     if g["faq"]:
         out.append('        <section class="gids-sectie faq" id="veelgestelde-vragen">\n          <h2>Veelgestelde vragen</h2>')
         for f in g["faq"]:
@@ -437,6 +484,9 @@ def gidsen_overzicht(per_slug):
     return "\n".join(out)
 
 
+HOME_GIDSEN = ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/trouwen-in-nijmegen/", "/thema/overnachten-in-nijmegen/",
+               "/thema/bb-nijmegen/", "/jaarlijkse-evenementen/nijmeegse-vierdaagse/", "/thema/studeren-in-nijmegen/",
+               "/thema/zaal-huren-in-nijmegen/", "/thema/cafes-in-nijmegen/"]
 GIDS_GROEPEN = [
     ("Eten, drinken en cultuur", ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/cafes-in-nijmegen/", "/thema/museums-nijmegen/"]),
     ("Bijzondere momenten", ["/thema/trouwen-in-nijmegen/", "/thema/zaal-huren-in-nijmegen/", "/jaarlijkse-evenementen/nijmeegse-vierdaagse/", "/thema/fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen/"]),
@@ -556,6 +606,20 @@ def main(bron):
         d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(gids_pagina(g, per_slug), encoding="utf-8")
     (ROOT / "thema" / "index.html").write_text(gidsen_overzicht(per_slug), encoding="utf-8")
+
+    # Homepage: de belangrijkste gidsen (veel zoekvolume) tussen <!-- gidsen --> en <!-- /gidsen -->
+    top = [next(g for g in GIDSEN if g["url"] == u) for u in HOME_GIDSEN]
+    blok = ['<!-- gidsen -->', '    <section id="gidsen">', '      <div class="container">', '        <h2>Populaire gidsen</h2>', '        <div class="raster">']
+    for g in top:
+        f = SITE + g["foto"] if g.get("foto") else next((per_slug[x]["img"]["src"] for sec in g["secties"] for x in sec["artikelen"]
+                                                       if x in per_slug and per_slug[x]["img"]), None)
+        blok.append('          <article class="kaart"><a href="%s">%s<div class="kaart__tekst"><h3>%s</h3><p>%s</p></div></a></article>'
+                    % (g["url"].lstrip("/"), '<img src="%s" alt="" loading="lazy">' % esc(f) if f else "", esc(g["naam"]), esc(g["kort"])))
+    blok += ['        </div>', '        <p class="gids-verder"><a href="thema/">Bekijk alle gidsen</a></p>', '      </div>', '    </section>', '    <!-- /gidsen -->']
+    home = ROOT / "index.html"
+    h = home.read_text(encoding="utf-8")
+    h = re.sub(r"<!-- gidsen -->.*?<!-- /gidsen -->", lambda m: "\n".join(blok), h, flags=re.S)
+    home.write_text(h, encoding="utf-8")
 
     (ROOT / "blog").mkdir(exist_ok=True)
     (ROOT / "blog" / "index.html").write_text(blog_pagina(per_rubriek), encoding="utf-8")
