@@ -179,3 +179,25 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .blog-rubriek__kop { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
 .blog-rubriek__kop h2 { margin: 0; font-size: 1.4rem; border-top: 3px solid var(--groen); padding-top: 6px; }
 .blog-rubriek__kop a { font-weight: 600; }
+
+/* Gidsen */
+.gidslabel { font-size: 0.9rem; color: var(--groen); font-weight: 600; margin: 0 0 12px; }
+.gidslabel a { color: var(--groen); }
+.gids > .gidslabel { display: inline-block; background: var(--groen); color: var(--wit); text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; }
+.gids-inhoud { background: #f4f8f0; border-left: 4px solid var(--groen); padding: 12px 16px; margin: 20px 0; border-radius: 0 6px 6px 0; }
+.gids-inhoud ul { margin: 6px 0 0; padding-left: 20px; }
+.gids-inhoud li { margin: 4px 0; }
+.gids-sectie { margin: 36px 0; }
+.gids-sectie .raster { margin-top: 16px; }
+.gids-lijst li { margin: 6px 0; }
+.faq details { border-bottom: 1px solid #e5e5e5; padding: 12px 0; }
+.faq summary { cursor: pointer; font-weight: 700; }
+.faq details p { margin: 8px 0 0; }
+.gids-cta { margin: 32px 0; }
+.gids-verder { margin: 16px 0 0; font-weight: 700; }
+.gidsen-raster { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.gidsen-raster a { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 18px; border: 1px solid #e5e5e5; border-radius: 8px; text-decoration: none; color: var(--tekst); background: var(--wit); }
+.gidsen-raster a:hover { border-color: var(--groen); }
+.gidsen-raster strong { font-size: 1.1rem; color: var(--groen); }
+.gidsen-raster span { font-size: 0.95rem; }
+.gidsen-raster em { font-style: normal; font-size: 0.85rem; color: #777; margin-top: auto; }
