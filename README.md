@@ -12,6 +12,13 @@ assets/css/site.css   kleuren, lettertypes en opmaak
 kerstmarkten-in-nijmegen/  eerste echte pagina (zelfde URL als op WordPress)
 partials/zijbalk.html zijbalk voor artikelen (alleen naast de tekst op desktop)
 partners/             centrale partnerlijst + roterende slider, zie partners/README.md
+<artikel>/            alle 214 artikelen, op dezelfde URL als op WordPress
+category/<rubriek>/   overzicht per rubriek (8 rubrieken + partnerbijdragen)
+blog/                 "Inspiratie opdoen": alle rubrieken op één pagina
+data/indeling-artikelen.csv   welke rubriek elk artikel heeft
+_redirects            301's van oude WordPress-categoriepagina's (voor Cloudflare Pages)
+partials/             gedeelde header, footer en zijbalk
+tools/import_wordpress.py     zet de WordPress-export om naar pagina's
 tools/build.py        zet de onderdelen uit partials/ in alle pagina's
 robots.txt            blokkeert zoekmachines zolang dit een test is
 .nojekyll             zorgt dat GitHub Pages de bestanden ongewijzigd serveert
@@ -23,9 +30,20 @@ robots.txt            blokkeert zoekmachines zolang dit een test is
   (Settings → Pages → Deploy from a branch → `main` / root).
 - **Lokaal:** `python -m http.server 8080` in deze map en ga naar http://localhost:8080.
 
+## Artikelen opnieuw importeren
+
+```bash
+python tools/import_wordpress.py /pad/naar/wp-json   # REST-export van WordPress
+python tools/build.py
+```
+
+Een artikel naar een andere rubriek verplaatsen: pas `data/indeling-artikelen.csv` aan en draai beide
+scripts opnieuw. Afbeeldingen komen nog van wp-content/uploads op de live site; die moeten vóór de
+livegang naar deze repo of een opslagdienst.
+
 ## Zijbalk aanpassen
 
-Pas `partials/zijbalk.html` aan en draai `python tools/build.py`. Dat zet de nieuwe zijbalk in elke
+Pas `partials/zijbalk.html` (of header/footer) aan en draai `python tools/build.py`. Dat zet de nieuwe zijbalk in elke
 pagina die `<!-- zijbalk --><!-- /zijbalk -->` bevat. Op desktop staat de zijbalk naast de tekst en
 blijven de partners onderaan in beeld tijdens het scrollen; op mobiel komt hij onder het artikel,
 zonder partners (die staan daar al in de tekst).

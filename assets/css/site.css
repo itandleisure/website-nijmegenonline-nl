@@ -146,3 +146,36 @@ footer ul { list-style: none; padding: 0; margin: 0 0 12px; display: flex; flex-
   .zijbalk__partners { position: sticky; top: 16px; }
   .gerelateerd { max-width: none; }
 }
+
+/* Artikeltekst uit WordPress */
+.inhoud-tekst { overflow-wrap: anywhere; }
+h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
+.inhoud-tekst img { border-radius: var(--radius); margin: 16px 0; }
+.inhoud-tekst table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; display: block; overflow-x: auto; }
+.inhoud-tekst th, .inhoud-tekst td { border: 1px solid var(--rand); padding: 8px 10px; text-align: left; vertical-align: top; }
+.inhoud-tekst th { background: var(--licht); }
+.inhoud-tekst h2 { font-size: 1.45rem; }
+.inhoud-tekst h5, .inhoud-tekst h6 { font-size: 1rem; margin: 20px 0 6px; }
+.inhoud-tekst blockquote { border-left: 4px solid var(--groen); margin: 16px 0; padding: 4px 16px; color: var(--grijs); }
+.partnerlabel { display: inline-block; background: #fff4cc; color: #7a5a00; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin: 0 0 8px; }
+
+/* Kaarten met afbeelding (rubrieken, blog, gerelateerd) */
+.kaart:has(img) { padding: 0; overflow: hidden; }
+.kaart img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; }
+.kaart__tekst { padding: 12px 14px 16px; }
+.kaart__tekst h3 { font-size: 1rem; margin: 0 0 6px; }
+.kaart__tekst p { font-size: 0.88rem; margin: 0; }
+.gerelateerd .kaart__tekst p { display: none; }
+
+/* Rubriek- en blogoverzicht */
+.rubriek-kop { background: var(--wit); border-radius: var(--radius); padding: clamp(20px, 4vw, 36px); margin: 8px 0 16px; }
+.rubriek-kop h1 { margin: 0 0 8px; font-size: clamp(1.8rem, 4vw, 2.4rem); }
+.rubriek-kop p { margin: 0; color: var(--grijs); max-width: 720px; }
+.rubriek-menu { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+.rubriek-menu a { background: var(--wit); border: 1px solid var(--rand); border-radius: 999px; padding: 6px 14px; text-decoration: none; color: var(--tekst); font-weight: 600; font-size: 0.9rem; }
+.rubriek-menu a[aria-current] { background: var(--groen); border-color: var(--groen); color: var(--wit); }
+.rubriek-raster { margin-bottom: 32px; }
+.blog-rubriek { padding: 20px 0; }
+.blog-rubriek__kop { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.blog-rubriek__kop h2 { margin: 0; font-size: 1.4rem; border-top: 3px solid var(--groen); padding-top: 6px; }
+.blog-rubriek__kop a { font-weight: 600; }
