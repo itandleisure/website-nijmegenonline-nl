@@ -70,3 +70,8 @@ De versie om na te lopen staat als spreadsheet in `advies/seo/seo-artikelen.xlsx
 naam, SEO-titel, beschrijving, intro, secties met de artikelen die erbij horen, veelgestelde vragen en de link naar de bedrijvengids.
 `tools/import_wordpress.py` bouwt daaruit de gidspagina's en het overzicht op `/thema/`, en zet in elk artikel een link naar zijn gids
 plus "Meer uit de gids". Een artikel toevoegen aan een gids: zet de slug in de juiste sectie en draai het importscript opnieuw.
+
+## Afbeeldingen
+
+De foto's van de WordPress-site staan als verkleinde webp in `assets/uploads/` (zelfde pad als in `wp-content/uploads/`).
+Volgorde bij opnieuw bouwen: `python3 tools/import_wordpress.py && python3 tools/afbeeldingen.py && python3 tools/build.py`.

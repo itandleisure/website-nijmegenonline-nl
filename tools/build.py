@@ -7,7 +7,9 @@
 2. Links naar www.nijmegenonline.nl/<pad>/ worden relatief als die pagina al in deze repo staat,
    zodat de testsite op zichzelf werkt. Links naar pagina's die nog niet gebouwd zijn blijven
    naar de huidige site wijzen; die staan in het overzicht aan het eind.
-3. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
+3. Afbeeldingen van www.nijmegenonline.nl/wp-content/uploads/ wijzen naar de eigen webp-versie in
+   assets/uploads/ als tools/afbeeldingen.py die heeft gemaakt (src relatief, og:image absoluut).
+4. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
 
 Gebruik: python tools/build.py [--live]
 """
@@ -19,6 +21,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PARTIALS = ROOT / "partials"
 SITE = "https://www.nijmegenonline.nl"
+UPLOAD = re.compile(r'(src="|srcset=")?https://www\.nijmegenonline\.nl/wp-content/uploads/([^"\'\s)]+?)\.(?:png|jpe?g|gif|webp)', re.I)
 LINK = re.compile(r'(<a\b[^>]*?\bhref=")https?://(?:www\.)?nijmegenonline\.nl(/[^"#?]*)([^"]*")')
 
 
@@ -70,6 +73,14 @@ def main(live=False):
             # de testbalk verwijst bewust naar de echte pagina
             regels.append(regel if 'class="testbalk"' in regel else LINK.sub(intern, regel))
         nieuw = "\n".join(regels)
+
+        def afbeelding(m):
+            lokaal = "assets/uploads/%s.webp" % m.group(2)
+            if not (ROOT / lokaal).is_file():
+                return m.group(0)
+            return (m.group(1) + root + lokaal) if m.group(1) else "%s/%s" % (SITE, lokaal)
+
+        nieuw = UPLOAD.sub(afbeelding, nieuw)
 
         if live:
             nieuw = re.sub(r'\n[ \t]*<div class="testbalk">.*?</div>\n', "\n", nieuw)

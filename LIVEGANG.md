@@ -15,8 +15,8 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
       (behalve de testbalk, die bij `--live` verdwijnt)
 - [ ] Nieuwsberichten (83 onder `/nieuwsoverzicht/`) overgezet; vraagt een WordPress-export (XML)
 - [ ] Evenementen (809, EventOn) en bedrijvengids (84, Listdom) overgezet, met datums en adressen
-- [ ] Afbeeldingen van `wp-content/uploads` naar deze repo of een opslagdienst, en de verwijzingen
-      in de pagina's daarop aangepast (nu laden ze nog van de WordPress-site)
+- [x] Afbeeldingen van `wp-content/uploads` staan als webp in `assets/uploads/` (`tools/afbeeldingen.py`);
+      `tools/build.py` laat de pagina's ernaar wijzen. Nieuwe pagina's: eerst afbeeldingen downloaden, dan dit script
 - [ ] Partnerslider, zijbalk en formulieren getest op desktop en mobiel
 - [ ] Alle URL's uit de huidige sitemap en paginalijst geven 200 of een bedoelde 301
 - [ ] Google Analytics-code (zelfde property) in de header
