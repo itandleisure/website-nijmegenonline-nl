@@ -118,7 +118,7 @@
   function init() {
     var sliders = document.querySelectorAll('.partner-slider');
     if (!sliders.length) return;
-    fetch(new URL('partners.json', basis))
+    fetch(new URL('partners.json', basis), { cache: 'no-cache' })
       .then(function (r) { return r.json(); })
       .then(function (data) {
         sliders.forEach(function (el) { bouw(el, data.partners || []); });
