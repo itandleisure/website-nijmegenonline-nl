@@ -56,3 +56,10 @@ Zie [LIVEGANG.md](LIVEGANG.md) voor de stappen naar www.nijmegenonline.nl.
 - `robots.txt` en `noindex` laten staan, zodat Google geen dubbele content ziet.
 - URL's van de echte site (artikelen, `/events/…`, `/bedrijvengids/…`, `/nieuwsoverzicht/…`) houden we
   straks precies gelijk vanwege de backlinks. Zie het bouwplan in het project.
+
+## SEO per artikel
+
+`data/seo-artikelen.csv` bevat per artikel het zoekwoord, de SEO-titel en de meta description.
+`tools/import_wordpress.py` leest dit bestand en zet ze in de `<title>`, `meta description` en Open Graph.
+Aanpassen: wijzig de rij en draai `python3 tools/import_wordpress.py && python3 tools/build.py`.
+De versie om na te lopen staat als spreadsheet in `advies/seo/seo-artikelen.xlsx` in de projectbestanden.

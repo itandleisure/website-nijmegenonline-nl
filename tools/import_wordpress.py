@@ -26,6 +26,10 @@ from bs4 import BeautifulSoup, Comment
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://www.nijmegenonline.nl"
+STANDAARD_AFBEELDING = SITE + "/assets/img/logo-nijmegenonline.png"
+# Zoekwoord, SEO-titel en meta description per artikel (zie README)
+SEO = {r["url"]: r for r in csv.DictReader(
+    open(ROOT / "data" / "seo-artikelen.csv", encoding="utf-8"), delimiter=";")}
 HANDGEMAAKT = {"kerstmarkten-in-nijmegen"}  # deze pagina's niet overschrijven
 
 RUBRIEKEN = [
@@ -97,11 +101,24 @@ BLOK = {"p", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "table", "thead", "
         "blockquote", "figure", "figcaption"}
 
 
+def goede_alt(alt, src, titel):
+    """Lege alt-teksten en stockfoto-omschrijvingen ("Wedding,Table,Settings,...") vervangen
+    door de bestandsnaam, die op deze site vrijwel altijd beschrijvend is."""
+    alt = (alt or "").strip()
+    if alt and alt.count(",") < 3 and not re.search(r"\b(shutterstock|stock photo|19|20)\d{2}\b", alt, re.I):
+        return alt
+    naam = re.sub(r"(-\d+x\d+|-scaled|-\d+)?\.\w+$", "", src.rsplit("/", 1)[-1])
+    woorden = re.sub(r"[-_]+", " ", naam).strip()
+    if len(woorden) < 8 or re.search(r"^(img|dsc|image|screenshot|schermafbeelding|whatsapp)|\d{4,}", woorden, re.I):
+        return titel
+    return woorden[0].upper() + woorden[1:]
+
+
 def domein(url):
     return re.sub(r"^www\.", "", re.sub(r"^https?://", "", url).split("/")[0].lower())
 
 
-def schoon(content, slugs, root, gesponsord):
+def schoon(content, slugs, root, gesponsord, titel=""):
     soup = BeautifulSoup(content, "html.parser")
     for c in soup.find_all(string=lambda t: isinstance(t, Comment)):
         c.extract()
@@ -144,6 +161,7 @@ def schoon(content, slugs, root, gesponsord):
         if src.startswith("/"):
             img["src"] = SITE + src
         img["loading"] = "lazy"
+        img["alt"] = goede_alt(img.get("alt", ""), img["src"], titel)
     for a in soup.find_all("a"):
         href = a.get("href", "").strip()
         if not href:
@@ -200,14 +218,16 @@ def samenvatting(content, n=155):
 
 
 def kop(titel, beschrijving, canonical, root, afbeelding=None, extra=""):
-    og_img = '\n  <meta property="og:image" content="%s">' % esc(afbeelding) if afbeelding else ""
+    og_img = '\n  <meta property="og:image" content="%s">' % esc(afbeelding or STANDAARD_AFBEELDING)
+    # Google toont ongeveer 60 tekens; de sitenaam alleen erachter als het past
+    paginatitel = titel + " | NijmegenOnline" if len(titel) <= 43 else titel
     return """<!doctype html>
 <html lang="nl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>{titel} | NijmegenOnline</title>
+  <title>{paginatitel}</title>
   <meta name="description" content="{beschrijving}">
   <link rel="canonical" href="{canonical}">
   <meta property="og:locale" content="nl_NL">
@@ -226,7 +246,7 @@ def kop(titel, beschrijving, canonical, root, afbeelding=None, extra=""):
   <div class="testbalk">Dit is een testomgeving. De echte pagina staat op <a href="{canonical}">www.nijmegenonline.nl</a>.</div>
 
   <!-- header --><!-- /header -->
-""".format(titel=esc(titel), beschrijving=esc(beschrijving), canonical=esc(canonical), root=root,
+""".format(titel=esc(titel), paginatitel=esc(paginatitel), beschrijving=esc(beschrijving), canonical=esc(canonical), root=root,
            og_img=og_img, extra=extra)
 
 
@@ -259,7 +279,9 @@ def artikel_pagina(a, gerelateerd):
     if a["img"]:
         ld["image"] = a["img"]["src"]
     extra = '\n  <script type="application/ld+json">%s</script>' % json.dumps(ld, ensure_ascii=False)
-    out = [kop(a["titel"], a["samenvatting"], canonical, root, a["img"]["src"] if a["img"] else None, extra)]
+    seo = SEO.get("/%s/" % a["slug"], {})
+    out = [kop(seo.get("seo_titel") or a["titel"], seo.get("meta_description") or a["samenvatting"], canonical, root,
+               a["img"]["src"] if a["img"] else a["eerste_img"], extra)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel">')
     out.append('        <div class="kruimelpad"><a href="../">Home</a> › <a href="../blog/">Inspiratie opdoen</a> › <a href="../category/%s/">%s</a></div>'
                % (rub, esc(RUBRIEK_NAAM[rub])))
@@ -272,7 +294,7 @@ def artikel_pagina(a, gerelateerd):
     out.append('        <p class="bijgewerkt">%s</p>' % bij)
     if a["img"]:
         out.append('        <figure><img src="%s" alt="%s"%s></figure>' % (
-            esc(a["img"]["src"]), esc(a["img"]["alt"] or a["titel"]),
+            esc(a["img"]["src"]), esc(goede_alt(a["img"]["alt"], a["img"]["src"], a["titel"])),
             ' width="%s" height="%s"' % (a["img"]["w"], a["img"]["h"]) if a["img"]["w"] else ""))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % a["html"])
@@ -348,7 +370,9 @@ def main(bron):
             "rubriek": rub, "img": featured(p), "samenvatting": samenvatting(p["content"]["rendered"]),
             "verkeer": int(r["verkeer"]) if r and r["verkeer"] else 0, "cats": p["categories"],
         }
-        a["html"] = schoon(p["content"]["rendered"], slugs, "../", rub == "partnerbijdragen")
+        a["html"] = schoon(p["content"]["rendered"], slugs, "../", rub == "partnerbijdragen", a["titel"])
+        m = re.search(r'<img[^>]+src="([^"]+)"', a["html"])
+        a["eerste_img"] = m.group(1) if m else None
         artikelen.append(a)
 
     per_rubriek = defaultdict(list)
