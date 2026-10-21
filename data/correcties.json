@@ -46,5 +46,41 @@
   "reden": "Het Afrika Museum is sinds 27 november 2023 gesloten",
   "regex": "\\Z",
   "nieuw": "\n<h2>Waar kun je nu terecht?</h2>\n<p>Het Afrika Museum is dicht, maar in en rond Nijmegen zijn nog genoeg musea te ontdekken. Denk aan Museum Het Valkhof in het centrum, Museumpark Oriëntalis in Heilig Landstichting en het Vrijheidsmuseum in Groesbeek. Alle tips vind je in onze gids <a href=\"../thema/museums-nijmegen/\">Musea in Nijmegen</a>.</p>"
+ },
+ {
+  "artikel": "bestemmingen/groesbeek",
+  "reden": "Het Afrika Museum is sinds 27 november 2023 gesloten",
+  "regex": "<h3>Afrika Museum</h3>.*?Foto-2-Afrika-Museum-4643_0\\.jpg\"[^>]*/>",
+  "nieuw": ""
+ },
+ {
+  "artikel": "bestemmingen/berg-en-dal",
+  "reden": "Het Afrika Museum is sinds 27 november 2023 gesloten",
+  "oud": "De Afrika Museum en het Bevrijdingsmuseum zijn slechts enkele van de vele culturele hoogtepunten die het dorp te bieden heeft, en bieden een diepgaande blik in de wereldgeschiedenis en diverse culturen.",
+  "nieuw": "Vlakbij, in Groesbeek, vind je het Vrijheidsmuseum over de Tweede Wereldoorlog en de bevrijding van de regio. Het Afrika Museum in Berg en Dal is sinds 27 november 2023 gesloten."
+ },
+ {
+  "artikel": "bestemmingen/berg-en-dal",
+  "reden": "Het Afrika Museum is sinds 27 november 2023 gesloten",
+  "regex": "<p><br/?><img alt=\"Afrika Museum\".*?meer over het afrika museum\\s*</a>",
+  "nieuw": ""
+ },
+ {
+  "artikel": "bestemmingen/nijmegen-dukenburg",
+  "reden": "Verouderde planning",
+  "oud": " Een nieuw project, het ‘Hof van Nijmegen’, staat gepland voor medio 2019 op het voormalige HAN-terrein.",
+  "nieuw": ""
+ },
+ {
+  "artikel": "bestemmingen/nijmegen-dukenburg",
+  "reden": "Verouderde openingstijden 2023",
+  "regex": "<p><a href=\"https://www.winkelcentrumdukenburg.nl/dbupload/[^\"]*\"[^>]*>Klik hier voor de koopzondagen en openingstijden bijzondere- en feestdagen 2023</a></p>",
+  "nieuw": "<p>De koopzondagen en de openingstijden op feestdagen vind je op de <a href=\"https://www.winkelcentrumdukenburg.nl/\" rel=\"noopener\" target=\"_blank\">website van winkelcentrum Dukenburg</a>.</p>"
+ },
+ {
+  "artikel": "bestemmingen/nijmegen-dukenburg",
+  "reden": "Verouderde openingstijden 2023",
+  "regex": "<p><strong>Feestdagen</strong></p>\\s*<p>1e Kerstdag maandag 25 december 2023.*?</p>",
+  "nieuw": ""
  }
 ]

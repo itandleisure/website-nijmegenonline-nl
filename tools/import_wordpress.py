@@ -271,7 +271,7 @@ def kop(titel, beschrijving, canonical, root, afbeelding=None, extra=""):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="{root}assets/css/site.css?v=4">
+  <link rel="stylesheet" href="{root}assets/css/site.css?v=5">
   <link rel="stylesheet" href="{root}partners/slider.css?v=5">
   <script src="{root}partners/slider.js?v=5" defer></script>{extra}
 </head>
@@ -393,6 +393,9 @@ def artikel_pagina(a, gerelateerd):
             tekst = tekst[:m.start()] + tekst[m.end():]
     for x in gidsen:
         tekst = link_naar_gids(tekst, x, root)
+    for x in BESTEMMINGEN:
+        if a["slug"] in x["lees_ook"]:
+            tekst = link_naar_gids(tekst, {"url": "/bestemmingen/%s/" % x["slug"], "naam": x.get("zoek", x["naam"])}, root)
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>")
     if gerelateerd:
@@ -537,6 +540,163 @@ GIDS_GROEPEN = [
 ]
 
 
+BESTEMMINGEN = json.load(open(ROOT / "data" / "bestemmingen.json", encoding="utf-8"))
+WEG_KOPPEN = re.compile(r"bedrijven\s*overzicht|overzicht bedrijven|overige bestemmingen|nog meer leesplezier", re.I)
+
+
+def pas_correcties_toe(sleutel, tekst):
+    for c in (c for c in CORRECTIES if c["artikel"] == sleutel):
+        if "regex" in c:
+            tekst, n = re.subn(c["regex"], c["nieuw"], tekst, flags=re.S)
+        else:
+            n = tekst.count(c["oud"])
+            tekst = tekst.replace(c["oud"], c["nieuw"])
+        if not n:
+            raise SystemExit("Correctie past niet meer bij %s: %s" % (sleutel, c.get("oud", c.get("regex"))[:60]))
+    return tekst
+
+
+def bestemming_inhoud(b, content):
+    """Maakt van een Flatsome-bestemmingspagina een gewone tekst: titel, ondertitel en de vaste
+    blokken eruit, dubbele foto's weg, foto's die naast elkaar stonden als fotorij."""
+    html_ = pas_correcties_toe("bestemmingen/" + b["slug"], schoon(content, set(), "../../", False, b["naam"]))
+    soup = BeautifulSoup(html_, "html.parser")
+    for h in soup.find_all("h6"):
+        h.decompose()
+    namen = {b["naam"].lower(), b["slug"].replace("nijmegen-", "").replace("-", " ")}
+    koppen = soup.find_all(["h2", "h3"])
+    # De paginatitel (de plaatsnaam in hoofdletters) en de slogan eronder
+    ondertitel = ""
+    if koppen and koppen[0].get_text(" ", strip=True).lower().split(" (")[0] in namen:
+        koppen[0].decompose()
+        volgende = koppen[1] if len(koppen) > 1 else None
+        if volgende is not None and len(volgende.get_text(strip=True)) > 25:
+            ondertitel = volgende.get_text(" ", strip=True)
+            ondertitel = re.sub(r"^%s:\s*" % re.escape(b["naam"]), "", ondertitel, flags=re.I)
+            ondertitel = ondertitel[:1].upper() + ondertitel[1:]
+            volgende.decompose()
+    for h in soup.find_all(["h2", "h3", "h4"]):
+        if WEG_KOPPEN.search(h.get_text()):
+            h.decompose()
+    for a in soup.find_all("a", href=True):
+        tekst = a.get_text(" ", strip=True)
+        if a["href"].rstrip("/").endswith("/bestemmingen") or not tekst and not a.find("img"):
+            a.decompose()
+        elif tekst.isupper() or re.search(r"[A-Z]{4,}", tekst):
+            a.string = re.sub(r"\b[A-Z][A-Z ]{3,}[A-Z]\b", lambda m: b["naam"] if m.group(0).lower() in namen else m.group(0).capitalize(), tekst)
+            a.string = a.string[:1].upper() + a.string[1:].lower() if a.string.isupper() else a.string
+    for h in soup.find_all(["h2", "h3"]):
+        t = h.get_text(" ", strip=True)
+        nieuw = re.sub(r"\b[A-Z][A-Z ()]{3,}[A-Z)]\b", lambda m: b["naam"] if m.group(0).split(" (")[0].lower() in namen else m.group(0), t)
+        nieuw = re.sub(r"\b[A-Z]{4,}\b", lambda m: m.group(0).capitalize(), nieuw)
+        if nieuw.lower() == "overzicht restaurant":
+            nieuw = "Restaurants om te proberen"
+            h.name = "h3"
+        if nieuw != t or h.find("strong"):
+            h.clear()
+            h.string = nieuw
+    # Foto's: elke foto één keer; de eerste wordt de grote foto bovenaan
+    gezien, eerste = set(), None
+    for img in soup.find_all("img"):
+        src = img.get("src", "")
+        if src in gezien:
+            img.decompose()
+            continue
+        gezien.add(src)
+        if eerste is None:
+            eerste = {"src": src, "alt": img.get("alt", ""), "w": img.get("width"), "h": img.get("height")}
+            img.decompose()
+    for br in soup.find_all("br"):
+        ouder = br.parent
+        if ouder is not None and ouder.name == "p" and ouder.find("img"):
+            br.decompose()
+    for p in soup.find_all("p"):
+        # <br> aan het begin of eind van een alinea (resten van de Flatsome-opmaak)
+        while p.contents and (getattr(p.contents[0], "name", None) == "br" or not str(p.contents[0]).strip()):
+            p.contents[0].extract()
+        while p.contents and (getattr(p.contents[-1], "name", None) == "br" or not str(p.contents[-1]).strip()):
+            p.contents[-1].extract()
+        if not p.get_text(strip=True) and not p.find(["img", "a"]):
+            p.decompose()
+        elif len(p.find_all("img")) > 1 and not p.get_text(strip=True):
+            p["class"] = "fotos"
+    # Alinea's die helemaal vet zijn (de introductie): gewone tekst
+    for p in soup.find_all("p"):
+        kinderen = [k for k in p.contents if str(k).strip()]
+        if len(kinderen) == 1 and getattr(kinderen[0], "name", None) == "strong" and len(p.get_text()) > 120:
+            kinderen[0].unwrap()
+    tekst = re.sub(r"\n\s*\n+", "\n", str(soup)).strip()
+    return ondertitel, eerste, "\n".join("        " + r.strip() for r in tekst.split("\n") if r.strip())
+
+
+def bestemming_pagina(b, content, per_slug):
+    root = "../../"
+    canonical = "%s/bestemmingen/%s/" % (SITE, b["slug"])
+    ondertitel, foto, tekst = bestemming_inhoud(b, content)
+    land = "Duitsland" if b["land"] == "DE" else "Nederland"
+    ld = [{"@context": "https://schema.org", "@type": "TouristDestination", "name": b["naam"], "url": canonical,
+           "description": b["beschrijving"], "containedInPlace": {"@type": "Country", "name": land}},
+          {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+              {"@type": "ListItem", "position": 2, "name": "Bestemmingen", "item": SITE + "/bestemmingen/"},
+              {"@type": "ListItem", "position": 3, "name": b["naam"], "item": canonical}]}]
+    if foto:
+        ld[0]["image"] = foto["src"]
+    extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in ld)
+    out = [kop(b["seo_titel"], b["beschrijving"], canonical, root, foto["src"] if foto else None, extra)]
+    out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel bestemming">')
+    out.append('        <div class="kruimelpad"><a href="%s">Home</a> › <a href="%sbestemmingen/">Bestemmingen</a> › %s</div>'
+               % (root, root, esc(b["naam"])))
+    out.append('        <p class="gidslabel">%s</p>' % ("Wijk in Nijmegen" if b["groep"].startswith("Wijk") else "Bestemming bij Nijmegen"))
+    out.append("        <h1>%s</h1>" % esc(b["naam"] + (" (Kleve)" if b["slug"] == "kleve" else "")))
+    if ondertitel:
+        out.append('        <p class="bestemming-slogan">%s</p>' % esc(ondertitel))
+    if foto:
+        out.append('        <figure><img src="%s" alt="%s"%s></figure>' % (
+            esc(foto["src"]), esc(goede_alt(foto["alt"], foto["src"], b["naam"])),
+            ' width="%s" height="%s"' % (foto["w"], foto["h"]) if foto["w"] else ""))
+    out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
+    out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
+    lees = [per_slug[x] for x in b["lees_ook"] if x in per_slug]
+    lees += [a for a in sorted(per_slug.values(), key=lambda a: -a["verkeer"]) if a["rubriek"] == "regio-en-dagtrips" and a not in lees]
+    out.append('        <section class="gids-sectie">\n          <h2>Lees ook</h2>\n          <div class="raster">')
+    for a in lees[:3]:
+        out.append("            " + kaart(a, root))
+    out.append("          </div>\n        </section>")
+    out.append('        <section class="gids-sectie"><h2>Andere bestemmingen</h2><ul class="gids-lijst">')
+    for x in BESTEMMINGEN:
+        if x is not b:
+            out.append('          <li><a href="%sbestemmingen/%s/">%s</a></li>' % (root, x["slug"], esc(x["naam"])))
+    out.append("        </ul></section>")
+    out.append('        <p class="gids-cta"><a class="knop" href="%s/bedrijvengids/">Bekijk de bedrijven in de bedrijvengids</a></p>' % SITE)
+    out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
+    out.append(VOET)
+    return "\n".join(out)
+
+
+def bestemmingen_overzicht(fotos):
+    root = "../"
+    canonical = SITE + "/bestemmingen/"
+    out = [kop("Bestemmingen rond Nijmegen: dorpen, steden en wijken",
+               "Op pad rond Nijmegen? Ontdek Groesbeek, Wijchen, Berg en Dal, Kleef, Kranenburg, Goch en meer plaatsen in de regio, plus de wijk Dukenburg.",
+               canonical, root, next(iter(fotos.values()), None))]
+    out.append('  <main class="artikel-wrap">\n    <div class="container">')
+    out.append('      <div class="kruimelpad"><a href="../">Home</a> › Bestemmingen</div>')
+    out.append('      <header class="rubriek-kop">\n        <h1>Bestemmingen rond Nijmegen</h1>\n        <p>Net buiten de stad liggen mooie dorpen en stadjes, in Nederland en net over de grens in Duitsland. Tips voor een dagje uit, plus alles over de wijken van Nijmegen.</p>\n      </header>')
+    for groep in ("Plaatsen rond Nijmegen", "Wijken in Nijmegen"):
+        out.append('      <section class="bestemmingen">\n        <h2>%s</h2>\n        <div class="bestemmingen-raster">' % groep)
+        for b in BESTEMMINGEN:
+            if b["groep"] != groep:
+                continue
+            img = '<img src="%s" alt="" loading="lazy">' % esc(fotos[b["slug"]]) if fotos.get(b["slug"]) else ""
+            out.append('          <a class="bestemmingkaart" href="%s/">%s<span>%s</span></a>' % (b["slug"], img, esc(b["naam"])))
+        out.append("        </div>\n      </section>")
+    out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
+    out.append("    </div>\n  </main>")
+    out.append(VOET)
+    return "\n".join(out)
+
+
 def rubriek_pagina(slug, naam, intro, artikelen):
     root = "../../"
     canonical = "%s/category/%s/" % (SITE, slug)
@@ -667,6 +827,43 @@ def main(bron):
         d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(gids_pagina(g, per_slug), encoding="utf-8")
     (ROOT / "thema" / "index.html").write_text(gidsen_overzicht(per_slug), encoding="utf-8")
+
+    # Bestemmingen: plaatsen rond Nijmegen en de wijk Dukenburg (WordPress-pagina's)
+    paginas = {p["link"].split("nijmegenonline.nl", 1)[1]: p for p in json.load(open(bron / "pages" / "pages-1.json", encoding="utf-8"))}
+    fotos = {}
+    for best in BESTEMMINGEN:
+        d = ROOT / "bestemmingen" / best["slug"]
+        d.mkdir(parents=True, exist_ok=True)
+        pagina = bestemming_pagina(best, paginas["/bestemmingen/%s/" % best["slug"]]["content"]["rendered"], per_slug)
+        (d / "index.html").write_text(pagina, encoding="utf-8")
+        m = re.search(r'<figure><img src="([^"]+)"', pagina)
+        fotos[best["slug"]] = m.group(1) if m else None
+    # Op het overzicht dezelfde foto's als op de WordPress-overzichtspagina
+    overzicht = paginas["/bestemmingen/"]["content"]["rendered"]
+    for src, slug in re.findall(r'<img[^>]+src="([^"]+)".*?href="https://www\.nijmegenonline\.nl/bestemmingen/([^/"]+)/"', overzicht, re.S):
+        if slug in fotos:
+            fotos[slug] = src
+    # De homepage van WordPress heeft voor een paar plaatsen een mooiere tegelfoto
+    home_wp = next(p for u, p in paginas.items() if u == "/")["content"]["rendered"]
+    blok = home_wp[home_wp.lower().find("bestemmingen net buiten"):]
+    gehad = set()
+    for src, slug in re.findall(r'<img[^>]+src="([^"]+)".*?href="https://www\.nijmegenonline\.nl/bestemmingen/([^/"]+)/"', blok, re.S):
+        if slug in fotos and slug not in gehad and "/partners" not in src and "300-200" not in src:
+            fotos[slug] = src
+            gehad.add(slug)
+    (ROOT / "bestemmingen" / "index.html").write_text(bestemmingen_overzicht(fotos), encoding="utf-8")
+
+    # Homepage: bestemmingen net buiten Nijmegen, tussen <!-- bestemmingen --> en <!-- /bestemmingen -->
+    blok = ['<!-- bestemmingen -->', '    <section id="bestemmingen">', '      <div class="container">',
+            '        <h2>Bestemmingen net buiten Nijmegen</h2>', '        <div class="bestemmingen-raster">']
+    for best in [x for x in BESTEMMINGEN if x["groep"].startswith("Plaatsen")][:6]:
+        blok.append('          <a class="bestemmingkaart" href="bestemmingen/%s/"><img src="%s" alt="" loading="lazy"><span>%s</span></a>'
+                    % (best["slug"], esc(fotos[best["slug"]]), esc(best["naam"])))
+    blok += ['        </div>', '        <p class="gids-verder"><a href="bestemmingen/">Bekijk alle bestemmingen</a></p>', '      </div>', '    </section>', '    <!-- /bestemmingen -->']
+    home = ROOT / "index.html"
+    h = home.read_text(encoding="utf-8")
+    h = re.sub(r"<!-- bestemmingen -->.*?<!-- /bestemmingen -->", lambda m: "\n".join(blok), h, flags=re.S)
+    home.write_text(h, encoding="utf-8")
 
     # Homepage: de belangrijkste gidsen (veel zoekvolume) tussen <!-- gidsen --> en <!-- /gidsen -->
     top = [next(g for g in GIDSEN if g["url"] == u) for u in HOME_GIDSEN]
