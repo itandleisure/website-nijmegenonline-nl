@@ -2,11 +2,13 @@
   "partners": [
     {
       "id": "haantje",
-      "naam": "Haantje Nijmegen",
+      "naam": "Cafe 't Haantje",
       "url": "http://www.haantje-nijmegen.nl/",
       "afbeelding": "img/haantje.gif",
       "achtergrond": "#222222",
-      "plaatsingen": ["alle"],
+      "plaatsingen": [
+        "alle"
+      ],
       "start": "",
       "eind": "",
       "gewicht": 1
@@ -17,7 +19,9 @@
       "url": "https://debrauerij.nl/",
       "afbeelding": "img/de-brauerij.webp",
       "achtergrond": "#222222",
-      "plaatsingen": ["alle"],
+      "plaatsingen": [
+        "alle"
+      ],
       "start": "",
       "eind": "",
       "gewicht": 1
@@ -28,7 +32,87 @@
       "url": "https://deopstap-nijmegen.nl/",
       "afbeelding": "img/de-opstap.gif",
       "achtergrond": "#222222",
-      "plaatsingen": ["alle"],
+      "plaatsingen": [
+        "alle"
+      ],
+      "start": "",
+      "eind": "",
+      "gewicht": 1
+    },
+    {
+      "id": "de-bruijn",
+      "naam": "De Bruijn Lunchen op de Markt",
+      "url": "https://www.lunchenopdemarkt.nl/",
+      "afbeelding": "img/de-bruijn.webp",
+      "achtergrond": "#222222",
+      "plaatsingen": [
+        "alle"
+      ],
+      "start": "",
+      "eind": "",
+      "gewicht": 1
+    },
+    {
+      "id": "fietsen-op-het-spoor",
+      "naam": "Fietsen op het Spoor",
+      "url": "http://www.fietsenophetspoor.nl/",
+      "afbeelding": "img/fietsen-op-het-spoor.webp",
+      "achtergrond": "#222222",
+      "plaatsingen": [
+        "alle"
+      ],
+      "start": "",
+      "eind": "",
+      "gewicht": 1
+    },
+    {
+      "id": "kleve-toerisme",
+      "naam": "Kleve Toerisme",
+      "url": "https://kleve-erleben.de/",
+      "afbeelding": "img/kleve-toerisme.webp",
+      "achtergrond": "#222222",
+      "plaatsingen": [
+        "alle"
+      ],
+      "start": "",
+      "eind": "",
+      "gewicht": 1
+    },
+    {
+      "id": "phion",
+      "naam": "Phion",
+      "url": "https://www.phion.nl/",
+      "afbeelding": "img/phion.webp",
+      "achtergrond": "#222222",
+      "plaatsingen": [
+        "alle"
+      ],
+      "start": "",
+      "eind": "",
+      "gewicht": 1
+    },
+    {
+      "id": "tcn-taxi",
+      "naam": "TCN Taxi Centrale Nijmegen",
+      "url": "https://www.taxitcn.nl/",
+      "afbeelding": "img/tcn-taxi.webp",
+      "achtergrond": "#222222",
+      "plaatsingen": [
+        "alle"
+      ],
+      "start": "",
+      "eind": "",
+      "gewicht": 1
+    },
+    {
+      "id": "vrijheidsmuseum",
+      "naam": "Vrijheidsmuseum",
+      "url": "https://vrijheidsmuseum.nl/",
+      "afbeelding": "img/vrijheidsmuseum.webp",
+      "achtergrond": "#222222",
+      "plaatsingen": [
+        "alle"
+      ],
       "start": "",
       "eind": "",
       "gewicht": 1
