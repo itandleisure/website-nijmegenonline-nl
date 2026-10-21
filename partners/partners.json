@@ -1,0 +1,37 @@
+{
+  "partners": [
+    {
+      "id": "haantje",
+      "naam": "Haantje Nijmegen",
+      "url": "http://www.haantje-nijmegen.nl/",
+      "afbeelding": "img/haantje.gif",
+      "achtergrond": "#222222",
+      "plaatsingen": ["alle"],
+      "start": "",
+      "eind": "",
+      "gewicht": 1
+    },
+    {
+      "id": "de-brauerij",
+      "naam": "De Brauerij",
+      "url": "https://debrauerij.nl/",
+      "afbeelding": "img/de-brauerij.webp",
+      "achtergrond": "#222222",
+      "plaatsingen": ["alle"],
+      "start": "",
+      "eind": "",
+      "gewicht": 1
+    },
+    {
+      "id": "de-opstap",
+      "naam": "De Opstap Nijmegen",
+      "url": "https://deopstap-nijmegen.nl/",
+      "afbeelding": "img/de-opstap.gif",
+      "achtergrond": "#222222",
+      "plaatsingen": ["alle"],
+      "start": "",
+      "eind": "",
+      "gewicht": 1
+    }
+  ]
+}

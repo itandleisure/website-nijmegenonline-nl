@@ -1,0 +1,18 @@
+/* Partnerslider: los te gebruiken op elke pagina, zie partners/README.md */
+.partner-slider { margin: 24px 0; }
+.partner-slider__label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: #6b6b70; margin: 0 0 8px; }
+.partner-slider__venster { overflow: hidden; position: relative; }
+.partner-slider__rij { display: flex; transition: transform 0.6s ease; }
+.partner-slider__item { flex: 0 0 calc(100% / var(--per-keer, 3)); padding: 0 6px; }
+.partner-slider__item a {
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px; padding: 8px; min-height: 110px; background: #222;
+}
+.partner-slider__item img { max-height: 100px; max-width: 100%; width: auto; height: auto; display: block; }
+.partner-slider__stippen { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
+.partner-slider__stippen button {
+  width: 9px; height: 9px; border-radius: 50%; border: 0; padding: 0;
+  background: #c9ced4; cursor: pointer;
+}
+.partner-slider__stippen button[aria-current="true"] { background: #539c20; }
+@media (prefers-reduced-motion: reduce) { .partner-slider__rij { transition: none; } }

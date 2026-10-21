@@ -100,11 +100,6 @@ section h2 { margin: 0 0 20px; font-size: 1.5rem; }
 .datum-2026 { color: var(--groen); font-weight: 700; }
 .datum-volgt { color: #9a6a00; font-weight: 700; }
 
-.sponsors { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 24px 0; align-items: center; }
-.sponsors a { display: flex; align-items: center; justify-content: center; background: #222; border-radius: var(--radius); padding: 8px; min-height: 110px; }
-.sponsors img { max-height: 100px; width: auto; }
-.sponsorlabel { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--grijs); margin: 24px 0 -16px; }
-
 .knop { display: inline-block; background: var(--groen); color: var(--wit); text-decoration: none; font-weight: 700; padding: 10px 18px; border-radius: 6px; }
 .knop:hover { background: #46851b; color: var(--wit); }
 
