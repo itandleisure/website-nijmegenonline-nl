@@ -303,7 +303,7 @@ def artikel_pagina(a, gerelateerd):
     if gids:
         out.append('        <p class="gidslabel">Onderdeel van de gids <a href="%s%s">%s</a></p>'
                    % (root, gids["url"].lstrip("/"), esc(gids["naam"])))
-    if a["img"]:
+    if a["img"] and not a["img"].get("uit_tekst"):
         out.append('        <figure><img src="%s" alt="%s"%s></figure>' % (
             esc(a["img"]["src"]), esc(goede_alt(a["img"]["alt"], a["img"]["src"], a["titel"])),
             ' width="%s" height="%s"' % (a["img"]["w"], a["img"]["h"]) if a["img"]["w"] else ""))
@@ -346,7 +346,8 @@ def gids_pagina(g, per_slug):
             {"@type": "Question", "name": f["v"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in g["faq"]]})
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in ld)
     eerste = next((per_slug[x] for sec in g["secties"] for x in sec["artikelen"] if x in per_slug and per_slug[x]["img"]), None)
-    out = [kop(g["seo_titel"], g["beschrijving"], canonical, root, eerste["img"]["src"] if eerste else None, extra)]
+    deel = SITE + g["foto"] if g.get("foto") else (eerste["img"]["src"] if eerste else None)
+    out = [kop(g["seo_titel"], g["beschrijving"], canonical, root, deel, extra)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel gids">')
     out.append('        <div class="kruimelpad">%s › %s</div>' % (
         " › ".join('<a href="%s">%s</a>' % (u, esc(n)) for n, u in kruimels), esc(g["naam"])))
@@ -401,12 +402,15 @@ def gidsen_overzicht(per_slug):
         out.append('        <button type="button" data-groep="%d" aria-pressed="false">%s</button>' % (i, esc(groep)))
     out.append("      </div>")
     out.append('      <div class="gidsen-raster">')
+    al = set()
     for i, (groep, urls) in enumerate(GIDS_GROEPEN):
         for u in urls:
             g = next(x for x in GIDSEN if x["url"] == u)
             arts = [per_slug[x] for sec in g["secties"] for x in sec["artikelen"] if x in per_slug]
-            foto = next((a["img"] for a in sorted(arts, key=lambda a: -a["verkeer"]) if a["img"]), None)
-            img = ('<img src="%s" alt="" loading="lazy">' % esc(foto["src"])) if foto else ""
+            src = SITE + g["foto"] if g.get("foto") else next(
+                (a["img"]["src"] for a in sorted(arts, key=lambda a: -a["verkeer"]) if a["img"] and a["img"]["src"] not in al), None)
+            al.add(src)
+            img = ('<img src="%s" alt="" loading="lazy">' % esc(src)) if src else ""
             out.append('        <a class="gidskaart" data-groep="%d" href="%s">%s<div class="gidskaart__tekst"><span class="gidskaart__groep">%s</span><h2>%s</h2><p>%s</p>'
                        '<span class="gidskaart__meer">%d artikelen <span aria-hidden="true">→</span></span></div></a>'
                        % (i, root + g["url"].lstrip("/"), img, esc(groep), esc(g["naam"]), esc(g["kort"]), len({a["slug"] for a in arts})))
@@ -429,7 +433,7 @@ def gidsen_overzicht(per_slug):
 
 
 GIDS_GROEPEN = [
-    ("Eten, drinken en uitgaan", ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/cafes-in-nijmegen/", "/thema/museums-nijmegen/"]),
+    ("Eten, drinken en cultuur", ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/cafes-in-nijmegen/", "/thema/museums-nijmegen/"]),
     ("Bijzondere momenten", ["/thema/trouwen-in-nijmegen/", "/thema/zaal-huren-in-nijmegen/", "/jaarlijkse-evenementen/nijmeegse-vierdaagse/", "/thema/fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen/"]),
     ("Overnachten", ["/thema/overnachten-in-nijmegen/", "/thema/bb-nijmegen/", "/thema/campings-in-nijmegen/"]),
     ("Verzorging", ["/thema/kappers-in-nijmegen/", "/thema/massage-nijmegen/", "/thema/nagelsalon-in-nijmegen/", "/thema/pedicures-in-nijmegen/", "/thema/permanente-make-up-in-nijmegen/"]),
@@ -445,7 +449,7 @@ def rubriek_pagina(slug, naam, intro, artikelen):
     out.append('      <div class="kruimelpad"><a href="../../">Home</a> › <a href="../../blog/">Inspiratie opdoen</a> › %s</div>' % esc(naam))
     out.append('      <header class="rubriek-kop">\n        <h1>%s</h1>\n        <p>%s</p>\n      </header>' % (esc(naam), esc(intro)))
     out.append('      <nav class="rubriek-menu" aria-label="Rubrieken">')
-    for s, n, _ in IN_MENU:
+    for s, n, _ in RUBRIEKEN:
         cur = ' aria-current="page"' if s == slug else ""
         out.append('        <a href="../%s/"%s>%s</a>' % (s, cur, esc(n)))
     out.append("      </nav>")
@@ -467,7 +471,7 @@ def blog_pagina(per_rubriek):
     out.append('      <div class="kruimelpad"><a href="../">Home</a> › Inspiratie opdoen</div>')
     out.append('      <header class="rubriek-kop">\n        <h1>Inspiratie opdoen</h1>\n        <p>%s</p>\n      </header>' % esc(intro))
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
-    for slug, naam, _ in IN_MENU:
+    for slug, naam, _ in RUBRIEKEN:  # partnerbijdragen als laatste
         arts = per_rubriek.get(slug, [])
         if not arts:
             continue
@@ -501,6 +505,19 @@ def main(bron):
         m = re.search(r'<img[^>]+src="([^"]+)"', a["html"])
         a["eerste_img"] = m.group(1) if m else None
         artikelen.append(a)
+
+    # Uitgelichte foto: ontbreekt (media niet openbaar) of is dezelfde als bij een ander artikel?
+    # Dan de eerste andere foto uit de tekst. Het artikel met het meeste verkeer houdt de foto.
+    gebruikt = set()
+    for a in sorted(artikelen, key=lambda a: -a["verkeer"]):
+        if a["img"] and a["img"]["src"] not in gebruikt:
+            gebruikt.add(a["img"]["src"])
+            continue
+        for src in re.findall(r'<img[^>]+src="([^"]+)"', a["html"]):
+            if src not in gebruikt:
+                a["img"] = {"src": src, "w": None, "h": None, "alt": "", "uit_tekst": True}
+                gebruikt.add(src)
+                break
 
     per_rubriek = defaultdict(list)
     for a in sorted(artikelen, key=lambda a: (-a["verkeer"], a["date"]), reverse=False):
