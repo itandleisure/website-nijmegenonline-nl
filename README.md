@@ -71,6 +71,13 @@ naam, SEO-titel, beschrijving, intro, secties met de artikelen die erbij horen, 
 `tools/import_wordpress.py` bouwt daaruit de gidspagina's en het overzicht op `/thema/`, en zet in elk artikel een link naar zijn gids
 plus "Meer uit de gids". Een artikel toevoegen aan een gids: zet de slug in de juiste sectie en draai het importscript opnieuw.
 
+## Samengevoegde artikelen
+
+Artikelen die over hetzelfde gingen zijn samengevoegd tot één sterker artikel. `data/samenvoegen.csv`
+zegt welk oud artikel in welk nieuw artikel is opgegaan. Het oude artikel krijgt een 301 in `_redirects`
+en een doorverwijspagina op de oude URL. De samengevoegde tekst staat in `data/samengevoegd/<slug>.html`
+en vervangt bij het importeren de tekst uit WordPress. Partnerbijdragen worden nooit samengevoegd.
+
 ## Afbeeldingen
 
 De foto's van de WordPress-site staan als verkleinde webp in `assets/uploads/` (zelfde pad als in `wp-content/uploads/`).

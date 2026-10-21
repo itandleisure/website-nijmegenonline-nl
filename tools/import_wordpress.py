@@ -40,6 +40,11 @@ for _g in GIDSEN:
             ARTIKEL_GIDS.setdefault(_slug, _g)
             if _g not in ARTIKEL_GIDSEN.setdefault(_slug, []):
                 ARTIKEL_GIDSEN[_slug].append(_g)
+# Samengevoegde artikelen: het oude artikel verdwijnt en krijgt een 301 naar het nieuwe.
+# De samengevoegde tekst van het nieuwe artikel staat in data/samengevoegd/<slug>.html
+SAMENVOEGEN = {r["oud"]: r["nieuw"] for r in csv.DictReader(
+    open(ROOT / "data" / "samenvoegen.csv", encoding="utf-8"), delimiter=";")}
+SAMENGEVOEGD_OP = "2026-10-21T12:00:00"
 HANDGEMAAKT = {"kerstmarkten-in-nijmegen"}  # deze pagina's niet overschrijven
 
 RUBRIEKEN = [
@@ -134,7 +139,16 @@ def domein(url):
 
 
 def schoon(content, slugs, root, gesponsord, titel=""):
+    # Kapotte AdSense-tag uit WordPress (<insclass=...>, zonder spatie)
+    content = re.sub(r"<insclass[^>]*>.*?</ins>", "", content, flags=re.S)
     soup = BeautifulSoup(content, "html.parser")
+    # Vaste voettekst "NijmegenOnline.nl is de plek voor ..." onder sommige artikelen
+    for h in soup.find_all(["h2", "h3"]):
+        if h.get_text(strip=True) == "NijmegenOnline.nl":
+            nxt = h.find_next(lambda t: t.name == "p" and t.get_text(strip=True))
+            if nxt is not None and nxt.get_text(strip=True).startswith("NijmegenOnline.nl is de plek"):
+                nxt.decompose()
+            h.decompose()
     for c in soup.find_all(string=lambda t: isinstance(t, Comment)):
         c.extract()
     for t in soup.find_all(["script", "style", "noscript", "form", "input", "textarea", "button", "iframe", "ins", "link"]):
@@ -212,6 +226,8 @@ def schoon(content, slugs, root, gesponsord, titel=""):
         else:
             break
     tekst = str(soup)
+    # "Ook leuk om te lezen" zonder de (verwijderde) blokken eronder
+    tekst = re.sub(r"<h[2-6][^>]*>(<strong>)?\s*Ook leuk om te lezen\s*(</strong>)?</h[2-6]>(?=(\s|</?(div|section|p)[^>]*>)*$)", "", tekst)
     tekst = re.sub(r"(<br/?>\s*){2,}", "<br>", tekst)
     tekst = re.sub(r"\n\s*\n+", "\n", tekst)
     for b in BLOK:
@@ -282,6 +298,22 @@ def kaart(a, root):
             % (root, a["slug"], img, esc(a["titel"]), esc(a["samenvatting"])))
 
 
+DOORVERWIJZING = """<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>%(titel)s</title>
+  <link rel="canonical" href="%(url)s">
+  <meta http-equiv="refresh" content="0; url=%(pad)s">
+</head>
+<body>
+  <p>Dit artikel is samengevoegd met <a href="%(pad)s">%(titel)s</a>.</p>
+</body>
+</html>
+"""
+
+
 def link_naar_gids(tekst, g, root):
     """Linkt de eerste keer dat de gidsnaam in een alinea of opsomming staat naar de gids.
     Niet in koppen of bestaande links, en niet als het artikel al naar de gids linkt."""
@@ -350,6 +382,13 @@ def artikel_pagina(a, gerelateerd):
             ' width="%s" height="%s"' % (a["img"]["w"], a["img"]["h"]) if a["img"]["w"] else ""))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     tekst = a["html"]
+    if a["img"] and not a["img"].get("uit_tekst"):
+        # Dezelfde foto staat vaak ook bovenaan in de tekst: dan niet twee keer tonen
+        def basis(src):
+            return re.sub(r"-\d+x\d+$", "", src.rsplit("/", 1)[-1].rsplit(".", 1)[0])
+        m = re.search(r'<img[^>]+src="([^"]+)"[^>]*>', tekst)
+        if m and basis(m.group(1)) == basis(a["img"]["src"]):
+            tekst = tekst[:m.start()] + tekst[m.end():]
     for x in gidsen:
         tekst = link_naar_gids(tekst, x, root)
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
@@ -549,6 +588,8 @@ def main(bron):
 
     artikelen = []
     for p in posts:
+        if p["slug"] in SAMENVOEGEN:
+            continue
         r = indeling.get(p["slug"])
         rub = RUBRIEK_SLUG[r["nieuwe_rubriek"]] if r else "wonen-werken-en-studeren"
         a = {
@@ -557,6 +598,13 @@ def main(bron):
             "verkeer": int(r["verkeer"]) if r and r["verkeer"] else 0, "cats": p["categories"],
         }
         a["html"] = schoon(p["content"]["rendered"], slugs, "../", rub == "partnerbijdragen", a["titel"])
+        eigen = ROOT / "data" / "samengevoegd" / ("%s.html" % p["slug"])
+        if eigen.is_file():
+            a["html"] = "\n".join("        " + r.strip() for r in eigen.read_text(encoding="utf-8").strip().split("\n"))
+            a["samenvatting"] = samenvatting(a["html"])
+            a["modified"] = SAMENGEVOEGD_OP
+        for oud, nieuw in SAMENVOEGEN.items():
+            a["html"] = a["html"].replace('href="../%s/"' % oud, 'href="../%s/"' % nieuw)
         m = re.search(r'<img[^>]+src="([^"]+)"', a["html"])
         a["eerste_img"] = m.group(1) if m else None
         artikelen.append(a)
@@ -589,7 +637,7 @@ def main(bron):
         if a["slug"] in HANDGEMAAKT:
             continue
         gids = ARTIKEL_GIDS.get(a["slug"])
-        uit_gids = [per_slug[x] for sec in gids["secties"] for x in sec["artikelen"]] if gids else []
+        uit_gids = [per_slug[x] for sec in gids["secties"] for x in sec["artikelen"] if x in per_slug] if gids else []
         uit_gids = sorted({x["slug"]: x for x in uit_gids if x["slug"] != a["slug"]}.values(), key=lambda x: -x["verkeer"])
         gerel = (uit_gids + [g for g in per_rubriek[a["rubriek"]] if g["slug"] != a["slug"] and g not in uit_gids])[:4]
         d = ROOT / a["slug"]
@@ -640,6 +688,13 @@ def main(bron):
         regels.append("%s %s 301" % (oud, doel))
     # Dubbele kapperspagina gaat op in de gids
     regels.append("/kapper-nijmegen-top-kapsalons-voor-knippen-kleuren-en-styling/ /thema/kappers-in-nijmegen/ 301")
+    for oud, nieuw in SAMENVOEGEN.items():
+        regels.append("/%s/ /%s/ 301" % (oud, nieuw))
+        doel = per_slug[nieuw]
+        d = ROOT / oud
+        d.mkdir(exist_ok=True)
+        (d / "index.html").write_text(DOORVERWIJZING % {"titel": esc(doel["titel"]), "url": "%s/%s/" % (SITE, nieuw), "pad": "../%s/" % nieuw},
+                                      encoding="utf-8")
     (ROOT / "_redirects").write_text("\n".join(regels) + "\n", encoding="utf-8")
 
     print("%d artikelen, %d rubrieken, %d doorverwijzingen" % (len(artikelen), len(RUBRIEKEN), len(regels) - 1))

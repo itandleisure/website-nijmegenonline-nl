@@ -166,8 +166,7 @@
     "kop": "Uitgaan",
     "tekst": "<p>Na het café nog niet naar huis? Dit zijn de plekken om uit te gaan en te dansen.</p>",
     "artikelen": [
-     "lekker-uitgaan-in-nijmegen-hier-doe-je-dat",
-     "dansen-is-weer-helemaal-hip-hier-kan-je-dat-doen"
+     "lekker-uitgaan-in-nijmegen-hier-doe-je-dat"
     ]
    }
   ],
@@ -196,16 +195,13 @@
     "kop": "Welke massage past bij jou?",
     "tekst": "<p>Ontspanning of juist herstel? Elke massage heeft een ander doel. Begin hier als je nog niet weet wat je zoekt.</p>",
     "artikelen": [
-     "hoe-ontdek-je-welke-massage-het-beste-werkt-voor-jou",
-     "hot-stone-meer-top-massages-in-nijmegen",
-     "massagetherapie-in-nijmegen-voor-gezondheid-welzijn"
+     "hoe-ontdek-je-welke-massage-het-beste-werkt-voor-jou"
     ]
    },
    {
     "kop": "Naar een massagesalon in Nijmegen",
     "tekst": "<p>Wat gebeurt er tijdens een behandeling, en waar let je op bij het kiezen van een salon?</p>",
     "artikelen": [
-     "ontspannen-en-herstellen-wat-je-kunt-verwachten-bij-een-massagesalon-in-nijmegen",
      "massagesalon-nijmegen-zelfzorg-en-pure-ontspanning"
     ]
    },
@@ -240,24 +236,15 @@
   "secties": [
    {
     "kop": "Een nagelsalon kiezen",
-    "tekst": "<p>Let op hygiëne, ervaring en of de salon werkt met goede producten. Deze artikelen helpen je kiezen.</p>",
+    "tekst": "<p>Waar let je op bij het kiezen van een salon, wat is het verschil tussen acryl, gel en versteviging, en welke salons raden we aan? Alles staat in één artikel.</p>",
     "artikelen": [
-     "de-juiste-nagelsalon-in-nijmegen-kiezen-tips-hier",
-     "waar-worden-jouw-nagels-verzorgd-in-nijmegen"
-    ]
-   },
-   {
-    "kop": "Behandelingen",
-    "tekst": "<p>Gel, acryl of biab: wat is het verschil en wat past bij jou?</p>",
-    "artikelen": [
-     "nagelverlenging-in-nijmegen-wat-zijn-de-keuzes"
+     "de-juiste-nagelsalon-in-nijmegen-kiezen-tips-hier"
     ]
    },
    {
     "kop": "Nagels verzorgen",
     "tekst": "<p>Met de juiste verzorging blijven je nagels sterk, ook tussen de afspraken door.</p>",
     "artikelen": [
-     "perfecte-nagels-tips-van-nijmeegse-nagelpros",
      "ken-je-deze-feiten-en-fabels-al-over-nagelverzorging"
     ]
    }
@@ -288,8 +275,7 @@
     "tekst": "<p>Van een luxe verwenbehandeling tot het oplossen van voetproblemen.</p>",
     "artikelen": [
      "een-verwenmoment-voor-je-voeten-luxe-pedicurebehandelingen-in-nijmegen",
-     "stap-in-de-wereld-van-voetverwennerij",
-     "de-magische-krachten-van-een-pedicure-voetproblemen-opgelost-in-nijmegen"
+     "stap-in-de-wereld-van-voetverwennerij"
     ]
    },
    {
@@ -457,18 +443,10 @@
   "secties": [
    {
     "kop": "Locaties",
-    "tekst": "<p>Onze favoriete zalen in en rond Nijmegen.</p>",
+    "tekst": "<p>Onze favoriete zalen in en rond Nijmegen, met een checklist voor capaciteit, voorzieningen, kosten, catering en bereikbaarheid.</p>",
     "artikelen": [
      "7x-een-zaal-huren-in-nijmegen",
      "welke-trouwlocatie-kies-je-voor-jouw-droombruiloft"
-    ]
-   },
-   {
-    "kop": "Zo kies je de juiste zaal",
-    "tekst": "<p>Capaciteit, ligging, catering, techniek en budget: een checklist.</p>",
-    "artikelen": [
-     "zaal-huren-in-nijmegen-tips-voor-de-beste-keuze",
-     "top-tips-voor-zaalverhuur-nijmegen-vind-de-perfecte-locatie"
     ]
    },
    {
@@ -503,7 +481,6 @@
     "tekst": "<p>De kamermarkt in Nijmegen is krap. Begin op tijd en zoek op meerdere plekken.</p>",
     "artikelen": [
      "het-geheim-van-een-studentenkamer-vinden-in-nijmegen",
-     "op-kamers-in-nijmegen-waar-begin-ik-mijn-zoektocht",
      "kamernets-gids-voor-het-vinden-van-huurwoningen-in-nijmegen",
      "lang-huren-in-nijmegen-tips-voor-de-perfecte-plek"
     ]
