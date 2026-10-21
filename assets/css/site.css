@@ -195,9 +195,27 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .faq details p { margin: 8px 0 0; }
 .gids-cta { margin: 32px 0; }
 .gids-verder { margin: 16px 0 0; font-weight: 700; }
-.gidsen-raster { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
-.gidsen-raster a { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 18px; border: 1px solid #e5e5e5; border-radius: 8px; text-decoration: none; color: var(--tekst); background: var(--wit); }
-.gidsen-raster a:hover { border-color: var(--groen); }
-.gidsen-raster strong { font-size: 1.1rem; color: var(--groen); }
-.gidsen-raster span { font-size: 0.95rem; }
-.gidsen-raster em { font-style: normal; font-size: 0.85rem; color: #777; margin-top: auto; }
+.gidsen-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 20px; }
+.gidsen-filter button { font: inherit; font-size: 0.9rem; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rand); background: var(--wit); color: var(--tekst); cursor: pointer; }
+.gidsen-filter button:hover { border-color: var(--groen); }
+.gidsen-filter button[aria-pressed="true"] { background: var(--groen); border-color: var(--groen); color: var(--wit); }
+.gidsen-raster { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .gidsen-raster { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 860px) { .gidsen-raster { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1100px) { .gidsen-raster { grid-template-columns: repeat(4, 1fr); } }
+.gidskaart[hidden] { display: none; }
+.gidskaart__groep { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--blauw); }
+.gidskaart { display: flex; flex-direction: column; background: var(--wit); border: 1px solid var(--rand); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--tekst); transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+.gidskaart:hover, .gidskaart:focus-visible { border-color: var(--groen); box-shadow: 0 6px 16px rgba(18, 73, 124, 0.12); transform: translateY(-2px); }
+.gidskaart img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--licht); }
+.gidskaart__tekst { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; flex: 1; }
+.gidskaart h2 { margin: 0; font-size: 1.1rem; color: var(--kop); }
+.gidskaart p { margin: 0; font-size: 0.95rem; color: var(--grijs); }
+.gidskaart__meer { margin-top: auto; padding-top: 8px; font-weight: 700; font-size: 0.9rem; color: var(--groen); }
+@media (max-width: 559px) {
+  .gidskaart { flex-direction: row; }
+  .gidskaart img { width: 96px; min-width: 96px; aspect-ratio: auto; height: auto; }
+  .gidskaart__tekst { padding: 12px 14px; gap: 4px; }
+  .gidskaart p { font-size: 0.9rem; }
+  .gidskaart__meer { padding-top: 4px; }
+}

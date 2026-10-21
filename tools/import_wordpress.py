@@ -245,9 +245,9 @@ def kop(titel, beschrijving, canonical, root, afbeelding=None, extra=""):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="{root}assets/css/site.css">
-  <link rel="stylesheet" href="{root}partners/slider.css?v=4">
-  <script src="{root}partners/slider.js?v=4" defer></script>{extra}
+  <link rel="stylesheet" href="{root}assets/css/site.css?v=4">
+  <link rel="stylesheet" href="{root}partners/slider.css?v=5">
+  <script src="{root}partners/slider.js?v=5" defer></script>{extra}
 </head>
 <body>
   <div class="testbalk">Dit is een testomgeving. De echte pagina staat op <a href="{canonical}">www.nijmegenonline.nl</a>.</div>
@@ -388,22 +388,53 @@ def gids_pagina(g, per_slug):
     return "\n".join(out)
 
 
-def gidsen_overzicht():
+def gidsen_overzicht(per_slug):
     root = "../"
     canonical = SITE + "/thema/"
     out = [kop("Gidsen over Nijmegen", "Alle gidsen van NijmegenOnline op een rij: trouwen, restaurants, cafés, overnachten, studeren, ondernemen, de Vierdaagse en meer in Nijmegen.", canonical, root)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">')
     out.append('      <div class="kruimelpad"><a href="../">Home</a> › Gidsen</div>')
-    out.append('      <header class="rubriek-kop">\n        <h1>Gidsen over Nijmegen</h1>\n        <p>Alles over één onderwerp op één plek. Elke gids bundelt onze artikelen, tips en veelgestelde vragen.</p>\n      </header>')
+    out.append('      <header class="rubriek-kop">\n        <h1>Gidsen over Nijmegen</h1>\n        <p>Alles over één onderwerp op één plek. Elke gids bundelt onze artikelen, tips en antwoorden op veelgestelde vragen.</p>\n      </header>')
+    out.append('      <div class="gidsen-filter" role="group" aria-label="Filter op onderwerp">')
+    out.append('        <button type="button" data-groep="" aria-pressed="true">Alle gidsen</button>')
+    for i, (groep, _) in enumerate(GIDS_GROEPEN):
+        out.append('        <button type="button" data-groep="%d" aria-pressed="false">%s</button>' % (i, esc(groep)))
+    out.append("      </div>")
+    out.append('      <div class="gidsen-raster">')
+    for i, (groep, urls) in enumerate(GIDS_GROEPEN):
+        for u in urls:
+            g = next(x for x in GIDSEN if x["url"] == u)
+            arts = [per_slug[x] for sec in g["secties"] for x in sec["artikelen"] if x in per_slug]
+            foto = next((a["img"] for a in sorted(arts, key=lambda a: -a["verkeer"]) if a["img"]), None)
+            img = ('<img src="%s" alt="" loading="lazy">' % esc(foto["src"])) if foto else ""
+            out.append('        <a class="gidskaart" data-groep="%d" href="%s">%s<div class="gidskaart__tekst"><span class="gidskaart__groep">%s</span><h2>%s</h2><p>%s</p>'
+                       '<span class="gidskaart__meer">%d artikelen <span aria-hidden="true">→</span></span></div></a>'
+                       % (i, root + g["url"].lstrip("/"), img, esc(groep), esc(g["naam"]), esc(g["kort"]), len({a["slug"] for a in arts})))
+    out.append("      </div>")
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
-    out.append('      <ul class="gidsen-raster">')
-    for g in GIDSEN:
-        n = sum(len(sec["artikelen"]) for sec in g["secties"])
-        out.append('        <li><a href="%s"><strong>%s</strong><span>%s</span><em>%d artikelen</em></a></li>'
-                   % (root + g["url"].lstrip("/"), esc(g["naam"]), esc(g["beschrijving"]), n))
-    out.append("      </ul>\n    </div>\n  </main>")
+    out.append('''      <script>
+        document.querySelectorAll('.gidsen-filter button').forEach(function (knop) {
+          knop.addEventListener('click', function () {
+            var groep = knop.getAttribute('data-groep');
+            document.querySelectorAll('.gidsen-filter button').forEach(function (k) { k.setAttribute('aria-pressed', k === knop); });
+            document.querySelectorAll('.gidskaart').forEach(function (kaart) {
+              kaart.hidden = groep !== '' && kaart.getAttribute('data-groep') !== groep;
+            });
+          });
+        });
+      </script>''')
+    out.append("    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
+
+
+GIDS_GROEPEN = [
+    ("Eten, drinken en uitgaan", ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/cafes-in-nijmegen/", "/thema/museums-nijmegen/"]),
+    ("Bijzondere momenten", ["/thema/trouwen-in-nijmegen/", "/thema/zaal-huren-in-nijmegen/", "/jaarlijkse-evenementen/nijmeegse-vierdaagse/", "/thema/fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen/"]),
+    ("Overnachten", ["/thema/overnachten-in-nijmegen/", "/thema/bb-nijmegen/", "/thema/campings-in-nijmegen/"]),
+    ("Verzorging", ["/thema/kappers-in-nijmegen/", "/thema/massage-nijmegen/", "/thema/nagelsalon-in-nijmegen/", "/thema/pedicures-in-nijmegen/", "/thema/permanente-make-up-in-nijmegen/"]),
+    ("Wonen, leren en werken", ["/thema/studeren-in-nijmegen/", "/thema/cursus-nijmegen/", "/ondernemen-in-nijmegen/", "/thema/winkelen-in-nijmegen/"]),
+]
 
 
 def rubriek_pagina(slug, naam, intro, artikelen):
@@ -498,7 +529,7 @@ def main(bron):
         d = ROOT / g["url"].strip("/")
         d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(gids_pagina(g, per_slug), encoding="utf-8")
-    (ROOT / "thema" / "index.html").write_text(gidsen_overzicht(), encoding="utf-8")
+    (ROOT / "thema" / "index.html").write_text(gidsen_overzicht(per_slug), encoding="utf-8")
 
     (ROOT / "blog").mkdir(exist_ok=True)
     (ROOT / "blog" / "index.html").write_text(blog_pagina(per_rubriek), encoding="utf-8")

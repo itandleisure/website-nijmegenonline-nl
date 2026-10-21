@@ -100,7 +100,8 @@
       var img = document.createElement('img');
       img.src = new URL(p.afbeelding, basis).href;
       img.alt = p.naam;
-      img.loading = 'lazy';
+      // Niet lazy: banners buiten beeld moeten al geladen zijn als ze inschuiven
+      img.decoding = 'async';
       a.appendChild(img);
       item.appendChild(a);
       rij.appendChild(item);
