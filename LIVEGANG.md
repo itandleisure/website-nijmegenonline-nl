@@ -25,7 +25,7 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 
 1. `python tools/build.py --live`: haalt de testbalk en `noindex` weg en zet robots.txt open
 2. In `404.html` de verwijzingen `/website-nijmegenonline-nl/` vervangen door `/`
-3. Sitemap maken (`sitemap.xml`)
+3. Sitemap controleren: `sitemap.xml` wordt door `tools/build.py` gemaakt. Pagina's die nog op WordPress staan (bedrijvengids, agenda, nieuws) komen erin zodra ze hier gebouwd zijn
 4. Hosting naar Cloudflare Pages (die leest `_redirects` voor de 301's van oude categoriepagina's;
    GitHub Pages kan dat niet)
 5. DNS van nijmegenonline.nl naar de nieuwe hosting; WordPress als back-up laten staan

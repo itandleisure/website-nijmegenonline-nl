@@ -45,6 +45,8 @@ for _g in GIDSEN:
 SAMENVOEGEN = {r["oud"]: r["nieuw"] for r in csv.DictReader(
     open(ROOT / "data" / "samenvoegen.csv", encoding="utf-8"), delimiter=";")}
 SAMENGEVOEGD_OP = "2026-10-21T12:00:00"
+# Kleine tekstcorrecties per artikel (verouderde jaartallen, gesloten zaken)
+CORRECTIES = json.load(open(ROOT / "data" / "correcties.json", encoding="utf-8"))
 HANDGEMAAKT = {"kerstmarkten-in-nijmegen"}  # deze pagina's niet overschrijven
 
 RUBRIEKEN = [
@@ -605,6 +607,17 @@ def main(bron):
             a["modified"] = SAMENGEVOEGD_OP
         for oud, nieuw in SAMENVOEGEN.items():
             a["html"] = a["html"].replace('href="../%s/"' % oud, 'href="../%s/"' % nieuw)
+        for c in (c for c in CORRECTIES if c["artikel"] == p["slug"]):
+            if "regex" in c:
+                nieuw_html, n = re.subn(c["regex"], c["nieuw"], a["html"], flags=re.S)
+            else:
+                n = a["html"].count(c["oud"])
+                nieuw_html = a["html"].replace(c["oud"], c["nieuw"])
+            if not n:
+                raise SystemExit("Correctie past niet meer bij %s: %s" % (p["slug"], c.get("oud", c.get("regex"))[:60]))
+            a["html"] = re.sub(r"\n\s*\n", "\n", nieuw_html)
+            a["samenvatting"] = samenvatting(a["html"])
+            a["modified"] = SAMENGEVOEGD_OP
         m = re.search(r'<img[^>]+src="([^"]+)"', a["html"])
         a["eerste_img"] = m.group(1) if m else None
         artikelen.append(a)

@@ -1,0 +1,50 @@
+[
+ {
+  "artikel": "faq-over-de-nijmeegse-vierdaagse-alle-antwoorden",
+  "reden": "Bijgewerkt naar de Vierdaagse van 2027",
+  "oud": "Nijmeegse Vierdaagse 2025.",
+  "nieuw": "Nijmeegse Vierdaagse 2027."
+ },
+ {
+  "artikel": "faq-over-de-nijmeegse-vierdaagse-alle-antwoorden",
+  "reden": "Bijgewerkt naar de Vierdaagse van 2027",
+  "oud": "Als je geboren bent in 1965 of eerder mag je de 30 kilometer lopen. Dit betekent dat je in 2025, 60 jaar of ouder moet zijn voor het lopen van de 30 kilometer van de Nijmeegse Vierdaagse. Ook als je jonger bent en geboren bent in 2008 tot en met 2011, kom je in aanmerking voor de 30 kilometer.",
+  "nieuw": "De 30 kilometer is voor wandelaars van 60 jaar en ouder, en voor jongeren. Voor de Vierdaagse van 2027 betekent dat: je bent geboren in 1967 of eerder, of je bent geboren in 2010 tot en met 2013. Controleer de precieze leeftijdsgrenzen bij je inschrijving op de <a href=\"https://www.4daagse.nl/\" rel=\"noopener\" target=\"_blank\">officiële website van de 4Daagse</a>."
+ },
+ {
+  "artikel": "faq-over-de-nijmeegse-vierdaagse-alle-antwoorden",
+  "reden": "Bijgewerkt naar de Vierdaagse van 2027",
+  "oud": "<h2><strong>Wat kost de Vierdaagse in 2025?</strong></h2>",
+  "nieuw": "<h2><strong>Wat kost de Vierdaagse?</strong></h2>"
+ },
+ {
+  "artikel": "faq-over-de-nijmeegse-vierdaagse-alle-antwoorden",
+  "reden": "Bijgewerkt naar de Vierdaagse van 2027",
+  "oud": "<p>Je inschrijving voor de Nijmeegse Vierdaagse van 2025 kost €120,-. Dit is het inschrijfgeld voor de 10<sup>7de </sup>Vierdaagse.</p>",
+  "nieuw": "<p>Het inschrijfgeld wordt elk jaar opnieuw vastgesteld. Voor de 107e Vierdaagse in 2025 was dat €120. Het bedrag voor de 109e Vierdaagse in 2027 zie je bij de inschrijving op de <a href=\"https://www.4daagse.nl/\" rel=\"noopener\" target=\"_blank\">officiële website van de 4Daagse</a>.</p>"
+ },
+ {
+  "artikel": "museums-in-nijmegen-wat-ga-jij-ontdekken",
+  "reden": "Het Afrika Museum is sinds 27 november 2023 gesloten",
+  "oud": "<p>Even buiten Nijmegen, in Berg en Dal en Groesbeek zijn bovendien twee fraaie themamusea te vinden die we hier graag even uitlichten.</p>",
+  "nieuw": "<p>Even buiten Nijmegen, in Groesbeek, vind je bovendien een bijzonder themamuseum dat we hier graag even uitlichten. Het Afrika Museum in Berg en Dal is sinds 27 november 2023 gesloten voor publiek.</p>"
+ },
+ {
+  "artikel": "museums-in-nijmegen-wat-ga-jij-ontdekken",
+  "reden": "Het Afrika Museum is sinds 27 november 2023 gesloten",
+  "regex": "<h2>Inspirerend Afrika</h2>.*?Nationaal Museum van Wereldculturen\\.</p>",
+  "nieuw": ""
+ },
+ {
+  "artikel": "ontdek-nijmegen-door-de-ogen-van-een-local",
+  "reden": "Het Afrika Museum is sinds 27 november 2023 gesloten",
+  "oud": "In Berg en Dal ligt bijvoorbeeld het Afrika museum, waar het bijna voelt alsof je echt in het continent op vakantie bent. Een interessant museum dat Afrikaanse kunst en culturen van het continent toont.",
+  "nieuw": "In Groesbeek ligt bijvoorbeeld het Vrijheidsmuseum, waar je de verhalen van de Tweede Wereldoorlog en de bevrijding van de regio beleeft."
+ },
+ {
+  "artikel": "hoe-het-afrika-museum-je-elke-keer-weer-inspireert",
+  "reden": "Het Afrika Museum is sinds 27 november 2023 gesloten",
+  "regex": "\\Z",
+  "nieuw": "\n<h2>Waar kun je nu terecht?</h2>\n<p>Het Afrika Museum is dicht, maar in en rond Nijmegen zijn nog genoeg musea te ontdekken. Denk aan Museum Het Valkhof in het centrum, Museumpark Oriëntalis in Heilig Landstichting en het Vrijheidsmuseum in Groesbeek. Alle tips vind je in onze gids <a href=\"../thema/museums-nijmegen/\">Musea in Nijmegen</a>.</p>"
+ }
+]

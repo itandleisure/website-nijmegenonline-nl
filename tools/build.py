@@ -9,7 +9,9 @@
    naar de huidige site wijzen; die staan in het overzicht aan het eind.
 3. Afbeeldingen van www.nijmegenonline.nl/wp-content/uploads/ wijzen naar de eigen webp-versie in
    assets/uploads/ als tools/afbeeldingen.py die heeft gemaakt (src relatief, og:image absoluut).
-4. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
+4. sitemap.xml met alle pagina's die geïndexeerd mogen worden (geen doorverwijzingen), met de
+   echte URL's en de datum van de laatste wijziging.
+5. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
 
 Gebruik: python tools/build.py [--live]
 """
@@ -89,6 +91,8 @@ def main(live=False):
         if nieuw != html:
             page.write_text(nieuw, encoding="utf-8")
 
+    sitemap(live)
+
     if live:
         (ROOT / "robots.txt").write_text("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE, encoding="utf-8")
         print("Live-versie gemaakt: testbalk en noindex verwijderd, robots.txt open.")
@@ -97,6 +101,25 @@ def main(live=False):
         print("Nog naar de huidige site (%d pagina's nog niet gebouwd):" % len(extern))
         for pad, n in extern.most_common():
             print("  %4dx %s" % (n, pad))
+
+
+def sitemap(live):
+    regels = []
+    for page in pages():
+        html = page.read_text(encoding="utf-8")
+        if '<meta name="robots" content="noindex">' in html:  # doorverwijzing
+            continue
+        m = re.search(r'<link rel="canonical" href="([^"]+)"', html)
+        pad = page.parent.relative_to(ROOT).as_posix()
+        url = m.group(1) if m else SITE + ("/" if pad == "." else "/%s/" % pad)
+        if not url.startswith(SITE):
+            continue
+        d = re.search(r'"dateModified": "(\d{4}-\d{2}-\d{2})', html)
+        regels.append("  <url><loc>%s</loc>%s</url>" % (url, "<lastmod>%s</lastmod>" % d.group(1) if d else ""))
+    (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
+                                      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n'
+                                      % "\n".join(sorted(set(regels))), encoding="utf-8")
+    print("sitemap.xml: %d pagina's" % len(set(regels)))
 
 
 if __name__ == "__main__":
