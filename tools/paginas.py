@@ -163,6 +163,21 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
     return "\n".join(regels)
 
 
+# Toegevoegd aan artikel 11 (Privacy): wat er met formuliergegevens gebeurt (zie tools/google-formulier/Code.gs)
+PRIVACY_FORMULIEREN = [
+    "11.4 Gegevens die je via een formulier op deze website instuurt, zoals een contactbericht of de aanmelding van een "
+    "evenement, bedrijf of partnerschap, bewaren we in een beveiligde omgeving bij Google. We gebruiken ze alleen om je "
+    "bericht of aanmelding te behandelen en om contact met je op te nemen. Na drie maanden verwijderen we deze gegevens, "
+    "inclusief meegestuurde foto's.",
+    "11.5 Gegevens die je instuurt om te publiceren, zoals de naam, omschrijving, datum, locatie en foto van een evenement "
+    "en het adres, de website, het e-mailadres en het telefoonnummer voor bezoekers, staan op de website zolang de "
+    "vermelding online staat. Je eigen naam, e-mailadres en telefoonnummer als contactpersoon publiceren we niet. Bij het "
+    "redigeren van teksten kan de redactie gebruikmaken van een AI-dienst; daarbij delen we alleen de gegevens die voor "
+    "publicatie bedoeld zijn.",
+    "11.6 Wil je dat we je gegevens eerder verwijderen, of dat we een vermelding offline halen? Mail dan naar %s." % EMAIL,
+]
+
+
 def algemene_voorwaarden(tekst, meta):
     """De voorwaarden letterlijk overgenomen; alleen de opmaak is anders (artikel = kop, lid = alinea)."""
     tekst = re.sub(r"\[/?[a-z_]+[^\]]*\]|<!--.*?-->", "", tekst, flags=re.S)
@@ -176,6 +191,8 @@ def algemene_voorwaarden(tekst, meta):
             else:
                 regel = re.sub(r"^(\d+\.\d+)(?=\S)", r"\1 ", regel)
                 delen.append("        <p>%s</p>" % esc(regel))
+                if regel.startswith("11.3 "):
+                    delen += ["        <p>%s</p>" % esc(x) for x in PRIVACY_FORMULIEREN]
     adres = [html.unescape(x).strip() for x in re.split(r"<br\s*/?>|</?p>", adres) if x.strip()]
     delen.append("        <h2>Adresgegevens</h2>\n        <p>%s</p>" % "<br>".join(esc(x) for x in adres))
     inhoud = "        <h1>Algemene voorwaarden</h1>\n" + "\n".join(delen)

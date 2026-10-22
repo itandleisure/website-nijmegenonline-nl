@@ -15,7 +15,7 @@
      "Staat het al ergens anders?" zoekt op internet of andere sites de aanmelding al hebben. Claude doet alleen
      iets als je op zo'n knop drukt. Zonder sleutel werkt alles ook, alleen zonder deze knoppen.
    - Er gaat een e-mail naar ONTVANGER (antwoorden gaat rechtstreeks naar de invuller).
-   - Regels ouder dan de bewaartermijn per tabblad worden elke nacht automatisch verwijderd (privacy).
+   - Regels ouder dan de bewaartermijn (3 maanden) worden elke nacht verwijderd, met hun foto in Drive (privacy, zie artikel 11 van de algemene voorwaarden).
 
    Eenmalig: kies bovenin de functie "installeer" en klik op Uitvoeren (geeft toestemming
    en zet de nachtelijke opruimtaak aan). Daarna: Implementeren → Nieuwe implementatie → Web-app,
@@ -32,16 +32,16 @@ var MODEL = 'claude-opus-5-5';
 // Per formuliertype: tabblad, kolommen, bewaartermijn en onderwerp van de mail
 var FORMULIEREN = {
   contact: {
-    tabblad: 'Contact', bewaarMaanden: 12, onderwerp: 'Contactformulier',
+    tabblad: 'Contact', bewaarMaanden: 3, onderwerp: 'Contactformulier',
     velden: [['naam', 'Naam'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['onderwerp', 'Onderwerp'], ['bericht', 'Bericht']]
   },
   partner: {
-    tabblad: 'Partners', bewaarMaanden: 24, onderwerp: 'Aanmelding partner',
+    tabblad: 'Partners', bewaarMaanden: 3, onderwerp: 'Aanmelding partner',
     velden: [['naam', 'Naam'], ['bedrijf', 'Bedrijf'], ['email', 'E-mail'], ['telefoon', 'Telefoon'],
       ['pakket', 'Pakket'], ['bericht', 'Toelichting']]
   },
   bedrijf: {
-    tabblad: 'Bedrijven', bewaarMaanden: 24, onderwerp: 'Aanmelding bedrijvengids', goedkeuren: true,
+    tabblad: 'Bedrijven', bewaarMaanden: 3, onderwerp: 'Aanmelding bedrijvengids', goedkeuren: true,
     openbaar: ['bedrijf', 'categorie', 'adres', 'site', 'telefoon', 'bedrijfsmail', 'openingstijden', 'omschrijving'],
     velden: [['bedrijf', 'Bedrijf'], ['categorie', 'Soort bedrijf'], ['adres', 'Adres'], ['site', 'Website'],
       ['telefoon', 'Telefoon'], ['bedrijfsmail', 'E-mail bedrijf'], ['openingstijden', 'Openingstijden'],
