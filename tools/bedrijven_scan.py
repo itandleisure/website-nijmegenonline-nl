@@ -133,6 +133,9 @@ def main(argv):
     for b in gids["overig"]:
         eerder = scan.get(b["slug"], {})
         klaar = eerder.get("status") == "voorstel" and eerder.get("website_bereikbaar") and eerder.get("tekst")
+        # Wat de redactie al goedkeurde of verwijderde, blijft staan; alleen met --alleen opnieuw
+        if eerder.get("status") in ("goedgekeurd", "verwijderd") and not alleen:
+            continue
         if alleen and b["slug"] not in alleen:
             continue
         if b.get("website") and (alleen or not (klaar and not opnieuw)):
