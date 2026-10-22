@@ -48,7 +48,7 @@ var FORMULIEREN = {
       ['omschrijving', 'Omschrijving'], ['foto', 'Logo of foto'], ['naam', 'Contactpersoon'], ['email', 'E-mail']]
   },
   evenement: {
-    tabblad: 'Evenementen', bewaarMaanden: 12, onderwerp: 'Evenement aangemeld', goedkeuren: true,
+    tabblad: 'Evenementen', bewaarMaanden: 3, onderwerp: 'Evenement aangemeld', goedkeuren: true,
     openbaar: ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats',
       'site', 'evenementmail', 'evenementtelefoon'],
     velden: [['titel', 'Evenement'], ['datum', 'Begindatum'], ['starttijd', 'Begintijd'], ['einddatum', 'Einddatum'],
@@ -699,10 +699,18 @@ function opruimen() {
     var grens = new Date();
     grens.setMonth(grens.getMonth() - cfg.bewaarMaanden);
     var datums = sheet.getRange(2, 1, laatste - 1, 1).getValues();
+    var fotoKolom = cfg.goedkeuren ? kolommen(cfg).indexOf('Foto-ID') + 1 : 0;
+    var fotos = fotoKolom ? sheet.getRange(2, fotoKolom, laatste - 1, 1).getValues() : [];
     // Van onder naar boven, zodat regelnummers niet verschuiven
     for (var i = datums.length - 1; i >= 0; i--) {
       var d = datums[i][0];
-      if (d instanceof Date && d < grens) sheet.deleteRow(i + 2);
+      if (!(d instanceof Date) || d >= grens) continue;
+      // Ook de foto in Google Drive naar de prullenbak (de kopie op de website blijft staan)
+      var fotoId = fotos[i] ? String(fotos[i][0] || '') : '';
+      if (fotoId) {
+        try { DriveApp.getFileById(fotoId).setTrashed(true); } catch (fout) { console.error('Foto ' + fotoId + ': ' + fout); }
+      }
+      sheet.deleteRow(i + 2);
     }
   });
 }
