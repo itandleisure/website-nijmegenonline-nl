@@ -1,23 +1,50 @@
 {
- "area-11-personal-fit": {
-  "adres_op_site": "",
+ "apollo-gym": {
+  "adres_op_site": "Meijhorst 6002, 6537 KT Nijmegen",
   "bronnen": [
-   "http://www.evolvepersonaltraining.nl/",
-   "https://www.evolvepersonaltraining.nl/"
+   "https://apollogym.nl/gratis-dagkaart/",
+   "https://apollogym.nl/club-info/"
   ],
   "categorie_scan": "sportschool",
   "extra_categorieen": [],
   "gescand": "2026-10-22",
-  "hoofdcategorie": "personal-training",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "groepslessen",
+   "personal training",
+   "proefles"
+  ],
+  "kosten_tokens": {
+   "in": 105173,
+   "uit": 1650
+  },
+  "lijkt_actief": true,
+  "naam": "Apollo Gym",
+  "openingstijden": "",
+  "opmerkingen": "Er staan geen reguliere openingstijden op de gelezen pagina's. Er is wel een aparte pagina 'Aangepaste Openingstijden', maar die heb ik niet gelezen. Pilates is één van de groepslessen en niet als aparte categorie opgenomen. Het telefoonnummer op de site is 06 51 72 97 34; de WhatsApp-link gebruikt een ander nummer (+31 6 42049998). De homepage kon niet rechtstreeks worden opgehaald, daarom ben ik begonnen bij de opgegeven subpagina.",
+  "status": "voorstel",
+  "tekst": "Deze sportschool in de Nijmeegse wijk Meijhorst combineert fitness met een dagelijks rooster van live groepslessen onder leiding van instructeurs. Het lesaanbod omvat onder meer HIIT, indoor cycling, Body Shape, Body Toning, BBB, Zumba, cardiokickboksen, pilates, City Circuit en een speciale les voor senioren.\n\nOp de fitnessvloer kunnen leden gebruikmaken van de toestellen en krijgen ze uitleg en begeleiding. Daarnaast zijn personal training, trainingsschema's en voedingsschema's mogelijk. Nieuwe sporters kunnen twee weken op proef komen; de eerste dag begint met een rondleiding en een persoonlijke kennismaking.\n\nDe club zit op de plek waar eerder sportschool Hara negentien jaar gevestigd was. Na de sluiting tijdens de pandemie namen twee betrokkenen de locatie over en gingen verder onder een nieuwe naam, met een deel van het oude team.",
+  "website": "https://apollogym.nl/gratis-dagkaart/#fixed-section",
+  "website_bereikbaar": true
+ },
+ "area-11-personal-fit": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.evolvepersonaltraining.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
   "kenmerken": [],
   "kosten_tokens": {
-   "in": 29996,
-   "uit": 796
+   "in": 14291,
+   "uit": 492
   },
   "lijkt_actief": true,
   "naam": "Area 11 Personal Fit",
   "openingstijden": "",
-  "opmerkingen": "De website http://www.evolvepersonaltraining.nl/ kon niet worden opgehaald: zowel de http- als de https-versie gaf de foutmelding 'url_not_allowed'. Daarom is er geen tekst geschreven en zijn de openingstijden, het adres en de kenmerken niet gecontroleerd. Of het bedrijf nog actief is, is ook niet na te gaan; lijkt_actief staat alleen op true omdat er geen bewijs is dat het gestopt is. Let op: de domeinnaam (Evolve Personal Training) past niet bij de bedrijfsnaam bij ons (Area 11 Personal Fit). Mogelijk is het bedrijf van naam veranderd, of hoort de website bij een ander bedrijf. Gaat het om Area 11 aan de Weg door Jonkerbos 26, dan past 'personal-training' waarschijnlijk beter dan 'sportschool'. Die keuze is gemaakt op basis van naam en domein, dus graag handmatig controleren.",
+  "opmerkingen": "Ik kon de website http://www.evolvepersonaltraining.nl/ niet openen omdat de URL niet toegankelijk was (foutmelding 'url_not_allowed'). Daardoor heb ik geen informatie kunnen controleren en geen tekst geschreven. Ook valt op dat de domeinnaam (Evolve Personal Training) niet past bij de bedrijfsnaam Area 11 Personal Fit. Misschien is het bedrijf van naam veranderd of hoort de link bij een ander bedrijf. Controleer dit graag handmatig. Of het bedrijf nog actief is, heb ik niet kunnen nagaan. De hoofdcategorie is overgenomen van de vermoedelijke categorie; personal-training kan beter passen.",
   "status": "voorstel",
   "tekst": "",
   "website": "http://www.evolvepersonaltraining.nl/",
@@ -34,16 +61,683 @@
   "hoofdcategorie": "yoga",
   "kenmerken": [],
   "kosten_tokens": {
-   "in": 14239,
-   "uit": 428
+   "in": 22319,
+   "uit": 543
   },
   "lijkt_actief": true,
   "naam": "Ashtanga Mysore Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "De website (http://www.imxprs.com/free/franki/website-ayn) kon niet worden geopend (url_not_accessible), daarom is er geen tekst geschreven. We weten dus niet of het bedrijf nog actief is. Op basis van de naam is de hoofdcategorie op yoga gezet in plaats van sportschool, omdat Ashtanga Mysore een yogastijl is. Dat is niet op de site gecontroleerd. Het adres, de openingstijden en het aanbod moeten nog worden nagekeken.",
+  "opmerkingen": "De website (http://www.imxprs.com/free/franki/website-ayn) kon niet worden geopend (foutmelding url_not_accessible). Daarom is er geen tekst geschreven en is niets op de site gecontroleerd. Of het bedrijf nog actief is, valt niet na te gaan; het staat op 'true' omdat er ook geen melding over sluiting gevonden is. Ik heb de hoofdcategorie op 'yoga' gezet in plaats van 'sportschool', omdat de naam wijst op Ashtanga-yoga in Mysore-stijl. Dat moet nog gecontroleerd worden. Ook het adres en de openingstijden moeten nog worden nagekeken.",
   "status": "voorstel",
   "tekst": "",
   "website": "http://www.imxprs.com/free/franki/website-ayn",
   "website_bereikbaar": false
+ },
+ "avalon-fitcentre": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [],
+  "kosten_tokens": {
+   "in": 30102,
+   "uit": 634
+  },
+  "lijkt_actief": true,
+  "naam": "Avalon Fitcentre",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website niet openen. Bij http://www.avalonfitcentre.nl/, https://www.avalonfitcentre.nl/ en https://avalonfitcentre.nl/ gaf de ophaaltool steeds de foutmelding 'url_not_allowed'. Daardoor kon ik niets controleren en is de tekst leeg gelaten. 'Lijkt actief' staat op true omdat ik niet kon nagaan of het bedrijf gestopt is; dat moet nog bevestigd worden. De hoofdcategorie sportschool komt alleen uit de vermoedelijke categorie die jullie zelf opgaven. Graag handmatig controleren en opnieuw proberen.",
+  "status": "voorstel",
+  "tekst": "",
+  "website": "http://www.avalonfitcentre.nl/",
+  "website_bereikbaar": false
+ },
+ "basic-fit-kerkenbos-2-2": {
+  "adres_op_site": "Kerkenbos 1115, 6546 BC Nijmegen",
+  "bronnen": [
+   "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-kerkenbos-24/7-647daab03c8d4517a522f2f9c3c32332.html"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "24 uur open",
+   "groepslessen",
+   "personal training"
+  ],
+  "kosten_tokens": {
+   "in": 55032,
+   "uit": 1178
+  },
+  "lijkt_actief": true,
+  "naam": "Basic-Fit",
+  "openingstijden": "ma-zo 00:00-24:00 (24/7 geopend)",
+  "opmerkingen": "De groepslessen zijn video-workouts, er staat geen live instructeur bij. Fysiotherapie komt alleen voor in de algemene introtekst. Het is niet duidelijk of dat in deze vestiging echt wordt aangeboden, daarom is het niet als categorie toegevoegd. Er staat niets over parkeren of rolstoeltoegankelijkheid.",
+  "status": "voorstel",
+  "tekst": "De vestiging van de fitnessketen Basic-Fit aan de Kerkenbos ligt in de wijk Lindenholt. De club is dag en nacht open en heeft ruim 2200 m² sportruimte, verdeeld over zeven trainingszones met onder meer cardio- en krachtapparatuur.\n\nNaast vrij trainen kunnen leden meedoen aan groepslessen via video in de groepsleszaal. Voorbeelden zijn Bodypump, Bootcamp, Box, Pilates en Abs & Core. Tegen betaling is personal training mogelijk, en de site noemt ook fysiotherapie. Verder zijn er een body analyzer, massagestoelen en een tappunt voor sportwater.\n\nDe club heeft lockers, kleedkamers en douches. Met een lidmaatschap kun je ook in andere Basic-Fit-clubs trainen. Inschrijven gaat online.",
+  "website": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-kerkenbos-24/7-647daab03c8d4517a522f2f9c3c32332.html",
+  "website_bereikbaar": true
+ },
+ "basic-fit-vlaamsegas-2-2": {
+  "adres_op_site": "Vlaamsegas 2, 6511 HR Nijmegen",
+  "bronnen": [
+   "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-vlaamsegas-d630317ca8554edc9ca738d360875d38.html"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "groepslessen",
+   "personal training"
+  ],
+  "kosten_tokens": {
+   "in": 41197,
+   "uit": 1533
+  },
+  "lijkt_actief": true,
+  "naam": "Basic-Fit",
+  "openingstijden": "ma-vr 07:00-22:30, za-zo 09:00-16:00",
+  "opmerkingen": "Op de site staan openingstijden (ma-vr 7.00-22.30, za-zo 9.00-16.00), maar in de buurtbeschrijving heet de club 'Basic-Fit Nijmegen Vlaamsegas 24/7'. Daarom heb ik '24 uur open' niet opgenomen. Graag controleren. De groepslessen in de club worden via video gegeven. Fysiotherapie wordt in de club aangeboden, maar het is onduidelijk of dit via externe fysiotherapeuten gaat. Daarom staat het niet als extra categorie. Er is geen eigen parkeerterrein, alleen een betaalde parkeergarage in de buurt (Molenpoortdak). Daarom staat 'parkeren' niet bij de kenmerken. Ik heb alleen de clubpagina gelezen: daar stond alle informatie die nodig was.",
+  "status": "voorstel",
+  "tekst": "Deze vestiging van de fitnessketen Basic-Fit zit aan de Vlaamsegas in het centrum van Nijmegen, vlak bij het Kronenburgpark en het winkelgebied. Het station ligt op korte afstand. Wie met de auto komt, kan betaald parkeren in de parkeergarage Molenpoortdak.\n\nDe club heeft ruim 1700 m² sportruimte, verdeeld over zeven zones. Daar vind je onder meer vrije gewichten, krachtapparaten, cardiotoestellen en een ruimte voor functionele training en stretchen. Verder zijn er lockers, kleedkamers en douches.\n\nIn de groepsleszaal kun je lessen volgen via video, zoals bodypump, bootcamp, box en pilates. Daarnaast werken er personal trainers en fysiotherapeuten. Ook staan er een body analyzer en massagestoelen. Met een lidmaatschap kun je ook terecht in de andere Basic-Fit-clubs.",
+  "website": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-vlaamsegas-d630317ca8554edc9ca738d360875d38.html",
+  "website_bereikbaar": true
+ },
+ "basic-fit-weg-door-jonkerbos-2-2": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [],
+  "kosten_tokens": {
+   "in": 21720,
+   "uit": 556
+  },
+  "lijkt_actief": true,
+  "naam": "Basic-Fit",
+  "openingstijden": "",
+  "opmerkingen": "De website http://www.basicfit.nl/ kon niet worden opgehaald, want de ophaaltool gaf de fout 'url_not_allowed'. De variant zonder slash werkte ook niet. Daardoor konden we niets controleren: geen tekst, kenmerken, openingstijden of adres (Weg door Jonkerbos 26). De categorie sportschool is overgenomen uit de vermoedelijke categorie en is niet gecontroleerd. Dat het bedrijf actief is, is ook niet gecontroleerd. De redactie moet de clubpagina van Basic-Fit Nijmegen Weg door Jonkerbos met de hand nakijken.",
+  "status": "voorstel",
+  "tekst": "",
+  "website": "http://www.basicfit.nl/",
+  "website_bereikbaar": false
+ },
+ "benefit-sports": {
+  "adres_op_site": "Akkerlaan 46, 6533 BL Nijmegen",
+  "bronnen": [
+   "https://www.benefitsports.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [
+   {
+    "bewijs": "Personal Training & Lifestyle Coaching",
+    "categorie": "coach"
+   }
+  ],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "personal-training",
+  "kenmerken": [
+   "personal training",
+   "proefles",
+   "bedrijfsuitje"
+  ],
+  "kosten_tokens": {
+   "in": 21664,
+   "uit": 815
+  },
+  "lijkt_actief": true,
+  "naam": "Benefit Sports",
+  "openingstijden": "",
+  "opmerkingen": "Dit is geen sportschool met vrije toegang, maar vooral personal training en leefstijlcoaching door één trainer. Daarom staat de hoofdcategorie op personal-training in plaats van sportschool. Het bedrijfsaanbod 'Benefit Business' staat op de site als 'Afgelopen'. Of het kenmerk bedrijfsuitje nog klopt, is dus twijfelachtig. Op de site staan geen openingstijden. Alleen de homepage is gelezen.",
+  "status": "voorstel",
+  "tekst": "Aan de Akkerlaan in Nijmegen begeleidt sportkundige Bart Konig mensen bij het werken aan een gezondere leefstijl. Hij is leefstijlcoach, fitnesstrainer en bewegingsagoog. De nadruk ligt op personal training, aangevuld met coaching op het gebied van voeding, beweging en ontspanning.\n\nKlanten kiezen uit verschillende pakketten. Die lopen uiteen van een training eens per twee weken tot een volledig traject waarin training, coaching en voedingsadvies samenkomen. Volgens de site zijn er ook bootcamp- en hardlooptrainingen. Voor bedrijven bestond er een apart programma met bootcamps.\n\nWie wil beginnen, plant eerst een gratis intakegesprek in. Daarin worden de persoonlijke doelen besproken. Ook kun je je aanmelden voor een gratis proefweek. Contact verloopt via WhatsApp, telefoon of e-mail.",
+  "website": "https://www.benefitsports.nl/",
+  "website_bereikbaar": true
+ },
+ "biggym-nijmegen": {
+  "adres_op_site": "Hatertseweg 615, 6533 GL Nijmegen",
+  "bronnen": [
+   "https://biggym.com/",
+   "https://biggym.com/biggym-nijmegen/",
+   "https://biggym.com/openingstijden/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "groepslessen",
+   "parkeren",
+   "proefles"
+  ],
+  "kosten_tokens": {
+   "in": 68756,
+   "uit": 1237
+  },
+  "lijkt_actief": true,
+  "naam": "BigGym Nijmegen",
+  "openingstijden": "ma-vr 07:00-23:00, za-zo 08:30-17:00 (afwijkende tijden op feestdagen, Koningsdag gesloten)",
+  "opmerkingen": "biggym.nl stuurt door naar biggym.com. De openingstijden staan op een algemene pagina voor alle vestigingen en niet specifiek voor Nijmegen. Reformer Pilates wordt volgens de site alleen in Alkmaar en Heerhugowaard aangeboden en dus nog niet in Nijmegen. 'Proefles' is toegevoegd omdat de site bij de vraag over een proefles naar de dagpas verwijst.",
+  "status": "voorstel",
+  "tekst": "Aan de Hatertseweg in Nijmegen zit een vestiging van de landelijke sportschoolketen BigGym. Je kunt er fitnessen met kracht- en cardioapparatuur. Er is ook een zone van 3000 m² voor functionele training, en er worden live groepslessen gegeven.\n\nVerder zijn er douches, gratis wifi en een zonnebank, en je kunt er gratis parkeren. Met een lidmaatschap kun je ook terecht bij de andere BigGym-vestigingen in Nederland. Er zijn abonnementen voor één of twee personen en een variant voor overdag. Wie eerst wil kijken, kan een dagpas kopen. Inschrijven kan online of aan de balie. De BigGym-app geldt als toegangsbewijs.\n\nDe sportschool is doordeweeks open van 's ochtends vroeg tot laat in de avond. In het weekend zijn de openingstijden korter.",
+  "website": "http://www.biggym.nl/",
+  "website_bereikbaar": true
+ },
+ "bodytecnijmegen": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.bodytecnijmegen.nl/",
+   "https://www.bodytecnijmegen.nl/",
+   "https://bodytecnijmegen.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [],
+  "kosten_tokens": {
+   "in": 21741,
+   "uit": 606
+  },
+  "lijkt_actief": true,
+  "naam": "BodytecNijmegen",
+  "openingstijden": "",
+  "opmerkingen": "De website http://www.bodytecnijmegen.nl/ kon niet worden geopend. Ook de https-versie, met en zonder www, gaf dezelfde fout ('url_not_allowed'). Daardoor is er geen informatie over aanbod, openingstijden, adres of of het bedrijf nog actief is. 'Actief' staat op true omdat dat de standaardwaarde is, niet omdat het is gecontroleerd. De categorie sportschool is overgenomen van de vermoedelijke categorie. Graag handmatig controleren.",
+  "status": "voorstel",
+  "tekst": "",
+  "website": "http://www.bodytecnijmegen.nl/",
+  "website_bereikbaar": false
+ },
+ "compleetfit-nijmegen": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.compleetfitnijmegen.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [
+   {
+    "bewijs": "Unieke mix van personal training, fysiotherapie, voeding en coaching.",
+    "categorie": "fysiotherapeut"
+   }
+  ],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "personal-training",
+  "kenmerken": [
+   "personal training"
+  ],
+  "kosten_tokens": {
+   "in": 23383,
+   "uit": 778
+  },
+  "lijkt_actief": true,
+  "naam": "CompleetFit Nijmegen",
+  "openingstijden": "",
+  "opmerkingen": "De website reageert wel, maar er was bijna geen inhoud uit te halen. Waarschijnlijk wordt de site met JavaScript opgebouwd (een Lovable-app). Alleen de metagegevens waren leesbaar: 'Word pijnvrij, fit én val duurzaam af bij CompleetFit Nijmegen. Unieke mix van personal training, fysiotherapie, voeding en coaching.' Subpagina's zoals contact of 'over ons' kon ik niet openen. Daarom is er geen tekst geschreven en zijn openingstijden en adres niet gecontroleerd. De site gaat vooral over personal training en fysiotherapie en minder over een gewone sportschool. Daarom is personal-training als hoofdcategorie gekozen in plaats van Sportscholen; graag handmatig nakijken. Of voeding en coaching (dietist/coach) een wezenlijk deel van het aanbod zijn, is niet duidelijk.",
+  "status": "voorstel",
+  "tekst": "",
+  "website": "http://www.compleetfitnijmegen.nl/",
+  "website_bereikbaar": true
+ },
+ "crossfit-nijmegen": {
+  "adres_op_site": "Nieuwe Mollenhutseweg 52, 6533 HJ Nijmegen",
+  "bronnen": [
+   "https://www.crossfit-nijmegen.com"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [
+   {
+    "bewijs": "Individuele lessen\n\nPersonal Training",
+    "categorie": "personal-training"
+   }
+  ],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "crossfit",
+  "kenmerken": [
+   "groepslessen",
+   "personal training",
+   "proefles",
+   "bedrijfsuitje"
+  ],
+  "kosten_tokens": {
+   "in": 24719,
+   "uit": 954
+  },
+  "lijkt_actief": true,
+  "naam": "CrossFit Nijmegen",
+  "openingstijden": "ma 07:00-22:00, di 08:00-22:00, wo 07:00-22:00, do-vr 08:00-22:00, za 08:00-15:00, zo 09:00-15:00 (afwijkende tijden op feestdagen)",
+  "opmerkingen": "Alleen de homepage is gelezen, en die bevat genoeg informatie. Teambuilding staat op de homepage als apart aanbod en is daarom als kenmerk 'bedrijfsuitje' opgenomen. Het logo van CrossFit Kids staat op de site, maar een kinderprogramma wordt nergens genoemd. Daarom is dat weggelaten. De vermoedelijke categorie was Sportscholen. Voor de hoofdcategorie is crossfit gekozen, omdat dat beter past.",
+  "status": "voorstel",
+  "tekst": "Deze CrossFit-box aan de Nieuwe Mollenhutseweg heeft meer dan 1100 vierkante meter trainingsruimte, verdeeld over meerdere zalen. De trainingen combineren gewichtheffen, atletiek en gymnastiek tot functionele oefeningen op hoge intensiteit. Ze zijn bedoeld voor zowel beginners als ervaren sporters.\n\nNaast de dagelijkse WOD in groepsverband zijn er specialisatielessen, Hyrox-training, een programma voor 55-plussers, personal training en teambuilding voor groepen. Nieuwe leden beginnen met een gratis proefles en volgen daarna een Health Check van twee sessies, waarin ze de basisoefeningen leren. Daarna kunnen ze aansluiten bij de groepslessen. Inschrijven voor lessen gaat via de SportBit-app.\n\nDe box is zeven dagen per week open en sluit maar twee dagen per jaar. Bezoekers van buiten kunnen ook een losse drop-in-training volgen.",
+  "website": "https://www.crossfit-nijmegen.com",
+  "website_bereikbaar": true
+ },
+ "de-dynamische-praktijk-bij-le-petit-chateau": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://dedynamischepraktijk.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [],
+  "kosten_tokens": {
+   "in": 16285,
+   "uit": 540
+  },
+  "lijkt_actief": false,
+  "naam": "De Dynamische Praktijk bij Le Petit Château",
+  "openingstijden": "",
+  "opmerkingen": "Het domein werkt, maar er staat geen informatie over De Dynamische Praktijk op. Je ziet alleen een Engelstalig WordPress-demosjabloon ('Love Nature') met voorbeeldteksten over webdesign en een Amerikaans nepnummer (202-555-0188). De sitenaam is 'Le Petit Chateau Saint-Michel'. Het lijkt erop dat het domein is overgenomen of niet meer wordt bijgehouden. Daarom heb ik geen tekst geschreven. lijkt_actief staat op false, omdat op de site niets wijst op een praktijk die nog actief is. De site zegt niet dat het bedrijf gestopt is. Controleer zelf of de praktijk aan de Sint Jacobslaan 174 nog bestaat. De categorie sportschool is niet bevestigd; die heb ik overgenomen uit de vermoedelijke categorie.",
+  "status": "voorstel",
+  "tekst": "",
+  "website": "http://dedynamischepraktijk.nl/",
+  "website_bereikbaar": true
+ },
+ "eastside-performance": {
+  "adres_op_site": "Van Rosenburgweg 10, 6537 TM Nijmegen",
+  "bronnen": [
+   "http://www.eastsideperformance.nl/",
+   "http://www.eastsideperformance.nl/contacts/",
+   "http://www.eastsideperformance.nl/semi-personal-training-nijmegen/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [
+   {
+    "bewijs": "Personal training zoals het hoort. De trainingen zijn niet voor iedereen hetzelfde",
+    "categorie": "personal-training"
+   }
+  ],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "personal training",
+   "proefles"
+  ],
+  "kosten_tokens": {
+   "in": 36300,
+   "uit": 1009
+  },
+  "lijkt_actief": true,
+  "naam": "Eastside Performance",
+  "openingstijden": "ma-vr 09:00-11:00 en 16:00-21:00, za momenteel gesloten, zo 09:00-12:00",
+  "opmerkingen": "Het menu noemt ook een 'Eastside Soccer Academy'. Die pagina heb ik niet gelezen, dus deze staat niet in de tekst. Volgens de site is het op zaterdag 'momenteel gesloten'.",
+  "status": "voorstel",
+  "tekst": "Deze sportschool aan de Van Rosenburgweg in Nijmegen bestaat sinds 2009. De nadruk ligt op krachttraining en strength & conditioning onder begeleiding van trainers. Er wordt niet met standaardschema's gewerkt: iedere sporter krijgt een eigen trainingsprogramma dat op bewegingen is gebaseerd en elke zes tot acht weken wordt bijgesteld.\n\nJe kunt kiezen voor één-op-één personal training of voor semi personal training. Bij die laatste vorm train je tegelijk met andere sporters, maar volg je wel je eigen schema. Daarnaast zijn er programma's voor spieropbouw, krachttraining voor vrouwen en sportspecifieke training gericht op kracht, explosiviteit en snelheid. Begeleiding bij voeding, leefstijl en herstel hoort ook bij het aanbod.\n\nWie wil kennismaken, kan een gratis proeftraining aanvragen.",
+  "website": "http://www.eastsideperformance.nl/",
+  "website_bereikbaar": true
+ },
+ "easyactive-6534": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [],
+  "kosten_tokens": {
+   "in": 14411,
+   "uit": 494
+  },
+  "lijkt_actief": true,
+  "naam": "EasyActive-6534",
+  "openingstijden": "",
+  "opmerkingen": "De opgegeven locatiepagina (https://easyactive.nl/locatie/easy-active-nijmegen) kon niet worden geladen (url_not_accessible). De homepage (https://easyactive.nl) kon ook niet worden geopend, omdat de tool die URL niet toestond. Daardoor is er geen informatie van de site gelezen. Tekst, openingstijden en adres zijn leeg gelaten. De categorie sportschool komt alleen uit onze eigen gegevens en is niet op de site gecontroleerd. Of het bedrijf nog actief is, is ook niet gecontroleerd; 'actief' staat alleen standaard aan. Graag later opnieuw proberen of het met de hand controleren.",
+  "status": "voorstel",
+  "tekst": "",
+  "website": "https://easyactive.nl/locatie/easy-active-nijmegen",
+  "website_bereikbaar": false
+ },
+ "exercise-body-and-mind": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.exercisebodyandmind.nl/",
+   "https://www.exercisebodyandmind.nl/",
+   "https://exercisebodyandmind.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [],
+  "kosten_tokens": {
+   "in": 21726,
+   "uit": 645
+  },
+  "lijkt_actief": true,
+  "naam": "Exercise Body and Mind",
+  "openingstijden": "",
+  "opmerkingen": "De website kon niet worden geopend. Ik heb http://www.exercisebodyandmind.nl/, https://www.exercisebodyandmind.nl/ en https://exercisebodyandmind.nl/ geprobeerd en kreeg elke keer de fout 'url_not_accessible'. Daarom is er geen tekst geschreven en zijn kenmerken, openingstijden en adres niet gecontroleerd. De categorie sportschool is overgenomen uit onze eigen gegevens en niet bevestigd door de site. Of het bedrijf nog actief is, valt niet vast te stellen. Graag handmatig controleren of het bedrijf nog bestaat, of dat het een andere website heeft.",
+  "status": "voorstel",
+  "tekst": "",
+  "website": "http://www.exercisebodyandmind.nl/",
+  "website_bereikbaar": false
+ },
+ "f4f-nijmegen": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [],
+  "kosten_tokens": {
+   "in": 21808,
+   "uit": 660
+  },
+  "lijkt_actief": true,
+  "naam": "F4F Nijmegen",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website niet lezen. De opgegeven link (http://www.fitforfree.nl/vestigingen/nijmegen/) werd geweigerd met de melding 'url_not_allowed'. Ook de homepage en een mogelijke vestigingspagina konden niet worden opgehaald. Daarom zijn de tekst, openingstijden, kenmerken en het adres niet ingevuld. Dat het bedrijf nog actief is, heb ik niet kunnen controleren. De categorie sportschool komt van de opgegeven vermoedelijke categorie en is niet gecontroleerd. De link heeft een oud formaat en verwijst mogelijk niet meer naar de juiste pagina. De redactie kan zelf nagaan of de vestigingspagina van Fit For Free op de Akkerlaan in Nijmegen bestaat en wat daar staat.",
+  "status": "voorstel",
+  "tekst": "",
+  "website": "http://www.fitforfree.nl/vestigingen/nijmegen/",
+  "website_bereikbaar": false
+ },
+ "fit-for-free": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [],
+  "kosten_tokens": {
+   "in": 21668,
+   "uit": 529
+  },
+  "lijkt_actief": true,
+  "naam": "Fit For Free",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website niet lezen. De vestigingspagina https://www.fitforfree.nl/sportschool/nijmegen werd geweigerd met de melding 'url_not_allowed', en de homepage https://www.fitforfree.nl kon ik ook niet openen. Daarom zijn er geen tekst, openingstijden, kenmerken of adres ingevuld. Het adres Akkerlaan 46 en de vraag of de vestiging nog open is, heb ik niet kunnen controleren. Wil iemand de pagina met de hand nakijken? Of het bedrijf actief is, is daarom ook niet gecontroleerd.",
+  "status": "voorstel",
+  "tekst": "",
+  "website": "https://www.fitforfree.nl/sportschool/nijmegen",
+  "website_bereikbaar": false
+ },
+ "fit20": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.fit20nijmegen.nl/",
+   "https://www.fit20.com/nl/studios/nijmegen/contact"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [
+   {
+    "bewijs": "Dé High Intensity training",
+    "categorie": "sportschool"
+   }
+  ],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "personal-training",
+  "kenmerken": [
+   "personal training",
+   "proefles"
+  ],
+  "kosten_tokens": {
+   "in": 25141,
+   "uit": 858
+  },
+  "lijkt_actief": true,
+  "naam": "Fit20",
+  "openingstijden": "",
+  "opmerkingen": "De link stuurt door naar https://www.fit20.com/nl/studios/nijmegen/contact. Daar staan geen adres en geen openingstijden in de tekst, dus het adres Oranjesingel 24 kon ik niet controleren. Op de site staat 'altijd op afspraak'. Als hoofdcategorie heb ik personal-training gekozen omdat er altijd 1-op-1 of in tweetallen met een trainer wordt getraind. Sportschool kan ook.",
+  "status": "voorstel",
+  "tekst": "In deze studio in Nijmegen draait alles om krachttraining met hoge intensiteit volgens de fit20-methode. Een complete training duurt twintig minuten en je doet die één keer per week. Je traint altijd op afspraak en onder begeleiding van een gecertificeerde fit20-trainer, alleen of samen met iemand anders.\n\nDe studio is rustig en koel gehouden, waardoor je nauwelijks zweet en je niet hoeft om te kleden. De training is bedoeld voor mensen van alle leeftijden die sterker en fitter willen worden. De vestiging hoort bij een internationale franchiseformule en wordt gerund door eigenaar en trainer Miranda van Donzel.\n\nWie wil kennismaken, kan een gratis introductietraining aanvragen.",
+  "website": "http://www.fit20nijmegen.nl/",
+  "website_bereikbaar": true
+ },
+ "fitsmart-personal-training": {
+  "adres_op_site": "Nieuwe Dukenburgseweg 7, 6534AD Nijmegen",
+  "bronnen": [
+   "https://fitsmart.nl",
+   "https://fitsmart.nl/diensten",
+   "https://fitsmart.nl/contact"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [
+   {
+    "bewijs": "fysieke training, de juiste voeding en coaching helpen jou in topvorm te zijn",
+    "categorie": "coach"
+   }
+  ],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "personal-training",
+  "kenmerken": [
+   "personal training"
+  ],
+  "kosten_tokens": {
+   "in": 31695,
+   "uit": 1014
+  },
+  "lijkt_actief": true,
+  "naam": "Fitsmart Personal Training",
+  "openingstijden": "",
+  "opmerkingen": "Dit is een personal-trainingsbedrijf en geen gewone sportschool. Daarom is de hoofdcategorie personal-training en niet sportschool. De trainingen vinden plaats in sportschool Sportspalace. Of dat op hetzelfde adres is, staat niet duidelijk op de site. Op de site staan geen openingstijden; afspraken maak je met trainer Mart. Of coaching als extra categorie echt nodig is, is twijfelachtig: het is onderdeel van de aanpak en geen aparte dienst.",
+  "status": "voorstel",
+  "tekst": "Fitsmart Personal Training aan de Nieuwe Dukenburgseweg in Nijmegen geeft persoonlijke begeleiding aan mensen die fitter en gezonder willen worden. De werkwijze rust op drie onderdelen: lichamelijke training, advies over voeding en coaching. De trainingen worden afgestemd op de doelen, het tempo en de situatie van elke klant.\n\nDe trainingen vinden plaats in sportschool Sportspalace, waar alle benodigde apparatuur aanwezig is. Je kunt ook trainen buiten kantoortijden of tussen het werk door. Wie verder weg woont, kan kiezen voor begeleiding op afstand: volledig online, of online gecombineerd met eens in de zes weken een training in Nijmegen.\n\nNieuwe klanten beginnen met een vrijblijvend kennismakingsgesprek. Op de website staan ook ervaringen van eerdere klanten, een blog en een gratis e-book.",
+  "website": "http://www.fitsmart.nl/",
+  "website_bereikbaar": true
+ },
+ "fittunit": {
+  "adres_op_site": "St. Teunismolenweg 50b, Nijmegen",
+  "bronnen": [
+   "https://fittunit.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [
+   {
+    "bewijs": "Bij ons kan je onbeperkt fitnessen, kickboksen of helemaal los gaan tijdens onze Crosscamp.",
+    "categorie": "vechtsport"
+   },
+   {
+    "bewijs": "Bij FittUnit kan je terecht voor Personal Training, Voedingsadvies, Kickbokstraining, Crosscamp (crossfit + bootcamp + fitness) en Kinderboksen.",
+    "categorie": "personal-training"
+   },
+   {
+    "bewijs": "Crosscamp (crossfit + bootcamp + fitness)",
+    "categorie": "crossfit"
+   }
+  ],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "groepslessen",
+   "personal training",
+   "proefles"
+  ],
+  "kosten_tokens": {
+   "in": 17625,
+   "uit": 946
+  },
+  "lijkt_actief": true,
+  "naam": "FittUnit",
+  "openingstijden": "ma-vr 06:00-21:00, za 08:00-16:00, zo 09:00-16:00",
+  "opmerkingen": "Ik heb alleen de homepage gelezen, daar stond genoeg informatie op. Crosscamp is een mix van crossfit, bootcamp en fitness. Het is geen zuivere crossfitbox, dus de categorie crossfit kan nog besproken worden. Op de site staan ook links naar de zusterlabels Xtreme Marine Sports en BodyTransform.",
+  "status": "voorstel",
+  "tekst": "In de wijk Goffert ligt deze sportschool, die in 2016 werd opgericht door personal trainer Ahmet Ayhan. Leden kunnen er de hele dag onbeperkt fitnessen, en daarnaast is er een rooster met groepstrainingen.\n\nHet aanbod aan lessen bestaat onder meer uit Crosscamp, een combinatie van crossfit, bootcamp en fitness, en verder kickboksen, boksen, BBB, calisthenics en wedstrijdtraining. Voor kinderen zijn er aparte kickbokslessen. Wie liever een-op-een traint, kan kiezen voor personal training, en ook voedingsadvies hoort bij het aanbod.\n\nDe sportschool richt zich op zowel volwassenen als kinderen, van beginners tot sporters die al een goede conditie hebben. Wie eerst wil kijken of het bevalt, kan een gratis proefles aanvragen.",
+  "website": "http://www.fittunit.nl/",
+  "website_bereikbaar": true
+ },
+ "freyheyt-sportlounge": {
+  "adres_op_site": "Gerard Noodstraat 121, 6511 ST Nijmegen",
+  "bronnen": [
+   "https://www.freyheytnijmegen.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [
+   {
+    "bewijs": "Bij Freyheyt sportlounge in nijmegen kun je terecht voor fitness, groepslessen en personal training.",
+    "categorie": "personal-training"
+   },
+   {
+    "bewijs": "Pilates | Yoga | Stretching",
+    "categorie": "pilates"
+   }
+  ],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "groepslessen",
+   "personal training"
+  ],
+  "kosten_tokens": {
+   "in": 22257,
+   "uit": 889
+  },
+  "lijkt_actief": true,
+  "naam": "Freyheyt Sportlounge",
+  "openingstijden": "ma-do 07:00-22:00, vr 07:00-20:00, za 09:00-17:00, zo 09:00-15:00",
+  "opmerkingen": "In de footer staat de straatnaam als 'Gerard Noodstraat' (zonder t). Elders op de site staat 'Gerard Noodtstraat 121'. Het BTW-nummer op de site (NL00011112222333) lijkt een placeholder. Alleen de homepage is gelezen, omdat die al voldoende informatie gaf.",
+  "status": "voorstel",
+  "tekst": "In het centrum van Nijmegen, aan de Gerard Noodtstraat, ligt deze sportschool. Ze combineert vrij trainen met begeleiding en werkt vanuit een holistische visie. Leden kunnen onbeperkt fitnessen op de krachtapparatuur van het merk Panatta, in hun eigen tempo.\n\nHet rooster heeft veel groepslessen, zoals pilates, yin yoga, yoga flow, barre, HIIT, core-training, boksen en lessen op de fiets. Volgens de site zijn de groepslessen inbegrepen bij het lidmaatschap. Je reserveert ze via een app, waarin je ook het rooster bekijkt.\n\nVerder kun je er terecht voor personal training, een dagelijkse 'workout of the day' en EMS-training. Bij EMS worden je spieren tijdens de oefeningen met elektrische prikkels extra aangespannen. De sportschool is zeven dagen per week open, op doordeweekse dagen vanaf 's ochtends vroeg.",
+  "website": "https://www.freyheytnijmegen.nl/",
+  "website_bereikbaar": true
+ },
+ "go4fit-nijmegen": {
+  "adres_op_site": "Berg en Dalseweg 22, 6521 JG Nijmegen",
+  "bronnen": [
+   "https://www.go4fit.nl/",
+   "https://www.go4fit.nl/go4fit-nijmegen"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "groepslessen",
+   "sauna",
+   "alleen vrouwen",
+   "proefles"
+  ],
+  "kosten_tokens": {
+   "in": 67264,
+   "uit": 1163
+  },
+  "lijkt_actief": true,
+  "naam": "Go4Fit Nijmegen",
+  "openingstijden": "ma-do 08:30-21:30, vr 08:30-21:00, za-zo 08:30-15:00",
+  "opmerkingen": "De vestiging presenteert zich als boutique sportclub alleen voor vrouwen (concept Go4Fit Woman). Yoga is onderdeel van het lesaanbod, maar volgens een review wordt het maar één keer per week gegeven. Daarom staat yoga niet als extra categorie. Op de algemene site wordt personal training genoemd als samenwerking, maar niet specifiek voor deze vestiging. Kenmerk proefles is gebaseerd op de gratis trainingspas. Volgens een review is parkeren lastig. Telefoon: 024-3602147.",
+  "status": "voorstel",
+  "tekst": "Aan de Berg en Dalseweg zit een kleinschalige sportclub die alleen open is voor vrouwen. Ook de begeleiding is volledig in handen van vrouwelijke trainers. De club is verdeeld over twee verdiepingen en hoort bij Go4Fit, een familiebedrijf met meerdere vestigingen in de regio Nijmegen.\n\nLeden kunnen zelfstandig trainen op fitnessapparatuur en elke dag meedoen aan trainingen in kleine groepen. Er zijn onder meer yoga, HIIT, booty workouts en Power BBB. Elke acht tot twaalf weken is er een afspraak met een coach, en er is begeleiding bij voeding en leefstijl. Via de Go4Fit-app krijgen leden trainingsschema's en voedingsadvies.\n\nNa het sporten kun je gebruikmaken van de sauna en andere wellnessvoorzieningen. Wie de club eerst wil leren kennen, kan een gratis trainingspas aanvragen.",
+  "website": "http://www.go4fit.nl/",
+  "website_bereikbaar": true
+ },
+ "groepsgeluk": {
+  "adres_op_site": "De Ruyterstraat 65, 6512 GB Nijmegen",
+  "bronnen": [
+   "https://groepsgeluk.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "coach",
+  "kenmerken": [],
+  "kosten_tokens": {
+   "in": 36235,
+   "uit": 1120
+  },
+  "lijkt_actief": true,
+  "naam": "GroepsGeluk",
+  "openingstijden": "",
+  "opmerkingen": "De vermoedelijke categorie 'Sportscholen' klopt niet. Het gaat om training en coaching voor systemisch werken in de klas, gericht op het onderwijs. Daarom heb ik 'coach' als categorie gekozen. Familieopstellingen worden ook aangeboden, maar die pagina heb ik niet gelezen; 'alternatief' heb ik daarom niet toegevoegd. Op de homepage staan geen openingstijden. Het adres lijkt een contactadres; het is niet duidelijk of er op die plek ook trainingen worden gegeven.",
+  "status": "voorstel",
+  "tekst": "Vanuit Nijmegen biedt GroepsGeluk een methode voor systemisch werken in het onderwijs. De methode maakt de dynamiek in een klas zichtbaar met houten poppetjes, picto's, symbolen en ander klein materiaal op tafel. Zo krijgen de groepsleider en de leerlingen inzicht in wat er in de groep speelt, en kunnen ze bij lastige situaties de balans herstellen.\n\nHet aanbod richt zich op leerkrachten, begeleiders, scholen en praktijken. Je kunt zelf een training volgen of een gecertificeerde GroepsGelukCoach in de klas laten komen. Daarnaast zijn er verdiepingsdagen, een opleiding, inspiratieworkshops, familieopstellingen en onderwijsopstellingen. Scholen kunnen ook een GroepsGelukSchool worden.\n\nGroepsGeluk hoort bij Wereld van Geluk BV, opgericht door Désirée Farro-Joosen.",
+  "website": "http://www.groepsgeluk.nl/",
+  "website_bereikbaar": true
+ },
+ "healtality": {
+  "adres_op_site": "Gorterplaats 6A, 6531 HZ Nijmegen",
+  "bronnen": [
+   "https://healtality.nl/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [
+   {
+    "bewijs": "De personal training gym van Nijmegen",
+    "categorie": "sportschool"
+   },
+   {
+    "bewijs": "Privé gym met voeding- en leefstijfcoaching.",
+    "categorie": "coach"
+   }
+  ],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "personal-training",
+  "kenmerken": [
+   "personal training",
+   "groepslessen"
+  ],
+  "kosten_tokens": {
+   "in": 22614,
+   "uit": 789
+  },
+  "lijkt_actief": true,
+  "naam": "Healtality",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staat huisnummer 6A, bij ons staat 6. Ik heb alleen de homepage gelezen. Openingstijden staan er niet op. Voor de duidelijkheid: het gaat om begeleide training in kleine groepen en niet om klassieke groepslessen. Er zijn ook geen losse proeflessen, alleen een kickstartprogramma van zes weken.",
+  "status": "voorstel",
+  "tekst": "Aan de Gorterplaats in Nijmegen zit een kleinschalige gym die zich volledig richt op personal training in kleine groepen. Elk lid werkt aan een eigen programma, terwijl een gecertificeerde coach meekijkt. Zelfstandig trainen is hier niet mogelijk: alle sessies gaan onder begeleiding.\n\nDe trainingen bestaan uit functionele krachttraining aangevuld met conditietraining. Daarnaast is er begeleiding bij voeding en leefstijl, met de nadruk op blijvende gedragsverandering in plaats van strenge diëten. Ook is er een traject voor performance coaching.\n\nNieuwe leden beginnen met een kickstartprogramma van zes weken, dat ook geschikt is voor mensen zonder ervaring met fitness. Losse proeftrainingen zijn er niet. Trainingen plan je via een app, en een gemiste sessie kun je verzetten en later inhalen.",
+  "website": "http://www.healtality.nl/",
+  "website_bereikbaar": true
+ },
+ "heavy-duty-outdoor-gym": {
+  "adres_op_site": "Goffertweg 17, 6532 AA Nijmegen",
+  "bronnen": [
+   "https://heavydutyoutdoorgym.nl/",
+   "https://heavydutyoutdoorgym.nl/blue-sky-gym-nijmegen/",
+   "https://heavydutyoutdoorgym.nl/contact/"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "groepslessen",
+   "bedrijfsuitje"
+  ],
+  "kosten_tokens": {
+   "in": 35297,
+   "uit": 1256
+  },
+  "lijkt_actief": true,
+  "naam": "Heavy Duty Outdoor Gym",
+  "openingstijden": "",
+  "opmerkingen": "De site meldt dat de gym in Nijmegen nog in ontwikkeling is ('De Heavy Duty Zone is in ontwikkeling; vraag naar de actuele mogelijkheden voordat je komt trainen'). Bij een aantal trainingsvormen (Strong&Fit, Training & Open Gym, Military Bootcamp, Bodyweight Mobility) staat 'Binnenkort'. Er staan geen openingstijden op de gelezen pagina's. Het rooster is niet bekeken. De gym ligt binnen Blue Sky Gym en hoort bij Strength Events Group (Cargadoorweg 14C). Steel Mace Yoga wordt alleen als trainingsvorm genoemd en is daarom niet als extra categorie opgenomen. Het kenmerk 'bedrijfsuitje' is afgeleid van de menupagina 'Groepen en bedrijven', die zelf niet is gelezen.",
+  "status": "voorstel",
+  "tekst": "Heavy Duty Outdoor Gym is een concept voor buitentraining dat in Nijmegen een eigen zone krijgt binnen Blue Sky Gym, naast de Goffertboerderij. De zone wordt ingericht met robuuste materialen zoals hout en staal en trainingsmiddelen als vrije gewichten, racks, sleds, kettlebells, logs en sandbags.\n\nHet aanbod draait om functionele krachttraining in de buitenlucht. De belangrijkste groepstraining heet Strong&Fit en combineert kracht, conditie en bewegen. Verder staan Heavy Duty Bootcamp, Strongman, mobility en training met kettlebells, steel mace en clubs op het programma. Je kunt er ook zelfstandig trainen.\n\nDe locatie is nog in ontwikkeling. Volgens de site kun je het beste eerst navragen wat er op dit moment mogelijk is. Daarnaast richt de organisatie ook outdoor gyms in op andere locaties en zijn er mogelijkheden voor groepen en bedrijven.",
+  "website": "http://www.heavydutyoutdoorgym.nl/",
+  "website_bereikbaar": true
+ },
+ "het-fitcentrum": {
+  "adres_op_site": "Campusbaan 6, Nijmegen",
+  "bronnen": [
+   "https://hetfitcentrum.roc-nijmegen.nl/ (doorverwijzing naar https://www.roc-nijmegen.nl/organisatie/leerbedrijven/het-fitcentrum)"
+  ],
+  "categorie_scan": "sportschool",
+  "extra_categorieen": [],
+  "gescand": "2026-10-22",
+  "hoofdcategorie": "sportschool",
+  "kenmerken": [
+   "groepslessen"
+  ],
+  "kosten_tokens": {
+   "in": 19361,
+   "uit": 985
+  },
+  "lijkt_actief": true,
+  "naam": "Het Fitcentrum",
+  "openingstijden": "",
+  "opmerkingen": "De link gaat door naar een subpagina van roc-nijmegen.nl. De openingstijden staan niet op de pagina, want het sportrooster laadt niet als tekst. Fysiotherapie wordt geleverd door een samenwerkingspartner (De Fysioo), daarom niet toegevoegd als extra categorie. Telefoon: 024-8904936, e-mail: hetfitcentrum@roc-nijmegen.nl. Er is ook een vestiging in Boxmeer (Het Fitlokaal).",
+  "status": "voorstel",
+  "tekst": "Op de ROC-campus aan de Campusbaan zit een sportschool die ROC Nijmegen als leerwerkbedrijf runt. Studenten van de mbo-opleidingen Sport en Bewegen en Medewerker sport en recreatie doen hier praktijkervaring op. Leden helpen zo mee aan hun opleiding, en daardoor zijn de tarieven lager dan bij een gemiddelde sportschool.\n\nDe fitnessruimte heeft moderne apparatuur. Leden kunnen een trainingsschema krijgen dat is afgestemd op hun eigen doelen, en er is begeleiding bij het trainen. Wie liever in een groep sport, kan meedoen aan lessen zoals zumba, bodypump, yoga, spinning en boksen.\n\nVoor fysiotherapie werkt het fitcentrum samen met De Fysioo. Die behandelt studenten en medewerkers van het ROC, maar ook mensen van buiten de school.",
+  "website": "https://hetfitcentrum.roc-nijmegen.nl/",
+  "website_bereikbaar": true
  }
 }
