@@ -104,7 +104,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=3" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=4" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -178,7 +178,7 @@ def bedrijf_aanmelden(categorieen):
         ("bedrijfsmail", "E-mailadres van het bedrijf", "email", False, None),
         ("openingstijden", "Openingstijden", "tekst", False, None),
         ("omschrijving", "Korte omschrijving van het bedrijf", "tekst", True, None),
-        ("foto", "Logo of foto", "bestand", False, "JPG, PNG of WebP, maximaal 5 MB."),
+        ("foto", "Logo of foto", "bestand", False, "JPG, PNG of WebP, maximaal 20 MB."),
         ("naam", "Je naam (contactpersoon)", "text", True, None),
         ("email", "Je e-mailadres", "email", True, None)], "Aanmelden"))
     return pagina("Bedrijf aanmelden", "Zet je bedrijf in de bedrijvengids van NijmegenOnline: vul het formulier in en wij maken je vermelding aan.",
@@ -206,7 +206,7 @@ def evenement_aanmelden(locaties):
         ("omschrijving", "Omschrijving van het evenement", "tekst", True, None),
         ("locatie", "Locatie", "text", True, locaties),
         ("adres", "Adres van de locatie (als die niet in de lijst staat)", "text", False, None),
-        ("foto", "Foto", "bestand", True, "Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 5 MB."),
+        ("foto", "Foto", "bestand", True, "Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 20 MB."),
         ("naam", "Je naam (alleen voor de redactie)", "text", True, None),
         ("email", "Je e-mailadres (alleen voor de redactie)", "email", True, None),
         ("notitie", "Opmerking voor de redactie", "tekst", False, None)], "Evenement aanmelden"))
