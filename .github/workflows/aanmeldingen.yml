@@ -1,0 +1,41 @@
+# Haalt elk uur de goedgekeurde aanmeldingen (evenementen en bedrijven) op uit het Google Apps Script,
+# zet ze op de site en meldt ze terug zodat ze in de Google Sheet op "Gepubliceerd" komen.
+# Zie tools/aanmeldingen.py en tools/google-formulier/Code.gs.
+name: Aanmeldingen publiceren
+
+on:
+  schedule:
+    - cron: "7 * * * *"   # elk uur
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bouwen
+  cancel-in-progress: false
+
+jobs:
+  aanmeldingen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install beautifulsoup4 pillow
+      - run: python tools/aanmeldingen.py
+      - name: Site bouwen en opslaan
+        run: |
+          if [ -n "$(git status --porcelain data assets)" ]; then
+            python tools/agenda.py && python tools/build.py
+            git config user.name "agenda-bot"
+            git config user.email "agenda-bot@users.noreply.github.com"
+            git add -A
+            git commit -m "Aanmeldingen gepubliceerd"
+            git pull --rebase && git push
+          fi
+      - name: Terugmelden aan de Google Sheet
+        run: |
+          [ -s .terugmelden ] || exit 0
+          while read -r url; do curl -sSL -m 60 "$url" > /dev/null || echo "Terugmelden mislukt: $url"; done < .terugmelden

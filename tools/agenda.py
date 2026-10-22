@@ -80,7 +80,11 @@ def kort_wanneer(e, vandaag):
 def lokaal(url):
     """Afbeelding van wp-content/uploads naar de eigen webp (die maakt tools/afbeeldingen.py)."""
     m = re.match(r"https?://(?:www\.)?nijmegenonline\.nl/wp-content/uploads/(.+)\.(?:png|jpe?g|gif|webp)$", url or "", re.I)
-    return "assets/uploads/%s.webp" % m.group(1) if m and (ROOT / ("assets/uploads/%s.webp" % m.group(1))).is_file() else None
+    if m:
+        return "assets/uploads/%s.webp" % m.group(1) if (ROOT / ("assets/uploads/%s.webp" % m.group(1))).is_file() else None
+    # Foto's die al op de nieuwe site staan (aanmeldingen via het formulier)
+    m = re.match(r"https?://(?:www\.)?nijmegenonline\.nl/(assets/.+)$", url or "", re.I)
+    return m.group(1) if m and (ROOT / m.group(1)).is_file() else None
 
 
 # Kaartfoto voor evenementen zonder eigen foto: een andere foto van dezelfde aanbieder (vult main() in)
@@ -181,7 +185,9 @@ def event_pagina(e, vandaag, komend, aanbieders):
                       % (esc(e["link"]), esc(naam)))
     out.append('        <ul class="evenement-info%s">%s</ul>' % (" evenement-info--uitgelicht" if e["uitgelicht"] else "", "".join(regels)))
     if e["afbeelding"]:
-        out.append('        <figure><img src="%s" alt="%s"></figure>' % (esc(e["afbeelding"]), esc(e["alt"] or e["titel"])))
+        foto = lokaal(e["afbeelding"])
+        src = root + foto if foto and not "/wp-content/" in e["afbeelding"] else e["afbeelding"]
+        out.append('        <figure><img src="%s" alt="%s"></figure>' % (esc(src), esc(e["alt"] or e["titel"])))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % e["tekst"])
     van_hen = []

@@ -117,3 +117,12 @@ Eenmalig instellen:
 2. Kies de functie `installeer` en klik Uitvoeren (toestemming geven).
 3. Implementeren > Nieuwe implementatie > Web-app, uitvoeren als: ik, toegang: iedereen.
 4. Zet de /exec-URL in `GOOGLE_FORM_URL` in `tools/paginas.py`, draai `python tools/paginas.py && python tools/build.py`, commit en push.
+
+### Aanmeldingen goedkeuren (evenementen en bedrijven)
+
+Een aangemeld evenement of bedrijf komt niet meteen online. De redactie krijgt een mail met de knoppen
+**Akkoord, publiceren** en **Afwijzen** (of zet zelf "Akkoord" in de kolom Status van de Sheet). Elk uur haalt
+`.github/workflows/aanmeldingen.yml` met `tools/aanmeldingen.py` de goedgekeurde aanmeldingen op: evenementen
+gaan in `data/evenementen.json` (foto in `assets/uploads/aangemeld/`), bedrijven in `data/bedrijven-aangemeld.json`
+(voor de bedrijvengids). Daarna wordt de site gebouwd en zet het script de status in de Sheet op "Gepubliceerd".
+Meteen publiceren in plaats van op het hele uur: Actions > Aanmeldingen publiceren > Run workflow.
