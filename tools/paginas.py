@@ -39,15 +39,30 @@ VACATURES = [
      "We zochten iemand die alle ins en outs van social media kent en onze kanalen laat groeien."),
 ]
 
-PAKKETTEN = [("Basis", "799"), ("Standaard", "1.299"), ("Premium", "1.899")]
+# Pakketten uit het advies Verdienmodel NijmegenOnline (okt 2026): naam, prijs per jaar excl. btw, toelichting
+PAKKETTEN = [("Gratis", "0", "voor elk bedrijf"), ("Uitgelicht", "149", "eerste jaar &euro; 99*"),
+             ("Partner", "449", ""), ("Hoofdpartner", "1.200", "maximaal 10")]
 KENMERKEN = [
-    ("Uitgelicht op de partnerpagina", ["ja", "ja", "ja"]),
-    ("Artikelen op het platform", ["2", "4", "8"]),
-    ("Banner in jouw branche", ["ja", "ja", "ja"]),
-    ("Banner in andere branches", ["nee", "ja", "ja"]),
-    ("Uitgelichte vacature", ["nee", "1", "2"]),
-    ("Voorrang in de nieuwsbrief", ["nee", "ja", "ja"]),
-    ("Professionele fotoreportage", ["nee", "nee", "ja"]),
+    ("Eigen pagina in de bedrijvengids met adres, kaart en openingstijden", ["ja", "ja", "ja", "ja"]),
+    ("Tekst door onze redactie geschreven", ["kort", "uitgebreid, jaarlijks bijgewerkt", "uitgebreid", "uitgebreid"]),
+    ("Logo en foto's", ["nee", "tot 10 foto's", "tot 10 foto's", "tot 10 foto's"]),
+    ("Bovenaan je categorie met het label Uitgelicht (maximaal 3 per categorie)", ["nee", "ja", "ja", "ja"]),
+    ("Actieknop (reserveren, offerte, bellen) en een aanbieding", ["nee", "ja", "ja", "ja"]),
+    ("Je evenementen uitgelicht in de agenda", ["nee", "ja", "ja", "ja"]),
+    ("Nieuwsbrief", ["nee", "1&times; per jaar in Nieuw in de gids", "2&times; een eigen tegel", "logo in elke editie"]),
+    ("Banner", ["nee", "nee", "in je eigen branche", "op de hele site"]),
+    ("Artikel over je bedrijf (gemarkeerd als partnerbijdrage)", ["nee", "nee", "1 per jaar", "3 per jaar"]),
+    ("Sponsor van een categorie- of themapagina", ["nee", "nee", "nee", "ja"]),
+    ("Overzicht van weergaven en kliks", ["jaarlijks", "jaarlijks", "elk kwartaal", "elk kwartaal"]),
+]
+# Losse mogelijkheden: wat, prijs excl. btw
+LOSSE = [
+    ("Evenement uitgelicht in de agenda en op de homepage, 2 weken voor de datum", "&euro; 39"),
+    ("Artikel over je bedrijf of evenement, door ons geschreven", "&euro; 249"),
+    ("Tegel in de nieuwsbrief, per editie", "&euro; 49"),
+    ("Vacature uitgelicht, 30 dagen", "&euro; 49"),
+    ("Sponsor van een seizoenspagina (Kerstmarkten, Vierdaagse, Koningsdag), per seizoen", "vanaf &euro; 250"),
+    ("Fotoreportage", "op aanvraag"),
 ]
 
 
@@ -182,6 +197,35 @@ PRIVACY_FORMULIEREN = [
 ]
 
 
+# Toegevoegd bij de nieuwe pakketten (okt 2026); de rest van de voorwaarden komt letterlijk uit WordPress
+AV_PAKKETTEN = [
+    "13.1 Dit artikel geldt voor vermeldingen, advertenties, artikelen en pakketten die bedrijven en organisaties "
+    "bij Nijmegenonline.nl afnemen, zoals Uitgelicht, Partner en Hoofdpartner. Waar dit artikel afwijkt van de "
+    "artikelen hiervoor, geldt dit artikel.",
+    "13.2 Prijzen voor zakelijke klanten zijn exclusief btw. Een pakket wordt per jaar vooraf gefactureerd.",
+    "13.3 Een pakket loopt twaalf maanden vanaf de dag waarop de vermelding online staat. Daarna wordt het "
+    "steeds met twaalf maanden verlengd, tenzij de klant uiterlijk een maand voor de einddatum per e-mail "
+    "opzegt. Nijmegenonline.nl stuurt uiterlijk dertig dagen voor de verlenging een herinnering.",
+    "13.4 Een prijswijziging voor de volgende periode maakt Nijmegenonline.nl minstens twee maanden voor de "
+    "einddatum bekend. Een introductieprijs geldt alleen zolang dat bij het aanbod is vermeld.",
+    "13.5 Nijmegenonline.nl publiceert de vermelding binnen tien werkdagen nadat de gegevens en de betaling "
+    "binnen zijn. Teksten worden door de redactie geschreven of geredigeerd; de klant ziet ze voor publicatie "
+    "en kan correcties doorgeven.",
+    "13.6 Betaalde artikelen, vermeldingen en banners krijgen een label waaraan lezers zien dat het om betaalde "
+    "inhoud gaat. Links daarin zijn gemarkeerd als gesponsord (rel=\"sponsored\"). Nijmegenonline.nl verkoopt "
+    "geen links voor zoekmachines.",
+    "13.7 Per categorie in de bedrijvengids zijn er maximaal drie uitgelichte plekken, tenzij op de site anders is "
+    "vermeld. De volgorde van uitgelichte bedrijven wisselt.",
+    "13.8 Nijmegenonline.nl belooft geen aantal bezoekers, kliks, klanten of posities in zoekmachines. Overzichten "
+    "van weergaven en kliks komen uit Google Analytics en zijn een indicatie.",
+    "13.9 Nijmegenonline.nl mag inhoud weigeren of verwijderen die misleidend, onrechtmatig of in strijd met de "
+    "goede smaak is, of die niet past bij een site over Nijmegen en omgeving.",
+    "13.10 Na afloop of opzegging van een pakket blijft het bedrijf gratis in de bedrijvengids staan, zonder de "
+    "extra's van het pakket. Wil de klant helemaal uit de gids, dan kan dat met een mail.",
+    "13.11 Afspraken die voor de invoering van deze pakketten zijn gemaakt, blijven gelden tot hun einddatum.",
+]
+
+
 def algemene_voorwaarden(tekst, meta):
     """De voorwaarden letterlijk overgenomen; alleen de opmaak is anders (artikel = kop, lid = alinea)."""
     tekst = re.sub(r"\[/?[a-z_]+[^\]]*\]|<!--.*?-->", "", tekst, flags=re.S)
@@ -197,6 +241,8 @@ def algemene_voorwaarden(tekst, meta):
                 delen.append("        <p>%s</p>" % esc(regel))
                 if regel.startswith("11.3 "):
                     delen += ["        <p>%s</p>" % esc(x) for x in PRIVACY_FORMULIEREN]
+    delen.append("        <h2>Artikel 13. Vermeldingen en advertentiepakketten</h2>")
+    delen += ["        <p>%s</p>" % esc(x) for x in AV_PAKKETTEN]
     adres = [html.unescape(x).strip() for x in re.split(r"<br\s*/?>|</?p>", adres) if x.strip()]
     delen.append("        <h2>Adresgegevens</h2>\n        <p>%s</p>" % "<br>".join(esc(x) for x in adres))
     inhoud = "        <h1>Algemene voorwaarden</h1>\n" + "\n".join(delen)
@@ -304,31 +350,29 @@ def kom_in_contact(meta):
     return pagina("Kom in contact", meta.get("rank_math_description", ""), "kom-in-contact", "Kom in contact", inhoud)
 
 
-def adverteren(meta, mediakit, root="../"):
-    kit = '<a class="knop" href="%s" target="_blank" rel="noopener">Bekijk onze mediakit</a>' % mediakit
-    kop_ = "".join("<th scope=\"col\">%s<span>&euro; %s per jaar<br>excl. btw</span></th>" % (n, p) for n, p in PAKKETTEN)
+def adverteren(meta, root="../"):
+    # De oude mediakit (2025) noemt de oude prijzen; die linken we pas weer als er een nieuwe is
+    kop_ = "".join("<th scope=\"col\">%s<span>&euro; %s per jaar%s</span></th>"
+                   % (n, p, "<br>%s" % t if t else "") for n, p, t in PAKKETTEN)
     rijen = []
     for naam, waarden in KENMERKEN:
         cellen = "".join('<td>%s</td>' % ({"ja": '<span class="pakket-ja" aria-label="ja">&#10003;</span>',
                                            "nee": '<span class="pakket-nee" aria-label="nee">&ndash;</span>'}.get(w, w)) for w in waarden)
         rijen.append("            <tr><th scope=\"row\">%s</th>%s</tr>" % (esc(naam), cellen))
+    losse = "\n".join("            <tr><th scope=\"row\">%s</th><td>%s</td></tr>" % (esc(w), p) for w, p in LOSSE)
     inhoud = """        <header class="adverteren-hero">
           <p class="gidslabel">Adverteren</p>
-          <h1>Bereik direct je doelgroep en vergroot je omzet</h1>
-          <p>Waarom partner worden van NijmegenOnline de moeite waard is.</p>
-          <p>{kit}</p>
+          <h1>Gevonden worden in Nijmegen</h1>
+          <p>Elk bedrijf in Nijmegen en omgeving staat gratis in onze bedrijvengids. Wil je meer opvallen? Dat kan al vanaf &euro; 149 per jaar.</p>
+          <p><a class="knop" href="#partner-worden">Meld je aan</a></p>
         </header>
-        <h2>Je voordelen als partner van NijmegenOnline</h2>
+        <h2>Zo werkt het</h2>
         <ul>
-          <li><strong>Meer zichtbaarheid</strong>: bereik duizenden mogelijke klanten in de regio Nijmegen. Met banners en artikelen op ons platform vergroot je je naamsbekendheid.</li>
-          <li><strong>Direct contact met klanten</strong>: gerichte campagnes bereiken jouw doelgroep, en klanten vinden je makkelijk via de nieuwsbrief en social media.</li>
-          <li><strong>Hulp van experts</strong>: we begeleiden je bij je online aanwezigheid, zodat je alle mogelijkheden goed benut.</li>
-          <li><strong>Flexibele pakketten</strong>: kies het pakket dat past bij je wensen en budget, en groei mee als je bedrijf groeit.</li>
-          <li><strong>Meetbare resultaten</strong>: je krijgt rapportages over je resultaten, zodat je altijd kunt bijsturen.</li>
+          <li><strong>Gratis</strong>: je bedrijf staat in de bedrijvengids met adres, kaart, openingstijden en een korte tekst. Klopt er iets niet? Laat het ons weten, dan passen we het aan.</li>
+          <li><strong>Uitgelicht</strong>: je staat bovenaan je categorie, met foto's, je logo, een actieknop en een uitgebreide tekst die wij voor je schrijven. Per categorie zijn er maximaal drie uitgelichte plekken.</li>
+          <li><strong>Partner</strong>: alles van Uitgelicht, plus een banner in je eigen branche, een artikel over je bedrijf en twee keer een plek in de nieuwsbrief.</li>
+          <li><strong>Hoofdpartner</strong>: je banner op de hele site, drie artikelen, je logo in elke nieuwsbrief en je naam bij een categorie- of themapagina.</li>
         </ul>
-        <h2>Laat ons je helpen</h2>
-        <p>We kennen de uitdagingen en kansen voor bedrijven in de regio Nijmegen. Met NijmegenOnline hoef je je geen zorgen te maken over zoekwoorden, optimalisatie of advertentiebudgetten: dat regelen wij. Ons team bestaat uit lokale toppers die Nijmegen en omgeving van haver tot gort kennen. Zo zorgen we voor meer zichtbaarheid en naamsbekendheid voor je bedrijf.</p>
-        <figure class="adverteren-bereik"><img src="{uploads}2024/11/nijmegen-bereik-cijfers.png" alt="Bereik van NijmegenOnline in cijfers"></figure>
         <h2>Onze pakketten</h2>
         <div class="pakketten">
           <table>
@@ -338,18 +382,36 @@ def adverteren(meta, mediakit, root="../"):
             </tbody>
           </table>
         </div>
-        <p>Benieuwd wat adverteren elders kost? <a href="{site}/wat-kost-adverteren-bij-anderen/">Bekijk onze vergelijking met andere adverteerders</a>.</p>
+        <p>Prijzen per jaar, exclusief btw. * Introductieprijs voor de eerste 50 klanten, en de prijs staat twee jaar vast. Een pakket loopt twaalf maanden en wordt daarna steeds met een jaar verlengd. Opzeggen kan tot een maand voor de einddatum, met een mail. Zie <a href="{site}/algemene-voorwaarden/">artikel 13 van de algemene voorwaarden</a>.</p>
+        <h2>Losse mogelijkheden</h2>
+        <div class="pakketten">
+          <table>
+            <thead><tr><td></td><th scope="col">Prijs<span>excl. btw</span></th></tr></thead>
+            <tbody>
+{losse}
+            </tbody>
+          </table>
+        </div>
+        <h2>Wat je van ons mag verwachten</h2>
+        <ul>
+          <li>Je pagina staat binnen tien werkdagen online nadat we je gegevens en betaling hebben.</li>
+          <li>We schrijven je tekst en houden je pagina actueel. Je ziet alles voordat het online gaat.</li>
+          <li>Je krijgt een overzicht van hoe vaak je pagina is bekeken en hoe vaak er is geklikt op je website, telefoonnummer en route.</li>
+          <li>Betaalde artikelen en vermeldingen herken je aan een label, en links daarin zijn gemarkeerd als gesponsord. Zo blijft NijmegenOnline betrouwbaar voor lezers en voor Google, en daar heb jij ook wat aan.</li>
+          <li>Een vast aantal bezoekers of klanten beloven we niet. Wat we beloven, is wat we zelf in de hand hebben: je plek, je pagina en de aandacht in onze kanalen.</li>
+        </ul>
         <h2>Met deze partners werken we al samen</h2>
         <div class="partner-slider" data-plaatsing="blog"></div>
-        <h2 id="partner-worden">Word ook partner van NijmegenOnline</h2>
+        <h2 id="partner-worden">Meld je aan</h2>
         <p>Laat je gegevens achter, dan nemen we contact met je op. Bellen mag ook: <a href="tel:+31850047701">{tel}</a>.</p>
-{formulier}""".format(kit=kit, uploads=UPLOADS, kop=kop_, rijen="\n".join(rijen), site=SITE, tel=TELEFOON,
+{formulier}""".format(kop=kop_, rijen="\n".join(rijen), losse=losse, site=SITE, tel=TELEFOON,
                       formulier=formulier("partner", "Aanmelding partner NijmegenOnline", [
                           ("naam", "Je naam", "text", True, None),
                           ("bedrijf", "Bedrijfsnaam", "text", True, None),
                           ("email", "E-mailadres", "email", True, None),
                           ("telefoon", "Telefoonnummer", "tel", True, None),
-                          ("pakket", "Welk pakket spreekt je aan? (meerdere antwoorden mogelijk)", "keuzes", False, [n for n, _ in PAKKETTEN]),
+                          ("pakket", "Waar heb je interesse in? (meerdere antwoorden mogelijk)", "keuzes", False,
+                           [n for n, _, _ in PAKKETTEN[1:]] + ["Een losse mogelijkheid"]),
                           ("bericht", "Toelichting of vraag", "tekst", False, None)], "Verzenden"))
     return pagina("Adverteren bij NijmegenOnline", meta.get("rank_math_description", ""), "adverteren-bij-nijmegenonline",
                   "Adverteren", inhoud, zijbalk=False, afbeelding=UPLOADS + "2024/11/nijmegen-bereik-cijfers.png")
@@ -412,17 +474,14 @@ def main(bron):
     bron = pathlib.Path(bron)
     pag = paginas_xml(bron)
     fotos = bijlagen(bron)
-    # Mediakit lokaal als die is opgehaald, anders (tijdelijk) de oude link
+    # Mediakit lokaal bewaren als die is opgehaald (de adverteerpagina linkt er nu niet naar)
     pdf = bron / "assets" / "uploads" / MEDIAKIT
     if pdf.is_file():
         doel = ROOT / "assets" / "uploads" / MEDIAKIT
         doel.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(pdf, doel)
-        mediakit = "../assets/uploads/" + MEDIAKIT
-    else:
-        mediakit = UPLOADS + MEDIAKIT
     schrijf("kom-in-contact", kom_in_contact(pag["kom-in-contact"][2]))
-    schrijf("adverteren-bij-nijmegenonline", adverteren(pag["adverteren-bij-nijmegenonline"][2], mediakit))
+    schrijf("adverteren-bij-nijmegenonline", adverteren(pag["adverteren-bij-nijmegenonline"][2]))
     titel, tekst, meta = pag["wat-kost-adverteren-bij-anderen"]
     schrijf("wat-kost-adverteren-bij-anderen", wat_kost(titel, tekst, meta, fotos))
     schrijf("vacatures", vacatures(pag["vacatures"][2]))
