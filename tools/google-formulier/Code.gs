@@ -616,9 +616,8 @@ function wijsAf(d) {
   if (!d.mail) return 'Afgewezen. Er is geen mail gestuurd.';
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email)) return 'Afgewezen, maar het e-mailadres van de inzender klopt niet, dus er is geen mail gestuurd.';
   var tekst = schoon(d.bericht, 5000);
-  MailApp.sendEmail({
+  mailInzender({
     to: g.email,
-    replyTo: ONTVANGER,
     name: 'Redactie NijmegenOnline',
     subject: 'Je aanmelding bij NijmegenOnline: ' + (g.titel || g.bedrijf),
     body: tekst,
@@ -643,15 +642,23 @@ function stuurPlaatsingsmail(type, id, url) {
     (url ? '\n\nBekijk het hier: ' + url : '') +
     '\n\nWe hebben de tekst misschien wat aangepast, zodat die goed op de website past. Klopt er iets niet? ' +
     'Beantwoord dan deze mail.\n\nMet vriendelijke groet,\nRedactie NijmegenOnline';
-  MailApp.sendEmail({
+  mailInzender({
     to: g.email,
-    replyTo: ONTVANGER,
     name: 'Redactie NijmegenOnline',
     subject: 'Je aanmelding staat online: ' + naam,
     body: tekst,
     htmlBody: '<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5">' +
       html_(tekst).replace(/(https:\/\/[^\s<]+[^\s<.,])/g, '<a href="$1">$1</a>').replace(/\n/g, '<br>') + '</div>'
   });
+}
+
+// Mail aan een inzender. Staat redactie@nijmegenonline.nl in Gmail als "Verzenden als"-adres
+// (Gmail → Instellingen → Accounts → Mail verzenden als), dan is dat de afzender; anders het eigen
+// Gmail-adres, met antwoorden naar de redactie.
+function mailInzender(m) {
+  var opties = { htmlBody: m.htmlBody, name: m.name, replyTo: ONTVANGER };
+  if (GmailApp.getAliases().indexOf(ONTVANGER) >= 0) opties.from = ONTVANGER;
+  GmailApp.sendEmail(m.to, m.subject, m.body, opties);
 }
 
 // ---------- Overig ----------
