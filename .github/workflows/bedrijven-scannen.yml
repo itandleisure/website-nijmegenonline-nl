@@ -1,0 +1,49 @@
+# Leest de websites van bedrijven in de bedrijvengids met Claude en zet voorstellen (tekst, categorieën,
+# openingstijden) in data/bedrijvengids-scan.json. Er gaat niets vanzelf online: de redactie keurt eerst goed.
+# Alleen met de hand starten: Actions > Bedrijven scannen > Run workflow. Vraagt het secret ANTHROPIC_API_KEY.
+name: Bedrijven scannen
+
+on:
+  workflow_dispatch:
+    inputs:
+      categorie:
+        description: "Categorie (slug), bijvoorbeeld sportschool"
+        default: "sportschool"
+      maximum:
+        description: "Hoeveel bedrijven hooguit"
+        default: "60"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bouwen
+  cancel-in-progress: false
+
+jobs:
+  scannen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install anthropic
+      - name: Scannen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CATEGORIE: ${{ inputs.categorie }}
+          MAXIMUM: ${{ inputs.maximum }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::error::Het secret ANTHROPIC_API_KEY ontbreekt"; exit 1; fi
+          python tools/bedrijven_scan.py "$CATEGORIE" --max "$MAXIMUM"
+      - name: Opslaan
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain data)" ]; then
+            git config user.name "agenda-bot"
+            git config user.email "agenda-bot@users.noreply.github.com"
+            git add data/bedrijvengids-scan.json
+            git commit -m "Bedrijven gescand: ${{ inputs.categorie }}"
+            git pull --rebase && git push
+          fi

@@ -273,7 +273,7 @@ def kaart_blok(bedrijven, root, knoppen=False):
     data = json.dumps({"groepen": groepen, "punten": punten}, ensure_ascii=False).replace("</", "<\\/")
     return ('%s          <div id="gidskaart" class="gidskaart" role="region" aria-label="Kaart met bedrijven"></div>\n'
             '          <script type="application/json" id="kaartdata">%s</script>\n'
-            '          <script src="%sassets/js/kaart.js?v=1" defer></script>'
+            '          <script src="%sassets/js/kaart.js?v=2" defer></script>'
             % ('          <div id="kaartgroepen" class="kaartgroepen"></div>\n' if knoppen else "", data, root))
 
 

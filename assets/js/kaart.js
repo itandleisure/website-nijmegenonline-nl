@@ -11,7 +11,16 @@
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-bijdragers</a>'
   }).addTo(kaart);
   var lagen = {};
-  data.groepen.forEach(function (g) { lagen[g] = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 45 }); });
+  // Eigen markers in de huisstijl (geen plaatjes): een groen rondje, en bolletjes met het aantal
+  var punt = L.divIcon({ className: "kaartpunt", html: "<span></span>", iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -10] });
+  function bolletje(cluster) {
+    var n = cluster.getChildCount();
+    var maat = n < 10 ? 34 : n < 50 ? 42 : 50;
+    return L.divIcon({ className: "kaartbol", html: "<span>" + n + "</span>", iconSize: [maat, maat] });
+  }
+  data.groepen.forEach(function (g) {
+    lagen[g] = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 45, iconCreateFunction: bolletje });
+  });
   data.punten.forEach(function (p) {
     var pop = document.createElement("div");
     var a = document.createElement("a");
@@ -19,7 +28,7 @@
     var adres = document.createElement("div");
     adres.textContent = p[4];
     pop.appendChild(a); pop.appendChild(adres);
-    L.marker([p[1], p[2]]).bindPopup(pop).addTo(lagen[p[5]]);
+    L.marker([p[1], p[2]], { icon: punt, title: p[0] }).bindPopup(pop).addTo(lagen[p[5]]);
   });
   var knoppen = document.getElementById("kaartgroepen");
   function zet(g, aan) {
