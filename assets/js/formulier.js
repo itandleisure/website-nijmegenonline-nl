@@ -2,7 +2,7 @@
 // zie tools/google-formulier/Code.gs). Zonder url, of als Google niet reageert, opent het mailprogramma
 // van de bezoeker met het bericht al ingevuld. Een foto (input type=file) gaat als data-URL mee; het script
 // zet hem in Google Drive.
-var MAX_FOTO = 20 * 1024 * 1024;   // het origineel; verkleind blijft er hooguit een paar honderd kB over
+var MAX_FOTO = 10 * 1024 * 1024;   // het origineel; verkleind blijft er hooguit een paar honderd kB over
 var MAX_PX = 1600;
 // Leest de foto als data-URL en maakt hem eerst kleiner (max. 1600 px, jpg), zodat het versturen snel gaat.
 // Lukt verkleinen niet, dan gaat het origineel mee.
@@ -44,7 +44,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
   }
   function mailknop() {
     var regels = [];
-    form.querySelectorAll("input[id], textarea[id], fieldset input:checked").forEach(function (v) {
+    form.querySelectorAll("input[id], select[id], textarea[id], fieldset input:checked").forEach(function (v) {
       if (v.type === "file") { if (v.files.length) regels.push(label(v) + ": stuur de foto mee als bijlage"); return; }
       if (v.value.trim()) regels.push(label(v) + ": " + v.value.trim());
     });
@@ -52,18 +52,33 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       "&body=" + encodeURIComponent(regels.join("\n"));
     meld("Je mailprogramma wordt geopend met je bericht. Verstuur het daar.");
   }
+  // Einddatum vanzelf gelijk aan de begindatum (de meeste evenementen duren één dag)
+  var datum = form.querySelector('[name="datum"]'), einddatum = form.querySelector('[name="einddatum"]');
+  if (datum && einddatum) {
+    datum.addEventListener("change", function () {
+      if (!einddatum.value || einddatum.value < datum.value) einddatum.value = datum.value;
+      einddatum.min = datum.value;
+    });
+  }
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var ontbreekt = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (v) {
       return v.type === "file" ? !v.files.length : !v.value.trim();
     });
     var foto = form.querySelector('input[type="file"]');
-    if (foto && foto.files.length && foto.files[0].size > MAX_FOTO) { meld("De foto is groter dan 20 MB. Kies een kleinere foto.", true); foto.focus(); return; }
+    if (foto && foto.files.length && foto.files[0].size > MAX_FOTO) { meld("De foto is groter dan 10 MB. Kies een kleinere foto.", true); foto.focus(); return; }
     if (ontbreekt.length) { meld("Vul alle velden met een * in.", true); ontbreekt[0].focus(); return; }
     var email = Array.prototype.filter.call(form.querySelectorAll('input[type="email"]'), function (v) {
       return (v.required || v.value.trim()) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.value.trim());
     })[0];
     if (email) { meld("Controleer het e-mailadres.", true); email.focus(); return; }
+    var begin = form.querySelector('[name="datum"]'), eind = form.querySelector('[name="einddatum"]');
+    if (begin && eind) {
+      var tb = form.querySelector('[name="starttijd"]'), te = form.querySelector('[name="eindtijd"]');
+      if (eind.value + (te ? te.value : "") < begin.value + (tb ? tb.value : "")) {
+        meld("Het einde ligt voor het begin. Controleer de datums en tijden.", true); eind.focus(); return;
+      }
+    }
     if (!form.dataset.url) { mailknop(); return; }
 
     form.pagina.value = location.href;
@@ -90,7 +105,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
         clearTimeout(timer);
         if (!res.ok) throw new Error(res.fout || "mislukt");
         form.reset();
-        meld("Bedankt! We hebben je bericht ontvangen en nemen snel contact met je op.");
+        meld(form.dataset.bedankt || "Bedankt! We hebben je bericht ontvangen en nemen snel contact met je op.");
       })
       .catch(function (e) {
         if (e && e.message === "foto") {

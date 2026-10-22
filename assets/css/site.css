@@ -334,3 +334,8 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .adverteren-bereik img { max-width: 420px; width: 100%; margin: 0 auto; display: block; border-radius: var(--radius); }
 .uitgelicht img.uitgelicht__heel, .eventkaart img.eventkaart__heel { object-fit: contain; background: var(--wit); padding: 8px; }
 .formulier__hint { margin: 0; font-size: .9rem; color: var(--grijs); }
+.formulier__kop { margin: 22px 0 0; padding-top: 14px; border-top: 1px solid #e3e6ea; font-size: 1.15rem; }
+.formulier__kop:first-of-type { margin-top: 4px; padding-top: 0; border-top: 0; }
+.formulier__rij { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; }
+.formulier__rij > div { display: grid; gap: 6px; align-content: start; }
+.formulier select { width: 100%; padding: 10px 12px; border: 1px solid #c9ced4; border-radius: 6px; font: inherit; background: #fff; }

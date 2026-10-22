@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="../assets/css/site.css?v=11">
+  <link rel="stylesheet" href="../assets/css/site.css?v=12">
   <link rel="stylesheet" href="../partners/slider.css?v=5">
   <script src="../partners/slider.js?v=5" defer></script>
 </head>
@@ -61,28 +61,26 @@
         <h2>Spelregels</h2>
         <ul>
           <li>Vul het formulier volledig in.</li>
-          <li>Voeg een rechtenvrije foto toe. Zonder foto plaatsen we het evenement niet.</li>
-          <li>Meerdaagse evenementen plaatsen we niet. Je mag wel een evenement aanmelden voor alleen de eerste dag van het evenement, de expositie of de workshop.</li>
-          <li>Vul een begin- en eindtijd in. Loopt je evenement door tot in de nacht? Vul dan als eindtijd 23.55 uur in.</li>
+          <li>Voeg een rechtenvrije foto van het evenement toe. Zonder foto plaatsen we het evenement niet.</li>
+          <li>Duurt je evenement meerdere dagen? Vul dan de begin- en einddatum in. Loopt het door tot in de nacht? Kies dan als eindtijd 23:45.</li>
+          <li>De redactie bekijkt elke aanmelding en past de tekst soms aan, zodat die goed op de website past.</li>
         </ul>
         <h2>Meer aandacht voor je evenement?</h2>
         <p>Een gratis aanmelding komt in de agenda, met je website, e-mailadres en telefoonnummer als je die invult. Je evenement wordt dan niet uitgelicht in onze wekelijkse nieuwsbrief, op social media en op onze websites. Wil je die extra aandacht wel? Mail naar <a href="mailto:redactie@nijmegenonline.nl">redactie@nijmegenonline.nl</a> en vraag naar de mogelijkheden, of bekijk de <a href="../adverteren-bij-nijmegenonline/">pakketten</a>.</p>
         <h2>Je evenement</h2>
-        <form class="formulier" id="formulier" data-email="redactie@nijmegenonline.nl" data-url="https://script.google.com/macros/s/AKfycbyELOZGBRvXanmgy7LSaQD4G5WnAZbACtAWVvcKoslJHT0-NxunjLngM7fJJOrxQyIM/exec" data-onderwerp="Evenement aangemeld via NijmegenOnline" novalidate>
+        <form class="formulier" id="formulier" data-email="redactie@nijmegenonline.nl" data-url="https://script.google.com/macros/s/AKfycbyELOZGBRvXanmgy7LSaQD4G5WnAZbACtAWVvcKoslJHT0-NxunjLngM7fJJOrxQyIM/exec" data-onderwerp="Evenement aangemeld via NijmegenOnline" data-bedankt="Bedankt! De redactie heeft je evenement ontvangen en bekijkt het zo snel mogelijk. Soms passen we de tekst wat aan, zodat die goed op de website past. Je krijgt een e-mail zodra je evenement online staat, of als we het niet kunnen plaatsen." novalidate>
           <input type="hidden" name="form" value="evenement">
           <input type="hidden" name="pagina" value="">
           <input type="hidden" name="duur" value="">
           <div class="formulier__val" aria-hidden="true"><label>Laat dit veld leeg <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <h3 class="formulier__kop">Het evenement</h3>
           <label for="evenement-titel">Naam van het evenement <span aria-hidden="true">*</span></label>
           <input id="evenement-titel" name="titel" type="text" autocomplete="on" required>
-          <label for="evenement-datum">Datum <span aria-hidden="true">*</span></label>
-          <input id="evenement-datum" name="datum" type="date" autocomplete="on" required>
-          <label for="evenement-starttijd">Begintijd <span aria-hidden="true">*</span></label>
-          <input id="evenement-starttijd" name="starttijd" type="time" autocomplete="on" required>
-          <label for="evenement-eindtijd">Eindtijd <span aria-hidden="true">*</span></label>
-          <input id="evenement-eindtijd" name="eindtijd" type="time" autocomplete="on" required>
+          <div class="formulier__rij"><div><label for="evenement-datum">Begindatum <span aria-hidden="true">*</span></label><input id="evenement-datum" name="datum" type="date" required></div><div><label for="evenement-starttijd">Begintijd <span aria-hidden="true">*</span></label><select id="evenement-starttijd" name="starttijd" required><option value="">Kies</option><option>00:00</option><option>00:15</option><option>00:30</option><option>00:45</option><option>01:00</option><option>01:15</option><option>01:30</option><option>01:45</option><option>02:00</option><option>02:15</option><option>02:30</option><option>02:45</option><option>03:00</option><option>03:15</option><option>03:30</option><option>03:45</option><option>04:00</option><option>04:15</option><option>04:30</option><option>04:45</option><option>05:00</option><option>05:15</option><option>05:30</option><option>05:45</option><option>06:00</option><option>06:15</option><option>06:30</option><option>06:45</option><option>07:00</option><option>07:15</option><option>07:30</option><option>07:45</option><option>08:00</option><option>08:15</option><option>08:30</option><option>08:45</option><option>09:00</option><option>09:15</option><option>09:30</option><option>09:45</option><option>10:00</option><option>10:15</option><option>10:30</option><option>10:45</option><option>11:00</option><option>11:15</option><option>11:30</option><option>11:45</option><option>12:00</option><option>12:15</option><option>12:30</option><option>12:45</option><option>13:00</option><option>13:15</option><option>13:30</option><option>13:45</option><option>14:00</option><option>14:15</option><option>14:30</option><option>14:45</option><option>15:00</option><option>15:15</option><option>15:30</option><option>15:45</option><option>16:00</option><option>16:15</option><option>16:30</option><option>16:45</option><option>17:00</option><option>17:15</option><option>17:30</option><option>17:45</option><option>18:00</option><option>18:15</option><option>18:30</option><option>18:45</option><option>19:00</option><option>19:15</option><option>19:30</option><option>19:45</option><option>20:00</option><option>20:15</option><option>20:30</option><option>20:45</option><option>21:00</option><option>21:15</option><option>21:30</option><option>21:45</option><option>22:00</option><option>22:15</option><option>22:30</option><option>22:45</option><option>23:00</option><option>23:15</option><option>23:30</option><option>23:45</option></select></div></div>
+          <div class="formulier__rij"><div><label for="evenement-einddatum">Einddatum <span aria-hidden="true">*</span></label><input id="evenement-einddatum" name="einddatum" type="date" required></div><div><label for="evenement-eindtijd">Eindtijd <span aria-hidden="true">*</span></label><select id="evenement-eindtijd" name="eindtijd" required><option value="">Kies</option><option>00:00</option><option>00:15</option><option>00:30</option><option>00:45</option><option>01:00</option><option>01:15</option><option>01:30</option><option>01:45</option><option>02:00</option><option>02:15</option><option>02:30</option><option>02:45</option><option>03:00</option><option>03:15</option><option>03:30</option><option>03:45</option><option>04:00</option><option>04:15</option><option>04:30</option><option>04:45</option><option>05:00</option><option>05:15</option><option>05:30</option><option>05:45</option><option>06:00</option><option>06:15</option><option>06:30</option><option>06:45</option><option>07:00</option><option>07:15</option><option>07:30</option><option>07:45</option><option>08:00</option><option>08:15</option><option>08:30</option><option>08:45</option><option>09:00</option><option>09:15</option><option>09:30</option><option>09:45</option><option>10:00</option><option>10:15</option><option>10:30</option><option>10:45</option><option>11:00</option><option>11:15</option><option>11:30</option><option>11:45</option><option>12:00</option><option>12:15</option><option>12:30</option><option>12:45</option><option>13:00</option><option>13:15</option><option>13:30</option><option>13:45</option><option>14:00</option><option>14:15</option><option>14:30</option><option>14:45</option><option>15:00</option><option>15:15</option><option>15:30</option><option>15:45</option><option>16:00</option><option>16:15</option><option>16:30</option><option>16:45</option><option>17:00</option><option>17:15</option><option>17:30</option><option>17:45</option><option>18:00</option><option>18:15</option><option>18:30</option><option>18:45</option><option>19:00</option><option>19:15</option><option>19:30</option><option>19:45</option><option>20:00</option><option>20:15</option><option>20:30</option><option>20:45</option><option>21:00</option><option>21:15</option><option>21:30</option><option>21:45</option><option>22:00</option><option>22:15</option><option>22:30</option><option>22:45</option><option>23:00</option><option>23:15</option><option>23:30</option><option>23:45</option></select></div></div>
           <label for="evenement-omschrijving">Omschrijving van het evenement <span aria-hidden="true">*</span></label>
           <textarea id="evenement-omschrijving" name="omschrijving" rows="6" required></textarea>
+          <h3 class="formulier__kop">Locatie</h3>
           <label for="evenement-locatie">Naam van de locatie <span aria-hidden="true">*</span></label>
           <input id="evenement-locatie" name="locatie" type="text" autocomplete="on" required>
           <label for="evenement-adres">Straat en huisnummer <span aria-hidden="true">*</span></label>
@@ -91,19 +89,26 @@
           <input id="evenement-postcode" name="postcode" type="text" autocomplete="on" required>
           <label for="evenement-plaats">Plaats <span aria-hidden="true">*</span></label>
           <input id="evenement-plaats" name="plaats" type="text" autocomplete="on" required>
-          <label for="evenement-site">Website van het evenement</label>
+          <h3 class="formulier__kop">Contactgegevens voor bezoekers</h3>
+          <p class="formulier__hint">Deze gegevens komen bij het evenement op de website.</p>
+          <label for="evenement-site">Website</label>
           <input id="evenement-site" name="site" type="url" autocomplete="url">
-          <label for="evenement-evenementmail">E-mailadres voor bezoekers</label>
+          <label for="evenement-evenementmail">E-mailadres</label>
           <input id="evenement-evenementmail" name="evenementmail" type="email" autocomplete="email">
-          <label for="evenement-evenementtelefoon">Telefoonnummer voor bezoekers</label>
+          <label for="evenement-evenementtelefoon">Telefoonnummer</label>
           <input id="evenement-evenementtelefoon" name="evenementtelefoon" type="tel" autocomplete="tel">
-          <label for="evenement-foto">Foto <span aria-hidden="true">*</span></label>
+          <h3 class="formulier__kop">Foto</h3>
+          <label for="evenement-foto">Foto van het evenement <span aria-hidden="true">*</span></label>
           <input id="evenement-foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp" required>
-          <p class="formulier__hint">Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 20 MB.</p>
-          <label for="evenement-naam">Je naam (alleen voor de redactie) <span aria-hidden="true">*</span></label>
+          <p class="formulier__hint">Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 10 MB.</p>
+          <h3 class="formulier__kop">Jouw gegevens</h3>
+          <p class="formulier__hint">Deze gegevens komen niet op de website. We gebruiken ze alleen als we nog vragen hebben over je aanmelding.</p>
+          <label for="evenement-naam">Je naam <span aria-hidden="true">*</span></label>
           <input id="evenement-naam" name="naam" type="text" autocomplete="on" required>
-          <label for="evenement-email">Je e-mailadres (alleen voor de redactie) <span aria-hidden="true">*</span></label>
+          <label for="evenement-email">Je e-mailadres <span aria-hidden="true">*</span></label>
           <input id="evenement-email" name="email" type="email" autocomplete="email" required>
+          <label for="evenement-telefoon">Je telefoonnummer <span aria-hidden="true">*</span></label>
+          <input id="evenement-telefoon" name="telefoon" type="tel" autocomplete="tel" required>
           <label for="evenement-notitie">Opmerking voor de redactie</label>
           <textarea id="evenement-notitie" name="notitie" rows="6"></textarea>
           <p class="formulier__melding" role="status" hidden></p>
@@ -155,7 +160,7 @@
       </div>
     </div>
   </main>
-  <script src="../assets/js/formulier.js?v=5" defer></script>
+  <script src="../assets/js/formulier.js?v=6" defer></script>
 
   <!-- footer -->
   <footer>

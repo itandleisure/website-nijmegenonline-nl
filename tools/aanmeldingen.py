@@ -18,6 +18,7 @@ import pathlib
 import re
 import sys
 import unicodedata
+import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -66,6 +67,9 @@ def evenement(a, evenementen, aanbieders):
     datum = (a.get("datum") or "")[:10]
     if not re.match(r"\d{4}-\d{2}-\d{2}$", datum):
         raise ValueError("geen geldige datum: %r" % a.get("datum"))
+    einddatum = (a.get("einddatum") or "")[:10]
+    if not re.match(r"\d{4}-\d{2}-\d{2}$", einddatum) or einddatum < datum:
+        einddatum = datum
     begin, eind = tijd(a.get("starttijd")), tijd(a.get("eindtijd"))
     bestaand = {e["slug"] for e in evenementen} | set((ROOT / "data" / "evenementen-verwijderd.txt").read_text().split())
     basis = slug(a["titel"])
@@ -89,7 +93,7 @@ def evenement(a, evenementen, aanbieders):
         "slug": s,
         "titel": a["titel"].strip(),
         "start": "%sT%s" % (datum, begin) if begin else datum,
-        "eind": "%sT%s" % (datum, eind) if eind else datum,
+        "eind": "%sT%s" % (einddatum, eind) if eind else einddatum,
         "locatie": locatie,
         "adres": adres,
         "afbeelding": "%s/%s" % (SITE, foto) if foto else "",
@@ -128,7 +132,10 @@ def main(test=None):
             evenementen.append(e)
             nieuw.append("evenement %s" % e["slug"])
             verwerkt.add(a["id"])
-        terugmelden.append(a.get("gepubliceerd"))
+        # Met de link naar de eventpagina, die gaat in de mail aan de inzender
+        slug_ = next((e["slug"] for e in evenementen if e.get("aanmelding") == a["id"]), "")
+        if a.get("gepubliceerd"):
+            terugmelden.append(a["gepubliceerd"] + ("&url=" + urllib.parse.quote("%s/events/%s/" % (SITE, slug_), safe="") if slug_ else ""))
     for a in lijst.get("bedrijf", []):
         if a["id"] not in verwerkt:
             b = {k: v for k, v in a.items() if k not in ("foto", "gepubliceerd")}

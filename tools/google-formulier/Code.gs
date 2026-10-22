@@ -50,13 +50,14 @@ var FORMULIEREN = {
   },
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 12, onderwerp: 'Evenement aangemeld', goedkeuren: true,
-    openbaar: ['titel', 'datum', 'starttijd', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats',
+    openbaar: ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats',
       'site', 'evenementmail', 'evenementtelefoon'],
-    velden: [['titel', 'Evenement'], ['datum', 'Datum'], ['starttijd', 'Begintijd'], ['eindtijd', 'Eindtijd'],
+    velden: [['titel', 'Evenement'], ['datum', 'Begindatum'], ['starttijd', 'Begintijd'], ['einddatum', 'Einddatum'],
+      ['eindtijd', 'Eindtijd'],
       ['omschrijving', 'Omschrijving'], ['locatie', 'Locatie'], ['adres', 'Adres'], ['postcode', 'Postcode'],
       ['plaats', 'Plaats'], ['site', 'Website'], ['evenementmail', 'E-mail bezoekers'],
       ['evenementtelefoon', 'Telefoon bezoekers'], ['foto', 'Foto'],
-      ['naam', 'Naam'], ['email', 'E-mail'], ['notitie', 'Opmerking']]
+      ['naam', 'Naam'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking']]
   }
 };
 
@@ -107,7 +108,8 @@ function doPost(e) {
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email)) fouten.push('email');
   if (type === 'contact' && !g.bericht) fouten.push('bericht');
   if (type === 'evenement') {
-    ['titel', 'datum', 'starttijd', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats'].forEach(function (v) { if (!g[v]) fouten.push(v); });
+    if (!g.einddatum) g.einddatum = g.datum;
+    ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats', 'telefoon'].forEach(function (v) { if (!g[v]) fouten.push(v); });
   }
   if (type === 'bedrijf') {
     ['bedrijf', 'categorie', 'adres', 'telefoon', 'omschrijving'].forEach(function (v) { if (!g[v]) fouten.push(v); });
@@ -162,7 +164,17 @@ function doGet(e) {
     var nieuw = { akkoord: 'Akkoord', afwijzen: 'Afgewezen', gepubliceerd: 'Gepubliceerd' }[p.actie];
     var oud = zetStatus(cfg, p.id, nieuw);
     if (oud === null) return pagina('Deze aanmelding staat niet (meer) in de spreadsheet.');
-    if (p.actie === 'gepubliceerd') return antwoord({ ok: true });
+    if (p.actie === 'gepubliceerd') {
+      // Eerste keer gepubliceerd: de inzender een mail sturen met de link
+      if (oud !== 'Gepubliceerd') {
+        try {
+          stuurPlaatsingsmail(p.type, p.id, /^https:\/\/www\.nijmegenonline\.nl\//.test(p.url || '') ? p.url : '');
+        } catch (fout) {
+          console.error('Plaatsingsmail mislukt: ' + fout);
+        }
+      }
+      return antwoord({ ok: true });
+    }
     if (oud === 'Gepubliceerd') return pagina('Deze aanmelding staat al op de website.');
     return pagina(p.actie === 'akkoord'
       ? 'Goedgekeurd. De aanmelding staat binnen een uur op nijmegenonline.nl.'
@@ -205,7 +217,7 @@ function rijNaarG(cfg, r, k) {
     var waarde = r[plek(cfg, v[0])];
     // Tijden en datums kan Sheets omzetten naar een datum; terugzetten naar tekst
     if (waarde instanceof Date) {
-      waarde = Utilities.formatDate(waarde, 'Europe/Amsterdam', v[0] === 'datum' ? 'yyyy-MM-dd' : 'HH:mm');
+      waarde = Utilities.formatDate(waarde, 'Europe/Amsterdam', /datum$/.test(v[0]) ? 'yyyy-MM-dd' : 'HH:mm');
     }
     g[v[0]] = String(waarde === undefined || waarde === null ? '' : waarde).replace(/^'/, '');
   });
@@ -393,7 +405,7 @@ function bewerkPagina(type, id) {
   var basis = ScriptApp.getService().getUrl() + '?type=' + type + '&id=' + encodeURIComponent(id) + '&t=' + t + '&actie=';
 
   var velden = cfg.openbaar.filter(function (veld) { return veld !== 'omschrijving'; }).map(function (veld) {
-    var soort = { datum: 'date', starttijd: 'time', eindtijd: 'time', site: 'url', bedrijfsmail: 'email', evenementmail: 'email',
+    var soort = { datum: 'date', einddatum: 'date', starttijd: 'time', eindtijd: 'time', site: 'url', bedrijfsmail: 'email', evenementmail: 'email',
       telefoon: 'tel', evenementtelefoon: 'tel' }[veld] || 'text';
     var invoer = veld === 'openingstijden'
       ? '<textarea name="' + veld + '" rows="3">' + html_(g[veld]) + '</textarea>'
@@ -614,6 +626,32 @@ function wijsAf(d) {
       html_(tekst).replace(/(https:\/\/[^\s<]+[^\s<.,])/g, '<a href="$1">$1</a>').replace(/\n/g, '<br>') + '</div>'
   });
   return 'Afgewezen en de mail is gestuurd naar ' + g.email + '.';
+}
+
+// Mail aan de inzender als de aanmelding online staat
+function stuurPlaatsingsmail(type, id, url) {
+  var cfg = FORMULIEREN[type];
+  var nr = zoekRij(cfg, id);
+  if (!nr) return;
+  var k = kolommen(cfg);
+  var g = rijNaarG(cfg, blad(cfg).getRange(nr, 1, 1, k.length).getValues()[0], k);
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email)) return;
+  var naam = g.titel || g.bedrijf;
+  var tekst = 'Beste ' + (g.naam || 'aanmelder') + ',\n\nGoed nieuws: ' +
+    (type === 'evenement' ? 'je evenement "' + naam + '" staat nu in de agenda van NijmegenOnline.'
+      : 'je bedrijf "' + naam + '" staat nu in de bedrijvengids van NijmegenOnline.') +
+    (url ? '\n\nBekijk het hier: ' + url : '') +
+    '\n\nWe hebben de tekst misschien wat aangepast, zodat die goed op de website past. Klopt er iets niet? ' +
+    'Beantwoord dan deze mail.\n\nMet vriendelijke groet,\nRedactie NijmegenOnline';
+  MailApp.sendEmail({
+    to: g.email,
+    replyTo: ONTVANGER,
+    name: 'Redactie NijmegenOnline',
+    subject: 'Je aanmelding staat online: ' + naam,
+    body: tekst,
+    htmlBody: '<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5">' +
+      html_(tekst).replace(/(https:\/\/[^\s<]+[^\s<.,])/g, '<a href="$1">$1</a>').replace(/\n/g, '<br>') + '</div>'
+  });
 }
 
 // ---------- Overig ----------

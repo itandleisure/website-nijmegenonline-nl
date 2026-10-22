@@ -38,4 +38,4 @@ jobs:
       - name: Terugmelden aan de Google Sheet
         run: |
           [ -s .terugmelden ] || exit 0
-          while read -r url; do curl -sSL -m 60 "$url" > /dev/null || echo "Terugmelden mislukt: $url"; done < .terugmelden
+          while read -r url || [ -n "$url" ]; do curl -sSL -m 60 "$url" > /dev/null || echo "Terugmelden mislukt: $url"; done < .terugmelden

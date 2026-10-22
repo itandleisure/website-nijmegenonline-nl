@@ -104,15 +104,20 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=5" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=6" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
 
-def formulier(naam, onderwerp, velden, knop="Verstuur"):
-    """velden: (naam, label, type, verplicht, opties). naam is het formuliertype in Code.gs (contact, partner)."""
-    regels = ['        <form class="formulier" id="formulier" data-email="%s" data-url="%s" data-onderwerp="%s" novalidate>'
-              % (EMAIL, GOOGLE_FORM_URL, esc(onderwerp)),
+KWARTIEREN = ["%02d:%02d" % (u, m) for u in range(24) for m in (0, 15, 30, 45)]
+
+
+def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
+    """velden: (naam, label, type, verplicht, opties). naam is het formuliertype in Code.gs (contact, partner).
+    Bijzondere types: "kop" (tussenkop, opties = toelichting) en "datumtijd" (datum en tijd per kwartier naast
+    elkaar; naam = (datumveld, tijdveld), label = (datumlabel, tijdlabel)). bedankt: melding na het versturen."""
+    regels = ['        <form class="formulier" id="formulier" data-email="%s" data-url="%s" data-onderwerp="%s"%s novalidate>'
+              % (EMAIL, GOOGLE_FORM_URL, esc(onderwerp), ' data-bedankt="%s"' % esc(bedankt) if bedankt else ""),
               '          <input type="hidden" name="form" value="%s">' % esc(naam),
               '          <input type="hidden" name="pagina" value="">',
               '          <input type="hidden" name="duur" value="">',
@@ -121,7 +126,19 @@ def formulier(naam, onderwerp, velden, knop="Verstuur"):
         id_ = "%s-%s" % (naam, veld)
         ster = ' <span aria-hidden="true">*</span>' if verplicht else ""
         req = " required" if verplicht else ""
-        if soort == "keuzes":
+        if soort == "kop":
+            regels.append('          <h3 class="formulier__kop">%s</h3>' % esc(label))
+            if opties:
+                regels.append('          <p class="formulier__hint">%s</p>' % esc(opties))
+        elif soort == "datumtijd":
+            (dveld, tveld), (dlabel, tlabel) = veld, label
+            regels.append('          <div class="formulier__rij">'
+                          '<div><label for="%s-%s">%s%s</label><input id="%s-%s" name="%s" type="date"%s></div>'
+                          '<div><label for="%s-%s">%s%s</label><select id="%s-%s" name="%s"%s><option value="">Kies</option>%s</select></div></div>'
+                          % (naam, dveld, esc(dlabel), ster, naam, dveld, dveld, req,
+                             naam, tveld, esc(tlabel), ster, naam, tveld, tveld, req,
+                             "".join('<option>%s</option>' % k for k in KWARTIEREN)))
+        elif soort == "keuzes":
             regels.append('          <fieldset class="formulier__keuzes"><legend>%s%s</legend>' % (esc(label), ster))
             regels += ['            <label><input type="checkbox" name="%s" value="%s"> %s</label>' % (veld, esc(o), esc(o)) for o in opties]
             regels.append("          </fieldset>")
@@ -180,7 +197,9 @@ def bedrijf_aanmelden(categorieen):
         ("omschrijving", "Korte omschrijving van het bedrijf", "tekst", True, None),
         ("foto", "Logo of foto", "bestand", False, "JPG, PNG of WebP, maximaal 20 MB."),
         ("naam", "Je naam (contactpersoon)", "text", True, None),
-        ("email", "Je e-mailadres", "email", True, None)], "Aanmelden"))
+        ("email", "Je e-mailadres", "email", True, None)], "Aanmelden",
+        "Bedankt! De redactie heeft je aanmelding ontvangen en bekijkt die zo snel mogelijk. Soms passen we de tekst wat aan, "
+        "zodat die goed op de website past. Je krijgt een e-mail zodra je bedrijf in de bedrijvengids staat, of als we het niet kunnen plaatsen."))
     return pagina("Bedrijf aanmelden", "Zet je bedrijf in de bedrijvengids van NijmegenOnline: vul het formulier in en wij maken je vermelding aan.",
                   "bedrijf-aanmelden", "Bedrijf aanmelden", inhoud)
 
@@ -191,30 +210,37 @@ def evenement_aanmelden():
         <h2>Spelregels</h2>
         <ul>
           <li>Vul het formulier volledig in.</li>
-          <li>Voeg een rechtenvrije foto toe. Zonder foto plaatsen we het evenement niet.</li>
-          <li>Meerdaagse evenementen plaatsen we niet. Je mag wel een evenement aanmelden voor alleen de eerste dag van het evenement, de expositie of de workshop.</li>
-          <li>Vul een begin- en eindtijd in. Loopt je evenement door tot in de nacht? Vul dan als eindtijd 23.55 uur in.</li>
+          <li>Voeg een rechtenvrije foto van het evenement toe. Zonder foto plaatsen we het evenement niet.</li>
+          <li>Duurt je evenement meerdere dagen? Vul dan de begin- en einddatum in. Loopt het door tot in de nacht? Kies dan als eindtijd 23:45.</li>
+          <li>De redactie bekijkt elke aanmelding en past de tekst soms aan, zodat die goed op de website past.</li>
         </ul>
         <h2>Meer aandacht voor je evenement?</h2>
         <p>Een gratis aanmelding komt in de agenda, met je website, e-mailadres en telefoonnummer als je die invult. Je evenement wordt dan niet uitgelicht in onze wekelijkse nieuwsbrief, op social media en op onze websites. Wil je die extra aandacht wel? Mail naar <a href="mailto:{email}">{email}</a> en vraag naar de mogelijkheden, of bekijk de <a href="{site}/adverteren-bij-nijmegenonline/">pakketten</a>.</p>
         <h2>Je evenement</h2>
 {formulier}""".format(email=EMAIL, site=SITE, formulier=formulier("evenement", "Evenement aangemeld via NijmegenOnline", [
+        ("kop", "Het evenement", "kop", False, None),
         ("titel", "Naam van het evenement", "text", True, None),
-        ("datum", "Datum", "date", True, None),
-        ("starttijd", "Begintijd", "time", True, None),
-        ("eindtijd", "Eindtijd", "time", True, None),
+        (("datum", "starttijd"), ("Begindatum", "Begintijd"), "datumtijd", True, None),
+        (("einddatum", "eindtijd"), ("Einddatum", "Eindtijd"), "datumtijd", True, None),
         ("omschrijving", "Omschrijving van het evenement", "tekst", True, None),
+        ("kop", "Locatie", "kop", False, None),
         ("locatie", "Naam van de locatie", "text", True, None),
         ("adres", "Straat en huisnummer", "text", True, None),
         ("postcode", "Postcode", "text", True, None),
         ("plaats", "Plaats", "text", True, None),
-        ("site", "Website van het evenement", "url", False, None),
-        ("evenementmail", "E-mailadres voor bezoekers", "email", False, None),
-        ("evenementtelefoon", "Telefoonnummer voor bezoekers", "tel", False, None),
-        ("foto", "Foto", "bestand", True, "Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 20 MB."),
-        ("naam", "Je naam (alleen voor de redactie)", "text", True, None),
-        ("email", "Je e-mailadres (alleen voor de redactie)", "email", True, None),
-        ("notitie", "Opmerking voor de redactie", "tekst", False, None)], "Evenement aanmelden"))
+        ("kop", "Contactgegevens voor bezoekers", "kop", False, "Deze gegevens komen bij het evenement op de website."),
+        ("site", "Website", "url", False, None),
+        ("evenementmail", "E-mailadres", "email", False, None),
+        ("evenementtelefoon", "Telefoonnummer", "tel", False, None),
+        ("kop", "Foto", "kop", False, None),
+        ("foto", "Foto van het evenement", "bestand", True, "Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 10 MB."),
+        ("kop", "Jouw gegevens", "kop", False, "Deze gegevens komen niet op de website. We gebruiken ze alleen als we nog vragen hebben over je aanmelding."),
+        ("naam", "Je naam", "text", True, None),
+        ("email", "Je e-mailadres", "email", True, None),
+        ("telefoon", "Je telefoonnummer", "tel", True, None),
+        ("notitie", "Opmerking voor de redactie", "tekst", False, None)], "Evenement aanmelden",
+        "Bedankt! De redactie heeft je evenement ontvangen en bekijkt het zo snel mogelijk. Soms passen we de tekst wat aan, "
+        "zodat die goed op de website past. Je krijgt een e-mail zodra je evenement online staat, of als we het niet kunnen plaatsen."))
     return pagina("Evenement aanmelden", "Organiseer je een evenement in Nijmegen of omgeving? Meld het gratis aan voor de agenda van NijmegenOnline.",
                   "evenement-aanmelden", '<a href="../nijmegen-evenementen-overzicht/">Agenda</a> › Evenement aanmelden', inhoud)
 
