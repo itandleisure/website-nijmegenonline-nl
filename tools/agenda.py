@@ -2,6 +2,7 @@
 
 - /nijmegen-evenementen-overzicht/   alle komende evenementen per maand (/agenda/ verwijst hierheen)
 - /events/<slug>/                    een pagina per evenement
+- /event-location/<aanbieder>/       alle evenementen van een aanbieder (EventOn-locatie, data/aanbieders.json)
 - homepage en zijbalk                de eerstvolgende evenementen (tussen <!-- agenda --> en <!-- binnenkort -->)
 
 Afgesproken met Frans (22-10-2026):
@@ -33,6 +34,7 @@ from import_wordpress import DOORVERWIJZING, SITE, VOET, esc, kop, samenvatting 
 
 BEWAAR_DAGEN = 92
 OVERZICHT = "nijmegen-evenementen-overzicht"
+AANBIEDERS = "event-location"
 AANMELDEN = SITE + "/evenement-aanmelden/"
 MAANDEN = ["januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september",
            "oktober", "november", "december"]
@@ -66,6 +68,8 @@ def wanneer(e):
 
 def kort_wanneer(e, vandaag):
     s, t = dag(e, "start"), dag(e, "eind")
+    if t < vandaag:
+        return "%s %d" % (korte_datum(s), s.year)
     if s < vandaag:
         return "Nu, t/m %s" % korte_datum(t)
     if s == t:
@@ -80,7 +84,7 @@ def lokaal(url):
 
 
 def eventkaart(e, vandaag, root):
-    s = max(dag(e, "start"), vandaag)
+    s = max(dag(e, "start"), vandaag) if dag(e, "eind") >= vandaag else dag(e, "start")
     foto = lokaal(e["afbeelding"])
     img = '<img src="%s%s" alt="" loading="lazy">' % (root, foto) if foto else ""
     plaats = '<span class="eventkaart__plaats">%s</span>' % esc(e["locatie"]) if e["locatie"] else ""
@@ -116,7 +120,7 @@ def ld_datum(waarde):
     return d.isoformat()
 
 
-def event_pagina(e, vandaag, komend):
+def event_pagina(e, vandaag, komend, aanbieders):
     root = "../../"
     canonical = "%s/events/%s/" % (SITE, e["slug"])
     afgelopen = dag(e, "eind") < vandaag
@@ -150,8 +154,11 @@ def event_pagina(e, vandaag, komend):
     if e["locatie"] or e["adres"]:
         adres = " ".join(x for x in (e["locatie"], e["adres"]) if x)
         kaart = "https://www.google.com/maps/search/?api=1&query=" + re.sub(r"\s+", "+", adres)
+        plek = esc(e["locatie"])
+        if e.get("aanbieder") in aanbieders and e["locatie"]:
+            plek = '<a href="%s%s/%s/">%s</a>' % (root, AANBIEDERS, e["aanbieder"], plek)
         regels.append('<li><span class="evenement-info__kop">Waar</span>%s%s <a href="%s" target="_blank" rel="noopener">Route</a></li>'
-                      % (esc(e["locatie"]), ("<br>" + esc(e["adres"])) if e["adres"] and e["adres"] != e["locatie"] else "", esc(kaart)))
+                      % (plek, ("<br>" + esc(e["adres"])) if e["adres"] and e["adres"] != e["locatie"] else "", esc(kaart)))
     if e["uitgelicht"] and e.get("link"):
         # Klanten krijgen een link naar hun eigen site (betaald, dus rel="sponsored")
         naam = e["locatie"] or re.sub(r"^www\.", "", e["link"].split("/")[2])
@@ -162,12 +169,91 @@ def event_pagina(e, vandaag, komend):
         out.append('        <figure><img src="%s" alt="%s"></figure>' % (esc(e["afbeelding"]), esc(e["alt"] or e["titel"])))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % e["tekst"])
-    meer = [x for x in komend if x is not e and dag(x, "start") >= vandaag][:4]
+    van_hen = []
+    if e.get("aanbieder") in aanbieders:
+        naam = aanbieders[e["aanbieder"]]["naam"]
+        van_hen = [x for x in komend if x is not e and x.get("aanbieder") == e["aanbieder"]][:4]
+        out.append('        <section class="gids-sectie aanbieder-meer">\n          <h2>Meer evenementen bij %s</h2>' % esc(naam))
+        if van_hen:
+            out.append('          <div class="eventlijst">')
+            out.extend("            " + eventkaart(x, vandaag, root) for x in van_hen)
+            out.append('          </div>')
+        else:
+            out.append('          <p>Er staan nu geen andere evenementen van %s in de agenda.</p>' % esc(naam))
+        out.append('          <p class="gids-verder"><a href="%s%s/%s/">Alle evenementen bij %s</a></p>\n        </section>'
+                   % (root, AANBIEDERS, e["aanbieder"], esc(naam)))
+    meer = [x for x in komend if x is not e and x not in van_hen and dag(x, "start") >= vandaag][:4]
     if meer:
         out.append('        <section class="gids-sectie">\n          <h2>Binnenkort in Nijmegen</h2>\n          <div class="eventlijst">')
         out.extend("            " + eventkaart(x, vandaag, root) for x in meer)
         out.append('          </div>\n          <p class="gids-verder"><a href="%s/%s/">Bekijk de hele agenda</a></p>\n        </section>' % (SITE, OVERZICHT))
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
+    out.append(VOET)
+    return "\n".join(out)
+
+
+def aanbieder_pagina(slug, naam, komend, eerder, alle, vandaag):
+    """Overzicht per aanbieder op het oude EventOn-adres /event-location/<slug>/."""
+    root = "../../"
+    canonical = "%s/%s/%s/" % (SITE, AANBIEDERS, slug)
+    adres = next((x["adres"] for x in reversed(alle) if x["adres"]), "")
+    beschrijving = ("Evenementen bij %s%s: concerten, exposities en activiteiten, met datum, tijd en adres."
+                    % (naam, " (%s)" % adres if adres else ""))
+    kruim = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+        {"@type": "ListItem", "position": 2, "name": "Agenda", "item": "%s/%s/" % (SITE, OVERZICHT)},
+        {"@type": "ListItem", "position": 3, "name": naam, "item": canonical}]}
+    extra = '\n  <script type="application/ld+json">%s</script>' % json.dumps(kruim, ensure_ascii=False)
+    if not komend:
+        # Zonder komende evenementen is de pagina te dun voor zoekmachines
+        extra += '\n  <meta name="robots" content="noindex">'
+    foto = next((x["afbeelding"] for x in komend + eerder if x["afbeelding"]), None)
+    out = [kop("Evenementen bij %s" % naam, beschrijving, canonical, root, foto, extra)]
+    out.append('  <main class="artikel-wrap">\n    <div class="container">')
+    out.append('      <div class="kruimelpad"><a href="%s">Home</a> › <a href="%s/%s/">Agenda</a> › %s</div>'
+               % (root, SITE, OVERZICHT, esc(naam)))
+    klant = next((x for x in reversed(alle) if x["uitgelicht"] and x.get("link")), None)
+    out.append('      <header class="rubriek-kop%s">\n        <h1>Evenementen bij %s</h1>'
+               % (" rubriek-kop--uitgelicht" if klant else "", esc(naam)))
+    if adres:
+        out.append('        <p>%s</p>' % esc(adres))
+    if klant:
+        out.append('        <p class="gids-cta"><a class="knop" href="%s" target="_blank" rel="sponsored noopener">Naar de website van %s</a></p>'
+                   % (esc(klant["link"]), esc(naam)))
+    out.append('      </header>')
+    if komend:
+        out.append('      <section class="agenda-maand">\n        <h2>Binnenkort</h2>\n        <div class="eventlijst">')
+        out.extend("          " + eventkaart(x, vandaag, root) for x in komend)
+        out.append("        </div>\n      </section>")
+    else:
+        out.append('      <p>Er staan op dit moment geen nieuwe evenementen van %s in de agenda. '
+                   '<a href="%s/%s/">Bekijk wat er verder te doen is</a>.</p>' % (esc(naam), SITE, OVERZICHT))
+    if eerder:
+        out.append('      <section class="agenda-maand">\n        <h2>Eerder bij %s</h2>\n        <div class="eventlijst">' % esc(naam))
+        out.extend("          " + eventkaart(x, vandaag, root) for x in eerder)
+        out.append("        </div>\n      </section>")
+    out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
+    out.append("    </div>\n  </main>")
+    out.append(VOET)
+    return "\n".join(out)
+
+
+def aanbieder_overzicht(rij, vandaag):
+    """/event-location/: alle aanbieders met komende evenementen, klanten eerst."""
+    root = "../"
+    canonical = "%s/%s/" % (SITE, AANBIEDERS)
+    out = [kop("Evenementen per locatie in Nijmegen", "Bekijk per museum, kerk, café of podium welke evenementen er "
+               "binnenkort in Nijmegen en omgeving te doen zijn.", canonical, root)]
+    out.append('  <main class="artikel-wrap">\n    <div class="container">')
+    out.append('      <div class="kruimelpad"><a href="%s">Home</a> › <a href="%s/%s/">Agenda</a> › Per locatie</div>' % (root, SITE, OVERZICHT))
+    out.append('      <header class="rubriek-kop">\n        <h1>Evenementen per locatie</h1>\n'
+               '        <p>Alle podia, musea en organisatoren met evenementen in de agenda.</p>\n      </header>')
+    out.append('      <ul class="aanbieders">')
+    for slug, naam, aantal, klant in rij:
+        out.append('        <li%s><a href="%s/">%s</a> <span>%d %s</span></li>'
+                   % (' class="aanbieders__klant"' if klant else "", slug, esc(naam), aantal, "evenement" if aantal == 1 else "evenementen"))
+    out.append('      </ul>')
+    out.append("    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
 
@@ -207,7 +293,8 @@ def overzicht(komend, vandaag):
         out.append("          " + eventkaart(e, vandaag, root))
     if maand:
         out.append("        </div>\n      </section>")
-    out.append('      <p class="gids-cta"><a class="knop" href="%s">Evenement aanmelden</a></p>' % AANMELDEN)
+    out.append('      <p class="gids-cta"><a class="knop" href="%s">Evenement aanmelden</a> <a href="%s%s/">Bekijk evenementen per locatie</a></p>'
+               % (AANMELDEN, root, AANBIEDERS))
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
@@ -232,6 +319,7 @@ def vervang_blok(pad, naam, inhoud):
 
 def main(vandaag):
     evenementen = json.load(open(ROOT / "data" / "evenementen.json", encoding="utf-8"))
+    aanbieders = json.load(open(ROOT / "data" / "aanbieders.json", encoding="utf-8"))
     verwijderd = [r for r in (ROOT / "data" / "evenementen-verwijderd.txt").read_text(encoding="utf-8").split() if r]
     grens = vandaag - datetime.timedelta(days=BEWAAR_DAGEN)
     komend = sorted((e for e in evenementen if dag(e, "eind") >= vandaag),
@@ -246,9 +334,30 @@ def main(vandaag):
     for e in pagina:
         d = events / e["slug"]
         d.mkdir(parents=True)
-        (d / "index.html").write_text(event_pagina(e, vandaag, komend), encoding="utf-8")
+        (d / "index.html").write_text(event_pagina(e, vandaag, komend, aanbieders), encoding="utf-8")
     for slug in weg:
         doorverwijzing(events / slug, "../../%s/" % OVERZICHT, "Agenda Nijmegen", agenda_url)
+
+    # Per aanbieder een overzicht; aanbieders zonder evenementpagina's meer verwijzen naar de agenda
+    locaties = ROOT / AANBIEDERS
+    if locaties.exists():
+        shutil.rmtree(locaties)
+    rij, weg_aanbieder = [], []
+    for slug, info in aanbieders.items():
+        alle = [e for e in evenementen if e.get("aanbieder") == slug]
+        k = [e for e in komend if e.get("aanbieder") == slug]
+        eerder = sorted((e for e in pagina if e.get("aanbieder") == slug and e not in komend), key=lambda e: e["start"], reverse=True)
+        if not k and not eerder:
+            weg_aanbieder.append(slug)
+            doorverwijzing(locaties / slug, "../../%s/" % OVERZICHT, "Agenda Nijmegen", agenda_url)
+            continue
+        (locaties / slug).mkdir(parents=True)
+        (locaties / slug / "index.html").write_text(aanbieder_pagina(slug, info["naam"], k, eerder, alle, vandaag), encoding="utf-8")
+        if k:
+            rij.append((slug, info["naam"], len(k), any(e["uitgelicht"] for e in alle)))
+    rij.sort(key=lambda r: (not r[3], -r[2], r[1].lower()))
+    (locaties / "index.html").write_text(aanbieder_overzicht(rij, vandaag), encoding="utf-8")
+
     (ROOT / OVERZICHT).mkdir(exist_ok=True)
     (ROOT / OVERZICHT / "index.html").write_text(overzicht(komend, vandaag), encoding="utf-8")
     doorverwijzing(ROOT / "agenda", "../%s/" % OVERZICHT, "Agenda Nijmegen", agenda_url)
@@ -270,10 +379,12 @@ def main(vandaag):
     oud = redirects.read_text(encoding="utf-8").split("# agenda")[0].rstrip("\n") if redirects.exists() else ""
     regels = ["# agenda (tools/agenda.py)", "/agenda/ /%s/ 301" % OVERZICHT]
     regels += ["/events/%s/ /%s/ 301" % (slug, OVERZICHT) for slug in sorted(weg)]
+    regels += ["/%s/%s/ /%s/ 301" % (AANBIEDERS, slug, OVERZICHT) for slug in sorted(weg_aanbieder)]
     redirects.write_text((oud + "\n" if oud else "") + "\n".join(regels) + "\n", encoding="utf-8")
 
-    print("Agenda %s: %d komend, %d evenementpagina's (waarvan %d afgelopen), %d doorverwijzingen"
-          % (vandaag, len(komend), len(pagina), len(pagina) - len(komend), len(weg)))
+    print("Agenda %s: %d komend, %d evenementpagina's (waarvan %d afgelopen), %d aanbieders (%d met komende evenementen), %d doorverwijzingen"
+          % (vandaag, len(komend), len(pagina), len(pagina) - len(komend), len(aanbieders) - len(weg_aanbieder), len(rij),
+             len(weg) + len(weg_aanbieder)))
 
 
 if __name__ == "__main__":

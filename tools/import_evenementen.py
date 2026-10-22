@@ -61,6 +61,21 @@ def meer_info_links(bron):
     return links
 
 
+# Dubbele EventOn-locaties voor dezelfde aanbieder
+ZELFDE = {"de-vereeniging": "concertgebouw-de-vereeniging"}
+# EventOn-locaties die geen plek zijn maar een stuk tekst; die evenementen krijgen alleen hun adres
+GEEN_PLEK = {"een-wandeling-met-verhaklen-die-begint-bij-terras-in-de-kazerne-en-eindigt-bij-cafe-jos-aan-de-daalseweg-309"}
+
+
+def locatienamen(bron):
+    """Naam per EventOn-locatie (nicename -> naam) uit de XML-export."""
+    pad = bron / "wp-xml" / "evenementen-eventon.xml"
+    if not pad.is_file():
+        return {}
+    return {slug: html.unescape(naam).strip() for slug, naam in
+            re.findall(r'<category domain="event_location" nicename="([^"]+)"><!\[CDATA\[([^\]]*)', pad.read_text(encoding="utf-8"))}
+
+
 def main(bron):
     bron = pathlib.Path(bron)
     meer_info = meer_info_links(bron)
@@ -86,6 +101,9 @@ def main(bron):
             tekst = tekst[kop.end():]
         foto = featured(p, "large")
         klassen = p.get("class_list", [])
+        aanbieder = next((k[len("event_location-"):] for k in klassen if k.startswith("event_location-")), "")
+        if aanbieder in GEEN_PLEK:
+            aanbieder, s["locatie"] = "", ""
         evenementen.append({
             "slug": p["slug"],
             "titel": titel,
@@ -96,6 +114,8 @@ def main(bron):
             "afbeelding": foto["src"] if foto else "",
             "alt": foto["alt"] if foto else "",
             "uitgelicht": "event_type-uitgelicht" in klassen,
+            # Aanbieder = de EventOn-locatie; die geeft de pagina /event-location/<aanbieder>/
+            "aanbieder": ZELFDE.get(aanbieder, aanbieder),
             # Website van de aanbieder: de "meer informatie"-link, anders de link bij de locatie
             "link": meer_info.get(p["slug"]) or s["link"],
             "terugkerend": False,
@@ -104,6 +124,12 @@ def main(bron):
         })
     evenementen.sort(key=lambda e: (e["start"], e["slug"]))
     (ROOT / "data" / "evenementen.json").write_text(json.dumps(evenementen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    namen = locatienamen(bron)
+    aanbieders = {}
+    for e in evenementen:
+        if e["aanbieder"]:
+            aanbieders.setdefault(e["aanbieder"], {"naam": namen.get(e["aanbieder"]) or e["locatie"] or e["aanbieder"]})
+    (ROOT / "data" / "aanbieders.json").write_text(json.dumps(dict(sorted(aanbieders.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     (ROOT / "data" / "evenementen-verwijderd.txt").write_text("\n".join(sorted(verwijderd + zonder)) + "\n", encoding="utf-8")
     print("%d evenementen, %d al weg op de live site, %d zonder datum" % (len(evenementen), len(verwijderd), len(zonder)))
 

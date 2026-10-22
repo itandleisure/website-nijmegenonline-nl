@@ -92,6 +92,9 @@ homepage en in de zijbalk). `.github/workflows/agenda.yml` draait dit elke nacht
 - Een evenement verdwijnt de dag na afloop uit de agenda, de homepage en de zijbalk.
 - De pagina blijft nog 3 maanden staan met "Dit evenement is afgelopen" en verwijst daarna met een 301 naar de agenda.
 - Terugkerende evenementen (`"terugkerend": true`) houden hun pagina; zet daar elk jaar de nieuwe datum in.
+- Elk evenement heeft een `"aanbieder"` (sleutel uit `data/aanbieders.json`). Per aanbieder komt er een
+  overzicht op `/event-location/<aanbieder>/` (het oude EventOn-adres) en onder elk evenement "Meer evenementen
+  bij …". Aanbieders zonder komende evenementen krijgen noindex; zonder evenementpagina's meer een 301 naar de agenda.
 
 Volgorde bij een volledige herbouw:
 `python tools/import_wordpress.py && python tools/agenda.py && python tools/afbeeldingen.py && python tools/build.py`.

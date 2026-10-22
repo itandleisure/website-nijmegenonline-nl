@@ -1,0 +1,305 @@
+{
+ "achterlo-sporthallen": {
+  "naam": "Achterlo Sporthallen"
+ },
+ "achtertuin": {
+  "naam": "Achtertuin"
+ },
+ "antonius-abtkerk": {
+  "naam": "Antonius Abtkerk"
+ },
+ "antonius-van-paduakerk": {
+  "naam": "Antonius van Paduakerk"
+ },
+ "ark-van-oost": {
+  "naam": "Ark van Oost"
+ },
+ "ateliers-vrouwe-udasigel": {
+  "naam": "Ateliers Vrouwe Udasigel"
+ },
+ "begraafplaats-daalseweg": {
+  "naam": "Begraafplaats Daalseweg"
+ },
+ "begraafplaats-stenenkruisstraat-julianapark": {
+  "naam": "Begraafplaats Stenenkruisstraat (Julianapark)"
+ },
+ "besiendershuis": {
+  "naam": "Besiendershuis"
+ },
+ "bibliotheek-marienburg": {
+  "naam": "Bibliotheek Mariënburg"
+ },
+ "binnenstad-nijmegen": {
+  "naam": "Binnenstad Nijmegen"
+ },
+ "binnenstad-nijmegen-en-het-valkhofpark": {
+  "naam": "Binnenstad Nijmegen en het Valkhofpark"
+ },
+ "bosatelier": {
+  "naam": "Bosatelier"
+ },
+ "boskapel": {
+  "naam": "Boskapel"
+ },
+ "bottendaal": {
+  "naam": "Bottendaal"
+ },
+ "brasserie-jolie": {
+  "naam": "Brasserie Jolie"
+ },
+ "brebl-locatie-meesterproef": {
+  "naam": "Brebl (locatie Meesterproef)"
+ },
+ "buurderij-de-lage-hof": {
+  "naam": "Buurderij de Lage Hof"
+ },
+ "cafe-de-kroon": {
+  "naam": "Café De Kroon"
+ },
+ "cafe-t-haantje": {
+  "naam": "Cafe 't Haantje"
+ },
+ "cafe-van-buren": {
+  "naam": "Café Van Buren"
+ },
+ "cenakelkerk-heilig-landstichting": {
+  "naam": "Cenakelkerk, Heilig Landstichting"
+ },
+ "centrum-nijmegen": {
+  "naam": "centrum Nijmegen"
+ },
+ "concertgebouw-de-vereeniging": {
+  "naam": "Concertgebouw De Vereeniging"
+ },
+ "de-boekerij": {
+  "naam": "De Boekerij"
+ },
+ "de-brauerij": {
+  "naam": "De Brauerij"
+ },
+ "de-kaaij": {
+  "naam": "De Kaaij"
+ },
+ "de-vasim": {
+  "naam": "De Vasim"
+ },
+ "de-waagh": {
+  "naam": "De Waagh"
+ },
+ "de-wieken": {
+  "naam": "De Wieken"
+ },
+ "dijkmagazijn": {
+  "naam": "dijkmagazijn"
+ },
+ "diverse-particuliere-tuinen": {
+  "naam": "diverse particuliere tuinen."
+ },
+ "door-heel-nijmegen": {
+  "naam": "Door heel Nijmegen"
+ },
+ "doornroosje": {
+  "naam": "Doornroosje"
+ },
+ "evenemententerrein-park-winkelsteeg": {
+  "naam": "Evenemententerrein Park Winkelsteeg"
+ },
+ "expo-bart": {
+  "naam": "Expo Bart"
+ },
+ "extrapool": {
+  "naam": "Extrapool"
+ },
+ "fotobolwerkvasim": {
+  "naam": "Fotobolwerk,Vasim"
+ },
+ "groenestraatkerk": {
+  "naam": "Groenestraatkerk"
+ },
+ "grote-markt-en-stevenskerk": {
+  "naam": "Grote Markt en Stevenskerk"
+ },
+ "hackerspace-nijmegen": {
+  "naam": "Hackerspace Nijmegen"
+ },
+ "hema-etalages": {
+  "naam": "HEMA Etalages"
+ },
+ "het-kerkje-van-persingen": {
+  "naam": "Het Kerkje van Persingen"
+ },
+ "het-landhoofd": {
+  "naam": "Het Landhoofd"
+ },
+ "historische-kerk-aan-de-groesbeek": {
+  "naam": "Historische kerk aan de Groesbeek"
+ },
+ "hortus-nijmegen": {
+  "naam": "Hortus Nijmegen"
+ },
+ "hotel-the-rebyl": {
+  "naam": "Hotel The Rebyl"
+ },
+ "huis-van-de-nijmeegse-geschiedenis": {
+  "naam": "Huis van de Nijmeegse Geschiedenis"
+ },
+ "infocentrum-wo2-nijmegen": {
+  "naam": "Infocentrum WO2 Nijmegen"
+ },
+ "irish-pub-the-shamrock": {
+  "naam": "Irish pub The Shamrock"
+ },
+ "kasteel-wijchen": {
+  "naam": "Kasteel Wijchen"
+ },
+ "kerkje-van-persingen": {
+  "naam": "Kerkje van Persingen"
+ },
+ "kleine-kirche": {
+  "naam": "Kleine Kirche"
+ },
+ "kleine-wiel": {
+  "naam": "Kleine Wiel"
+ },
+ "kleve-centrum": {
+  "naam": "Kleve Centrum"
+ },
+ "kloster-graefenthal": {
+  "naam": "Kloster Graefenthal"
+ },
+ "krayenhoffkazerne": {
+  "naam": "Krayenhoffkazerne"
+ },
+ "kunstkring-wijchen": {
+  "naam": "Kunstkring Wijchen"
+ },
+ "lieskes-wengs": {
+  "naam": "Lieskes Wengs"
+ },
+ "lutherse-kerk": {
+  "naam": "Lutherse kerk"
+ },
+ "lux-nijmegen": {
+  "naam": "Lux Nijmegen"
+ },
+ "maelwael-van-lymborch-huis": {
+  "naam": "Maelwael van Lymborch Huis"
+ },
+ "marienburgplaats": {
+  "naam": "Marienburgplaats"
+ },
+ "museum-kurhaus": {
+  "naam": "Museum Kurhaus"
+ },
+ "museumpark-orientalis": {
+  "naam": "museumpark oriëntalis"
+ },
+ "nyma-makersplaats": {
+  "naam": "NYMA makersplaats"
+ },
+ "obg-nijmegen": {
+  "naam": "OBG Nijmegen"
+ },
+ "old-cave": {
+  "naam": "Old Cave"
+ },
+ "openluchttheater-de-goffert": {
+  "naam": "Openluchttheater De Goffert"
+ },
+ "park-de-omloop-lindenholt": {
+  "naam": "Park de Omloop - Lindenholt"
+ },
+ "pastor-leinung-platz": {
+  "naam": "Pastor-Leinung-Platz, Kleef, Duitsland"
+ },
+ "pastor-leinung-platz-kleef-duitsland": {
+  "naam": "Pastor-Leinung-Platz, Kleef, Duitsland"
+ },
+ "petruskerk": {
+  "naam": "Petruskerk"
+ },
+ "pop-culture-arcade": {
+  "naam": "Pop Culture Arcade"
+ },
+ "popop": {
+  "naam": "POPOP"
+ },
+ "regeneratieve-burgerboerderij-de-biesterhof": {
+  "naam": "Regeneratieve Burgerboerderij De Biesterhof"
+ },
+ "roomsch-leven": {
+  "naam": "Roomsch leven"
+ },
+ "sint-jacobskapel": {
+  "naam": "Sint Jacobskapel"
+ },
+ "stadthalle-kleve": {
+  "naam": "Stadthalle Kleve"
+ },
+ "stedelijk-gymnasium": {
+  "naam": "Stedelijk Gymnasium"
+ },
+ "stevenskerk": {
+  "naam": "Stevenskerk"
+ },
+ "theater-de-kik": {
+  "naam": "Theater De Kik"
+ },
+ "theater-de-klif": {
+  "naam": "Theater de Klif"
+ },
+ "theater-het-badhuis": {
+  "naam": "Theater Het Badhuis"
+ },
+ "theater-het-badhuis-nijmegen": {
+  "naam": "Theater het Badhuis Nijmegen"
+ },
+ "theaterkerk-bemmel": {
+  "naam": "Theaterkerk Bemmel"
+ },
+ "theaterzaal-c": {
+  "naam": "Theaterzaal C"
+ },
+ "theaterzaal-pro-persona-hoofdgebouw-sterrenberg": {
+  "naam": "Theaterzaal Pro Persona, hoofdgebouw Sterrenberg"
+ },
+ "thiemeloods": {
+  "naam": "Thiemeloods"
+ },
+ "titus-brandsma-gedachteniskerk": {
+  "naam": "Titus Brandsma Gedachteniskerk"
+ },
+ "tourist-information-kleve": {
+  "naam": "Tourist Information Kleve"
+ },
+ "ufer-des-kermisdahls": {
+  "naam": "Ufer des Kermisdahls"
+ },
+ "vasim-circus-space": {
+  "naam": "Vasim Circus Space"
+ },
+ "vrijheidsmuseum": {
+  "naam": "Vrijheidsmuseum"
+ },
+ "waalhalla": {
+  "naam": "Waalhalla"
+ },
+ "waalkade": {
+  "naam": "Waalkade"
+ },
+ "wijkcentrum-ark-van-oost": {
+  "naam": "Wijkcentrum Ark van Oost"
+ },
+ "wijkcentrum-de-biezantijn": {
+  "naam": "Wijkcentrum De Biezantijn"
+ },
+ "wijkcentrum-hatert": {
+  "naam": "Wijkcentrum Hatert"
+ },
+ "wijngaard-de-plack": {
+  "naam": "wijngaard de plack"
+ },
+ "zeester-nijmegen": {
+  "naam": "Zeester Nijmegen"
+ }
+}

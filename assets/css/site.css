@@ -290,3 +290,9 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .evenement-info .knop { margin-top: 4px; }
 #agenda .agenda-uitgelicht { margin-top: 0; }
 .uitgelicht__geenfoto { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 10; padding: 16px; background: var(--groen); color: var(--wit); font-weight: 700; font-size: 1.15rem; text-align: center; }
+.rubriek-kop--uitgelicht { border: 2px solid var(--groen); }
+.rubriek-kop .gids-cta { margin-top: 16px; }
+.aanbieders { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; align-items: start; }
+.aanbieders li { background: var(--wit); border-radius: var(--radius); padding: 12px 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; align-items: baseline; }
+.aanbieders li span { color: var(--grijs); font-size: .9rem; white-space: nowrap; }
+.aanbieders__klant { border-left: 4px solid var(--groen); }

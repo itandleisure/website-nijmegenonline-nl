@@ -271,7 +271,7 @@ def kop(titel, beschrijving, canonical, root, afbeelding=None, extra=""):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="{root}assets/css/site.css?v=7">
+  <link rel="stylesheet" href="{root}assets/css/site.css?v=8">
   <link rel="stylesheet" href="{root}partners/slider.css?v=5">
   <script src="{root}partners/slider.js?v=5" defer></script>{extra}
 </head>
