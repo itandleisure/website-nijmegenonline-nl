@@ -1,8 +1,9 @@
 """Zet de EventOn-evenementen van WordPress eenmalig om naar data/evenementen.json.
 
-Tekst, afbeelding en soort komen uit de REST-export (wp-json/ajde_events), datum, tijd en locatie uit de
+Tekst, afbeelding en "uitgelicht" (klanten; de rest had de tag "gratis") komen uit de REST-export (wp-json/ajde_events), datum, tijd en locatie uit de
 schema.org-gegevens in de HTML van elke evenementpagina (bron/evenementen-html/<slug>.html), want die
-staan niet in REST. Evenementen die op de live site al een 404 gaven (bron/evenementen-mislukt.txt)
+staan niet in REST. De link naar de aanbieder komt uit de XML-export (bron/wp-xml/evenementen-eventon.xml)
+of anders uit de locatielink op de evenementpagina. Evenementen die op de live site al een 404 gaven (bron/evenementen-mislukt.txt)
 komen in data/evenementen-verwijderd.txt en krijgen alleen een doorverwijzing naar de agenda.
 
 Daarna onderhoud je de agenda in data/evenementen.json en bouw je met tools/agenda.py.
@@ -39,14 +40,30 @@ def schema(pad):
         eind = re.search(r'"endDate":\s*"([^"]*)"', blok)
         plaats = re.search(r'"@type":"Place","name":"((?:[^"\\]|\\.)*)"', blok)
         adres = re.search(r'"streetAddress":"((?:[^"\\]|\\.)*)"', blok)
-        return {"start": iso(start), "eind": iso(eind.group(1)) if eind else iso(start),
+        link = re.search(r'class="evo_event_loc_link[^"]*"[^>]*href="(https?://[^"]+)"', t)
+        return {"link": link.group(1) if link else "", "start": iso(start), "eind": iso(eind.group(1)) if eind else iso(start),
                 "locatie": json.loads('"%s"' % plaats.group(1)) if plaats else "",
                 "adres": json.loads('"%s"' % adres.group(1)) if adres else ""}
     return None
 
 
+def meer_info_links(bron):
+    """"Meer informatie"-link per evenement (EventOn-veld evcal_lmlink) uit de XML-export, voor zover die erin staat."""
+    pad = bron / "wp-xml" / "evenementen-eventon.xml"
+    if not pad.is_file():
+        return {}
+    links = {}
+    for item in pad.read_text(encoding="utf-8").split("<item>")[1:]:
+        slug = re.search(r"<wp:post_name><!\[CDATA\[([^\]]*)", item)
+        m = re.search(r"<wp:meta_key><!\[CDATA\[evcal_lmlink\]\]></wp:meta_key>\s*<wp:meta_value><!\[CDATA\[(https?://[^\]]+)\]\]>", item)
+        if slug and m:
+            links[slug.group(1)] = m.group(1).strip()
+    return links
+
+
 def main(bron):
     bron = pathlib.Path(bron)
+    meer_info = meer_info_links(bron)
     posts = [p for f in sorted(glob.glob(str(bron / "wp-json" / "ajde_events" / "*.json")))
              for p in json.load(open(f, encoding="utf-8"))]
     weg = {pathlib.PurePosixPath(r.split("\t")[0].rstrip("/")).name
@@ -79,6 +96,8 @@ def main(bron):
             "afbeelding": foto["src"] if foto else "",
             "alt": foto["alt"] if foto else "",
             "uitgelicht": "event_type-uitgelicht" in klassen,
+            # Website van de aanbieder: de "meer informatie"-link, anders de link bij de locatie
+            "link": meer_info.get(p["slug"]) or s["link"],
             "terugkerend": False,
             "gepubliceerd": p["date"][:10],
             "tekst": tekst,

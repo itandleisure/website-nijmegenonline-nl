@@ -13,7 +13,8 @@ Afgesproken met Frans (22-10-2026):
 
 Een evenement toevoegen: een nieuw item in data/evenementen.json met slug, titel, start en eind
 ("2026-11-28T20:30" of alleen "2026-11-28" voor de hele dag), locatie, adres, afbeelding, alt, tekst (HTML)
-en uitgelicht (partners en tips bovenaan). Daarna: python tools/agenda.py && python tools/build.py
+uitgelicht (klanten: groen, bovenaan en met een link naar hun site in "link"; de rest is een gewone,
+gratis vermelding). Daarna: python tools/agenda.py && python tools/build.py
 
 Gebruik: python tools/agenda.py [--datum 2026-10-22]
 """
@@ -74,7 +75,7 @@ def kort_wanneer(e, vandaag):
 
 def lokaal(url):
     """Afbeelding van wp-content/uploads naar de eigen webp (die maakt tools/afbeeldingen.py)."""
-    m = re.match(r"https?://www\.nijmegenonline\.nl/wp-content/uploads/(.+)\.(?:png|jpe?g|gif|webp)$", url or "", re.I)
+    m = re.match(r"https?://(?:www\.)?nijmegenonline\.nl/wp-content/uploads/(.+)\.(?:png|jpe?g|gif|webp)$", url or "", re.I)
     return "assets/uploads/%s.webp" % m.group(1) if m and (ROOT / ("assets/uploads/%s.webp" % m.group(1))).is_file() else None
 
 
@@ -83,10 +84,29 @@ def eventkaart(e, vandaag, root):
     foto = lokaal(e["afbeelding"])
     img = '<img src="%s%s" alt="" loading="lazy">' % (root, foto) if foto else ""
     plaats = '<span class="eventkaart__plaats">%s</span>' % esc(e["locatie"]) if e["locatie"] else ""
-    tip = '<span class="eventkaart__tip">Tip</span>' if e["uitgelicht"] else ""
-    return ('<a class="eventkaart" href="%sevents/%s/"><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
+    label = '<span class="eventkaart__label">Uitgelicht</span>' if e["uitgelicht"] else ""
+    return ('<a class="eventkaart%s" href="%sevents/%s/"><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
             '<span class="eventkaart__tekst">%s<strong>%s</strong><span class="eventkaart__wanneer">%s</span>%s</span></a>'
-            % (root, e["slug"], s.day, MAANDEN[s.month - 1][:3], img, tip, esc(e["titel"]), esc(kort_wanneer(e, vandaag)), plaats))
+            % (" eventkaart--uitgelicht" if e["uitgelicht"] else "", root, e["slug"], s.day, MAANDEN[s.month - 1][:3], img, label,
+               esc(e["titel"]), esc(kort_wanneer(e, vandaag)), plaats))
+
+
+def uitgelichtkaart(e, vandaag, root):
+    """Grote groene kaart voor evenementen van klanten, bovenaan de agenda en op de homepage."""
+    foto = lokaal(e["afbeelding"])
+    img = ('<img src="%s%s" alt="" loading="lazy">' % (root, foto) if foto
+           else '<span class="uitgelicht__geenfoto">%s</span>' % esc(e["locatie"] or "NijmegenOnline"))
+    plaats = '<span class="uitgelicht__plaats">%s</span>' % esc(e["locatie"]) if e["locatie"] else ""
+    return ('<a class="uitgelicht" href="%sevents/%s/">%s<span class="uitgelicht__tekst"><span class="uitgelicht__wanneer">%s</span>'
+            '<strong>%s</strong>%s</span></a>' % (root, e["slug"], img, esc(kort_wanneer(e, vandaag)), esc(e["titel"]), plaats))
+
+
+def uitgelicht_blok(komend, vandaag, root, aantal, kop_="h2"):
+    keuze = [e for e in komend if e["uitgelicht"]][:aantal]
+    if not keuze:
+        return []
+    return (['<section class="agenda-uitgelicht">', '  <%s>Uitgelicht</%s>' % (kop_, kop_), '  <div class="uitgelicht-raster">'] +
+            ["    " + uitgelichtkaart(e, vandaag, root) for e in keuze] + ["  </div>", "</section>"])
 
 
 def ld_datum(waarde):
@@ -124,7 +144,7 @@ def event_pagina(e, vandaag, komend):
     if afgelopen:
         out.append('        <p class="afgelopen">Dit evenement is afgelopen. <a href="%s/%s/">Bekijk wat er binnenkort te doen is</a>.</p>'
                    % (SITE, OVERZICHT))
-    out.append('        <p class="gidslabel">Evenement</p>')
+    out.append('        <p class="gidslabel">%s</p>' % ("Uitgelicht evenement" if e["uitgelicht"] else "Evenement"))
     out.append("        <h1>%s</h1>" % esc(e["titel"]))
     regels = ['<li><span class="evenement-info__kop">Wanneer</span>%s</li>' % esc(wanneer(e))]
     if e["locatie"] or e["adres"]:
@@ -132,7 +152,12 @@ def event_pagina(e, vandaag, komend):
         kaart = "https://www.google.com/maps/search/?api=1&query=" + re.sub(r"\s+", "+", adres)
         regels.append('<li><span class="evenement-info__kop">Waar</span>%s%s <a href="%s" target="_blank" rel="noopener">Route</a></li>'
                       % (esc(e["locatie"]), ("<br>" + esc(e["adres"])) if e["adres"] and e["adres"] != e["locatie"] else "", esc(kaart)))
-    out.append('        <ul class="evenement-info">%s</ul>' % "".join(regels))
+    if e["uitgelicht"] and e.get("link"):
+        # Klanten krijgen een link naar hun eigen site (betaald, dus rel="sponsored")
+        naam = e["locatie"] or re.sub(r"^www\.", "", e["link"].split("/")[2])
+        regels.append('<li><a class="knop" href="%s" target="_blank" rel="sponsored noopener">Bekijk op de website van %s</a></li>'
+                      % (esc(e["link"]), esc(naam)))
+    out.append('        <ul class="evenement-info%s">%s</ul>' % (" evenement-info--uitgelicht" if e["uitgelicht"] else "", "".join(regels)))
     if e["afbeelding"]:
         out.append('        <figure><img src="%s" alt="%s"></figure>' % (esc(e["afbeelding"]), esc(e["alt"] or e["titel"])))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
@@ -161,6 +186,7 @@ def overzicht(komend, vandaag):
                'Organiseer je zelf iets? <a href="%s">Meld je evenement aan</a>.</p>\n      </header>' % AANMELDEN)
     if not komend:
         out.append("      <p>Er staan op dit moment geen evenementen in de agenda.</p>")
+    out.extend("      " + r for r in uitgelicht_blok(komend, vandaag, root, 6))
     # Langlopende exposities apart bovenaan, zodat ze niet elke maand opnieuw de lijst openen
     lopend = [e for e in komend if dag(e, "start") < vandaag]
     if lopend:
@@ -227,9 +253,12 @@ def main(vandaag):
     (ROOT / OVERZICHT / "index.html").write_text(overzicht(komend, vandaag), encoding="utf-8")
     doorverwijzing(ROOT / "agenda", "../%s/" % OVERZICHT, "Agenda Nijmegen", agenda_url)
 
-    # Homepage: de eerstvolgende zes, zijbalk: de eerstvolgende drie (lopende exposities achteraan)
+    # Lopende exposities achteraan, anders staan ze elke dag bovenaan
     eerst = [e for e in komend if dag(e, "start") >= vandaag] + [e for e in komend if dag(e, "start") < vandaag]
-    home = ['        <div class="eventlijst">'] + ["          " + eventkaart(e, vandaag, "./") for e in eerst[:6]]
+    # Homepage: eerst drie uitgelichte evenementen van klanten, daarna de eerstvolgende andere
+    boven = [e for e in eerst if e["uitgelicht"]][:3]
+    home = ["        " + r for r in uitgelicht_blok(eerst, vandaag, "./", 3, "h3")]
+    home += ['        <div class="eventlijst">'] + ["          " + eventkaart(e, vandaag, "./") for e in [x for x in eerst if x not in boven][:6]]
     home += ["        </div>", '        <p class="gids-verder"><a href="%s">Bekijk de hele agenda</a></p>' % agenda_url]
     vervang_blok(ROOT / "index.html", "agenda", "\n".join(home))
     zij = ['      <li><span class="zijbalk__datum">%s</span><a href="%s/events/%s/">%s</a></li>'

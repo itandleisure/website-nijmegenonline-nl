@@ -16,7 +16,7 @@ from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOEL = ROOT / "assets" / "uploads"
-URL = re.compile(r'https://www\.nijmegenonline\.nl/wp-content/uploads/([^"\'\s)]+?\.(?:png|jpe?g|gif|webp))', re.I)
+URL = re.compile(r'https?://(?:www\.)?nijmegenonline\.nl/wp-content/uploads/([^"\'\s)]+?\.(?:png|jpe?g|gif|webp))', re.I)
 MAX_BREED = 1200
 
 
