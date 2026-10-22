@@ -82,3 +82,17 @@ en vervangt bij het importeren de tekst uit WordPress. Partnerbijdragen worden n
 
 De foto's van de WordPress-site staan als verkleinde webp in `assets/uploads/` (zelfde pad als in `wp-content/uploads/`).
 Volgorde bij opnieuw bouwen: `python3 tools/import_wordpress.py && python3 tools/afbeeldingen.py && python3 tools/build.py`.
+
+## Agenda
+
+De agenda staat in `data/evenementen.json` en wordt gebouwd door `tools/agenda.py` (overzicht op
+`/nijmegen-evenementen-overzicht/`, een pagina per evenement op `/events/<slug>/`, plus de agenda op de
+homepage en in de zijbalk). `.github/workflows/agenda.yml` draait dit elke nacht. Afspraak:
+
+- Een evenement verdwijnt de dag na afloop uit de agenda, de homepage en de zijbalk.
+- De pagina blijft nog 3 maanden staan met "Dit evenement is afgelopen" en verwijst daarna met een 301 naar de agenda.
+- Terugkerende evenementen (`"terugkerend": true`) houden hun pagina; zet daar elk jaar de nieuwe datum in.
+
+Volgorde bij een volledige herbouw:
+`python tools/import_wordpress.py && python tools/agenda.py && python tools/afbeeldingen.py && python tools/build.py`.
+De eenmalige import uit WordPress staat in `tools/import_evenementen.py`.

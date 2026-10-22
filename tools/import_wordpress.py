@@ -271,7 +271,7 @@ def kop(titel, beschrijving, canonical, root, afbeelding=None, extra=""):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="{root}assets/css/site.css?v=5">
+  <link rel="stylesheet" href="{root}assets/css/site.css?v=6">
   <link rel="stylesheet" href="{root}partners/slider.css?v=5">
   <script src="{root}partners/slider.js?v=5" defer></script>{extra}
 </head>
@@ -905,7 +905,10 @@ def main(bron):
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(DOORVERWIJZING % {"titel": esc(doel["titel"]), "url": "%s/%s/" % (SITE, nieuw), "pad": "../%s/" % nieuw},
                                       encoding="utf-8")
-    (ROOT / "_redirects").write_text("\n".join(regels) + "\n", encoding="utf-8")
+    # het blok "# agenda" onderaan is van tools/agenda.py
+    bestaand = (ROOT / "_redirects").read_text(encoding="utf-8") if (ROOT / "_redirects").exists() else ""
+    agenda = bestaand[bestaand.index("# agenda"):] if "# agenda" in bestaand else ""
+    (ROOT / "_redirects").write_text("\n".join(regels) + "\n" + agenda, encoding="utf-8")
 
     print("%d artikelen, %d rubrieken, %d doorverwijzingen" % (len(artikelen), len(RUBRIEKEN), len(regels) - 1))
     for slug, naam, _ in RUBRIEKEN:
