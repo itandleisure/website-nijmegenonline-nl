@@ -102,12 +102,14 @@ De eenmalige import uit WordPress staat in `tools/import_evenementen.py`.
 
 ## Losse pagina's en formulieren
 
-`tools/paginas.py` maakt Kom in contact, Adverteren (met de vergelijking) en de vacatures, met de teksten uit de
+`tools/paginas.py` maakt Kom in contact, Adverteren (met de vergelijking), de vacatures, Algemene voorwaarden,
+Bedrijf aanmelden en Evenement aanmelden, met de teksten uit de
 WordPress-export. Een vacature open of dicht zetten: pas `VACATURES` bovenin dat script aan en draai
 `python tools/paginas.py && python tools/build.py`.
 
 De formulieren werken zoals bij Badass Rentals: ze gaan naar het Google Apps Script `tools/google-formulier/Code.gs`.
-Dat zet elke inzending in een Google Sheet (tabbladen Contact en Partners) en mailt redactie@nijmegenonline.nl.
+Dat zet elke inzending in een Google Sheet (tabbladen Contact, Partners, Bedrijven en Evenementen) en mailt
+redactie@nijmegenonline.nl. Meegestuurde foto's komen in de Drive-map "NijmegenOnline formulierfoto's".
 Zolang `GOOGLE_FORM_URL` leeg is, opent het formulier het mailprogramma van de bezoeker.
 
 Eenmalig instellen:

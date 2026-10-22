@@ -2,7 +2,7 @@
    ---------------------------------------------------------------
    Dit script hoort bij een Google Sheet (Extensies → Apps Script).
    - Elk formulier van nijmegenonline.nl komt als nieuwe regel in een eigen tabblad:
-     Contact en Partners.
+     Contact, Partners, Bedrijven en Evenementen. Meegestuurde foto's komen in Google Drive.
    - Er gaat meteen een e-mail naar ONTVANGER (antwoorden gaat rechtstreeks naar de invuller).
    - Regels ouder dan de bewaartermijn per tabblad worden elke nacht automatisch verwijderd (privacy).
 
@@ -26,8 +26,23 @@ var FORMULIEREN = {
     tabblad: 'Partners', bewaarMaanden: 24, onderwerp: 'Aanmelding partner',
     velden: [['naam', 'Naam'], ['bedrijf', 'Bedrijf'], ['email', 'E-mail'], ['telefoon', 'Telefoon'],
       ['pakket', 'Pakket'], ['bericht', 'Toelichting']]
+  },
+  bedrijf: {
+    tabblad: 'Bedrijven', bewaarMaanden: 24, onderwerp: 'Aanmelding bedrijvengids',
+    velden: [['bedrijf', 'Bedrijf'], ['categorie', 'Soort bedrijf'], ['adres', 'Adres'], ['site', 'Website'],
+      ['telefoon', 'Telefoon'], ['bedrijfsmail', 'E-mail bedrijf'], ['openingstijden', 'Openingstijden'],
+      ['omschrijving', 'Omschrijving'], ['foto', 'Logo of foto'], ['naam', 'Contactpersoon'], ['email', 'E-mail']]
+  },
+  evenement: {
+    tabblad: 'Evenementen', bewaarMaanden: 12, onderwerp: 'Evenement aangemeld',
+    velden: [['titel', 'Evenement'], ['datum', 'Datum'], ['starttijd', 'Begintijd'], ['eindtijd', 'Eindtijd'],
+      ['omschrijving', 'Omschrijving'], ['locatie', 'Locatie'], ['adres', 'Adres'], ['foto', 'Foto'],
+      ['naam', 'Naam'], ['email', 'E-mail'], ['notitie', 'Opmerking']]
   }
 };
+
+// Map in Google Drive voor meegestuurde foto's (wordt vanzelf aangemaakt)
+var FOTOMAP = "NijmegenOnline formulierfoto's";
 
 // Ontvangt een formulier van de website
 function doPost(e) {
@@ -49,12 +64,29 @@ function doPost(e) {
     g[sleutel] = waarden && waarden.length > 1 ? schoon(waarden.join(', '), 1000) : schoon(p[sleutel] || p[sleutel + '[]'], 5000);
   });
   g.pagina = schoon(p.page || p.pagina, 300);
+  // Foto als data-URL: opslaan in Drive, in de Sheet en de mail komt de link
+  if (/^data:image\/(jpeg|png|webp);base64,/.test(p.foto || '')) {
+    try {
+      g.foto = bewaarFoto(p.foto, schoon(p.foto_naam, 100) || 'foto', g.titel || g.bedrijf || g.naam);
+    } catch (fout) {
+      console.error('Foto opslaan mislukt: ' + fout);
+      g.foto = 'Foto meegestuurd, maar opslaan in Drive mislukte';
+    }
+  } else {
+    g.foto = '';
+  }
 
   // Controles (gelijk aan verzenden.php)
   var fouten = [];
   if (!g.naam) fouten.push('naam');
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email)) fouten.push('email');
   if (type === 'contact' && !g.bericht) fouten.push('bericht');
+  if (type === 'evenement') {
+    ['titel', 'datum', 'starttijd', 'eindtijd', 'omschrijving', 'locatie'].forEach(function (v) { if (!g[v]) fouten.push(v); });
+  }
+  if (type === 'bedrijf') {
+    ['bedrijf', 'categorie', 'adres', 'telefoon', 'omschrijving'].forEach(function (v) { if (!g[v]) fouten.push(v); });
+  }
   if (type === 'partner') {
     if (!g.bedrijf) fouten.push('bedrijf');
     if (!g.telefoon) fouten.push('telefoon');
@@ -74,7 +106,7 @@ function doPost(e) {
 
   // 2. E-mail sturen. Lukt dat niet, dan staat de inzending in ieder geval al in de spreadsheet.
   try {
-    var extra = ': ' + (g.bedrijf || g.naam);
+    var extra = ': ' + (g.titel || g.bedrijf || g.naam);
     stuurMail(cfg, g, cfg.onderwerp + extra);
   } catch (fout) {
     console.error('Mail versturen mislukt: ' + fout);
@@ -116,6 +148,15 @@ function opruimen() {
       if (d instanceof Date && d < grens) sheet.deleteRow(i + 2);
     }
   });
+}
+
+function bewaarFoto(dataUrl, naam, titel) {
+  var m = dataUrl.match(/^data:(image\/[a-z]+);base64,(.*)$/);
+  var mappen = DriveApp.getFoldersByName(FOTOMAP);
+  var map = mappen.hasNext() ? mappen.next() : DriveApp.createFolder(FOTOMAP);
+  var bestand = map.createFile(Utilities.newBlob(Utilities.base64Decode(m[2]), m[1],
+    Utilities.formatDate(new Date(), 'Europe/Amsterdam', 'yyyy-MM-dd') + ' ' + (titel || '').slice(0, 60) + ' - ' + naam));
+  return bestand.getUrl();
 }
 
 function blad(cfg) {

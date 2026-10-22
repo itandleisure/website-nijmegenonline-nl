@@ -8,6 +8,7 @@ van de bezoeker met het bericht al ingevuld (assets/js/formulier.js). Instellen:
 Gebruik: python tools/paginas.py [map met de bron]   (daarna tools/afbeeldingen.py en tools/build.py)
 """
 import html
+import json
 import pathlib
 import re
 import shutil
@@ -103,7 +104,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=2" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=3" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -124,17 +125,93 @@ def formulier(naam, onderwerp, velden, knop="Verstuur"):
             regels.append('          <fieldset class="formulier__keuzes"><legend>%s%s</legend>' % (esc(label), ster))
             regels += ['            <label><input type="checkbox" name="%s" value="%s"> %s</label>' % (veld, esc(o), esc(o)) for o in opties]
             regels.append("          </fieldset>")
+        elif soort == "bestand":
+            regels.append('          <label for="%s">%s%s</label>\n          <input id="%s" name="%s" type="file" accept="image/jpeg,image/png,image/webp"%s>'
+                          % (id_, esc(label), ster, id_, veld, req))
+            if opties:
+                regels.append('          <p class="formulier__hint">%s</p>' % esc(opties))
         elif soort == "tekst":
             regels.append('          <label for="%s">%s%s</label>\n          <textarea id="%s" name="%s" rows="6"%s></textarea>'
                           % (id_, esc(label), ster, id_, veld, req))
         else:
-            auto = {"email": "email", "tel": "tel"}.get(soort, "on")
-            regels.append('          <label for="%s">%s%s</label>\n          <input id="%s" name="%s" type="%s" autocomplete="%s"%s>'
-                          % (id_, esc(label), ster, id_, veld, soort, auto, req))
+            auto = {"email": "email", "tel": "tel", "url": "url"}.get(soort, "off" if opties else "on")
+            lijst = ' list="%s-lijst"' % id_ if opties else ""
+            regels.append('          <label for="%s">%s%s</label>\n          <input id="%s" name="%s" type="%s" autocomplete="%s"%s%s>'
+                          % (id_, esc(label), ster, id_, veld, soort, auto, lijst, req))
+            if opties:
+                regels.append('          <datalist id="%s-lijst">%s</datalist>' % (id_, "".join('<option value="%s">' % esc(o) for o in opties)))
     regels.append('          <p class="formulier__melding" role="status" hidden></p>')
     regels.append('          <button class="knop" type="submit">%s</button>' % esc(knop))
     regels.append("        </form>")
     return "\n".join(regels)
+
+
+def algemene_voorwaarden(tekst, meta):
+    """De voorwaarden letterlijk overgenomen; alleen de opmaak is anders (artikel = kop, lid = alinea)."""
+    tekst = re.sub(r"\[/?[a-z_]+[^\]]*\]|<!--.*?-->", "", tekst, flags=re.S)
+    voor, _, adres = tekst.partition("Adresgegevens")
+    delen = []
+    for blok in re.findall(r"<p>(.*?)</p>", voor, re.S):
+        regels = [html.unescape(x).strip() for x in re.split(r"<br\s*/?>", blok) if x.strip()]
+        for regel in regels:
+            if re.match(r"Artikel \d+\.", regel):
+                delen.append("        <h2>%s</h2>" % esc(regel))
+            else:
+                regel = re.sub(r"^(\d+\.\d+)(?=\S)", r"\1 ", regel)
+                delen.append("        <p>%s</p>" % esc(regel))
+    adres = [html.unescape(x).strip() for x in re.split(r"<br\s*/?>|</?p>", adres) if x.strip()]
+    delen.append("        <h2>Adresgegevens</h2>\n        <p>%s</p>" % "<br>".join(esc(x) for x in adres))
+    inhoud = "        <h1>Algemene voorwaarden</h1>\n" + "\n".join(delen)
+    return pagina("Algemene voorwaarden", meta.get("rank_math_description", ""), "algemene-voorwaarden", "Algemene voorwaarden", inhoud)
+
+
+def bedrijf_aanmelden(categorieen):
+    inhoud = """        <h1>Bedrijf aanmelden</h1>
+        <p class="pagina__intro">Zet je bedrijf in de bedrijvengids van NijmegenOnline. Vul het formulier in, dan maken we je vermelding aan en nemen we contact met je op.</p>
+        <p>Meer opvallen, bijvoorbeeld met een banner of artikelen over je bedrijf? Bekijk de mogelijkheden bij <a href="{site}/adverteren-bij-nijmegenonline/">adverteren</a>.</p>
+{formulier}""".format(site=SITE, formulier=formulier("bedrijf", "Aanmelding bedrijvengids NijmegenOnline", [
+        ("bedrijf", "Naam van het bedrijf", "text", True, None),
+        ("categorie", "Soort bedrijf", "text", True, categorieen),
+        ("adres", "Adres (straat, huisnummer, postcode en plaats)", "text", True, None),
+        ("site", "Website", "url", False, None),
+        ("telefoon", "Telefoonnummer", "tel", True, None),
+        ("bedrijfsmail", "E-mailadres van het bedrijf", "email", False, None),
+        ("openingstijden", "Openingstijden", "tekst", False, None),
+        ("omschrijving", "Korte omschrijving van het bedrijf", "tekst", True, None),
+        ("foto", "Logo of foto", "bestand", False, "JPG, PNG of WebP, maximaal 5 MB."),
+        ("naam", "Je naam (contactpersoon)", "text", True, None),
+        ("email", "Je e-mailadres", "email", True, None)], "Aanmelden"))
+    return pagina("Bedrijf aanmelden", "Zet je bedrijf in de bedrijvengids van NijmegenOnline: vul het formulier in en wij maken je vermelding aan.",
+                  "bedrijf-aanmelden", "Bedrijf aanmelden", inhoud)
+
+
+def evenement_aanmelden(locaties):
+    inhoud = """        <h1>Evenement aanmelden</h1>
+        <p class="pagina__intro">Organiseer je een evenement in Nijmegen of de regio? Meld het hier gratis aan voor de agenda.</p>
+        <h2>Spelregels</h2>
+        <ul>
+          <li>Vul het formulier volledig in.</li>
+          <li>Voeg een rechtenvrije foto toe. Zonder foto plaatsen we het evenement niet.</li>
+          <li>Meerdaagse evenementen plaatsen we niet. Je mag wel een evenement aanmelden voor alleen de eerste dag van het evenement, de expositie of de workshop.</li>
+          <li>Vul een begin- en eindtijd in. Loopt je evenement door tot in de nacht? Vul dan als eindtijd 23.55 uur in.</li>
+        </ul>
+        <h2>Meer aandacht voor je evenement?</h2>
+        <p>Een gratis aanmelding komt in de agenda, zonder links naar je website of social media. Je evenement wordt dan niet uitgelicht in onze wekelijkse nieuwsbrief, op social media en op onze websites. Wil je die extra aandacht wel? Mail naar <a href="mailto:{email}">{email}</a> en vraag naar de mogelijkheden, of bekijk de <a href="{site}/adverteren-bij-nijmegenonline/">pakketten</a>.</p>
+        <h2>Je evenement</h2>
+{formulier}""".format(email=EMAIL, site=SITE, formulier=formulier("evenement", "Evenement aangemeld via NijmegenOnline", [
+        ("titel", "Naam van het evenement", "text", True, None),
+        ("datum", "Datum", "date", True, None),
+        ("starttijd", "Begintijd", "time", True, None),
+        ("eindtijd", "Eindtijd", "time", True, None),
+        ("omschrijving", "Omschrijving van het evenement", "tekst", True, None),
+        ("locatie", "Locatie", "text", True, locaties),
+        ("adres", "Adres van de locatie (als die niet in de lijst staat)", "text", False, None),
+        ("foto", "Foto", "bestand", True, "Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 5 MB."),
+        ("naam", "Je naam (alleen voor de redactie)", "text", True, None),
+        ("email", "Je e-mailadres (alleen voor de redactie)", "email", True, None),
+        ("notitie", "Opmerking voor de redactie", "tekst", False, None)], "Evenement aanmelden"))
+    return pagina("Evenement aanmelden", "Organiseer je een evenement in Nijmegen of omgeving? Meld het gratis aan voor de agenda van NijmegenOnline.",
+                  "evenement-aanmelden", '<a href="../nijmegen-evenementen-overzicht/">Agenda</a> › Evenement aanmelden', inhoud)
 
 
 def kom_in_contact(meta):
@@ -300,6 +377,13 @@ def main(bron):
     for slug, functie, open_, _ in VACATURES:
         _, tekst, meta = pag[slug]
         schrijf("vacatures/" + slug, vacature(slug, functie, open_, tekst, meta, fotos))
+    titel, tekst, meta = pag["algemene-voorwaarden"]
+    schrijf("algemene-voorwaarden", algemene_voorwaarden(tekst, meta))
+    lijst = (bron / "wp-xml" / "bedrijvengids-listdom.xml").read_text(encoding="utf-8")
+    schrijf("bedrijf-aanmelden", bedrijf_aanmelden(sorted({html.unescape(c) for c in re.findall(
+        r'<category domain="listdom-category" nicename="[^"]*"><!\[CDATA\[([^\]]*)', lijst)})))
+    namen = json.load(open(ROOT / "data" / "aanbieders.json", encoding="utf-8"))
+    schrijf("evenement-aanmelden", evenement_aanmelden(sorted({v["naam"] for v in namen.values()}, key=str.lower)))
     print("Pagina's: kom-in-contact, adverteren, vergelijking, vacatures (%d)%s"
           % (len(VACATURES), "" if pdf.is_file() else "; mediakit nog niet lokaal"))
 

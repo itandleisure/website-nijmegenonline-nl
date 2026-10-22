@@ -333,3 +333,4 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .vacaturekaart--dicht .vacaturekaart__status { color: var(--grijs); }
 .adverteren-bereik img { max-width: 420px; width: 100%; margin: 0 auto; display: block; border-radius: var(--radius); }
 .uitgelicht img.uitgelicht__heel, .eventkaart img.eventkaart__heel { object-fit: contain; background: var(--wit); padding: 8px; }
+.formulier__hint { margin: 0; font-size: .9rem; color: var(--grijs); }
