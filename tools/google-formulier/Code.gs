@@ -475,6 +475,7 @@ function bewerkPagina(type, id) {
     '  .withFailureHandler(function(e){knoppen(true);zet("Dat lukte niet: "+e.message)}).bewaarBewerking(d)};' +
     ' if(bestand){var lezer=new FileReader();lezer.onload=function(){d.foto=lezer.result;d.foto_naam=bestand.name;verder()};' +
     '  lezer.readAsDataURL(bestand)}else verder()}' +
+    ADRES_JS +
     '</script></body></html>';
   return HtmlService.createHtmlOutput(html).setTitle('Aanmelding bewerken · NijmegenOnline')
     .addMetaTag('viewport', 'width=device-width, initial-scale=1');
@@ -702,10 +703,34 @@ function aanbiederKeuze(g) {
   var opties = '<option value="">Automatisch (op naam of adres)</option>' +
     '<option value="nieuw"' + (gekozen === 'nieuw' ? ' selected' : '') + '>Nieuwe aanbieder: ' + html_(g.locatie) + '</option>' +
     slugs.map(function (s) {
-      return '<option value="' + html_(s) + '"' + (s === gekozen ? ' selected' : '') + '>' + html_(lijst[s].naam) + '</option>';
+      return '<option value="' + html_(s) + '"' + (s === gekozen ? ' selected' : '') +
+        (lijst[s].adres ? ' data-adres="' + html_(lijst[s].adres) + '"' : '') + '>' + html_(lijst[s].naam) + '</option>';
     }).join('');
-  return '<label>Aanbieder (de overzichtspagina waar dit evenement bij komt)<select name="aanbieder">' + opties + '</select></label>';
+  return '<label>Aanbieder (de overzichtspagina waar dit evenement bij komt)<select name="aanbieder" id="aanbieder">' + opties + '</select></label>' +
+    '<div id="adresnoot" class="controle" style="display:none"></div>';
 }
+
+// Bewerkpagina: kies je een bestaande aanbieder met een ander adres, dan komt het bekende adres in de velden.
+// Wat de inzender invulde blijft zichtbaar, met een knop om dat terug te zetten.
+var ADRES_JS =
+  '(function(){var f=document.getElementById("f"),keuze=document.getElementById("aanbieder"),noot=document.getElementById("adresnoot");' +
+  ' if(!keuze||!f.adres)return;' +
+  ' var ingevuld={adres:f.adres.value,postcode:f.postcode.value,plaats:f.plaats.value};' +
+  ' function sleutel(t){return String(t||"").toLowerCase().replace(/[^a-z0-9]/g,"")}' +
+  ' function zetVelden(w){f.adres.value=w.adres;f.postcode.value=w.postcode;f.plaats.value=w.plaats}' +
+  ' window.terugzetten=function(){zetVelden(ingevuld);noot.style.display="none"};' +
+  ' function pas(){var optie=keuze.options[keuze.selectedIndex],bekend=optie&&optie.getAttribute("data-adres");' +
+  '  zetVelden(ingevuld);noot.style.display="none";if(!bekend)return;' +
+  '  var delen=bekend.split(","),straat=delen.shift().trim(),rest=delen.join(",").trim();' +
+  '  var m=rest.match(/^(\\d{4}\\s*[A-Za-z]{2}|\\d{5})?\\s*(.*)$/),pc=(m&&m[1]||"").toUpperCase().replace(/^(\\d{4})\\s*/,"$1 "),pl=m&&m[2]||"";' +
+  '  if(sleutel(straat)===sleutel(ingevuld.adres))return;' +
+  '  zetVelden({adres:straat,postcode:pc,plaats:pl||ingevuld.plaats});' +
+  '  noot.innerHTML="";var b=document.createElement("b");b.textContent="Adres aangepast";noot.appendChild(b);' +
+  '  noot.appendChild(document.createTextNode("\\nHet bekende adres van "+optie.textContent+" is ingevuld. De inzender vulde in: "+' +
+  '   [ingevuld.adres,ingevuld.postcode,ingevuld.plaats].filter(Boolean).join(", ")+"\\n"));' +
+  '  var t=document.createElement("button");t.type="button";t.textContent="Adres van de inzender terugzetten";t.onclick=window.terugzetten;' +
+  '  noot.appendChild(t);noot.style.display="block"}' +
+  ' keuze.addEventListener("change",pas);pas()})();';
 
 // '6511ab' wordt '6511 AB'; Duitse (5 cijfers) en andere postcodes blijven zoals ze zijn
 function postcode(tekst) {

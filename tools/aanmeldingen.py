@@ -107,6 +107,18 @@ def kies_aanbieder(a, evenementen, aanbieders):
     return s
 
 
+def vul_adressen(aanbieders, evenementen):
+    """Zet bij elke aanbieder het bekende adres, voor de beoordeelpagina. Voorkeur: met postcode, dan met
+    huisnummer, dan het laatste evenement."""
+    for k, v in aanbieders.items():
+        adressen = [e["adres"] for e in evenementen if e.get("aanbieder") == k and e.get("adres")]
+        if adressen:
+            v["adres"] = max(reversed(adressen), key=lambda x: (bool(re.search(r"\b(\d{4} ?[A-Z]{2}|\d{5})\b", x)),
+                                                                   bool(re.search(r"\d", x))))
+        else:
+            v.pop("adres", None)
+
+
 def evenement(a, evenementen, aanbieders):
     datum = (a.get("datum") or "")[:10]
     if not re.match(r"\d{4}-\d{2}-\d{2}$", datum):
@@ -191,6 +203,7 @@ def main(test=None):
         terugmelden.append(a.get("gepubliceerd"))
     if nieuw:
         evenementen.sort(key=lambda e: (e["start"], e["slug"]))
+        vul_adressen(aanbieders, evenementen)
         (ROOT / "data" / "evenementen.json").write_text(json.dumps(evenementen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         (ROOT / "data" / "aanbieders.json").write_text(json.dumps(dict(sorted(aanbieders.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         if bedrijven:
