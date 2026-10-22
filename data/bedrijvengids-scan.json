@@ -95,34 +95,7 @@
   "website": "http://www.avalonfitcentre.nl/",
   "website_bereikbaar": false
  },
- "basic-fit-kerkenbos-2-2": {
-  "adres_op_site": "Kerkenbos 1115, 6546 BC Nijmegen",
-  "bronnen": [
-   "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-kerkenbos-24/7-647daab03c8d4517a522f2f9c3c32332.html"
-  ],
-  "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [
-   "24 uur open",
-   "groepslessen",
-   "personal training"
-  ],
-  "kosten_tokens": {
-   "in": 55032,
-   "uit": 1178
-  },
-  "lijkt_actief": true,
-  "naam": "Basic-Fit",
-  "openingstijden": "ma-zo 00:00-24:00 (24/7 geopend)",
-  "opmerkingen": "De groepslessen zijn video-workouts, er staat geen live instructeur bij. Fysiotherapie komt alleen voor in de algemene introtekst. Het is niet duidelijk of dat in deze vestiging echt wordt aangeboden, daarom is het niet als categorie toegevoegd. Er staat niets over parkeren of rolstoeltoegankelijkheid.",
-  "status": "voorstel",
-  "tekst": "De vestiging van de fitnessketen Basic-Fit aan de Kerkenbos ligt in de wijk Lindenholt. De club is dag en nacht open en heeft ruim 2200 m² sportruimte, verdeeld over zeven trainingszones met onder meer cardio- en krachtapparatuur.\n\nNaast vrij trainen kunnen leden meedoen aan groepslessen via video in de groepsleszaal. Voorbeelden zijn Bodypump, Bootcamp, Box, Pilates en Abs & Core. Tegen betaling is personal training mogelijk, en de site noemt ook fysiotherapie. Verder zijn er een body analyzer, massagestoelen en een tappunt voor sportwater.\n\nDe club heeft lockers, kleedkamers en douches. Met een lidmaatschap kun je ook in andere Basic-Fit-clubs trainen. Inschrijven gaat online.",
-  "website": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-kerkenbos-24/7-647daab03c8d4517a522f2f9c3c32332.html",
-  "website_bereikbaar": true
- },
- "basic-fit-kerkenbos-2-2-2-2-2-2-2-2": {
+ "basic-fit-kerkenbos": {
   "adres_op_site": "Kerkenbos 1115, 6546 BC Nijmegen",
   "bronnen": [
    "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-kerkenbos-24/7-647daab03c8d4517a522f2f9c3c32332.html"
@@ -151,33 +124,7 @@
   "website": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-kerkenbos-24/7-647daab03c8d4517a522f2f9c3c32332.html",
   "website_bereikbaar": true
  },
- "basic-fit-vlaamsegas-2-2": {
-  "adres_op_site": "Vlaamsegas 2, 6511 HR Nijmegen",
-  "bronnen": [
-   "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-vlaamsegas-d630317ca8554edc9ca738d360875d38.html"
-  ],
-  "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [
-   "groepslessen",
-   "personal training"
-  ],
-  "kosten_tokens": {
-   "in": 41197,
-   "uit": 1533
-  },
-  "lijkt_actief": true,
-  "naam": "Basic-Fit",
-  "openingstijden": "ma-vr 07:00-22:30, za-zo 09:00-16:00",
-  "opmerkingen": "Op de site staan openingstijden (ma-vr 7.00-22.30, za-zo 9.00-16.00), maar in de buurtbeschrijving heet de club 'Basic-Fit Nijmegen Vlaamsegas 24/7'. Daarom heb ik '24 uur open' niet opgenomen. Graag controleren. De groepslessen in de club worden via video gegeven. Fysiotherapie wordt in de club aangeboden, maar het is onduidelijk of dit via externe fysiotherapeuten gaat. Daarom staat het niet als extra categorie. Er is geen eigen parkeerterrein, alleen een betaalde parkeergarage in de buurt (Molenpoortdak). Daarom staat 'parkeren' niet bij de kenmerken. Ik heb alleen de clubpagina gelezen: daar stond alle informatie die nodig was.",
-  "status": "voorstel",
-  "tekst": "Deze vestiging van de fitnessketen Basic-Fit zit aan de Vlaamsegas in het centrum van Nijmegen, vlak bij het Kronenburgpark en het winkelgebied. Het station ligt op korte afstand. Wie met de auto komt, kan betaald parkeren in de parkeergarage Molenpoortdak.\n\nDe club heeft ruim 1700 m² sportruimte, verdeeld over zeven zones. Daar vind je onder meer vrije gewichten, krachtapparaten, cardiotoestellen en een ruimte voor functionele training en stretchen. Verder zijn er lockers, kleedkamers en douches.\n\nIn de groepsleszaal kun je lessen volgen via video, zoals bodypump, bootcamp, box en pilates. Daarnaast werken er personal trainers en fysiotherapeuten. Ook staan er een body analyzer en massagestoelen. Met een lidmaatschap kun je ook terecht in de andere Basic-Fit-clubs.",
-  "website": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-vlaamsegas-d630317ca8554edc9ca738d360875d38.html",
-  "website_bereikbaar": true
- },
- "basic-fit-vlaamsegas-2-2-2-2-2-2-2-2": {
+ "basic-fit-vlaamsegas": {
   "adres_op_site": "Vlaamsegas 2, 6511 HR Nijmegen",
   "bronnen": [
    "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-vlaamsegas-d630317ca8554edc9ca738d360875d38.html"
@@ -204,28 +151,7 @@
   "website": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-vlaamsegas-d630317ca8554edc9ca738d360875d38.html",
   "website_bereikbaar": true
  },
- "basic-fit-weg-door-jonkerbos-2-2": {
-  "adres_op_site": "",
-  "bronnen": [],
-  "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 21720,
-   "uit": 556
-  },
-  "lijkt_actief": true,
-  "naam": "Basic-Fit",
-  "openingstijden": "",
-  "opmerkingen": "De website http://www.basicfit.nl/ kon niet worden opgehaald, want de ophaaltool gaf de fout 'url_not_allowed'. De variant zonder slash werkte ook niet. Daardoor konden we niets controleren: geen tekst, kenmerken, openingstijden of adres (Weg door Jonkerbos 26). De categorie sportschool is overgenomen uit de vermoedelijke categorie en is niet gecontroleerd. Dat het bedrijf actief is, is ook niet gecontroleerd. De redactie moet de clubpagina van Basic-Fit Nijmegen Weg door Jonkerbos met de hand nakijken.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.basicfit.nl/",
-  "website_bereikbaar": false
- },
- "basic-fit-weg-door-jonkerbos-2-2-2-2-2-2-2-2": {
+ "basic-fit-weg-door-jonkerbos": {
   "adres_op_site": "",
   "bronnen": [
    "http://www.basicfit.nl/"

@@ -134,9 +134,21 @@ def samenvoegen(gids, overig):
     gids.sort(key=lambda b: (not b.get("uitgelicht"), b["naam"].lower()))
     overig = sorted((b for b in overig if sleutel(b["naam"]) not in bekend), key=lambda b: (b["naam"].lower(), b["adres"]))
     # Eigen pagina's voor de aangevulde bedrijven; dezelfde naam op meer adressen (ketens) krijgt de straat erbij
+    # Eerder uitgedeelde slugs blijven staan (de url mag niet veranderen); alleen nieuwe bedrijven krijgen er een
+    vorig = {}
+    pad = ROOT / "data" / "bedrijvengids.json"
+    if pad.exists():
+        for cat in json.loads(pad.read_text(encoding="utf-8")).values():
+            vorig.update({(x["naam"], x["adres"]): x["slug"] for x in cat["overig"]})
     namen = [slug(b["naam"]) for b in overig]
-    bezet = {b["slug"] for b in gids} | {p.name for p in (ROOT / "bedrijvengids").iterdir() if p.is_dir()} - {slug(b["naam"]) for b in overig}
+    bezet = ({b["slug"] for b in gids} | {p.name for p in (ROOT / "bedrijvengids").iterdir() if p.is_dir()}) - set(vorig.values())
     for b in overig:
+        if (b["naam"], b["adres"]) in vorig:
+            b["slug"] = vorig[(b["naam"], b["adres"])]
+            bezet.add(b["slug"])
+    for b in overig:
+        if b.get("slug"):
+            continue
         s = slug(b["naam"])
         if namen.count(s) > 1 or s in bezet:
             s = slug("%s %s" % (b["naam"], re.sub(r"\s*\d.*$", "", b["adres"])))
