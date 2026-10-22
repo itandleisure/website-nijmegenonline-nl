@@ -8,11 +8,13 @@ en de redactie keurt per bedrijf goed.
 Gebruik: ANTHROPIC_API_KEY=... python tools/bedrijven_scan.py [categorie] [--opnieuw] [--max N]
 Draait normaal via .github/workflows/bedrijven-scannen.yml.
 """
+import concurrent.futures
 import json
 import os
 import pathlib
 import re
 import sys
+import threading
 import time
 
 import anthropic
@@ -114,14 +116,16 @@ def main(argv):
     gids = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))[categorie]
     scan = json.loads(UIT.read_text(encoding="utf-8")) if UIT.exists() else {}
     client = anthropic.Anthropic()
-    gedaan = 0
+    te_doen = []
     for b in gids["overig"]:
-        if gedaan >= maximum:
-            break
         eerder = scan.get(b["slug"], {})
         klaar = eerder.get("status") == "voorstel" and eerder.get("website_bereikbaar") and eerder.get("tekst")
-        if not b.get("website") or (eerder and klaar and not opnieuw):
-            continue
+        if b.get("website") and not (klaar and not opnieuw):
+            te_doen.append(b)
+    te_doen = te_doen[:maximum]
+    slot = threading.Lock()
+
+    def scan_een(b):
         try:
             uit = vraag(client, b, categorie)
             uit["status"] = "voorstel"
@@ -129,12 +133,15 @@ def main(argv):
             uit = {"status": "fout", "fout": str(fout)[:300]}
         uit.update({"naam": b["naam"], "website": b["website"], "categorie_scan": categorie,
                     "gescand": time.strftime("%Y-%m-%d")})
-        scan[b["slug"]] = uit
-        gedaan += 1
-        print("%-40s %s" % (b["slug"], uit.get("status")))
-        UIT.write_text(json.dumps(scan, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-    print("Klaar: %d gescand, %d zonder website overgeslagen" % (gedaan, sum(1 for b in gids["overig"] if not b.get("website"))))
+        with slot:
+            scan[b["slug"]] = uit
+            print("%-40s %s" % (b["slug"], uit.get("status")), flush=True)
+            UIT.write_text(json.dumps(scan, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
 
+    # Een paar sites tegelijk: één site lezen duurt al snel een halve minuut
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+        list(pool.map(scan_een, te_doen))
+    print("Klaar: %d gescand, %d zonder website overgeslagen" % (len(te_doen), sum(1 for b in gids["overig"] if not b.get("website"))))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
