@@ -59,9 +59,11 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     });
     var foto = form.querySelector('input[type="file"]');
     if (foto && foto.files.length && foto.files[0].size > MAX_FOTO) { meld("De foto is groter dan 20 MB. Kies een kleinere foto.", true); foto.focus(); return; }
-    var email = form.querySelector('input[type="email"]');
     if (ontbreekt.length) { meld("Vul alle velden met een * in.", true); ontbreekt[0].focus(); return; }
-    if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value.trim())) { meld("Controleer je e-mailadres.", true); email.focus(); return; }
+    var email = Array.prototype.filter.call(form.querySelectorAll('input[type="email"]'), function (v) {
+      return (v.required || v.value.trim()) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.value.trim());
+    })[0];
+    if (email) { meld("Controleer het e-mailadres.", true); email.focus(); return; }
     if (!form.dataset.url) { mailknop(); return; }
 
     form.pagina.value = location.href;

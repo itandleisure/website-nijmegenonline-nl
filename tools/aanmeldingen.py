@@ -78,8 +78,12 @@ def evenement(a, evenementen, aanbieders):
     if not aanbieder and locatie:
         aanbieder = slug(locatie)
         aanbieders.setdefault(aanbieder, {"naam": locatie})
-    adres = a.get("adres", "").strip() or next(
+    plaats = " ".join(x for x in (a.get("postcode", "").strip().upper(), a.get("plaats", "").strip()) if x)
+    adres = ", ".join(x for x in (a.get("adres", "").strip(), plaats) if x) or next(
         (e["adres"] for e in reversed(evenementen) if e.get("aanbieder") == aanbieder and e["adres"]), "")
+    site = a.get("site", "").strip()
+    if site and not re.match(r"https?://", site):
+        site = "https://" + site
     foto = bewaar_foto(a["foto"], s) if a.get("foto") else ""
     return {
         "slug": s,
@@ -97,6 +101,9 @@ def evenement(a, evenementen, aanbieders):
         "gepubliceerd": (a.get("ontvangen") or "")[:10],
         "tekst": alinea(a.get("omschrijving", "")),
         "aanmelding": a["id"],
+        "website": site if re.match(r"https?://[^\s/]+\.[^\s]+$", site) else "",
+        "contactmail": a.get("evenementmail", "").strip(),
+        "telefoon": a.get("evenementtelefoon", "").strip(),
     }
 
 

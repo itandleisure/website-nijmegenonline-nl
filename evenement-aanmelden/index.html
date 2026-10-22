@@ -66,7 +66,7 @@
           <li>Vul een begin- en eindtijd in. Loopt je evenement door tot in de nacht? Vul dan als eindtijd 23.55 uur in.</li>
         </ul>
         <h2>Meer aandacht voor je evenement?</h2>
-        <p>Een gratis aanmelding komt in de agenda, zonder links naar je website of social media. Je evenement wordt dan niet uitgelicht in onze wekelijkse nieuwsbrief, op social media en op onze websites. Wil je die extra aandacht wel? Mail naar <a href="mailto:redactie@nijmegenonline.nl">redactie@nijmegenonline.nl</a> en vraag naar de mogelijkheden, of bekijk de <a href="../adverteren-bij-nijmegenonline/">pakketten</a>.</p>
+        <p>Een gratis aanmelding komt in de agenda, met je website, e-mailadres en telefoonnummer als je die invult. Je evenement wordt dan niet uitgelicht in onze wekelijkse nieuwsbrief, op social media en op onze websites. Wil je die extra aandacht wel? Mail naar <a href="mailto:redactie@nijmegenonline.nl">redactie@nijmegenonline.nl</a> en vraag naar de mogelijkheden, of bekijk de <a href="../adverteren-bij-nijmegenonline/">pakketten</a>.</p>
         <h2>Je evenement</h2>
         <form class="formulier" id="formulier" data-email="redactie@nijmegenonline.nl" data-url="https://script.google.com/macros/s/AKfycbyELOZGBRvXanmgy7LSaQD4G5WnAZbACtAWVvcKoslJHT0-NxunjLngM7fJJOrxQyIM/exec" data-onderwerp="Evenement aangemeld via NijmegenOnline" novalidate>
           <input type="hidden" name="form" value="evenement">
@@ -83,11 +83,20 @@
           <input id="evenement-eindtijd" name="eindtijd" type="time" autocomplete="on" required>
           <label for="evenement-omschrijving">Omschrijving van het evenement <span aria-hidden="true">*</span></label>
           <textarea id="evenement-omschrijving" name="omschrijving" rows="6" required></textarea>
-          <label for="evenement-locatie">Locatie <span aria-hidden="true">*</span></label>
-          <input id="evenement-locatie" name="locatie" type="text" autocomplete="off" list="evenement-locatie-lijst" required>
-          <datalist id="evenement-locatie-lijst"><option value="Achterlo Sporthallen"><option value="Achtertuin"><option value="Antonius Abtkerk"><option value="Antonius van Paduakerk"><option value="Ark van Oost"><option value="Ateliers Vrouwe Udasigel"><option value="Begraafplaats Daalseweg"><option value="Begraafplaats Stenenkruisstraat (Julianapark)"><option value="Besiendershuis"><option value="Bibliotheek Mariënburg"><option value="Binnenstad Nijmegen"><option value="Binnenstad Nijmegen en het Valkhofpark"><option value="Bosatelier"><option value="Boskapel"><option value="Bottendaal"><option value="Brasserie Jolie"><option value="Brebl (locatie Meesterproef)"><option value="Buurderij de Lage Hof"><option value="Cafe &#x27;t Haantje"><option value="Café De Kroon"><option value="Café Van Buren"><option value="Cenakelkerk, Heilig Landstichting"><option value="centrum Nijmegen"><option value="Concertgebouw De Vereeniging"><option value="De Boekerij"><option value="De Brauerij"><option value="De Kaaij"><option value="De Vasim"><option value="De Waagh"><option value="De Wieken"><option value="dijkmagazijn"><option value="diverse particuliere tuinen."><option value="Door heel Nijmegen"><option value="Doornroosje"><option value="Evenemententerrein Park Winkelsteeg"><option value="Expo Bart"><option value="Extrapool"><option value="Fotobolwerk,Vasim"><option value="Groenestraatkerk"><option value="Grote Markt en Stevenskerk"><option value="Hackerspace Nijmegen"><option value="HEMA Etalages"><option value="Het Kerkje van Persingen"><option value="Het Landhoofd"><option value="Historische kerk aan de Groesbeek"><option value="Hortus Nijmegen"><option value="Hotel The Rebyl"><option value="Huis van de Nijmeegse Geschiedenis"><option value="Infocentrum WO2 Nijmegen"><option value="Irish pub The Shamrock"><option value="Kasteel Wijchen"><option value="Kerkje van Persingen"><option value="Kleine Kirche"><option value="Kleine Wiel"><option value="Kleve Centrum"><option value="Kloster Graefenthal"><option value="Krayenhoffkazerne"><option value="Kunstkring Wijchen"><option value="Lieskes Wengs"><option value="Lutherse kerk"><option value="Lux Nijmegen"><option value="Maelwael van Lymborch Huis"><option value="Marienburgplaats"><option value="Museum Kurhaus"><option value="museumpark oriëntalis"><option value="NYMA makersplaats"><option value="OBG Nijmegen"><option value="Old Cave"><option value="Openluchttheater De Goffert"><option value="Park de Omloop - Lindenholt"><option value="Pastor-Leinung-Platz, Kleef, Duitsland"><option value="Petruskerk"><option value="Pop Culture Arcade"><option value="POPOP"><option value="Regeneratieve Burgerboerderij De Biesterhof"><option value="Roomsch leven"><option value="Sint Jacobskapel"><option value="Stadthalle Kleve"><option value="Stedelijk Gymnasium"><option value="Stevenskerk"><option value="Theater De Kik"><option value="Theater de Klif"><option value="Theater Het Badhuis"><option value="Theater het Badhuis Nijmegen"><option value="Theaterkerk Bemmel"><option value="Theaterzaal C"><option value="Theaterzaal Pro Persona, hoofdgebouw Sterrenberg"><option value="Thiemeloods"><option value="Titus Brandsma Gedachteniskerk"><option value="Tourist Information Kleve"><option value="Ufer des Kermisdahls"><option value="Vasim Circus Space"><option value="Vrijheidsmuseum"><option value="Waalhalla"><option value="Waalkade"><option value="Wijkcentrum Ark van Oost"><option value="Wijkcentrum De Biezantijn"><option value="Wijkcentrum Hatert"><option value="wijngaard de plack"><option value="Zeester Nijmegen"></datalist>
-          <label for="evenement-adres">Adres van de locatie (als die niet in de lijst staat)</label>
-          <input id="evenement-adres" name="adres" type="text" autocomplete="on">
+          <label for="evenement-locatie">Naam van de locatie <span aria-hidden="true">*</span></label>
+          <input id="evenement-locatie" name="locatie" type="text" autocomplete="on" required>
+          <label for="evenement-adres">Straat en huisnummer <span aria-hidden="true">*</span></label>
+          <input id="evenement-adres" name="adres" type="text" autocomplete="on" required>
+          <label for="evenement-postcode">Postcode <span aria-hidden="true">*</span></label>
+          <input id="evenement-postcode" name="postcode" type="text" autocomplete="on" required>
+          <label for="evenement-plaats">Plaats <span aria-hidden="true">*</span></label>
+          <input id="evenement-plaats" name="plaats" type="text" autocomplete="on" required>
+          <label for="evenement-site">Website van het evenement</label>
+          <input id="evenement-site" name="site" type="url" autocomplete="url">
+          <label for="evenement-evenementmail">E-mailadres voor bezoekers</label>
+          <input id="evenement-evenementmail" name="evenementmail" type="email" autocomplete="email">
+          <label for="evenement-evenementtelefoon">Telefoonnummer voor bezoekers</label>
+          <input id="evenement-evenementtelefoon" name="evenementtelefoon" type="tel" autocomplete="tel">
           <label for="evenement-foto">Foto <span aria-hidden="true">*</span></label>
           <input id="evenement-foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp" required>
           <p class="formulier__hint">Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 20 MB.</p>
@@ -146,7 +155,7 @@
       </div>
     </div>
   </main>
-  <script src="../assets/js/formulier.js?v=4" defer></script>
+  <script src="../assets/js/formulier.js?v=5" defer></script>
 
   <!-- footer -->
   <footer>

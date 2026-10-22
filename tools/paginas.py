@@ -104,7 +104,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=4" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=5" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -185,7 +185,7 @@ def bedrijf_aanmelden(categorieen):
                   "bedrijf-aanmelden", "Bedrijf aanmelden", inhoud)
 
 
-def evenement_aanmelden(locaties):
+def evenement_aanmelden():
     inhoud = """        <h1>Evenement aanmelden</h1>
         <p class="pagina__intro">Organiseer je een evenement in Nijmegen of de regio? Meld het hier gratis aan voor de agenda.</p>
         <h2>Spelregels</h2>
@@ -196,7 +196,7 @@ def evenement_aanmelden(locaties):
           <li>Vul een begin- en eindtijd in. Loopt je evenement door tot in de nacht? Vul dan als eindtijd 23.55 uur in.</li>
         </ul>
         <h2>Meer aandacht voor je evenement?</h2>
-        <p>Een gratis aanmelding komt in de agenda, zonder links naar je website of social media. Je evenement wordt dan niet uitgelicht in onze wekelijkse nieuwsbrief, op social media en op onze websites. Wil je die extra aandacht wel? Mail naar <a href="mailto:{email}">{email}</a> en vraag naar de mogelijkheden, of bekijk de <a href="{site}/adverteren-bij-nijmegenonline/">pakketten</a>.</p>
+        <p>Een gratis aanmelding komt in de agenda, met je website, e-mailadres en telefoonnummer als je die invult. Je evenement wordt dan niet uitgelicht in onze wekelijkse nieuwsbrief, op social media en op onze websites. Wil je die extra aandacht wel? Mail naar <a href="mailto:{email}">{email}</a> en vraag naar de mogelijkheden, of bekijk de <a href="{site}/adverteren-bij-nijmegenonline/">pakketten</a>.</p>
         <h2>Je evenement</h2>
 {formulier}""".format(email=EMAIL, site=SITE, formulier=formulier("evenement", "Evenement aangemeld via NijmegenOnline", [
         ("titel", "Naam van het evenement", "text", True, None),
@@ -204,8 +204,13 @@ def evenement_aanmelden(locaties):
         ("starttijd", "Begintijd", "time", True, None),
         ("eindtijd", "Eindtijd", "time", True, None),
         ("omschrijving", "Omschrijving van het evenement", "tekst", True, None),
-        ("locatie", "Locatie", "text", True, locaties),
-        ("adres", "Adres van de locatie (als die niet in de lijst staat)", "text", False, None),
+        ("locatie", "Naam van de locatie", "text", True, None),
+        ("adres", "Straat en huisnummer", "text", True, None),
+        ("postcode", "Postcode", "text", True, None),
+        ("plaats", "Plaats", "text", True, None),
+        ("site", "Website van het evenement", "url", False, None),
+        ("evenementmail", "E-mailadres voor bezoekers", "email", False, None),
+        ("evenementtelefoon", "Telefoonnummer voor bezoekers", "tel", False, None),
         ("foto", "Foto", "bestand", True, "Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 20 MB."),
         ("naam", "Je naam (alleen voor de redactie)", "text", True, None),
         ("email", "Je e-mailadres (alleen voor de redactie)", "email", True, None),
@@ -382,8 +387,7 @@ def main(bron):
     lijst = (bron / "wp-xml" / "bedrijvengids-listdom.xml").read_text(encoding="utf-8")
     schrijf("bedrijf-aanmelden", bedrijf_aanmelden(sorted({html.unescape(c) for c in re.findall(
         r'<category domain="listdom-category" nicename="[^"]*"><!\[CDATA\[([^\]]*)', lijst)})))
-    namen = json.load(open(ROOT / "data" / "aanbieders.json", encoding="utf-8"))
-    schrijf("evenement-aanmelden", evenement_aanmelden(sorted({v["naam"] for v in namen.values()}, key=str.lower)))
+    schrijf("evenement-aanmelden", evenement_aanmelden())
     print("Pagina's: kom-in-contact, adverteren, vergelijking, vacatures (%d)%s"
           % (len(VACATURES), "" if pdf.is_file() else "; mediakit nog niet lokaal"))
 

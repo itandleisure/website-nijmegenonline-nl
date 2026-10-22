@@ -178,6 +178,17 @@ def event_pagina(e, vandaag, komend, aanbieders):
             plek = '<a href="%s%s/%s/">%s</a>' % (root, AANBIEDERS, e["aanbieder"], plek)
         regels.append('<li><span class="evenement-info__kop">Waar</span>%s%s <a href="%s" target="_blank" rel="noopener">Route</a></li>'
                       % (plek, ("<br>" + esc(e["adres"])) if e["adres"] and e["adres"] != e["locatie"] else "", esc(kaart)))
+    contact = []
+    if e.get("website") and not (e["uitgelicht"] and e.get("link")):
+        # Website uit een (gratis) aanmelding: wel een link, maar nofollow
+        domein = re.sub(r"^www\.", "", e["website"].split("/")[2]) if "//" in e["website"] else e["website"]
+        contact.append('<a href="%s" target="_blank" rel="nofollow noopener">%s</a>' % (esc(e["website"]), esc(domein)))
+    if e.get("contactmail"):
+        contact.append('<a href="mailto:%s">%s</a>' % (esc(e["contactmail"]), esc(e["contactmail"])))
+    if e.get("telefoon"):
+        contact.append('<a href="tel:%s">%s</a>' % (esc(re.sub(r"[^\d+]", "", e["telefoon"])), esc(e["telefoon"])))
+    if contact:
+        regels.append('<li><span class="evenement-info__kop">Contact</span>%s</li>' % "<br>".join(contact))
     if e["uitgelicht"] and e.get("link"):
         # Klanten krijgen een link naar hun eigen site (betaald, dus rel="sponsored")
         naam = e["locatie"] or re.sub(r"^www\.", "", e["link"].split("/")[2])

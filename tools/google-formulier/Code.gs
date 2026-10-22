@@ -50,9 +50,12 @@ var FORMULIEREN = {
   },
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 12, onderwerp: 'Evenement aangemeld', goedkeuren: true,
-    openbaar: ['titel', 'datum', 'starttijd', 'eindtijd', 'omschrijving', 'locatie', 'adres'],
+    openbaar: ['titel', 'datum', 'starttijd', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats',
+      'site', 'evenementmail', 'evenementtelefoon'],
     velden: [['titel', 'Evenement'], ['datum', 'Datum'], ['starttijd', 'Begintijd'], ['eindtijd', 'Eindtijd'],
-      ['omschrijving', 'Omschrijving'], ['locatie', 'Locatie'], ['adres', 'Adres'], ['foto', 'Foto'],
+      ['omschrijving', 'Omschrijving'], ['locatie', 'Locatie'], ['adres', 'Adres'], ['postcode', 'Postcode'],
+      ['plaats', 'Plaats'], ['site', 'Website'], ['evenementmail', 'E-mail bezoekers'],
+      ['evenementtelefoon', 'Telefoon bezoekers'], ['foto', 'Foto'],
       ['naam', 'Naam'], ['email', 'E-mail'], ['notitie', 'Opmerking']]
   }
 };
@@ -104,7 +107,7 @@ function doPost(e) {
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email)) fouten.push('email');
   if (type === 'contact' && !g.bericht) fouten.push('bericht');
   if (type === 'evenement') {
-    ['titel', 'datum', 'starttijd', 'eindtijd', 'omschrijving', 'locatie'].forEach(function (v) { if (!g[v]) fouten.push(v); });
+    ['titel', 'datum', 'starttijd', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats'].forEach(function (v) { if (!g[v]) fouten.push(v); });
   }
   if (type === 'bedrijf') {
     ['bedrijf', 'categorie', 'adres', 'telefoon', 'omschrijving'].forEach(function (v) { if (!g[v]) fouten.push(v); });
@@ -390,7 +393,8 @@ function bewerkPagina(type, id) {
   var basis = ScriptApp.getService().getUrl() + '?type=' + type + '&id=' + encodeURIComponent(id) + '&t=' + t + '&actie=';
 
   var velden = cfg.openbaar.filter(function (veld) { return veld !== 'omschrijving'; }).map(function (veld) {
-    var soort = { datum: 'date', starttijd: 'time', eindtijd: 'time', site: 'url', bedrijfsmail: 'email', telefoon: 'tel' }[veld] || 'text';
+    var soort = { datum: 'date', starttijd: 'time', eindtijd: 'time', site: 'url', bedrijfsmail: 'email', evenementmail: 'email',
+      telefoon: 'tel', evenementtelefoon: 'tel' }[veld] || 'text';
     var invoer = veld === 'openingstijden'
       ? '<textarea name="' + veld + '" rows="3">' + html_(g[veld]) + '</textarea>'
       : '<input type="' + soort + '" name="' + veld + '" value="' + html_(g[veld]) + '">';
