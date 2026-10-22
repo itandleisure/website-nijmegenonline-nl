@@ -359,3 +359,7 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .openingstijden td { padding: 1px 0; }
 .kaartkader { width: 100%; height: 320px; border: 1px solid var(--rand); border-radius: var(--radius); display: block; }
 .bron { font-size: 0.85rem; color: var(--grijs); }
+.bedrijflijst--uitgelicht { grid-template-columns: 1fr; }
+.bedrijfkaart--uitgelicht { border: 2px solid var(--groen); background: #eef6e8; }
+@media (min-width: 640px) { .bedrijfkaart--uitgelicht { flex-direction: row; } .bedrijfkaart--uitgelicht img { width: 45%; aspect-ratio: 4 / 3; } .bedrijfkaart--uitgelicht .bedrijfkaart__tekst { padding: 16px 20px; font-size: 1rem; } .bedrijfkaart--uitgelicht strong { font-size: 1.25rem; } }
+.bedrijfkaart__label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--groen); }

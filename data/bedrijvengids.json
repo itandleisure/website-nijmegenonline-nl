@@ -31,7 +31,8 @@
      "Sportschool",
      "Wellness"
     ],
-    "in_gids": true
+    "in_gids": true,
+    "uitgelicht": true
    },
    {
     "slug": "perry-ubeda-weerbaarheidscentrum",
@@ -63,7 +64,8 @@
      "Therapeut",
      "Vechtsport"
     ],
-    "in_gids": true
+    "in_gids": true,
+    "uitgelicht": false
    },
    {
     "slug": "zlim-nijmegen",
@@ -95,7 +97,8 @@
      "Sportschool",
      "Yoga"
     ],
-    "in_gids": true
+    "in_gids": true,
+    "uitgelicht": false
    }
   ],
   "overig": [
