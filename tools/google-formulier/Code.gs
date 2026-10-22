@@ -4,17 +4,17 @@
    - Elk formulier van nijmegenonline.nl komt als nieuwe regel in een eigen tabblad:
      Contact, Partners, Bedrijven en Evenementen. Meegestuurde foto's komen in Google Drive.
    - Evenementen en bedrijven moeten eerst worden goedgekeurd. De mail heeft drie knoppen:
-       Akkoord   → publiceren zoals het is (met de herschreven tekst, zie hieronder)
+       Akkoord   → publiceren zoals het is
        Bewerken  → een pagina waarop je alle gegevens, de tekst en de foto aanpast en dan publiceert
        Afwijzen  → komt niet op de site
      (of zet zelf "Akkoord" in de kolom Status). Elk uur haalt de website (GitHub Actions,
      tools/aanmeldingen.py) de goedgekeurde aanmeldingen op met ?actie=lijst, zet ze op de site en
      meldt ze terug, waarna de status "Gepubliceerd" wordt.
-   - Herschrijven (optioneel): staat er een Anthropic API-sleutel in de scripteigenschap ANTHROPIC_API_KEY,
-     dan schrijft Claude bij elke aanmelding een eigen, unieke omschrijving (kolom "Tekst site") en zet
-     opmerkingen voor de redactie in de kolom "Controle" (geen foto, foto past niet, lege tekst, ...).
-     De mail gaat dan pas weg als dat klaar is (meestal binnen een minuut). Zonder sleutel werkt alles
-     ook, alleen zonder herschreven tekst.
+   - Claude (optioneel): staat er een Anthropic API-sleutel in de scripteigenschap ANTHROPIC_API_KEY, dan heeft
+     de bewerkpagina twee extra knoppen. "Nieuwe tekst laten schrijven" laat Claude een eigen, unieke omschrijving
+     schrijven (kolom "Tekst site") met opmerkingen in de kolom "Controle" (geen foto, foto past niet, lege tekst).
+     "Staat het al ergens anders?" zoekt op internet of andere sites de aanmelding al hebben. Claude doet alleen
+     iets als je op zo'n knop drukt. Zonder sleutel werkt alles ook, alleen zonder deze knoppen.
    - Er gaat een e-mail naar ONTVANGER (antwoorden gaat rechtstreeks naar de invuller).
    - Regels ouder dan de bewaartermijn per tabblad worden elke nacht automatisch verwijderd (privacy).
 
@@ -59,7 +59,6 @@ var FORMULIEREN = {
 
 // Extra kolommen achteraan bij formulieren die goedgekeurd moeten worden
 var EXTRA = ['Status', 'ID', 'Foto-ID', 'Tekst site', 'Controle'];
-var NIEUW = 'Nieuw';               // wacht nog op herschrijven en de mail
 var WACHT = 'Wacht op akkoord';
 
 // Map in Google Drive voor meegestuurde foto's (wordt vanzelf aangemaakt)
@@ -116,9 +115,6 @@ function doPost(e) {
   }
   if (fouten.length) return antwoord({ ok: false, fout: 'velden', velden: fouten });
 
-  // Met API-sleutel eerst herschrijven (op de achtergrond, anders moet de bezoeker daarop wachten)
-  var laterVerwerken = cfg.goedkeuren && apiSleutel();
-
   // 1. Opslaan in de spreadsheet (slot voorkomt dat twee inzendingen tegelijk botsen)
   var slot = LockService.getScriptLock();
   slot.waitLock(10000);
@@ -128,22 +124,11 @@ function doPost(e) {
     }));
     if (cfg.goedkeuren) {
       g.id = Utilities.getUuid().slice(0, 8);
-      rij = rij.concat([laterVerwerken ? NIEUW : WACHT, g.id, g.fotoId || '', '', '']);
+      rij = rij.concat([WACHT, g.id, g.fotoId || '', '', '']);
     }
     blad(cfg).appendRow(rij);
   } finally {
     slot.releaseLock();
-  }
-
-  if (laterVerwerken) {
-    try {
-      ScriptApp.newTrigger('verwerkNu').timeBased().after(5 * 1000).create();
-      return antwoord({ ok: true });
-    } catch (fout) {
-      // Lukt dat niet, dan pakt de uurlijkse taak hem op
-      console.error('Taak plannen mislukt: ' + fout);
-      return antwoord({ ok: true });
-    }
   }
 
   // 2. E-mail sturen. Lukt dat niet, dan staat de inzending in ieder geval al in de spreadsheet.
@@ -154,56 +139,6 @@ function doPost(e) {
   }
 
   return antwoord({ ok: true });
-}
-
-// Eenmalige taak na een aanmelding (zie doPost); ruimt zichzelf op
-function verwerkNu() {
-  ScriptApp.getProjectTriggers().forEach(function (t) {
-    if (t.getHandlerFunction() === 'verwerkNu') ScriptApp.deleteTrigger(t);
-  });
-  verwerkNieuwe();
-}
-
-// Aanmeldingen met status Nieuw: tekst laten herschrijven, controleren en de mail sturen.
-// Draait na elke aanmelding en voor de zekerheid ook elk uur.
-function verwerkNieuwe() {
-  var slot = LockService.getScriptLock();
-  if (!slot.tryLock(1000)) return;   // draait al
-  try {
-    Object.keys(FORMULIEREN).forEach(function (type) {
-      var cfg = FORMULIEREN[type];
-      if (!cfg.goedkeuren) return;
-      var sheet = blad(cfg);
-      var k = kolommen(cfg);
-      if (sheet.getLastRow() < 2) return;
-      var rijen = sheet.getRange(2, 1, sheet.getLastRow() - 1, k.length).getValues();
-      rijen.forEach(function (r, i) {
-        if (String(r[k.indexOf('Status')]) !== NIEUW) return;
-        var g = rijNaarG(cfg, r, k);
-        var tekst = '', controle = '';
-        try {
-          var ai = herschrijf(type, g);
-          tekst = ai.tekst;
-          controle = ai.controle.join('\n');
-        } catch (fout) {
-          console.error('Herschrijven mislukt: ' + fout);
-          controle = 'Herschrijven lukte niet (' + String(fout).slice(0, 200) + '). Bekijk de tekst zelf via Bewerken.';
-        }
-        sheet.getRange(i + 2, k.indexOf('Status') + 1).setValue(WACHT);
-        sheet.getRange(i + 2, k.indexOf('Tekst site') + 1, 1, 2).setValues([[veiligVoorSheet(tekst), veiligVoorSheet(controle)]]);
-        SpreadsheetApp.flush();
-        g.tekstSite = tekst;
-        g.controle = controle;
-        try {
-          stuurMail(cfg, g, cfg.onderwerp + ': ' + (g.titel || g.bedrijf || g.naam));
-        } catch (fout) {
-          console.error('Mail versturen mislukt: ' + fout);
-        }
-      });
-    });
-  } finally {
-    slot.releaseLock();
-  }
 }
 
 // GET-verzoeken:
@@ -604,16 +539,12 @@ function pagina(tekst) {
     'padding:24px;border:2px solid #539c20;border-radius:8px">' + html_(tekst) + '</div>').setTitle('NijmegenOnline');
 }
 
-// Eenmalig uitvoeren: maakt de tabbladen aan en zet de nachtelijke opruimtaak en de uurlijkse
-// verwerktaak aan
+// Eenmalig uitvoeren: maakt de tabbladen aan en zet de nachtelijke opruimtaak aan
 function installeer() {
   Object.keys(FORMULIEREN).forEach(function (k) { blad(FORMULIEREN[k]); });
   var taken = ScriptApp.getProjectTriggers().map(function (t) { return t.getHandlerFunction(); });
   if (taken.indexOf('opruimen') < 0) {
     ScriptApp.newTrigger('opruimen').timeBased().everyDays(1).atHour(3).create();
-  }
-  if (taken.indexOf('verwerkNieuwe') < 0) {
-    ScriptApp.newTrigger('verwerkNieuwe').timeBased().everyHours(1).create();
   }
   opruimen();
 }
@@ -700,7 +631,7 @@ function stuurMail(cfg, g, onderwerp) {
         '<b>Let op</b><br>' + html_(g.controle).replace(/\n/g, '<br>') + '</div>';
     }
     if (g.tekstSite) {
-      boven += '<p style="' + stijl + '"><b>Tekst die op de site komt</b> (eigen woorden, de ingestuurde tekst staat onderaan):</p>' +
+      boven += '<p style="' + stijl + '"><b>Tekst die op de site komt</b> (de ingestuurde tekst staat onderaan):</p>' +
         '<div style="' + stijl + ';border-left:4px solid #539c20;padding:4px 14px;margin-bottom:14px">' +
         html_(g.tekstSite).replace(/\n\s*\n/g, '</p><p>').replace(/\n/g, '<br>').replace(/^/, '<p>') + '</p></div>';
     }
