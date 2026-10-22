@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import SITE, VOET, esc, kop, schoon  # noqa: E402
 
 # /exec-URL van de Google Apps Script-web-app (tools/google-formulier/Code.gs); leeg = mailknop
-GOOGLE_FORM_URL = ""
+GOOGLE_FORM_URL = "https://script.google.com/macros/s/AKfycbyELOZGBRvXanmgy7LSaQD4G5WnAZbACtAWVvcKoslJHT0-NxunjLngM7fJJOrxQyIM/exec"
 EMAIL = "redactie@nijmegenonline.nl"
 TELEFOON = "085 0047 701"
 MEDIAKIT = "2025/05/NijmegenOnline-Advertentiegids-2025.pdf"
