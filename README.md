@@ -121,7 +121,12 @@ Eenmalig instellen:
 ### Aanmeldingen goedkeuren (evenementen en bedrijven)
 
 Een aangemeld evenement of bedrijf komt niet meteen online. De redactie krijgt een mail met de knoppen
-**Akkoord, publiceren** en **Afwijzen** (of zet zelf "Akkoord" in de kolom Status van de Sheet). Elk uur haalt
+**Akkoord, publiceren**, **Bewerken** en **Afwijzen** (of zet zelf "Akkoord" in de kolom Status van de Sheet).
+Bewerken opent een pagina waarop je titel, datum, tijden, locatie, adres, de tekst en de foto aanpast, en dan
+publiceert. Met een Anthropic API-sleutel in de scripteigenschap `ANTHROPIC_API_KEY` schrijft Claude bij elke
+aanmelding een eigen, unieke tekst (kolom "Tekst site", die gaat online) en zet opmerkingen in de kolom "Controle"
+(geen of verkeerde foto, lege tekst, ...). Op de bewerkpagina staan dan ook de knoppen "Nieuwe tekst laten
+schrijven" en "Staat het al ergens anders?" (zoekt op internet of andere sites het al hebben). Elk uur haalt
 `.github/workflows/aanmeldingen.yml` met `tools/aanmeldingen.py` de goedgekeurde aanmeldingen op: evenementen
 gaan in `data/evenementen.json` (foto in `assets/uploads/aangemeld/`), bedrijven in `data/bedrijven-aangemeld.json`
 (voor de bedrijvengids). Daarna wordt de site gebouwd en zet het script de status in de Sheet op "Gepubliceerd".
