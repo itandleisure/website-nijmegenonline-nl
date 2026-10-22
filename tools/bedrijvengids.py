@@ -28,6 +28,7 @@ CATEGORIE = {
     "slug": "sportschool",
     "naam": "Sportscholen in Nijmegen",
     "enkelvoud": "Sportschool",
+    "groep": "Sport en beweging",
     "soorten": {"Sportschool en fitness", "Personal training en bootcamp"},
     "schema": "ExerciseGym",
     "beschrijving": "Alle sportscholen in Nijmegen op een rij: van grote ketens tot kleine studio's voor personal "
@@ -49,7 +50,7 @@ CATEGORIE = {
          "de drukte en de begeleiding bij je passen voordat je een abonnement afsluit."),
     ],
     # Betaalde vermeldingen: bovenaan de categorie, link naar hun site met rel="sponsored"
-    "uitgelicht": ["harbor-gym"],  # voorbeeld
+    "uitgelicht": [],
     "artikelen": ["bammmm-en-je-bent-fit", "afvallen-met-sport-tips-voor-een-kleinere-maat", "7x-de-beste-warming-up-oefeningen"],
 }
 
@@ -122,7 +123,8 @@ def osm_uit_csv(pad, soorten):
         if x["soort"] in soorten and x["plaats"] == "Nijmegen":
             uit.append({"naam": x["naam"], "adres": x["adres"].rstrip(", "), "postcode": x["postcode"], "plaats": x["plaats"],
                         "telefoon": x["telefoon"], "website": x["website"], "lat": x["lat"], "lon": x["lon"],
-                        "soort": x["soort"], "bron": x["bron"], "in_gids": False})
+                        "soort": x["soort"], "bron": x["bron"], "in_gids": False, "email": "", "facebook": "", "instagram": "",
+                        "openingstijden": [], "foto": "", "beschrijving": "", "tekst": ""})
     return uit
 
 
@@ -130,7 +132,19 @@ def samenvoegen(gids, overig):
     """Bedrijven uit de gids gaan voor; dezelfde naam uit OSM/Overture valt dan weg."""
     bekend = {sleutel(b["naam"]) for b in gids}
     gids.sort(key=lambda b: (not b.get("uitgelicht"), b["naam"].lower()))
-    return gids, sorted((b for b in overig if sleutel(b["naam"]) not in bekend), key=lambda b: (b["naam"].lower(), b["adres"]))
+    overig = sorted((b for b in overig if sleutel(b["naam"]) not in bekend), key=lambda b: (b["naam"].lower(), b["adres"]))
+    # Eigen pagina's voor de aangevulde bedrijven; dezelfde naam op meer adressen (ketens) krijgt de straat erbij
+    namen = [slug(b["naam"]) for b in overig]
+    bezet = {b["slug"] for b in gids} | {p.name for p in (ROOT / "bedrijvengids").iterdir() if p.is_dir()} - {slug(b["naam"]) for b in overig}
+    for b in overig:
+        s = slug(b["naam"])
+        if namen.count(s) > 1 or s in bezet:
+            s = slug("%s %s" % (b["naam"], re.sub(r"\s*\d.*$", "", b["adres"])))
+        while s in bezet:
+            s += "-2"
+        b["slug"] = s
+        bezet.add(s)
+    return gids, overig
 
 
 def domein(url):
@@ -152,7 +166,9 @@ def adresregel(b):
 
 def bedrijf_pagina(b, cat, anderen, root="../../"):
     canonical = "%s/bedrijvengids/%s/" % (SITE, b["slug"])
-    beschrijving = b["beschrijving"] or samenvatting(b["tekst"])
+    soort = (b.get("soort") or cat["enkelvoud"]).lower()
+    kort = "<p>%s is een %s aan de %s in %s.</p>" % (esc(b["naam"]), esc(soort), esc(b["adres"]), esc(b["plaats"])) if b["adres"] else ""
+    beschrijving = b["beschrijving"] or samenvatting(b["tekst"] or kort)
     ld = {"@context": "https://schema.org", "@type": cat["schema"], "name": b["naam"], "url": canonical,
           "address": {"@type": "PostalAddress", "streetAddress": b["adres"], "postalCode": b["postcode"],
                       "addressLocality": b["plaats"], "addressCountry": "NL"}}
@@ -171,6 +187,9 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
         {"@type": "ListItem", "position": 2, "name": cat["naam"], "item": "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"])},
         {"@type": "ListItem", "position": 3, "name": b["naam"], "item": canonical}]}
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in (ld, kruim))
+    if not b["tekst"]:
+        # Nog geen eigen tekst: wel een pagina (klikbaar vanuit de lijst), maar niet in Google tot de tekst er is
+        extra += '\n  <meta name="robots" content="noindex">'
     out = [kop(b["naam"], beschrijving, canonical, root, b["foto"] or None, extra)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel bedrijf">')
     out.append('        <div class="kruimelpad"><a href="%s">Home</a> › <a href="%sbedrijvengids-categorie/%s/">%s</a> › %s</div>'
@@ -198,9 +217,16 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
         contact.append(" · ".join('<a href="%s" target="_blank" rel="nofollow noopener">%s</a>' % (esc(u), n.capitalize()) for n, u in social))
     if contact:
         regels.append('<li><span class="evenement-info__kop">Contact</span>%s</li>' % "<br>".join(contact))
+    if not b["in_gids"]:
+        regels.append('<li class="bron">Gegevens: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">'
+                      'OpenStreetMap-bijdragers</a> en Overture Maps. Klopt er iets niet? <a href="%skom-in-contact/">Laat het weten</a>.</li>' % root)
     if b["foto"]:
         out.append('        <figure><img src="%s" alt="%s"></figure>' % (esc(b["foto"]), esc(b["naam"])))
-    out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % schoon(b["tekst"], set(), root, False, b["naam"]))
+    if b["tekst"]:
+        out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % schoon(b["tekst"], set(), root, False, b["naam"]))
+    else:
+        out.append('        <div class="inhoud-tekst">%s<p class="bron">Ben jij van %s? <a href="%sbedrijf-aanmelden/">Vul je gegevens aan</a> met een '
+                   'foto, openingstijden en een beschrijving.</p></div>' % (kort, esc(b["naam"]), root))
     out.append('        <section class="gids-sectie">\n          <h2>Contact en openingstijden</h2>')
     out.append('          <ul class="evenement-info%s">%s</ul>\n        </section>' % (" evenement-info--uitgelicht" if b.get("uitgelicht") else "", "".join(regels)))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
@@ -223,21 +249,57 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
 
 
 def bedrijfkaart(b, root):
-    """Kaartje in een lijst: met eigen pagina (gids) of alleen de gegevens (OSM/Overture)."""
-    if b["in_gids"]:
-        label = '<span class="bedrijfkaart__label">Uitgelicht</span>' if b.get("uitgelicht") else ""
-        foto = '<img src="%s" alt="" loading="lazy">' % esc(b["foto"]) if b["foto"] else ""
-        vandaag = ""
-        if b["openingstijden"]:
-            vandaag = '<span class="bedrijfkaart__open">Ma–vr %s</span>' % esc(b["openingstijden"][0])
-        return ('<a class="bedrijfkaart bedrijfkaart--gids%s" href="%sbedrijvengids/%s/">%s<span class="bedrijfkaart__tekst">'
-                '%s<strong>%s</strong><span>%s</span>%s</span></a>'
-                % (" bedrijfkaart--uitgelicht" if b.get("uitgelicht") else "", root, b["slug"], foto, label, esc(b["naam"]),
-                   esc(adresregel(b)), vandaag))
-    site = (' <a href="%s" target="_blank" rel="nofollow noopener">%s</a>' % (esc(b["website"]), esc(domein(b["website"]))[:40])
-            if b["website"] else "")
-    return ('<div class="bedrijfkaart"><span class="bedrijfkaart__tekst"><strong>%s</strong><span>%s</span>%s</span></div>'
-            % (esc(b["naam"]), esc(adresregel(b)), '<span class="bedrijfkaart__site">%s</span>' % site.strip() if site else ""))
+    """Kaartje in een lijst; elk bedrijf heeft een eigen pagina, die uit de gids met foto en openingstijden."""
+    label = '<span class="bedrijfkaart__label">Uitgelicht</span>' if b.get("uitgelicht") else ""
+    foto = '<img src="%s" alt="" loading="lazy">' % esc(b["foto"]) if b["foto"] else ""
+    open_ = '<span class="bedrijfkaart__open">Ma–vr %s</span>' % esc(b["openingstijden"][0]) if b["openingstijden"] else ""
+    return ('<a class="bedrijfkaart%s" href="%sbedrijvengids/%s/">%s<span class="bedrijfkaart__tekst">%s<strong>%s</strong><span>%s</span>%s</span></a>'
+            % (" bedrijfkaart--uitgelicht" if b.get("uitgelicht") else "", root, b["slug"], foto, label, esc(b["naam"]),
+               esc(adresregel(b)), open_))
+
+
+LEAFLET = ('\n  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">'
+           '\n  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">'
+           '\n  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">'
+           '\n  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" defer></script>'
+           '\n  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" defer></script>')
+
+
+def kaart_blok(bedrijven, root, knoppen=False):
+    """Kaart met alle bedrijven; bedrijven is een lijst (groep, bedrijf). Met knoppen kun je groepen aan- en uitzetten."""
+    groepen = list(dict.fromkeys(g for g, _ in bedrijven))
+    punten = [[b["naam"], round(float(b["lat"]), 6), round(float(b["lon"]), 6), "%sbedrijvengids/%s/" % (root, b["slug"]), adresregel(b), g]
+              for g, b in bedrijven if b["lat"]]
+    data = json.dumps({"groepen": groepen, "punten": punten}, ensure_ascii=False).replace("</", "<\\/")
+    return ('%s          <div id="gidskaart" class="gidskaart" role="region" aria-label="Kaart met bedrijven"></div>\n'
+            '          <script type="application/json" id="kaartdata">%s</script>\n'
+            '          <script src="%sassets/js/kaart.js?v=1" defer></script>'
+            % ('          <div id="kaartgroepen" class="kaartgroepen"></div>\n' if knoppen else "", data, root))
+
+
+def start_pagina(groepen, root="../"):
+    """/bedrijvengids/: kaart met alle bedrijven en de categorieën per groep."""
+    canonical = "%s/bedrijvengids/" % SITE
+    alle = [(g, b) for g, cats in groepen for cat, gids, overig in cats for b in gids + overig]
+    beschrijving = "De bedrijvengids van Nijmegen: zoek op de kaart of per categorie naar sportscholen, restaurants, winkels en meer."
+    out = [kop("Bedrijvengids Nijmegen", beschrijving, canonical, root, None, LEAFLET)]
+    out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel gids">')
+    out.append('        <div class="kruimelpad"><a href="%s">Home</a> › Bedrijvengids</div>' % root)
+    out.append("        <h1>Bedrijvengids Nijmegen</h1>")
+    out.append('        <div class="inhoud-tekst"><p>Op zoek naar een sportschool, een kapper of een plek om te lunchen? In de bedrijvengids '
+               'vind je de bedrijven van Nijmegen, op de kaart en per categorie. Klik op een punt voor het adres en de pagina van het bedrijf.</p></div>')
+    out.append('        <section class="gids-sectie">\n          <h2>Op de kaart</h2>')
+    out.append(kaart_blok(alle, root, knoppen=True))
+    out.append('          <p class="bron">Gegevens: onze eigen gids, aangevuld met © OpenStreetMap-bijdragers en Overture Maps.</p>\n        </section>')
+    out.append('        <section class="gids-sectie">\n          <h2>Categorieën</h2>\n          <div class="gidsgroepen">')
+    for g, cats in groepen:
+        out.append('            <div><h3>%s</h3><ul>%s</ul></div>' % (esc(g), "".join(
+            '<li><a href="%sbedrijvengids-categorie/%s/">%s</a> (%d)</li>' % (root, cat["slug"], esc(cat["naam"]), len(gids) + len(overig))
+            for cat, gids, overig in cats)))
+    out.append('          </div>\n          <p>Staat jouw bedrijf er niet bij? <a href="%sbedrijf-aanmelden/">Meld je bedrijf aan</a>.</p>\n        </section>' % root)
+    out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
+    out.append(VOET)
+    return "\n".join(out)
 
 
 def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
@@ -245,11 +307,11 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     alle = gids + overig
     lijst = {"@context": "https://schema.org", "@type": "ItemList", "name": cat["naam"], "itemListElement": [
         {"@type": "ListItem", "position": n + 1, "name": b["naam"],
-         **({"url": "%s/bedrijvengids/%s/" % (SITE, b["slug"])} if b["in_gids"] else {})} for n, b in enumerate(alle)]}
+         "url": "%s/bedrijvengids/%s/" % (SITE, b["slug"])} for n, b in enumerate(alle)]}
     faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": v, "acceptedAnswer": {"@type": "Answer", "text": a}} for v, a in cat["faq"]]}
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in (lijst, faq))
-    out = [kop(cat["naam"], cat["beschrijving"], canonical, root, gids[0]["foto"] if gids else None, extra)]
+    out = [kop(cat["naam"], cat["beschrijving"], canonical, root, gids[0]["foto"] if gids else None, extra + LEAFLET)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel gids">')
     out.append('        <div class="kruimelpad"><a href="%s">Home</a> › Bedrijvengids › %s</div>' % (root, esc(cat["naam"])))
     out.append('        <p class="gidslabel">Bedrijvengids</p>')
@@ -267,6 +329,9 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
         out.extend("            " + bedrijfkaart(b, root) for b in aangemeld)
         out.append("          </div>\n        </section>")
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
+    out.append('        <section class="gids-sectie">\n          <h2>Op de kaart</h2>')
+    out.append(kaart_blok([(cat["groep"], b) for b in alle], root))
+    out.append('        </section>')
     out.append('        <section class="gids-sectie">\n          <h2>Alle sportscholen in Nijmegen</h2>\n          <div class="bedrijflijst">')
     out.extend("            " + bedrijfkaart(b, root) for b in overig)
     out.append('          </div>')
@@ -310,9 +375,10 @@ def main(bron):
         json.dumps({cat["slug"]: {"gids": gids, "overig": overig}}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     artikelen = [(s, titel_van(s)) for s in cat["artikelen"] if titel_van(s)]
     schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen))
-    for b in gids:
-        anderen = [x for x in gids if x is not b] + overig
+    for b in gids + overig:
+        anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
         schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen))
+    schrijf("bedrijvengids", start_pagina([(cat["groep"], [(cat, gids, overig)])]))
     print("%s: %d uit de gids, %d aangevuld" % (cat["slug"], len(gids), len(overig)))
 
 

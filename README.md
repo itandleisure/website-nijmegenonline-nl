@@ -131,3 +131,11 @@ andere sites het al hebben). Claude doet alleen iets als je op zo'n knop drukt. 
 gaan in `data/evenementen.json` (foto in `assets/uploads/aangemeld/`), bedrijven in `data/bedrijven-aangemeld.json`
 (voor de bedrijvengids). Een evenement komt bij een bestaande aanbieder als de naam overeenkomt (los van café/het/'t, leestekens en accenten) of als straat en huisnummer gelijk zijn aan die van een eerder evenement; op de beoordeelpagina kies je de aanbieder ook zelf in een keuzelijst. Heeft de gekozen aanbieder een bekend adres (`adres` in `data/aanbieders.json`, bijgewerkt bij elke publicatie), dan vult de beoordeelpagina dat in; het adres van de inzender kun je terugzetten. Postcodes: 1234 AB, of 5 cijfers voor Duitsland. Daarna wordt de site gebouwd en zet het script de status in de Sheet op "Gepubliceerd".
 Meteen publiceren in plaats van op het hele uur: Actions > Aanmeldingen publiceren > Run workflow.
+
+### Bedrijvengids (in opbouw)
+
+`python tools/bedrijvengids.py` bouwt de startpagina `/bedrijvengids/` (kaart met alle bedrijven, Leaflet + OpenStreetMap),
+de categoriepagina's en een pagina per bedrijf. Bronnen: de oude Listdom-gids (WordPress-export) en OpenStreetMap/Overture
+(`/mnt/project-files/advies/osm-bedrijvengids/`). Bedrijven zonder eigen tekst krijgen een pagina met `noindex`, tot er een
+eigen beschrijving is. Uitgelichte (betalende) bedrijven staan in `CATEGORIE["uitgelicht"]`. Voorstel voor de categorieën:
+`/mnt/project-files/advies/bedrijvengids-categorieen.md`.

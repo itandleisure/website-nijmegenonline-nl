@@ -32,7 +32,7 @@
      "Wellness"
     ],
     "in_gids": true,
-    "uitgelicht": true
+    "uitgelicht": false
    },
    {
     "slug": "perry-ubeda-weerbaarheidscentrum",
@@ -113,7 +113,15 @@
     "lon": "5.801736",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "apollo-gym"
    },
    {
     "naam": "Area 11 Personal Fit",
@@ -126,7 +134,15 @@
     "lon": "5.830562",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "area-11-personal-fit"
    },
    {
     "naam": "Ashtanga Mysore Nijmegen",
@@ -139,7 +155,15 @@
     "lon": "5.86446",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "ashtanga-mysore-nijmegen"
    },
    {
     "naam": "Avalon Fitcentre",
@@ -152,7 +176,15 @@
     "lon": "5.846431",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "avalon-fitcentre"
    },
    {
     "naam": "Basic-Fit",
@@ -165,7 +197,15 @@
     "lon": "5.788084",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "basic-fit-kerkenbos-2"
    },
    {
     "naam": "Basic-Fit",
@@ -178,7 +218,15 @@
     "lon": "5.863348",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "basic-fit-vlaamsegas-2"
    },
    {
     "naam": "Basic-Fit",
@@ -191,7 +239,15 @@
     "lon": "5.830314",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "basic-fit-weg-door-jonkerbos-2"
    },
    {
     "naam": "Benefit Sports",
@@ -204,7 +260,15 @@
     "lon": "5.8531",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "benefit-sports"
    },
    {
     "naam": "BigGym Nijmegen",
@@ -217,7 +281,15 @@
     "lon": "5.836245",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "biggym-nijmegen"
    },
    {
     "naam": "BodytecNijmegen",
@@ -230,7 +302,15 @@
     "lon": "5.87146",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "bodytecnijmegen"
    },
    {
     "naam": "CompleetFit Nijmegen",
@@ -243,7 +323,15 @@
     "lon": "5.847934",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "compleetfit-nijmegen"
    },
    {
     "naam": "CrossFit Nijmegen",
@@ -256,7 +344,15 @@
     "lon": "5.839406",
     "soort": "Sportschool en fitness",
     "bron": "OpenStreetMap",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "crossfit-nijmegen"
    },
    {
     "naam": "De Dynamische Praktijk bij Le Petit Château",
@@ -269,7 +365,15 @@
     "lon": "5.849677",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "de-dynamische-praktijk-bij-le-petit-chateau"
    },
    {
     "naam": "Eastside Performance",
@@ -282,7 +386,15 @@
     "lon": "5.790839",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "eastside-performance"
    },
    {
     "naam": "EasyActive-6534",
@@ -295,7 +407,15 @@
     "lon": "5.824",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "easyactive-6534"
    },
    {
     "naam": "Exercise Body and Mind",
@@ -308,7 +428,15 @@
     "lon": "5.800358",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "exercise-body-and-mind"
    },
    {
     "naam": "F4F Nijmegen",
@@ -321,7 +449,15 @@
     "lon": "5.8531",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "f4f-nijmegen"
    },
    {
     "naam": "Fit For Free",
@@ -334,7 +470,15 @@
     "lon": "5.853154",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "fit-for-free"
    },
    {
     "naam": "Fit20",
@@ -347,7 +491,15 @@
     "lon": "5.863881",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "fit20"
    },
    {
     "naam": "Fitsmart Personal Training",
@@ -360,7 +512,15 @@
     "lon": "5.82409",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "fitsmart-personal-training"
    },
    {
     "naam": "FittUnit",
@@ -373,7 +533,15 @@
     "lon": "5.813447",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "fittunit"
    },
    {
     "naam": "Freyheyt Sportlounge",
@@ -386,7 +554,15 @@
     "lon": "5.870409",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "freyheyt-sportlounge"
    },
    {
     "naam": "Go4Fit Nijmegen",
@@ -399,7 +575,15 @@
     "lon": "5.872239",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "go4fit-nijmegen"
    },
    {
     "naam": "GroepsGeluk",
@@ -412,7 +596,15 @@
     "lon": "5.856335",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "groepsgeluk"
    },
    {
     "naam": "Healtality",
@@ -425,7 +617,15 @@
     "lon": "5.856851",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "healtality"
    },
    {
     "naam": "Heavy Duty Outdoor Gym",
@@ -438,7 +638,15 @@
     "lon": "5.83857",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "heavy-duty-outdoor-gym"
    },
    {
     "naam": "Het Fitcentrum",
@@ -451,7 +659,15 @@
     "lon": "5.852778",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "het-fitcentrum"
    },
    {
     "naam": "Immovation",
@@ -464,7 +680,15 @@
     "lon": "5.869584",
     "soort": "Sportschool en fitness",
     "bron": "OpenStreetMap",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "immovation"
    },
    {
     "naam": "Impact",
@@ -477,7 +701,15 @@
     "lon": "5.8247",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "impact"
    },
    {
     "naam": "Kracht Coaching | Personal Trainer, Nijmegen",
@@ -490,7 +722,15 @@
     "lon": "5.836152",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "kracht-coaching-personal-trainer-nijmegen"
    },
    {
     "naam": "MASTerGym",
@@ -503,7 +743,15 @@
     "lon": "5.820718",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "mastergym"
    },
    {
     "naam": "MIO personal training",
@@ -516,7 +764,15 @@
     "lon": "5.836373",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "mio-personal-training"
    },
    {
     "naam": "My35' Nijmegen",
@@ -529,7 +785,15 @@
     "lon": "5.857895",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "my35-nijmegen"
    },
    {
     "naam": "New Age 22",
@@ -542,7 +806,15 @@
     "lon": "5.868928",
     "soort": "Sportschool en fitness",
     "bron": "Overture (Foursquare)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "new-age-22"
    },
    {
     "naam": "Nijmegen Outdoor",
@@ -555,7 +827,15 @@
     "lon": "5.869903",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "nijmegen-outdoor"
    },
    {
     "naam": "Nimma Gemina",
@@ -568,7 +848,15 @@
     "lon": "5.886274",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "nimma-gemina"
    },
    {
     "naam": "Nimma Moves",
@@ -581,7 +869,15 @@
     "lon": "5.867363",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "nimma-moves"
    },
    {
     "naam": "Novio Fit",
@@ -594,7 +890,15 @@
     "lon": "5.780044",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "novio-fit"
    },
    {
     "naam": "Personal Fitness Nederland - Nijmegen",
@@ -607,7 +911,15 @@
     "lon": "5.86924",
     "soort": "Personal training en bootcamp",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "personal-fitness-nederland-nijmegen"
    },
    {
     "naam": "Provectas",
@@ -620,7 +932,15 @@
     "lon": "5.837826",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "provectas"
    },
    {
     "naam": "Pulse//Flow",
@@ -633,7 +953,15 @@
     "lon": "5.864497",
     "soort": "Sportschool en fitness",
     "bron": "OpenStreetMap",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "pulse-flow"
    },
    {
     "naam": "Riverland Healthcentre",
@@ -646,7 +974,15 @@
     "lon": "5.838509",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "riverland-healthcentre"
    },
    {
     "naam": "Sanasport Health Club",
@@ -659,7 +995,15 @@
     "lon": "5.83197",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "sanasport-health-club"
    },
    {
     "naam": "SportCity Nijmegen",
@@ -672,7 +1016,15 @@
     "lon": "5.853163",
     "soort": "Sportschool en fitness",
     "bron": "Overture (PinMeTo)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "sportcity-nijmegen"
    },
    {
     "naam": "Sportloods Oost",
@@ -685,7 +1037,15 @@
     "lon": "5.870101",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "sportloods-oost"
    },
    {
     "naam": "SportQube",
@@ -698,7 +1058,15 @@
     "lon": "5.820396",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "sportqube"
    },
    {
     "naam": "Sports Palace",
@@ -711,7 +1079,15 @@
     "lon": "5.8235",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "sports-palace"
    },
    {
     "naam": "The Gym Society",
@@ -724,7 +1100,15 @@
     "lon": "5.869096",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "the-gym-society"
    },
    {
     "naam": "The Kettlebell Club",
@@ -737,7 +1121,15 @@
     "lon": "5.855989",
     "soort": "Sportschool en fitness",
     "bron": "OpenStreetMap",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "the-kettlebell-club"
    },
    {
     "naam": "Trainingscentrum Michi",
@@ -750,7 +1142,15 @@
     "lon": "5.794556",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "trainingscentrum-michi"
    },
    {
     "naam": "Ubeda Sports",
@@ -763,7 +1163,15 @@
     "lon": "5.849822",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "ubeda-sports"
    },
    {
     "naam": "Ultrasport",
@@ -776,7 +1184,15 @@
     "lon": "5.837322",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "ultrasport"
    },
    {
     "naam": "Wav-e Studios Nijmegen",
@@ -789,7 +1205,15 @@
     "lon": "5.869672",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "wav-e-studios-nijmegen"
    },
    {
     "naam": "Xtreme Marine Sports",
@@ -802,7 +1226,15 @@
     "lon": "5.813829",
     "soort": "Sportschool en fitness",
     "bron": "Overture (meta)",
-    "in_gids": false
+    "in_gids": false,
+    "email": "",
+    "facebook": "",
+    "instagram": "",
+    "openingstijden": [],
+    "foto": "",
+    "beschrijving": "",
+    "tekst": "",
+    "slug": "xtreme-marine-sports"
    }
   ]
  }
