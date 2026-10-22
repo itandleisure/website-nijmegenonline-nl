@@ -1,0 +1,3 @@
+{
+ "_uitleg": "Betaalde pakketten per bedrijf (slug zoals in de url /bedrijvengids/<slug>/). pakket: uitgelicht, partner of hoofdpartner. Na betaald_tot valt het bedrijf bij de nachtelijke herbouw terug naar gratis. Alles behalve pakket en betaald_tot is optioneel. Voorbeeld: \"apollo-gym\": {\"pakket\": \"uitgelicht\", \"betaald_tot\": \"2027-10-31\", \"logo\": \"https://...\", \"fotos\": [\"https://...\"], \"knop\": {\"tekst\": \"Plan een proefles\", \"link\": \"https://...\"}, \"actie\": {\"tekst\": \"Twee weken gratis sporten\", \"tot\": \"2026-12-31\"}}"
+}

@@ -119,7 +119,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=7" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=8" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -161,6 +161,14 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
             regels.append('          <fieldset class="formulier__keuzes"><legend>%s%s</legend>' % (esc(label), ster))
             regels += ['            <label><input type="checkbox" name="%s" value="%s"> %s</label>' % (veld, esc(o), esc(o)) for o in opties]
             regels.append("          </fieldset>")
+        elif soort == "keuze":
+            # Eén keuze (radio); opties = (waarde, tekst); de eerste staat aan
+            regels.append('          <fieldset class="formulier__keuzes"><legend>%s%s</legend>' % (esc(label), ster))
+            regels += ['            <label><input type="radio" name="%s" value="%s"%s> %s</label>' % (veld, esc(w), " checked" if i == 0 else "", esc(o))
+                       for i, (w, o) in enumerate(opties)]
+            regels.append("          </fieldset>")
+        elif soort == "verborgen":
+            regels.append('          <input type="hidden" name="%s" value="">' % veld)
         elif soort == "bestand":
             regels.append('          <label for="%s">%s%s</label>\n          <input id="%s" name="%s" type="file" accept="image/jpeg,image/png,image/webp"%s>'
                           % (id_, esc(label), ster, id_, veld, req))
@@ -249,11 +257,20 @@ def algemene_voorwaarden(tekst, meta):
     return pagina("Algemene voorwaarden", meta.get("rank_math_description", ""), "algemene-voorwaarden", "Algemene voorwaarden", inhoud)
 
 
+# Zie het verdienmodel (Claude Doc "Verdienmodel NijmegenOnline"); prijzen per jaar, excl. btw
+BEDRIJF_PAKKETTEN = [
+    ("gratis", "Gratis: eigen pagina met adres, kaart, openingstijden en een korte tekst"),
+    ("uitgelicht", "Uitgelicht (€149 per jaar, het eerste jaar €99): bovenaan je categorie, met logo, foto's en een actieknop"),
+    ("partner", "Partner (€449 per jaar): Uitgelicht, plus een banner in je branche, een artikel en de nieuwsbrief"),
+]
+
+
 def bedrijf_aanmelden(categorieen):
     inhoud = """        <h1>Bedrijf aanmelden</h1>
         <p class="pagina__intro">Zet je bedrijf in de bedrijvengids van NijmegenOnline. Vul het formulier in, dan maken we je vermelding aan en nemen we contact met je op.</p>
         <p>Meer opvallen, bijvoorbeeld met een banner of artikelen over je bedrijf? Bekijk de mogelijkheden bij <a href="{site}/adverteren-bij-nijmegenonline/">adverteren</a>.</p>
 {formulier}""".format(site=SITE, formulier=formulier("bedrijf", "Aanmelding bedrijvengids NijmegenOnline", [
+        ("vermelding", "", "verborgen", False, None),
         ("bedrijf", "Naam van het bedrijf", "text", True, None),
         ("categorie", "Soort bedrijf", "text", True, categorieen),
         ("adres", "Adres (straat, huisnummer, postcode en plaats)", "text", True, None),
@@ -264,7 +281,8 @@ def bedrijf_aanmelden(categorieen):
         ("omschrijving", "Korte omschrijving van het bedrijf", "tekst", True, None),
         ("foto", "Logo of foto", "bestand", False, "JPG, PNG of WebP, maximaal 20 MB."),
         ("naam", "Je naam (contactpersoon)", "text", True, None),
-        ("email", "Je e-mailadres", "email", True, None)], "Aanmelden",
+        ("email", "Je e-mailadres", "email", True, None),
+        ("pakket", "Hoe wil je in de gids staan?", "keuze", True, BEDRIJF_PAKKETTEN)], "Aanmelden",
         "Bedankt! De redactie heeft je aanmelding ontvangen en bekijkt die zo snel mogelijk. Soms passen we de tekst wat aan, "
         "zodat die goed op de website past. Je krijgt een e-mail zodra je bedrijf in de bedrijvengids staat, of als we het niet kunnen plaatsen."))
     return pagina("Bedrijf aanmelden", "Zet je bedrijf in de bedrijvengids van NijmegenOnline: vul het formulier in en wij maken je vermelding aan.",

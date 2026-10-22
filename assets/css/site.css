@@ -304,12 +304,13 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .contactgegevens span { min-width: 80px; font-weight: 700; }
 .formulier { display: grid; gap: 6px; max-width: 560px; margin: 16px 0 32px; }
 .formulier label, .formulier legend { font-weight: 600; margin-top: 8px; }
-.formulier input:not([type="checkbox"]), .formulier textarea { width: 100%; padding: 10px 12px; border: 1px solid #c9ced4; border-radius: 6px; font: inherit; }
+.formulier input:not([type="checkbox"]):not([type="radio"]), .formulier textarea { width: 100%; padding: 10px 12px; border: 1px solid #c9ced4; border-radius: 6px; font: inherit; }
 .formulier input:focus, .formulier textarea:focus { outline: 2px solid var(--blauw); outline-offset: 1px; }
 .formulier .knop { justify-self: start; margin-top: 12px; border: 0; cursor: pointer; font: inherit; font-weight: 700; }
 .formulier__val { position: absolute; left: -9999px; }
 .formulier__keuzes { border: 0; padding: 0; margin: 0; display: grid; gap: 4px; }
 .formulier__keuzes label { font-weight: 400; margin: 0; display: flex; gap: 8px; align-items: center; }
+.formulier__keuzes input[type="radio"] { flex: none; margin-top: 4px; align-self: flex-start; }
 .formulier__melding { margin: 8px 0 0; padding: 10px 14px; border-radius: 6px; background: #eef7e6; }
 .formulier__melding--fout { background: #fdecea; }
 .artikel-layout--breed { max-width: 1000px; grid-template-columns: minmax(0, 1fr) !important; }
@@ -389,3 +390,12 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .gidsfilter button[aria-pressed="true"] { background: var(--groen); color: var(--wit); }
 .gidsfilter__uitkomst { margin: 12px 0 0; font-weight: 600; }
 .gidsfilter__uitkomst button { margin-left: 6px; padding: 3px 10px; font-size: 0.85rem; }
+
+/* Bedrijvengids: pakketten en Dit is mijn bedrijf */
+.mijnbedrijf { margin: 24px 0; padding: 16px 18px; border: 1px dashed var(--groen); border-radius: 10px; background: #f6faf3; }
+.mijnbedrijf p { margin: 0 0 10px; }
+.mijnbedrijf p:last-child { margin: 0; }
+.gidsactie { padding: 10px 14px; border-radius: 8px; background: #fff6e0; border-left: 4px solid #e8a317; }
+.gidsactie strong { margin-right: 6px; }
+.gidsfotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; margin: 16px 0; }
+.gidsfotos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; }

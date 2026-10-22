@@ -60,6 +60,15 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       einddatum.min = datum.value;
     });
   }
+  // Velden vooraf invullen vanuit de url, bijvoorbeeld de knop "Dit is mijn bedrijf" in de bedrijvengids
+  new URLSearchParams(location.search).forEach(function (waarde, sleutel) {
+    if (["form", "pagina", "duur", "website"].indexOf(sleutel) !== -1) return;
+    form.querySelectorAll('[name="' + sleutel.replace(/[^\w-]/g, "") + '"]').forEach(function (v) {
+      if (v.type === "file") return;
+      if (v.type === "radio" || v.type === "checkbox") { if (v.value === waarde) v.checked = true; return; }
+      v.value = waarde;
+    });
+  });
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var ontbreekt = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (v) {

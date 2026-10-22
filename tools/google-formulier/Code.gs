@@ -45,7 +45,9 @@ var FORMULIEREN = {
     openbaar: ['bedrijf', 'categorie', 'adres', 'site', 'telefoon', 'bedrijfsmail', 'openingstijden', 'omschrijving'],
     velden: [['bedrijf', 'Bedrijf'], ['categorie', 'Soort bedrijf'], ['adres', 'Adres'], ['site', 'Website'],
       ['telefoon', 'Telefoon'], ['bedrijfsmail', 'E-mail bedrijf'], ['openingstijden', 'Openingstijden'],
-      ['omschrijving', 'Omschrijving'], ['foto', 'Logo of foto'], ['naam', 'Contactpersoon'], ['email', 'E-mail']]
+      ['omschrijving', 'Omschrijving'], ['foto', 'Logo of foto'], ['naam', 'Contactpersoon'], ['email', 'E-mail'],
+      ['pakket', 'Pakket'],            // gratis, uitgelicht of partner
+      ['vermelding', 'Bestaande vermelding']]   // slug van de pagina in de gids, via de knop Dit is mijn bedrijf
   },
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 3, onderwerp: 'Evenement aangemeld', goedkeuren: true,

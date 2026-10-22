@@ -137,5 +137,7 @@ Meteen publiceren in plaats van op het hele uur: Actions > Aanmeldingen publicer
 `python tools/bedrijvengids.py` bouwt de startpagina `/bedrijvengids/` (kaart met alle bedrijven, Leaflet + OpenStreetMap),
 de categoriepagina's en een pagina per bedrijf. Bronnen: de oude Listdom-gids (WordPress-export) en OpenStreetMap/Overture
 (`/mnt/project-files/advies/osm-bedrijvengids/`). Bedrijven zonder eigen tekst krijgen een pagina met `noindex`, tot er een
-eigen beschrijving is. Uitgelichte (betalende) bedrijven staan in `CATEGORIE["uitgelicht"]`. Voorstel voor de categorieën:
+eigen beschrijving is. Teksten, openingstijden en kenmerken komen uit de websitescan (`tools/bedrijven_scan.py`, workflow *Bedrijven scannen*) in `data/bedrijvengids-scan.json`: status `voorstel` staat als concept online (noindex), `goedgekeurd` gaat Google in, `verwijderd` haalt het bedrijf uit de gids.
+
+Betaalde pakketten staan in `data/bedrijvengids-pakketten.json` (pakket, betaald_tot, logo, fotos, knop, actie). Uitgelicht = bovenaan de categorie, maximaal 3, volgorde wisselt per dag; na `betaald_tot` valt het bedrijf bij de nachtelijke herbouw (workflow *Agenda*) terug naar gratis. Elke gratis pagina heeft een knop *Dit is mijn bedrijf* naar het aanmeldformulier met de gegevens al ingevuld. Voorstel voor de categorieën:
 `/mnt/project-files/advies/bedrijvengids-categorieen.md`.

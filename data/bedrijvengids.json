@@ -31,8 +31,7 @@
      "Sportschool",
      "Wellness"
     ],
-    "in_gids": true,
-    "uitgelicht": false
+    "in_gids": true
    },
    {
     "slug": "perry-ubeda-weerbaarheidscentrum",
@@ -64,8 +63,7 @@
      "Therapeut",
      "Vechtsport"
     ],
-    "in_gids": true,
-    "uitgelicht": false
+    "in_gids": true
    },
    {
     "slug": "zlim-nijmegen",
@@ -97,8 +95,7 @@
      "Sportschool",
      "Yoga"
     ],
-    "in_gids": true,
-    "uitgelicht": false
+    "in_gids": true
    }
   ],
   "overig": [
@@ -355,27 +352,6 @@
     "slug": "crossfit-nijmegen"
    },
    {
-    "naam": "De Dynamische Praktijk bij Le Petit Château",
-    "adres": "Sint Jacobslaan 174",
-    "postcode": "6533 VM",
-    "plaats": "Nijmegen",
-    "telefoon": "+31651817507",
-    "website": "http://dedynamischepraktijk.nl/",
-    "lat": "51.819173",
-    "lon": "5.849677",
-    "soort": "Personal training en bootcamp",
-    "bron": "Overture (meta)",
-    "in_gids": false,
-    "email": "",
-    "facebook": "",
-    "instagram": "",
-    "openingstijden": [],
-    "foto": "",
-    "beschrijving": "",
-    "tekst": "",
-    "slug": "de-dynamische-praktijk-bij-le-petit-chateau"
-   },
-   {
     "naam": "Eastside Performance",
     "adres": "Van Rosenburgweg 10",
     "postcode": "6537 TM",
@@ -416,27 +392,6 @@
     "beschrijving": "",
     "tekst": "",
     "slug": "easyactive-6534"
-   },
-   {
-    "naam": "Exercise Body and Mind",
-    "adres": "De Gildekamp 6018",
-    "postcode": "6545 LX",
-    "plaats": "Nijmegen",
-    "telefoon": "+31243787936",
-    "website": "http://www.exercisebodyandmind.nl/",
-    "lat": "51.831547",
-    "lon": "5.800358",
-    "soort": "Sportschool en fitness",
-    "bron": "Overture (meta)",
-    "in_gids": false,
-    "email": "",
-    "facebook": "",
-    "instagram": "",
-    "openingstijden": [],
-    "foto": "",
-    "beschrijving": "",
-    "tekst": "",
-    "slug": "exercise-body-and-mind"
    },
    {
     "naam": "F4F Nijmegen",
@@ -733,27 +688,6 @@
     "slug": "kracht-coaching-personal-trainer-nijmegen"
    },
    {
-    "naam": "MASTerGym",
-    "adres": "Rosa de Limastraat 23",
-    "postcode": "6543 JG",
-    "plaats": "Nijmegen",
-    "telefoon": "",
-    "website": "http://gymmaster.nl/",
-    "lat": "51.832176",
-    "lon": "5.820718",
-    "soort": "Personal training en bootcamp",
-    "bron": "Overture (meta)",
-    "in_gids": false,
-    "email": "",
-    "facebook": "",
-    "instagram": "",
-    "openingstijden": [],
-    "foto": "",
-    "beschrijving": "",
-    "tekst": "",
-    "slug": "mastergym"
-   },
-   {
     "naam": "MIO personal training",
     "adres": "Weurtseweg 452 6541 BE",
     "postcode": "6541 BE",
@@ -1046,27 +980,6 @@
     "beschrijving": "",
     "tekst": "",
     "slug": "sportloods-oost"
-   },
-   {
-    "naam": "SportQube",
-    "adres": "Rosa de Limastraat 23",
-    "postcode": "6543 JG",
-    "plaats": "Nijmegen",
-    "telefoon": "+31242049665",
-    "website": "http://www.sportqube.nl/",
-    "lat": "51.832159",
-    "lon": "5.820396",
-    "soort": "Sportschool en fitness",
-    "bron": "Overture (meta)",
-    "in_gids": false,
-    "email": "",
-    "facebook": "",
-    "instagram": "",
-    "openingstijden": [],
-    "foto": "",
-    "beschrijving": "",
-    "tekst": "",
-    "slug": "sportqube"
    },
    {
     "naam": "Sports Palace",
