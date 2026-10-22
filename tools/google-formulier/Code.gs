@@ -6,7 +6,7 @@
    - Evenementen en bedrijven moeten eerst worden goedgekeurd. De mail heeft drie knoppen:
        Akkoord   → publiceren zoals het is
        Bewerken  → een pagina waarop je alle gegevens, de tekst en de foto aanpast en dan publiceert
-       Afwijzen  → komt niet op de site
+       Afwijzen  → een pagina waarop je de reden aanvinkt; de inzender krijgt (als je wilt) een mail met die reden
      (of zet zelf "Akkoord" in de kolom Status). Elk uur haalt de website (GitHub Actions,
      tools/aanmeldingen.py) de goedgekeurde aanmeldingen op met ?actie=lijst, zet ze op de site en
      meldt ze terug, waarna de status "Gepubliceerd" wordt.
@@ -144,6 +144,7 @@ function doPost(e) {
 // GET-verzoeken:
 //  ?actie=akkoord|afwijzen&type=..&id=..&t=..   knoppen in de mail (t = handtekening, zie teken())
 //  ?actie=bewerken&type=..&id=..&t=..           bewerkpagina (knop in de mail)
+//  ?actie=afwijzen&type=..&id=..&t=..           pagina om af te wijzen, met reden en mail aan de inzender
 //  ?actie=lijst                                 goedgekeurde aanmeldingen voor de website (alleen openbare velden)
 //  ?actie=gepubliceerd&type=..&id=..&t=..       de website meldt dat een aanmelding online staat
 //  zonder actie                                 laat zien dat het script werkt
@@ -154,6 +155,7 @@ function doGet(e) {
     var cfg = FORMULIEREN[p.type];
     if (!cfg || !cfg.goedkeuren || !p.id || p.t !== teken(p.type, p.id)) return pagina('Deze link klopt niet.');
     if (p.actie === 'bewerken') return bewerkPagina(p.type, p.id);
+    if (p.actie === 'afwijzen') return afwijsPagina(p.type, p.id);
     var nieuw = { akkoord: 'Akkoord', afwijzen: 'Afgewezen', gepubliceerd: 'Gepubliceerd' }[p.actie];
     var oud = zetStatus(cfg, p.id, nieuw);
     if (oud === null) return pagina('Deze aanmelding staat niet (meer) in de spreadsheet.');
@@ -520,6 +522,96 @@ function bewaarBewerking(d) {
   }
 }
 
+// ---------- Afwijzen ----------
+
+var SITE = 'https://www.nijmegenonline.nl';
+var REDENEN = [
+  'Er is geen foto meegestuurd.',
+  'De foto is niet geschikt (bijvoorbeeld onscherp, te klein, met veel tekst of over iets anders).',
+  'De omschrijving is te kort of onvolledig.',
+  'Er ontbreken gegevens of ze kloppen niet (zoals datum, tijd of locatie).',
+  'Het past niet bij NijmegenOnline (bijvoorbeeld reclame, of niet in Nijmegen en omgeving).'
+];
+
+function afwijsPagina(type, id) {
+  var cfg = FORMULIEREN[type];
+  var nr = zoekRij(cfg, id);
+  if (!nr) return pagina('Deze aanmelding staat niet (meer) in de spreadsheet.');
+  var k = kolommen(cfg);
+  var g = rijNaarG(cfg, blad(cfg).getRange(nr, 1, 1, k.length).getValues()[0], k);
+  if (g.status === 'Gepubliceerd') return pagina('Deze aanmelding staat al op de website.');
+  if (g.status === 'Afgewezen') return pagina('Deze aanmelding is al afgewezen.');
+  var naam = g.titel || g.bedrijf;
+  var opnieuw = SITE + (type === 'evenement' ? '/evenement-aanmelden/' : '/bedrijf-aanmelden/');
+  var css = 'body{font-family:Arial,sans-serif;font-size:16px;color:#222;max-width:760px;margin:0 auto;padding:16px}' +
+    'h1{font-size:24px;color:#539c20}label{display:block;margin:0 0 10px}input[type=checkbox]{margin-right:8px}' +
+    'textarea{display:block;width:100%;box-sizing:border-box;margin:4px 0 16px;padding:8px;font:inherit;line-height:1.5;' +
+    'border:1px solid #bbb;border-radius:6px}.knoppen{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}' +
+    'button{padding:12px 20px;border:0;border-radius:6px;font:inherit;font-weight:bold;cursor:pointer;color:#fff;background:#9aa1a9}' +
+    'button.hoofd{background:#b03a2e}button:disabled{opacity:.5}#melding{font-weight:bold}.klein{color:#666}';
+  var html = '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
+    '<style>' + css + '</style></head><body>' +
+    '<h1>Afwijzen: ' + html_(naam) + '</h1>' +
+    '<p class="klein">Ingestuurd door ' + html_(g.naam) + ' (' + html_(g.email) + ')</p>' +
+    '<p><b>Waarom wijs je af?</b></p>' +
+    REDENEN.map(function (r, i) {
+      return '<label><input type="checkbox" class="reden" value="' + i + '" onchange="maak()">' + html_(r) + '</label>';
+    }).join('') +
+    '<label><b>Eigen toelichting</b> (komt ook in de mail)<textarea id="eigen" rows="3" oninput="maak()"></textarea></label>' +
+    '<label><b>Mail aan de inzender</b> (kun je nog aanpassen)<textarea id="bericht" rows="14"></textarea></label>' +
+    '<div class="knoppen"><button class="hoofd" onclick="stuur(true)">Afwijzen en mail sturen</button>' +
+    '<button onclick="stuur(false)">Afwijzen zonder mail</button></div><p id="melding"></p>' +
+    '<script>' +
+    'var REDENEN=' + JSON.stringify(REDENEN) + ',SLEUTEL=' + JSON.stringify({ type: type, id: id, t: teken(type, id) }) + ';' +
+    'var KOP=' + js_('Beste ' + (g.naam || 'aanmelder') + ',\n\nBedankt voor het aanmelden van "' + naam +
+      '" bij NijmegenOnline. Helaas kunnen we ' + (type === 'evenement' ? 'je evenement' : 'je bedrijf') +
+      ' zo niet plaatsen.') + ';' +
+    'var STAART=' + js_('Pas het gerust aan en meld het opnieuw aan via ' + opnieuw +
+      '. Heb je vragen? Beantwoord dan deze mail.\n\nMet vriendelijke groet,\nRedactie NijmegenOnline') + ';' +
+    'function maak(){var r=[];document.querySelectorAll(".reden:checked").forEach(function(c){r.push("- "+REDENEN[c.value])});' +
+    ' var eigen=document.getElementById("eigen").value.trim();if(eigen)r.push(eigen);' +
+    ' document.getElementById("bericht").value=KOP+(r.length?"\\n\\nDe reden:\\n"+r.join("\\n"):"")+"\\n\\n"+STAART}' +
+    'function stuur(mail){var d={type:SLEUTEL.type,id:SLEUTEL.id,t:SLEUTEL.t,mail:mail,bericht:document.getElementById("bericht").value,' +
+    ' redenen:[]};document.querySelectorAll(".reden:checked").forEach(function(c){d.redenen.push(REDENEN[c.value])});' +
+    ' var eigen=document.getElementById("eigen").value.trim();if(eigen)d.redenen.push(eigen);' +
+    ' document.querySelectorAll("button").forEach(function(b){b.disabled=true});' +
+    ' google.script.run.withSuccessHandler(function(m){document.getElementById("melding").textContent=m})' +
+    ' .withFailureHandler(function(e){document.querySelectorAll("button").forEach(function(b){b.disabled=false});' +
+    '  document.getElementById("melding").textContent="Dat lukte niet: "+e.message}).wijsAf(d)}' +
+    'maak();</script></body></html>';
+  return HtmlService.createHtmlOutput(html).setTitle('Aanmelding afwijzen · NijmegenOnline')
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
+}
+
+// Aangeroepen vanaf de afwijspagina (google.script.run)
+function wijsAf(d) {
+  var cfg = FORMULIEREN[d.type];
+  if (!cfg || !cfg.goedkeuren || !d.id || d.t !== teken(d.type, d.id)) throw new Error('Deze link klopt niet.');
+  var nr = zoekRij(cfg, d.id);
+  if (!nr) throw new Error('Deze aanmelding staat niet (meer) in de spreadsheet.');
+  var sheet = blad(cfg);
+  var k = kolommen(cfg);
+  var g = rijNaarG(cfg, sheet.getRange(nr, 1, 1, k.length).getValues()[0], k);
+  if (g.status === 'Gepubliceerd') throw new Error('Deze aanmelding staat al op de website.');
+  sheet.getRange(nr, k.indexOf('Status') + 1).setValue('Afgewezen');
+  var reden = (d.redenen || []).join(' ');
+  sheet.getRange(nr, k.indexOf('Controle') + 1).setValue(
+    veiligVoorSheet(['Afgewezen' + (reden ? ': ' + reden : ''), g.controle].filter(String).join('\n').slice(0, 5000)));
+  if (!d.mail) return 'Afgewezen. Er is geen mail gestuurd.';
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email)) return 'Afgewezen, maar het e-mailadres van de inzender klopt niet, dus er is geen mail gestuurd.';
+  var tekst = schoon(d.bericht, 5000);
+  MailApp.sendEmail({
+    to: g.email,
+    replyTo: ONTVANGER,
+    name: 'Redactie NijmegenOnline',
+    subject: 'Je aanmelding bij NijmegenOnline: ' + (g.titel || g.bedrijf),
+    body: tekst,
+    htmlBody: '<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5">' +
+      html_(tekst).replace(/(https:\/\/[^\s<]+[^\s<.,])/g, '<a href="$1">$1</a>').replace(/\n/g, '<br>') + '</div>'
+  });
+  return 'Afgewezen en de mail is gestuurd naar ' + g.email + '.';
+}
+
 // ---------- Overig ----------
 
 // Handtekening voor de links in de mail, met een geheime sleutel die alleen in dit script staat
@@ -663,6 +755,11 @@ function schoon(waarde, max) {
 // de voorloopnul van een telefoonnummer weghaalt (0612... wordt anders 612...)
 function veiligVoorSheet(tekst) {
   return /^[=+\-@]/.test(tekst) || /^0\d/.test(tekst) ? "'" + tekst : tekst;
+}
+
+// JSON voor in een <script>: geen </script> uit ingestuurde tekst
+function js_(waarde) {
+  return JSON.stringify(waarde).replace(/</g, '\\u003c');
 }
 
 function html_(tekst) {
