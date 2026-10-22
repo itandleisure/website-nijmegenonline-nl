@@ -206,6 +206,9 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
     if b["openingstijden"]:
         rijen = "".join("<tr><th>%s</th><td>%s</td></tr>" % (DAGEN[i], esc(t or "onbekend")) for i, t in enumerate(b["openingstijden"]))
         regels.append('<li><span class="evenement-info__kop">Openingstijden</span><table class="openingstijden">%s</table></li>' % rijen)
+    if b.get("kenmerken"):
+        regels.append('<li><span class="evenement-info__kop">Goed om te weten</span><span class="bedrijfkaart__kenmerken">%s</span></li>'
+                      % "".join("<span>%s</span>" % esc(k) for k in b["kenmerken"]))
     contact = []
     if b["website"]:
         contact.append('<a href="%s" target="_blank" rel="%s noopener">%s</a>'
@@ -258,9 +261,11 @@ def bedrijfkaart(b, root):
     label = '<span class="bedrijfkaart__label">Uitgelicht</span>' if b.get("uitgelicht") else ""
     foto = '<img src="%s" alt="" loading="lazy">' % esc(b["foto"]) if b["foto"] else ""
     open_ = '<span class="bedrijfkaart__open">Ma–vr %s</span>' % esc(b["openingstijden"][0]) if b["openingstijden"] else ""
-    return ('<a class="bedrijfkaart%s" href="%sbedrijvengids/%s/">%s<span class="bedrijfkaart__tekst">%s<strong>%s</strong><span>%s</span>%s</span></a>'
-            % (" bedrijfkaart--uitgelicht" if b.get("uitgelicht") else "", root, b["slug"], foto, label, esc(b["naam"]),
-               esc(adresregel(b)), open_))
+    km = b.get("kenmerken") or []
+    chips = '<span class="bedrijfkaart__kenmerken">%s</span>' % "".join("<span>%s</span>" % esc(k) for k in km[:4]) if km else ""
+    return ('<a class="bedrijfkaart%s" href="%sbedrijvengids/%s/" data-kenmerken="%s">%s<span class="bedrijfkaart__tekst">%s<strong>%s</strong><span>%s</span>%s%s</span></a>'
+            % (" bedrijfkaart--uitgelicht" if b.get("uitgelicht") else "", root, b["slug"], esc("|".join(km)), foto, label, esc(b["naam"]),
+               esc(adresregel(b)), open_, chips))
 
 
 LEAFLET = ('\n  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">'
@@ -323,6 +328,7 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     out.append("        <h1>%s</h1>" % esc(cat["naam"]))
     out.append('        <div class="inhoud-tekst">%s</div>' % cat["intro"])
     out.append('        <p class="gidsteller">%d sportscholen in Nijmegen, waarvan %d met een eigen pagina in onze gids.</p>' % (len(alle), len(gids)))
+    out.append(filter_blok(alle))
     uitgelicht = [b for b in gids if b.get("uitgelicht")]
     aangemeld = [b for b in gids if not b.get("uitgelicht")]
     if uitgelicht:
@@ -355,6 +361,22 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     return "\n".join(out)
 
 
+def filter_blok(bedrijven):
+    """Knoppen om op kenmerk te filteren (assets/js/filter.js); alleen kenmerken die bij minstens twee bedrijven voorkomen."""
+    tel = {}
+    for b in bedrijven:
+        for k in b.get("kenmerken") or []:
+            tel[k] = tel.get(k, 0) + 1
+    knoppen = sorted((k for k, n in tel.items() if n >= 2), key=lambda k: (-tel[k], k))
+    if not knoppen:
+        return ""
+    return ('        <div class="gidsfilter" id="gidsfilter">\n          <p class="gidsfilter__kop">Waar zoek je naar?</p>\n          <div class="gidsfilter__knoppen">%s</div>\n'
+            '          <p class="gidsfilter__uitkomst" aria-live="polite" hidden></p>\n        </div>\n'
+            '        <script src="%sassets/js/filter.js?v=1" defer></script>'
+            % ("".join('<button type="button" data-kenmerk="%s" aria-pressed="false">%s <span>%d</span></button>' % (esc(k), esc(k[0].upper() + k[1:]), tel[k])
+                       for k in knoppen), "../../"))
+
+
 def titel_van(slug_):
     pad = ROOT / slug_ / "index.html"
     if not pad.exists():
@@ -373,6 +395,7 @@ def scan_toepassen(bedrijven, pad):
         b["tekst"] = "\n".join("<p>%s</p>" % esc(a.strip()) for a in re.split(r"\n\s*\n", s["tekst"]) if a.strip())
         b["concept"] = s["status"] != "goedgekeurd"
         b["tijden_site"] = s.get("openingstijden", "")
+        b["kenmerken"] = s.get("kenmerken", [])
 
 
 def schrijf(pad, tekst):

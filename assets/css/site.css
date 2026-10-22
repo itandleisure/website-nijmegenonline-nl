@@ -376,3 +376,16 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .kaartbol span { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border-radius: 50%; background: var(--donkerblauw); color: var(--wit); font-weight: 700; font-size: 0.9rem; border: 3px solid rgba(255, 255, 255, 0.85); box-shadow: 0 0 0 4px rgba(18, 73, 124, 0.25); box-sizing: border-box; }
 .gidskaart .leaflet-popup-content { font-family: inherit; font-size: 0.95rem; }
 .gidskaart .leaflet-popup-content a { font-weight: 700; }
+
+/* Bedrijvengids: kenmerken en filter */
+.bedrijfkaart[hidden], .gids-sectie[hidden] { display: none; }
+.bedrijfkaart__kenmerken { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.bedrijfkaart__kenmerken span { font-size: 0.78rem; line-height: 1.2; padding: 3px 8px; border-radius: 999px; background: #eef5ea; color: var(--groen); }
+.gidsfilter { margin: 18px 0 6px; padding: 14px 16px; background: var(--wit); border: 1px solid var(--rand); border-radius: 10px; }
+.gidsfilter__kop { margin: 0 0 10px; font-weight: 600; color: var(--kop); }
+.gidsfilter__knoppen { display: flex; flex-wrap: wrap; gap: 8px; }
+.gidsfilter button { font: inherit; font-size: 0.9rem; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--groen); background: var(--wit); color: var(--groen); cursor: pointer; }
+.gidsfilter button span { opacity: 0.7; font-size: 0.8rem; }
+.gidsfilter button[aria-pressed="true"] { background: var(--groen); color: var(--wit); }
+.gidsfilter__uitkomst { margin: 12px 0 0; font-weight: 600; }
+.gidsfilter__uitkomst button { margin-left: 6px; padding: 3px 10px; font-size: 0.85rem; }
