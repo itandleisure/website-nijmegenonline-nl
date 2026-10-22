@@ -82,5 +82,41 @@
   "reden": "Verouderde openingstijden 2023",
   "regex": "<p><strong>Feestdagen</strong></p>\\s*<p>1e Kerstdag maandag 25 december 2023.*?</p>",
   "nieuw": ""
+ },
+ {
+  "artikel": "bestemmingen/mook",
+  "reden": "Pagina aangevuld met actuele info (oktober 2026)",
+  "regex": "<p>(?:<strong>)?Mook is gesitueerd.*?6969111\\s*</strong></p>",
+  "nieuw": "<p>Mook ligt aan de Maas, zo'n 10 kilometer ten zuiden van Nijmegen. Samen met Middelaar, Plasmolen en Molenhoek vormt het de gemeente Mook en Middelaar, de meest noordelijke gemeente van Limburg. Vanuit Nijmegen fiets je er in een half uur naartoe, en dan sta je meteen tussen de heide, de bossen en het water.</p>\n<h2>Wat te doen in Mook?</h2>\n<h3>Wandelen over de Mookerheide</h3>\n<p>De Mookerheide is een glooiend heidegebied met uitzicht over het Maasdal. In augustus kleurt de heide paars. De Twee Schansenroute van ongeveer 5 kilometer loopt over Landgoed Mookerheide, langs het jachtslot, de historische kassen en tuinen en twee oude verdedigingswerken: de Heumense Schans en de Mookerschans. Ook etappe 18 van het Pieterpad, van Groesbeek naar Gennep, komt hier langs.</p>\n<h3>De Sint-Jansberg</h3>\n<p>Bij Plasmolen ligt de Sint-Jansberg, een bosrijk heuvelgebied met steile hellingen, beekjes en bronnen. Je wandelt er over smalle paden en mountainbikers vinden er uitdagende routes.</p>\n<h3>Zwemmen en varen op de Mookerplas</h3>\n<p>Tussen Middelaar en de Mookerheide ligt de Mookerplas, ontstaan door zandwinning langs de Maas. Je kunt er zwemmen en suppen, een bootje of waterfiets huren en neerstrijken bij een strandpaviljoen.</p>\n<h3>Geschiedenis van Mook</h3>\n<p>In 1574, tijdens de Tachtigjarige Oorlog, vond hier de Slag op de Mookerheide plaats. Spaanse troepen versloegen het leger van Lodewijk en Hendrik van Nassau, de broers van Willem van Oranje. Beide broers kwamen daarbij om.</p>\n<p>Ook in de Tweede Wereldoorlog lag Mook aan het front. Tijdens Operatie Market Garden in september 1944 raakten Mook, Plasmolen en Middelaar zwaar beschadigd. Op de Mook War Cemetery liggen geallieerde soldaten die in deze omgeving zijn gesneuveld.</p>\n<p>Plasmolen trok eind 19e en begin 20e eeuw schilders aan die het landschap kwamen vastleggen. Het dorp staat daarom bekend als kunstenaarskolonie.</p>\n<h3>Jachtslot Mookerheide</h3>\n<p>In Molenhoek staat Jachtslot Mookerheide, een jachthuis uit 1904 in jugendstil, met een pluktuin. Je kunt er ook uit eten.</p>\n<h3>Gemeentehuis Mook en Middelaar</h3>\n<p>Raadhuisplein 6, 6585 AP Mook<br/>Telefoon 024 696 91 11<br/><a href=\"https://www.mookenmiddelaar.nl/\" rel=\"noopener\" target=\"_blank\">Website gemeente Mook en Middelaar</a></p>"
+ },
+ {
+  "artikel": "bestemmingen/heumen",
+  "reden": "Pagina aangevuld en openingstijden gecontroleerd op heumen.nl (oktober 2026)",
+  "regex": "<h2>(?:<strong>)?Heumen: Een Schat.*?</ul>",
+  "nieuw": "<h2>Heumen: rust en natuur aan de rand van Nijmegen</h2>\n<p>Heumen ligt aan de Maas en het Maas-Waalkanaal, net ten zuiden van Nijmegen. De gemeente bestaat uit de dorpen Heumen, Malden, Overasselt, Nederasselt en een deel van Molenhoek. Malden is het grootste dorp en daar staat ook het gemeentehuis. Het is een rustige streek met veel bos, heide, vennen en uiterwaarden.</p>\n<h2>Wat te doen in Heumen?</h2>\n<h3>De Overasseltse en Hatertse Vennen</h3>\n<p>Een natuurgebied met vennen, bossen en heide, ideaal om te wandelen. Aan de rand liggen de resten van de middeleeuwse Sint-Walrickkapel. Er staan alleen nog lage muurtjes in het gras, en je kunt er altijd vrij rondlopen. Vlakbij zit Pannenkoekhuis St. Walrick.</p>\n<h3>Heumensoord</h3>\n<p>Het grote bosgebied Heumensoord bij Malden is geliefd bij wandelaars, fietsers en ruiters. In het bos zijn nog de contouren van een Romeinse wachttoren te zien. Bij Boscafé de Zweef kijk je uit over het zweefvliegveld, en daar vind je ook een Tourist Information Point.</p>\n<h3>De sluisbrug van Heumen</h3>\n<p>Op 17 september 1944, de eerste dag van Operatie Market Garden, veroverden Amerikaanse parachutisten de hefbrug over de sluis bij Heumen. Het was de enige brug over het Maas-Waalkanaal die heel bleef, en zo konden zware Britse voertuigen Nijmegen bereiken.</p>\n<h3>Musea en molens</h3>\n<ul><li><strong>Agrarisch Museum De Lage Hof</strong> in Overasselt laat het boerenleven tussen 1850 en 1960 zien.</li><li><strong>Ateliermuseum Jac Maris</strong> in Heumen is een van de weinige ateliermusea van Nederland.</li><li><strong>Molen Zeldenrust</strong> is een standerdmolen in Overasselt. In Heumen staat de <strong>Joannusmolen</strong>.</li></ul>\n<h3>Met kinderen</h3>\n<ul><li>HARM's Hoeve in Malden, een belevenisboerderij met kinderboerderij.</li><li>De Maisdoolhof-Speelboerderij in Malden, met maisdoolhof, skelters en springkussens.</li><li>Binnenspeeltuin FunZone Malden.</li></ul>\n<h3>Gemeente Heumen</h3>\n<p>Kerkplein 6, 6581 AC Malden<br/>Telefoon 14 024</p>\n<p>Openingstijden gemeentehuis:</p>\n<ul><li>Maandag tot en met donderdag van 8.30 tot 17.00 uur</li><li>Vrijdag van 8.30 tot 12.00 uur</li><li>Donderdagavond van 17.30 tot 20.00 uur, alleen voor burgerzaken</li></ul>\n<p>Voor een paspoort, ID-kaart of rijbewijs maak je altijd eerst een afspraak.</p>"
+ },
+ {
+  "artikel": "bestemmingen/kleve",
+  "reden": "Openingstijden winkels algemener gemaakt (oktober 2026)",
+  "regex": "<p>Hieronder vind je de openingstijden.*?Er is geen koopzondag in Kleve</p>",
+  "nieuw": "<p>De meeste winkels in de binnenstad van Kleef zijn van maandag tot en met zaterdag open van ongeveer 9.30 tot 18.30 uur. Op zaterdag sluiten kleinere winkels vaak eerder, en supermarkten zijn meestal langer open.</p>\n<p>Op zondag zijn de winkels in Duitsland dicht. Alleen op een paar verkaufsoffene Sonntage per jaar mogen ze open.</p>"
+ },
+ {
+  "artikel": "bestemmingen/kleve",
+  "reden": "Openingstijden stadhuis niet meer actueel (oktober 2026)",
+  "regex": "<table>\\s*<tbody>\\s*<tr>\\s*<td>Openingstijden Stadhuis:.*?</table>",
+  "nieuw": "<p>Het stadhuis heeft wisselende openingstijden en voor veel zaken werk je op afspraak. Kijk voor actuele tijden op <a href=\"https://www.kleve.de/\" rel=\"noopener\" target=\"_blank\">kleve.de</a>.</p>"
+ },
+ {
+  "artikel": "bestemmingen/kleve",
+  "reden": "Toeristische informatie bijgewerkt via kleve-erleben.de (oktober 2026)",
+  "regex": "<p>Onze vriendelijke medewerkers.*?</table>\\s*<p><strong>Wirtschaft &amp; Tourismus Stadt Kleve</strong>.*?</p>",
+  "nieuw": "<p>Bij het toeristenbureau in het stadhuis kun je terecht met vragen en koop je fietskaarten, ansichtkaarten en souvenirs.</p>\n<ul><li>Maandag tot en met donderdag van 10.00 tot 16.00 uur</li><li>Vrijdag en zaterdag van 10.00 tot 14.00 uur</li><li>In het weekend is er ook informatie in de Schwanenturm, zaterdag en zondag van 11.00 tot 17.00 uur</li></ul>\n<p><strong>Tourist Information Kleve</strong><br/>Minoritenplatz 2, 47533 Kleve<br/>Vanuit Nederland: 0049 2821 84806<br/><a href=\"https://kleve-erleben.de/\" rel=\"noopener\" target=\"_blank\">kleve-erleben.de</a></p>"
+ },
+ {
+  "artikel": "bestemmingen/nijmegen-dukenburg",
+  "reden": "Koopzondag gecontroleerd (oktober 2026)",
+  "regex": "(Iedere eerste zondag van de maand)",
+  "nieuw": "\\1. Een aantal supermarkten is elke zondag open."
  }
 ]
