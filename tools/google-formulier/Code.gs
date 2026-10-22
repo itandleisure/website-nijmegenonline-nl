@@ -3,10 +3,9 @@
    Dit script hoort bij een Google Sheet (Extensies → Apps Script).
    - Elk formulier van nijmegenonline.nl komt als nieuwe regel in een eigen tabblad:
      Contact, Partners, Bedrijven en Evenementen. Meegestuurde foto's komen in Google Drive.
-   - Evenementen en bedrijven moeten eerst worden goedgekeurd. De mail heeft drie knoppen:
-       Akkoord   → publiceren zoals het is
-       Bewerken  → een pagina waarop je alle gegevens, de tekst en de foto aanpast en dan publiceert
-       Afwijzen  → een pagina waarop je de reden aanvinkt; de inzender krijgt (als je wilt) een mail met die reden
+   - Evenementen en bedrijven moeten eerst worden goedgekeurd. De mail heeft één knop, "Bekijken en beoordelen":
+     een pagina waarop je alle gegevens, de tekst en de foto aanpast en dan publiceert of afwijst (afwijzen opent
+     een pagina waarop je de reden aanvinkt; de inzender krijgt als je wilt een mail met die reden)
      (of zet zelf "Akkoord" in de kolom Status). Elk uur haalt de website (GitHub Actions,
      tools/aanmeldingen.py) de goedgekeurde aanmeldingen op met ?actie=lijst, zet ze op de site en
      meldt ze terug, waarna de status "Gepubliceerd" wordt.
@@ -438,7 +437,7 @@ function bewerkPagina(type, id) {
 
   var html = '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
     '<style>' + css + '</style></head><body>' +
-    '<h1>' + html_(type === 'evenement' ? 'Evenement bewerken' : 'Bedrijf bewerken') + '</h1>' +
+    '<h1>' + html_(type === 'evenement' ? 'Evenement beoordelen' : 'Bedrijf beoordelen') + '</h1>' +
     '<p class="status">Status: ' + html_(g.status) + ' · ingestuurd door ' + html_(g.naam) + ' (' + html_(g.email) + ')' +
     (g.notitie ? '<br>Opmerking van de inzender: ' + html_(g.notitie) : '') + '</p>' +
     (g.controle ? '<div class="controle"><b>Let op</b>\n' + html_(g.controle) + '</div>' : '') +
@@ -776,11 +775,9 @@ function stuurMail(cfg, g, onderwerp) {
         '<div style="' + stijl + ';border-left:4px solid #539c20;padding:4px 14px;margin-bottom:14px">' +
         html_(g.tekstSite).replace(/\n\s*\n/g, '</p><p>').replace(/\n/g, '<br>').replace(/^/, '<p>') + '</p></div>';
     }
-    html = '<p style="font-family:Arial,sans-serif;font-size:15px">Klopt alles? Met Akkoord komt deze aanmelding ' +
-      'binnen een uur vanzelf op nijmegenonline.nl. Met Bewerken pas je eerst tekst, gegevens of foto aan.</p><p>' +
-      '<a href="' + basis + 'akkoord" style="' + knop + '#539c20">Akkoord, publiceren</a>' +
-      '<a href="' + basis + 'bewerken" style="' + knop + '#2f6fae">Bewerken</a>' +
-      '<a href="' + basis + 'afwijzen" style="' + knop + '#9aa1a9">Afwijzen</a></p>' + boven + html;
+    html = '<p style="font-family:Arial,sans-serif;font-size:15px">Bekijk de aanmelding, pas zo nodig tekst, gegevens of ' +
+      'foto aan en kies daar publiceren of afwijzen.</p><p>' +
+      '<a href="' + basis + 'bewerken" style="' + knop + '#539c20">Bekijken en beoordelen</a></p>' + boven + html;
     onderwerp = 'Goedkeuren: ' + onderwerp;
   }
   MailApp.sendEmail({

@@ -121,7 +121,7 @@ Eenmalig instellen:
 ### Aanmeldingen goedkeuren (evenementen en bedrijven)
 
 Een aangemeld evenement of bedrijf komt niet meteen online. De redactie krijgt een mail met de knoppen
-**Akkoord, publiceren**, **Bewerken** en **Afwijzen** (of zet zelf "Akkoord" in de kolom Status van de Sheet).
+**Bekijken en beoordelen** (of zet zelf "Akkoord" in de kolom Status van de Sheet).
 Afwijzen opent een pagina waarop je de reden aanvinkt; de inzender krijgt dan een mail met die reden. Bewerken opent een pagina waarop je titel, datum, tijden, locatie, adres, de tekst en de foto aanpast, en dan
 publiceert. Met een Anthropic API-sleutel in de scripteigenschap `ANTHROPIC_API_KEY` staan op de bewerkpagina
 ook de knoppen "Nieuwe tekst laten schrijven" (Claude schrijft een eigen, unieke tekst in de kolom "Tekst site",
