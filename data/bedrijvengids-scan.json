@@ -1,31 +1,4 @@
 {
- "apollo-gym": {
-  "adres_op_site": "Meijhorst 6002 - 6537KT - Nijmegen",
-  "bronnen": [
-   "https://apollogym.nl/gratis-dagkaart/"
-  ],
-  "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [
-   "groepslessen",
-   "personal training",
-   "proefles"
-  ],
-  "kosten_tokens": {
-   "in": 61772,
-   "uit": 1718
-  },
-  "lijkt_actief": true,
-  "naam": "Apollo Gym",
-  "openingstijden": "",
-  "opmerkingen": "Ik heb alleen de pagina gratis-dagkaart kunnen lezen. Daarna liep ik tegen de limiet van het ophaalprogramma aan, dus de homepage en de pagina met veelgestelde vragen heb ik niet gezien. Op de gelezen pagina staan geen openingstijden. Over faciliteiten zoals sauna, parkeren of rolstoeltoegankelijkheid staat er ook niets. Pilates en cardio kickboksen zijn alleen losse groepslessen, daarom staan ze niet als extra categorie. Het telefoonnummer verschilt: 06 51 72 97 34 in de tekst en +31642049998 in de WhatsApp-link.",
-  "status": "voorstel",
-  "tekst": "Deze sportschool aan de Meijhorst in Nijmegen-Zuid combineert fitness met een uitgebreid programma aan live groepslessen. Je traint er op fitnessapparatuur, en elke dag staan er groepslessen onder leiding van instructeurs op het rooster.\n\nHet lesaanbod is breed: HIIT, indoor cycling, Body Shape, BBB (buik, benen, billen), Body Toning, Zumba, cardio kickboksen, pilates, City Circuit en een speciale les voor senioren. Wie meer begeleiding wil, kan kiezen voor personal training of een trainings- en voedingsschema laten maken. Leden kunnen ook een eigen app gebruiken.\n\nNieuwe bezoekers kunnen eerst een proefperiode van twee weken aanvragen. Op de eerste dag krijg je een rondleiding en uitleg over de toestellen van een instructeur.",
-  "website": "https://apollogym.nl/gratis-dagkaart/#fixed-section",
-  "website_bereikbaar": true
- },
  "area-11-personal-fit": {
   "adres_op_site": "",
   "bronnen": [
