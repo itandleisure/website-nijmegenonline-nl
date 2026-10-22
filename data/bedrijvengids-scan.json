@@ -1,9 +1,10 @@
 {
  "apollo-gym": {
-  "adres_op_site": "Meijhorst 6002, 6537 KT Nijmegen",
+  "adres_op_site": "Meijhorst 6002 - 6537KT - Nijmegen",
   "bronnen": [
+   "https://apollogym.nl/",
    "https://apollogym.nl/gratis-dagkaart/",
-   "https://apollogym.nl/club-info/"
+   "https://apollogym.nl/contact/"
   ],
   "categorie_scan": "sportschool",
   "extra_categorieen": [],
@@ -15,15 +16,15 @@
    "proefles"
   ],
   "kosten_tokens": {
-   "in": 105173,
-   "uit": 1650
+   "in": 60963,
+   "uit": 1533
   },
   "lijkt_actief": true,
   "naam": "Apollo Gym",
   "openingstijden": "",
-  "opmerkingen": "Er staan geen reguliere openingstijden op de gelezen pagina's. Er is wel een aparte pagina 'Aangepaste Openingstijden', maar die heb ik niet gelezen. Pilates is één van de groepslessen en niet als aparte categorie opgenomen. Het telefoonnummer op de site is 06 51 72 97 34; de WhatsApp-link gebruikt een ander nummer (+31 6 42049998). De homepage kon niet rechtstreeks worden opgehaald, daarom ben ik begonnen bij de opgegeven subpagina.",
+  "opmerkingen": "Op de gelezen pagina's staan geen vaste openingstijden; in het menu staat alleen een pagina 'Aangepaste Openingstijden'. In het menu staan Personal Training en Pilates, maar die pagina's zijn niet gelezen. Pilates is één van de groepslessen en is daarom niet als aparte categorie opgenomen. Er staan twee nummers op de site: 06 51 72 97 34 (bellen of appen) en 06 42 04 99 98 (WhatsApp-knop). Op de homepage staat nog 'Gratis Dagkaart'; op de proefpagina gaat het om twee weken gratis.",
   "status": "voorstel",
-  "tekst": "Deze sportschool in de Nijmeegse wijk Meijhorst combineert fitness met een dagelijks rooster van live groepslessen onder leiding van instructeurs. Het lesaanbod omvat onder meer HIIT, indoor cycling, Body Shape, Body Toning, BBB, Zumba, cardiokickboksen, pilates, City Circuit en een speciale les voor senioren.\n\nOp de fitnessvloer kunnen leden gebruikmaken van de toestellen en krijgen ze uitleg en begeleiding. Daarnaast zijn personal training, trainingsschema's en voedingsschema's mogelijk. Nieuwe sporters kunnen twee weken op proef komen; de eerste dag begint met een rondleiding en een persoonlijke kennismaking.\n\nDe club zit op de plek waar eerder sportschool Hara negentien jaar gevestigd was. Na de sluiting tijdens de pandemie namen twee betrokkenen de locatie over en gingen verder onder een nieuwe naam, met een deel van het oude team.",
+  "tekst": "Zoek je een sportschool waar je niet hoeft te wachten tot er een toestel vrij is? In de Meijhorst in Dukenburg vind je Apollo Gym, een ruime en rustige club met een huiselijke sfeer. Veel leden zijn tussen de 35 en 70 jaar, dus hier train je tussen mensen die ongeveer net zo in het leven staan als jij.\n\nJe kunt er terecht voor fitness, maar ook voor de live groepslessen die er elke dag zijn: van HIIT, indoor cycling en Zumba tot pilates, cardiokickboksen en Senioren Fit. Bij de intake legt een instructeur je uit hoe de toestellen werken en stelt hij samen met jou een trainingsschema op.\n\nTwijfel je nog? Plan dan online je eerste dag in. Je krijgt een rondleiding en daarna mag je twee weken gratis meedoen, zonder contract. Je kunt ook gewoon even binnenlopen.",
   "website": "https://apollogym.nl/gratis-dagkaart/#fixed-section",
   "website_bereikbaar": true
  },
@@ -217,15 +218,15 @@
    "proefles"
   ],
   "kosten_tokens": {
-   "in": 68756,
-   "uit": 1237
+   "in": 93922,
+   "uit": 1201
   },
   "lijkt_actief": true,
   "naam": "BigGym Nijmegen",
-  "openingstijden": "ma-vr 07:00-23:00, za-zo 08:30-17:00 (afwijkende tijden op feestdagen, Koningsdag gesloten)",
-  "opmerkingen": "biggym.nl stuurt door naar biggym.com. De openingstijden staan op een algemene pagina voor alle vestigingen en niet specifiek voor Nijmegen. Reformer Pilates wordt volgens de site alleen in Alkmaar en Heerhugowaard aangeboden en dus nog niet in Nijmegen. 'Proefles' is toegevoegd omdat de site bij de vraag over een proefles naar de dagpas verwijst.",
+  "openingstijden": "ma-vr 07:00-23:00, za-zo 08:30-17:00",
+  "opmerkingen": "De openingstijden komen van de algemene openingstijdenpagina van BigGym en gelden niet specifiek voor Nijmegen. Op de site heet een dagpas ook een manier om een proefles te volgen. Reformer Pilates wordt alleen genoemd voor Alkmaar en Heerhugowaard, niet voor Nijmegen, en staat daarom niet in de tekst. De site noemt zichzelf 'de grootste sportschool van Nederland'; dat hebben we niet overgenomen. http://www.biggym.nl/ verwijst door naar biggym.com.",
   "status": "voorstel",
-  "tekst": "Aan de Hatertseweg in Nijmegen zit een vestiging van de landelijke sportschoolketen BigGym. Je kunt er fitnessen met kracht- en cardioapparatuur. Er is ook een zone van 3000 m² voor functionele training, en er worden live groepslessen gegeven.\n\nVerder zijn er douches, gratis wifi en een zonnebank, en je kunt er gratis parkeren. Met een lidmaatschap kun je ook terecht bij de andere BigGym-vestigingen in Nederland. Er zijn abonnementen voor één of twee personen en een variant voor overdag. Wie eerst wil kijken, kan een dagpas kopen. Inschrijven kan online of aan de balie. De BigGym-app geldt als toegangsbewijs.\n\nDe sportschool is doordeweeks open van 's ochtends vroeg tot laat in de avond. In het weekend zijn de openingstijden korter.",
+  "tekst": "Zoek je een plek waar je na je werk nog lekker kunt trainen, ook als het laat wordt? Aan de Hatertseweg vind je de Nijmeegse vestiging van de landelijke keten BigGym. Er is een ruime zone voor functionele training, met cardio- en krachtapparatuur, een boksring en een hoek voor calisthenics.\n\nTrain je liever niet alleen? Dan kun je meedoen met de live groepslessen. Er lopen ook medewerkers rond die je op weg helpen, wat je niveau ook is. Na afloop kun je douchen in de kleedkamers, en je parkeert er gratis. Met je lidmaatschap kun je ook terecht bij de andere BigGym-vestigingen in het land.\n\nWil je eerst kijken of het bij je past? Neem dan een dagpas aan de balie of online, en ga een dag lang aan de slag.",
   "website": "http://www.biggym.nl/",
   "website_bereikbaar": true
  },
@@ -292,7 +293,7 @@
   "categorie_scan": "sportschool",
   "extra_categorieen": [
    {
-    "bewijs": "Individuele lessen\n\nPersonal Training",
+    "bewijs": "Individuele lessen Personal Training",
     "categorie": "personal-training"
    }
   ],
@@ -305,15 +306,15 @@
    "bedrijfsuitje"
   ],
   "kosten_tokens": {
-   "in": 24719,
-   "uit": 954
+   "in": 25201,
+   "uit": 884
   },
   "lijkt_actief": true,
   "naam": "CrossFit Nijmegen",
   "openingstijden": "ma 07:00-22:00, di 08:00-22:00, wo 07:00-22:00, do-vr 08:00-22:00, za 08:00-15:00, zo 09:00-15:00 (afwijkende tijden op feestdagen)",
-  "opmerkingen": "Alleen de homepage is gelezen, en die bevat genoeg informatie. Teambuilding staat op de homepage als apart aanbod en is daarom als kenmerk 'bedrijfsuitje' opgenomen. Het logo van CrossFit Kids staat op de site, maar een kinderprogramma wordt nergens genoemd. Daarom is dat weggelaten. De vermoedelijke categorie was Sportscholen. Voor de hoofdcategorie is crossfit gekozen, omdat dat beter past.",
+  "opmerkingen": "Vermoedelijke categorie was Sportscholen, maar het gaat om een CrossFit-box, dus crossfit als hoofdcategorie. Op de site staan claims als 'de grootste box van Nijmegen' en 'topcoaches'; die hebben we niet overgenomen. Er staat ook een logo van CrossFit Kids, maar er wordt geen kinderaanbod genoemd, dus dat is weggelaten. Alleen de homepage is gelezen.",
   "status": "voorstel",
-  "tekst": "Deze CrossFit-box aan de Nieuwe Mollenhutseweg heeft meer dan 1100 vierkante meter trainingsruimte, verdeeld over meerdere zalen. De trainingen combineren gewichtheffen, atletiek en gymnastiek tot functionele oefeningen op hoge intensiteit. Ze zijn bedoeld voor zowel beginners als ervaren sporters.\n\nNaast de dagelijkse WOD in groepsverband zijn er specialisatielessen, Hyrox-training, een programma voor 55-plussers, personal training en teambuilding voor groepen. Nieuwe leden beginnen met een gratis proefles en volgen daarna een Health Check van twee sessies, waarin ze de basisoefeningen leren. Daarna kunnen ze aansluiten bij de groepslessen. Inschrijven voor lessen gaat via de SportBit-app.\n\nDe box is zeven dagen per week open en sluit maar twee dagen per jaar. Bezoekers van buiten kunnen ook een losse drop-in-training volgen.",
+  "tekst": "Wil je sterker en fitter worden zonder in je eentje op een loopband te staan? Aan de Nieuwe Mollenhutseweg vind je een ruime CrossFit-box met meerdere zalen. Daar train je in kleine groepen met gewichtheffen, gymnastiek en conditietraining door elkaar, en coaches letten op je techniek.\n\nNaast de dagelijkse WOD kun je hier ook terecht voor Hyrox-training, specialties zoals Olympisch gewichtheffen, lessen voor 55-plussers, personal training en teambuilding. Of je nu beginner bent of al jaren traint: de lessen worden aangepast aan jouw niveau. Je begint met een Health Check van twee sessies, waarin je de basisoefeningen leert.\n\nDe box is zeven dagen per week open. Twijfel je nog? Plan via de website een gratis proefles en ervaar zelf hoe de sfeer is.",
   "website": "https://www.crossfit-nijmegen.com",
   "website_bereikbaar": true
  },
