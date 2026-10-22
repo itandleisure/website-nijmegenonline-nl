@@ -99,3 +99,19 @@ homepage en in de zijbalk). `.github/workflows/agenda.yml` draait dit elke nacht
 Volgorde bij een volledige herbouw:
 `python tools/import_wordpress.py && python tools/agenda.py && python tools/afbeeldingen.py && python tools/build.py`.
 De eenmalige import uit WordPress staat in `tools/import_evenementen.py`.
+
+## Losse pagina's en formulieren
+
+`tools/paginas.py` maakt Kom in contact, Adverteren (met de vergelijking) en de vacatures, met de teksten uit de
+WordPress-export. Een vacature open of dicht zetten: pas `VACATURES` bovenin dat script aan en draai
+`python tools/paginas.py && python tools/build.py`.
+
+De formulieren werken zoals bij Badass Rentals: ze gaan naar het Google Apps Script `tools/google-formulier/Code.gs`.
+Dat zet elke inzending in een Google Sheet (tabbladen Contact en Partners) en mailt redactie@nijmegenonline.nl.
+Zolang `GOOGLE_FORM_URL` leeg is, opent het formulier het mailprogramma van de bezoeker.
+
+Eenmalig instellen:
+1. Maak een Google Sheet, bijv. "NijmegenOnline formulieren". Extensies > Apps Script: plak `Code.gs`.
+2. Kies de functie `installeer` en klik Uitvoeren (toestemming geven).
+3. Implementeren > Nieuwe implementatie > Web-app, uitvoeren als: ik, toegang: iedereen.
+4. Zet de /exec-URL in `GOOGLE_FORM_URL` in `tools/paginas.py`, draai `python tools/paginas.py && python tools/build.py`, commit en push.
