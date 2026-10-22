@@ -340,3 +340,22 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .formulier__rij { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; }
 .formulier__rij > div { display: grid; gap: 6px; align-content: start; }
 .formulier select { width: 100%; padding: 10px 12px; border: 1px solid #c9ced4; border-radius: 6px; font: inherit; background: #fff; }
+
+/* Bedrijvengids */
+.bedrijflijst { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-top: 14px; }
+.bedrijflijst--groot { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.bedrijfkaart { display: flex; flex-direction: column; background: var(--wit); border: 1px solid var(--rand); border-radius: 10px; overflow: hidden; color: var(--tekst); text-decoration: none; }
+.bedrijfkaart--gids { transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+.bedrijfkaart--gids:hover, .bedrijfkaart--gids:focus-visible { border-color: var(--groen); box-shadow: 0 6px 16px rgba(18, 73, 124, 0.12); transform: translateY(-2px); }
+.bedrijfkaart img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.bedrijfkaart__tekst { display: flex; flex-direction: column; gap: 3px; padding: 10px 14px; font-size: 0.92rem; color: var(--grijs); min-width: 0; }
+.bedrijfkaart__tekst strong { font-size: 1rem; color: var(--kop); line-height: 1.3; }
+.bedrijfkaart--gids:hover strong { color: var(--blauw); }
+.bedrijfkaart__open { color: var(--groen); font-weight: 600; }
+.bedrijfkaart__site { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gidsteller { color: var(--grijs); font-weight: 600; }
+.openingstijden { border-collapse: collapse; margin-top: 4px; }
+.openingstijden th { text-align: left; font-weight: 400; padding: 1px 16px 1px 0; text-transform: capitalize; }
+.openingstijden td { padding: 1px 0; }
+.kaartkader { width: 100%; height: 320px; border: 1px solid var(--rand); border-radius: var(--radius); display: block; }
+.bron { font-size: 0.85rem; color: var(--grijs); }
