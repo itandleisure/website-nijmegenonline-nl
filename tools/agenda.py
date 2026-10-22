@@ -83,10 +83,27 @@ def lokaal(url):
     return "assets/uploads/%s.webp" % m.group(1) if m and (ROOT / ("assets/uploads/%s.webp" % m.group(1))).is_file() else None
 
 
+# Kaartfoto voor evenementen zonder eigen foto: een andere foto van dezelfde aanbieder (vult main() in)
+VERVANGFOTO = {}
+
+
+def kaartfoto(e, root, klasse):
+    """<img> voor een kaart. Logo's en banners (heel breed of staand) worden heel getoond in plaats van bijgesneden."""
+    foto = lokaal(e["afbeelding"]) or VERVANGFOTO.get(e.get("aanbieder"))
+    if not foto:
+        return ""
+    try:
+        from PIL import Image
+        b, h = Image.open(ROOT / foto).size
+        heel = b / h > 2 or b / h < 0.9
+    except Exception:
+        heel = False
+    return '<img src="%s%s" alt="" loading="lazy"%s>' % (root, foto, ' class="%s"' % klasse if heel else "")
+
+
 def eventkaart(e, vandaag, root):
     s = max(dag(e, "start"), vandaag) if dag(e, "eind") >= vandaag else dag(e, "start")
-    foto = lokaal(e["afbeelding"])
-    img = '<img src="%s%s" alt="" loading="lazy">' % (root, foto) if foto else ""
+    img = kaartfoto(e, root, "eventkaart__heel")
     plaats = '<span class="eventkaart__plaats">%s</span>' % esc(e["locatie"]) if e["locatie"] else ""
     label = '<span class="eventkaart__label">Uitgelicht</span>' if e["uitgelicht"] else ""
     return ('<a class="eventkaart%s" href="%sevents/%s/"><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
@@ -97,9 +114,7 @@ def eventkaart(e, vandaag, root):
 
 def uitgelichtkaart(e, vandaag, root):
     """Grote groene kaart voor evenementen van klanten, bovenaan de agenda en op de homepage."""
-    foto = lokaal(e["afbeelding"])
-    img = ('<img src="%s%s" alt="" loading="lazy">' % (root, foto) if foto
-           else '<span class="uitgelicht__geenfoto">%s</span>' % esc(e["locatie"] or "NijmegenOnline"))
+    img = kaartfoto(e, root, "uitgelicht__heel") or '<span class="uitgelicht__geenfoto">%s</span>' % esc(e["locatie"] or "NijmegenOnline")
     plaats = '<span class="uitgelicht__plaats">%s</span>' % esc(e["locatie"]) if e["locatie"] else ""
     return ('<a class="uitgelicht" href="%sevents/%s/">%s<span class="uitgelicht__tekst"><span class="uitgelicht__wanneer">%s</span>'
             '<strong>%s</strong>%s</span></a>' % (root, e["slug"], img, esc(kort_wanneer(e, vandaag)), esc(e["titel"]), plaats))
@@ -325,6 +340,15 @@ def main(vandaag):
     komend = sorted((e for e in evenementen if dag(e, "eind") >= vandaag),
                     key=lambda e: (max(dag(e, "start"), vandaag), not e["uitgelicht"], e["start"], e["slug"]))
     pagina = [e for e in evenementen if dag(e, "eind") >= grens or e.get("terugkerend")]
+    # Vervangfoto per aanbieder: de nieuwste foto die niet al bij een komend evenement staat
+    # (zelfde foto in een andere maat of met -1, -2 erachter telt als dezelfde)
+    def basis(foto):
+        return re.sub(r"(-\d)*(-\d+x\d+)?\.webp$", "", foto or "")
+    in_gebruik = {basis(lokaal(e["afbeelding"])) for e in komend}
+    for e in sorted(evenementen, key=lambda e: e["start"], reverse=True):
+        foto = lokaal(e["afbeelding"])
+        if foto and e["aanbieder"] and basis(foto) not in in_gebruik:
+            VERVANGFOTO.setdefault(e["aanbieder"], foto)
     weg = [e["slug"] for e in evenementen if e not in pagina] + verwijderd
 
     events = ROOT / "events"
