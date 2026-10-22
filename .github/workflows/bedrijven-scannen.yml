@@ -12,6 +12,9 @@ on:
       maximum:
         description: "Hoeveel bedrijven hooguit"
         default: "60"
+      alleen:
+        description: "Alleen deze bedrijven (slugs, komma's ertussen); leeg = alle nog niet gescande"
+        default: ""
 
 permissions:
   contents: write
@@ -34,9 +37,10 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CATEGORIE: ${{ inputs.categorie }}
           MAXIMUM: ${{ inputs.maximum }}
+          ALLEEN: ${{ inputs.alleen }}
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::error::Het secret ANTHROPIC_API_KEY ontbreekt"; exit 1; fi
-          python tools/bedrijven_scan.py "$CATEGORIE" --max "$MAXIMUM"
+          python tools/bedrijven_scan.py "$CATEGORIE" --max "$MAXIMUM" --alleen "$ALLEEN"
       - name: Opslaan
         if: always()
         run: |

@@ -5,7 +5,7 @@ een eigen korte tekst, de categorieën met onderbouwing, feiten die er letterlij
 (ander adres, site werkt niet). Niets gaat vanzelf online: de uitkomst komt in data/bedrijvengids-scan.json
 en de redactie keurt per bedrijf goed.
 
-Gebruik: ANTHROPIC_API_KEY=... python tools/bedrijven_scan.py [categorie] [--opnieuw] [--max N]
+Gebruik: ANTHROPIC_API_KEY=... python tools/bedrijven_scan.py [categorie] [--opnieuw] [--max N] [--alleen slug,slug]
 Draait normaal via .github/workflows/bedrijven-scannen.yml.
 """
 import concurrent.futures
@@ -71,8 +71,13 @@ eigen website van een bedrijf.
 
 Werkwijze:
 - Begin bij de homepage (gaat de link naar een subpagina, ga dan eerst naar de hoofdpagina van die site) en lees hooguit drie relevante pagina's (bijvoorbeeld aanbod, lessen, faciliteiten, openingstijden, contact).
-- Schrijf de tekst in je eigen woorden, in het Nederlands, informatief en neutraal, zonder superlatieven of reclametaal.
+- Schrijf de tekst in je eigen woorden, in het Nederlands, alsof een Nijmegenaar een vriend een tip geeft: met je en jij,
+  warm, levendig en uitnodigend. Begin bij wat de lezer eraan heeft (een vraag of een beeld mag), niet met een opsomming.
+  Gebruik concrete details: de wijk of straat, wat je er doet, hoe je kunt beginnen (proefles, rondleiding).
+  Eindig met een praktische uitnodiging. Afwisselende openingen, geen vaste formule.
+- Geen superlatieven of claims die we niet kunnen waarmaken ("de beste", "de grootste van Nijmegen"); enthousiast mag, overdrijven niet.
   Neem geen zinnen over van de site. Noem geen prijzen. Begin niet met de naam van het bedrijf gevolgd door "is".
+  Ketens: maak duidelijk dat het om de vestiging in Nijmegen gaat.
 - Gebruik alleen wat op de site staat. Twijfel je, laat het dan weg en zet het bij de opmerkingen.
 - Extra categorieën alleen als dat een wezenlijk deel van het aanbod is, met een letterlijk citaat als bewijs.
   Een sportschool met één massagestoel hoort niet onder Massage.
@@ -113,6 +118,7 @@ def main(argv):
     categorie = next((a for a in argv if not a.startswith("--")), "sportschool")
     opnieuw = "--opnieuw" in argv
     maximum = int(argv[argv.index("--max") + 1]) if "--max" in argv else 999
+    alleen = set(argv[argv.index("--alleen") + 1].replace(",", " ").split()) if "--alleen" in argv and argv[argv.index("--alleen") + 1] else set()
     gids = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))[categorie]
     scan = json.loads(UIT.read_text(encoding="utf-8")) if UIT.exists() else {}
     client = anthropic.Anthropic()
@@ -120,7 +126,9 @@ def main(argv):
     for b in gids["overig"]:
         eerder = scan.get(b["slug"], {})
         klaar = eerder.get("status") == "voorstel" and eerder.get("website_bereikbaar") and eerder.get("tekst")
-        if b.get("website") and not (klaar and not opnieuw):
+        if alleen and b["slug"] not in alleen:
+            continue
+        if b.get("website") and (alleen or not (klaar and not opnieuw)):
             te_doen.append(b)
     te_doen = te_doen[:maximum]
     slot = threading.Lock()
