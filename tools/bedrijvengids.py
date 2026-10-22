@@ -187,8 +187,8 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
         {"@type": "ListItem", "position": 2, "name": cat["naam"], "item": "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"])},
         {"@type": "ListItem", "position": 3, "name": b["naam"], "item": canonical}]}
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in (ld, kruim))
-    if not b["tekst"]:
-        # Nog geen eigen tekst: wel een pagina (klikbaar vanuit de lijst), maar niet in Google tot de tekst er is
+    if not b["tekst"] or b.get("concept"):
+        # Nog geen (goedgekeurde) eigen tekst: wel een pagina (klikbaar vanuit de lijst), maar niet in Google tot de tekst er is
         extra += '\n  <meta name="robots" content="noindex">'
     out = [kop(b["naam"], beschrijving, canonical, root, b["foto"] or None, extra)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel bedrijf">')
@@ -200,6 +200,9 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
     route = "https://www.openstreetmap.org/?mlat=%s&mlon=%s#map=17/%s/%s" % (b["lat"], b["lon"], b["lat"], b["lon"]) if b["lat"] else ""
     regels.append('<li><span class="evenement-info__kop">Adres</span>%s%s</li>'
                   % (esc(adresregel(b)), ' <a href="%s" target="_blank" rel="noopener">Kaart</a>' % esc(route) if route else ""))
+    if not b["openingstijden"] and b.get("tijden_site"):
+        regels.append('<li><span class="evenement-info__kop">Openingstijden</span>%s <span class="bron">(volgens de eigen website)</span></li>'
+                      % esc(b["tijden_site"]))
     if b["openingstijden"]:
         rijen = "".join("<tr><th>%s</th><td>%s</td></tr>" % (DAGEN[i], esc(t or "onbekend")) for i, t in enumerate(b["openingstijden"]))
         regels.append('<li><span class="evenement-info__kop">Openingstijden</span><table class="openingstijden">%s</table></li>' % rijen)
@@ -222,6 +225,8 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
                       'OpenStreetMap-bijdragers</a> en Overture Maps. Klopt er iets niet? <a href="%skom-in-contact/">Laat het weten</a>.</li>' % root)
     if b["foto"]:
         out.append('        <figure><img src="%s" alt="%s"></figure>' % (esc(b["foto"]), esc(b["naam"])))
+    if b.get("concept"):
+        out.append('        <p class="bron">Concepttekst op basis van de eigen website, nog niet door de redactie gecontroleerd.</p>')
     if b["tekst"]:
         out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % schoon(b["tekst"], set(), root, False, b["naam"]))
     else:
@@ -358,6 +363,18 @@ def titel_van(slug_):
     return html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip() if m else None
 
 
+def scan_toepassen(bedrijven, pad):
+    """Teksten uit tools/bedrijven_scan.py: een voorstel komt als concept (noindex) op de pagina, goedgekeurd gaat Google in."""
+    scan = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
+    for b in bedrijven:
+        s = scan.get(b["slug"], {})
+        if s.get("status") not in ("voorstel", "goedgekeurd") or not s.get("tekst") or not s.get("lijkt_actief", True):
+            continue
+        b["tekst"] = "\n".join("<p>%s</p>" % esc(a.strip()) for a in re.split(r"\n\s*\n", s["tekst"]) if a.strip())
+        b["concept"] = s["status"] != "goedgekeurd"
+        b["tijden_site"] = s.get("openingstijden", "")
+
+
 def schrijf(pad, tekst):
     map_ = ROOT / pad
     map_.mkdir(parents=True, exist_ok=True)
@@ -373,6 +390,7 @@ def main(bron):
     gids, overig = samenvoegen(gids, osm_uit_csv(bron / "advies" / "osm-bedrijvengids" / "sportscholen-aangevuld.csv", cat["soorten"]))
     (ROOT / "data" / "bedrijvengids.json").write_text(
         json.dumps({cat["slug"]: {"gids": gids, "overig": overig}}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    scan_toepassen(overig, ROOT / "data" / "bedrijvengids-scan.json")
     artikelen = [(s, titel_van(s)) for s in cat["artikelen"] if titel_van(s)]
     schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen))
     for b in gids + overig:
