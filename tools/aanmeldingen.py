@@ -63,6 +63,50 @@ def tijd(waarde):
     return "%02d:%s" % (int(m.group(1)), m.group(2)) if m else ""
 
 
+def postcode(tekst):
+    """'6511ab' wordt '6511 AB'; Duitse (5 cijfers) en andere postcodes blijven zoals ze zijn."""
+    tekst = tekst.strip().upper()
+    m = re.match(r"^(\d{4})\s*([A-Z]{2})$", tekst)
+    return "%s %s" % m.groups() if m else tekst
+
+
+def naam_sleutel(naam):
+    """Naam zonder kleine verschillen: 'Café het Haantje' en "Cafe 't Haantje" worden allebei 'haantje'."""
+    naam = unicodedata.normalize("NFKD", naam).encode("ascii", "ignore").decode().lower()
+    naam = re.sub(r"['`]", "", naam)
+    woorden = [w for w in re.split(r"[^a-z0-9]+", naam) if w and w not in ("cafe", "het", "t", "de", "the")]
+    return "".join(woorden)
+
+
+def adres_sleutel(adres):
+    """Straat en huisnummer zonder postcode, plaats en leestekens: 'Daalseweg 19, 6521 GH Nijmegen' wordt 'daalseweg19'."""
+    return re.sub(r"[^a-z0-9]", "", adres.split(",")[0].lower())
+
+
+def kies_aanbieder(a, evenementen, aanbieders):
+    """De aanbieder die de redactie op de beoordeelpagina koos; anders een bestaande met (bijna) dezelfde naam
+    of hetzelfde adres; anders een nieuwe op naam van de locatie."""
+    keuze = (a.get("aanbieder") or "").strip()
+    locatie = a.get("locatie", "").strip()
+    if keuze in aanbieders:
+        return keuze
+    if keuze != "nieuw":
+        sleutel = naam_sleutel(locatie)
+        gevonden = next((k for k, v in aanbieders.items() if sleutel and naam_sleutel(v["naam"]) == sleutel), None)
+        if not gevonden and a.get("adres"):
+            straat = adres_sleutel(a["adres"])
+            gevonden = next((e["aanbieder"] for e in reversed(evenementen)
+                             if e.get("aanbieder") in aanbieders and e["adres"] and adres_sleutel(e["adres"]) == straat), None)
+        if gevonden:
+            return gevonden
+    if not locatie:
+        return ""
+    s, n = slug(locatie), 2
+    while s in aanbieders:
+        s, n = "%s-%d" % (slug(locatie), n), n + 1
+    return s
+
+
 def evenement(a, evenementen, aanbieders):
     datum = (a.get("datum") or "")[:10]
     if not re.match(r"\d{4}-\d{2}-\d{2}$", datum):
@@ -76,13 +120,13 @@ def evenement(a, evenementen, aanbieders):
     s, n = basis, 2
     while s in bestaand:
         s, n = "%s-%d" % (basis, n), n + 1
-    # Aanbieder: een bestaande locatie met dezelfde naam, anders een nieuwe
     locatie = a.get("locatie", "").strip()
-    aanbieder = next((k for k, v in aanbieders.items() if v["naam"].lower() == locatie.lower()), None)
-    if not aanbieder and locatie:
-        aanbieder = slug(locatie)
-        aanbieders.setdefault(aanbieder, {"naam": locatie})
-    plaats = " ".join(x for x in (a.get("postcode", "").strip().upper(), a.get("plaats", "").strip()) if x)
+    aanbieder = kies_aanbieder(a, evenementen, aanbieders)
+    if aanbieder in aanbieders:
+        locatie = aanbieders[aanbieder]["naam"]   # de bekende schrijfwijze
+    elif aanbieder:
+        aanbieders[aanbieder] = {"naam": locatie}
+    plaats = " ".join(x for x in (postcode(a.get("postcode", "")), a.get("plaats", "").strip()) if x)
     adres = ", ".join(x for x in (a.get("adres", "").strip(), plaats) if x) or next(
         (e["adres"] for e in reversed(evenementen) if e.get("aanbieder") == aanbieder and e["adres"]), "")
     site = a.get("site", "").strip()

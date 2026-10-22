@@ -86,7 +86,8 @@
           <label for="evenement-adres">Straat en huisnummer <span aria-hidden="true">*</span></label>
           <input id="evenement-adres" name="adres" type="text" autocomplete="on" required>
           <label for="evenement-postcode">Postcode <span aria-hidden="true">*</span></label>
-          <input id="evenement-postcode" name="postcode" type="text" autocomplete="on" required>
+          <input id="evenement-postcode" name="postcode" type="text" autocomplete="postal-code" maxlength="8" data-postcode required>
+          <p class="formulier__hint">Bijvoorbeeld 6511 AB. In Duitsland 5 cijfers, bijvoorbeeld 47533.</p>
           <label for="evenement-plaats">Plaats <span aria-hidden="true">*</span></label>
           <input id="evenement-plaats" name="plaats" type="text" autocomplete="on" required>
           <h3 class="formulier__kop">Contactgegevens voor bezoekers</h3>
@@ -160,7 +161,7 @@
       </div>
     </div>
   </main>
-  <script src="../assets/js/formulier.js?v=6" defer></script>
+  <script src="../assets/js/formulier.js?v=7" defer></script>
 
   <!-- footer -->
   <footer>

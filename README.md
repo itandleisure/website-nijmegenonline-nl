@@ -129,5 +129,5 @@ die online gaat, met opmerkingen in de kolom "Controle") en "Staat het al ergens
 andere sites het al hebben). Claude doet alleen iets als je op zo'n knop drukt. Elk uur haalt
 `.github/workflows/aanmeldingen.yml` met `tools/aanmeldingen.py` de goedgekeurde aanmeldingen op: evenementen
 gaan in `data/evenementen.json` (foto in `assets/uploads/aangemeld/`), bedrijven in `data/bedrijven-aangemeld.json`
-(voor de bedrijvengids). Daarna wordt de site gebouwd en zet het script de status in de Sheet op "Gepubliceerd".
+(voor de bedrijvengids). Een evenement komt bij een bestaande aanbieder als de naam overeenkomt (los van café/het/'t, leestekens en accenten) of als straat en huisnummer gelijk zijn aan die van een eerder evenement; op de beoordeelpagina kies je de aanbieder ook zelf in een keuzelijst. Postcodes: 1234 AB, of 5 cijfers voor Duitsland. Daarna wordt de site gebouwd en zet het script de status in de Sheet op "Gepubliceerd".
 Meteen publiceren in plaats van op het hele uur: Actions > Aanmeldingen publiceren > Run workflow.

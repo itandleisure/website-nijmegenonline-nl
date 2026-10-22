@@ -104,7 +104,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=6" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=7" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -138,6 +138,10 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
                           % (naam, dveld, esc(dlabel), ster, naam, dveld, dveld, req,
                              naam, tveld, esc(tlabel), ster, naam, tveld, tveld, req,
                              "".join('<option>%s</option>' % k for k in KWARTIEREN)))
+        elif soort == "postcode":
+            regels.append('          <label for="%s">%s%s</label>\n          <input id="%s" name="%s" type="text" autocomplete="postal-code" maxlength="8" data-postcode%s>'
+                          % (id_, esc(label), ster, id_, veld, req))
+            regels.append('          <p class="formulier__hint">Bijvoorbeeld 6511 AB. In Duitsland 5 cijfers, bijvoorbeeld 47533.</p>')
         elif soort == "keuzes":
             regels.append('          <fieldset class="formulier__keuzes"><legend>%s%s</legend>' % (esc(label), ster))
             regels += ['            <label><input type="checkbox" name="%s" value="%s"> %s</label>' % (veld, esc(o), esc(o)) for o in opties]
@@ -243,7 +247,7 @@ def evenement_aanmelden():
         ("kop", "Locatie", "kop", False, None),
         ("locatie", "Naam van de locatie", "text", True, None),
         ("adres", "Straat en huisnummer", "text", True, None),
-        ("postcode", "Postcode", "text", True, None),
+        ("postcode", "Postcode", "postcode", True, None),
         ("plaats", "Plaats", "text", True, None),
         ("kop", "Contactgegevens voor bezoekers", "kop", False, "Deze gegevens komen bij het evenement op de website."),
         ("site", "Website", "url", False, None),

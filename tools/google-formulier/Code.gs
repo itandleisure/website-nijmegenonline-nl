@@ -50,13 +50,14 @@ var FORMULIEREN = {
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 3, onderwerp: 'Evenement aangemeld', goedkeuren: true,
     openbaar: ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats',
-      'site', 'evenementmail', 'evenementtelefoon'],
+      'site', 'evenementmail', 'evenementtelefoon', 'aanbieder'],
     velden: [['titel', 'Evenement'], ['datum', 'Begindatum'], ['starttijd', 'Begintijd'], ['einddatum', 'Einddatum'],
       ['eindtijd', 'Eindtijd'],
       ['omschrijving', 'Omschrijving'], ['locatie', 'Locatie'], ['adres', 'Adres'], ['postcode', 'Postcode'],
       ['plaats', 'Plaats'], ['site', 'Website'], ['evenementmail', 'E-mail bezoekers'],
       ['evenementtelefoon', 'Telefoon bezoekers'], ['foto', 'Foto'],
-      ['naam', 'Naam'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking']]
+      ['naam', 'Naam'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking'],
+      ['aanbieder', 'Aanbieder']]   // gekozen op de beoordeelpagina (slug uit data/aanbieders.json, of "nieuw")
   }
 };
 
@@ -87,6 +88,7 @@ function doPost(e) {
     g[sleutel] = waarden && waarden.length > 1 ? schoon(waarden.join(', '), 1000) : schoon(p[sleutel] || p[sleutel + '[]'], 5000);
   });
   g.pagina = schoon(p.page || p.pagina, 300);
+  if (g.postcode) g.postcode = postcode(g.postcode);
   // Foto als data-URL: opslaan in Drive, in de Sheet en de mail komt de link
   if (/^data:image\/(jpeg|png|webp);base64,/.test(p.foto || '')) {
     try {
@@ -308,7 +310,7 @@ var SCHEMA = {
 // Geeft { tekst, controle: [..] } terug; gooit een fout als het niet lukt.
 function herschrijf(type, g) {
   var cfg = FORMULIEREN[type];
-  var gegevens = cfg.openbaar.map(function (veld) {
+  var gegevens = cfg.openbaar.filter(function (veld) { return veld !== 'aanbieder'; }).map(function (veld) {
     return label(cfg, veld) + ': ' + (g[veld] || '(leeg)');
   }).join('\n');
   var inhoud = [];
@@ -336,7 +338,7 @@ function herschrijf(type, g) {
 // Geeft een korte tekst voor de redactie terug; gooit een fout als het niet lukt.
 function zoekOnline(type, g) {
   var cfg = FORMULIEREN[type];
-  var gegevens = cfg.openbaar.filter(function (veld) { return veld !== 'omschrijving'; }).map(function (veld) {
+  var gegevens = cfg.openbaar.filter(function (veld) { return veld !== 'omschrijving' && veld !== 'aanbieder'; }).map(function (veld) {
     return label(cfg, veld) + ': ' + (g[veld] || '(leeg)');
   }).join('\n') + '\nOmschrijving (begin): ' + String(g.omschrijving || '').slice(0, 600);
   var vraag = type === 'evenement'
@@ -406,6 +408,7 @@ function bewerkPagina(type, id) {
   var velden = cfg.openbaar.filter(function (veld) { return veld !== 'omschrijving'; }).map(function (veld) {
     var soort = { datum: 'date', einddatum: 'date', starttijd: 'time', eindtijd: 'time', site: 'url', bedrijfsmail: 'email', evenementmail: 'email',
       telefoon: 'tel', evenementtelefoon: 'tel' }[veld] || 'text';
+    if (veld === 'aanbieder') return aanbiederKeuze(g);
     var invoer = veld === 'openingstijden'
       ? '<textarea name="' + veld + '" rows="3">' + html_(g[veld]) + '</textarea>'
       : '<input type="' + soort + '" name="' + veld + '" value="' + html_(g[veld]) + '">';
@@ -426,7 +429,7 @@ function bewerkPagina(type, id) {
   var tekst = g.tekstSite || g.omschrijving;
   var css = 'body{font-family:Arial,sans-serif;font-size:16px;color:#222;max-width:760px;margin:0 auto;padding:16px}' +
     'h1{font-size:24px;color:#539c20}label{display:block;margin:0 0 14px;font-weight:bold}' +
-    'input,textarea{display:block;width:100%;box-sizing:border-box;margin-top:4px;padding:8px;font:inherit;font-weight:normal;' +
+    'input,textarea,select{display:block;width:100%;box-sizing:border-box;margin-top:4px;padding:8px;font:inherit;font-weight:normal;' +
     'border:1px solid #bbb;border-radius:6px}textarea{line-height:1.5}' +
     '.controle{background:#fff6d6;border:1px solid #e6c34d;border-radius:6px;padding:10px 14px;margin:0 0 18px;white-space:pre-line}' +
     '.status{color:#666;margin:-8px 0 18px}.foto img{max-width:100%;max-height:320px;border-radius:6px;display:block;margin-bottom:8px}' +
@@ -495,7 +498,7 @@ function bewaarBewerking(d) {
     }
     var zet = function (kolom, waarde) { r[plek(cfg, kolom)] = veiligVoorSheet(schoon(waarde, 5000)); };
     cfg.openbaar.forEach(function (veld) {
-      if (veld !== 'omschrijving' && d[veld] !== undefined) zet(veld, d[veld]);
+      if (veld !== 'omschrijving' && d[veld] !== undefined) zet(veld, veld === 'postcode' ? postcode(d[veld]) : d[veld]);
     });
     zet('Tekst site', d.tekst);
     if (d.fotoweg) {
@@ -658,6 +661,57 @@ function mailInzender(m) {
   var opties = { htmlBody: m.htmlBody, name: m.name, replyTo: ONTVANGER };
   if (GmailApp.getAliases().indexOf(ONTVANGER) >= 0) opties.from = ONTVANGER;
   GmailApp.sendEmail(m.to, m.subject, m.body, opties);
+}
+
+// ---------- Aanbieders (locaties met een eigen overzichtspagina op de site) ----------
+
+var AANBIEDERS_URL = 'https://raw.githubusercontent.com/itandleisure/website-nijmegenonline-nl/main/data/aanbieders.json';
+
+// { slug: { naam } } van de website; een uur bewaard. Lukt ophalen niet, dan een lege lijst.
+function aanbieders() {
+  var cache = CacheService.getScriptCache();
+  var json = cache.get('aanbieders');
+  if (!json) {
+    try {
+      json = UrlFetchApp.fetch(AANBIEDERS_URL, { muteHttpExceptions: true }).getContentText();
+      JSON.parse(json);
+      cache.put('aanbieders', json, 3600);
+    } catch (fout) {
+      console.error('Aanbieders ophalen mislukt: ' + fout);
+      return {};
+    }
+  }
+  return JSON.parse(json);
+}
+
+// Zelfde als naam_sleutel() in tools/aanmeldingen.py: "Café het Haantje" en "Cafe 't Haantje" worden 'haantje'
+function naamSleutel(naam) {
+  return String(naam || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/['`]/g, '')
+    .split(/[^a-z0-9]+/).filter(function (w) { return w && ['cafe', 'het', 't', 'de', 'the'].indexOf(w) < 0; }).join('');
+}
+
+// Keuzelijst op de beoordeelpagina, met de beste gok voorgeselecteerd
+function aanbiederKeuze(g) {
+  var lijst = aanbieders();
+  var slugs = Object.keys(lijst).sort(function (a, b) { return lijst[a].naam.localeCompare(lijst[b].naam, 'nl'); });
+  var gekozen = g.aanbieder;
+  if (!gekozen) {
+    var sleutel = naamSleutel(g.locatie);
+    gekozen = slugs.filter(function (s) { return sleutel && naamSleutel(lijst[s].naam) === sleutel; })[0] || '';
+  }
+  var opties = '<option value="">Automatisch (op naam of adres)</option>' +
+    '<option value="nieuw"' + (gekozen === 'nieuw' ? ' selected' : '') + '>Nieuwe aanbieder: ' + html_(g.locatie) + '</option>' +
+    slugs.map(function (s) {
+      return '<option value="' + html_(s) + '"' + (s === gekozen ? ' selected' : '') + '>' + html_(lijst[s].naam) + '</option>';
+    }).join('');
+  return '<label>Aanbieder (de overzichtspagina waar dit evenement bij komt)<select name="aanbieder">' + opties + '</select></label>';
+}
+
+// '6511ab' wordt '6511 AB'; Duitse (5 cijfers) en andere postcodes blijven zoals ze zijn
+function postcode(tekst) {
+  var t = String(tekst || '').trim().toUpperCase();
+  var m = t.match(/^(\d{4})\s*([A-Z]{2})$/);
+  return m ? m[1] + ' ' + m[2] : t;
 }
 
 // ---------- Overig ----------

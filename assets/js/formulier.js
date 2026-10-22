@@ -72,6 +72,13 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       return (v.required || v.value.trim()) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.value.trim());
     })[0];
     if (email) { meld("Controleer het e-mailadres.", true); email.focus(); return; }
+    var pc = form.querySelector("[data-postcode]");
+    if (pc && pc.value.trim()) {
+      var waarde = pc.value.trim().toUpperCase();
+      var nl = waarde.match(/^(\d{4})\s*([A-Z]{2})$/);
+      if (!nl && !/^\d{5}$/.test(waarde)) { meld("Controleer de postcode, bijvoorbeeld 6511 AB (of 5 cijfers in Duitsland).", true); pc.focus(); return; }
+      pc.value = nl ? nl[1] + " " + nl[2] : waarde;
+    }
     var begin = form.querySelector('[name="datum"]'), eind = form.querySelector('[name="einddatum"]');
     if (begin && eind) {
       var tb = form.querySelector('[name="starttijd"]'), te = form.querySelector('[name="eindtijd"]');
