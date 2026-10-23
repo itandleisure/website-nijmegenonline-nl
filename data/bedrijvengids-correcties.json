@@ -1,8 +1,45 @@
 {
- "_uitleg": "Correcties van de redactie op adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina.",
- "the-kettlebell-club": {"adres": "Groenestraat 215", "postcode": "6531 HH", "lat": "51.83103", "lon": "5.84839"},
- "healtality": {"adres": "Gorterplaats 6A"},
- "nimma-moves": {"adres": "Archipelstraat 27-29"},
- "sportloods-oost": {"adres": "Coehoornstraat 71T"},
- "harbor-gym": {"extra_vestiging": "Dokstraat 255, 6541 EZ Nijmegen (Waalhaven)"}
+ "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans.",
+ "the-kettlebell-club": {
+  "adres": "Groenestraat 215",
+  "postcode": "6531 HH",
+  "lat": "51.83103",
+  "lon": "5.84839"
+ },
+ "healtality": {
+  "adres": "Gorterplaats 6A"
+ },
+ "nimma-moves": {
+  "adres": "Archipelstraat 27-29"
+ },
+ "sportloods-oost": {
+  "adres": "Coehoornstraat 71T"
+ },
+ "harbor-gym": {
+  "extra_vestiging": "Dokstraat 255, 6541 EZ Nijmegen (Waalhaven)"
+ },
+ "t-sfeerhuys-bij-de-looimolen": {
+  "adres": "Looimolenweg 15"
+ },
+ "sumo": {
+  "adres": "Molenstraat 63"
+ },
+ "m-i-a-made-in-asia": {
+  "adres": "Stationsplein 6C"
+ },
+ "bistrobar-berlin": {
+  "adres": "Daalseweg 15-17"
+ },
+ "rhodon": {
+  "adres": "Bloemerstraat 30-34"
+ },
+ "la-belle-excuse": {
+  "adres": "Van 't Santstraat 137"
+ },
+ "bodega-zarzuela": {
+  "adres": "Daalseweg 359"
+ },
+ "het-lemke": {
+  "naam": "Brasserie 't Zotte Lemke"
+ }
 }
