@@ -22,7 +22,9 @@
       if (sectie) sectie.hidden = gekozen.length > 0 && !lijst.querySelector(".bedrijfkaart:not([hidden])");
     });
     uitkomst.hidden = gekozen.length === 0;
-    uitkomst.innerHTML = zichtbaar === 1 ? "1 sportschool gevonden." : zichtbaar + " sportscholen gevonden.";
+    // Het woord per categorie staat op het filterblok (data-enkelvoud, data-meervoud), bijv. restaurant/restaurants
+    var woord = zichtbaar === 1 ? (blok.dataset.enkelvoud || "bedrijf") : (blok.dataset.meervoud || "bedrijven");
+    uitkomst.textContent = zichtbaar + " " + woord + " gevonden.";
     if (gekozen.length) {
       var wis = document.createElement("button");
       wis.type = "button";

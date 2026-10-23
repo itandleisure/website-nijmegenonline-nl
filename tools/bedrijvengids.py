@@ -586,7 +586,7 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
                    % (root, esc(cat["slug"]), MAX_UITGELICHT - len(uitgelicht), "plek" if MAX_UITGELICHT - len(uitgelicht) == 1 else "plekken",
                       esc(cat["enkelvoud"].lower()), len(alle), esc(cat["meervoud"]), esc(cat["blogonderwerp"])))
     out.append("          </div>\n        </section>")
-    out.append(filter_blok(alle))
+    out.append(filter_blok(alle, cat))
     out.append('        <section class="gids-sectie">\n          <h2>Alle %s in Nijmegen</h2>\n          <div class="bedrijflijst">' % esc(cat["meervoud"]))
     out.extend("            " + gewone_kaart(b, root) for b in alle if b not in uitgelicht)
     out.append('          </div>\n        </section>')
@@ -657,7 +657,7 @@ def blog_blokken(cat, alle):
         pad.write_text(tekst, encoding="utf-8")
 
 
-def filter_blok(bedrijven):
+def filter_blok(bedrijven, cat):
     """Knoppen om op kenmerk te filteren (assets/js/filter.js); alleen kenmerken die bij minstens twee bedrijven voorkomen."""
     tel = {}
     for b in bedrijven:
@@ -666,10 +666,10 @@ def filter_blok(bedrijven):
     knoppen = sorted((k for k, n in tel.items() if n >= 2), key=lambda k: (-tel[k], k))
     if not knoppen:
         return ""
-    return ('        <div class="gidsfilter" id="gidsfilter">\n          <p class="gidsfilter__kop">Waar zoek je naar?</p>\n          <div class="gidsfilter__knoppen">%s</div>\n'
+    return ('        <div class="gidsfilter" id="gidsfilter" data-enkelvoud="%s" data-meervoud="%s">\n          <p class="gidsfilter__kop">Waar zoek je naar?</p>\n          <div class="gidsfilter__knoppen">%s</div>\n'
             '          <p class="gidsfilter__uitkomst" aria-live="polite" hidden></p>\n        </div>\n'
-            '        <script src="%sassets/js/filter.js?v=1" defer></script>'
-            % ("".join('<button type="button" data-kenmerk="%s" aria-pressed="false">%s <span>%d</span></button>' % (esc(k), esc(k[0].upper() + k[1:]), tel[k])
+            '        <script src="%sassets/js/filter.js?v=2" defer></script>'
+            % (esc(cat["enkelvoud"].lower()), esc(cat["meervoud"]), "".join('<button type="button" data-kenmerk="%s" aria-pressed="false">%s <span>%d</span></button>' % (esc(k), esc(k[0].upper() + k[1:]), tel[k])
                        for k in knoppen), "../../"))
 
 
