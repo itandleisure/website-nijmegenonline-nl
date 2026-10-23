@@ -24,6 +24,59 @@
   "website": "https://1920-speakeasy.nl/",
   "website_bereikbaar": false
  },
+ "1stbusinesssolutions-limited": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.1stbusinesssolutions.com/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17394,
+   "uit": 426
+  },
+  "lijkt_actief": false,
+  "naam": "1stbusinesssolutions Limited",
+  "openingstijden": "",
+  "opmerkingen": "De website http://www.1stbusinesssolutions.com/ kon niet worden opgehaald (fout: url_not_allowed). Daarom is niets over het aanbod of de activiteiten te controleren en is er geen tekst geschreven. De categorie accountant-boekhouder is overgenomen van de vermoedelijke categorie en niet bevestigd. Een 'Limited' op een woonadres in Meijhorst lijkt een thuisadres of postadres te zijn. Controleer of het bedrijf nog bestaat en of het in de gids hoort.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.1stbusinesssolutions.com/",
+  "website_bereikbaar": false
+ },
+ "2k20-b-v": {
+  "adres_op_site": "Oranjesingel 13, Nijmegen",
+  "bronnen": [
+   "http://www.2k20.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "belastingaangifte",
+   "zakelijke klanten",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 18814,
+   "uit": 675
+  },
+  "lijkt_actief": true,
+  "naam": "2k20 B.v.",
+  "openingstijden": "",
+  "opmerkingen": "Een kantoor waarin één persoon werkt (Hans Kersten, AA LRGD). Volgens de site doet het kantoor geen operationeel boekhoudwerk, maar alleen advies. Ik heb alleen de homepage gelezen; daar stonden geen openingstijden.",
+  "status": "voorstel",
+  "tekst": "Heb je een bv en zoek je iemand die met je meedenkt in plaats van alleen cijfers in te voeren? Aan de Oranjesingel, vlak bij het centrum, werkt accountant Hans Kersten. Hij heeft eerder bij grote kantoren gewerkt en richt zich nu met 2K20 persoonlijk op ondernemers in het mkb.\n\nJe kunt bij hem terecht voor strategisch en fiscaal advies als dga, voor belastingplanning en voor hulp bij risico's of als je bedrijf het financieel zwaar heeft. Hij denkt ook mee over de grote stappen: je bedrijf beëindigen, overdragen of nalaten. Daarnaast staat hij ingeschreven als gerechtelijk deskundige en kan hij bij geschillen worden ingeschakeld.\n\nWil je kijken of het klikt? Neem contact op via de website en plan een gesprek.",
+  "website": "http://www.2k20.nl/",
+  "website_bereikbaar": true
+ },
  "a-tazza-rima-thee-koffie-meer": {
   "adres_op_site": "",
   "bronnen": [],
@@ -46,6 +99,32 @@
   "tekst": "",
   "website": "http://www.atazza-rima.nl/",
   "website_bereikbaar": false
+ },
+ "aaff": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://www.aaff.nl/locaties/nijmegen"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 32418,
+   "uit": 985
+  },
+  "lijkt_actief": true,
+  "naam": "aaff",
+  "openingstijden": "",
+  "opmerkingen": "De pagina was niet leesbaar: de site toont alleen een Anubis-botcontrole (proof-of-work) en geen inhoud. Daarom is er geen tekst geschreven en zijn er geen kenmerken of openingstijden ingevuld. De categorie accountant-boekhouder is overgenomen van de vermoedelijke categorie, maar is niet gecontroleerd. aaff is waarschijnlijk een landelijke keten met een vestiging in Nijmegen. Graag handmatig controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://www.aaff.nl/locaties/nijmegen",
+  "website_bereikbaar": false,
+  "zelf_gelezen": true
  },
  "aangenaam-aleppo": {
   "adres_op_site": "Lange Hezelstraat 85, 6511 CD Nijmegen (genoemd in Instagram-berichten op de homepage)",
@@ -73,6 +152,227 @@
   "tekst": "Zin om Syrië te proeven zonder je fiets uit Nijmegen te halen? Bij Aangenaam Aleppo draait alles om koffie met kardemom. Die specialiteit komt uit Aleppo en heeft een warme, kruidige smaak. Uit de berichten van de zaak blijkt dat je er ook terechtkunt voor baklava, nougat en ander Syrisch lekkers.\n\nHet bedrijf bestaat sinds 2018 en wil Nijmegenaren laten kennismaken met de cultuur en de ambachtelijke producten van Aleppo. In het assortiment vind je onder meer gemalen koffie, thee, olijfolie, granaatappelmelasse en de bekende Aleppo-zeep van olijfolie. Ook cadeaupakketten zijn een goede keuze als je iemand iets bijzonders wilt geven.\n\nKom langs voor een kop kardemomkoffie en vraag gerust naar het verhaal achter de producten. Je kunt ook vanuit huis bestellen via de webshop.",
   "website": "https://www.aangenaamaleppo.nl/",
   "website_bereikbaar": true
+ },
+ "abo-vastgoed-financieel-advies": {
+  "adres_op_site": "Hertogstraat 42, 6511 SC Nijmegen",
+  "bronnen": [
+   "https://www.abovastgoed.nl"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [
+   {
+    "bewijs": "Hypotheken/Verzekeringen",
+    "categorie": "hypotheekadviseur"
+   }
+  ],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "makelaar",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 93868,
+   "uit": 1000
+  },
+  "lijkt_actief": true,
+  "naam": "Abo Vastgoed & Financieel Advies",
+  "niet_in": {
+   "accountant-boekhouder": "automatisch: hoort bij Makelaars (scan 23-10-2026)"
+  },
+  "openingstijden": "",
+  "opmerkingen": "Ik heb gekozen voor de categorie makelaar en niet voor accountant: het bedrijf bemiddelt in vastgoed in de Duitse grensstreek (Kleve, Kranenburg, Goch, Emmerich), met daarnaast hypotheken en verzekeringen. Alleen de homepage was te lezen. De pagina's over hypotheken/verzekeringen en contact gaven een foutmelding, dus de inhoud van het financiële advies en de openingstijden zijn niet gecontroleerd. Volgens de metadata is Jos van Outvorst de directeur. Er hoort ook een Duitse site bij: abo-immobilien.de.",
+  "status": "voorstel",
+  "tekst": "Droom je van een huis met een grote tuin net over de grens, in Kranenburg, Kleve of Goch? Vanuit de Hertogstraat in het centrum van Nijmegen bemiddelt dit makelaarskantoor in woningen aan de Duitse kant van de grensstreek, ook in Emmerich en omgeving.\n\nIn het aanbod vind je vrijstaande huizen, bungalows, appartementen, bouwkavels en beleggingspanden, zowel te koop als te huur. Wil je je eigen huis in Duitsland verkopen, dan kun je hier ook terecht. Daarnaast helpen ze je verder met een hypotheek of verzekering voor een woning in Duitsland.\n\nNeem gerust een kijkje in het actuele aanbod op de site of maak een zoekprofiel aan. Liever eerst even overleggen? Bel of mail het kantoor voor een afspraak.",
+  "website": "https://www.abovastgoed.nl",
+  "website_bereikbaar": true
+ },
+ "account-plus": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.accountplus.eu/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17535,
+   "uit": 434
+  },
+  "lijkt_actief": true,
+  "naam": "Account Plus",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website niet gebruiken. De homepage stuurt alleen door naar een standaardpagina van de hostingprovider (/cgi-sys/defaultwebpage.cgi). Er staat dus geen informatie over het bedrijf op. Daarom heb ik geen tekst geschreven en de vermoedelijke categorie aangehouden. Ik kon niet nagaan of het bedrijf nog actief is. Ook kon ik niet controleren of Kerkenbos 1051 een bedrijfspand of een thuisadres is. Kijk dit na voordat je de vermelding plaatst.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.accountplus.eu/",
+  "website_bereikbaar": false
+ },
+ "accountants-in-business": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://accountantinbusiness.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 31658,
+   "uit": 759
+  },
+  "lijkt_actief": false,
+  "naam": "Accountants In Business",
+  "openingstijden": "",
+  "opmerkingen": "Het domein accountantinbusiness.nl toont alleen een verkooppagina van domeinhandelaar Dovendi ('Domain for sale'). Er staat geen informatie over het bedrijf op, dus er is geen tekst geschreven. Het is onduidelijk of Accountants In Business nog actief is op de Sint Annastraat 19. Graag nagaan via KvK of een andere website. De categorie is overgenomen van de vermoedelijke categorie.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://accountantinbusiness.nl/",
+  "website_bereikbaar": false,
+  "zelf_gelezen": true
+ },
+ "accountantskantoor-janssen": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 26603,
+   "uit": 568
+  },
+  "lijkt_actief": true,
+  "naam": "Accountantskantoor Janssen",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website niet openen: zowel de opgegeven link als https://www.janssen-cs.nl/ gaven de foutmelding 'url_not_allowed'. Daardoor heb ik geen tekst geschreven en geen kenmerken, openingstijden of adres ingevuld. De categorie is overgenomen uit de vermoedelijke categorie. Let op: het adres bij ons ligt in Oosterhout (Gelderland), niet in Nijmegen zelf. Graag handmatig controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://www.janssen-cs.nl/?y_source=1_Mzc3NDM4Ni00ODMtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+  "website_bereikbaar": false
+ },
+ "adb-fiscale-advisering-accountancy": {
+  "adres_op_site": "Vestiging Nijmegen, Energieweg 57, 6541 CW Nijmegen",
+  "bronnen": [
+   "https://adb.eu/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "boekhouding",
+   "startende ondernemers",
+   "particulieren",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 21699,
+   "uit": 691
+  },
+  "lijkt_actief": true,
+  "naam": "ADB Fiscale Advisering & Accountancy",
+  "openingstijden": "",
+  "opmerkingen": "Het hoofdkantoor van ADB Adviseurs BV staat in Beuningen. Volgens de footer van de site is er een vestiging in Nijmegen op Energieweg 57, en dat klopt met ons adres. Op de site staan geen openingstijden.",
+  "status": "voorstel",
+  "tekst": "Zie je op tegen je aangifte of weet je als ondernemer niet goed waar je met je cijfers moet beginnen? Dan kun je bij ADB aan de Energieweg terecht. Dit kleine, zelfstandige advieskantoor werkt vooral voor het mkb, maar ook particulieren zijn welkom.\n\nJe kunt er terecht voor het bijhouden van je administratie, het opstellen van je jaarrekening, fiscale aangiften en belastingadvies. Ben je net gestart als ondernemer, dan helpen ze je ook op weg. Omdat het kantoor klein is, heb je een vast aanspreekpunt, en ze kijken niet alleen naar de cijfers maar ook naar het bedrijf erachter.\n\nWil je kennismaken? Bel of mail even om een afspraak te maken in de vestiging in Nijmegen.",
+  "website": "https://adb.eu/",
+  "website_bereikbaar": true
+ },
+ "administratiekantoor-dehue": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://www.dehue.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 22102,
+   "uit": 644
+  },
+  "lijkt_actief": false,
+  "naam": "Administratiekantoor Dehue",
+  "openingstijden": "",
+  "opmerkingen": "Het domein dehue.nl staat te koop via Dovendi; er staat geen informatie over Administratiekantoor Dehue op. Onduidelijk of het bedrijf nog actief is en of het een andere website heeft. Categorie is overgenomen uit onze gegevens en niet bevestigd door de site. Graag controleren (bijv. via KvK) voordat de vermelding blijft staan.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.dehue.nl/",
+  "website_bereikbaar": false,
+  "zelf_gelezen": true
+ },
+ "administratiekantoor-ed-smits": {
+  "adres_op_site": "Molenweg 107, 6543 VA Nijmegen",
+  "bronnen": [
+   "https://edsmits.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "belastingaangifte",
+   "salarisadministratie",
+   "particuliere aangifte",
+   "particulieren",
+   "zzp en mkb",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 21751,
+   "uit": 776
+  },
+  "lijkt_actief": true,
+  "naam": "Administratiekantoor Ed Smits",
+  "openingstijden": "",
+  "opmerkingen": "Eenmanszaak met een 06-nummer en een gmail-adres. Molenweg 107 lijkt dus een thuisadres; daarom staat het adres niet in de tekst. In de paginatitel staat 'al 30 jaar een begrip', maar volgens de tekst is het kantoor pas op 1-11-2021 begonnen. Die claim is daarom niet overgenomen. De site heeft geen openingstijden.",
+  "status": "voorstel",
+  "tekst": "Heb je een eenmanszaak of werk je als zzp'er en zie je elke maand op tegen de boekhouding? Dan kan Ed Smits die klus van je overnemen. Hij is een Nijmegenaar in hart en nieren en werkte jarenlang als hoofd administratie en controller voordat hij eind 2021 zijn eigen administratiekantoor begon.\n\nJe kunt bij hem terecht voor de maandelijkse boekhouding, de btw- en IB-aangifte en de loonadministratie als je personeel in dienst hebt. Ook als particulier helpt hij je met je jaarlijkse belastingaangifte en met het aanvragen van zorg- of huurtoeslag. Persoonlijk contact vindt hij belangrijk, en je krijgt ook advies als je er niet om vraagt.\n\nBel of mail Ed voor een vrijblijvende offerte en maak een afspraak.",
+  "website": "http://www.edsmits.nl/",
+  "website_bereikbaar": true
+ },
+ "administratieve-dienstverlening-m-hendriks": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.admhendriks.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 30221,
+   "uit": 857
+  },
+  "lijkt_actief": true,
+  "naam": "Administratieve Dienstverlening M. Hendriks",
+  "openingstijden": "",
+  "opmerkingen": "De domeinnaam admhendriks.nl toont alleen een standaard parkeerpagina van hostingbedrijf Yourhosting ('deze domeinnaam is geregistreerd door een klant van Yourhosting'); er staat geen informatie over het bedrijf op. Geen tekst geschreven. Of het bedrijf nog actief is, is niet vast te stellen; categorie accountant-boekhouder aangehouden op basis van de bedrijfsnaam. Lentseveld 18 in Lent lijkt een woonadres; mogelijk werkt de ondernemer vanuit huis, dus geen huisadres publiceren zonder controle.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.admhendriks.nl/",
+  "website_bereikbaar": false,
+  "zelf_gelezen": true
  },
  "akhi-s": {
   "adres_op_site": "Malvert 7023, 6538 DP Nijmegen",
@@ -468,6 +768,40 @@
   "website": "https://asiafoodcorner.nl/",
   "website_bereikbaar": true
  },
+ "atb-accountants-belastingadviseurs": {
+  "adres_op_site": "Graafseweg 68, 6512 CE Nijmegen",
+  "bronnen": [
+   "https://www.atbaccountants.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "startende ondernemers",
+   "zzp en mkb",
+   "zakelijke klanten",
+   "gratis kennismaking",
+   "online of op afstand"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 23218,
+   "uit": 745
+  },
+  "lijkt_actief": true,
+  "naam": "Atb Accountants & Belastingadviseurs",
+  "openingstijden": "",
+  "opmerkingen": "Openingstijden staan niet op de homepage. De nieuwsfeed op de homepage geeft een foutmelding, maar de site lijkt verder actief (laatst gewijzigd in augustus 2023). Alleen de homepage is gelezen.",
+  "status": "voorstel",
+  "tekst": "Ben je ondernemer en wil je liever met je zaak bezig zijn dan met cijfers en belastingregels? Dan kun je terecht bij dit accountants- en belastingadvieskantoor aan de Graafseweg. Een team van ongeveer dertien mensen met verschillende specialisaties helpt vooral het midden- en kleinbedrijf.\n\nJe kunt er terecht voor je jaarrekening, belastingaangiften en fiscaal advies, maar ook voor je boekhouding (desgewenst online) en je salarisadministratie. Ze denken daarnaast mee over bedrijfsadvies en financiële planning, zowel zakelijk als privé. Ga je net voor jezelf beginnen? Dan helpen ze je met startersbegeleiding de goede keuzes te maken.\n\nWil je eerst weten of het klikt? Loop dan binnen voor een vrijblijvend kennismakingsgesprek of vraag via de website een offerte aan.",
+  "website": "https://www.atbaccountants.nl/",
+  "website_bereikbaar": true
+ },
  "atelier": {
   "adres_op_site": "van der Brugghenstraat 14, 6511SL Nijmegen",
   "bronnen": [
@@ -539,6 +873,36 @@
   "status": "goedgekeurd",
   "tekst": "Zin om door Azië te eten zonder Nijmegen uit te gaan? In Nijmegen-Oost, aan de Dommer van Poldersveldtweg, vind je AYA: een Aziatisch restaurant met de sfeer van een warung, zo'n huiskamerrestaurantje waar je net zo makkelijk blijft hangen als snel even aanschuift. Chef en eigenaar Ate haalt zijn inspiratie uit zijn reizen door Azië.\n\nDe kaart is kleurrijk en wisselt tussen landen: denk aan krokante gyoza, takoyaki, kimbap, bao's en Korean fried chicken. Ook als je geen vlees eet, kun je hier goed terecht, want veel gerechten zijn er vega of vegan. Je komt er voor koffie, lunch, een borrel met een gevulde plank of een uitgebreid diner.\n\nAYA is open vanaf het eind van de middag en in het weekend al vanaf twaalf uur; op dinsdag is het dicht. Kom je met acht mensen of meer? Stuur dan vooraf even een mailtje.",
   "website": "https://ayanijmegen.nl",
+  "website_bereikbaar": true
+ },
+ "ayvio-accountants": {
+  "adres_op_site": "St. Canisiussingel 34, 6511 TJ Nijmegen",
+  "bronnen": [
+   "https://ayvio.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "zzp en mkb",
+   "zakelijke klanten",
+   "aan huis of op locatie"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 19834,
+   "uit": 810
+  },
+  "lijkt_actief": true,
+  "naam": "Ayvio Accountants",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staan twee verschillende KvK-nummers: 42182951 in het contactblok en 54041473 in de footer. Het kenmerk 'aan huis of op locatie' komt van de belofte 'Minimaal twee keer per jaar langs'. Op de site staat niet of een kennismaking gratis is, dus dat kenmerk is weggelaten. Er staan geen openingstijden op de site. Ik heb alleen de homepage gelezen.",
+  "status": "voorstel",
+  "tekst": "Heb jij een mkb-bedrijf en zie je je accountant eigenlijk alleen als de jaarrekening klaar is? Bij dit kantoor aan de Sint Canisiussingel, vlak bij het centrum van Nijmegen, gaat dat anders. Je hebt hier rechtstreeks contact met een registeraccountant. Hij komt minstens twee keer per jaar bij je langs om mee te denken over keuzes als investeren of een auto van de zaak.\n\nJe kunt er terecht voor je jaarrekening en je fiscale aangiftes. Voor het jaarwerk spreek je vooraf een vaste prijs af, en tussendoor bellen of mailen met een vraag zit daar gewoon bij. Wil je meer grip op de cijfers? Dan kun je een periodieke controller nemen, die samen met jou KPI's opstelt en managementrapportages maakt.\n\nNieuwsgierig? Plan een kennismakingsgesprek bij een kop koffie.",
+  "website": "http://www.ayvio.nl/",
   "website_bereikbaar": true
  },
  "baan-isaan": {
@@ -1079,6 +1443,31 @@
   "website": "https://basmatinijmegen.nl",
   "website_bereikbaar": true
  },
+ "bdo-nijmegen-accountants-adviseurs": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://www.bdo.nl/nl-nl/locaties/nijmegen"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 26414,
+   "uit": 597
+  },
+  "lijkt_actief": true,
+  "naam": "BDO Nijmegen, Accountants & Adviseurs",
+  "openingstijden": "",
+  "opmerkingen": "De locatiepagina https://www.bdo.nl/nl-nl/locaties/nijmegen kon niet worden opgehaald (url_not_accessible). De homepage van bdo.nl konden we ook niet openen, omdat de tool die link niet toeliet. Daarom is er geen tekst geschreven en zijn het adres, de openingstijden en de diensten niet gecontroleerd. BDO is een landelijke keten van accountants en adviseurs. Of het een vestiging met een kantoor in Nijmegen is, moet de redactie zelf nagaan. De categorie accountant-boekhouder is gebaseerd op de bedrijfsnaam.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://www.bdo.nl/nl-nl/locaties/nijmegen",
+  "website_bereikbaar": false
+ },
  "beau": {
   "adres_op_site": "",
   "bronnen": [
@@ -1593,8 +1982,8 @@
   "lijkt_actief": true,
   "naam": "Bloem ice coffee & more",
   "niet_in": {
-   "lunch": "automatisch: hoort bij IJssalons (scan 23-10-2026)",
-   "koffiezaak": "hoort bij IJssalons (Frans, 23-10-2026)"
+   "koffiezaak": "hoort bij IJssalons (Frans, 23-10-2026)",
+   "lunch": "automatisch: hoort bij IJssalons (scan 23-10-2026)"
   },
   "openingstijden": "ma-vr 12:00-18:00, za 10:00-18:00, zo 12:00-18:00 (seizoensgebonden; sinds 1 oktober gesloten tot begin volgend jaar)",
   "opmerkingen": "Vermoedelijke categorie lunchroom klopt niet: het is vooral een ijssalon met koffie. De site meldt 'sinds 1 oktober gesloten, wij zien u graag begin volgend jaar weer' (seizoenssluiting, niet definitief). Openingstijden wisselen per seizoen en weer. Menu noemt 'franchise/derden', maar geen andere vestigingen genoemd. Vegan geldt voor ijs.",
@@ -1707,11 +2096,11 @@
   },
   "openingstijden": "Branderij (Het Loog 6): ma-vr 09:00-17:00. Café Centrum (Lange Hezelstraat 58): ma-do 09:00-16:00, vr-zo 09:00-17:00",
   "opmerkingen": "Ons adres (Energieweg 15) staat niet op de site. Volgens de site zit de branderij nu op Het Loog 6, 6541 AW Nijmegen. Het lijkt erop dat het bedrijf is verhuisd, dus het adres moet gecontroleerd worden. Blommers is vooral een koffiebranderij met een webshop en vier cafés. Er is geen lunch- of ontbijtkaart te vinden, alleen koffie en gebak uit de eigen bakkerij. Daarom heb ik koffiezaak gekozen en niet lunchroom. De openingstijden spreken elkaar tegen: de pagina 'Onze cafés' noemt 08:30-16:00 voor alle cafés, met het centrum dicht op dinsdag. De contactpagina noemt voor het centrum ma-do 09:00-16:00 en vr-zo 09:00-17:00. Overweeg om de cafés als aparte vermeldingen op te nemen. Het kenmerk 'afhalen' heb ik gekozen omdat je in de cafés bonen voor thuis kunt kopen. 'Bezorgen' slaat op het verzenden van bestellingen uit de webshop.",
+  "reden": "verhuisd, staat er al met Het Loog 6 (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin in een kop koffie waarvan je precies weet waar de bonen vandaan komen? Blommers brandt sinds 2013 elke week vers specialty koffie in een eigen branderij aan Het Loog in Nijmegen. Ze kopen rechtstreeks in bij boeren en branden zo dat de eigen smaak van elke boon overeind blijft.\n\nDie koffie kun je drinken in hun cafés aan de Lange Hezelstraat in het centrum en op de campussen van de Radboud Universiteit en het Radboudumc. Bij je cappuccino of filterkoffie neem je iets uit de eigen bakkerij, zoals een croissant, cookie of plak cake. Je kunt er ook bonen kopen om thuis zelf te zetten.\n\nWil je er meer van weten? Kijk dan eens naar de workshops of de webshop met bonen en zetmateriaal. Of loop gewoon binnen bij het café aan de Hezelstraat.",
   "website": "http://www.blommers.coffee/",
-  "website_bereikbaar": true,
-  "reden": "verhuisd, staat er al met Het Loog 6 (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "blommers-coffee-het-loog": {
   "adres_op_site": "Het Loog 6, 6541 AW Nijmegen",
@@ -1838,6 +2227,29 @@
   "naam": "BodytecNijmegen",
   "status": "fout",
   "website": "http://www.bodytecnijmegen.nl/"
+ },
+ "boekkundig": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17366,
+   "uit": 384
+  },
+  "lijkt_actief": true,
+  "naam": "Boekkundig",
+  "openingstijden": "",
+  "opmerkingen": "De website https://boekkundig.nl/ kon niet worden opgehaald (de fetch-tool gaf 'url_not_allowed'). Daardoor is er geen informatie gecontroleerd en is er geen tekst geschreven. De categorie is gebaseerd op de vermoedelijke categorie en de bedrijfsnaam. Het adres Simon Stevinstraat 37 kon niet worden gecontroleerd en is mogelijk een thuisadres. Graag handmatig nakijken.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://boekkundig.nl/",
+  "website_bereikbaar": false
  },
  "boerske": {
   "adres_op_site": "",
@@ -3674,11 +4086,11 @@
   "naam": "Café Waalzicht",
   "openingstijden": "",
   "opmerkingen": "Er staan geen openingstijden op de site; alleen 'We are closed' uit de widget. De danslessen worden gegeven door dansschool Aguanile, een aparte partij. Kenmerken hond welkom en rolstoeltoegankelijk komen alleen uit de standaard servicelijst ('Pets allowed', 'Accessible'). In de titel staat 'Dutch cuisine', maar de site noemt alleen borrelsnacks. Er staan twee e-mailadressen op de site (waalzicht2021@gmail.com en info@cafewaalzicht.nl). Het telefoonnummer in het colofon wijkt af van het contactnummer.",
+  "reden": "dubbel met Waalzicht (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin in een borrel met de Waal en de Stevenskerk recht voor je neus? Aan de Oosterhoutsedijk op het eiland Veur Lent zit dit oude bruine café, dat al sinds 1911 bestaat en tegenwoordig een tropisch Latin-randje heeft. Je bestelt er een speciaalbiertje met wat borrelhapjes, terwijl er Caribische muziek uit de boxen komt.\n\nOp het verscholen terras aan de zijkant zit je tussen de palmbomen en zie je de boten voorbijvaren. Is het minder mooi weer, dan kun je terecht in de serre met veel groen. Op vrijdagavond wordt er in de zaal vrij gedanst op salsa, bachata en kizomba, en doordeweeks geeft een salsadansschool er les, met een gratis proefles om kennis te maken.\n\nDe zaal kun je ook huren voor een feest of een vergadering. Stuur gerust even een berichtje en loop een keer binnen!",
   "website": "https://cafewaalzicht.eatbu.com",
-  "website_bereikbaar": true,
-  "reden": "dubbel met Waalzicht (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "cafe-west-end": {
   "adres_op_site": "",
@@ -4116,8 +4528,8 @@
   "lijkt_actief": true,
   "naam": "Coffeeted",
   "niet_in": {
-   "lunch": "automatisch: hoort bij Koffiebars (scan 23-10-2026)",
-   "koffiezaak": "hoort bij Winkels (Frans, 23-10-2026)"
+   "koffiezaak": "hoort bij Winkels (Frans, 23-10-2026)",
+   "lunch": "automatisch: hoort bij Koffiebars (scan 23-10-2026)"
   },
   "openingstijden": "ma 12:00-17:30, di-vr 09:30-17:30, za 09:30-17:00, zo 12:00-17:00 (alleen 1e en laatste zondag van de maand)",
   "opmerkingen": "Coffeeted is een speciaalzaak die koffie, thee, machines en servies verkoopt, met een webwinkel. Het is geen lunchroom: de site noemt geen zitplaatsen, geen menukaart en geen koffie om ter plekke te drinken. Daarom is 'koffiezaak' gekozen als dichtstbijzijnde categorie. Het huisnummer klopt niet met onze gegevens: de site noemt Moenenstraat 7 in de footer en op de contactpagina, terwijl wij Moenenstraat 20 hebben. Op de homepage staat in de lopende tekst wel 'Moenenstraat 20', dus de site spreekt zichzelf tegen. Graag controleren. Ook de telefoonnummers verschillen: in de tekst staat 024 6630889, maar de link verwijst naar 024 2065597. Op de pagina 'Onze winkel' staat nog placeholdertekst (lorem ipsum).",
@@ -4433,6 +4845,32 @@
   "website": "http://www.crudo.nl/",
   "website_bereikbaar": true
  },
+ "cultuur-accountants-b-v": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.cultuuraccountants.nl/",
+   "https://www.cultuuraccountants.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 26326,
+   "uit": 577
+  },
+  "lijkt_actief": true,
+  "naam": "Cultuur Accountants B.v.",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website niet ophalen: bij zowel http://www.cultuuraccountants.nl/ als https://www.cultuuraccountants.nl/ gaf de fetch-tool de fout 'url_not_allowed'. Daardoor kon ik niets controleren: of het bedrijf nog actief is, wat het aanbod is, wat de openingstijden zijn en welk adres op de site staat. Ik heb daarom geen tekst geschreven. De categorie accountant-boekhouder is overgenomen uit de bedrijfsnaam en de vermoedelijke categorie. Graag handmatig nakijken.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.cultuuraccountants.nl/",
+  "website_bereikbaar": false
+ },
  "cultuurcafe": {
   "adres_op_site": "Collegezalencomplex, Mercatorpad 1, 6525 HS Nijmegen",
   "bronnen": [
@@ -4538,6 +4976,38 @@
   "tekst": "",
   "website": "http://www.coffeeshop.freeuk.com/dakota.html",
   "website_bereikbaar": false
+ },
+ "danny-dal-administratie": {
+  "adres_op_site": "Meijhorst 5440, 6537 JK Nijmegen",
+  "bronnen": [
+   "http://www.dannydal.nl/",
+   "https://www.dannydal.nl/tarondernemer.html",
+   "https://www.dannydal.nl/contact.html"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "belastingaangifte",
+   "particuliere aangifte",
+   "particulieren",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 31137,
+   "uit": 878
+  },
+  "lijkt_actief": true,
+  "naam": "Danny Dal Administratie",
+  "openingstijden": "",
+  "opmerkingen": "Het adres in Meijhorst lijkt een thuisadres (een woonwijk, zonder openingstijden op de site). Daarom staat het niet in de tekst. Op de site staat geen gratis kennismaking en ook niet dat er wordt gewerkt op afstand.",
+  "status": "voorstel",
+  "tekst": "Zie je op tegen die stapel bonnetjes of stel je je btw-aangifte steeds uit? Dan kun je bij Danny Dal Administratie in Dukenburg terecht. Je boekhouding, je periodieke btw-aangiftes en je belastingzaken worden er voor je geregeld, zodat jij je weer met je eigen werk kunt bezighouden.\n\nAls ondernemer kies je een all-in pakket voor een vast bedrag per maand, dus achteraf krijg je geen verrassingen. Heb je iets anders nodig, dan wordt er ook maatwerk geleverd. Particulieren kunnen terecht voor hun jaarlijkse aangifte inkomstenbelasting en voor hulp bij toeslagen of wijzigingen daarin.\n\nHet contact is persoonlijk en loopt makkelijk, ook gewoon via WhatsApp. Stuur een berichtje om je situatie en wensen te bespreken.",
+  "website": "http://www.dannydal.nl/",
+  "website_bereikbaar": true
  },
  "de-4-heeren": {
   "adres_op_site": "Sint Annastraat 259, 6525 GR Nijmegen",
@@ -5036,6 +5506,38 @@
   "website": "https://deindustrie.nl",
   "website_bereikbaar": true
  },
+ "de-jong-belastingadviseurs": {
+  "adres_op_site": "Kerkenbos 1077L, 6546BB Nijmegen",
+  "bronnen": [
+   "https://dejongbelastingadviseurs.nl/",
+   "https://dejongbelastingadviseurs.nl/onze-service/",
+   "https://dejongbelastingadviseurs.nl/gegevens/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 33638,
+   "uit": 1083
+  },
+  "lijkt_actief": true,
+  "naam": "De Jong Belastingadviseurs",
+  "openingstijden": "",
+  "opmerkingen": "Het kantoor werkt bijna alleen voor (para)medici zoals huisartsen, tandartsen en fysiotherapeuten. De site lijkt al lang niet bijgewerkt (WordPress 5.9.3, beelden uit 2015, het nieuws gaat alleen over 'Hypotheekrente'). Op de site staan geen openingstijden. Kerkenbos is een bedrijventerrein, dus een thuisadres lijkt het niet.",
+  "status": "voorstel",
+  "tekst": "Werk je als huisarts, tandarts of fysiotherapeut en wil je je avonden liever niet aan je administratie kwijt zijn? Dan is dit belastingadvieskantoor aan het Kerkenbos in Nijmegen-West een goede tip. Ze werken al meer dan twintig jaar bijna alleen voor (para)medici, dus ze kennen de financiële kant van een praktijk goed.\n\nJe kunt er terecht voor je boekhouding, salarisadministratie en jaarrekening, en ook voor aangiften zoals inkomstenbelasting, vennootschapsbelasting en btw. Ze denken ook mee over grotere vragen, zoals welke ondernemingsvorm bij je past, het verplaatsen of stoppen van je praktijk en je pensioen. Wil je zelf meer grip krijgen op je cijfers? Dan kun je coaching krijgen, zodat je administratie binnen je eigen praktijk op orde komt.\n\nBenieuwd wat ze voor jouw praktijk kunnen doen? Bel of mail even om kennis te maken.",
+  "website": "http://dejongbelastingadviseurs.nl/",
+  "website_bereikbaar": true
+ },
  "de-kantine-van-bairro-alto": {
   "adres_op_site": "Gorterplaats 2, 6531 HZ Nijmegen",
   "bronnen": [
@@ -5314,6 +5816,35 @@
   "status": "verwijderd",
   "tekst": "",
   "website": "https://www.depelgrimnijmegen.nl/",
+  "website_bereikbaar": true
+ },
+ "de-penningmeestersch-b-v": {
+  "adres_op_site": "Kerkenbos 13-30, 6546 BG Nijmegen",
+  "bronnen": [
+   "https://www.depenningmeestersch.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "zzp en mkb",
+   "zakelijke klanten",
+   "gratis kennismaking"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 21475,
+   "uit": 739
+  },
+  "lijkt_actief": true,
+  "naam": "De Penningmeestersch B.v.",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staat 'Kerkenbos 13-30'. Bij ons staat 'Kerkenbos 1330'. Bij 'Over ons' staat nog 'administratiekantoor in Wijchen', dat lijkt verouderd. De copyright is uit 2020 en de site oogt wat verouderd. Er staan geen openingstijden op de site.",
+  "status": "voorstel",
+  "tekst": "Ben je zzp'er of heb je een mkb-bedrijf, en zou je je cijfers liever aan iemand anders overlaten? Dan kun je terecht bij dit administratiekantoor op bedrijventerrein Kerkenbos. Ze nemen je boekhouding uit handen, en dat kan ook voor een vaste prijs. Zo houd jij meer tijd over voor je eigen werk.\n\nNaast de administratie denken ze mee over bedrijfseconomische vragen, subsidies en personeelszaken. Ze helpen je ook als je een financiering wilt aanvragen. Wil je je bedrijf verkopen, fuseren of iets overnemen? Ook dan begeleiden ze je van begin tot eind.\n\nTwijfel je of je wilt overstappen? Plan dan een gratis kennismakingsgesprek, waarin je meteen wat advies krijgt. Zo merk je snel of het klikt.",
+  "website": "http://www.depenningmeestersch.nl/",
   "website_bereikbaar": true
  },
  "de-plak": {
@@ -5778,6 +6309,35 @@
   "website": "https://bestellen2.vissersenergygroup.nl/locaties/esso-vissers-nijmegen/bezorgmethode?utm_source=google&utm_medium=zoekresultaat&utm_campaign=GoogleMBNijmegen",
   "website_bereikbaar": false
  },
+ "den-heijer-administratie-advies": {
+  "adres_op_site": "Kerkenbos 10-21, 6546 BB Nijmegen",
+  "bronnen": [
+   "http://dhaa.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "belastingaangifte",
+   "startende ondernemers",
+   "gratis kennismaking"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 20724,
+   "uit": 846
+  },
+  "lijkt_actief": true,
+  "naam": "Den Heijer Administratie & Advies",
+  "openingstijden": "",
+  "opmerkingen": "Het adres op de site (Kerkenbos 10-21, 6546 BB) is iets anders dan het adres in onze gids (Kerkenbos 1020, 6546 BA). Controleer welk adres klopt. De site noemt een 'vrijblijvend kennismakingsgesprek'. Of dat ook gratis is, staat er niet bij. De copyright op de site is uit 2020, maar er staan geen aanwijzingen dat het bedrijf gestopt is. Het lijkt een eenmanszaak. Er staan geen openingstijden op de site.",
+  "status": "voorstel",
+  "tekst": "Ben je net gestart als ondernemer of groeit je bedrijf zo hard dat je de cijfers niet meer bijhoudt? Dan kun je bij Helmar den Heijer terecht. Hij heeft bedrijfskunde gestudeerd en doet sinds 2016 alleen nog financiële administratie en fiscaal advies, vanuit bedrijvenpark Kerkenbos in Nijmegen-West.\n\nHij neemt je boekhouding over en regelt je aangiftes, van btw en inkomstenbelasting tot vennootschapsbelasting en loonheffingen. Hij werkt met moderne digitale tools, zodat je administratie overzichtelijk en veilig blijft. Heb je fiscale vragen, bijvoorbeeld over het juiste btw-tarief, je auto van de zaak of de overstap naar een bv? Dan zoekt hij met je mee naar een antwoord dat bij jouw situatie past.\n\nWil je eerst kennismaken? Bel hem of stuur een bericht via de website voor een vrijblijvend gesprek.",
+  "website": "http://dhaa.nl/",
+  "website_bereikbaar": true
+ },
  "dionysos": {
   "adres_op_site": "Bloemerstraat 1, 6511 EB Nijmegen",
   "bronnen": [
@@ -6012,8 +6572,8 @@
   "lijkt_actief": true,
   "naam": "Drie Gezusters Nijmegen",
   "niet_in": {
-   "lunch": "automatisch: hoort bij Cafés en kroegen (scan 23-10-2026)",
-   "cafe": "hoort bij Uitjes en activiteiten (Frans, 23-10-2026)"
+   "cafe": "hoort bij Uitjes en activiteiten (Frans, 23-10-2026)",
+   "lunch": "automatisch: hoort bij Cafés en kroegen (scan 23-10-2026)"
   },
   "openingstijden": "",
   "opmerkingen": "De vermoedelijke categorie 'Lunchrooms en ontbijt' klopt niet. Volgens de website is Drie Gezusters een club en evenementenlocatie ('Dé place to be voor clubnights, feestjes en events in het hart van Nijmegen'). Er wordt geen ontbijt, lunch of menukaart genoemd. Er bestaat geen categorie voor een club of nachtclub, dus ik heb 'cafe' gekozen. 'Podia' kan ook. Ik heb alleen de homepage gelezen. Daar staan geen vaste openingstijden, alleen de begintijden van de geplande feestavonden.",
@@ -6093,6 +6653,70 @@
   "status": "goedgekeurd",
   "tekst": "Werk je op de Winkelsteeg en ben je toe aan iets beters dan een boterham achter je bureau? Dan vind je in bedrijvenverzamelgebouw De Boekweit een fijne plek voor een ambachtelijke lunch, een kop koffie met huisgemaakte appeltaart of een borrel na het werk.\n\nDROOM! is een sociale horecazaak. Mensen met en zonder afstand tot de arbeidsmarkt werken hier samen in de keuken en achter de koffiemachine, en waar dat nodig is krijgen ze begeleiding van een coach. Je kunt er ook een vergaderruimte huren, de broodjesservice inschakelen voor je team of een verse maaltijd en appeltaart online bestellen en ophalen.\n\nDe zaak is op doordeweekse dagen overdag open en in de buurt kun je gratis parkeren. Kom gewoon langs voor een lunch of reserveer via de site.",
   "website": "https://droomdeboekweit.nl/",
+  "website_bereikbaar": true
+ },
+ "dsnijmegen": {
+  "adres_op_site": "De Gildekamp 1004, 6545 KB Nijmegen",
+  "bronnen": [
+   "https://dsnijmegen.nl/",
+   "https://dsnijmegen.nl/services/",
+   "https://dsnijmegen.nl/contact-uw-financiele-gezondheid-is-onze-top-prioriteit/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "salarisadministratie",
+   "belastingaangifte",
+   "jaarrekening",
+   "startende ondernemers",
+   "particulieren",
+   "zakelijke klanten",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 34563,
+   "uit": 1005
+  },
+  "lijkt_actief": true,
+  "naam": "Dsnijmegen",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staan twee verschillende telefoonnummers: 06-85325652 en een WhatsApp-link naar 06-81471179. De site noemt geen openingstijden. 'Jaarrekening' is afgeleid van 'het opstellen van jaarverslagen'.",
+  "status": "voorstel",
+  "tekst": "Ben je net begonnen met een eigen zaak, of groeit je administratie je boven het hoofd? Bij DS Nijmegen Consult & Accounting op bedrijventerrein De Gildekamp krijg je één vast aanspreekpunt dat met je meedenkt over je cijfers.\n\nHet kantoor verzorgt de boekhouding, salarisadministratie en belastingaangiften voor ondernemers uit het mkb. Ook bij debiteuren- en crediteurenbeheer, jaarverslagen en fiscaal advies kun je hier terecht. Starters krijgen extra begeleiding: samen kijk je naar je ondernemingsplan, de keuze tussen eenmanszaak, vof of bv, een financieringsaanvraag en het opzetten van je administratie. Ook als particulier kun je hulp krijgen bij je financiële zaken.\n\nWil je weten wat ze voor jou kunnen doen? Bel of app even voor een vrijblijvend gesprek.",
+  "website": "https://dsnijmegen.nl/",
+  "website_bereikbaar": true
+ },
+ "duqaat": {
+  "adres_op_site": "Bijsterhuizen 1102 G29, 6546 AS Nijmegen",
+  "bronnen": [
+   "https://www.duqaat.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "salarisadministratie",
+   "boekhouding",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 20509,
+   "uit": 680
+  },
+  "lijkt_actief": true,
+  "naam": "Duqaat",
+  "openingstijden": "",
+  "opmerkingen": "Er is ook een vestiging in Bemmel (De Pollenbrink 3). Op de site staat het Nijmeegse adres met unitnummer G29. Openingstijden staan niet op de site.",
+  "status": "voorstel",
+  "tekst": "Heb je als ondernemer geen tijd of zin in cijfertjes? Dan kun je dat bij Duqaat neerleggen. Vanuit hun kantoor op Bijsterhuizen in Nijmegen nemen ze je financiële, fiscale en administratieve werk over. Zelf noemen ze zich 'boekhouders op sneakers'.\n\nHet blijft niet bij een kloppende administratie. Je krijgt rapportages die je echt snapt, de jaarrekening, de salarisadministratie en persoonlijk advies over hoe je bedrijf verder kan groeien. Ook bij controlling en het verbeteren van je bedrijfsprocessen kunnen ze je helpen. Je betaalt een vast bedrag, dus je weet vooraf waar je aan toe bent.\n\nWil je kennismaken? Bel of mail het team gerust, of laat je nummer achter op de site. Dan bellen ze je terug.",
+  "website": "http://www.duqaat.nl/",
   "website_bereikbaar": true
  },
  "eastside-performance": {
@@ -6586,6 +7210,39 @@
   "website": "https://www.elsombreronijmegen.nl/",
   "website_bereikbaar": false
  },
+ "elfferich-administratie-belastingadvies": {
+  "adres_op_site": "Porrenhofstraat 96, 6663 SG Lent",
+  "bronnen": [
+   "https://elfferich.eu/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "startende ondernemers",
+   "particulieren",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 20452,
+   "uit": 543
+  },
+  "lijkt_actief": false,
+  "naam": "Elfferich Administratie & Belastingadvies",
+  "openingstijden": "",
+  "opmerkingen": "Op de homepage staat: 'Bert Elfferich RB neemt geen nieuwe opdrachten meer aan.' Het kantoor neemt dus geen nieuwe klanten meer aan. Daarom staat er geen tekst en is lijkt_actief op false gezet. Overweeg de vermelding te verwijderen. Het is een eenmanszaak (Bert Elfferich RB, erkend RB-belastingadviseur) en het adres in Lent lijkt een thuisadres. Wat er tot nu toe werd aangeboden: belastingadvies en aangiften, fiscale jaarrekeningen, (loon)administratie, startersadvies en financiële planning, voor mkb, zzp en particulieren.",
+  "reden": "automatisch: gestopt of verhuisd volgens de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.elfferich.eu/",
+  "website_bereikbaar": true
+ },
  "emmi-s": {
   "adres_op_site": "Archipelstraat 31, 6524 LL Nijmegen",
   "bronnen": [
@@ -6640,6 +7297,68 @@
   "status": "goedgekeurd",
   "tekst": "Zin in Indonesisch eten dat echt vers op je bord komt? In de Prins Hendrikstraat kook je bij Emmy Eethuis niet zelf, dat doet Emmy voor je, met ingrediënten die die dag zijn ingekocht. De kaart wisselt daarom, en een magnetron komt er niet aan te pas.\n\nDe Indonesische keuken is zo gevarieerd als de eilanden zelf, met op elk eiland eigen kruiden en groenten, en dat proef je hier. Laat je verrassen door verse groenten die je misschien nog niet kent, en neem de tijd voor een rustig diner in een gemoedelijk eethuis.\n\nJe kunt van woensdag tot en met zaterdag vanaf vijf uur 's avonds terecht. Wel zo handig om even te reserveren: dat kan telefonisch of per mail. Liever thuis eten? Je kunt het eten ook afhalen.",
   "website": "http://www.emmyeethuis.nl/",
+  "website_bereikbaar": true
+ },
+ "erik-tax": {
+  "adres_op_site": "Sint Annastraat 198c, 6525 GX Nijmegen",
+  "bronnen": [
+   "https://www.erik.tax/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "zzp en mkb",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 21686,
+   "uit": 703
+  },
+  "lijkt_actief": true,
+  "naam": "Erik.tax",
+  "openingstijden": "",
+  "opmerkingen": "Alleen de homepage gelezen. Er staan geen openingstijden op de site. Het is een eenmanspraktijk (Erik.tax B.V.); de site laat niet zien of het adres een kantoor of een woonadres is.",
+  "status": "voorstel",
+  "tekst": "Liever vooruitkijken dan achteraf schrikken van je cijfers? Erik van Hemert werkt al meer dan twintig jaar als financieel en fiscaal adviseur voor ondernemers. Vanuit de Sint Annastraat helpt hij zzp'ers en mkb-bedrijven, maar ook coöperaties, verenigingen en stichtingen.\n\nJe kunt bij hem terecht voor belastingadvies en het invullen van je aangiftes, voor de salarisadministratie en voor boekhouden met hulp van AI. Wil je meer overzicht? Dan kan hij je een financieel dashboard geven of als parttime CFO met je meedenken over groei. Zit je nu nog bij een ander kantoor, dan helpt een overstapservice je bij de wissel.\n\nHeb je een fiscale vraag of wil je eerst eens kennismaken? Bel Erik gewoon op. Vaak heb je dan meteen al een antwoord.",
+  "website": "http://www.erik.tax/",
+  "website_bereikbaar": true
+ },
+ "ex-nihilo-bv": {
+  "adres_op_site": "Kerkenbos 1053K, 6546 BB Nijmegen (daarnaast Graf-Adolf-Platz 15, 40213 Düsseldorf)",
+  "bronnen": [
+   "https://www.ex-nihilo.eu/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [
+   {
+    "bewijs": "Ex Nihilo – Tax Compliance Software & Advisory Solutions",
+    "categorie": "it-bedrijf"
+   }
+  ],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "zakelijke klanten",
+   "Engelstalig"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 23229,
+   "uit": 880
+  },
+  "lijkt_actief": true,
+  "naam": "Ex Nihilo Bv",
+  "openingstijden": "",
+  "opmerkingen": "Het gaat om een gespecialiseerd internationaal fiscaal advies- en softwarebedrijf (transfer pricing, DAC6/7/8, CESOP) en geen gewoon administratiekantoor. De site is alleen in het Engels. Het past misschien beter onder it-bedrijf of zakelijk-overig. De klanten zijn alleen grote zakelijke partijen.",
+  "status": "voorstel",
+  "tekst": "Werk je bij een internationaal bedrijf en kom je niet meer uit de Europese belastingregels? Bij Ex Nihilo, met een kantoor aan het Kerkenbos in Nijmegen en een tweede vestiging in Düsseldorf, combineren ze fiscaal advies met eigen software.\n\nDe focus ligt op transfer pricing: hoe je verrekenprijzen tussen onderdelen van een concern regelt en vastlegt in onder meer master files, local files en country-by-country reports. Je kiest zelf hoeveel je uitbesteedt: van het hele traject tot zelf aan de slag gaan met hun tools. Daarnaast helpen hun programma's bij de Europese meldplichten DAC6, DAC7 en DAC8 (ook voor crypto) en bij CESOP-rapportages over grensoverschrijdende betalingen.\n\nDit is dus iets voor fiscale en financiële teams van grotere organisaties, niet voor je eigen aangifte. Wil je zien hoe het werkt? Vraag via de site een demo aan.",
+  "website": "http://www.ex-nihilo.eu/",
   "website_bereikbaar": true
  },
  "exercise-body-and-mind": {
@@ -7483,6 +8202,32 @@
   "website": "https://barglitch.nl",
   "website_bereikbaar": true
  },
+ "go-administratie-en-advies-b-v": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://goadministratieenadvies.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 51787,
+   "uit": 982
+  },
+  "lijkt_actief": true,
+  "naam": "Go Administratie En Advies B.v.",
+  "openingstijden": "",
+  "opmerkingen": "De homepage laadt wel, maar toont alleen een lange reeks PHP-foutmeldingen (Deprecated/Warning) van een verouderde WordPress-installatie; de opgehaalde tekst breekt daarna af. Er is geen inhoud over diensten, adres of openingstijden zichtbaar, dus er is geen tekst geschreven. Categorie is gebaseerd op de bedrijfsnaam en de vermoedelijke categorie; graag later opnieuw controleren. Of het bedrijf nog actief is, valt niet vast te stellen.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://goadministratieenadvies.nl/",
+  "website_bereikbaar": false,
+  "zelf_gelezen": true
+ },
  "go4fit-nijmegen": {
   "adres_op_site": "",
   "bronnen": [
@@ -8078,8 +8823,8 @@
   "lijkt_actief": true,
   "naam": "Het Theezaakje",
   "niet_in": {
-   "lunch": "automatisch: hoort bij Koffiebars (scan 23-10-2026)",
-   "koffiezaak": "hoort bij Winkels (Frans, 23-10-2026)"
+   "koffiezaak": "hoort bij Winkels (Frans, 23-10-2026)",
+   "lunch": "automatisch: hoort bij Koffiebars (scan 23-10-2026)"
   },
   "openingstijden": "di-vr 10:00-13:00 en 14:00-17:00, za 10:00-12:30 en 13:00-17:00",
   "opmerkingen": "Dit is geen lunchroom maar een theewinkel met webshop. De site noemt geen zitplaatsen, geen ontbijt en geen lunch. 'Koffiezaak' is gekozen omdat dat de categorie is die er het dichtst bij komt; misschien past een winkelcategorie beter, maar die staat niet in de lijst. Graag nakijken. 'Afhalen' is gekozen omdat je in de winkel thee koopt, 'bezorgen' omdat de site schrijft dat de thee 'door fietskoeriers bezorgd' wordt. Op zondag en maandag is de winkel volgens de site dicht. Alleen de homepage is gelezen.",
@@ -8208,6 +8953,68 @@
   "tekst": "Zin om even uit de stad te zijn zonder ver te fietsen? Aan de Griftdijk Noord in Lent vind je een historische tuinderij waar vrijwilligers het hele jaar door meer dan honderd groenterassen telen, zonder gewasbeschermingsmiddelen en met oog voor de biodiversiteit. Zo houden ze de traditie van de Lentse warmoezeniers levend, die Nijmegen vroeger van groente en fruit voorzagen.\n\nIn het tuincafé proef je wat er op het land is gegroeid. Daarna kun je in de winkel verse oogst meenemen of zelf de tuin in gaan om te oogsten. Daarnaast is er een bloemenpluktuin en staan er regelmatig workshops en excursies op de agenda, van wildpluk tot zelf verse pasta maken.\n\nVan woensdag tot en met zondag kun je er tussen 10 en 17 uur terecht. Kijk vooraf even in de activiteitenkalender en fiets erheen.",
   "website": "https://dewarmoes.nl",
   "website_bereikbaar": true
+ },
+ "hoefs-belastingadviseur-marie-jose": {
+  "adres_op_site": "Elzenstraat 4-A10, 6523 EV Nijmegen",
+  "bronnen": [
+   "https://www.mariejosehoefs.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "belastingaangifte",
+   "boekhouding",
+   "startende ondernemers"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 19007,
+   "uit": 723
+  },
+  "lijkt_actief": true,
+  "naam": "Hoefs Belastingadviseur Marie-José",
+  "openingstijden": "",
+  "opmerkingen": "Het adres op de site (Elzenstraat 4-A10, 6523 EV) wijkt af van ons adres (Rode Kruislaan 15). Het lijkt erop dat ze verhuisd is, dus ons adres moet worden bijgewerkt. De site bestaat uit één pagina met weinig details.",
+  "status": "voorstel",
+  "tekst": "Zie je op tegen je belastingaangifte, of wil je gewoon iemand die met je meedenkt over je geldzaken? Dan kun je bij Marie-José Hoefs terecht. Ze is belastingadviseur en aangesloten bij het Register Belastingadviseurs. Ze werkt nuchter en zonder poespas, maar wel met zorg en persoonlijke aandacht.\n\nJe kunt bij haar aankloppen voor je aangifte en je administratie. Ben je net gestart als ondernemer, dan begeleidt ze je en denkt ze met je mee. Ook als het in je leven even tegenzit, bij een scheiding of een overlijden, helpt ze je met de financiële afhandeling. Daarnaast doet ze financiële thuiszorg en bewindvoering.\n\nHaar kantoor zit aan de Elzenstraat in Nijmegen-Oost. Bel of mail haar gerust om kennis te maken.",
+  "website": "https://www.mariejosehoefs.nl/?y_source=1_MjU0NzE0OTAtNDgzLWxvY2F0aW9uLndlYnNpdGU%3D",
+  "website_bereikbaar": true
+ },
+ "hofs-fma": {
+  "adres_op_site": "Weurtseweg 470a, 6541BE Nijmegen",
+  "bronnen": [
+   "https://hofsfmajunior.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "startende ondernemers",
+   "particuliere aangifte",
+   "particulieren",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 22412,
+   "uit": 1118
+  },
+  "lijkt_actief": true,
+  "naam": "Hofs Fma",
+  "openingstijden": "",
+  "opmerkingen": "De opgegeven website hofsfma.nl leidt naar hofsfmajunior.nl. Sinds 1 januari 2025 is de V.O.F. vervangen door een eenmanszaak (Hofs FMA junior, KVK 95681167); de bedrijfsnaam in de gids moet mogelijk worden aangepast. Het adres op de site (Weurtseweg 470a, 6541BE) wijkt af van ons adres (Leuvensbroek 3333, 6546 TL); het adres in de gids moet mogelijk worden bijgewerkt. Of het om een kantoor of een thuisadres gaat, is niet duidelijk.",
+  "status": "voorstel",
+  "tekst": "Wil je gewoon lekker ondernemen en heb je geen zin om je avonden kwijt te zijn aan bonnetjes en btw-aangiftes? Dan is dit kleinschalige boekhoudkantoor aan de Weurtseweg in Nijmegen-West een prettig adres om aan te kloppen.\n\nMerel Hofs werkte zes jaar samen met haar vader en zet sinds begin 2025 de zaak voort als eenmanszaak onder de naam Hofs FMA junior. Ze helpt kleine en startende ondernemers, zzp'ers én particulieren met de omzetbelasting, de jaarrekening, de inkomstenbelasting en de loonadministratie. Het idee: persoonlijke hulp, zonder de kosten van een groot kantoor.\n\nBen je benieuwd wat ze voor jou kan doen? Bel of mail even voor een kennismaking.",
+  "website": "https://hofsfma.nl/",
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
  },
  "holt-nijmegen": {
   "adres_op_site": "Houtstraat 75, 6511 JM Nijmegen",
@@ -8495,6 +9302,31 @@
   "tekst": "Zin in sushi, maar geen zin om de deur uit te gaan? Bij de Nijmeegse vestiging van de keten I Love Sushi, aan de Molenweg op bedrijventerrein Westkanaaldijk, bestel je Japanse hapjes die je thuis opeet.\n\nOp de kaart staan maki, nigiri en rolls, van California roll tot tempura ebi. Kom je er niet uit? Dan zijn er kant-en-klare boxen met een mix van alles, ook een met tofu en vegetarische rolls. Als toetje kun je mochi in smaken als mango of tropical bestellen.\n\nJe bestelt online via de site of je belt de zaak. Let wel op: de bezorgtijden verschillen van de openingstijden en op sommige dagen wordt er niet bezorgd. Kijk dus even op de site voordat je je sushiavond plant.",
   "website": "https://ilovesushi.nl/location/i-love-sushi-nijmegen/",
   "website_bereikbaar": true
+ },
+ "ibosaf-belastingadvies": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://ibosaf.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17379,
+   "uit": 372
+  },
+  "lijkt_actief": true,
+  "naam": "Ibosaf Belastingadvies",
+  "openingstijden": "",
+  "opmerkingen": "De website https://ibosaf.nl/ was niet bereikbaar (url_not_accessible). Daardoor kon niets worden gecontroleerd en is er geen tekst geschreven. De categorie is overgenomen uit de vermoedelijke categorie en de bedrijfsnaam (belastingadvies). Of het bedrijf nog actief is, is niet bekend. Graag later opnieuw controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://ibosaf.nl/",
+  "website_bereikbaar": false
  },
  "il-nano": {
   "adres_op_site": "Berg En Dalseweg 243b, Nijmegen",
@@ -9466,8 +10298,8 @@
   "lijkt_actief": true,
   "naam": "Koffiebarhuren",
   "niet_in": {
-   "lunch": "automatisch: hoort bij Catering (scan 23-10-2026)",
-   "koffiezaak": "hoort bij Catering (Frans, 23-10-2026)"
+   "koffiezaak": "hoort bij Catering (Frans, 23-10-2026)",
+   "lunch": "automatisch: hoort bij Catering (scan 23-10-2026)"
   },
   "openingstijden": "",
   "opmerkingen": "Dit is geen lunchroom. Het bedrijf verhuurt mobiele koffiebars met barista voor evenementen en werkt in heel Nederland. Er is geen zaak die je kunt bezoeken. Daarom staat de categorie op catering in plaats van lunch. Koffiebarhuren.nl hoort bij Bar Company, dat ook cocktailbars verhuurt. De kenmerken bedrijfsuitje en trouwen zijn gekozen op basis van de evenementen die de site noemt, zoals bruiloften en personeelsfeesten. Controleer of die kenmerken bij verhuur passen.",
@@ -10158,6 +10990,38 @@
   "website": "https://lima-nijmegen.nl/",
   "website_bereikbaar": true
  },
+ "lineo-accountants-adviseurs-nijmegen": {
+  "adres_op_site": "Energieweg 55a, 6541 CW Nijmegen (tel. 024 323 7275)",
+  "bronnen": [
+   "https://www.lineoacc.nl/",
+   "https://www.lineoacc.nl/contact/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "zakelijke klanten",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 46276,
+   "uit": 1114
+  },
+  "lijkt_actief": true,
+  "naam": "Lineo Accountants & Adviseurs – Nijmegen",
+  "openingstijden": "",
+  "opmerkingen": "Keten met drie vestigingen (Uden, Den Bosch, Nijmegen); het hoofdadres lijkt in Uden te zitten (Vluchtoord 1). Er staan geen openingstijden op de site. Het eerste gesprek heet 'kennismaking', maar de site zegt niet dat het gratis is.",
+  "status": "voorstel",
+  "tekst": "Heb je een eigen zaak en raak je het overzicht in je cijfers kwijt? Op de Energieweg, op het bedrijventerrein in Nijmegen-West, zit de Nijmeegse vestiging van Lineo Accountants & Adviseurs. Het kantoor heeft ook vestigingen in Uden en Den Bosch en richt zich op zzp'ers en mkb-bedrijven.\n\nJe kunt er terecht voor je boekhouding, jaarrekening en belastingaangifte, en ook voor salarisadministratie en HR. Daarnaast denken ze mee over fiscale en juridische vragen, financiële planning en estate planning, het waarderen van je bedrijf en het regelen van een opvolger. Ze werken veel met persoonlijk contact en stemmen hun aanpak af op jouw bedrijf.\n\nAlles begint met een kennismakingsgesprek waarin ze kijken naar jouw situatie en plannen. Bel de vestiging in Nijmegen of stuur een bericht via de website om een afspraak te maken.",
+  "website": "https://www.lineoacc.nl/",
+  "website_bereikbaar": true
+ },
  "little-india": {
   "adres_op_site": "",
   "bronnen": [
@@ -10643,6 +11507,31 @@
   "website": "http://www.madebymarn.com/",
   "website_bereikbaar": true
  },
+ "mainius-administratiekantoor": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://www.mainiusadministratie.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 18052,
+   "uit": 418
+  },
+  "lijkt_actief": true,
+  "naam": "Mainius - Administratiekantoor",
+  "openingstijden": "",
+  "opmerkingen": "De website staat in onderhoudsmodus ('Site is undergoing maintenance'), er is geen inhoud te lezen. Alleen de meta-omschrijving noemt boekhouding, aangifte omzetbelasting, inkomstenbelasting en vennootschapsbelasting, controle van de boekhouding en boekhouding voor Temper- en YoungOnes-freelancers. Dat is te weinig om een tekst op te baseren. Het adres kon niet worden gecontroleerd. Graag later opnieuw bekijken.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://www.mainiusadministratie.nl/",
+  "website_bereikbaar": false
+ },
  "malle-babbe": {
   "adres_op_site": "",
   "bronnen": [],
@@ -10976,11 +11865,36 @@
   },
   "openingstijden": "",
   "opmerkingen": "Het is een matcha- en koffiebar zonder lunchkaart, daarom staat hij bij koffiezaak en niet bij lunchroom. De bar zit binnen tattoo- en piercingzaak TRB. Op de site staan geen openingstijden en geen eten. De site bestaat uit één pagina.",
+  "reden": "geen koffiebar (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin in een kom matcha midden in de stad? Op Plein 1944, aan de kant van het busstation, vind je een kleine matcha- en koffiebar op een verrassende plek: binnen tattoo- en piercingzaak TRB. Een rustig moment tussen het winkelen of vlak voordat je de bus pakt.\n\nDe matcha is ceremonieel, en ze hebben er heel wat soorten voor geproefd voordat ze deze kozen. Je krijgt een volle, zachte umamismaak. Liever koffie? Dan drink je bonen van Kopi Melanesia, die van kleine plantages op de Molukken komen.\n\nLoop gewoon even binnen voor een kop koffie of matcha en kijk meteen rond in deze aparte combinatie van koffiebar en studio.",
   "website": "https://matchanijmegen.nl/",
-  "website_bereikbaar": true,
-  "reden": "geen koffiebar (Frans, 23-10-2026)"
+  "website_bereikbaar": true
+ },
+ "maters-accountants": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://matersaccountants.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17369,
+   "uit": 429
+  },
+  "lijkt_actief": true,
+  "naam": "Maters Accountants",
+  "openingstijden": "",
+  "opmerkingen": "De website https://matersaccountants.nl/ kon niet worden opgehaald, want het ophalen werd geweigerd met de foutmelding 'url_not_allowed'. Daarom is er geen tekst geschreven en zijn er geen kenmerken of openingstijden ingevuld. Ook het adres is niet gecontroleerd. De categorie accountant-boekhouder is overgenomen uit onze eigen gegevens en is niet via de site bevestigd. Of het bedrijf nog actief is, kon ook niet worden gecontroleerd. Graag de website handmatig nakijken.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://matersaccountants.nl/",
+  "website_bereikbaar": false
  },
  "mccafe": {
   "adres_op_site": "Wijchenseweg 202, 6538 SX Nijmegen",
@@ -11017,11 +11931,11 @@
   },
   "openingstijden": "Restaurant ma-zo 09:00-23:00; McDrive zo-wo 09:00-01:00, do 09:00-01:30, vr-za 09:00-02:30; McDelivery ma-zo 11:00-21:30",
   "opmerkingen": "De link gaat naar de vestigingspagina van McDonald's Nijmegen Novium. McCafé is daar een onderdeel van en geen zelfstandige zaak. Een fastfoodrestaurant past niet goed bij de categorie lunchroom, daarom heb ik voor koffiezaak gekozen (vanwege McCafé). De redactie kan ook overwegen om dit als 'restaurant' of 'afhaal' onder de naam McDonald's in te delen. Tijdens de Vierdaagse (juli) gelden afwijkende openingstijden. Ontbijt staat niet op de vestigingspagina en heb ik daarom niet als kenmerk opgenomen. De menukaart staat op mcdonalds.com en heb ik niet gelezen.",
+  "reden": "keten (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin in een kop koffie tussendoor of moet je even bijtanken tijdens het boodschappen doen? In het McDonald's-restaurant aan de Wijchenseweg, bij winkelcentrum Novium, zit een McCafé waar je de hele dag binnenloopt voor een koffie met iets lekkers erbij.\n\nDit is de Nijmeegse vestiging van de bekende keten, dus je kunt hier natuurlijk ook gewoon voor een burger terecht. Er is een terras, de kinderen kunnen zich vermaken in de speelhoek en er zijn glutenvrije producten. Het restaurant is toegankelijk voor rolstoelen, er is een babyruimte en je parkeert voor de deur, waar ook een laadpaal staat. Heb je haast? Dan pak je de McDrive of laat je je bestelling bezorgen.\n\nHet restaurant gaat elke dag om negen uur 's ochtends open, dus loop gerust eens binnen voor je volgende koffiepauze.",
   "website": "https://mcdonaldsrestaurant.nl/nijmegen-novium",
-  "website_bereikbaar": true,
-  "reden": "keten (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "meet-de-griek": {
   "adres_op_site": "",
@@ -11422,11 +12336,11 @@
   },
   "openingstijden": "",
   "opmerkingen": "Dit is een bubble tea-zaak en geen lunchroom; daarom heb ik 'koffiezaak' als dichtstbijzijnde categorie gekozen. De site is in het Engels en heeft maar één pagina: er staan geen openingstijden, geen menukaart en geen adres van de vestiging in Nijmegen op. Ik heb dus niet kunnen nagaan of het adres in de Augustijnenstraat klopt.",
+  "reden": "geen koffiebar (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin in iets fris en anders dan een gewone kop thee? In de Augustijnenstraat, midden in het centrum, vind je de Nijmeegse vestiging van MÖGE TEE, een zaak met bubble tea en andere moderne theedranken.\n\nDe drankjes zijn geïnspireerd op de eeuwenoude Chinese theetraditie, maar krijgen een eigentijdse draai. Ze werken met natuurlijke ingrediënten en goede thee, dus je proeft verrassende, verfrissende smaken. De keten heeft ook vestigingen in Maastricht en Eindhoven.\n\nLoop je door de binnenstad en heb je zin in een pauze? Spring dan even binnen en probeer een smaak die je nog niet kent.",
   "website": "https://www.mogetee.nl",
-  "website_bereikbaar": true,
-  "reden": "geen koffiebar (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "mohabat": {
   "adres_op_site": "",
@@ -11513,6 +12427,39 @@
   "status": "voorstel",
   "tekst": "Heb je geen zin om te koken, maar wel trek in iets fris en hartigs? Dan bestel je bij de Nijmeegse vestiging van de sushiketen Mr. Sushi aan Plein 1944 sushi rolls, poké bowls, temaki of wat losse bites en laat je het thuis bezorgen. Alles wordt in de eigen keuken vers voor je klaargemaakt.\n\nOok als je geen vis eet, kun je hier terecht: naast gerechten met vis en vlees staan er vega en vegan opties op de kaart. Kom je liever zelf langs? Dan haal je je bestelling op aan het plein, midden in het centrum.\n\nDe zaak gaat elke dag 's middags open en bezorgt tot de avond. Bestel vooraf online, dan is de kans groot dat je box al voor je klaarstaat als je binnenloopt.",
   "website": "http://www.mrsushi.nl/",
+  "website_bereikbaar": true
+ },
+ "mulder-belastingadvies": {
+  "adres_op_site": "Kerkenbos 1033, 6546 BH Nijmegen",
+  "bronnen": [
+   "https://mulderbelastingadvies.nl/",
+   "https://mulderbelastingadvies.nl/wat-kan-ik-voor-u-doen-jaarrekeningen-belastingaangiften-en-loonadministratie-verzorgen-en-sparren/",
+   "https://mulderbelastingadvies.nl/contact/",
+   "https://mulderbelastingadvies.nl/wie-zijn-mijn-klanten-dit-zijn-mijn-klanten/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 30004,
+   "uit": 1215
+  },
+  "lijkt_actief": true,
+  "naam": "Mulder Belastingadvies",
+  "openingstijden": "",
+  "opmerkingen": "Postcode op de site is 6546 BH, bij ons staat 6546 BB. De site draait op een oude WordPress-versie (4.9) en de klantenpagina lijkt niet af, maar er staat niet dat het bedrijf gestopt is. Telefoon: 024-3732177. Kerkenbos is een bedrijventerrein, dus het lijkt geen thuisadres. Openingstijden staan niet op de site.",
+  "status": "voorstel",
+  "tekst": "Heb je een eigen bedrijf of werk je als zzp'er, en zie je op tegen de jaarlijkse papierwinkel? Bij Peter Mulder op bedrijventerrein Kerkenbos krijg je een boekhouder en belastingadviseur die al sinds 1993 voor zichzelf werkt en zijn klanten persoonlijk kent.\n\nHij stelt je jaarrekening op, regelt je aangifte inkomstenbelasting en kan ook de loonadministratie doen als je mensen in dienst hebt. Zelf alles bijhouden in een boekhoudprogramma hoeft niet: je levert je bankafschriften en facturen aan en hij verwerkt die digitaal tot een jaarrekening. Bij je aangifte zoekt hij uit welke ruimte de wet je biedt. Daarnaast kun je met hem sparren over je onderneming.\n\nHet kantoor is klein en informeel, dus je hoeft niet bang te zijn om een vraag te stellen. Bel of mail gerust voor een eerste gesprek.",
+  "website": "http://mulderbelastingadvies.nl/",
   "website_bereikbaar": true
  },
  "munt-saladebar": {
@@ -11643,6 +12590,37 @@
   "status": "goedgekeurd",
   "tekst": "Zin om met uitzicht over de Waal te tafelen? Op de Waalkade, aan de voet van de oude stad, vind je NACIONAL. Het is een stijlvolle plek voor een lange lunch, een borrel of een uitgebreid diner. De keuken is modern-Europees, met een flinke knipoog naar de zee en het Middellandse Zeegebied. Denk aan steak tartaar, zeetong, tagliatelle met verse truffel en een seizoensmenu van vier tot zes gangen, met een uitgebreide wijnkaart erbij.\n\nIn de zomer zit je op het terras onder de platanen, bijvoorbeeld met een rijk gevulde schaal zeevruchten voor twee. Je kunt er ook terecht voor een high tea, groepsreserveringen en speciale culinaire avonden. Heb je dieetwensen? Ze koken op verzoek ook vegetarisch, vegan of glutenvrij.\n\nNACIONAL is open van woensdag tot en met maandag, in het weekend ook vanaf de middag. Reserveer even, zeker als er iets te doen is.",
   "website": "https://nacional-nijmegen.nl/",
+  "website_bereikbaar": true
+ },
+ "ned-tax": {
+  "adres_op_site": "Industrieweg 103, 6541 TV Nijmegen",
+  "bronnen": [
+   "https://www.nedtax.nl/nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [
+   {
+    "bewijs": "Legal - Juridisch advies",
+    "categorie": "advocatenkantoor"
+   }
+  ],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 25325,
+   "uit": 953
+  },
+  "lijkt_actief": true,
+  "naam": "Ned Tax",
+  "openingstijden": "Telefonisch: ma-do 09:30-12:00 en 13:00-17:00, vr 09:30-12:00",
+  "opmerkingen": "Gespecialiseerd internationaal belasting- en juridisch adviesbureau (Nederland-Duitsland), geen klassiek administratiekantoor. De extra categorie advocatenkantoor is twijfelachtig: de site noemt juristen en juridisch advies, maar geen advocaten. De openingstijden gaan alleen over telefonische bereikbaarheid. Er is ook een vestiging in Amsterdam (Keizersgracht 452) en een postadres (Postbus 31168, Nijmegen).",
+  "status": "voorstel",
+  "tekst": "Heb je een bedrijf met plannen over de oostgrens, of werk je in Duitsland en woon je in Nederland? Dan krijg je al snel te maken met twee belastingstelsels die niet altijd lekker op elkaar aansluiten. Op de Industrieweg in Nijmegen zit een team dat zich al ruim twintig jaar bezighoudt met precies die grensoverschrijdende vragen.\n\nBij NeD Tax werken belastingadviseurs, juristen, financials en dealmakers samen. Je kunt er terecht voor fiscaal en juridisch advies, voor hulp bij financial en tax compliance en voor begeleiding bij overnames en andere transacties. Denk aan het belastingverdrag tussen Nederland en Duitsland, uitbreiden naar Duitsland of je bedrijf slim inrichten. Naast het kantoor in Nijmegen is er ook een vestiging in Amsterdam en een kantoor in Duitsland.\n\nWil je weten wat ze voor jouw situatie kunnen doen? Bel of stuur een bericht via de site en plan een persoonlijk gesprek.",
+  "website": "https://www.nedtax.nl/nl/?utm_source=gmb&utm_medium=link&utm_term=&utm_content=&utm_campaign=",
   "website_bereikbaar": true
  },
  "nevel-wild-ales": {
@@ -12059,11 +13037,11 @@
   "naam": "Nostra Lunch Winebar",
   "openingstijden": "ma-zo 10:00-19:30 (keuken tot 18:00)",
   "opmerkingen": "Op de site staat geen adres, dus de Van Broeckhuysenstraat 48 kon ik niet controleren. Ik heb 'lunch' als hoofdcategorie gekozen in plaats van 'cafe', omdat de zaak alleen overdag open is (tot 19:30) en vooral lunch serveert. De wijnbar staat er als extra categorie bij. Het kenmerk 'groepen' is twijfelachtig: de maximale groepsgrootte is 8 personen. De contactpagina kon ik niet ophalen, de informatie komt van de homepage. Gesloten op 25 en 26 december en 1 januari, op 24 en 31 december een uur eerder dicht.",
+  "reden": "dubbel met Nostra bij de lunchrooms (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin in een lange middag met een goed glas wijn? Midden in het centrum van Nijmegen kun je bij Nostra uitgebreid lunchen met verse, mediterraan getinte gerechten. Op de kaart staan ook seizoensgerechten die regelmatig wisselen.\n\nWijn speelt hier de hoofdrol. Je kunt de hele kaart per glas bestellen, dus je proeft makkelijk iets uit Frankrijk, Italië, Spanje of Portugal dat je nog niet kende. Vanaf drie uur 's middags kun je kiezen voor de High Wining: drie rondes mediterrane hapjes met twee glazen wijn. Leuk met z'n tweeën of met een groepje vrienden. Bij mooi weer zit je heerlijk op het terras.\n\nNostra is elke dag open tot in de vroege avond. Reserveer vooraf een tafel per mail of telefoon, zeker in het weekend. Voor de High Wining moet je minstens een dag van tevoren boeken.",
   "website": "http://www.nostra.nl/",
-  "website_bereikbaar": true,
-  "reden": "dubbel met Nostra bij de lunchrooms (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "notting-hill": {
   "adres_op_site": "",
@@ -12148,6 +13126,33 @@
   "status": "goedgekeurd",
   "tekst": "Wil je sporten op een plek waar ze je bij binnenkomst gewoon begroeten? Op bedrijventerrein Kerkenbos vind je een kleinschalige sportschool waar je net zo welkom bent als beginner als wanneer je al jaren traint. Je kunt er vrij fitnessen op moderne apparaten, en het team kan je persoonlijk begeleiden met trajecten die gericht zijn op afvallen, spieropbouw of herstel.\n\nHeb je liever gezelschap? Elke week staan er zo'n zeventien groepslessen op het rooster, verdeeld over kracht, cardio en body & mind. Denk aan HIIT, kickboksen, Hyrox-training en pilates. Ook voedingsadvies en bedrijfsfitness horen bij het aanbod.\n\nTwijfel je nog? Vraag dan de gratis pas voor veertien dagen aan of plan een vrijblijvende proeftraining, dan zie je zelf of het bij je past.",
   "website": "http://Www.noviofit.nl/",
+  "website_bereikbaar": true
+ },
+ "noviotax": {
+  "adres_op_site": "Jonkerbosplein 52, 6534 AB Nijmegen (daarnaast een kantoor aan de Nieuwezijds Voorburgwal 162, Amsterdam)",
+  "bronnen": [
+   "https://novio.tax/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "zakelijke klanten",
+   "Engelstalig"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 27093,
+   "uit": 798
+  },
+  "lijkt_actief": true,
+  "naam": "Noviotax",
+  "openingstijden": "",
+  "opmerkingen": "Gespecialiseerd fiscaal adviesbureau voor grote bedrijven en adviseurs, geen gewone boekhouder voor particulieren of zzp'ers. Er is ook een vestiging in Amsterdam. Op de site staan geen openingstijden. De site is Engelstalig en heeft ook een Nederlandse versie.",
+  "status": "voorstel",
+  "tekst": "Loopt jouw bedrijf vast op internationale belastingregels, verrekenprijzen tussen vestigingen of dividendbelasting? Dan zit je bij dit fiscale adviesbureau aan het Jonkerbosplein goed. Het team richt zich op vennootschapsbelasting, belastingverdragen en Europees recht, transfer pricing, de innovatiebox en bronbelasting op dividend.\n\nDe partners werkten jarenlang bij grote advieskantoren en begonnen in 2016 samen een eigen kantoor. Ze werken vooral voor middelgrote en grote ondernemingen, ook beursgenoteerde, en voor andere adviseurs en accountantskantoren. Die schakelen het team regelmatig in voor een second opinion of bij een geschil met de Belastingdienst. Op hun blog lees je hoe ze over recente rechtspraak denken.\n\nWil je weten wat ze voor jouw organisatie kunnen doen? Bel of mail het kantoor in Nijmegen en maak een afspraak.",
+  "website": "http://www.novio.tax/",
   "website_bereikbaar": true
  },
  "oersoep-brouwlab": {
@@ -12396,11 +13401,11 @@
   "naam": "Orthotic Shop US",
   "openingstijden": "ma-do vanaf 16:00, vr-zo vanaf 14:00",
   "opmerkingen": "De naam bij ons, 'Orthotic Shop US', klopt niet: de website hoort bij Proeflokaal Beij Ons, een eetcafé. Het adres komt wel overeen. Het eetcafé heeft een volwaardige avondkaart, daarom heb ik restaurant gekozen in plaats van café. De site noemt ook lunch, maar volgens de openingstijden ga je pas om 14:00 of 16:00 open. Daarom heb ik lunch niet in de tekst of bij de kenmerken gezet. Sluitingstijden staan niet op de site.",
+  "reden": "dubbel met Beij Ons bij de restaurants (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin in een avond met de sfeer van een bruine kroeg, maar wel met goed eten op tafel? In hartje Nijmegen-Oost, aan de Daalsedwarsweg, zit al zo'n vijftien jaar een vertrouwde ontmoetingsplek voor buurtbewoners en mensen van verder weg.\n\nJe komt hier voor een speciaalbiertje met vrienden, koffie met gebak of een uitgebreid diner. De spareribs met frites, aioli en koolsla zijn de klassieker van het huis, en van maandag tot en met donderdag kun je ze onbeperkt bestellen. Op dinsdagavond vanaf half negen is er een pubquiz, dus neem gerust je team mee.\n\nHeb je iets te vieren, zoals een verjaardag, afstudeerfeest of bedrijfsborrel? Dat kan hier ook. Reserveer online een tafel of mail even voor de mogelijkheden voor groepen.",
   "website": "http://www.beijons.nl/",
-  "website_bereikbaar": true,
-  "reden": "dubbel met Beij Ons bij de restaurants (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "oscillator": {
   "adres_op_site": "Stationsplein 11, Nijmegen (Doornroosje, direct naast Station Nijmegen)",
@@ -12595,11 +13600,11 @@
   },
   "openingstijden": "ma-do 08:00-16:30, vr 08:00-15:30, za-zo gesloten",
   "opmerkingen": "Panama is geen zelfstandige zaak maar de koffiecounter van De Refter, het foodcourt van de Radboud Universiteit. Volgens de site kun je bij Panama terecht voor koffie, gebak en tussendoortjes, dus ik heb gekozen voor 'koffiezaak' in plaats van de voorgestelde lunchroom. De lunch van de Refter (soep, salades, broodjes) wordt verkocht bij Sousa, een andere balie. Er gelden afwijkende openingstijden op 12, 13 en 14 november en een kerstsluiting van 21 december tot en met 3 januari. Er is geen aparte homepage: de link verwijst door naar www.ru.nl/diensten/eten-en-drinken/de-refter.",
+  "reden": "universiteitskantine (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zit je op de campus van de Radboud Universiteit tussen twee colleges in en heb je zin in koffie? Loop dan even binnen bij Panama. Je vindt het in de Refter, het grote foodcourt in de Erasmus-laagbouw aan het Erasmusplein.\n\nPanama is de koffiecorner van de Refter. Je haalt er een kop koffie met iets lekkers erbij, zoals een gebakje of een klein tussendoortje. Daarna zoek je een plekje in de Refter om te studeren of om even bij te kletsen met vrienden. Voor een uitgebreidere lunch kun je bij de andere balies in hetzelfde foodcourt terecht.\n\nPanama is op werkdagen al vanaf acht uur 's ochtends open, dus je kunt er ook terecht voor een vroege bak koffie voor je eerste college. Kijk wel even naar de aangepaste tijden rond feestdagen en speciale dagen.",
   "website": "https://www.ru.nl/services/eten-en-drinken/de-refter",
-  "website_bereikbaar": true,
-  "reden": "universiteitskantine (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "papa-johns-pizza": {
   "adres_op_site": "",
@@ -12833,11 +13838,11 @@
   "naam": "Perplex",
   "openingstijden": "Lunch do 11:00-15:00; inloopmaaltijd om de week za 12:00-16:00; diner di en do vanaf 18:15",
   "opmerkingen": "Geen gewone horecazaak: dit is een christelijk ontmoetingscafé op vrijwilligersbasis (Stichting de Verwondering) dat alleen open is tijdens de activiteiten. Mogelijk past het beter bij een andere rubriek. Op de gelezen pagina's staat geen adres, alleen dat het pand in de Eilbrachtstraat ligt. Er staan geen vaste algemene openingstijden op de site; de tijden hierboven gelden alleen voor de activiteiten. Er is een gebedskelder, maar die wordt niet als huurruimte aangeboden.",
+  "reden": "geen café (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin in een kop koffie, een goed gesprek of gewoon een rustige plek om te studeren? In de Eilbrachtstraat, midden in de stad, vind je Perplex: een christelijk ontmoetingscafé dat draait op vrijwilligers en waar iedereen welkom is, of je nu gelooft of niet.\n\nJe kunt hier op allerlei manieren aanhaken. Op donderdag is er een stevige lunch en om de week op zaterdag schuif je aan voor een driegangenmaaltijd van de eigen kok. Studenten en young professionals kunnen terecht in het wekelijkse studiecafé, en op dinsdag en donderdag is er een gezamenlijk diner met gerechten uit verschillende keukens en een gesprek bij het toetje. Ben je international? Dan is het Taalcafé een fijne manier om je Nederlands te oefenen.\n\nKijk eerst even in de agenda wanneer er iets te doen is, en meld je voor de diners van tevoren aan via de site.",
   "website": "http://www.perplexnijmegen.nl/",
-  "website_bereikbaar": true,
-  "reden": "geen café (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "perry-ubeda-weerbaarheidscentrum": {
   "adres_op_site": "Tweede Oude Heselaan 181C, Nijmegen",
@@ -13421,6 +14426,40 @@
   "website": "https://plan-a-nijmegen.nl",
   "website_bereikbaar": true
  },
+ "plato-accountants": {
+  "adres_op_site": "Energieweg 55a, 6541CW Nijmegen",
+  "bronnen": [
+   "https://lineoacc.nl/",
+   "https://lineoacc.nl/contact/",
+   "https://lineoacc.nl/over-ons/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "zzp en mkb",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 43533,
+   "uit": 1359
+  },
+  "lijkt_actief": true,
+  "naam": "Plato Accountants",
+  "openingstijden": "",
+  "opmerkingen": "De website van Plato Accountants verwijst door naar Lineo Accountants & Adviseurs (lineoacc.nl). Het adres Energieweg 55a staat daar als vestiging Nijmegen (tel. 024 323 7275). Waarschijnlijk is Plato opgegaan in Lineo; bedrijfsnaam in de gids mogelijk aanpassen. Hoofdkantoor in Uden. Kennismaking wordt genoemd, maar niet expliciet als gratis.",
+  "status": "voorstel",
+  "tekst": "Ben je zzp'er of heb je een mkb-bedrijf en wil je je cijfers eindelijk eens helder op een rij? Aan de Energieweg in Nijmegen zit een vestiging van Lineo Accountants & Adviseurs, een kantoor dat ook in Uden en Den Bosch werkt en persoonlijk contact vooropzet.\n\nJe kunt er terecht voor de boekhouding, jaarrekeningen, belastingaangiften en salarisadministratie, maar ook voor zwaardere vragen: fiscaal en juridisch advies, financiële planning, bedrijfswaarderingen en opvolging. Ze werken niet met klantnummers maar zien je als partner, en houden na de start ook in de gaten of de aanpak nog bij je past.\n\nHet begint met een kennismakingsgesprek waarin ze de tijd nemen voor jouw situatie en plannen. Bel de Nijmeegse vestiging of stuur een bericht via het contactformulier om een afspraak te maken.",
+  "website": "http://www.plato-accountants.nl/",
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
+ },
  "plek-nijmegen": {
   "adres_op_site": "De Houtwerf, Hatertseweg 23 A, 6533 AB Nijmegen",
   "bronnen": [
@@ -13799,6 +14838,29 @@
   "website": "https://www.puux.nl",
   "website_bereikbaar": true
  },
+ "q-accountants-and-tax": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 26344,
+   "uit": 611
+  },
+  "lijkt_actief": true,
+  "naam": "Q Accountants And Tax",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website niet openen. Bij http://qaccountants.nl/, https://qaccountants.nl/ en https://www.qaccountants.nl/ kwam de foutmelding 'url_not_allowed' terug. Daardoor heb ik geen tekst geschreven en geen kenmerken, openingstijden of adres van de site overgenomen. De categorie accountant-boekhouder is alleen gebaseerd op de bedrijfsnaam en de vermoedelijke categorie; de site zelf bevestigt dat niet. Ik kon ook niet nagaan of het bedrijf nog actief is. 'lijkt_actief' staat op true omdat ik niets heb gezien dat erop wijst dat het bedrijf gestopt of verhuisd is. Graag handmatig controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://qaccountants.nl/",
+  "website_bereikbaar": false
+ },
  "radboud-university-food-beverage": {
   "adres_op_site": "",
   "bronnen": [
@@ -13824,6 +14886,38 @@
   "tekst": "",
   "website": "http://www.ru.nl/refter",
   "website_bereikbaar": false
+ },
+ "remers-accountancy": {
+  "adres_op_site": "Joubertstraat 5, 6543 NP Nijmegen",
+  "bronnen": [
+   "https://www.remers.nl/",
+   "https://www.remers.nl/over-ons/",
+   "https://www.remers.nl/contact/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "salarisadministratie",
+   "startende ondernemers",
+   "zzp en mkb",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 31352,
+   "uit": 855
+  },
+  "lijkt_actief": true,
+  "naam": "Remers Accountancy",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staan een 06-nummer en een persoonlijk e-mailadres (ronald@), dus het adres in een woonstraat kan een thuisadres zijn. Ik heb in de tekst daarom alleen de straatnaam genoemd. De site noemt geen openingstijden.",
+  "status": "voorstel",
+  "tekst": "Heb je als ondernemer liever klanten aan de lijn dan bonnetjes op je bureau? Remers Accountancy aan de Joubertstraat neemt het administratieve werk van je over, zodat jij je met je eigen vak kunt bezighouden. Het kantoor richt zich vooral op het mkb en legt de nadruk op een persoonlijke aanpak.\n\nJe kunt er terecht voor de boekhouding en de loon- en salarisadministratie, maar ook voor hulp bij een ondernemersplan of begroting, bijvoorbeeld als je start of een lening wilt aanvragen. Verder kun je er aankloppen met fiscale vragen, vragen over cao's en wat je moet regelen als een medewerker zich ziek meldt.\n\nWil je weten wat ze voor jouw bedrijf kunnen doen? Stuur een mailtje of bel en vertel waar je hulp bij zoekt.",
+  "website": "http://www.remers.nl/",
+  "website_bereikbaar": true
  },
  "renato-s-pizzeria": {
   "adres_op_site": "Graafseweg 27, 6512BM Nijmegen",
@@ -14498,6 +15592,33 @@
   "website": "https://romagna-nijmegen.metro.rest/?lang=nl#times",
   "website_bereikbaar": true
  },
+ "roos-administraties": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.roosadministraties.com/",
+   "https://www.roosadministraties.com/",
+   "https://roosadministraties.com/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 26363,
+   "uit": 632
+  },
+  "lijkt_actief": true,
+  "naam": "Roos Administraties",
+  "openingstijden": "",
+  "opmerkingen": "De website kon niet worden geladen. Ik heb http://www.roosadministraties.com/, https://www.roosadministraties.com/ en https://roosadministraties.com/ geprobeerd en kreeg steeds de melding url_not_accessible. Daardoor heb ik geen tekst geschreven en geen kenmerken ingevuld. Of het bedrijf nog actief is, kon ik niet controleren. Ik heb lijkt_actief daarom op true laten staan, omdat er geen aanwijzing is dat het bedrijf gestopt is. De categorie heb ik ongewijzigd overgenomen op basis van de naam. Het is verstandig om dit later opnieuw te controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.roosadministraties.com/",
+  "website_bereikbaar": false
+ },
  "roxy-s-tiki-bar": {
   "adres_op_site": "Grotestraat 12, 6511 VD Nijmegen",
   "bronnen": [
@@ -14595,6 +15716,31 @@
   "website": "http://www.royaletendrinken.nl/",
   "website_bereikbaar": true
  },
+ "rpd-fiscaal-b-v": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.rpdfiscaal.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17397,
+   "uit": 447
+  },
+  "lijkt_actief": true,
+  "naam": "Rpd Fiscaal B.v.",
+  "openingstijden": "",
+  "opmerkingen": "De website http://www.rpdfiscaal.nl/ kon niet worden opgehaald (de fetch-tool gaf de foutmelding 'url_not_allowed'). Daarom is er geen tekst geschreven en zijn er geen kenmerken of openingstijden ingevuld. De categorie is overgenomen uit de vermoedelijke categorie en hebben we niet zelf kunnen controleren. Of het bedrijf nog actief is, weten we ook niet. Het adres Meester Franckenstraat 88 ligt in een woonwijk en kan een thuisadres zijn. Graag handmatig controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.rpdfiscaal.nl/",
+  "website_bereikbaar": false
+ },
  "ruygh": {
   "adres_op_site": "",
   "bronnen": [],
@@ -14645,6 +15791,66 @@
   "status": "goedgekeurd",
   "tekst": "Heb je zin om eindeloos te proeven van sushi, sashimi en gerechten van de grill? Dan is Saison aan de Wijchenseweg, op de Woonboulevard Nijmegen, een fijne plek. Hier eet je Japans, aangevuld met Aziatische specials zoals gestoomde gerechten en dim sum, in een rustige en stijlvolle zaal.\n\nJe eet er volgens het all-you-can-eat-principe, en als je wilt kun je je drankjes in hetzelfde arrangement meenemen. Kinderen eten voor een eigen tarief mee, dus je kunt er ook prima met het hele gezin terecht. Parkeren is op de boulevard makkelijk geregeld.\n\nLiever thuis eten? Je kunt elke dag vanaf vier uur 's middags afhalen of laten bezorgen, online, via de app of telefonisch. Wil je in het restaurant eten, reserveer dan even online of bel als je moment al vol zit.",
   "website": "https://www.saisonrestaurant.nl/",
+  "website_bereikbaar": true
+ },
+ "salaris-enzo-salaris-administratie": {
+  "adres_op_site": "Csardasstraat 34, 6544 RZ Nijmegen",
+  "bronnen": [
+   "https://www.salarisenzo.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "salarisadministratie",
+   "zakelijke klanten",
+   "zzp en mkb",
+   "gratis kennismaking"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 23960,
+   "uit": 821
+  },
+  "lijkt_actief": true,
+  "naam": "Salaris Enzo | Salaris Administratie",
+  "openingstijden": "",
+  "opmerkingen": "Het adres aan de Csardasstraat ligt in een woonwijk en lijkt een thuisadres. Daarom staat het niet in de tekst. Het telefoonnummer is een 06-nummer. Op de site staan geen openingstijden. Het kennismakingsgesprek is 'vrijblijvend', maar de site zegt niet letterlijk dat het gratis is. Controleer daarom het kenmerk 'gratis kennismaking'. De software werkt met meer dan 115 andere systemen; in de tekst staat bewust alleen dat er veel koppelingen zijn.",
+  "status": "voorstel",
+  "tekst": "Gaat het verwerken van de lonen in je bedrijf veel tijd kosten? Dan kun je de salarisadministratie uitbesteden aan Salaris Enzo in Nijmegen. Het bureau richt zich op mkb-ondernemers en werkt met de HR-software van Visma Nmbrs, die met veel andere pakketten te koppelen is.\n\nJe kiest zelf hoeveel je uit handen geeft: alles laten regelen, een deel samen doen of zelf aan de slag met de software, met hulp als je die nodig hebt. Je hebt twee vaste salarisspecialisten die je bedrijf leren kennen. Je medewerkers krijgen hun loonstroken digitaal via een app, en ook je accountant kan meekijken voor de jaarrekening.\n\nWil je weten wat bij je past? Vraag via de website een vrijblijvend kennismakingsgesprek aan of bel even voor telefonisch advies.",
+  "website": "https://www.salarisenzo.nl/",
+  "website_bereikbaar": true
+ },
+ "sanacount-accountants-advisers-bv": {
+  "adres_op_site": "Wijchenseweg 114, 6538 SX Nijmegen",
+  "bronnen": [
+   "https://sanacount.nl/accountantskantoor-nijmegen/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "zakelijke klanten",
+   "gratis kennismaking"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 24112,
+   "uit": 866
+  },
+  "lijkt_actief": true,
+  "naam": "Sanacount Accountants & Advisers BV",
+  "openingstijden": "",
+  "opmerkingen": "De postcode op de site (6538 SX) wijkt af van die in onze gids (6538 CN). Openingstijden staan niet op de pagina. De homepage kon niet worden opgehaald, daarom is alleen de Nijmegen-pagina gelezen. 'Gratis kennismaking' is afgeleid van de knop 'Laten we kennismaken' en de gratis 1-2-3 test, dus graag nog even controleren.",
+  "status": "voorstel",
+  "tekst": "Ben je ondernemer en hoop je dat iemand niet alleen je cijfers bijhoudt, maar ook met je meedenkt over waar je bedrijf naartoe gaat? Dan kun je terecht aan de Wijchenseweg, waar het team van Sanacount zit.\n\nJe kunt er je administratie uitbesteden, online boekhouden met overzichtelijke dashboards en je jaarrekening, salarisadministratie en aangiften voor IB, Vpb en btw laten regelen. Ze helpen je ook met belastingadvies, bijvoorbeeld over de stap van eenmanszaak naar bv, je loon als dga of bedrijfsopvolging. Daarnaast denken ze mee over strategie, begrotingen, financiering en subsidies. Omdat ze in Nijmegen zitten, kennen ze de lokale regels en spreek je makkelijk even af voor een kop koffie.\n\nWil je eerst eens aftasten? Doe dan de gratis 1-2-3 test of bel voor een kennismaking.",
+  "website": "https://sanacount.nl/accountantskantoor-nijmegen/",
   "website_bereikbaar": true
  },
  "sanasport-health-club": {
@@ -14711,6 +15917,72 @@
   "website": "https://www.saraylounge.nl/",
   "website_bereikbaar": true
  },
+ "schaning-zzp-mkb": {
+  "adres_op_site": "Laauwikstraat 8, 6663 CJ Lent",
+  "bronnen": [
+   "https://www.schaning.eu/",
+   "https://www.schaning.eu/diensten/",
+   "https://www.schaning.eu/over-ons/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "belastingaangifte",
+   "boekhouding",
+   "zzp en mkb",
+   "particulieren",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 33720,
+   "uit": 922
+  },
+  "lijkt_actief": true,
+  "naam": "Schäning Zzp Mkb",
+  "openingstijden": "",
+  "opmerkingen": "Laauwikstraat 8 in Lent kan een thuisadres zijn; dat is niet zeker, dus het adres staat niet in de tekst. Op de site staan geen openingstijden. De site noemt een kennismaking, maar niet of die gratis is; daarom is het kenmerk 'gratis kennismaking' niet gekozen.",
+  "status": "voorstel",
+  "tekst": "Zit je als ondernemer met een stapel bonnetjes of een belastingaangifte waar je geen zin in hebt? In Lent, in Nijmegen-Noord, zit een klein administratie- en adviesbureau dat het je zo makkelijk mogelijk wil maken. Eigenaar Sem is gediplomeerd belastingconsulent en werkt samen met administratief medewerker Mary.\n\nJe kunt er terecht voor aangiften van alle soorten belastingen, ook als particulier, en voor een papierloze boekhouding met handige apps die facturen en bankmutaties grotendeels automatisch verwerken. Ze denken ook mee over je ondernemingsvorm, bezwaarprocedures, zakelijk autorijden en inkomensbescherming. Daarnaast helpen ze nabestaanden bij het afwikkelen van een erfenis.\n\nHeldere taal en persoonlijk advies staan voorop. Bel even om een kennismakingsgesprek af te spreken.",
+  "website": "https://www.schaning.eu/",
+  "website_bereikbaar": true
+ },
+ "schouten-fiscaal": {
+  "adres_op_site": "Heiweg 212, 6533 PH Nijmegen",
+  "bronnen": [
+   "https://www.schoutenfiscaal.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "belastingaangifte",
+   "jaarrekening",
+   "boekhouding",
+   "salarisadministratie",
+   "particuliere aangifte",
+   "particulieren",
+   "zakelijke klanten",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 30990,
+   "uit": 1182
+  },
+  "lijkt_actief": true,
+  "naam": "Schouten Fiscaal",
+  "openingstijden": "",
+  "opmerkingen": "Eenmanszaak; Heiweg 212 lijkt mogelijk een thuisadres, daarom niet in de tekst genoemd. Site noemt een kennismakingsgesprek maar niet expliciet gratis. Alleen homepage beschikbaar.",
+  "status": "voorstel",
+  "tekst": "Zie je op tegen je belastingaangifte, of wil je gewoon zeker weten dat je administratie klopt? Bij Jolanda Schouten, register belastingadviseur in Nijmegen, kun je terecht voor eerlijk fiscaal advies, of je nu ondernemer, zzp'er of particulier bent.\n\nZe verzorgt aangiften voor onder meer inkomstenbelasting, omzetbelasting, vennootschapsbelasting, loonbelasting en erf- en schenkbelasting. Daarnaast stelt ze jaarrekeningen op, voert ze financiële administraties en loonadministraties, helpt ze bij financieringsaanvragen bij de bank en regelt ze de jaarlijkse verrekening van huwelijkse voorwaarden. Handig: voor al haar cliënten vraagt ze standaard uitstel aan bij de Belastingdienst, zodat je niet hoeft te haasten.\n\nBenieuwd of het klikt? Plan een kennismakingsgesprek in via telefoon of mail.",
+  "website": "https://www.schoutenfiscaal.nl/",
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
+ },
  "science-cafe-nijmegen": {
   "adres_op_site": "The Shamrock, Smetiusstr. 17, Nijmegen",
   "bronnen": [
@@ -14765,6 +16037,37 @@
   "website": "http://www.etsy.com/shop/SecondaOrbit",
   "website_bereikbaar": true
  },
+ "sef-maessen": {
+  "adres_op_site": "Waldeck Pyrmontsingel 20, 6521 BC Nijmegen",
+  "bronnen": [
+   "https://sefmaessen.nl/",
+   "https://sefmaessen.nl/boekhouding-belasting/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "belastingaangifte",
+   "startende ondernemers",
+   "zakelijke klanten",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 29656,
+   "uit": 918
+  },
+  "lijkt_actief": true,
+  "naam": "Sef Maessen",
+  "openingstijden": "",
+  "opmerkingen": "Eenmanszaak. Het adres aan de singel kan een woonadres zijn, maar de site noemt het als contactadres. Organisatieadvies is een tweede dienst, maar geen passende extra categorie. De site heeft ook een Engelse en een Duitse pagina; het kenmerk 'Engelstalig' is niet toegevoegd omdat ik niet heb nagekeken of hij ook Engelstalige service biedt.",
+  "status": "voorstel",
+  "tekst": "Raak je het overzicht over je cijfers kwijt of zie je op tegen de volgende belastingaangifte? Aan de Waldeck Pyrmontsingel, vlak bij het centrum, helpt Sef Maessen als zelfstandig boekhouder en belastingadviseur bedrijven en zelfstandigen verder.\n\nJe kunt bij hem terecht voor ondersteuning bij je boekhouding, advies en hulp met belastingzaken en begeleiding als je net begint. Loopt je administratie achter, of maakt je bedrijf een reorganisatie of een andere grote verandering door? Dan springt hij ook tijdelijk bij als boekhouder. Daarnaast helpt hij organisaties met analyse en versterking van hun organisatie. Wil je liever in het Engels of Duits praten? Ook daar heeft de site pagina's voor.\n\nBel of mail gerust om te kijken wat hij voor jou kan doen.",
+  "website": "http://sefmaessen.nl/",
+  "website_bereikbaar": true
+ },
  "selbachs": {
   "adres_op_site": "",
   "bronnen": [
@@ -14789,6 +16092,32 @@
   "tekst": "",
   "website": "https://www.selbachs.nl/",
   "website_bereikbaar": true
+ },
+ "sens-belastingadvies-en-accountancy": {
+  "adres_op_site": "Kerkenbos 10-37, 6546 BB Nijmegen",
+  "bronnen": [
+   "https://www.sens-nijmegen.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 21707,
+   "uit": 744
+  },
+  "lijkt_actief": true,
+  "naam": "Sens Belastingadvies En Accountancy",
+  "openingstijden": "",
+  "opmerkingen": "De website is bereikbaar maar bevat vrijwel geen inhoud: alleen de naam 'SenS Administratie & Belastingadvies' en het adres. Er staat niets over diensten, doelgroepen of openingstijden, dus te weinig informatie voor een tekst. Op de site staat het huisnummer als 'Kerkenbos 10-37', bij ons als 'Kerkenbos 1037'; graag controleren. Kerkenbos is een bedrijventerrein, dus het lijkt geen thuisadres.",
+  "reden": "automatisch: te weinig informatie op de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.sens-nijmegen.nl/",
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
  },
  "serif-baba": {
   "adres_op_site": "Koninginnelaan 44, 6542 ZT Nijmegen",
@@ -15000,11 +16329,11 @@
   },
   "openingstijden": "ma-zo 14:00-03:00",
   "opmerkingen": "Het is een shishalounge met alleen snacks, geen restaurant. Daarom staat de hoofdcategorie op cafe in plaats van restaurant. Op de homepage staat 'Lekker ontbijten en drinken', maar op de menukaart staat geen ontbijt en de zaak gaat pas om 14:00 open. Ontbijt is daarom niet als kenmerk opgenomen. De actie op het menu is van mei 2023, dus de site wordt mogelijk niet meer bijgewerkt.",
+  "reden": "shishalounge (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin om de avond rustig af te sluiten met vrienden en een waterpijp? Aan de Bloemerstraat, op loopafstand van het centrum, vind je een shishalounge waar je tot diep in de nacht kunt blijven hangen. Je kiest uit een flinke rij smaken, van klassieke appel-munt tot fruitige mixen met watermeloen, blauwe bes of pina colada.\n\nEen restaurant is het niet: eten is hier vooral een bijzaak. Je bestelt snacks zoals kipvingers, een crispy burger, een tosti met sucuk of Marokkaanse msemmen, met daarbij een glas Marokkaanse thee of iets fris. Is het mooi weer, dan zit je buiten op het terras.\n\nDe zaak is elke dag open vanaf twee uur 's middags tot laat in de nacht. Loop gewoon binnen, of bel even van tevoren als je met een grotere groep komt.",
   "website": "https://shishahousenijmegen.nl/",
-  "website_bereikbaar": true,
-  "reden": "shishalounge (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "shisha-lounge-giga-bijt": {
   "adres_op_site": "",
@@ -15224,11 +16553,11 @@
   "naam": "Sociëteit de Kroeg",
   "openingstijden": "",
   "opmerkingen": "Dit is een sociëteit van een studentenvereniging (N.S.V. Carolus Magnus) en geen openbaar café. Volgens de site is de sociëteit alleen 'een paar keer per maand op vrijdagavond' toegankelijk voor niet-leden. De site noemt geen vaste openingstijden. De vereniging heeft een aparte pagina over zalenverhuur, die ik niet heb gelezen. Het kenmerk 'zaal of kelder' heb ik daarom niet toegekend. Controleer die pagina als je het kenmerk wilt toevoegen. De homepage kon niet direct worden opgehaald, dus ik heb alleen de pagina over de sociëteit gelezen. Overweeg of deze vermelding in de gids past.",
+  "reden": "studentensociëteit (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Ben je benieuwd hoe het studentenleven in Nijmegen er van binnen uitziet? Dan is de sociëteit van studentenvereniging Carolus Magnus aan de Hertogstraat een goede plek om te beginnen. Hier komen de leden samen voor een biertje, een feestje en de vaste jaarclub- en dispuutsavonden.\n\nNaast de gewone kroegavonden staan er ook allerlei activiteiten op het programma, zoals lezingen, filmavonden, themafeesten, cantussen en af en toe een wijnproeverij. De vereniging zit sinds 1996 in dit pand en is er sinds 2023 zelf eigenaar van.\n\nGoed om te weten: De Kroeg is in de eerste plaats van en voor de leden. Een paar keer per maand mogen op vrijdagavond ook niet-leden binnen. Kijk dus even op de site van Carolus Magnus wanneer de deur openstaat, en loop dan eens binnen.",
   "website": "https://www.carolusmagnus.nl/societeit",
-  "website_bereikbaar": true,
-  "reden": "studentensociëteit (Frans, 23-10-2026)"
+  "website_bereikbaar": true
  },
  "song-da-street-food": {
   "adres_op_site": "Plein 1944 150, 6511 JH Nijmegen",
@@ -15580,11 +16909,41 @@
   },
   "openingstijden": "",
   "opmerkingen": "De landelijke website van de keten geeft geen informatie over de vestiging in Nijmegen. De winkelzoeker laadt zonder ingevoerde locatie geen winkels, dus het adres, de openingstijden en de zitplaatsen konden we niet controleren. Bij ons is alleen de postcode 6512 AB bekend, zonder straat. Op de site staat ook niets over ontbijt of lunch: de kaart draait om koffie, dus we kozen voor 'koffiezaak' en niet voor 'lunchroom'. Starbucks Delivers wordt landelijk aangeboden, maar het is niet bevestigd dat er in Nijmegen wordt bezorgd, dus we hebben 'bezorgen' niet als kenmerk opgenomen.",
+  "reden": "keten (Frans, 23-10-2026)",
   "status": "verwijderd",
   "tekst": "Zin in een vertrouwde latte of een ijskoude Frappuccino terwijl je door de stad loopt? Dan kun je terecht bij de Nijmeegse vestiging van de internationale koffieketen Starbucks.\n\nDe kaart draait vooral om koffie: espresso's, lattes, ijskoffie en Frappuccino's, plus seizoensdrankjes. In de herfst is de bekende Pumpkin Spice Latte er weer. De keten zegt ook bezig te zijn met duurzaamheid en vraagt geld voor plastic wegwerpartikelen. Neem dus gerust je eigen beker mee.\n\nWil je weten waar de vestiging precies zit en wanneer hij open is? Kijk dan in de winkelzoeker op de website van Starbucks en loop even binnen voor je favoriete drankje.",
   "website": "https://www.starbucks.nl",
-  "website_bereikbaar": true,
-  "reden": "keten (Frans, 23-10-2026)"
+  "website_bereikbaar": true
+ },
+ "staxxer-automating-vat-epr-bookkeeping-for-e-commerce": {
+  "adres_op_site": "Gerard Noodtstraat 34, 6511 SW Nijmegen",
+  "bronnen": [
+   "https://staxxer.com/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "belastingaangifte",
+   "zakelijke klanten",
+   "online of op afstand",
+   "Engelstalig"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 33119,
+   "uit": 980
+  },
+  "lijkt_actief": true,
+  "naam": "Staxxer | Automating Vat, Epr & Bookkeeping For E-commerce.",
+  "openingstijden": "",
+  "opmerkingen": "De site is vooral Engelstalig (er is ook een Nederlandse versie). Staxxer is een online dienst/softwareplatform voor btw, EPR en boekhouding voor e-commerce, geen klassiek administratiekantoor met balie. Eventueel past it-bedrijf ook. Er staan geen openingstijden op de site.",
+  "status": "voorstel",
+  "tekst": "Verkoop je online in meerdere Europese landen en word je gek van btw-nummers, aangiftes en verpakkingsregels? Dan is het fijn om te weten dat er aan de Gerard Noodtstraat in Nijmegen een team zit dat daar zijn werk van maakt.\n\nStaxxer richt zich helemaal op webwinkels en e-commerce-bedrijven. Ze vragen voor je een btw-nummer aan in landen als Duitsland, Frankrijk of Spanje, regelen je EU-btw-aangiftes en OSS-aangifte en nemen de EPR-verplichtingen rond verpakkingen voor hun rekening. Daarnaast doen ze ook de boekhouding. Veel gaat automatisch via hun online platform, zodat je zelf minder papierwerk hebt en meer tijd overhoudt om te groeien, of je nu via je eigen shop, Amazon of Bol.com verkoopt.\n\nBenieuwd of het bij jouw webshop past? Plan via de site een demo of een kennismakingsgesprek.",
+  "website": "https://staxxer.com/",
+  "website_bereikbaar": true
  },
  "steven": {
   "adres_op_site": "Stikke Hezelstraat 54, 6511 JZ Nijmegen",
@@ -16532,6 +17891,58 @@
   "website": "http://www.broodjesensnacks.nl",
   "website_bereikbaar": false
  },
+ "tax-tigers": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://www.taxtigers.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "particulieren",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 84287,
+   "uit": 1592
+  },
+  "lijkt_actief": true,
+  "naam": "Tax Tigers",
+  "openingstijden": "",
+  "opmerkingen": "Ik heb alleen de homepage kunnen lezen. Bij het ophalen van de pagina's diensten en contact ging het mis, en daarna was de limiet voor het ophalen van pagina's bereikt. Daardoor heb ik het adres (St. Annastraat 48), de openingstijden en de precieze diensten niet op de site kunnen controleren. De site werkt wel en is actueel: er staat nieuws van oktober 2026 op.",
+  "status": "voorstel",
+  "tekst": "Zie je op tegen je belastingaangifte, of weet je als ondernemer niet goed wat je allemaal moet bijhouden? Dan kun je in Nijmegen terecht bij dit administratie- en belastingadvieskantoor. Het team helpt zowel ondernemers als particulieren met hun administratie en belastingzaken.\n\nHet kantoor houdt het graag informeel en legt dingen uit in gewone taal zonder vakjargon, terwijl er wel stevige fiscale kennis achter zit. Op de site vind je handige tips voor ondernemers, werkgevers, particulieren en directeur-grootaandeelhouders, bijvoorbeeld over de auto van de zaak, oproepkrachten of fiscaal partnerschap. Ook verschijnt er regelmatig fiscaal nieuws.\n\nWil je weten wat ze voor jou kunnen doen? Bel 024 388 8272 of neem contact op via de website.",
+  "website": "https://www.taxtigers.nl/",
+  "website_bereikbaar": true
+ },
+ "te-witt-fiscaal-advies": {
+  "adres_op_site": "Groenestraat 294, 6531 JC Nijmegen",
+  "bronnen": [
+   "http://twfa.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 18056,
+   "uit": 408
+  },
+  "lijkt_actief": true,
+  "naam": "Te Witt Fiscaal Advies",
+  "openingstijden": "",
+  "opmerkingen": "De website werkt, maar er staat bijna niets op: alleen de naam, het adres, een telefoonnummer en een verwijzing naar de contactpagina. Over de diensten staat er niets, dus heb ik geen tekst geschreven. Op basis van de naam (fiscaal advies) houd ik de categorie accountant-boekhouder aan. Het adres op de site komt overeen met ons adres. Of het om een kantoor of een thuisadres gaat, is niet te zeggen.",
+  "reden": "automatisch: te weinig informatie op de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://twfa.nl/",
+  "website_bereikbaar": true
+ },
  "terra-rossa": {
   "adres_op_site": "Bloemerstraat 50, 6511 EK Nijmegen",
   "bronnen": [
@@ -17464,6 +18875,37 @@
   "website_bereikbaar": false,
   "zelf_gelezen": true
  },
+ "v-o-f-rikken-account-services": {
+  "adres_op_site": "Laauwikstraat 80, 6663 CM Lent",
+  "bronnen": [
+   "https://rikken-services.nl/",
+   "https://rikken-services.nl/diensten.html"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "salarisadministratie",
+   "belastingaangifte",
+   "jaarrekening",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 29647,
+   "uit": 954
+  },
+  "lijkt_actief": true,
+  "naam": "V.o.f. Rikken Account-services",
+  "openingstijden": "",
+  "opmerkingen": "Het adres ligt in een woonstraat en is misschien een thuisadres. Daarom heb ik het niet in de tekst gezet. De site meldt ©2013 en lijkt al lang niet bijgewerkt, dus het is niet zeker of het kantoor nog actief is. Hypotheekadvies staat ook in het aanbod, maar lijkt een klein onderdeel. Daarom heb ik het niet als extra categorie toegevoegd. De site noemt geen openingstijden.",
+  "status": "voorstel",
+  "tekst": "Heb jij als ondernemer liever klanten aan de lijn dan bonnetjes op je bureau? Dan is dit familiekantoor in Lent het overwegen waard. H. Rikken en A. Rikken-Koornneef helpen al ruim vijfentwintig jaar ondernemers uit het midden- en kleinbedrijf met hun financiële zaken, en ze vinden persoonlijk contact daarbij belangrijk.\n\nJe kunt bij hen terecht voor je financiële administratie, salaris- en personeelsadministratie, belastingaangiftes met fiscaal advies en de jaarrapportage. Daarnaast denken ze mee over het verdelen en bewaken van je vermogen en geven ze hypotheekadvies. Veel klanten zijn al vanaf de start van hun bedrijf bij ze, dus ze kennen de zorgen van een beginnende ondernemer goed.\n\nWil je weten wat ze voor jouw bedrijf kunnen doen? Bel of stuur een bericht via het contactformulier op de site om kennis te maken.",
+  "website": "https://rikken-services.nl/",
+  "website_bereikbaar": true
+ },
  "valdin": {
   "adres_op_site": "Van Peltlaan 4, 6533 ZM Nijmegen",
   "bronnen": [
@@ -17499,6 +18941,39 @@
   "status": "goedgekeurd",
   "tekst": "Ben je in de buurt van het Radboudumc en zoek je een plek om rustig te lunchen of uitgebreid te dineren? Op vijf minuten lopen van het ziekenhuis, aan de Van Peltlaan, vind je Valdin. De kaart is internationaal: van clubsandwiches, poke bowls en salades bij de lunch tot gyoza's, Aziatische steak tartaar en carpaccio 's avonds. Er is ook een kinderkaart, en alles kun je ook meenemen.\n\nOp mooie dagen zit je op het terras, en bij de borrel kies je uit wijnen en speciaalbieren, waaronder bieren uit de regio. Kom je met een grote groep? Dan is er een aparte borrelruimte met arrangementen. Wie wil blijven slapen, kan terecht in het boutiquehotel boven het restaurant.\n\nValdin is alle zeven dagen van de week open. Reserveer een tafel online of bel even.",
   "website": "https://www.valdin.nl",
+  "website_bereikbaar": true
+ },
+ "van-bergen-ondernemerszaken": {
+  "adres_op_site": "Waldeck Pyrmontsingel 77, 6524 BA Nijmegen",
+  "bronnen": [
+   "https://www.van-bergen.nl/",
+   "https://van-bergen.nl/contact/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "startende ondernemers",
+   "zakelijke klanten",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 41963,
+   "uit": 912
+  },
+  "lijkt_actief": true,
+  "naam": "Van Bergen Ondernemerszaken",
+  "openingstijden": "",
+  "opmerkingen": "De eerste sparsessie van een uur kost een welkomsttarief (dus geen gratis kennismaking), al spreekt het contactformulier wel van een 'vrijblijvende kennismaking'. Op de site staan geen openingstijden.",
+  "status": "voorstel",
+  "tekst": "Ben je ondernemer en groeit je administratie je boven het hoofd? Of twijfel je over de juiste rechtsvorm voor je bedrijf? Aan de Waldeck Pyrmontsingel zit een team van accountants en belastingadviseurs dat verder kijkt dan alleen je cijfers.\n\nJe kunt er terecht voor je boekhouding, of je nu met een schoenendoos vol bonnetjes aankomt of al online boekhoudt. Ze regelen ook je btw- en inkomstenaangifte, jaarrekening en salarisadministratie. Daarnaast helpen ze met managementadvies, bedrijfsopvolging en fiscale regelingen zoals de innovatiebox. Ga je net beginnen? Dan denken ze mee over je ondernemingsplan en de oprichting. Ze werken voor zzp'ers, vof's, bv's en stichtingen.\n\nWil je eerst eens kennismaken? Plan dan een sparsessie van een uur, of neem contact op via het formulier of de telefoon.",
+  "website": "https://www.van-bergen.nl/",
   "website_bereikbaar": true
  },
  "van-buren": {
@@ -17597,6 +19072,36 @@
   "website": "http://www.van-dam-sparerib-grill.nl",
   "website_bereikbaar": false
  },
+ "van-de-vorst-administratie": {
+  "adres_op_site": "Tarweweg 7 P, 6534 AM Nijmegen",
+  "bronnen": [
+   "https://www.vdv-administratie.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "belastingaangifte",
+   "jaarrekening",
+   "aan huis of op locatie",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 18783,
+   "uit": 706
+  },
+  "lijkt_actief": true,
+  "naam": "Van De Vorst Administratie",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staat het huisnummer als 7 P / 7-P. Openingstijden worden niet genoemd. De site bestaat uit één pagina.",
+  "status": "voorstel",
+  "tekst": "Groeit de stapel bonnetjes je boven het hoofd, of zie je op tegen de volgende btw-aangifte? Aan de Tarweweg, op het bedrijventerrein in Nijmegen-West, zit een administratiekantoor dat dat werk graag van je overneemt.\n\nJe kunt er terecht om je boekhouding op te zetten, voor hulp bij het bijhouden ervan of om alles te laten verwerken, als je wilt ook bij jou op locatie. Ze verzorgen aangiften voor omzetbelasting, inkomstenbelasting en vennootschapsbelasting, stellen jaarrekeningen op en controleren ze, en regelen het contact met de Belastingdienst, tot bezwaarschriften aan toe. Denk je erover een B.V. op te richten of een bedrijfspand of woning te kopen? Ook dan denken ze met je mee, net als bij prognoses en liquiditeitsplanningen.\n\nBel of mail om kennis te maken en je situatie voor te leggen.",
+  "website": "https://www.vdv-administratie.nl/",
+  "website_bereikbaar": true
+ },
  "van-hilst-koffie-en-thee-moenenstraat": {
   "adres_op_site": "Brouwerijstraat 7D, 4356 AL Oostkapelle (alleen afhalen op afspraak; kantoor op Brouwerijstraat 7A, geen bezoek)",
   "bronnen": [
@@ -17651,6 +19156,69 @@
   "website": "http://www.vanhilst.com/",
   "website_bereikbaar": true
  },
+ "vandaag-accountancy-en-advies": {
+  "adres_op_site": "St. Annastraat 61, 6524 EH Nijmegen",
+  "bronnen": [
+   "https://www.vandaagaccountancy.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "zakelijke klanten",
+   "online of op afstand"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 20535,
+   "uit": 663
+  },
+  "lijkt_actief": true,
+  "naam": "Vandaag Accountancy En Advies",
+  "openingstijden": "",
+  "opmerkingen": "Ik heb alleen de homepage gelezen. Het kantoor is lid van de NBA en het Register Belastingadviseurs.",
+  "status": "voorstel",
+  "tekst": "Wil je als ondernemer meer van je accountant dan één keer per jaar een gesprek over de cijfers? Dan is dit kantoor aan de Sint Annastraat een goede tip. Ze denken het hele jaar met je mee en laten je ook tussendoor zien hoe je bedrijf ervoor staat.\n\nJe administratie kun je online volgen op je laptop, tablet of telefoon. Ze werken met Exact Online en software die facturen inscant en herkent, zodat je minder tijd kwijt bent aan papierwerk. Je kunt bij ze terecht voor accountancy, belastingzaken, salarisadministratie en een pre-audit. Ze werken met vaste prijzen.\n\nBen je benieuwd wat ze voor jouw bedrijf kunnen doen? Vraag via de website een offerte aan of bel ze even voor een eerste gesprek.",
+  "website": "https://www.vandaagaccountancy.nl/",
+  "website_bereikbaar": true
+ },
+ "veenhuizen-administratie-advies": {
+  "adres_op_site": "Oranjesingel 60, 6511 NX Nijmegen",
+  "bronnen": [
+   "https://veenhuizenadministratie.nl/",
+   "https://www.veenhuizenadministratie.nl/contact/",
+   "https://www.veenhuizenadministratie.nl/over-ons/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "boekhouding",
+   "belastingaangifte",
+   "zakelijke klanten",
+   "gratis kennismaking",
+   "online of op afstand"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 34886,
+   "uit": 1027
+  },
+  "lijkt_actief": true,
+  "naam": "Veenhuizen Administratie & Advies",
+  "openingstijden": "",
+  "opmerkingen": "De site noemt geen openingstijden en geen specifieke diensten zoals jaarrekening of salarisadministratie. De doelgroep lijkt te bestaan uit ondernemers en bv's, maar zzp/mkb wordt niet letterlijk genoemd. De site schrijft afwisselend 'wij' en 'mij'; het lijkt om een eenmanszaak van Nick Veenhuizen te gaan.",
+  "status": "voorstel",
+  "tekst": "Word je gek van bonnetjes, facturen en aangiftes? Bij Veenhuizen Administratie aan de Oranjesingel geef je je boekhouding uit handen en krijg je er tijd voor terug. Je hebt altijd met één vaste boekhouder te maken, Nick Veenhuizen. Je wordt dus niet van loket naar loket gestuurd en het contact is lekker informeel.\n\nHier werken ze met Exact Online, zodat je altijd en overal kunt zien hoe je administratie ervoor staat. Overstappen kost je niets. Naast de boekhouding en je aangiftes kun je hier ook terecht voor advies, met iemand die met je meedenkt over financiële kansen. Of je nu een chaoot bent of alles keurig bijhoudt: ze brengen structuur aan.\n\nBegin met een vrijblijvende kennismaking van een halfuur. Dat kan bij een kop koffie op kantoor of online, wat jou het beste uitkomt. Je kiest zelf een moment in de online agenda.",
+  "website": "https://veenhuizenadministratie.nl/",
+  "website_bereikbaar": true
+ },
  "veggie-india": {
   "adres_op_site": "Van Welderenstraat 97b, 6511 ME Nijmegen",
   "bronnen": [
@@ -17688,6 +19256,42 @@
   "status": "goedgekeurd",
   "tekst": "Zin in een avond Indiaas eten waarbij je nergens over hoeft na te denken? Aan de Van Welderenstraat, vlak bij het centrum, kook je niet zelf maar schuif je aan in een gezellige huiskamersfeer. De keuken is volledig vegetarisch en er zijn ook genoeg vegan opties.\n\nTer plaatse kies je een van de thali's: een zilveren schaal met verschillende curry's en snacks, samengesteld door de chef. Kom je met een grotere groep, dan stel je samen een menu met lopend buffet samen. Blijf je liever thuis? Ze bezorgen in Nijmegen en omgeving, je kunt je eten ook zelf ophalen en voor feestjes regel je hier catering op maat.\n\nReserveer online of stuur een appje en kom vanaf vier uur 's middags langs. Let op: op woensdag zijn ze dicht.",
   "website": "https://www.veggieindia.nl/",
+  "website_bereikbaar": true
+ },
+ "verdoorn-adviesgroep-b-v": {
+  "adres_op_site": "Kerkenbos 1079d, 6546 BB Nijmegen",
+  "bronnen": [
+   "https://verdoornadvies.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "startende ondernemers",
+   "particuliere aangifte",
+   "particulieren",
+   "zakelijke klanten",
+   "zzp en mkb",
+   "gratis kennismaking",
+   "online of op afstand"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 28401,
+   "uit": 803
+  },
+  "lijkt_actief": true,
+  "naam": "Verdoorn Adviesgroep B.v.",
+  "openingstijden": "08:30-17:00 uur (dagen niet vermeld)",
+  "opmerkingen": "Op de site staan openingstijden van 08:30 tot 17:00 uur, maar niet op welke dagen. 'Gratis kennismaking' komt van de tekst 'Vrijblijvend kennismaken'.",
+  "status": "voorstel",
+  "tekst": "Zie jij als ondernemer op tegen bonnetjes, btw-aangiftes of de loonstrook van je personeel? Op bedrijventerrein Kerkenbos zit een team administratie- en belastingadviseurs dat dat werk graag van je overneemt. Ze doen je boekhouding in de cloud, het liefst in Exact Online of SnelStart, zodat jij altijd kunt zien hoe je bedrijf ervoor staat.\n\nJe kunt er terecht voor de salarisadministratie, de jaarrekening en fiscaal advies, bijvoorbeeld over welke rechtsvorm bij je past of over het overdragen van je bedrijf. Ze werken voor zzp'ers, starters en mkb-bedrijven, maar doen ook de belastingaangifte voor particulieren. Contact gaat makkelijk via een eigen app, waarin je kunt chatten en veilig bestanden kunt delen.\n\nTwijfel je of het bij je past? Plan een vrijblijvende kennismaking of bel even met het kantoor.",
+  "website": "https://verdoornadvies.nl/",
   "website_bereikbaar": true
  },
  "versfabriek": {
@@ -17751,6 +19355,31 @@
   "status": "goedgekeurd",
   "tekst": "Heb je zin in een avond waarop elk bord iets over het seizoen vertelt? Aan de Groesbeeksedwarsweg vind je een klein, warm restaurant waar de klassieke Franse keuken het vertrekpunt is. Chef Jeroen haalt zijn inspiratie bij de aspergeboer, uit de moestuin en uit de markt, dus de kaart wisselt steeds. Denk aan oesters vooraf, tarbot of snoekbaars als tussengerecht en een zwartpoothoen met morieljes als hoofdgerecht.\n\nBij elk gerecht wordt een passende wijn geschonken, soms verrassend en soms juist heel vertrouwd. Je kunt hier vrijdag tot en met zondag lunchen en van donderdag tot en met zondag dineren. Op maandag tot en met woensdag is er ruimte voor private dining, workshops of een bedrijfsuitje.\n\nReserveer even online of bel, en meld een dieet of allergie het liefst meteen bij je reservering.",
   "website": "http://www.restaurantvesters.nl/",
+  "website_bereikbaar": true
+ },
+ "veta-fiscaal-bv": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://veta.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17709,
+   "uit": 384
+  },
+  "lijkt_actief": true,
+  "naam": "Veta Fiscaal Bv",
+  "openingstijden": "",
+  "opmerkingen": "De website toont alleen een 'under construction'-pagina ('We zijn bezig met werkzaamheden op de site'). Er staat geen informatie over diensten, adres of openingstijden, dus ik heb geen tekst geschreven. De categorie is overgenomen van de naam (Fiscaal) en de vermoedelijke categorie. Of het bedrijf nog actief is, valt niet na te gaan. Later opnieuw controleren.",
+  "reden": "automatisch: te weinig informatie op de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://veta.nl/",
   "website_bereikbaar": true
  },
  "vief": {
@@ -17885,6 +19514,62 @@
   "status": "goedgekeurd",
   "tekst": "Zin in een avond uitgebreid tafelen zonder gedoe? In Brakkenstein, aan de Heyendaalseweg, vind je Vurrukkulluk, een gemoedelijk bourgondisch restaurant waar ze met dagverse producten koken. Je begint met warm breekbrood of carpaccio, daarna kies je bijvoorbeeld eend, wild of een tournedos van de grill. Ook zonder vlees eet je hier goed, met onder meer een gevulde portobello. De kaart verandert ongeveer elk kwartaal, dus er is steeds iets nieuws te proberen.\n\nOp warme avonden eet je buiten op het terras of in de sfeervolle achtertuin. Kom je met een grote groep of een zakelijk gezelschap? Binnen is genoeg ruimte en je kunt elkaar goed verstaan. Voor groepen vanaf tien personen stellen ze een driegangendiner samen.\n\nJe bent welkom van dinsdag tot en met zaterdag vanaf vijf uur. Reserveer gewoon online en laat je verrassen.",
   "website": "https://www.vurrukkulluk.nl/",
+  "website_bereikbaar": true
+ },
+ "vvaa-regiokantoor-nijmegen": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://www.vvaa.nl/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "geen-bedrijf",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 18784,
+   "uit": 548
+  },
+  "lijkt_actief": true,
+  "naam": "VvAA regiokantoor Nijmegen",
+  "openingstijden": "",
+  "opmerkingen": "De link verwijst naar de landelijke website van VvAA, een ledenvereniging voor zorgverleners met onder meer verzekeringen, advies en loopbaanondersteuning. Op de homepage staat Nijmegen nergens, en een regiokantoor aan het Keizer Karelplein of een balie voor bezoekers wordt er ook niet genoemd. VvAA is bovendien geen gewoon accountantskantoor voor het brede publiek, maar richt zich alleen op zorgprofessionals. Daarom staat het bedrijf op geen-bedrijf en is er geen tekst geschreven. Ga na of er in Nijmegen echt een kantoor met publieksfunctie is. Als dat zo is, past zakelijk-overig of verzekeraar beter.",
+  "reden": "automatisch: geen bedrijf voor de gids (holding, postadres, school of loket) (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.vvaa.nl/",
+  "website_bereikbaar": true
+ },
+ "vwg-nijmegen": {
+  "adres_op_site": "Berg en Dalseweg 105, 6522 BD Nijmegen",
+  "bronnen": [
+   "https://vwg.nl/",
+   "https://vwg.nl/contact/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "zakelijke klanten",
+   "startende ondernemers"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 55988,
+   "uit": 1225
+  },
+  "lijkt_actief": true,
+  "naam": "Vwg Nijmegen",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staan geen openingstijden. Er is ook een vestiging in Wijchen (Saltshof 10-14). Het kantoor richt zich vooral op ondernemers en organisaties.",
+  "status": "voorstel",
+  "tekst": "Heb je een eigen bedrijf en loop je vast in cijfers, belastingregels of loonstroken? Aan de Berg en Dalseweg zit de Nijmeegse vestiging van VWG Accountants & Belastingadviseurs, een kantoor dat al meer dan 75 jaar ondernemers in de regio helpt. Naast deze vestiging is er ook een kantoor in Wijchen.\n\nJe kunt er terecht voor het opstellen van je jaarrekening en financiële rapportages, belastingadvies en de salarisadministratie voor je personeel. Ook doen ze wettelijke controles (audit & assurance), corporate finance en IT- en dataconsultancy. Of je nu net begint of al een flinke onderneming hebt: ze willen korte lijnen en persoonlijk contact.\n\nWil je weten wat ze voor jouw bedrijf kunnen doen? Bel het kantoor in Nijmegen of stel je vraag via het contactformulier op de website.",
+  "website": "https://vwg.nl/",
   "website_bereikbaar": true
  },
  "waalzicht": {
@@ -18149,6 +19834,40 @@
   "website": "https://www.whynot-nijmegen.nl/",
   "website_bereikbaar": true
  },
+ "wienen-accountants-en-adviseurs": {
+  "adres_op_site": "Kerkenbos 1053 B, 6546 BB Nijmegen",
+  "bronnen": [
+   "https://www.wienenaccountants.nl/",
+   "https://www.wienenaccountants.nl/contact",
+   "https://www.wienenaccountants.nl/zzp-ers"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "boekhouding",
+   "particulieren",
+   "zakelijke klanten",
+   "zzp en mkb",
+   "particuliere aangifte"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 66461,
+   "uit": 1669
+  },
+  "lijkt_actief": true,
+  "naam": "Wienen Accountants En Adviseurs",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staan geen openingstijden. Salarisadministratie wordt in de gelezen pagina's niet genoemd.",
+  "status": "voorstel",
+  "tekst": "Zie je als ondernemer op tegen de boekhouding of de belastingaangifte? Op bedrijvenpark Lindenholt, vlak bij de A73, zit een familiebedrijf van accountants en administratiedeskundigen dat dat werk graag van je overneemt. Bij het team werkt ook een AA-accountant die mag certificeren.\n\nHet kantoor helpt mkb-bedrijven, non-profitorganisaties, vrije beroepen en zzp'ers, van ict'er tot kapper. Je kunt er terecht voor je financiële administratie, het samenstellen van je jaarrekening, belastingaangiften en fiscaal advies, maar ook voor een ondernemingsplan, subsidies en hulp bij de overdracht of overname van een bedrijf. Ook als particulier ben je er welkom, bijvoorbeeld voor je aangifte inkomstenbelasting. Je wordt hier niet als nummer behandeld, maar krijgt persoonlijke aandacht en regelmatig een duidelijke rapportage.\n\nWil je kennismaken? Bel of mail het kantoor aan het Kerkenbos, of stuur je vraag via het contactformulier op de website.",
+  "website": "http://www.wienenaccountants.nl/",
+  "website_bereikbaar": true
+ },
  "wijck": {
   "adres_op_site": "Voorstadslaan 130, 6541 SV Nijmegen",
   "bronnen": [
@@ -18212,6 +19931,38 @@
   "status": "verwijderd",
   "tekst": "Zin in een goed glas wijn na een middag winkelen in de binnenstad? Aan de Hertogstraat vind je Wijnbar Olivier, een sfeervolle plek waar je zo aanschuift voor een borrel of iets te vieren hebt.\n\nOp de kaart staan wijnen en andere drankjes, met daarnaast barhapjes en borrelplanken. Ze proberen zoveel mogelijk producten uit de regio te halen. Wil je meer dan één glas? Boek dan een High Wine met hapjes, een kleine proeverij of een rondje bubbels. Dat is ook leuk om met een groep, voor een verjaardag of als bedrijfsuitje te doen.\n\nJe kunt binnen of buiten zitten. Reserveer even via de site of telefonisch, en vergeet niet dat ze op maandag dicht zijn.",
   "website": "http://www.wijnbijarentz.nl",
+  "website_bereikbaar": true
+ },
+ "willemsen-partners-b-v": {
+  "adres_op_site": "Pastoor van Laakstraat 44, 6663 CB Nijmegen (Lent); ook vestiging Edisonstraat 84, 7006 RE Doetinchem",
+  "bronnen": [
+   "https://wilpar.nl/",
+   "https://wilpar.nl/contact/"
+  ],
+  "categorie_scan": "accountant-boekhouder",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "accountant-boekhouder",
+  "kenmerken": [
+   "jaarrekening",
+   "belastingaangifte",
+   "salarisadministratie",
+   "boekhouding",
+   "zakelijke klanten",
+   "online of op afstand"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 34933,
+   "uit": 1005
+  },
+  "lijkt_actief": true,
+  "naam": "Willemsen & Partners B.v.",
+  "openingstijden": "",
+  "opmerkingen": "In de footer van de site staat alleen Doetinchem als adres, maar op de contactpagina wordt Lent als vestiging genoemd. Er staat op die pagina ook nog een tweede blok 'Onze vestiging' met alleen Doetinchem en een postbus in Lent. Mogelijk is Lent dus vooral een postadres of een kleinere vestiging; even nagaan of je daar echt langs kunt komen. Openingstijden staan niet op de site.",
+  "status": "voorstel",
+  "tekst": "Ben je ondernemer en wil je je cijfers niet pas na afloop van het boekjaar zien, maar gewoon tussendoor? Dan is dit kantoor in Lent het bekijken waard. Je kunt hier terecht voor je administratie, jaarrekeningen, fiscale aangiften, salarisverwerking en advies over belastingen en de financiële kant van je bedrijf.\n\nZe werken veel online: je facturen worden digitaal verwerkt, je volgt de stand van zaken realtime en je personeel kan zelf de eigen salarisgegevens inzien. Je stelt zelf een pakket samen van vaste diensten, en extra's zoals hulp bij een overname of het waarderen van je onderneming kun je erbij nemen. Je hebt steeds één vast aanspreekpunt.\n\nNaast de vestiging aan de Pastoor van Laakstraat in Lent is er ook een kantoor in Doetinchem. Neem contact op of plan een afspraak om kennis te maken.",
+  "website": "http://wilpar.nl/",
   "website_bereikbaar": true
  },
  "witlof": {
