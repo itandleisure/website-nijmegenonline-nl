@@ -25,7 +25,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from import_wordpress import SITE, VOET, esc, kop, samenvatting, schoon  # noqa: E402
+from import_wordpress import DOORVERWIJZING, SITE, VOET, esc, kop, samenvatting, schoon  # noqa: E402
 
 NS = {"wp": "http://wordpress.org/export/1.2/", "content": "http://purl.org/rss/1.0/modules/content/"}
 BETAALD = ("uitgelicht", "partner", "hoofdpartner")
@@ -546,6 +546,27 @@ def vermeldingen(bedrijven, cat):
     return uit
 
 
+def doorverwijzen(b, cat):
+    """De pagina van een verdwenen bedrijf stuurt door naar de categorie (ook in _redirects voor de echte server)."""
+    map_ = ROOT / "bedrijvengids" / b["slug"]
+    map_.mkdir(parents=True, exist_ok=True)
+    tekst = DOORVERWIJZING % {"titel": esc(cat["naam"]), "url": "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"]),
+                              "pad": "../../bedrijvengids-categorie/%s/" % cat["slug"]}
+    (map_ / "index.html").write_text(tekst.replace("Dit artikel is samengevoegd met", "Dit bedrijf staat niet meer in onze gids. Bekijk de"),
+                                     encoding="utf-8")
+
+
+def schrijf_redirects(weg, cat):
+    """Blok "# bedrijvengids" in _redirects, vóór het blok van tools/agenda.py (dat alles erna opnieuw schrijft)."""
+    pad = ROOT / "_redirects"
+    tekst = pad.read_text(encoding="utf-8") if pad.exists() else ""
+    agenda = tekst[tekst.index("# agenda"):] if "# agenda" in tekst else ""
+    kop_ = tekst.split("# bedrijvengids")[0].split("# agenda")[0].rstrip("\n")
+    regels = ["# bedrijvengids (tools/bedrijvengids.py)"]
+    regels += ["/bedrijvengids/%s/ /bedrijvengids-categorie/%s/ 301" % (b["slug"], cat["slug"]) for b in sorted(weg, key=lambda b: b["slug"])]
+    pad.write_text("\n".join(x for x in (kop_, "\n".join(regels), agenda.rstrip("\n")) if x) + "\n", encoding="utf-8")
+
+
 def schrijf(pad, tekst):
     map_ = ROOT / pad
     map_.mkdir(parents=True, exist_ok=True)
@@ -571,6 +592,14 @@ def main(bron):
     websites_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-websites.json")
     wijzigingen_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-wijzigingen.json")
     pakketten_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-pakketten.json", datetime.date.today())
+    # Zonder werkende website geen vermelding (afgesproken met Frans, 23-10-2026): het bedrijf bestaat dan
+    # waarschijnlijk niet meer. Behalve als het betaalt of zelf zijn gegevens heeft aangevuld.
+    weg = [b for b in gids + overig if not (b.get("website") or b.get("uitgelicht") or b.get("geclaimd"))]
+    gids = [b for b in gids if b not in weg]
+    overig = [b for b in overig if b not in weg]
+    for b in weg:
+        doorverwijzen(b, cat)
+    schrijf_redirects(weg, cat)
     (ROOT / "data" / "bedrijvengids-vermeldingen.json").write_text(
         json.dumps(vermeldingen(gids + overig, cat), ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     artikelen = [(s, titel_van(s)) for s in cat["artikelen"] if titel_van(s)]
