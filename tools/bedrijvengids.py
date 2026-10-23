@@ -497,6 +497,19 @@ def foto_url(foto, root):
     return foto if not foto or re.match(r"https?://", foto) else root + foto
 
 
+def websites_toepassen(bedrijven, pad):
+    """Uitkomst van tools/websites_controleren.py: een dode site geen link, een doorgestuurde site het nieuwe adres."""
+    controle = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
+    for b in bedrijven:
+        c = controle.get(b["slug"])
+        if not c or c.get("website") != b.get("website"):
+            continue   # intussen een ander adres: eerst opnieuw controleren
+        if not c["werkt"]:
+            b["website"] = ""
+        elif c.get("eind_url") and domein(c["eind_url"]) != domein(b["website"]) and "?" not in c["eind_url"]:
+            b["website"] = c["eind_url"]
+
+
 def wijzigingen_toepassen(bedrijven, pad):
     """Door de redactie goedgekeurde wijzigingen via Dit is mijn bedrijf (tools/aanmeldingen.py). Die gaan voor
     op alles wat we zelf verzamelden (oude gids, OpenStreetMap, websitescan)."""
@@ -555,6 +568,7 @@ def main(bron):
         opgeslagen = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))[cat["slug"]]
         gids, overig = opgeslagen["gids"], opgeslagen["overig"]
     scan_toepassen(overig, ROOT / "data" / "bedrijvengids-scan.json")
+    websites_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-websites.json")
     wijzigingen_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-wijzigingen.json")
     pakketten_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-pakketten.json", datetime.date.today())
     (ROOT / "data" / "bedrijvengids-vermeldingen.json").write_text(

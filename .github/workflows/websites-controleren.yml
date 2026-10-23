@@ -1,0 +1,33 @@
+# Controleert elke maandag of de websites in de bedrijvengids nog werken (tools/websites_controleren.py)
+# en bouwt de bedrijfspagina's opnieuw, zodat kapotte links verdwijnen.
+name: Websites controleren
+
+on:
+  schedule:
+    - cron: "15 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bouwen
+  cancel-in-progress: false
+
+jobs:
+  controleren:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install beautifulsoup4 pillow
+      - run: python tools/websites_controleren.py
+      - name: Pagina's bouwen en opslaan
+        run: |
+          python tools/bedrijvengids.py && python tools/build.py
+          git config user.name "agenda-bot"
+          git config user.email "agenda-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Websites in de bedrijvengids gecontroleerd" && git pull --rebase && git push)
