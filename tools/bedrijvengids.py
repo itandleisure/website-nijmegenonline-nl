@@ -1,8 +1,8 @@
-"""Bedrijvengids: voorbeeld met één categorie (sportscholen) en één bedrijfspagina.
+"""Bedrijvengids: de categorieën in CATEGORIEEN, met een pagina per categorie en per bedrijf.
 
-Bronnen:
+Bronnen per categorie:
 - de oude Listdom-gids uit de WordPress-export (bedrijvengids-listdom.xml): eigen tekst, foto, openingstijden
-- OpenStreetMap/Overture (advies/osm-bedrijvengids/sportscholen-aangevuld.csv): de overige sportscholen
+- OpenStreetMap/Overture (advies/osm-bedrijvengids/<bron_csv>, gemaakt met tools/bronnen_verzamelen.py): de overige bedrijven
 
 Pakketten (Uitgelicht, Partner, Hoofdpartner) staan in data/bedrijvengids-pakketten.json; een verlopen pakket
 valt bij de dagelijkse herbouw (.github/workflows/agenda.yml) vanzelf terug naar gratis.
@@ -33,8 +33,10 @@ MAX_UITGELICHT = 3
 DAGEN = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag"]
 SCHEMA_DAG = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-CATEGORIE = {
+CATEGORIEEN = [{
     "slug": "sportschool",
+    "listdom": {"sportschool"},
+    "bron_csv": "sportscholen-aangevuld.csv",
     "naam": "Sportscholen in Nijmegen",
     "enkelvoud": "Sportschool",
     "groep": "Sport en beweging",
@@ -63,7 +65,62 @@ CATEGORIE = {
     "blogs": ["bammmm-en-je-bent-fit", "afvallen-met-sport-tips-voor-een-kleinere-maat", "7x-de-beste-warming-up-oefeningen",
               "hoe-kan-een-dietist-je-helpen-gezonder-te-gaan-leven"],
     "meervoud": "sportscholen",
-}
+    "blogonderwerp": "sport en gezondheid",
+    "filtervoorbeeld": "groepslessen of een proefles",
+    "voorbeeld": {"naam": "Jouw sportschool", "foto": "assets/uploads/2022/11/sporten-in-nijmegen-533x400.webp",
+                  "kenmerken": ["proefles", "groepslessen"], "actie": "Eerste maand gratis sporten"},
+    "knop_voorbeeld": "proefles, inschrijven, bellen",
+}, {
+    "slug": "restaurant",
+    # Oude Listdom-categorieën voor restaurants; die url's sturen door naar deze categorie (zie main)
+    "listdom": {"diner", "all-you-can-eat-restaurant", "pannenkoek-restaurant", "indiaas-restaurant", "pizzeria",
+                "steak-restaurant", "zuid-amerikaans-restaurant", "michelin-restaurant", "italiaans-restaurant",
+                "veganistisch", "vegetarisch"},
+    "bron_csv": "restaurant-aangevuld.csv",
+    "plaatsen": {"Nijmegen", "Lent", "Oosterhout"},
+    "naam": "Restaurants in Nijmegen",
+    "enkelvoud": "Restaurant",
+    "de_woord": False,
+    "groep": "Eten en drinken",
+    "soorten": {"Restaurant"},
+    "schema": "Restaurant",
+    "beschrijving": "Alle restaurants in Nijmegen op een rij: van Italiaans en Japans tot Hollandse pot en vegan, met "
+                    "adressen, openingstijden, terrassen en een kaart.",
+    "intro": "<p>Uit eten in Nijmegen? De oudste stad van Nederland heeft een keuken voor elk moment: een snelle hap in "
+             "de Lange Hezelstraat, sushi op de Molenstraat, een terras aan de Waalkade of een avond tafelen in een "
+             "van de restaurants rond de Grote Markt.</p>"
+             "<p>Op deze pagina vind je alle restaurants in Nijmegen.</p>",
+    "faq": [
+        ("Waar kun je in Nijmegen op een terras eten?",
+         "De meeste terrassen vind je in het centrum: op de Grote Markt, de Waalkade, in de Lange Hezelstraat en rond "
+         "het Kelfkensbos. Filter op deze pagina op terras voor de restaurants die er zelf een noemen."),
+        ("Waar kun je vegan eten in Nijmegen?",
+         "Steeds meer restaurants in Nijmegen hebben vegan gerechten op de kaart, en er zijn ook volledig plantaardige "
+         "zaken. Filter op vegan om ze te zien."),
+        ("Moet ik reserveren?",
+         "In het weekend en bij kleinere restaurants is reserveren verstandig. Bij de meeste zaken kan dat online via "
+         "hun eigen website of telefonisch."),
+    ],
+    "artikelen": ["de-10-beste-restaurants-in-nijmegen-centrum", "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
+                  "waar-kun-je-het-best-vegan-uit-eten-in-nijmegen", "uit-eten-met-kinderen-in-nijmegen-deze-locaties-mag-je-niet-missen"],
+    "blogs": ["de-10-beste-restaurants-in-nijmegen-centrum", "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
+              "waar-kun-je-het-best-vegan-uit-eten-in-nijmegen", "uit-eten-met-kinderen-in-nijmegen-deze-locaties-mag-je-niet-missen",
+              "exclusief-dineren-in-nijmegen-wat-kan-je-verwachten", "culinair-genieten-in-italiaanse-sfeer-probeer-deze-restaurants-in-nijmegen",
+              "geniet-van-de-hollandse-pot-in-deze-nederlandse-restaurants-in-nijmegen", "indias-culinaire-parels-toprestaurants-in-nijmegen",
+              "laat-je-culinair-verrassen-in-chinese-sfeer-de-beste-restaurants-in-nijmegen", "mexicaans-genieten-in-nijmegen-dit-zijn-de-beste-adresjes",
+              "op-culinaire-ontdekkingsreis-probeer-deze-griekse-restaurants-in-nijmegen",
+              "op-zoek-naar-een-nieuwe-culinaire-belevenis-probeer-libanees-eten-in-nijmegen",
+              "op-zoek-naar-iets-nieuws-probeer-deze-spaanse-restaurants-in-nijmegen", "pannenkoekenrestaurants-in-nijmegen-onze-top-5",
+              "pizza-liefhebbers-dit-zijn-de-beste-pizzerias-in-nijmegen", "sushi-liefhebbers-dit-zijn-de-beste-japanse-restaurants-in-nijmegen",
+              "tapas-eten-in-nijmegen-hier-kan-je-dat-doen", "thais-eten-in-nijmegen-onze-top-3-thaise-restaurants",
+              "waarom-is-een-all-you-can-eat-restaurant-in-nijmegen-een-goede-keuze"],
+    "meervoud": "restaurants",
+    "blogonderwerp": "uit eten",
+    "filtervoorbeeld": "een terras of vegan gerechten",
+    "voorbeeld": {"naam": "Jouw restaurant", "foto": "assets/uploads/2022/11/restaurant-eten-in-nijmegen.webp",
+                  "kenmerken": ["terras", "vegan"], "actie": "Gratis dessert bij een diner voor twee"},
+    "knop_voorbeeld": "reserveren, menukaart, bellen",
+}]
 
 
 def slug(tekst):
@@ -108,7 +165,7 @@ def openingstijden(ava):
     return [tijden.get(i + 1, "") for i in range(7)] if tijden else []
 
 
-def gids_uit_xml(pad, categorie):
+def gids_uit_xml(pad, categorieen):
     r = ET.parse(pad).getroot()
     bijlagen = {i.findtext("wp:post_id", namespaces=NS): i.findtext("wp:attachment_url", namespaces=NS)
                 for i in r.iter("item") if i.findtext("wp:post_type", namespaces=NS) == "attachment"}
@@ -116,7 +173,7 @@ def gids_uit_xml(pad, categorie):
     for i in r.iter("item"):
         if i.findtext("wp:post_type", namespaces=NS) != "listdom-listing" or i.findtext("wp:status", namespaces=NS) != "publish":
             continue
-        if not any(c.get("domain") == "listdom-category" and c.get("nicename") == categorie for c in i.findall("category")):
+        if not any(c.get("domain") == "listdom-category" and c.get("nicename") in categorieen for c in i.findall("category")):
             continue
         m = {x.findtext("wp:meta_key", namespaces=NS): x.findtext("wp:meta_value", namespaces=NS) or "" for x in i.findall("wp:postmeta", NS)}
         adres = [x.strip() for x in m.get("lsd_contact_address", "").split("|")]
@@ -144,18 +201,19 @@ def gids_uit_xml(pad, categorie):
     return uit
 
 
-def osm_uit_csv(pad, soorten):
+def osm_uit_csv(pad, soorten, plaatsen=("Nijmegen",)):
     uit = []
     for x in csv.DictReader(open(pad, encoding="utf-8")):
-        if x["soort"] in soorten and x["plaats"] == "Nijmegen":
+        if x["soort"] in soorten and x["plaats"] in plaatsen:
             uit.append({"naam": x["naam"], "adres": x["adres"].rstrip(", "), "postcode": x["postcode"], "plaats": x["plaats"],
                         "telefoon": x["telefoon"], "website": x["website"], "lat": x["lat"], "lon": x["lon"],
                         "soort": x["soort"], "bron": x["bron"], "in_gids": False, "email": "", "facebook": "", "instagram": "",
-                        "openingstijden": [], "foto": "", "beschrijving": "", "tekst": ""})
+                        "openingstijden": [], "foto": "", "beschrijving": "", "tekst": "",
+                        **({"keuken": x["keuken"]} if x.get("keuken") else {})})
     return uit
 
 
-def samenvoegen(gids, overig):
+def samenvoegen(gids, overig, bezet_elders=frozenset()):
     """Bedrijven uit de gids gaan voor; dezelfde naam uit OSM/Overture valt dan weg."""
     bekend = {sleutel(b["naam"]) for b in gids}
     gids.sort(key=lambda b: b["naam"].lower())
@@ -168,7 +226,7 @@ def samenvoegen(gids, overig):
         for cat in json.loads(pad.read_text(encoding="utf-8")).values():
             vorig.update({(x["naam"], x["adres"]): x["slug"] for x in cat["overig"]})
     namen = [slug(b["naam"]) for b in overig]
-    bezet = ({b["slug"] for b in gids} | {p.name for p in (ROOT / "bedrijvengids").iterdir() if p.is_dir()}) - set(vorig.values())
+    bezet = ({b["slug"] for b in gids} | set(bezet_elders) | {p.name for p in (ROOT / "bedrijvengids").iterdir() if p.is_dir()}) - set(vorig.values())
     for b in overig:
         if (b["naam"], b["adres"]) in vorig:
             b["slug"] = vorig[(b["naam"], b["adres"])]
@@ -248,6 +306,8 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
     if b["openingstijden"]:
         rijen = "".join("<tr><th>%s</th><td>%s</td></tr>" % (DAGEN[i], esc(t or "onbekend")) for i, t in enumerate(b["openingstijden"]))
         regels.append('<li><span class="evenement-info__kop">Openingstijden</span><table class="openingstijden">%s</table></li>' % rijen)
+    if b.get("keuken"):
+        regels.append('<li><span class="evenement-info__kop">Keuken</span>%s</li>' % esc(b["keuken"]))
     if b.get("kenmerken"):
         regels.append('<li><span class="evenement-info__kop">Goed om te weten</span><span class="bedrijfkaart__kenmerken">%s</span></li>'
                       % "".join("<span>%s</span>" % esc(k) for k in b["kenmerken"]))
@@ -265,6 +325,10 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
         contact.append(" · ".join('<a href="%s" target="_blank" rel="nofollow noopener">%s</a>' % (esc(u), n.capitalize()) for n, u in social))
     if contact:
         regels.append('<li><span class="evenement-info__kop">Contact</span>%s</li>' % "<br>".join(contact))
+    # Gewone link naar Google Maps (geen API: die mag niet in een bedrijvengids, besluit Frans 23-10-2026)
+    zoek = urllib.parse.urlencode({"api": "1", "query": "%s, %s" % (b["naam"], adresregel(b))})
+    regels.append('<li><span class="evenement-info__kop">Reviews</span><a href="https://www.google.com/maps/search/?%s" target="_blank" '
+                  'rel="nofollow noopener" data-klik="google">Bekijk de reviews op Google Maps</a></li>' % esc(zoek))
     if not b["in_gids"]:
         regels.append('<li class="bron">Gegevens: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">'
                       'OpenStreetMap-bijdragers</a> en Overture Maps. Klopt er iets niet? <a href="%skom-in-contact/">Laat het weten</a>.</li>' % root)
@@ -305,7 +369,7 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
                    % (esc(b["naam"]), bbox, b["lat"], b["lon"]))
         out.append('          <p class="bron">Kaart: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-bijdragers</a></p>\n        </section>')
     if anderen:
-        out.append('        <section class="gids-sectie">\n          <h2>Meer sportscholen in Nijmegen</h2>\n          <div class="bedrijflijst">')
+        out.append('        <section class="gids-sectie">\n          <h2>Meer %s in Nijmegen</h2>\n          <div class="bedrijflijst">' % esc(cat["meervoud"]))
         out.extend("            " + (uitgelicht_kaart(x, root) if x.get("uitgelicht") else gewone_kaart(x, root)) for x in anderen[:4])
         out.append('          </div>\n          <p class="gids-verder"><a href="%sbedrijvengids-categorie/%s/">Bekijk alle %s</a></p>\n        </section>'
                    % (root, cat["slug"], esc(cat["naam"][0].lower() + cat["naam"][1:])))
@@ -414,9 +478,10 @@ def start_pagina(groepen, root="../"):
     return "\n".join(out)
 
 
-VOORBEELD = {"slug": "", "naam": "Jouw sportschool", "adres": "Uitgelicht staat bovenaan, met foto en actieknop", "postcode": "", "plaats": "",
-             "foto": "assets/uploads/2022/11/sporten-in-nijmegen-533x400.webp", "kenmerken": ["proefles", "groepslessen"],
-             "actie": {"tekst": "Eerste maand gratis sporten"}, "openingstijden": [], "uitgelicht": True}
+def voorbeeld(cat):
+    v = cat["voorbeeld"]
+    return {"slug": "", "naam": v["naam"], "adres": "Uitgelicht staat bovenaan, met foto en actieknop", "postcode": "", "plaats": "",
+            "foto": v["foto"], "kenmerken": v["kenmerken"], "actie": {"tekst": v["actie"]}, "openingstijden": [], "uitgelicht": True}
 
 
 def uitgelicht_kaart(b, root, voorbeeld=False):
@@ -458,9 +523,9 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     out.append('        <div class="kruimelpad"><a href="%s">Home</a> › Bedrijvengids › %s</div>' % (root, esc(cat["naam"])))
     out.append('        <p class="gidslabel">Bedrijvengids</p>')
     out.append("        <h1>%s</h1>" % esc(cat["naam"]))
-    intro = re.sub(r"<p>Op deze pagina vind je.*?</p>", "<p>Op deze pagina vind je alle %d sportscholen in Nijmegen, met openingstijden, "
-                   "een eigen pagina en een kaart. Filter hieronder op wat jij belangrijk vindt, zoals groepslessen of een proefles.</p>" % len(alle),
-                   cat["intro"], flags=re.S)
+    intro = re.sub(r"<p>Op deze pagina vind je.*?</p>", "<p>Op deze pagina vind je alle %d %s in Nijmegen, met openingstijden, "
+                   "een eigen pagina en een kaart. Filter hieronder op wat jij belangrijk vindt, zoals %s.</p>"
+                   % (len(alle), cat["meervoud"], cat["filtervoorbeeld"]), cat["intro"], flags=re.S)
     out.append('        <div class="inhoud-tekst">%s</div>' % intro)
     uitgelicht = [b for b in alle if b.get("uitgelicht")]
     random.Random(datetime.date.today().isoformat() + cat["slug"]).shuffle(uitgelicht)
@@ -469,15 +534,16 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     out.append('        <section class="gids-sectie" id="uitgelicht">\n          <h2>Uitgelicht</h2>\n          <div class="bedrijflijst bedrijflijst--uitgelicht">')
     out.extend("            " + uitgelicht_kaart(b, root) for b in uitgelicht)
     if not uitgelicht:
-        out.append("            " + uitgelicht_kaart(VOORBEELD, root, voorbeeld=True))
+        out.append("            " + uitgelicht_kaart(voorbeeld(cat), root, voorbeeld=True))
     if len(uitgelicht) < MAX_UITGELICHT:
         out.append('            <a class="vrijeplek" href="%sbedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=%s"><strong>Nog %d %s vrij</strong>'
-                   '<span>Zet jouw sportschool hier bovenaan, boven %d andere sportscholen. Met foto\'s, je actie, een eigen knop en je banner bij onze sportblogs.</span>'
+                   '<span>Zet jouw %s hier bovenaan, boven %d andere %s. Met foto\'s, je actie, een eigen knop en je banner bij onze blogs over %s.</span>'
                    '<span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>'
-                   % (root, esc(cat["slug"]), MAX_UITGELICHT - len(uitgelicht), "plek" if MAX_UITGELICHT - len(uitgelicht) == 1 else "plekken", len(alle)))
+                   % (root, esc(cat["slug"]), MAX_UITGELICHT - len(uitgelicht), "plek" if MAX_UITGELICHT - len(uitgelicht) == 1 else "plekken",
+                      esc(cat["enkelvoud"].lower()), len(alle), esc(cat["meervoud"]), esc(cat["blogonderwerp"])))
     out.append("          </div>\n        </section>")
     out.append(filter_blok(alle))
-    out.append('        <section class="gids-sectie">\n          <h2>Alle sportscholen in Nijmegen</h2>\n          <div class="bedrijflijst">')
+    out.append('        <section class="gids-sectie">\n          <h2>Alle %s in Nijmegen</h2>\n          <div class="bedrijflijst">' % esc(cat["meervoud"]))
     out.extend("            " + gewone_kaart(b, root) for b in alle if b not in uitgelicht)
     out.append('          </div>\n        </section>')
     out.append('        <div class="partner-slider" data-plaatsing="blog" data-onderwerp="%s"></div>' % cat["slug"])
@@ -489,14 +555,15 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
              ("Tekst door onze redactie", "kort", "uitgebreid", "uitgebreid"),
              ("Foto's op je eigen pagina", "1", "tot 10", "tot 10"),
              ("Bovenaan deze pagina, met foto en label Uitgelicht", "nee", "ja", "ja"),
-             ("Actie en eigen knop (proefles, inschrijven, bellen)", "nee", "ja", "ja"),
-             ("Uitgelicht onder onze blogs over sport en gezondheid", "nee", "ja", "ja"),
-             ("Banner in de partnerbalk", "nee", "bij blogs over sport", "op de hele site"),
+             ("Actie en eigen knop (%s)" % cat["knop_voorbeeld"], "nee", "ja", "ja"),
+             ("Uitgelicht onder onze blogs over %s" % cat["blogonderwerp"], "nee", "ja", "ja"),
+             ("Banner in de partnerbalk", "nee", "bij blogs over %s" % cat["blogonderwerp"], "op de hele site"),
              ("Artikel over je bedrijf en een plek in de nieuwsbrief", "nee", "nee", "ja"),
              ("Overzicht van weergaven en kliks", "jaarlijks", "jaarlijks", "elk kwartaal")]
-    out.append('        <section class="gids-sectie pakketvergelijk">\n          <h2>Heb je een sportschool in Nijmegen?</h2>'
-               '\n          <p>Elke sportschool staat gratis in onze gids. Wil je opvallen tussen %d sportscholen? Kies dan voor Uitgelicht of Partner.</p>'
-               % len(alle))
+    enk = esc(cat["enkelvoud"].lower())
+    out.append('        <section class="gids-sectie pakketvergelijk">\n          <h2>Heb je een %s in Nijmegen?</h2>'
+               '\n          <p>Elk%s %s staat gratis in onze gids. Wil je opvallen tussen %d %s? Kies dan voor Uitgelicht of Partner.</p>'
+               % (enk, "e" if cat.get("de_woord", True) else "", enk, len(alle), esc(cat["meervoud"])))
     out.append('          <div class="tabel-scroll"><table>\n            <thead><tr><th></th><th>Gratis</th><th>Uitgelicht<br><small>&euro; 149 per jaar,<br>eerste jaar &euro; 99</small></th>'
                '<th>Partner<br><small>&euro; 449 per jaar</small></th></tr></thead>\n            <tbody>')
     def cel(w):
@@ -504,8 +571,8 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     out.extend("              <tr><th>%s</th>%s</tr>" % (esc(r[0]), "".join(cel(w) for w in r[1:])) for r in rijen)
     out.append('            </tbody>\n          </table></div>')
     out.append('          <p class="pakketvergelijk__knoppen"><a class="knop" href="%sbedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=%s">Kies Uitgelicht</a> '
-               '<a href="%sadverteren-bij-nijmegenonline/">Alle mogelijkheden</a> &middot; Staat je sportschool er al? Klik op je pagina op <em>Dit is mijn bedrijf</em>.</p>'
-               '\n        </section>' % (root, esc(cat["slug"]), root))
+               '<a href="%sadverteren-bij-nijmegenonline/">Alle mogelijkheden</a> &middot; Staat je %s er al? Klik op je pagina op <em>Dit is mijn bedrijf</em>.</p>'
+               '\n        </section>' % (root, esc(cat["slug"]), root, enk))
     if artikelen:
         out.append('        <section class="gids-sectie">\n          <h2>Lees ook</h2>\n          <ul>')
         out.extend('            <li><a href="%s%s/">%s</a></li>' % (root, s, esc(t)) for s, t in artikelen)
@@ -587,6 +654,7 @@ def scan_toepassen(bedrijven, pad, eigen_tekst=False):
         b["concept"] = s["status"] != "goedgekeurd"
         b["tijden_site"] = s.get("openingstijden", "")
         b["kenmerken"] = s.get("kenmerken", [])
+        b["keuken"] = s.get("keuken") or b.get("keuken", "")
 
 
 def foto_url(foto, root):
@@ -660,14 +728,16 @@ def doorverwijzen(b, cat):
                                      encoding="utf-8")
 
 
-def schrijf_redirects(weg, cat):
-    """Blok "# bedrijvengids" in _redirects, vóór het blok van tools/agenda.py (dat alles erna opnieuw schrijft)."""
+def schrijf_redirects(weg, oude_categorieen):
+    """Blok "# bedrijvengids" in _redirects, vóór het blok van tools/agenda.py (dat alles erna opnieuw schrijft).
+    weg: (bedrijf, categorie); oude_categorieen: (oude Listdom-categorie, nieuwe categorie)."""
     pad = ROOT / "_redirects"
     tekst = pad.read_text(encoding="utf-8") if pad.exists() else ""
     agenda = tekst[tekst.index("# agenda"):] if "# agenda" in tekst else ""
     kop_ = tekst.split("# bedrijvengids")[0].split("# agenda")[0].rstrip("\n")
     regels = ["# bedrijvengids (tools/bedrijvengids.py)"]
-    regels += ["/bedrijvengids/%s/ /bedrijvengids-categorie/%s/ 301" % (b["slug"], cat["slug"]) for b in sorted(weg, key=lambda b: b["slug"])]
+    regels += ["/bedrijvengids/%s/ /bedrijvengids-categorie/%s/ 301" % (b["slug"], cat["slug"]) for b, cat in sorted(weg, key=lambda x: x[0]["slug"])]
+    regels += ["/bedrijvengids-categorie/%s/ /bedrijvengids-categorie/%s/ 301" % x for x in oude_categorieen]
     pad.write_text("\n".join(x for x in (kop_, "\n".join(regels), agenda.rstrip("\n")) if x) + "\n", encoding="utf-8")
 
 
@@ -677,45 +747,65 @@ def schrijf(pad, tekst):
     (map_ / "index.html").write_text(tekst, encoding="utf-8")
 
 
+def niet_in(b, cat, scan):
+    """Volgens de scan hoort het bedrijf niet in deze categorie (bijvoorbeeld een cafetaria tussen de restaurants)."""
+    return cat["slug"] in (scan.get(b["slug"], {}).get("niet_in") or {})
+
+
 def main(bron):
     bron = pathlib.Path(bron)
-    cat = CATEGORIE
     xml_ = bron / "bron" / "wp-xml" / "bedrijvengids-listdom.xml"
-    if xml_.exists():
-        gids = gids_uit_xml(xml_, cat["slug"])
-        gids, overig = samenvoegen(gids, osm_uit_csv(bron / "advies" / "osm-bedrijvengids" / "sportscholen-aangevuld.csv", cat["soorten"]))
-        (ROOT / "data" / "bedrijvengids.json").write_text(
-            json.dumps({cat["slug"]: {"gids": gids, "overig": overig}}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    else:
-        opgeslagen = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))[cat["slug"]]
-        gids, overig = opgeslagen["gids"], opgeslagen["overig"]
-    scan_toepassen(overig, ROOT / "data" / "bedrijvengids-scan.json")
-    scan_toepassen(gids, ROOT / "data" / "bedrijvengids-scan.json", eigen_tekst=True)
-    correcties_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-correcties.json")
-    websites_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-websites.json")
-    wijzigingen_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-wijzigingen.json")
-    pakketten_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-pakketten.json", datetime.date.today())
-    # Zonder werkende website geen vermelding (afgesproken met Frans, 23-10-2026): het bedrijf bestaat dan
-    # waarschijnlijk niet meer. Behalve als het betaalt of zelf zijn gegevens heeft aangevuld.
-    # Door de redactie verwijderd (bijvoorbeeld gestopt of opgegaan in een ander bedrijf): status "verwijderd" in de scan.
+    pad = ROOT / "data" / "bedrijvengids.json"
+    opgeslagen = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
     scan = json.loads((ROOT / "data" / "bedrijvengids-scan.json").read_text(encoding="utf-8"))
-    weg = [b for b in gids + overig if scan.get(b["slug"], {}).get("status") == "verwijderd"
-           or not (b.get("website") or b.get("uitgelicht") or b.get("geclaimd"))]
-    gids = [b for b in gids if b not in weg]
-    overig = [b for b in overig if b not in weg]
-    for b in weg:
-        doorverwijzen(b, cat)
-    schrijf_redirects(weg, cat)
+    gebruikt, groepen, alle_weg, alle_vermeldingen = set(), {}, [], {}
+    for cat in CATEGORIEEN:
+        csv_ = bron / "advies" / "osm-bedrijvengids" / cat["bron_csv"]
+        if xml_.exists() and csv_.exists():
+            gids = gids_uit_xml(xml_, cat["listdom"])
+            gids, overig = samenvoegen(gids, osm_uit_csv(csv_, cat["soorten"], cat.get("plaatsen", ("Nijmegen",))), gebruikt)
+            opgeslagen[cat["slug"]] = {"gids": gids, "overig": overig}
+        elif cat["slug"] in opgeslagen:
+            gids, overig = opgeslagen[cat["slug"]]["gids"], opgeslagen[cat["slug"]]["overig"]
+        else:
+            continue
+        # Een bedrijf uit de oude gids kan in meer categorieën staan; het krijgt één pagina (bij de eerste categorie)
+        # Hoort het volgens de scan bij een andere categorie, dan valt het hier stil weg (geen doorverwijzing: het
+        # komt bij die andere categorie).
+        gids = [b for b in gids if b["slug"] not in gebruikt and not niet_in(b, cat, scan)]
+        overig = [b for b in overig if b["slug"] not in gebruikt and not niet_in(b, cat, scan)]
+        gebruikt.update(b["slug"] for b in gids + overig)
+        scan_toepassen(overig, ROOT / "data" / "bedrijvengids-scan.json")
+        scan_toepassen(gids, ROOT / "data" / "bedrijvengids-scan.json", eigen_tekst=True)
+        correcties_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-correcties.json")
+        websites_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-websites.json")
+        wijzigingen_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-wijzigingen.json")
+        pakketten_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-pakketten.json", datetime.date.today())
+        # Zonder werkende website geen vermelding (afgesproken met Frans, 23-10-2026): het bedrijf bestaat dan
+        # waarschijnlijk niet meer. Behalve als het betaalt of zelf zijn gegevens heeft aangevuld.
+        # Door de redactie of automatisch verwijderd (gestopt, site niet te lezen): status "verwijderd" in de scan.
+        weg = [b for b in gids + overig if scan.get(b["slug"], {}).get("status") == "verwijderd"
+               or not (b.get("website") or b.get("uitgelicht") or b.get("geclaimd"))]
+        gids = [b for b in gids if b not in weg]
+        overig = [b for b in overig if b not in weg]
+        for b in weg:
+            doorverwijzen(b, cat)
+        alle_weg += [(b, cat) for b in weg]
+        alle_vermeldingen.update(vermeldingen(gids + overig, cat))
+        artikelen = [(s_, titel_van(s_)) for s_ in cat["artikelen"] if titel_van(s_)]
+        schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen))
+        for b in gids + overig:
+            anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
+            schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen))
+        blog_blokken(cat, gids + overig)
+        groepen.setdefault(cat["groep"], []).append((cat, gids, overig))
+        print("%s: %d uit de gids, %d aangevuld, %d niet (meer) in de gids" % (cat["slug"], len(gids), len(overig), len(weg)))
+    if xml_.exists():
+        pad.write_text(json.dumps(opgeslagen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    schrijf_redirects(alle_weg, [(oud, cat["slug"]) for cat in CATEGORIEEN for oud in sorted(cat["listdom"]) if oud != cat["slug"]])
     (ROOT / "data" / "bedrijvengids-vermeldingen.json").write_text(
-        json.dumps(vermeldingen(gids + overig, cat), ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
-    artikelen = [(s, titel_van(s)) for s in cat["artikelen"] if titel_van(s)]
-    schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen))
-    for b in gids + overig:
-        anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
-        schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen))
-    blog_blokken(cat, gids + overig)
-    schrijf("bedrijvengids", start_pagina([(cat["groep"], [(cat, gids, overig)])]))
-    print("%s: %d uit de gids, %d aangevuld" % (cat["slug"], len(gids), len(overig)))
+        json.dumps(alle_vermeldingen, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    schrijf("bedrijvengids", start_pagina(list(groepen.items())))
 
 
 if __name__ == "__main__":

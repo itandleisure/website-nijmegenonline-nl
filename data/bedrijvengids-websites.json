@@ -1,4 +1,46 @@
 {
+ "akhi-s": {
+  "eind_url": "https://akhis.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://akhis.nl/",
+  "werkt": true
+ },
+ "alba": {
+  "eind_url": "https://albanijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.albanijmegen.nl/",
+  "werkt": true
+ },
+ "als-toen": {
+  "eind_url": "http://www.gasterijalstoen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.gasterijalstoen.nl",
+  "werkt": true
+ },
+ "an-bairro-alto-annie-van-velzenhof": {
+  "eind_url": "https://www.an-bairroalto.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.an-bairroalto.nl/",
+  "werkt": true
+ },
+ "an-bairro-alto-annie-van-velzenhof-2": {
+  "eind_url": "https://www.an-bairroalto.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://an-bairroalto.nl",
+  "werkt": true
+ },
+ "ankara-restaurant": {
+  "eind_url": "https://fatla.tv/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.restaurantankara.nl",
+  "werkt": true
+ },
  "apollo-gym": {
   "eind_url": "https://apollogym.nl/gratis-dagkaart/#fixed-section",
   "gecontroleerd": "2026-10-23",
@@ -6,12 +48,19 @@
   "website": "https://apollogym.nl/gratis-dagkaart/#fixed-section",
   "werkt": true
  },
- "area-11-personal-fit": {
-  "eind_url": "http://www.evolvepersonaltraining.nl/",
+ "ararat-armeens-restaurant": {
+  "eind_url": "http://www.ararat-nijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "domein bestaat niet",
-  "website": "http://www.evolvepersonaltraining.nl/",
+  "website": "http://www.ararat-nijmegen.nl/",
   "werkt": false
+ },
+ "arsenaal-1824": {
+  "eind_url": "https://arsenaal1824.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.arsenaal1824.nl/",
+  "werkt": true
  },
  "ashtanga-mysore-nijmegen": {
   "eind_url": "http://www.imxprs.com/free/franki/website-ayn",
@@ -20,12 +69,47 @@
   "website": "http://www.imxprs.com/free/franki/website-ayn",
   "werkt": true
  },
- "avalon-fitcentre": {
-  "eind_url": "http://www.avalonfitcentre.nl/",
+ "asia-foodcorner": {
+  "eind_url": "https://www.asiafoodcorner.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://asiafoodcorner.nl/",
+  "werkt": true
+ },
+ "aya": {
+  "eind_url": "https://ayanijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://ayanijmegen.nl",
+  "werkt": true
+ },
+ "baan-isaan": {
+  "eind_url": "http://www.baanisaan.nl",
   "gecontroleerd": "2026-10-23",
   "reden": "domein bestaat niet",
-  "website": "http://www.avalonfitcentre.nl/",
+  "website": "http://www.baanisaan.nl",
   "werkt": false
+ },
+ "bankoh": {
+  "eind_url": "https://www.bistrobarbankoh.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.bistrobarbankoh.nl/",
+  "werkt": true
+ },
+ "bar-cali": {
+  "eind_url": "https://bar-cali.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://bar-cali.nl/",
+  "werkt": true
+ },
+ "bar-pasta": {
+  "eind_url": "https://www.barpasta.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://barpasta.nl/",
+  "werkt": true
  },
  "basic-fit-kerkenbos": {
   "eind_url": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-kerkenbos-24-7-647daab03c8d4517a522f2f9c3c32332.html",
@@ -44,9 +128,44 @@
  "basic-fit-weg-door-jonkerbos": {
   "eind_url": "http://www.basicfit.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "twijfel: timed out",
+  "reden": "503 (weert mogelijk bots)",
   "website": "http://www.basicfit.nl/",
   "werkt": true
+ },
+ "basmati": {
+  "eind_url": "https://www.basmatinijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://basmatinijmegen.nl",
+  "werkt": true
+ },
+ "beau": {
+  "eind_url": "https://restaurant-beau.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.restaurant-beau.nl",
+  "werkt": true
+ },
+ "beij-ons": {
+  "eind_url": "https://proeflokaalbeijons.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.beijons.nl",
+  "werkt": true
+ },
+ "bella-italia": {
+  "eind_url": "https://bluesurfergirl.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.bellaitalia-nijmegen.com/",
+  "werkt": true
+ },
+ "bellissimo": {
+  "eind_url": "http://www.pizzeria-bellissimo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.pizzeria-bellissimo.nl/",
+  "werkt": false
  },
  "benefit-sports": {
   "eind_url": "https://www.benefitsports.nl/",
@@ -55,19 +174,250 @@
   "website": "https://www.benefitsports.nl/",
   "werkt": true
  },
+ "betty-mora-italian-canteen": {
+  "eind_url": "http://www.bettyandmora.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bettyandmora.com/",
+  "werkt": true
+ },
+ "bhalu-nijmegen": {
+  "eind_url": "https://bhalu.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "https://bhalu.nl/",
+  "werkt": true
+ },
  "biggym-nijmegen": {
   "eind_url": "https://biggym.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "http://www.biggym.nl/",
+  "website": "https://biggym.com/",
   "werkt": true
  },
- "bodytecnijmegen": {
-  "eind_url": "http://www.bodytecnijmegen.nl/",
+ "bij-babs": {
+  "eind_url": "https://bijbabsnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.bijbabsnijmegen.nl/",
+  "werkt": true
+ },
+ "bij-jan": {
+  "eind_url": "https://www.linkedin.com/company/lunchroom-bij-jan",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.linkedin.com/company/lunchroom-bij-jan",
+  "werkt": true
+ },
+ "bistro-flores": {
+  "eind_url": "https://flores.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://flores.nl",
+  "werkt": true
+ },
+ "bistrobar-berlin": {
+  "eind_url": "https://www.bistrobarberlin.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.bistrobarberlin.nl",
+  "werkt": true
+ },
+ "bkk-thai": {
+  "eind_url": "https://nijmegen.bkk-thai.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://nijmegen.bkk-thai.nl/",
+  "werkt": true
+ },
+ "bleeckerstreet": {
+  "eind_url": "https://bleeckerstreet.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bleeckerstreet.nl",
+  "werkt": true
+ },
+ "bluf-nijmegen": {
+  "eind_url": "https://blufnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.blufnijmegen.nl/",
+  "werkt": true
+ },
+ "bodega-zarzuela": {
+  "eind_url": "https://www.restaurantzarzuela.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://restaurantzarzuela.nl/",
+  "werkt": true
+ },
+ "borboleta": {
+  "eind_url": "http://www.borboleta-nijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.borboleta-nijmegen.nl",
+  "werkt": true
+ },
+ "brass": {
+  "eind_url": "https://www.brassnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.brassnijmegen.nl/",
+  "werkt": true
+ },
+ "brasserie-de-altena": {
+  "eind_url": "https://dealtena.nl/nl-nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.dealtena.nl",
+  "werkt": true
+ },
+ "brasserie-jolie-nijmegen": {
+  "eind_url": "https://www.brasseriejolie.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.brasseriejolie.nl/",
+  "werkt": true
+ },
+ "brasserie-le-duc": {
+  "eind_url": "http://www.brasserieleduc.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.brasserieleduc.nl/",
+  "werkt": true
+ },
+ "bregje": {
+  "eind_url": "https://bregje.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://bregje.nl",
+  "werkt": true
+ },
+ "brood-op-de-plank": {
+  "eind_url": "https://bakkerscafe.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bakkerscafe.nl",
+  "werkt": true
+ },
+ "brunswick-nijmegen": {
+  "eind_url": "http://www.brunswicknijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "domein bestaat niet",
-  "website": "http://www.bodytecnijmegen.nl/",
+  "website": "http://www.brunswicknijmegen.nl/",
   "werkt": false
+ },
+ "burgerme": {
+  "eind_url": "https://www.burgerme.nl/vestiging/burgerme-nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.burgerme.nl/vestiging-nijmegen/",
+  "werkt": true
+ },
+ "buurtcafe-adriaan": {
+  "eind_url": "https://buurtcafeadriaan.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://buurtcafeadriaan.nl/",
+  "werkt": true
+ },
+ "buuv": {
+  "eind_url": "https://www.buuvnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.buuvnijmegen.nl/",
+  "werkt": true
+ },
+ "cafe-de-plak": {
+  "eind_url": "https://www.cafedeplak.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.cafedeplak.nl/",
+  "werkt": true
+ },
+ "cafe-eten-en-drinken": {
+  "eind_url": "https://cafe-etenendrinken.nl/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://cafe-etenendrinken.nl/nijmegen",
+  "werkt": true
+ },
+ "cafe-eten-en-drinken-lent": {
+  "eind_url": "https://cafe-etenendrinken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.cafe-etenendrinken.nl/",
+  "werkt": true
+ },
+ "cafe-klein": {
+  "eind_url": "https://www.cafe-klein.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://cafe-klein.nl/",
+  "werkt": true
+ },
+ "cafe-van-buren": {
+  "eind_url": "https://cafevanburen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.cafevanburen.nl/",
+  "werkt": true
+ },
+ "chicken-nijmegen": {
+  "eind_url": "http://www.chickenkebabnijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.chickenkebabnijmegen.nl",
+  "werkt": false
+ },
+ "chidoz": {
+  "eind_url": "https://chidoz.mx/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.chidoz.mx",
+  "werkt": true
+ },
+ "china-delight": {
+  "eind_url": "https://www.chinadelightnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://chinadelightnijmegen.nl",
+  "werkt": true
+ },
+ "china-garden": {
+  "eind_url": "http://www.chinagarden-meijhorst.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.chinagarden-meijhorst.nl",
+  "werkt": true
+ },
+ "chinees-indisch-restaurant-de-roos": {
+  "eind_url": "http://www.chineesderoos.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.chineesderoos.nl/",
+  "werkt": true
+ },
+ "chinees-indisch-restaurant-lotus": {
+  "eind_url": "http://www.lotusnijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.lotusnijmegen.nl",
+  "werkt": true
+ },
+ "commanderie-van-sint-jan": {
+  "eind_url": "http://www.commanderie-nijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.commanderie-nijmegen.nl",
+  "werkt": true
+ },
+ "communal-by-marcus-antonius": {
+  "eind_url": "https://communal.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://communal.nl/",
+  "werkt": true
  },
  "compleetfit-nijmegen": {
   "eind_url": "https://compleetfitnijmegen.nl/",
@@ -76,11 +426,256 @@
   "website": "http://www.compleetfitnijmegen.nl/",
   "werkt": true
  },
+ "corfu": {
+  "eind_url": "http://www.corfunijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.corfunijmegen.nl/",
+  "werkt": false
+ },
+ "corona-tweede-walstraat": {
+  "eind_url": "https://www.coronanijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://coronanijmegen.nl/",
+  "werkt": true
+ },
  "crossfit-nijmegen": {
   "eind_url": "https://crossfit-nijmegen.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.crossfit-nijmegen.com",
+  "werkt": true
+ },
+ "crudo": {
+  "eind_url": "https://www.crudo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.crudo.nl/",
+  "werkt": true
+ },
+ "cwz-paviljoen": {
+  "eind_url": "https://www.cwz.nl/naar-het-ziekenhuis/restaurant-en-faciliteiten",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.cwz.nl/naar-het-ziekenhuis/restaurant-en-faciliteiten",
+  "werkt": true
+ },
+ "de-4-heeren": {
+  "eind_url": "https://www.deheeren-nijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.deheeren-nijmegen.nl",
+  "werkt": true
+ },
+ "de-achtertuin": {
+  "eind_url": "https://achtertuin.nu/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://achtertuin.nu/",
+  "werkt": true
+ },
+ "de-bok": {
+  "eind_url": "https://bistrodebok.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://bistrodebok.nl",
+  "werkt": true
+ },
+ "de-borneo": {
+  "eind_url": "http://deborneo.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://deborneo.com/",
+  "werkt": false
+ },
+ "de-bruijn-lunchen-op-de-markt": {
+  "eind_url": "https://lunchenopdemarkt.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://lunchenopdemarkt.nl/",
+  "werkt": true
+ },
+ "de-draaibar": {
+  "eind_url": "http://www.driegezusters.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not va",
+  "website": "http://www.driegezusters.com/",
+  "werkt": true
+ },
+ "de-dromaai": {
+  "eind_url": "https://dedromaai.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://dedromaai.nl",
+  "werkt": true
+ },
+ "de-dynamische-praktijk-bij-le-petit-chateau": {
+  "eind_url": "http://www.dedynamischepraktijk.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://dedynamischepraktijk.nl/",
+  "werkt": true
+ },
+ "de-firma": {
+  "eind_url": "https://www.defirmanijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://defirmanijmegen.nl",
+  "werkt": true
+ },
+ "de-gelagkamer": {
+  "eind_url": "https://degelagkamer.nl/nl-nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://degelagkamer.nl",
+  "werkt": true
+ },
+ "de-industrie": {
+  "eind_url": "https://deindustrie.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://deindustrie.nl",
+  "werkt": true
+ },
+ "de-klinker": {
+  "eind_url": "https://www.grotebroek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.grotebroek.nl",
+  "werkt": true
+ },
+ "de-mandarijn": {
+  "eind_url": "https://chineesrestaurantdemandarijn.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://chineesrestaurantdemandarijn.nl/",
+  "werkt": true
+ },
+ "de-nieuwe-winkel": {
+  "eind_url": "https://denieuwewinkel.com",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://denieuwewinkel.com",
+  "werkt": true
+ },
+ "de-pannenkoekenboot": {
+  "eind_url": "https://nijmegen.pannenkoekenboot.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://nijmegen.pannenkoekenboot.nl",
+  "werkt": true
+ },
+ "de-pelgrim-foodbar": {
+  "eind_url": "https://depelgrimnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.depelgrimnijmegen.nl/",
+  "werkt": true
+ },
+ "de-portier": {
+  "eind_url": "https://www.portier-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.portier-nijmegen.nl/",
+  "werkt": true
+ },
+ "de-schat": {
+  "eind_url": "https://deschat.nl/nl-nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.deschat.nl",
+  "werkt": true
+ },
+ "de-serre": {
+  "eind_url": "https://www.deserrenijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.deserrenijmegen.com/",
+  "werkt": true
+ },
+ "de-sjalot": {
+  "eind_url": "https://restaurant-sjalot.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://restaurant-sjalot.nl",
+  "werkt": true
+ },
+ "de-waagh": {
+  "eind_url": "https://dewaaghnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://dewaaghnijmegen.nl/",
+  "werkt": true
+ },
+ "de-wit-kaashandel": {
+  "eind_url": "http://www.dewitkaas.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.dewitkaas.nl/",
+  "werkt": true
+ },
+ "de-witwasserij": {
+  "eind_url": "https://dewitwasserij.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://dewitwasserij.nl",
+  "werkt": true
+ },
+ "dionysos": {
+  "eind_url": "https://dionysosnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://dionysosnijmegen.nl/",
+  "werkt": true
+ },
+ "dock17": {
+  "eind_url": "https://restaurantdock17.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://restaurantdock17.nl/",
+  "werkt": true
+ },
+ "don-pablo": {
+  "eind_url": "https://donpablo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "500 (weert mogelijk bots)",
+  "website": "https://donpablo.nl/",
+  "werkt": true
+ },
+ "don-pedro": {
+  "eind_url": "http://www.donpedronijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.donpedronijmegen.nl/",
+  "werkt": false
+ },
+ "doppio-nijmegen": {
+  "eind_url": "https://doppionijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://doppionijmegen.com/",
+  "werkt": true
+ },
+ "down-town": {
+  "eind_url": "https://www.downtownnmgn.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.downtownnmgn.nl/",
+  "werkt": true
+ },
+ "drive-inn": {
+  "eind_url": "https://www.driveinnnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://driveinnnijmegen.nl/",
+  "werkt": true
+ },
+ "droom-de-boekweit": {
+  "eind_url": "https://droomdeboekweit.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://droomdeboekweit.nl/",
   "werkt": true
  },
  "eastside-performance": {
@@ -97,11 +692,116 @@
   "website": "https://easyactive.nl/locatie/easy-active-nijmegen",
   "werkt": true
  },
+ "eazie": {
+  "eind_url": "https://eazie.nl/nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://eazie.nl/",
+  "werkt": true
+ },
+ "eetbar-bloom": {
+  "eind_url": "https://eetbarbloom.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://eetbarbloom.nl/",
+  "werkt": true
+ },
+ "eetbar-mikmak": {
+  "eind_url": "https://www.eetbarmikmak.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.eetbarmikmak.nl/",
+  "werkt": true
+ },
+ "eetcafe-buur": {
+  "eind_url": "https://buurnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.buurbrakkenstein.nl",
+  "werkt": true
+ },
+ "eetcafe-de-serre": {
+  "eind_url": "http://www.eetcafedeserre.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.eetcafedeserre.nl",
+  "werkt": false
+ },
+ "eetcafe-nul24": {
+  "eind_url": "https://www.eetcafenul24.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.eetcafenul24.nl",
+  "werkt": true
+ },
+ "eethuis-anil": {
+  "eind_url": "https://www.eethuisanil.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.eethuisanil.nl/",
+  "werkt": true
+ },
+ "eethuisje-moqui-lange-hezelstraat": {
+  "eind_url": "http://www.Moqui.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.Moqui.nl/",
+  "werkt": false
+ },
+ "eethuisje-moqui-van-welderenstraat": {
+  "eind_url": "http://www.moqui.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "https://www.moqui.nl/",
+  "werkt": false
+ },
+ "eethuissultan": {
+  "eind_url": "https://www.eethuissultan-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.eethuissultan-nijmegen.nl/",
+  "werkt": true
+ },
+ "eetpaleis-marhaba": {
+  "eind_url": "https://www.eetpaleismarhaba.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.eetpaleismarhaba.nl/",
+  "werkt": true
+ },
+ "emmi-s": {
+  "eind_url": "http://www.pizzeriaemmis.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pizzeriaemmis.nl/",
+  "werkt": true
+ },
+ "emmy-indonesisch-specialiteiten-eethuis": {
+  "eind_url": "https://www.emmyeethuis.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.emmyeethuis.nl/",
+  "werkt": true
+ },
+ "exercise-body-and-mind": {
+  "eind_url": "http://www.exercisebodyandmind.nl/www2/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.exercisebodyandmind.nl/",
+  "werkt": true
+ },
  "f4f-nijmegen": {
   "eind_url": "https://www.sportcity.nl/?redirected=true",
   "gecontroleerd": "2026-10-23",
   "reden": "subpagina weg (404), homepage werkt",
   "website": "http://www.fitforfree.nl/vestigingen/nijmegen/",
+  "werkt": true
+ },
+ "fat-phill-s-drive-thru": {
+  "eind_url": "https://fatphillsdiner.com",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://fatphillsdiner.com",
   "werkt": true
  },
  "fit-for-free": {
@@ -115,7 +815,7 @@
   "eind_url": "https://www.fit20.com/nl/studios/nijmegen/contact",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "http://www.fit20nijmegen.nl/",
+  "website": "https://www.fit20.com/nl/studios/nijmegen/contact",
   "werkt": true
  },
  "fitsmart-personal-training": {
@@ -132,11 +832,67 @@
   "website": "http://www.fittunit.nl/",
   "werkt": true
  },
+ "foe-ho": {
+  "eind_url": "http://chinees-indisch-bezorgcentrum-foe-ho.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://chinees-indisch-bezorgcentrum-foe-ho.nl",
+  "werkt": false
+ },
+ "frank-s-food-grill": {
+  "eind_url": "https://www.franksnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://franksnijmegen.nl",
+  "werkt": true
+ },
+ "frappant": {
+  "eind_url": "https://frappant-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://frappant-nijmegen.nl/",
+  "werkt": true
+ },
+ "fresca": {
+  "eind_url": "https://frescanijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://frescanijmegen.nl",
+  "werkt": true
+ },
  "freyheyt-sportlounge": {
   "eind_url": "https://www.freyheytnijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "twijfel: Remote end closed connection without response",
   "website": "https://www.freyheytnijmegen.nl/",
+  "werkt": true
+ },
+ "funkenstein": {
+  "eind_url": "https://funkenstein.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.funkenstein.nl",
+  "werkt": true
+ },
+ "funkyfarmer-nl": {
+  "eind_url": "https://www.funkyfarmer.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.funkyfarmer.nl/",
+  "werkt": true
+ },
+ "giros": {
+  "eind_url": "https://www.giros.nu/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.giros.nu/",
+  "werkt": true
+ },
+ "glaswerk": {
+  "eind_url": "https://glaswerk-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.glaswerk-nijmegen.nl/",
   "werkt": true
  },
  "go4fit-nijmegen": {
@@ -146,11 +902,60 @@
   "website": "http://www.go4fit.nl/",
   "werkt": true
  },
+ "goed-volk": {
+  "eind_url": "http://www.goedvolknijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.goedvolknijmegen.nl",
+  "werkt": false
+ },
+ "grand-cafe-de-waterwolf": {
+  "eind_url": "https://grandcafewaterwolf.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Remote end closed connection without response",
+  "website": "https://grandcafewaterwolf.nl",
+  "werkt": true
+ },
+ "grand-cafe-lindenholt": {
+  "eind_url": "https://grandcafelindenholt.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.grandcafelindenholt.nl/",
+  "werkt": true
+ },
+ "grand-cafe-moenen": {
+  "eind_url": "https://grandcafemoenen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.grandcafemoenen.nl/",
+  "werkt": true
+ },
+ "groenewoud": {
+  "eind_url": "https://www.restaurantgroenewoud.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.restaurantgroenewoud.nl",
+  "werkt": true
+ },
  "groepsgeluk": {
   "eind_url": "https://groepsgeluk.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.groepsgeluk.nl/",
+  "werkt": true
+ },
+ "grut": {
+  "eind_url": "https://shop.weeztix.com/4593746b-5b40-4660-844b-54b87713b9fd?shop_code=8r42zkmg",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://eventix.shop/8r42zkmg",
+  "werkt": true
+ },
+ "hafiza-i": {
+  "eind_url": "https://hafiza.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://hafiza.nl/",
   "werkt": true
  },
  "harbor-gym": {
@@ -178,7 +983,84 @@
   "eind_url": "https://www.roc-nijmegen.nl/organisatie/leerbedrijven/het-fitcentrum",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://hetfitcentrum.roc-nijmegen.nl/",
+  "website": "https://www.roc-nijmegen.nl/organisatie/leerbedrijven/het-fitcentrum",
+  "werkt": true
+ },
+ "het-lemke": {
+  "eind_url": "https://zottelemke.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.zottelemke.nl/",
+  "werkt": true
+ },
+ "het-restaurant": {
+  "eind_url": "https://www.roc-nijmegen.nl/restaurant/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.roc-nijmegen.nl/restaurant/",
+  "werkt": true
+ },
+ "hind-cooking": {
+  "eind_url": "https://www.hindcooking.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.hindcooking.nl",
+  "werkt": true
+ },
+ "holy-roti": {
+  "eind_url": "http://holyroti.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://holyroti.nl",
+  "werkt": true
+ },
+ "hotel-credible": {
+  "eind_url": "https://in-credible.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.in-credible.nl/",
+  "werkt": true
+ },
+ "hubert": {
+  "eind_url": "https://hubertnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://hubertnijmegen.nl/",
+  "werkt": true
+ },
+ "humphrey-s-marienburg": {
+  "eind_url": "https://www.humphreys.nl/restaurants/humphreys-nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.humphreys.nl/restaurants/humphreys-nijmegen/",
+  "werkt": true
+ },
+ "humphrey-s-marienburg-2": {
+  "eind_url": "https://www.humphreys.nl/restaurants/humphreys-nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.humphreys.nl/onze-restaurants/humphreys-nijmegen/",
+  "werkt": true
+ },
+ "i-love-sushi": {
+  "eind_url": "https://ilovesushi.nl/location/i-love-sushi-nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://ilovesushi.nl/location/i-love-sushi-nijmegen/",
+  "werkt": true
+ },
+ "il-nano": {
+  "eind_url": "https://www.pizzeriailnano.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.pizzeriailnano.nl/",
+  "werkt": true
+ },
+ "il-pizzaiolo": {
+  "eind_url": "https://indebuurt.nl/nijmegen/gids/il-pizzaiolo/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "https://indebuurt.nl/nijmegen/gids/il-pizzaiolo/",
   "werkt": true
  },
  "immovation": {
@@ -195,11 +1077,438 @@
   "website": "https://www.impact-nijmegen.nl/",
   "werkt": true
  },
+ "in-de-kazerne": {
+  "eind_url": "https://indekazerne.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.indekazerne.nl/",
+  "werkt": true
+ },
+ "india-gate": {
+  "eind_url": "https://www.restaurantindiagate.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://restaurantindiagate.nl",
+  "werkt": true
+ },
+ "indiaas-nepalees-restaurant-himalaya": {
+  "eind_url": "https://restauranthimalaya.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "https://restauranthimalaya.nl/",
+  "werkt": true
+ },
+ "indian-way": {
+  "eind_url": "https://www.restaurantindianway.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "https://www.restaurantindianway.nl/",
+  "werkt": true
+ },
+ "indiawalaa-sadras": {
+  "eind_url": "https://indiawalaa.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://indiawalaa.nl/",
+  "werkt": true
+ },
+ "ivory": {
+  "eind_url": "https://www.restaurantivory.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.restaurantivory.nl/",
+  "werkt": true
+ },
+ "iwok-go": {
+  "eind_url": "https://www.iwokandgo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.iwokandgo.nl",
+  "werkt": true
+ },
+ "izzi": {
+  "eind_url": "https://www.izzi-restaurant.nl:443/?lang=nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.izzi-restaurant.nl/",
+  "werkt": true
+ },
+ "jadda": {
+  "eind_url": "https://jadda.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.jadda.nl/",
+  "werkt": true
+ },
+ "jan-klaassen-eetcafe": {
+  "eind_url": "https://jan-klaassen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.jan-klaassen.com",
+  "werkt": true
+ },
+ "johnny-s-burger-co": {
+  "eind_url": "https://www.johnnys.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.johnnys.nl",
+  "werkt": true
+ },
+ "johnnys-burger-and-otacos": {
+  "eind_url": "https://www.johnnys.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.johnnys.nl/",
+  "werkt": true
+ },
+ "jp-vincken-zn": {
+  "eind_url": "https://www.jpvincken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.jpvincken.nl/",
+  "werkt": true
+ },
+ "julia-s": {
+  "eind_url": "https://www.julias.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.juliasophetstation.nl",
+  "werkt": true
+ },
+ "kala-food-atelier-yoga": {
+  "eind_url": "https://www.kalacafe.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.kalacafe.nl/",
+  "werkt": true
+ },
+ "kaniwa": {
+  "eind_url": "https://kaniwa.foodticket.nl/foodticket/cgi/bestel.cgi",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://kaniwa.foodticket.nl/foodticket/cgi/bestel.cgi",
+  "werkt": true
+ },
+ "kings-of-ramen": {
+  "eind_url": "https://kingsoframen.nl/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://kingsoframen.nl/nijmegen/",
+  "werkt": true
+ },
+ "kipperij-nijmegen-lent": {
+  "eind_url": "https://www.kipperij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://kipperij.nl/",
+  "werkt": true
+ },
+ "kiso-by-nan": {
+  "eind_url": "https://kisobynan.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://kisobynan.nl/",
+  "werkt": true
+ },
+ "klinkklaar": {
+  "eind_url": "https://www.klinkklaar.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.klinkklaar.nl/",
+  "werkt": true
+ },
+ "koken-aan-de-waal": {
+  "eind_url": "http://www.kokenaandewaal.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (",
+  "website": "http://www.kokenaandewaal.nl/",
+  "werkt": true
+ },
+ "koks-ko": {
+  "eind_url": "https://koksenko.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.koksenko.nl/",
+  "werkt": true
+ },
+ "komagene-nijmegen": {
+  "eind_url": "http://www.komagenenijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "http://www.komagenenijmegen.nl/",
+  "werkt": false
+ },
+ "komo-sushi": {
+  "eind_url": "https://www.komo-sushi.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://komo-sushi.nl/",
+  "werkt": true
+ },
+ "kool-houtoven-cafe": {
+  "eind_url": "https://www.koolnijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.koolnijmegen.nl",
+  "werkt": true
+ },
  "kracht-coaching-personal-trainer-nijmegen": {
   "eind_url": "http://www.moves-you.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.moves-you.nl/",
+  "werkt": true
+ },
+ "la-belle-excuse": {
+  "eind_url": "https://www.labelleexcuse.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.labelleexcuse.nl/",
+  "werkt": true
+ },
+ "la-cubanita": {
+  "eind_url": "https://lacubanita.nl/tapas-nijmegen",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://lacubanita.nl/tapas-nijmegen",
+  "werkt": true
+ },
+ "la-pineta": {
+  "eind_url": "https://lapineta-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://lapineta-nijmegen.nl/",
+  "werkt": true
+ },
+ "la-saigon": {
+  "eind_url": "https://www.lasaigon-streetfood.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.lasaigon-streetfood.nl/",
+  "werkt": true
+ },
+ "landgoed-brakkesteyn": {
+  "eind_url": "https://www.landgoedbrakkesteyn.nl/wp-content/uploads/2026/06/Zomerdeals-2026-Landgoed-Brakkesteyn.pdf?pid=14934",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.landgoedbrakkesteyn.nl/wp-content/uploads/2026/06/Zomerdeals-2026-Landgoed-Brakkesteyn.pdf?pid=14934",
+  "werkt": true
+ },
+ "le-figaro": {
+  "eind_url": "https://cafelefigaro.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://cafelefigaro.nl",
+  "werkt": true
+ },
+ "lent-plaza": {
+  "eind_url": "https://restaurant-lentplaza.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://restaurant-lentplaza.nl/",
+  "werkt": true
+ },
+ "lijn-3": {
+  "eind_url": "https://eetcafelijn3.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.eetcafelijn3.nl",
+  "werkt": true
+ },
+ "lila": {
+  "eind_url": "https://lila-restaurant.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://lila-restaurant.nl/",
+  "werkt": true
+ },
+ "little-india": {
+  "eind_url": "https://www.restaurantlittleindia.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "https://www.restaurantlittleindia.nl/",
+  "werkt": true
+ },
+ "little-yard": {
+  "eind_url": "https://www.littleyard.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://www.littleyard.nl",
+  "werkt": true
+ },
+ "lodewijk": {
+  "eind_url": "http://www.lodewijk-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.lodewijk-nijmegen.nl/",
+  "werkt": true
+ },
+ "loetje": {
+  "eind_url": "https://www.loetje.nl/locaties/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.loetje.nl/locaties/nijmegen/",
+  "werkt": true
+ },
+ "loong-sing": {
+  "eind_url": "https://www.loongsing.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.loongsing.nl/",
+  "werkt": true
+ },
+ "lume": {
+  "eind_url": "https://fingerz.metro.rest",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "https://fingerz.metro.rest",
+  "werkt": false
+ },
+ "lunch-lovers": {
+  "eind_url": "https://www.lunchlovers.nl/foodticket/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.lunchlovers.nl",
+  "werkt": true
+ },
+ "lunchbar-de-viking": {
+  "eind_url": "https://www.lunchbardeviking.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.lunchbardeviking.nl/",
+  "werkt": true
+ },
+ "lunchcafe-blixem": {
+  "eind_url": "https://www.blixemnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.blixemnijmegen.nl/",
+  "werkt": true
+ },
+ "m-i-a-made-in-asia": {
+  "eind_url": "https://www.madeinasia.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.madeinasia.nl/",
+  "werkt": true
+ },
+ "madame-liberty": {
+  "eind_url": "https://www.madamelibertynijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.madamelibertynijmegen.com/",
+  "werkt": true
+ },
+ "made-by-marn": {
+  "eind_url": "https://madebymarn.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.madebymarn.com/",
+  "werkt": true
+ },
+ "maltstock-hq": {
+  "eind_url": "https://www.maltstock.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.maltstock.com",
+  "werkt": true
+ },
+ "mam-vietnamese-street-food": {
+  "eind_url": "https://www.mamstreetfood.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.mamstreetfood.com/",
+  "werkt": true
+ },
+ "mama-zita-s": {
+  "eind_url": "http://MamaZitasFood.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1032)",
+  "website": "http://MamaZitasFood.nl/",
+  "werkt": true
+ },
+ "manna": {
+  "eind_url": "https://manna-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "subpagina weg (404), homepage werkt",
+  "website": "https://www.manna-nijmegen.nl/brasserie-manna/",
+  "werkt": true
+ },
+ "maoz-falafel-nijmegen": {
+  "eind_url": "https://maozfalafelnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.maozfalafelnijmegen.nl/",
+  "werkt": true
+ },
+ "marktzicht": {
+  "eind_url": "https://www.cafemarktzicht.nl/Cafe_Marktzicht/Fotos/Paginas/Vroeger_en_Nu.html",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.cafemarktzicht.nl/Cafe_Marktzicht/Fotos/Paginas/Vroeger_en_Nu.html#2",
+  "werkt": true
+ },
+ "mastergym": {
+  "eind_url": "https://gymmaster.nl/nl-nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://gymmaster.nl/",
+  "werkt": true
+ },
+ "meet-de-griek": {
+  "eind_url": "https://www.meetdegriek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://www.meetdegriek.nl/",
+  "werkt": true
+ },
+ "meet-ribs-nijmegen": {
+  "eind_url": "https://www.meetandribs.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.meetandribs.nl/",
+  "werkt": true
+ },
+ "meneer-vos": {
+  "eind_url": "https://www.pluryn.nl/locaties/meneer-vos",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.pluryn.nl/locaties/meneer-vos",
+  "werkt": true
+ },
+ "merano": {
+  "eind_url": "https://www.meranonijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.meranonijmegen.nl/",
+  "werkt": true
+ },
+ "mercure-hotel-ontbijtbuffet": {
+  "eind_url": "http://all.accor.com",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "http://all.accor.com",
+  "werkt": true
+ },
+ "mexita": {
+  "eind_url": "http://www.mexita.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1032)",
+  "website": "http://www.mexita.nl/",
+  "werkt": true
+ },
+ "mi-barrio": {
+  "eind_url": "https://mibarrio.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://mibarrio.nl",
+  "werkt": true
+ },
+ "mikmak": {
+  "eind_url": "https://www.eetbarmikmak.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.eetbarmikmak.nl/",
   "werkt": true
  },
  "mio-personal-training": {
@@ -209,6 +1518,48 @@
   "website": "http://www.mio.training/",
   "werkt": true
  },
+ "mira": {
+  "eind_url": "https://www.restaurantmira.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.restaurantmira.nl",
+  "werkt": true
+ },
+ "mister-panda": {
+  "eind_url": "https://www.misterpanda.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.misterpanda.nl/",
+  "werkt": true
+ },
+ "moeke": {
+  "eind_url": "https://moeke.nl/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.moeke.nl/nijmegen",
+  "werkt": true
+ },
+ "mohabat": {
+  "eind_url": "http://www.mohabat.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.mohabat.nl",
+  "werkt": false
+ },
+ "mr-jack-s": {
+  "eind_url": "http://mrjacksnijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://mrjacksnijmegen.nl",
+  "werkt": true
+ },
+ "munt-saladebar": {
+  "eind_url": "https://munt-saladebar.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.munt-saladebar.nl",
+  "werkt": true
+ },
  "my35-nijmegen": {
   "eind_url": "https://www.my35.nl/",
   "gecontroleerd": "2026-10-23",
@@ -216,11 +1567,39 @@
   "website": "http://www.my35.nl/",
   "werkt": true
  },
+ "nacional": {
+  "eind_url": "https://nacional-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://nacional-nijmegen.nl/",
+  "werkt": true
+ },
  "new-age-22": {
   "eind_url": "http://newage22.com",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "445 (weert mogelijk bots)",
   "website": "http://newage22.com",
+  "werkt": true
+ },
+ "new-dutch": {
+  "eind_url": "https://newdutchstreetfood.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.newdutchstreetfood.nl/",
+  "werkt": true
+ },
+ "new-pronto": {
+  "eind_url": "https://www.newpronto.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.newpronto.nl/",
+  "werkt": true
+ },
+ "nibbles": {
+  "eind_url": "https://nibbles-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Remote end closed connection without response",
+  "website": "https://nibbles-nijmegen.nl/",
   "werkt": true
  },
  "nijmegen-outdoor": {
@@ -234,7 +1613,7 @@
   "eind_url": "https://nimmabasketball.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://www.nimma-gemina.nl/",
+  "website": "https://nimmabasketball.nl/",
   "werkt": true
  },
  "nimma-moves": {
@@ -244,11 +1623,151 @@
   "website": "http://www.nimmamoves.nl/",
   "werkt": true
  },
+ "nimweegse-nuilertjes": {
+  "eind_url": "https://www.iederznvak.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.iederznvak.nl/",
+  "werkt": true
+ },
+ "nisantas-marina": {
+  "eind_url": "https://nicsell.com/nl/domain/www.nisantasi.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.nisantasi.nl/arnhem/marina-nijmegen/",
+  "werkt": true
+ },
+ "nolita-nijmegen": {
+  "eind_url": "http://www.nolita-nijmgen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.nolita-nijmgen.nl/",
+  "werkt": false
+ },
+ "nook-city-kitchen": {
+  "eind_url": "https://www.nookcitykitchen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.nookcitykitchen.nl/",
+  "werkt": true
+ },
+ "nostra": {
+  "eind_url": "https://www.nostra.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://nostra.nl",
+  "werkt": true
+ },
+ "notting-hill": {
+  "eind_url": "https://gaspar-nijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "https://gaspar-nijmegen.nl",
+  "werkt": true
+ },
+ "nour-tapas-nijmegen": {
+  "eind_url": "https://nourtapas-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://nourtapas-nijmegen.nl/",
+  "werkt": true
+ },
  "novio-fit": {
   "eind_url": "https://www.noviofit.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "http://Www.noviofit.nl/",
+  "website": "https://www.noviofit.nl/",
+  "werkt": true
+ },
+ "ookini": {
+  "eind_url": "https://www.ookini.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.ookini.nl/",
+  "werkt": true
+ },
+ "orient-drive": {
+  "eind_url": "https://www.orientdrive.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.orientdrive.nl/",
+  "werkt": true
+ },
+ "orient-plaza": {
+  "eind_url": "https://www.orientplaza.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.orientplaza.com/",
+  "werkt": true
+ },
+ "osteria-pomodoro": {
+  "eind_url": "https://osteriapomodoro.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://osteriapomodoro.nl/",
+  "werkt": true
+ },
+ "oyasushi": {
+  "eind_url": "https://www.oyasushi.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.oyasushi.nl",
+  "werkt": true
+ },
+ "panache": {
+  "eind_url": "https://www.panache.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://panache.nl",
+  "werkt": true
+ },
+ "papa-johns-pizza": {
+  "eind_url": "https://www.papajohns.co.nl/?utm_source=yext-bing&utm_medium=organic-search&utm_campaign=local-listing",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.papajohns.co.nl/?utm_source=yext-bing&utm_medium=organic-search&utm_campaign=local-listing",
+  "werkt": true
+ },
+ "paradiso": {
+  "eind_url": "https://www.paradiso-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://paradiso-nijmegen.nl",
+  "werkt": true
+ },
+ "parkzicht": {
+  "eind_url": "https://www.parkzicht-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.parkzicht-nijmegen.nl/",
+  "werkt": true
+ },
+ "pasta-e-fagioli": {
+  "eind_url": "http://www.pastaefagioli.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "500 (weert mogelijk bots)",
+  "website": "http://www.pastaefagioli.nl/",
+  "werkt": true
+ },
+ "pasundan-traditional-indonesian-food": {
+  "eind_url": "https://pasundan.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pasundan.nl/",
+  "werkt": true
+ },
+ "paul-van-zoelen": {
+  "eind_url": "http://www.paulvanzoelen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.paulvanzoelen.nl/",
+  "werkt": false
+ },
+ "peking": {
+  "eind_url": "http://www.pekingnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.pekingnijmegen.nl/",
   "werkt": true
  },
  "perry-ubeda-weerbaarheidscentrum": {
@@ -265,11 +1784,151 @@
   "website": "http://www.personalfitnessnederland.nl/",
   "werkt": true
  },
+ "pimpelmees": {
+  "eind_url": "https://pimpelmees-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://pimpelmees-nijmegen.nl/",
+  "werkt": true
+ },
+ "pinoccio-nijmegen": {
+  "eind_url": "http://www.pinoccio.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.pinoccio.nl/",
+  "werkt": true
+ },
+ "pizza-cafe-desem": {
+  "eind_url": "https://pizzacafedesem.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pizzacafedesem.nl/",
+  "werkt": true
+ },
+ "pizza-di-valentino": {
+  "eind_url": "https://pizzadivalentino.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pizzadivalentino.nl/",
+  "werkt": true
+ },
+ "pizza-pasta-factory": {
+  "eind_url": "https://pizzapastafactory.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://pizzapastafactory.nl/",
+  "werkt": true
+ },
+ "pizza-pezzo": {
+  "eind_url": "https://www.pizzapezzo.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.pizzapezzo.com/",
+  "werkt": true
+ },
+ "pizzacafe-desem": {
+  "eind_url": "https://pizzacafedesem.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://pizzacafedesem.nl",
+  "werkt": true
+ },
+ "pizzaria-burak": {
+  "eind_url": "https://pizzeria-burak-nijmegen.nl:443/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://pizzeria-burak-nijmegen.nl/",
+  "werkt": true
+ },
+ "pizzeria-bardolino": {
+  "eind_url": "https://www.pizzeriabardolino.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pizzeriabardolino.nl/",
+  "werkt": true
+ },
+ "pizzeria-cafetaria-emmis": {
+  "eind_url": "https://www.pizzeriaemmis.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.pizzeriaemmis.nl/",
+  "werkt": true
+ },
+ "pizzeria-chipito": {
+  "eind_url": "https://pizzeria-chipito-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://pizzeria-chipito-nijmegen.nl/",
+  "werkt": true
+ },
+ "pizzeria-fifty-fifty": {
+  "eind_url": "https://www.pizzeriafiftyfifty-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pizzeriafiftyfifty-nijmegen.nl/",
+  "werkt": true
+ },
+ "pizzeria-prego": {
+  "eind_url": "http://www.pizzeria-prego.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pizzeria-prego.nl/",
+  "werkt": true
+ },
+ "plan-a": {
+  "eind_url": "https://plan-a-nijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://plan-a-nijmegen.nl",
+  "werkt": true
+ },
+ "plek-nijmegen": {
+  "eind_url": "https://pleknijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.pleknijmegen.nl",
+  "werkt": true
+ },
+ "plesant": {
+  "eind_url": "http://www.plesanteethuys.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.plesanteethuys.nl",
+  "werkt": false
+ },
+ "poke-perfect": {
+  "eind_url": "https://pokeperfect.nl/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://pokeperfect.nl/nijmegen/",
+  "werkt": true
+ },
+ "popocatepetl-nijmegen": {
+  "eind_url": "https://www.popo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://popo.nl/",
+  "werkt": true
+ },
+ "proefdruk-nijmegen": {
+  "eind_url": "https://proefdruknijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.proefdruknijmegen.nl/",
+  "werkt": true
+ },
+ "proeflokaal-bregje": {
+  "eind_url": "https://bregje.nl/Locatie/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://proeflokaalbregje.nl/uit-eten/nijmegen/",
+  "werkt": true
+ },
  "provectas": {
   "eind_url": "https://www.provectas.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "http://Www.provectas.nl/",
+  "website": "https://www.provectas.nl/",
   "werkt": true
  },
  "pulse-flow": {
@@ -279,6 +1938,132 @@
   "website": "https://pulseandflow.nl",
   "werkt": true
  },
+ "radboud-university-food-beverage": {
+  "eind_url": "http://www.ru.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "subpagina weg (404), homepage werkt",
+  "website": "http://www.ru.nl/refter",
+  "werkt": true
+ },
+ "renato-s-pizzeria": {
+  "eind_url": "https://www.renatos.nl/renatos-pizzeria-nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.renatos.nl/pizzerianijmegen",
+  "werkt": true
+ },
+ "restaurant-de-hemel": {
+  "eind_url": "https://restaurantdehemel.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://restaurantdehemel.nl",
+  "werkt": true
+ },
+ "restaurant-de-stadstuyn": {
+  "eind_url": "https://destadstuyn.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.destadstuyn.nl",
+  "werkt": true
+ },
+ "restaurant-de-vereeniging": {
+  "eind_url": "https://www.stadsschouwburgendevereeniging.nl/restaurant-de-vereeniging-65bp",
+  "gecontroleerd": "2026-10-23",
+  "reden": "307 (weert mogelijk bots)",
+  "website": "https://www.stadsschouwburgendevereeniging.nl/restaurant-de-vereeniging-65bp",
+  "werkt": true
+ },
+ "restaurant-flow-nijmegen": {
+  "eind_url": "https://sanadome.nl/restaurants/flow/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.sanadome.nl/restaurants-nijmegen/flow-international-cuisine",
+  "werkt": true
+ },
+ "restaurant-groenewoud": {
+  "eind_url": "https://www.restaurantgroenewoud.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.restaurantgroenewoud.nl/",
+  "werkt": true
+ },
+ "restaurant-het-savarijn": {
+  "eind_url": "http://www.savarijn.nl/PbwUnderconstruction.aspx",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.savarijn.nl",
+  "werkt": true
+ },
+ "restaurant-waud": {
+  "eind_url": "http://www.restaurantwaud.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.restaurantwaud.nl/",
+  "werkt": false
+ },
+ "restaurant-wokforgo": {
+  "eind_url": "https://wokforgo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.wokforgo.nl/",
+  "werkt": true
+ },
+ "restaurant-zijdewinde": {
+  "eind_url": "https://zijdewinde.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.zijdewinde.nl/",
+  "werkt": true
+ },
+ "restobar-fiftyeight": {
+  "eind_url": "https://restobar58.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://restobar58.nl/",
+  "werkt": true
+ },
+ "rex": {
+  "eind_url": "https://rexnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://rexnijmegen.nl/",
+  "werkt": true
+ },
+ "rhodon": {
+  "eind_url": "https://www.rhodonnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.rhodonnijmegen.nl",
+  "werkt": true
+ },
+ "rich-taste": {
+  "eind_url": "http://www.rich-taste.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.rich-taste.nl/",
+  "werkt": false
+ },
+ "rini-s": {
+  "eind_url": "https://www.rinisurinaamseten.nl/foodticket/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.rinisurinaamseten.nl",
+  "werkt": true
+ },
+ "rini-s-surinaams-eten": {
+  "eind_url": "https://www.rinisurinaamseten.nl/foodticket/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://rinisurinaamseten.nl/",
+  "werkt": true
+ },
+ "ristorante-pizzeria-la-casa": {
+  "eind_url": "https://ristorante-lacasa.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.ristorante-lacasa.nl/",
+  "werkt": true
+ },
  "riverland-healthcentre": {
   "eind_url": "https://riverlandhealthcentre.nl/",
   "gecontroleerd": "2026-10-23",
@@ -286,11 +2071,130 @@
   "website": "https://riverlandhealthcentre.nl/",
   "werkt": true
  },
+ "robin-s-gluten-free-robin-s-bakery": {
+  "eind_url": "https://robinsglutenfree.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.robinsglutenfree.nl/",
+  "werkt": true
+ },
+ "romagna": {
+  "eind_url": "https://romagna-nijmegen.metro.rest/?lang=nl#times",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://romagna-nijmegen.metro.rest/?lang=nl#times",
+  "werkt": true
+ },
+ "saison": {
+  "eind_url": "https://www.saisonrestaurant.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.saisonrestaurant.nl/",
+  "werkt": true
+ },
  "sanasport-health-club": {
   "eind_url": "https://sanasport-fitness-nijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.sanasport-fitness-nijmegen.nl/",
+  "werkt": true
+ },
+ "saray": {
+  "eind_url": "https://www.saraylounge.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.saraylounge.nl/",
+  "werkt": true
+ },
+ "seconda-orbit": {
+  "eind_url": "http://www.etsy.com/shop/SecondaOrbit",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "http://www.etsy.com/shop/SecondaOrbit",
+  "werkt": true
+ },
+ "serif-baba": {
+  "eind_url": "https://www.serifbaba.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.serifbaba.nl/",
+  "werkt": true
+ },
+ "shabu-shabu": {
+  "eind_url": "https://shabushabu.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.shabushabu.nl/",
+  "werkt": true
+ },
+ "shabu-to-go": {
+  "eind_url": "https://www.shabutogo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.shabutogo.nl/",
+  "werkt": true
+ },
+ "shibui-ramen": {
+  "eind_url": "https://shibuiramen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://shibuiramen.nl",
+  "werkt": true
+ },
+ "shimeiwei-sushi": {
+  "eind_url": "https://shimeiweilent.sitedish.shop/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://shimeiweilent.sitedish.shop/",
+  "werkt": true
+ },
+ "shisha-house": {
+  "eind_url": "https://shishahousenijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://shishahousenijmegen.nl/",
+  "werkt": true
+ },
+ "shisha-lounge-giga-bijt": {
+  "eind_url": "http://www.hou-je.nl/gigabijt",
+  "gecontroleerd": "2026-10-23",
+  "reden": "500 (weert mogelijk bots)",
+  "website": "http://www.hou-je.nl/gigabijt",
+  "werkt": true
+ },
+ "siam-thai-palace": {
+  "eind_url": "https://siamthaipalace.nl/nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.siamthaipalace.nl",
+  "werkt": true
+ },
+ "sjoesie-nijmegen": {
+  "eind_url": "https://www.sjoesie.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.sjoesie.nl/",
+  "werkt": true
+ },
+ "smokehouse-de-kronenburger": {
+  "eind_url": "https://www.smokehousekronenburger.com:443/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.smokehousekronenburger.com/",
+  "werkt": true
+ },
+ "smullers": {
+  "eind_url": "https://www.smullers.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.smullers.nl",
+  "werkt": true
+ },
+ "sound-soul-foodbar": {
+  "eind_url": "https://www.soundensoul.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.soundensoul.nl/",
   "werkt": true
  },
  "sportcity-nijmegen": {
@@ -307,6 +2211,13 @@
   "website": "http://www.sportloodsoost.nl/",
   "werkt": true
  },
+ "sportqube": {
+  "eind_url": "http://www.sportqube.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.sportqube.nl/",
+  "werkt": true
+ },
  "sports-palace": {
   "eind_url": "https://www.sportspalace.nl/",
   "gecontroleerd": "2026-10-23",
@@ -314,11 +2225,193 @@
   "website": "http://www.sportspalace.nl/",
   "werkt": true
  },
+ "st-jacobs": {
+  "eind_url": "http://www.stjacobs.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.stjacobs.nl/",
+  "werkt": false
+ },
+ "stamp-nijmegen": {
+  "eind_url": "https://barsocio.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "subpagina weg (404), homepage werkt",
+  "website": "https://www.barsocio.nl/stamp",
+  "werkt": true
+ },
+ "steven": {
+  "eind_url": "https://stevennijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.stevennijmegen.nl/",
+  "werkt": true
+ },
+ "strandpaviljoen-dushi": {
+  "eind_url": "https://strandpaviljoendushi.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://strandpaviljoendushi.nl/",
+  "werkt": true
+ },
+ "stroom": {
+  "eind_url": "https://stroomlent.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://stroomlent.nl",
+  "werkt": true
+ },
+ "sultan-restaurant-nijmegen": {
+  "eind_url": "https://www.sultanrestaurant-lelystad.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://sultanrestaurant.nl",
+  "werkt": true
+ },
+ "sumo": {
+  "eind_url": "https://www.restaurantsumo.com/sumo-sushi-nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.restaurantsumo.com/sumo-sushi-nijmegen/",
+  "werkt": true
+ },
+ "sushi-maison": {
+  "eind_url": "https://sushimaison.sitedish.shop/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://sushimaison.sitedish.shop/",
+  "werkt": true
+ },
+ "sushi-toku": {
+  "eind_url": "http://www.sushitoku.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.sushitoku.nl",
+  "werkt": true
+ },
+ "sushi-van-kai": {
+  "eind_url": "https://sushivankai.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://Www.Sushivankai.nl/",
+  "werkt": true
+ },
+ "sushi-vega-nijmegen": {
+  "eind_url": "https://sushivega.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://sushivega.nl/",
+  "werkt": true
+ },
+ "sushipoint-nijmegen": {
+  "eind_url": "http://www.sushipoint.nl/sushi-nijmegen",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "http://www.sushipoint.nl/sushi-nijmegen",
+  "werkt": true
+ },
+ "swiet-famiri": {
+  "eind_url": "https://swietkitchen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.swietfamiri.nl/",
+  "werkt": true
+ },
+ "t-hoogstraatje": {
+  "eind_url": "https://www.hoogstraatje.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.hoogstraatje.nl/",
+  "werkt": true
+ },
+ "t-sfeerhuys-bij-de-looimolen": {
+  "eind_url": "https://sfeerhuys.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.sfeerhuys.nl",
+  "werkt": true
+ },
+ "t-zusje": {
+  "eind_url": "https://zusje.nl/onze-zusjes/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://zusje.nl/onze-zusjes/nijmegen/",
+  "werkt": true
+ },
+ "taco-mundo": {
+  "eind_url": "https://www.tacomundo.com",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.tacomundo.com",
+  "werkt": true
+ },
+ "tafellen": {
+  "eind_url": "http://www.tafellen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.tafellen.nl/",
+  "werkt": false
+ },
+ "taj-plaza": {
+  "eind_url": "http://www.tajplaza.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.tajplaza.nl/",
+  "werkt": false
+ },
+ "tante-koosje": {
+  "eind_url": "https://www.tantekoosje.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.tantekoosje.nl",
+  "werkt": true
+ },
+ "taqueria-clamato": {
+  "eind_url": "https://www.clamato.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.clamato.nl",
+  "werkt": true
+ },
+ "tasty-on-the-road": {
+  "eind_url": "http://www.broodjesensnacks.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.broodjesensnacks.nl",
+  "werkt": false
+ },
+ "terra-rossa": {
+  "eind_url": "https://terrarossa.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://terrarossa.nl",
+  "werkt": true
+ },
+ "thali-express": {
+  "eind_url": "https://www.thaliexpress.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.thaliexpress.nl/",
+  "werkt": true
+ },
+ "the-bite-club": {
+  "eind_url": "https://www.thebiteclub.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.thebiteclub.nl/",
+  "werkt": true
+ },
+ "the-foodfather-nijmegen": {
+  "eind_url": "https://www.the-foodfather-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://www.the-foodfather-nijmegen.nl/",
+  "werkt": true
+ },
  "the-gym-society": {
   "eind_url": "https://www.thegymsociety.com/nl",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://www.thegymsociety.nl/",
+  "website": "https://www.thegymsociety.com/nl",
   "werkt": true
  },
  "the-kettlebell-club": {
@@ -328,11 +2421,74 @@
   "website": "https://www.thekettlebellclub.nl/",
   "werkt": true
  },
+ "the-lobby-nijmegen": {
+  "eind_url": "https://thelobbynijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://thelobbynijmegen.nl/",
+  "werkt": true
+ },
+ "tiffin": {
+  "eind_url": "https://www.tiffin-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.tiffin-nijmegen.nl/",
+  "werkt": true
+ },
+ "toko-oost": {
+  "eind_url": "https://toko-oost.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://toko-oost.nl/",
+  "werkt": true
+ },
+ "tomi-sushi-grill": {
+  "eind_url": "https://www.restauranttomi.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.restauranttomi.nl/",
+  "werkt": true
+ },
+ "toon": {
+  "eind_url": "https://lima-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.toon-nijmegen.nl",
+  "werkt": true
+ },
+ "trafo": {
+  "eind_url": "https://www.trafonijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.trafonijmegen.nl/",
+  "werkt": true
+ },
  "trainingscentrum-michi": {
   "eind_url": "https://www.trainingscentrum-michi.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.trainingscentrum-michi.nl/",
+  "werkt": true
+ },
+ "trash-ure-taarten": {
+  "eind_url": "https://trashuretaarten.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.trashuretaarten.nl/",
+  "werkt": true
+ },
+ "tu-thai-food": {
+  "eind_url": "https://www.tuthaifood.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://tuthaifood.nl/",
+  "werkt": true
+ },
+ "ultimo": {
+  "eind_url": "https://www.ultimonijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.ultimonijmegen.nl/",
   "werkt": true
  },
  "ultrasport": {
@@ -342,12 +2498,159 @@
   "website": "http://www.ultrasport.nl/",
   "werkt": true
  },
+ "under-construction": {
+  "eind_url": "https://www.underconstructionnijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "https://www.underconstructionnijmegen.nl",
+  "werkt": false
+ },
+ "valdin": {
+  "eind_url": "https://www.valdin.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.valdin.nl",
+  "werkt": true
+ },
+ "van-dam-bbq-ribs-more": {
+  "eind_url": "https://spareribsnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.spareribsnijmegen.nl/",
+  "werkt": true
+ },
+ "van-dam-s-spare-rib-corner": {
+  "eind_url": "http://www.van-dam-sparerib-grill.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.van-dam-sparerib-grill.nl",
+  "werkt": false
+ },
+ "veggie-india": {
+  "eind_url": "https://veggieindia.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.veggieindia.nl/",
+  "werkt": true
+ },
+ "versfabriek": {
+  "eind_url": "https://versfabriek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.versfabriek.nl/",
+  "werkt": true
+ },
+ "vesters": {
+  "eind_url": "https://restaurantvesters.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.restaurantvesters.nl/",
+  "werkt": true
+ },
+ "vief": {
+  "eind_url": "http://www.viefnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.viefnijmegen.nl/",
+  "werkt": false
+ },
+ "villa-voorstad": {
+  "eind_url": "https://villavoorstad.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.villavoorstad.nl",
+  "werkt": true
+ },
+ "vlees-co": {
+  "eind_url": "https://vleesenco.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.vleesenco.nl/",
+  "werkt": true
+ },
+ "vof-duives": {
+  "eind_url": "https://www.plaats1.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.plaats1.com/",
+  "werkt": true
+ },
+ "vurrukkulluk": {
+  "eind_url": "https://vurrukkulluk.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.vurrukkulluk.nl/",
+  "werkt": true
+ },
+ "waalzinnig": {
+  "eind_url": "http://www.eetcafewaalzinnig.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.eetcafewaalzinnig.nl",
+  "werkt": false
+ },
+ "wally": {
+  "eind_url": "https://restaurantwally.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.restaurantwally.nl",
+  "werkt": true
+ },
  "wav-e-studios-nijmegen": {
   "eind_url": "https://wav-estudios.com/wav-e-locaties/nijmegen/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://wav-estudios.com/wav-e-studios-nijmegen/",
   "werkt": true
+ },
+ "weerlicht": {
+  "eind_url": "http://www.cafeweerlicht.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.cafeweerlicht.nl",
+  "werkt": false
+ },
+ "wereldkeuken-triavium": {
+  "eind_url": "http://www.wereldkeuken-triavium.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.wereldkeuken-triavium.nl",
+  "werkt": true
+ },
+ "werf-bar-diner": {
+  "eind_url": "https://www.werfnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.werfnijmegen.nl/",
+  "werkt": true
+ },
+ "why-not": {
+  "eind_url": "https://www.whynot-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.whynot-nijmegen.nl/",
+  "werkt": true
+ },
+ "wijck": {
+  "eind_url": "https://www.wijcknijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.wijcknijmegen.nl/",
+  "werkt": true
+ },
+ "witlof": {
+  "eind_url": "https://restaurantwitlof.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.restaurantwitlof.nl/",
+  "werkt": true
+ },
+ "wok-nijmegen": {
+  "eind_url": "http://Www.woknijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://Www.woknijmegen.nl/",
+  "werkt": false
  },
  "xtreme-marine-sports": {
   "eind_url": "https://xtrememarinesports.nl/",
@@ -356,11 +2659,53 @@
   "website": "http://www.xtrememarinesports.nl/",
   "werkt": true
  },
- "zlim-nijmegen": {
-  "eind_url": "https://zlimnijmegen.nl",
+ "yoghurt-barn-nijmegen": {
+  "eind_url": "https://www.yoghurtbarn.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: [Errno 104] Connection reset by peer",
+  "website": "https://www.yoghurtbarn.nl/",
+  "werkt": true
+ },
+ "yukimi-japans-sushi-grill": {
+  "eind_url": "https://yukimi.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.yukimi.nl/",
+  "werkt": true
+ },
+ "zappa-s": {
+  "eind_url": "https://www.zappas.nu/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.zappas.nu/",
+  "werkt": true
+ },
+ "zeezicht": {
+  "eind_url": "https://newdutchstreetfood.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.zeezicht-nijmegen.nl/",
+  "werkt": true
+ },
+ "ziyafet": {
+  "eind_url": "https://ziyafetrestaurant.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.ziyafetrestaurant.nl/",
+  "werkt": true
+ },
+ "zorba": {
+  "eind_url": "https://nijmegen.zorbastreetfood.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://zorbastreetfood.nl/nijmegen",
+  "werkt": true
+ },
+ "zwaantje-nijmegen": {
+  "eind_url": "http://www.zwaantjenijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "domein bestaat niet",
-  "website": "https://zlimnijmegen.nl",
+  "website": "http://www.zwaantjenijmegen.nl/",
   "werkt": false
  }
 }
