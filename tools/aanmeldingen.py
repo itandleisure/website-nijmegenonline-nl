@@ -17,6 +17,7 @@ import json
 import pathlib
 import re
 import sys
+import time
 import unicodedata
 import urllib.parse
 import urllib.request
@@ -177,6 +178,8 @@ def main(test=None):
     aanbieders = json.load(open(ROOT / "data" / "aanbieders.json", encoding="utf-8"))
     bedrijven_pad = ROOT / "data" / "bedrijven-aangemeld.json"
     bedrijven = json.load(open(bedrijven_pad, encoding="utf-8")) if bedrijven_pad.exists() else []
+    wijzigingen_pad = ROOT / "data" / "bedrijvengids-wijzigingen.json"
+    wijzigingen = json.load(open(wijzigingen_pad, encoding="utf-8")) if wijzigingen_pad.exists() else {}
     nieuw, terugmelden = [], []
     for a in lijst.get("evenement", []):
         if a["id"] not in verwerkt:
@@ -197,10 +200,17 @@ def main(test=None):
             b = {k: v for k, v in a.items() if k not in ("foto", "gepubliceerd")}
             if a.get("foto"):
                 b["foto"] = bewaar_foto(a["foto"], "bedrijf-" + slug(a.get("bedrijf", a["id"])))
-            bedrijven.append(b)
-            nieuw.append("bedrijf %s" % a.get("bedrijf"))
+            if a.get("vermelding"):
+                # Dit is mijn bedrijf: de redactie keurde de wijziging goed; tools/bedrijvengids.py past hem toe
+                b["goedgekeurd"] = time.strftime("%Y-%m-%d")
+                wijzigingen[a["vermelding"]] = b
+                nieuw.append("wijziging bedrijf %s" % a["vermelding"])
+            else:
+                bedrijven.append(b)
+                nieuw.append("bedrijf %s" % a.get("bedrijf"))
             verwerkt.add(a["id"])
-        terugmelden.append(a.get("gepubliceerd"))
+        url = "%s/bedrijvengids/%s/" % (SITE, a["vermelding"]) if a.get("vermelding") else ""
+        terugmelden.append(a.get("gepubliceerd") and a["gepubliceerd"] + ("&url=" + urllib.parse.quote(url, safe="") if url else ""))
     if nieuw:
         evenementen.sort(key=lambda e: (e["start"], e["slug"]))
         vul_adressen(aanbieders, evenementen)
@@ -208,6 +218,8 @@ def main(test=None):
         (ROOT / "data" / "aanbieders.json").write_text(json.dumps(dict(sorted(aanbieders.items())), ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         if bedrijven:
             bedrijven_pad.write_text(json.dumps(bedrijven, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        if wijzigingen:
+            wijzigingen_pad.write_text(json.dumps(wijzigingen, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
         VERWERKT.write_text("\n".join(sorted(verwerkt)) + "\n")
     # De workflow meldt pas terug na een geslaagde commit; mislukt die, dan komt de aanmelding de volgende keer terug
     if not test:

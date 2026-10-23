@@ -42,7 +42,7 @@ var FORMULIEREN = {
   },
   bedrijf: {
     tabblad: 'Bedrijven', bewaarMaanden: 3, onderwerp: 'Aanmelding bedrijvengids', goedkeuren: true,
-    openbaar: ['bedrijf', 'categorie', 'adres', 'postcode', 'plaats', 'land', 'site', 'telefoon', 'bedrijfsmail', 'openingstijden', 'omschrijving'],
+    openbaar: ['vermelding', 'bedrijf', 'categorie', 'adres', 'postcode', 'plaats', 'land', 'site', 'telefoon', 'bedrijfsmail', 'openingstijden', 'omschrijving'],
     velden: [['bedrijf', 'Bedrijf'], ['categorie', 'Soort bedrijf'], ['adres', 'Adres'], ['postcode', 'Postcode'],
       ['plaats', 'Plaats'], ['land', 'Land'], ['site', 'Website'],
       ['telefoon', 'Telefoon'], ['bedrijfsmail', 'E-mail bedrijf'], ['openingstijden', 'Openingstijden'],
@@ -447,9 +447,13 @@ function bewerkPagina(type, id) {
     '<p class="status">Status: ' + html_(g.status) + ' · ingestuurd door ' + html_(g.naam) + ' (' + html_(g.email) + ')' +
     (g.notitie ? '<br>Opmerking van de inzender: ' + html_(g.notitie) : '') + '</p>' +
     (g.controle ? '<div class="controle"><b>Let op</b>\n' + html_(g.controle) + '</div>' : '') +
+    (g.vermelding ? claimBlok(g) : '') +
     '<form id="f" onsubmit="return false">' + velden +
     '<label>Tekst op de site<textarea name="tekst" id="tekst" rows="12">' + html_(tekst) + '</textarea></label>' +
     '<details><summary>Ingestuurde tekst bekijken</summary><div>' + html_(g.omschrijving || '(leeg)') + '</div></details>' +
+    (g.vermelding && (vermeldingInGids(g.vermelding) || {}).omschrijving
+      ? '<p><button type="button" onclick="document.getElementById(\'tekst\').value=' + html_(JSON.stringify(vermeldingInGids(g.vermelding).omschrijving)) +
+        '">Huidige tekst van de site houden</button></p>' : '') +
     '<div class="foto"><b>Foto</b>' + foto +
     '<label>Andere foto kiezen (jpg, png of webp, max. 5 MB)<input type="file" id="foto" accept="image/jpeg,image/png,image/webp"></label>' +
     (blob ? '<label style="font-weight:normal"><input type="checkbox" id="fotoweg" style="display:inline;width:auto"> Foto weghalen</label>' : '') +
@@ -644,6 +648,7 @@ function stuurPlaatsingsmail(type, id, url) {
   var naam = g.titel || g.bedrijf;
   var tekst = 'Beste ' + (g.naam || 'aanmelder') + ',\n\nGoed nieuws: ' +
     (type === 'evenement' ? 'je evenement "' + naam + '" staat nu in de agenda van NijmegenOnline.'
+      : g.vermelding ? 'de wijzigingen voor "' + naam + '" staan nu in de bedrijvengids van NijmegenOnline.'
       : 'je bedrijf "' + naam + '" staat nu in de bedrijvengids van NijmegenOnline.') +
     (url ? '\n\nBekijk het hier: ' + url : '') +
     '\n\nWe hebben de tekst misschien wat aangepast, zodat die goed op de website past. Klopt er iets niet? ' +
@@ -734,6 +739,66 @@ var ADRES_JS =
   '  var t=document.createElement("button");t.type="button";t.textContent="Adres van de inzender terugzetten";t.onclick=window.terugzetten;' +
   '  noot.appendChild(t);noot.style.display="block"}' +
   ' keuze.addEventListener("change",pas);pas()})();';
+
+// ---------- Dit is mijn bedrijf (wijziging van een bestaande vermelding) ----------
+
+var VERMELDINGEN_URL = 'https://raw.githubusercontent.com/itandleisure/website-nijmegenonline-nl/main/data/bedrijvengids-vermeldingen.json';
+
+// Wat er nu op de site staat (gemaakt door tools/bedrijvengids.py); een uur bewaard. null als het niet lukt.
+function vermeldingInGids(slug) {
+  var cache = CacheService.getScriptCache();
+  var tekst = cache.get('vermeldingen');
+  if (!tekst) {
+    try {
+      tekst = UrlFetchApp.fetch(VERMELDINGEN_URL, { muteHttpExceptions: true }).getContentText();
+      JSON.parse(tekst);
+      if (tekst.length < 90000) cache.put('vermeldingen', tekst, 3600);
+    } catch (fout) {
+      console.error('Vermeldingen ophalen mislukt: ' + fout);
+      return null;
+    }
+  }
+  return JSON.parse(tekst)[slug] || null;
+}
+
+function domeinVan(tekst) {
+  var m = String(tekst || '').toLowerCase().match(/^(?:[a-z]+:\/\/)?(?:[^@\/]*@)?(?:www\.)?([^\/:?#]+)/);
+  return m ? m[1] : '';
+}
+
+// Blok voor de mail en de bewerkpagina: wat er nu staat naast wat er is ingestuurd, met de wijzigingen gemarkeerd,
+// en of het e-mailadres bij de website van het bedrijf hoort (een concurrent heeft dat meestal niet).
+function claimBlok(g) {
+  var nu = vermeldingInGids(g.vermelding);
+  var stijl = 'font-family:Arial,sans-serif;font-size:14px';
+  var uit = '<div style="' + stijl + ';border:2px solid #539c20;border-radius:6px;padding:10px 14px;margin-bottom:14px">' +
+    '<b>Dit is mijn bedrijf: wijziging van een bestaande vermelding</b><br>';
+  if (!nu) return uit + 'De huidige vermelding (' + html_(g.vermelding) + ') kon niet worden opgehaald.</div>';
+  var site = domeinVan(nu.site || g.site);
+  var mail = String(g.email || '').toLowerCase().split('@')[1] || '';
+  var eigen = site && mail && (mail === site || site.slice(-mail.length - 1) === '.' + mail || mail.slice(-site.length - 1) === '.' + site);
+  uit += '<a href="' + html_(nu.url) + '">Huidige pagina bekijken</a><br>' +
+    (eigen ? '<span style="color:#2e7d32">Het e-mailadres van de inzender hoort bij de website van het bedrijf (' + html_(site) + ').</span>'
+      : '<span style="color:#b26a00">Let op: het e-mailadres van de inzender (' + html_(g.email) + ') hoort niet bij de website' +
+        (site ? ' (' + html_(site) + ')' : '') + '. Controleer of de inzender echt van dit bedrijf is.</span>') +
+    (g.pakket && g.pakket !== 'gratis' ? '<br><b>Wil pakket: ' + html_(g.pakket) + '</b>' : '') + '</div>';
+  var velden = [['bedrijf', 'Naam'], ['adres', 'Adres'], ['postcode', 'Postcode'], ['plaats', 'Plaats'], ['site', 'Website'],
+    ['telefoon', 'Telefoon'], ['bedrijfsmail', 'E-mail bedrijf'], ['openingstijden', 'Openingstijden'], ['omschrijving', 'Tekst']];
+  var rijen = velden.map(function (v) {
+    var oud = String(nu[v[0]] || ''), nieuw = String(g[v[0]] || '');
+    // Een leeg veld laat de site zoals hij is (zie wijzigingen_toepassen in tools/bedrijvengids.py)
+    var anders = nieuw.trim() !== '' && oud.replace(/\s+/g, ' ').trim() !== nieuw.replace(/\s+/g, ' ').trim();
+    var cel = function (t) { return '<td valign="top" width="42%" style="border-top:1px solid #ddd;white-space:pre-line">' + (t ? html_(t) : '<i style="color:#999">leeg</i>') + '</td>'; };
+    return '<tr style="' + (anders ? 'background:#fff6d6' : '') + '"><th align="left" valign="top" style="border-top:1px solid #ddd">' +
+      v[1] + (anders ? ' <span style="color:#b26a00">(gewijzigd)</span>' : '') + '</th>' + cel(oud) +
+      (nieuw.trim() ? cel(nieuw) : '<td valign="top" style="border-top:1px solid #ddd;color:#999"><i>niet ingevuld, blijft zoals het is</i></td>') + '</tr>';
+  }).join('');
+  var foto = function (url) { return url ? '<img src="' + html_(url) + '" alt="" style="max-width:220px;max-height:160px;border-radius:4px">' : '<i style="color:#999">geen</i>'; };
+  rijen += '<tr><th align="left" valign="top" style="border-top:1px solid #ddd">Foto</th><td style="border-top:1px solid #ddd">' + foto(nu.foto) +
+    '</td><td style="border-top:1px solid #ddd">' + (g.foto && /^https:/.test(g.foto) ? '<a href="' + html_(g.foto) + '">Nieuwe foto bekijken in Drive</a>' : '<i style="color:#999">geen nieuwe foto</i>') + '</td></tr>';
+  return uit + '<table cellpadding="6" style="border-collapse:collapse;width:100%;margin-bottom:14px;' + stijl + '">' +
+    '<tr><th></th><th align="left">Nu op de site</th><th align="left">Ingestuurd</th></tr>' + rijen + '</table>';
+}
 
 // '6511ab' wordt '6511 AB'; Duitse (5 cijfers) en andere postcodes blijven zoals ze zijn
 function postcode(tekst) {
@@ -876,6 +941,10 @@ function stuurMail(cfg, g, onderwerp) {
       boven += '<p style="' + stijl + '"><b>Tekst die op de site komt</b> (de ingestuurde tekst staat onderaan):</p>' +
         '<div style="' + stijl + ';border-left:4px solid #539c20;padding:4px 14px;margin-bottom:14px">' +
         html_(g.tekstSite).replace(/\n\s*\n/g, '</p><p>').replace(/\n/g, '<br>').replace(/^/, '<p>') + '</p></div>';
+    }
+    if (g.vermelding) {
+      boven = claimBlok(g) + boven;
+      onderwerp = 'Wijziging bestaande vermelding: ' + (g.bedrijf || g.vermelding);
     }
     html = '<p style="font-family:Arial,sans-serif;font-size:15px">Bekijk de aanmelding, pas zo nodig tekst, gegevens of ' +
       'foto aan en kies daar publiceren of afwijzen.</p><p>' +

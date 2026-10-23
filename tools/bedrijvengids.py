@@ -213,7 +213,7 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
     if b["lat"]:
         ld["geo"] = {"@type": "GeoCoordinates", "latitude": float(b["lat"]), "longitude": float(b["lon"])}
     if b["foto"]:
-        ld["image"] = b["foto"]
+        ld["image"] = foto_url(b["foto"], SITE + "/")
     if b["openingstijden"]:
         ld["openingHoursSpecification"] = [
             {"@type": "OpeningHoursSpecification", "dayOfWeek": SCHEMA_DAG[i], "opens": t.split("–")[0], "closes": t.split("–")[1]}
@@ -226,7 +226,7 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
     if not b["tekst"] or b.get("concept"):
         # Nog geen (goedgekeurde) eigen tekst: wel een pagina (klikbaar vanuit de lijst), maar niet in Google tot de tekst er is
         extra += '\n  <meta name="robots" content="noindex">'
-    out = [kop(b["naam"], beschrijving, canonical, root, b["foto"] or None, extra)]
+    out = [kop(b["naam"], beschrijving, canonical, root, foto_url(b["foto"], SITE + "/") or None, extra)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel bedrijf">')
     out.append('        <div class="kruimelpad"><a href="%s">Home</a> › <a href="%sbedrijvengids-categorie/%s/">%s</a> › %s</div>'
                % (root, root, cat["slug"], esc(cat["naam"]), esc(b["naam"])))
@@ -237,8 +237,8 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
     regels.append('<li><span class="evenement-info__kop">Adres</span>%s%s</li>'
                   % (esc(adresregel(b)), ' <a href="%s" target="_blank" rel="noopener" data-klik="route">Kaart</a>' % esc(route) if route else ""))
     if not b["openingstijden"] and b.get("tijden_site"):
-        regels.append('<li><span class="evenement-info__kop">Openingstijden</span>%s<br><span class="bron">(volgens de eigen website)</span></li>'
-                      % "<br>".join(esc(x.strip()) for x in re.split(r",\s*(?=[a-z]{2}\b)", b["tijden_site"])))
+        regels.append('<li><span class="evenement-info__kop">Openingstijden</span>%s<br><span class="bron">(%s)</span></li>'
+                      % ("<br>".join(esc(x.strip()) for x in re.split(r",\s*(?=[a-z]{2}\b)|\n", b["tijden_site"]) if x.strip()), b.get("tijden_bron", "volgens de eigen website")))
     if b["openingstijden"]:
         rijen = "".join("<tr><th>%s</th><td>%s</td></tr>" % (DAGEN[i], esc(t or "onbekend")) for i, t in enumerate(b["openingstijden"]))
         regels.append('<li><span class="evenement-info__kop">Openingstijden</span><table class="openingstijden">%s</table></li>' % rijen)
@@ -263,7 +263,7 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
         regels.append('<li class="bron">Gegevens: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">'
                       'OpenStreetMap-bijdragers</a> en Overture Maps. Klopt er iets niet? <a href="%skom-in-contact/">Laat het weten</a>.</li>' % root)
     if b["foto"]:
-        out.append('        <figure><img src="%s" alt="%s"></figure>' % (esc(b["foto"]), esc(b["naam"])))
+        out.append('        <figure><img src="%s" alt="%s"></figure>' % (esc(foto_url(b["foto"], root)), esc(b["naam"])))
     actie = b.get("actie") or {}
     if actie.get("tekst"):
         out.append('        <p class="gidsactie"><strong>Actie</strong> %s%s</p>'
@@ -350,7 +350,7 @@ def pakketten_toepassen(bedrijven, pad, vandaag):
 def bedrijfkaart(b, root):
     """Kaartje in een lijst; elk bedrijf heeft een eigen pagina, die uit de gids met foto en openingstijden."""
     label = '<span class="bedrijfkaart__label">Uitgelicht</span>' if b.get("uitgelicht") else ""
-    foto = '<img src="%s" alt="" loading="lazy">' % esc(b["foto"]) if b["foto"] else ""
+    foto = '<img src="%s" alt="" loading="lazy">' % esc(foto_url(b["foto"], root)) if b["foto"] else ""
     open_ = '<span class="bedrijfkaart__open">Ma–vr %s</span>' % esc(b["openingstijden"][0]) if b["openingstijden"] else ""
     km = b.get("kenmerken") or []
     chips = '<span class="bedrijfkaart__kenmerken">%s</span>' % "".join("<span>%s</span>" % esc(k) for k in km[:4]) if km else ""
@@ -492,6 +492,47 @@ def scan_toepassen(bedrijven, pad):
         b["kenmerken"] = s.get("kenmerken", [])
 
 
+def foto_url(foto, root):
+    """Foto's van aanmeldingen staan in de repo (assets/uploads/...); die krijgen het pad naar de root ervoor."""
+    return foto if not foto or re.match(r"https?://", foto) else root + foto
+
+
+def wijzigingen_toepassen(bedrijven, pad):
+    """Door de redactie goedgekeurde wijzigingen via Dit is mijn bedrijf (tools/aanmeldingen.py). Die gaan voor
+    op alles wat we zelf verzamelden (oude gids, OpenStreetMap, websitescan)."""
+    wijz = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
+    for b in bedrijven:
+        w = wijz.get(b["slug"])
+        if not w:
+            continue
+        for veld, doel in (("bedrijf", "naam"), ("adres", "adres"), ("postcode", "postcode"), ("plaats", "plaats"),
+                           ("site", "website"), ("telefoon", "telefoon"), ("bedrijfsmail", "email"), ("foto", "foto")):
+            if w.get(veld):
+                b[doel] = w[veld]
+        if w.get("omschrijving"):
+            b["tekst"] = "\n".join("<p>%s</p>" % esc(a.strip()).replace("\n", "<br>") for a in re.split(r"\n\s*\n", w["omschrijving"]) if a.strip())
+            b["concept"] = False
+        if w.get("openingstijden"):
+            b["openingstijden"] = []
+            b["tijden_site"] = w["openingstijden"]
+            b["tijden_bron"] = "volgens het bedrijf"
+        b["geclaimd"] = True
+
+
+def vermeldingen(bedrijven, cat):
+    """Wat er nu op de site staat, per bedrijf; Code.gs zet dit naast een wijziging via Dit is mijn bedrijf."""
+    uit = {}
+    for b in bedrijven:
+        tijden = b.get("tijden_site") or "\n".join("%s %s" % (DAGEN[i], t or "onbekend") for i, t in enumerate(b["openingstijden"]))
+        tekst = html.unescape(re.sub(r"<[^>]+>", "", re.sub(r"</(p|h\d|li)>", "\n\n", b["tekst"] or ""))).strip()
+        uit[b["slug"]] = {"bedrijf": b["naam"], "categorie": cat["enkelvoud"], "adres": b["adres"], "postcode": b["postcode"] or "",
+                          "plaats": b["plaats"] or "", "site": b.get("website") or "", "telefoon": b.get("telefoon") or "",
+                          "bedrijfsmail": b.get("email") or "", "openingstijden": tijden,
+                          "omschrijving": re.sub(r"\n{3,}", "\n\n", tekst), "foto": foto_url(b["foto"], SITE + "/") or "",
+                          "url": "%s/bedrijvengids/%s/" % (SITE, b["slug"])}
+    return uit
+
+
 def schrijf(pad, tekst):
     map_ = ROOT / pad
     map_.mkdir(parents=True, exist_ok=True)
@@ -514,7 +555,10 @@ def main(bron):
         opgeslagen = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))[cat["slug"]]
         gids, overig = opgeslagen["gids"], opgeslagen["overig"]
     scan_toepassen(overig, ROOT / "data" / "bedrijvengids-scan.json")
+    wijzigingen_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-wijzigingen.json")
     pakketten_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-pakketten.json", datetime.date.today())
+    (ROOT / "data" / "bedrijvengids-vermeldingen.json").write_text(
+        json.dumps(vermeldingen(gids + overig, cat), ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     artikelen = [(s, titel_van(s)) for s in cat["artikelen"] if titel_van(s)]
     schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen))
     for b in gids + overig:
