@@ -1,16 +1,20 @@
-"""Haalt goedgekeurde aanmeldingen (evenementen en bedrijven) op uit het Google Apps Script en zet ze in de data.
+"""Haalt goedgekeurde aanmeldingen (evenementen, bedrijven en nieuwsberichten) op uit het Google Apps Script en zet
+ze in de data.
 
 Zo werkt de flow (zie ook tools/google-formulier/Code.gs):
 1. Iemand meldt een evenement of bedrijf aan op de site; dat komt in de Google Sheet en in een mail aan de redactie.
 2. De redactie klikt in die mail op "Akkoord" (of zet "Akkoord" in de kolom Status).
 3. Elk uur draait dit script (.github/workflows/aanmeldingen.yml): het haalt de goedgekeurde aanmeldingen op,
    zet evenementen in data/evenementen.json (foto in assets/uploads/aangemeld/) en bedrijven in
-   data/bedrijven-aangemeld.json (voor de bedrijvengids), en meldt ze terug zodat de status "Gepubliceerd" wordt.
-   Daarna bouwen tools/agenda.py en tools/build.py de site opnieuw.
+   data/bedrijven-aangemeld.json (voor de bedrijvengids) en nieuwsberichten in data/nieuws.json (foto ook in
+   assets/uploads/aangemeld/), en meldt ze terug zodat de status "Gepubliceerd" wordt en de inzender een mail krijgt.
+   Daarna bouwen tools/agenda.py, tools/bedrijvengids.py, tools/nieuws.py en tools/build.py de site opnieuw.
+   Nieuwsberichten komen niet via een formulier maar per mail binnen: zie tools/nieuws_ophalen.py.
 
 Gebruik: python tools/aanmeldingen.py [--test bestand.json]   (--test: lijst uit een bestand, niets terugmelden)
 """
 import base64
+import datetime
 import html
 import io
 import json
@@ -21,11 +25,13 @@ import time
 import unicodedata
 import urllib.parse
 import urllib.request
+import zoneinfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from paginas import GOOGLE_FORM_URL  # noqa: E402
 from import_wordpress import SITE  # noqa: E402
+import nieuws  # noqa: E402
 
 VERWERKT = ROOT / "data" / "aanmeldingen-verwerkt.txt"
 FOTOMAP = "assets/uploads/aangemeld"
@@ -57,6 +63,50 @@ def bewaar_foto(foto, naam):
 def alinea(tekst):
     delen = [d.strip() for d in re.split(r"\n\s*\n", tekst.replace("\r", "")) if d.strip()]
     return "\n".join("<p>%s</p>" % html.escape(d).replace("\n", "<br>") for d in delen)
+
+
+def nieuws_html(tekst):
+    """Tekst van de beoordeelpagina naar HTML: alinea's gescheiden door een lege regel, een regel die met ## begint
+    wordt een tussenkop, de eerste alinea de vetgedrukte intro (zoals de berichten op WordPress) en links klikbaar."""
+    def opmaak(t):
+        t = html.escape(t).replace("\n", "<br>")
+        return re.sub(r"(https?://[^\s<]+[^\s<.,;:)])", r'<a href="\1">\1</a>', t)
+    uit, intro = [], True
+    for blok in re.split(r"\n\s*\n", tekst.replace("\r", "").strip()):
+        regels = blok.strip().split("\n")
+        if regels[0].startswith("#"):
+            uit.append("<h2>%s</h2>" % opmaak(regels.pop(0).lstrip("#").strip()))
+        rest = "\n".join(regels).strip()
+        if rest:
+            uit.append("<p><strong>%s</strong></p>" % opmaak(rest) if intro else "<p>%s</p>" % opmaak(rest))
+            intro = False
+    return "\n".join(uit)
+
+
+def nieuwsbericht(a, berichten):
+    titel = (a.get("titel") or "").strip()
+    tekst = nieuws_html(a.get("omschrijving") or "")
+    if not titel or not tekst:
+        raise ValueError("titel of tekst ontbreekt")
+    bestaand = {b["slug"] for b in berichten}
+    basis = slug(titel)
+    s, n = basis, 2
+    while s in bestaand:
+        s, n = "%s-%d" % (basis, n), n + 1
+    foto = bewaar_foto(a["foto"], "nieuws-" + s) if a.get("foto") else ""
+    nu = datetime.datetime.now(zoneinfo.ZoneInfo("Europe/Amsterdam")).strftime("%Y-%m-%dT%H:%M:%S")
+    return {
+        "slug": s,
+        "titel": titel,
+        "seo_titel": titel,
+        "beschrijving": (a.get("samenvatting") or "").strip(),
+        "datum": nu,
+        "gewijzigd": nu,
+        "foto": "%s/%s" % (SITE, foto) if foto else "",
+        "bijschrift": (a.get("bijschrift") or "").strip() if foto else "",
+        "tekst": tekst,
+        "aanmelding": a["id"],
+    }
 
 
 def tijd(waarde):
@@ -180,6 +230,7 @@ def main(test=None):
     bedrijven = json.load(open(bedrijven_pad, encoding="utf-8")) if bedrijven_pad.exists() else []
     wijzigingen_pad = ROOT / "data" / "bedrijvengids-wijzigingen.json"
     wijzigingen = json.load(open(wijzigingen_pad, encoding="utf-8")) if wijzigingen_pad.exists() else {}
+    berichten = nieuws.laad()
     nieuw, terugmelden = [], []
     for a in lijst.get("evenement", []):
         if a["id"] not in verwerkt:
@@ -211,6 +262,23 @@ def main(test=None):
             verwerkt.add(a["id"])
         url = "%s/bedrijvengids/%s/" % (SITE, a["vermelding"]) if a.get("vermelding") else ""
         terugmelden.append(a.get("gepubliceerd") and a["gepubliceerd"] + ("&url=" + urllib.parse.quote(url, safe="") if url else ""))
+    nieuwe_berichten = False
+    for a in lijst.get("nieuws", []):
+        if a["id"] not in verwerkt:
+            try:
+                b = nieuwsbericht(a, berichten)
+            except Exception as fout:  # één kapot bericht mag de rest niet tegenhouden
+                print("Nieuwsbericht %s overgeslagen: %s" % (a.get("id"), fout))
+                continue
+            berichten.append(b)
+            nieuwe_berichten = True
+            nieuw.append("nieuws %s" % b["slug"])
+            verwerkt.add(a["id"])
+        slug_ = next((b["slug"] for b in berichten if b.get("aanmelding") == a["id"]), "")
+        if a.get("gepubliceerd"):
+            terugmelden.append(a["gepubliceerd"] + ("&url=" + urllib.parse.quote("%s/nieuwsoverzicht/%s/" % (SITE, slug_), safe="") if slug_ else ""))
+    if nieuwe_berichten:
+        nieuws.bewaar(berichten)
     if nieuw:
         evenementen.sort(key=lambda e: (e["start"], e["slug"]))
         vul_adressen(aanbieders, evenementen)

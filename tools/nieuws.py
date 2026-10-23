@@ -79,7 +79,8 @@ def bericht_pagina(b, nieuwer, ouder):
     if b["foto"]:
         bijschrift = "<figcaption>%s</figcaption>" % esc(b["bijschrift"]) if b.get("bijschrift") else ""
         out.append('        <figure><img src="%s" alt="%s">%s</figure>'
-                   % (esc(foto_src(b, root)), esc(goede_alt("", b["foto"], b["titel"])), bijschrift))
+                   % (esc(foto_src(b, root)), esc(b["titel"] if b.get("aanmelding") else goede_alt("", b["foto"], b["titel"])),
+                      bijschrift))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
     nav = []

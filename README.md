@@ -100,6 +100,28 @@ Volgorde bij een volledige herbouw:
 `python tools/import_wordpress.py && python tools/agenda.py && python tools/afbeeldingen.py && python tools/build.py`.
 De eenmalige import uit WordPress staat in `tools/import_evenementen.py`.
 
+## Nieuws
+
+De nieuwsberichten staan in `data/nieuws.json`; `python tools/nieuws.py` bouwt daaruit `/nieuwsoverzicht/<slug>/`,
+het overzicht `/nieuwsberichten/` en het nieuwsblok op de homepage (daarna `tools/build.py`).
+`tools/import_nieuws.py` maakt die lijst opnieuw uit de WordPress-export en overschrijft dan ook nieuwere berichten.
+
+Nieuw nieuws komt per mail binnen:
+
+1. De redactie stuurt een ingezonden mail door naar **nieuws@nijmegenonline.nl** (Vimexx).
+2. Elke 15 minuten haalt GitHub die mails op (`.github/workflows/nieuws-ophalen.yml`, `tools/nieuws_ophalen.py`):
+   tekst (ook uit pdf- en Word-bijlagen) en foto's gaan naar het Google Apps Script.
+3. Het script zet het bericht in het tabblad Nieuws, laat Claude het in eigen woorden schrijven (titel, intro,
+   samenvatting, fotobijschrift) en mailt de redactie de knop "Bekijken en beoordelen".
+4. Na "Opslaan en publiceren" zet de uurlijkse taak (`tools/aanmeldingen.py`) het op de site en krijgt de inzender
+   een mail met de link.
+
+Instellen (eenmalig): secrets `NIEUWS_MAIL_SERVER`, `NIEUWS_MAIL_GEBRUIKER`, `NIEUWS_MAIL_WACHTWOORD` en
+`NIEUWS_SLEUTEL` in GitHub. De sleutel maakt de functie `maakNieuwsSleutel` in het Apps Script. Alleen mails van
+`nijmegenonline.nl`-adressen worden verwerkt; andere gaan naar de map Genegeerd. Een extra afzender kan erbij via de
+variabele `NIEUWS_AFZENDERS` (komma's ertussen). Testen of inloggen lukt: Actions → Nieuwsmails ophalen → Run
+workflow met test = ja.
+
 ## Losse pagina's en formulieren
 
 `tools/paginas.py` maakt Kom in contact, Adverteren (met de vergelijking), de vacatures, Algemene voorwaarden,
