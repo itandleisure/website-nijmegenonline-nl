@@ -21,6 +21,11 @@ import re
 import sys
 import threading
 import time
+import html
+import ssl
+import urllib.error
+import urllib.parse
+import urllib.request
 
 import anthropic
 
@@ -124,17 +129,65 @@ def schema(categorie):
     return dict(SCHEMA, properties=dict(SCHEMA["properties"], kenmerken={"type": "array", "items": {"type": "string", "enum": kenmerken}}))
 
 
-def vraag(client, b, categorie):
+AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+
+
+def ophalen(url):
+    """HTML van één pagina als platte tekst; voor sites die de web_fetch-tool van Anthropic niet kan lezen."""
+    for context in (None, ssl._create_unverified_context()):   # verlopen certificaat: alleen lezen, niets versturen
+        try:
+            verzoek = urllib.request.Request(url, headers={"User-Agent": AGENT, "Accept-Language": "nl"})
+            with urllib.request.urlopen(verzoek, timeout=25, context=context) as r:
+                ruw = r.read(2_000_000).decode(r.headers.get_content_charset() or "utf-8", "replace")
+                return r.geturl(), ruw
+        except urllib.error.URLError as fout:
+            if isinstance(fout.reason, ssl.SSLError):
+                continue
+            return url, ""
+        except Exception:
+            return url, ""
+    return url, ""
+
+
+def platte_tekst(ruw):
+    ruw = re.sub(r"(?is)<(script|style|noscript|svg)\b.*?</\1>", " ", ruw)
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", ruw))).strip()
+
+
+def zelf_lezen(website):
+    """Homepage plus hooguit twee pagina's over menu, openingstijden of contact, samen max. 40.000 tekens."""
+    eind, ruw = ophalen(homepage(website))
+    if len(platte_tekst(ruw)) < 200:
+        return "", []
+    stukken, bronnen = [platte_tekst(ruw)[:20000]], [eind]
+    links = re.findall(r'href="([^"#]+)"', ruw)
+    for link in links:
+        url = urllib.parse.urljoin(eind, link)
+        if len(bronnen) >= 3 or urllib.parse.urlparse(url).netloc != urllib.parse.urlparse(eind).netloc or url in bronnen:
+            continue
+        if re.search(r"menu|kaart|over|contact|openings|tijden|about", url, re.I):
+            tekst = platte_tekst(ophalen(url)[1])
+            if tekst:
+                stukken.append(tekst[:10000])
+                bronnen.append(url)
+    return "\n\n---\n\n".join("Pagina %s:\n%s" % (u, t) for u, t in zip(bronnen, stukken)), bronnen
+
+
+def vraag(client, b, categorie, pagina_tekst=""):
     bericht = ("Bedrijf: %s\nAdres bij ons: %s, %s %s\nWebsite: %s\nVermoedelijke categorie: %s\n%s\n\n"
                "Lees de website en vul de gegevens in." % (b["naam"], b["adres"], b["postcode"], b["plaats"], homepage(b["website"]),
                                                            CATEGORIEEN.get(categorie, categorie),
                                                            PER_CATEGORIE.get(categorie, {}).get("uitleg", "")))
+    if pagina_tekst:
+        # De site is door ons zelf opgehaald: de tekst gaat mee in het bericht, zonder web_fetch
+        bericht += ("\n\nDe website kon je niet zelf openen; hieronder staat de tekst van de pagina's, door ons opgehaald. "
+                    "Gebruik alleen deze tekst.\n\n<website>\n%s\n</website>" % pagina_tekst)
     messages = [{"role": "user", "content": bericht}]
+    # Geen allowed_domains: veel sites sturen door naar een ander domein, en dan zou het ophalen mislukken
+    tools = [] if pagina_tekst else [{"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 5}]
     for _ in range(5):
         r = client.messages.create(
-            model=MODEL, max_tokens=8000, system=SYSTEEM, messages=messages,
-            # Geen allowed_domains: veel sites sturen door naar een ander domein, en dan zou het ophalen mislukken
-            tools=[{"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 5}],
+            model=MODEL, max_tokens=8000, system=SYSTEEM, messages=messages, **({"tools": tools} if tools else {}),
             output_config={"effort": "low", "format": {"type": "json_schema", "schema": schema(categorie)}},
         )
         if r.stop_reason == "pause_turn":
@@ -199,6 +252,14 @@ def main(argv):
     def scan_een(b):
         try:
             uit = vraag(client, b, categorie)
+            if not uit.get("website_bereikbaar"):
+                # Veel sites weren de web_fetch-tool (url_not_allowed, 403); dan lezen we ze zelf, zoals een browser
+                tekst, bronnen = zelf_lezen(b["website"])
+                if tekst:
+                    kosten = uit["kosten_tokens"]
+                    uit = vraag(client, b, categorie, tekst)
+                    uit["bronnen"], uit["zelf_gelezen"] = bronnen, True
+                    uit["kosten_tokens"] = {k: uit["kosten_tokens"][k] + kosten[k] for k in kosten}
             uit["status"] = "voorstel"
             uit = beoordelen(uit, categorie, (pakketten.get(b["slug"]) or {}).get("pakket") in ("uitgelicht", "partner", "hoofdpartner"))
         except Exception as fout:  # één kapotte site mag de rest niet tegenhouden
