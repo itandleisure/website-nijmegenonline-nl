@@ -196,7 +196,8 @@ def telefoon(nummer):
 
 
 def adresregel(b):
-    return ", ".join(x for x in (b["adres"], " ".join(x for x in (b["postcode"], b["plaats"]) if x)) if x)
+    pc = re.sub(r"^(\d{4})\s*([A-Za-z]{2})$", lambda m: "%s %s" % (m.group(1), m.group(2).upper()), (b["postcode"] or "").strip())
+    return ", ".join(x for x in (b["adres"], " ".join(x for x in (pc, b["plaats"]) if x)) if x)
 
 
 def bedrijf_pagina(b, cat, anderen, root="../../"):
@@ -236,8 +237,8 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
     regels.append('<li><span class="evenement-info__kop">Adres</span>%s%s</li>'
                   % (esc(adresregel(b)), ' <a href="%s" target="_blank" rel="noopener" data-klik="route">Kaart</a>' % esc(route) if route else ""))
     if not b["openingstijden"] and b.get("tijden_site"):
-        regels.append('<li><span class="evenement-info__kop">Openingstijden</span>%s <span class="bron">(volgens de eigen website)</span></li>'
-                      % esc(b["tijden_site"]))
+        regels.append('<li><span class="evenement-info__kop">Openingstijden</span>%s<br><span class="bron">(volgens de eigen website)</span></li>'
+                      % "<br>".join(esc(x.strip()) for x in re.split(r",\s*(?=[a-z]{2}\b)", b["tijden_site"])))
     if b["openingstijden"]:
         rijen = "".join("<tr><th>%s</th><td>%s</td></tr>" % (DAGEN[i], esc(t or "onbekend")) for i, t in enumerate(b["openingstijden"]))
         regels.append('<li><span class="evenement-info__kop">Openingstijden</span><table class="openingstijden">%s</table></li>' % rijen)
