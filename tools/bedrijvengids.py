@@ -240,6 +240,8 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
     route = "https://www.openstreetmap.org/?mlat=%s&mlon=%s#map=17/%s/%s" % (b["lat"], b["lon"], b["lat"], b["lon"]) if b["lat"] else ""
     regels.append('<li><span class="evenement-info__kop">Adres</span>%s%s</li>'
                   % (esc(adresregel(b)), ' <a href="%s" target="_blank" rel="noopener" data-klik="route">Kaart</a>' % esc(route) if route else ""))
+    if b.get("extra_vestiging"):
+        regels.append('<li><span class="evenement-info__kop">Tweede vestiging</span>%s</li>' % esc(b["extra_vestiging"]))
     if not b["openingstijden"] and b.get("tijden_site"):
         regels.append('<li><span class="evenement-info__kop">Openingstijden</span>%s<br><span class="bron">(%s)</span></li>'
                       % ("<br>".join(esc(x.strip()) for x in re.split(r",\s*(?=[a-z]{2}\b)|\n", b["tijden_site"]) if x.strip()), b.get("tijden_bron", "volgens de eigen website")))
@@ -587,6 +589,13 @@ def foto_url(foto, root):
     return foto if not foto or re.match(r"https?://", foto) else root + foto
 
 
+def correcties_toepassen(bedrijven, pad):
+    """Correcties van de redactie (data/bedrijvengids-correcties.json): adres, postcode, ligging, extra vestiging."""
+    corr = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
+    for b in bedrijven:
+        b.update({k: v for k, v in corr.get(b["slug"], {}).items() if k in ("adres", "postcode", "plaats", "lat", "lon", "extra_vestiging")})
+
+
 def websites_toepassen(bedrijven, pad):
     """Uitkomst van tools/websites_controleren.py: een dode site geen link, een doorgestuurde site het nieuwe adres."""
     controle = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
@@ -677,6 +686,7 @@ def main(bron):
         gids, overig = opgeslagen["gids"], opgeslagen["overig"]
     scan_toepassen(overig, ROOT / "data" / "bedrijvengids-scan.json")
     scan_toepassen(gids, ROOT / "data" / "bedrijvengids-scan.json", eigen_tekst=True)
+    correcties_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-correcties.json")
     websites_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-websites.json")
     wijzigingen_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-wijzigingen.json")
     pakketten_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-pakketten.json", datetime.date.today())
