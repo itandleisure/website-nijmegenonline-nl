@@ -580,9 +580,6 @@ def main(bron):
     if xml_.exists():
         gids = gids_uit_xml(xml_, cat["slug"])
         gids, overig = samenvoegen(gids, osm_uit_csv(bron / "advies" / "osm-bedrijvengids" / "sportscholen-aangevuld.csv", cat["soorten"]))
-        # Door de redactie verwijderd (bijvoorbeeld gestopt): status "verwijderd" in de scan
-        scan = json.loads((ROOT / "data" / "bedrijvengids-scan.json").read_text(encoding="utf-8"))
-        overig = [b for b in overig if scan.get(b["slug"], {}).get("status") != "verwijderd"]
         (ROOT / "data" / "bedrijvengids.json").write_text(
             json.dumps({cat["slug"]: {"gids": gids, "overig": overig}}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     else:
@@ -594,7 +591,10 @@ def main(bron):
     pakketten_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-pakketten.json", datetime.date.today())
     # Zonder werkende website geen vermelding (afgesproken met Frans, 23-10-2026): het bedrijf bestaat dan
     # waarschijnlijk niet meer. Behalve als het betaalt of zelf zijn gegevens heeft aangevuld.
-    weg = [b for b in gids + overig if not (b.get("website") or b.get("uitgelicht") or b.get("geclaimd"))]
+    # Door de redactie verwijderd (bijvoorbeeld gestopt of opgegaan in een ander bedrijf): status "verwijderd" in de scan.
+    scan = json.loads((ROOT / "data" / "bedrijvengids-scan.json").read_text(encoding="utf-8"))
+    weg = [b for b in gids + overig if scan.get(b["slug"], {}).get("status") == "verwijderd"
+           or not (b.get("website") or b.get("uitgelicht") or b.get("geclaimd"))]
     gids = [b for b in gids if b not in weg]
     overig = [b for b in overig if b not in weg]
     for b in weg:

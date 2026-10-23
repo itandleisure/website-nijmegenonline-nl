@@ -31,69 +31,28 @@
   "website_bereikbaar": true
  },
  "area-11-personal-fit": {
-  "adres_op_site": "",
-  "bronnen": [],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "personal-training",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 15147,
-   "uit": 395
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Area 11 Personal Fit",
-  "openingstijden": "",
-  "opmerkingen": "De website http://www.evolvepersonaltraining.nl/ kon niet worden geopend (fout: url_not_allowed), dus er is geen informatie van de site gelezen. De domeinnaam (Evolve Personal Training) past niet bij de bedrijfsnaam Area 11 Personal Fit. Kijk na of dit de juiste website is en of het bedrijf nog actief is. De hoofdcategorie personal-training is alleen afgeleid van de bedrijfsnaam; de vermoedelijke categorie was Sportscholen.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.evolvepersonaltraining.nl/",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "http://www.evolvepersonaltraining.nl/"
  },
  "ashtanga-mysore-nijmegen": {
-  "adres_op_site": "",
-  "bronnen": [
-   "http://www.imxprs.com/free/franki/website-ayn"
-  ],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "yoga",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 15160,
-   "uit": 450
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Ashtanga Mysore Nijmegen",
-  "openingstijden": "",
-  "opmerkingen": "De website (http://www.imxprs.com/free/franki/website-ayn) kon niet worden geladen ('url_not_accessible'), dus de tekst is leeg gelaten. Wij gaan uit van de categorie yoga, en niet van sportschool zoals vermoed, omdat de naam wijst op een Ashtanga-yogapraktijk in Mysore-stijl. Dat hebben we niet op de site kunnen nalezen. Het is nog onbekend of het bedrijf actief is en of het adres klopt. Het is een gratis imxprs-site, dus die kan offline zijn gehaald. Controleer dit zelf.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.imxprs.com/free/franki/website-ayn",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "http://www.imxprs.com/free/franki/website-ayn"
  },
  "avalon-fitcentre": {
-  "adres_op_site": "",
-  "bronnen": [],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 22997,
-   "uit": 582
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Avalon Fitcentre",
-  "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. Bij http://www.avalonfitcentre.nl/, https://www.avalonfitcentre.nl/ en https://avalonfitcentre.nl/ gaf de ophaaltool steeds de fout 'url_not_allowed'. Daardoor heb ik niets van de site gelezen en zijn de tekst, de kenmerken, de openingstijden en het adres niet ingevuld. 'lijkt_actief' staat op true omdat er geen aanwijzing is dat het bedrijf gestopt is, maar dat is niet gecontroleerd. De hoofdcategorie sportschool komt alleen uit de vermoedelijke categorie. Graag handmatig controleren.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.avalonfitcentre.nl/",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "http://www.avalonfitcentre.nl/"
  },
  "basic-fit-kerkenbos": {
   "adres_op_site": "Kerkenbos 1115, 6546 BC Nijmegen",
@@ -152,27 +111,12 @@
   "website_bereikbaar": true
  },
  "basic-fit-weg-door-jonkerbos": {
-  "adres_op_site": "",
-  "bronnen": [
-   "http://www.basicfit.nl/"
-  ],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 23004,
-   "uit": 558
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Basic-Fit",
-  "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen: http://www.basicfit.nl/ werd geweigerd (url_not_allowed). Ook de variant zonder slash werkte niet, en een andere URL mocht ik niet ophalen. Ik heb dus geen tekst, kenmerken, openingstijden of adres overgenomen. Graag handmatig controleren via de vestigingspagina van Basic-Fit Nijmegen Weg door Jonkerbos. Of de site echt onbereikbaar is voor bezoekers, weet ik niet. Dat de vestiging nog open is, heb ik aangenomen maar niet gecontroleerd.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.basicfit.nl/",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "http://www.basicfit.nl/"
  },
  "benefit-sports": {
   "adres_op_site": "Akkerlaan 46, 6533 BL Nijmegen",
@@ -236,52 +180,20 @@
   "website_bereikbaar": true
  },
  "bodytecnijmegen": {
-  "adres_op_site": "",
-  "bronnen": [
-   "http://www.bodytecnijmegen.nl/",
-   "https://www.bodytecnijmegen.nl/",
-   "https://bodytecnijmegen.nl/"
-  ],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 31799,
-   "uit": 688
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "BodytecNijmegen",
-  "openingstijden": "",
-  "opmerkingen": "De website kon niet worden opgehaald. Bij http://www.bodytecnijmegen.nl/, https://www.bodytecnijmegen.nl/ en https://bodytecnijmegen.nl/ gaf de fetch-tool steeds de fout 'url_not_allowed'. Daardoor is er geen informatie van de site gelezen en is er geen tekst geschreven. Of het bedrijf nog actief is, kon niet worden nagegaan; 'lijkt_actief' staat daarom op de standaardwaarde. Het adres en de categorie (sportschool, waarschijnlijk EMS-training) komen niet van de site, maar uit onze eigen gegevens en de vermoedelijke categorie. Graag handmatig controleren.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.bodytecnijmegen.nl/",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "http://www.bodytecnijmegen.nl/"
  },
  "compleetfit-nijmegen": {
-  "adres_op_site": "",
-  "bronnen": [
-   "http://www.compleetfitnijmegen.nl/"
-  ],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "personal-training",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 24645,
-   "uit": 713
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "CompleetFit Nijmegen",
-  "openingstijden": "",
-  "opmerkingen": "De website laadt wel, maar haalt de inhoud pas met JavaScript binnen. Daardoor konden we alleen de titel en de metabeschrijving lezen: 'Word pijnvrij, fit én val duurzaam af bij CompleetFit Nijmegen. Unieke mix van personal training, fysiotherapie, voeding en coaching.' Daar is te weinig uit te halen voor een eigen tekst. Ook adres, openingstijden en kenmerken zijn niet gevonden. Subpagina's zoals /contact konden we niet openen. Als hoofdcategorie is personal-training gekozen in plaats van sportschool, omdat de titel 'Personal Training & Fysiotherapie' noemt. Fysiotherapeut, dietist en coach zijn mogelijke extra categorieën, maar ze zijn niet ingevuld omdat we het aanbod niet verder konden controleren. Advies: de site handmatig in een browser bekijken.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.compleetfitnijmegen.nl/",
-  "website_bereikbaar": true
+  "status": "fout",
+  "website": "http://www.compleetfitnijmegen.nl/"
  },
  "crossfit-nijmegen": {
   "adres_op_site": "Nieuwe Mollenhutseweg 52, 6533 HJ Nijmegen",
@@ -378,27 +290,12 @@
   "website_bereikbaar": true
  },
  "easyactive-6534": {
-  "adres_op_site": "",
-  "bronnen": [
-   "https://easyactive.nl/locatie/easy-active-nijmegen"
-  ],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 15267,
-   "uit": 493
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "EasyActive-6534",
-  "openingstijden": "",
-  "opmerkingen": "De website was niet bereikbaar. Bij https://easyactive.nl/locatie/easy-active-nijmegen kwam de foutmelding 'url_not_accessible'. De homepage https://easyactive.nl kon de tool niet openen, omdat die URL niet eerder was opgegeven. Daardoor hebben we geen informatie, tekst, openingstijden of adres kunnen controleren. Of het bedrijf nog actief is, weten we niet. De hoofdcategorie sportschool komt van de vermoedelijke categorie die jullie zelf hadden opgegeven. Graag later opnieuw proberen of handmatig nakijken.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "https://easyactive.nl/locatie/easy-active-nijmegen",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "https://easyactive.nl/locatie/easy-active-nijmegen"
  },
  "exercise-body-and-mind": {
   "adres_op_site": "",
@@ -444,7 +341,8 @@
   "naam": "F4F Nijmegen",
   "openingstijden": "",
   "opmerkingen": "Ik kon de website niet lezen. De opgegeven link (http://www.fitforfree.nl/vestigingen/nijmegen/) en de https-versie werden geweigerd met de melding 'url_not_allowed'. De homepage (fitforfree.nl) mocht ik niet openen, omdat die link niet was aangeleverd. Daarom heb ik geen tekst geschreven en geen openingstijden, kenmerken of adres ingevuld. Of de vestiging nog open is, heb ik niet kunnen nagaan: 'lijkt_actief' staat op true omdat ik geen aanwijzing heb gezien dat de vestiging gesloten is. De categorie sportschool heb ik overgenomen van de vermoedelijke categorie. F4F lijkt een afkorting van Fit For Free, een keten. Graag even handmatig controleren, ook of het adres Akkerlaan 46 bij deze vestiging hoort.",
-  "status": "voorstel",
+  "reden": "opgegaan in SportCity (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "http://www.fitforfree.nl/vestigingen/nijmegen/",
   "website_bereikbaar": false
@@ -465,7 +363,8 @@
   "naam": "Fit For Free",
   "openingstijden": "",
   "opmerkingen": "Ik kon de website niet lezen. Bij https://www.fitforfree.nl/sportschool/nijmegen kreeg ik de foutmelding 'url_not_allowed' en bij de homepage https://www.fitforfree.nl/ de melding 'url_not_in_prior_context'. Daardoor heb ik geen tekst, openingstijden, adres of kenmerken ingevuld. Ik weet dus niet of het adres Akkerlaan 46 klopt en of de vestiging nog open is. 'lijkt_actief' staat op true omdat ik niets heb gezien dat erop wijst dat de vestiging gesloten is, maar dat is niet gecontroleerd. Fit For Free is een keten, dus de tekst moet over de vestiging in Nijmegen gaan. Controleer de pagina zelf of probeer het later opnieuw.",
-  "status": "voorstel",
+  "reden": "opgegaan in SportCity (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "https://www.fitforfree.nl/sportschool/nijmegen",
   "website_bereikbaar": false
@@ -502,27 +401,12 @@
   "website_bereikbaar": true
  },
  "fitsmart-personal-training": {
-  "adres_op_site": "",
-  "bronnen": [
-   "http://www.fitsmart.nl/"
-  ],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "personal-training",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 44892,
-   "uit": 933
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Fitsmart Personal Training",
-  "openingstijden": "",
-  "opmerkingen": "Er staat nog geen tekst, omdat er te weinig informatie is. De website (fitsmart.nl) is bereikbaar en lijkt actief. Ik heb alleen het begin van de homepage kunnen lezen. Daarna gaf de leestool niets meer terug, waardoor ik de pagina's Diensten en Contact niet heb kunnen openen. De site zegt dat Fitsmart werkt met personal training volgens een formule van training, voeding en coaching. Je begint met een kennismakingsgesprek, en er is een gratis e-book. Het adres, de openingstijden en de vestigingsplaats heb ik niet gezien. Of Nieuwe Dukenburgseweg 7 klopt, is dus niet nagekeken. Kijk op fitsmart.nl/contact voor het adres en de openingstijden, en op fitsmart.nl/diensten voor het aanbod en eventuele kenmerken. Daarna kan de tekst geschreven worden.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.fitsmart.nl/",
-  "website_bereikbaar": true
+  "status": "fout",
+  "website": "http://www.fitsmart.nl/"
  },
  "fittunit": {
   "adres_op_site": "",
@@ -770,50 +654,20 @@
   "website_bereikbaar": true
  },
  "impact": {
-  "adres_op_site": "",
-  "bronnen": [
-   "https://www.impact-nijmegen.nl/",
-   "https://impact-nijmegen.nl/",
-   "http://www.impact-nijmegen.nl/"
-  ],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 23039,
-   "uit": 611
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Impact",
-  "openingstijden": "",
-  "opmerkingen": "De website kon niet worden geladen: https://www.impact-nijmegen.nl/, https://impact-nijmegen.nl/ en http://www.impact-nijmegen.nl/ gaven alle drie 'url_not_accessible'. Daarom is er geen tekst geschreven, en zijn het adres, de openingstijden en het aanbod niet gecontroleerd. De categorie 'sportschool' is overgenomen uit onze eigen gegevens, niet van de site. Of het bedrijf nog actief is, valt zo niet na te gaan. Graag later opnieuw proberen of het bedrijf zelf benaderen.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "https://www.impact-nijmegen.nl/",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "https://www.impact-nijmegen.nl/"
  },
  "kracht-coaching-personal-trainer-nijmegen": {
-  "adres_op_site": "",
-  "bronnen": [],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "personal-training",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 15150,
-   "uit": 450
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Kracht Coaching | Personal Trainer, Nijmegen",
-  "openingstijden": "",
-  "opmerkingen": "Ik kon de website http://www.moves-you.nl/ niet lezen, want de ophaalpoging mislukte. Daarom heb ik geen tekst geschreven en geen kenmerken of openingstijden ingevuld. Wat ook opvalt: het domein (moves-you.nl) past niet bij de bedrijfsnaam Kracht Coaching. Controleer dus of dit de juiste website is. De hoofdcategorie personal-training heb ik alleen op basis van de bedrijfsnaam gekozen; dat is niet door de site bevestigd. Of het bedrijf nog actief is, kon ik ook niet nagaan.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.moves-you.nl/",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "http://www.moves-you.nl/"
  },
  "mastergym": {
   "adres_op_site": "",
@@ -897,28 +751,12 @@
   "website_bereikbaar": true
  },
  "new-age-22": {
-  "adres_op_site": "",
-  "bronnen": [
-   "http://newage22.com",
-   "https://www.newage22.com"
-  ],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 22901,
-   "uit": 483
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "New Age 22",
-  "openingstijden": "",
-  "opmerkingen": "De website http://newage22.com kon niet worden geladen, ook niet via https://www.newage22.com (url_not_accessible). Daarom is er geen tekst geschreven en is niets gecontroleerd. De categorie sportschool is overgenomen uit onze vermoedelijke categorie en is niet bevestigd. Of het bedrijf nog actief is, is onbekend. Graag handmatig controleren.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://newage22.com",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "http://newage22.com"
  },
  "nijmegen-outdoor": {
   "adres_op_site": "Tweede Walstraat 17, 6511 LN Nijmegen",
@@ -947,28 +785,12 @@
   "website_bereikbaar": true
  },
  "nimma-gemina": {
-  "adres_op_site": "",
-  "bronnen": [
-   "https://www.nimma-gemina.nl/",
-   "https://nimmabasketball.nl/"
-  ],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 15717,
-   "uit": 522
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Nimma Gemina",
-  "openingstijden": "",
-  "opmerkingen": "Ik heb geen tekst geschreven omdat de site te weinig informatie geeft. nimma-gemina.nl stuurt door naar nimmabasketball.nl. Daar staat alleen een tijdelijke pagina van Nimma Basketball, een basketbalclub ('basketballcrew') in Nijmegen, met de melding dat er aan een nieuwe site wordt gewerkt. Er staat niets over trainingen, teams, tijden of adres. De site staat op noindex. Het gaat waarschijnlijk niet om een sportschool maar om een basketbalvereniging. Daar is geen passende categorie voor, dus sportschool is alleen een noodkeuze. Het adres Cipresstraat 154 staat niet op de site. Contact: contact@nimmabasketball.nl, Instagram @nimmabasketball.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "https://www.nimma-gemina.nl/",
-  "website_bereikbaar": true
+  "status": "fout",
+  "website": "https://www.nimma-gemina.nl/"
  },
  "nimma-moves": {
   "adres_op_site": "Archipelstraat 27-29, 6524 LL Nijmegen",
@@ -1137,67 +959,28 @@
   "website_bereikbaar": true
  },
  "riverland-healthcentre": {
-  "adres_op_site": "",
-  "bronnen": [],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 15112,
-   "uit": 410
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Riverland Healthcentre",
-  "openingstijden": "",
-  "opmerkingen": "Ik heb de website https://riverlandhealthcentre.nl/ niet kunnen lezen, omdat er geen ophaalpogingen meer over waren. Daardoor ontbreken de tekst, kenmerken, openingstijden en het adres. We hebben dus ook niet kunnen nagaan of de website werkt en of het bedrijf nog actief is. De categorie sportschool is overgenomen uit de vermoedelijke categorie en is niet gecontroleerd. Probeer de site later opnieuw.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "https://riverlandhealthcentre.nl/",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "https://riverlandhealthcentre.nl/"
  },
  "sanasport-health-club": {
-  "adres_op_site": "",
-  "bronnen": [],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 15142,
-   "uit": 449
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Sanasport Health Club",
-  "openingstijden": "",
-  "opmerkingen": "Ik kon de website http://www.sanasport-fitness-nijmegen.nl/ niet openen: de tool om pagina's op te halen was niet meer beschikbaar. Daarom heb ik geen inhoud kunnen lezen en geen tekst, kenmerken, openingstijden of adres ingevuld. Of de site zelf werkt, is niet bekend. website_bereikbaar staat op false omdat er niets gelezen is. lijkt_actief staat op true als standaardwaarde, maar is niet gecontroleerd. De hoofdcategorie sportschool komt alleen uit de vermoedelijke categorie. Graag opnieuw laten controleren.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "http://www.sanasport-fitness-nijmegen.nl/",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "http://www.sanasport-fitness-nijmegen.nl/"
  },
  "sportcity-nijmegen": {
-  "adres_op_site": "",
-  "bronnen": [],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 15122,
-   "uit": 412
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "SportCity Nijmegen",
-  "openingstijden": "",
-  "opmerkingen": "Ik kon de website https://www.sportcity.nl/nijmegen niet lezen, want het ophalen van de pagina lukte niet door een technische beperking. Daardoor heb ik niets gecontroleerd: geen tekst, kenmerken, openingstijden of adres. De categorie sportschool is alleen overgenomen uit de vermoedelijke categorie en is niet bevestigd. Graag later opnieuw proberen of het handmatig nakijken. Het gaat om een keten, dus let op de vestigingsgegevens voor Akkerlaan 46.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "https://www.sportcity.nl/nijmegen",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "https://www.sportcity.nl/nijmegen"
  },
  "sportloods-oost": {
   "adres_op_site": "Coehoornstraat 71, 6521 CC Nijmegen",
@@ -1436,25 +1219,12 @@
   "website_bereikbaar": true
  },
  "wav-e-studios-nijmegen": {
-  "adres_op_site": "",
-  "bronnen": [],
   "categorie_scan": "sportschool",
-  "extra_categorieen": [],
-  "gescand": "2026-10-22",
-  "hoofdcategorie": "sportschool",
-  "kenmerken": [],
-  "kosten_tokens": {
-   "in": 32342,
-   "uit": 894
-  },
-  "lijkt_actief": true,
+  "fout": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for the `Authorization` header to be explicitly omitted\"",
+  "gescand": "2026-10-23",
   "naam": "Wav-e Studios Nijmegen",
-  "openingstijden": "",
-  "opmerkingen": "De website kon ik niet bereiken. De opgegeven pagina https://wav-estudios.com/wav-e-studios-nijmegen/ gaf twee keer de foutmelding 'url_not_accessible'. De homepage https://wav-estudios.com kon ik ook niet openen: de tool weigerde die omdat de link niet letterlijk was opgegeven ('url_not_in_prior_context'). Daarom heb ik geen tekst geschreven en geen categorieën, kenmerken, openingstijden of adres ingevuld. Of het bedrijf nog actief is, weet ik niet; lijkt_actief staat op true omdat de site nergens zegt dat het bedrijf gestopt of verhuisd is. De hoofdcategorie sportschool komt alleen uit jullie vermoedelijke categorie en is niet gecontroleerd. Graag later opnieuw proberen of de site met de hand bekijken.",
-  "status": "voorstel",
-  "tekst": "",
-  "website": "https://wav-estudios.com/wav-e-studios-nijmegen/",
-  "website_bereikbaar": false
+  "status": "fout",
+  "website": "https://wav-estudios.com/wav-e-studios-nijmegen/"
  },
  "xtreme-marine-sports": {
   "adres_op_site": "St. Teunismolenweg 50b, Nijmegen",
@@ -1482,5 +1252,10 @@
   "tekst": "Wil je eens boven het water zweven? Bij Xtreme Marine Sports leer je flyboarden: twee krachtige waterstralen tillen je de lucht in, en jij probeert je evenwicht te houden. Dat is niet makkelijk, maar instructeurs helpen je op weg. Je kunt er ook hoverboarden of een flyride maken.\n\nHet kantoor zit aan de Sint Teunismolenweg in Nijmegen, maar het echte werk gebeurt op het water. Je kunt kiezen uit twee vaste locaties: Experience Island en Moeke Mooren aan de Gouden Ham in Appeltern, vlak bij Nijmegen aan de Maas. Daar maak je er makkelijk een hele dag van met een barbecue of buffet, een bootje huren of suppen.\n\nLeuk als bedrijfsuitje, met vrienden of als cadeaubon. Kijk op de site welke arrangementen er zijn en reserveer je moment op het water.",
   "website": "http://www.xtrememarinesports.nl/",
   "website_bereikbaar": true
+ },
+ "zlim-nijmegen": {
+  "naam": "Zlim Nijmegen",
+  "reden": "permanent gesloten (Frans, 23-10-2026)",
+  "status": "verwijderd"
  }
 }
