@@ -370,6 +370,14 @@
   "website": "https://adb.eu/",
   "website_bereikbaar": true
  },
+ "addvisor-group": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsq7fRNNTzNTAsTv16i'}",
+  "gescand": "2026-10-23",
+  "naam": "Addvisor Group",
+  "status": "fout",
+  "website": "http://addvisor.nl/"
+ },
  "administratiekantoor-dehue": {
   "adres_op_site": "",
   "bronnen": [
@@ -1709,6 +1717,14 @@
   "tekst": "",
   "website": "http://www.pizzeria-bellissimo.nl/",
   "website_bereikbaar": false
+ },
+ "belt-financieel-advies": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsq7ksvSSpFYrcQWPP4'}",
+  "gescand": "2026-10-23",
+  "naam": "Belt Financieel Advies",
+  "status": "fout",
+  "website": "https://beltfinancieeladvies.nl/"
  },
  "benefit-sports": {
   "adres_op_site": "Akkerlaan 46, 6533 BL Nijmegen",
@@ -4562,6 +4578,14 @@
   "website": "http://www.lotusnijmegen.nl",
   "website_bereikbaar": false
  },
+ "cijferdokter": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsq7ch7UrwKujs9rTJ8'}",
+  "gescand": "2026-10-23",
+  "naam": "Cijferdokter",
+  "status": "fout",
+  "website": "http://www.andersconsult.nl/"
+ },
  "coffeelovers": {
   "adres_op_site": "",
   "bronnen": [
@@ -5135,6 +5159,14 @@
   "website": "http://www.coffeeshop.freeuk.com/dakota.html",
   "website_bereikbaar": false
  },
+ "damava-financiele-diensten": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsq7g9zQcdaP16CPeEC'}",
+  "gescand": "2026-10-23",
+  "naam": "Damava Financiële Diensten",
+  "status": "fout",
+  "website": "https://www.damavafd.nl/"
+ },
  "danny-dal-administratie": {
   "adres_op_site": "Meijhorst 5440, 6537 JK Nijmegen",
   "bronnen": [
@@ -5669,6 +5701,30 @@
   "website": "https://degraafadvocatuur.nl/",
   "website_bereikbaar": true,
   "zelf_gelezen": true
+ },
+ "de-hypotheekshop": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsq7hPt62RXymC5u4ii'}",
+  "gescand": "2026-10-23",
+  "naam": "De Hypotheekshop",
+  "status": "fout",
+  "website": "http://www.hypotheekshop.nl/nijmegenoranjesingel"
+ },
+ "de-hypotheekshop-nijmegen-annastraat": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsq7ksgz6ysYd3JcSPR'}",
+  "gescand": "2026-10-23",
+  "naam": "De Hypotheekshop Nijmegen Annastraat",
+  "status": "fout",
+  "website": "https://www.hypotheekshop.nl/vestigingen/nijmegenannastraat/"
+ },
+ "de-hypotheker-nijmegen": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsq8w4yTpqYGdiHey4W'}",
+  "gescand": "2026-10-23",
+  "naam": "De Hypotheker Nijmegen",
+  "status": "fout",
+  "website": "https://www.hypotheker.nl/vestigingen/gelderland/nijmegen/wijchenseweg/"
  },
  "de-industrie": {
   "adres_op_site": "Weurtseweg 105, 6541 AP Nijmegen",
@@ -6404,6 +6460,14 @@
   "website": "https://dewaaghnijmegen.nl/",
   "website_bereikbaar": true
  },
+ "de-waard-bemiddeling-en-bewindvoering": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsq9Q6umn9xQpuGKYxB'}",
+  "gescand": "2026-10-23",
+  "naam": "De Waard Bemiddeling En Bewindvoering",
+  "status": "fout",
+  "website": "http://dewaardbemiddeling.nl/"
+ },
  "de-wit-kaashandel": {
   "adres_op_site": "Lange Hezelstraat, hoek Houtstraat en Stikke Hezelstraat, Nijmegen (geen huisnummer genoemd)",
   "bronnen": [
@@ -6542,6 +6606,14 @@
   "tekst": "",
   "website": "http://www.dezaakmeester.nl/",
   "website_bereikbaar": true
+ },
+ "de-zekerheidsspecialist": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqARcjQdzHBAqoVR7M'}",
+  "gescand": "2026-10-23",
+  "naam": "De Zekerheidsspecialist",
+  "status": "fout",
+  "website": "https://www.dezekerheidsspecialist.nl/"
  },
  "delimore": {
   "adres_op_site": "",
@@ -7983,6 +8055,14 @@
   "website": "http://www.filosofisch-cafe.nl/",
   "website_bereikbaar": true
  },
+ "financiele-meesters": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqBNenkWJZqMuTsunB'}",
+  "gescand": "2026-10-23",
+  "naam": "Financiële Meesters",
+  "status": "fout",
+  "website": "https://www.financielemeesters.nl/"
+ },
  "fit-for-free": {
   "adres_op_site": "",
   "bronnen": [],
@@ -8435,6 +8515,14 @@
   "tekst": "",
   "website": "https://gaetan.boekingapp.nl/",
   "website_bereikbaar": true
+ },
+ "genootschap-van-makelaars-in-hypotheken": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqBkyTvD9GSKZLG6tb'}",
+  "gescand": "2026-10-23",
+  "naam": "Genootschap Van Makelaars In Hypotheken",
+  "status": "fout",
+  "website": "http://hypotheekmakelaarsgmh.nl/"
  },
  "gesha-coffee-bar": {
   "adres_op_site": "Kaaisjouwerskade 206, 6541 EW Nijmegen",
@@ -9101,6 +9189,14 @@
   "website": "https://hafiza.nl/",
   "website_bereikbaar": true
  },
+ "hans-janssen-hypotheken": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqCi2f3V69d8i8qZC5'}",
+  "gescand": "2026-10-23",
+  "naam": "Hans Janssen Hypotheken",
+  "status": "fout",
+  "website": "https://www.hansjanssenhypotheken.nl/"
+ },
  "harbor-gym": {
   "adres_op_site": "Mariënburg 90, 6511 PS Nijmegen (locatie Centrum); Dokstraat 255, 6541 EZ Nijmegen (locatie Waalhaven)",
   "bronnen": [
@@ -9277,6 +9373,14 @@
   "status": "fout",
   "website": "http://www.hekkelman.nl"
  },
+ "hercules-capital-management-b-v": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqDCnyX67fvwb4LKEV'}",
+  "gescand": "2026-10-23",
+  "naam": "Hercules Capital Management B.v.",
+  "status": "fout",
+  "website": "http://hercules-capitalmanagement.com/"
+ },
  "het-cafe-het-duurzame-warenhuis": {
   "adres_op_site": "Burchtstraat 126, 6511 RK Nijmegen",
   "bronnen": [
@@ -9305,6 +9409,14 @@
   "tekst": "Zin in een rustige pauze tijdens het winkelen in de Burchtstraat? Achter in Het Duurzame Warenhuis vind je Het Café. Daar haal je koffie met een taartje, of ga je zitten voor ontbijt of lunch.\n\nDe keuken werkt met verse, biologische producten van het seizoen, waar dat kan van boeren en leveranciers uit de buurt. Ieder seizoen komt er een nieuwe kaart en alles wordt er zelf gemaakt. Na je kopje loop je zo de winkel in, vol eerlijke en duurzame spullen.\n\nMet twee of drie mensen loop je gewoon binnen. Kom je met vier tot twintig mensen, dan kun je bellen of mailen om te reserveren, behalve op zaterdag. Het menu vind je op de eigen site van het café.",
   "website": "https://www.duurzamewarenhuis.nl",
   "website_bereikbaar": true
+ },
+ "het-financieel-advies-nl": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqDgZWDQXmz3k9r1Z4'}",
+  "gescand": "2026-10-23",
+  "naam": "Het Financieel Advies Nl",
+  "status": "fout",
+  "website": "http://www.hetfinancieeladvies.nl/"
  },
  "het-fitcentrum": {
   "adres_op_site": "Campusbaan 6, Nijmegen",
@@ -9884,6 +9996,30 @@
   "website": "http://www.huurteamsnijmegen.nl/",
   "website_bereikbaar": true
  },
+ "hypotheek-visie-nijmegen-onafhankelijk-hypotheekadvies": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqEEoRbw73yxDfrhst'}",
+  "gescand": "2026-10-23",
+  "naam": "Hypotheek Visie Nijmegen | Onafhankelijk hypotheekadvies",
+  "status": "fout",
+  "website": "http://hypotheekvisie.nl/nijmegen?utm_source=bing&utm_medium=maps&utm_campaign=hv_nijmegen"
+ },
+ "hypotheekcentrum-voor-ondernemers": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqEnYrtcYDsznnjujR'}",
+  "gescand": "2026-10-23",
+  "naam": "Hypotheekcentrum Voor Ondernemers",
+  "status": "fout",
+  "website": "http://www.hypotheekcentrumvoorondernemers.nl/"
+ },
+ "hypotheekhuys-nijmegen": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqFKHkCx2NEQqduGLW'}",
+  "gescand": "2026-10-23",
+  "naam": "Hypotheekhuys Nijmegen",
+  "status": "fout",
+  "website": "https://www.hypotheekhuysnijmegen.nl/"
+ },
  "i-love-sushi": {
   "adres_op_site": "Molenweg 6, 6542 PW Nijmegen",
   "bronnen": [
@@ -9937,6 +10073,14 @@
   "tekst": "",
   "website": "https://ibosaf.nl/",
   "website_bereikbaar": false
+ },
+ "id-hypotheken": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqFMXmV5zSiTRNkZsW'}",
+  "gescand": "2026-10-23",
+  "naam": "Id Hypotheken",
+  "status": "fout",
+  "website": "http://www.id-hypotheken.nl/contact"
  },
  "ijzer-advocaten": {
   "adres_op_site": "Molenveldlaan 43, 6523 RJ Nijmegen",
@@ -11945,6 +12089,14 @@
   "website": "https://www.littleyard.nl",
   "website_bereikbaar": false
  },
+ "liv-hypotheken": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqFZBmLJqTy3qUAgeo'}",
+  "gescand": "2026-10-23",
+  "naam": "LIV Hypotheken",
+  "status": "fout",
+  "website": "https://www.livhypotheken.nl/"
+ },
  "live-pianobar": {
   "adres_op_site": "",
   "bronnen": [
@@ -12971,6 +13123,14 @@
   "website": "https://www.pluryn.nl/locaties/meneer-vos",
   "website_bereikbaar": true
  },
+ "mennink-van-de-geer": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqFfPHaYoMG8Yb1xKQ'}",
+  "gescand": "2026-10-23",
+  "naam": "Mennink & van de Geer",
+  "status": "fout",
+  "website": "https://www.menninkvandegeer.nl/"
+ },
  "merano": {
   "adres_op_site": "Lange Hezelstraat 33a, 6511CB Nijmegen",
   "bronnen": [
@@ -13198,6 +13358,14 @@
   "tekst": "Heb je zin om met je vrienden of familie een hele avond te proeven en te delen? In de Goffertboerderij aan de Goffertweg schuif je aan voor Aziatische tapas: kleine gerechtjes zoals sushi, wokgerechten en lekkers van de bakplaat, met invloeden uit onder meer Thailand, Vietnam en China. Je bestelt per ronde een paar gerechtjes, die aan tafel worden gebracht, en dat kan zonder tijdslimiet tot de keuken sluit.\n\nIn het weekend kun je er ook lunchen, met wokgerechten, soepen en salades. Je kunt eten ook afhalen. Heb je iets te vieren of moet je vergaderen? De boerderij heeft verschillende zalen voor feesten, bijeenkomsten en zelfs bruiloften.\n\nReserveer vooraf online of bel even. Op maandag en dinsdag is het restaurant dicht.",
   "website": "https://www.misterpanda.nl/",
   "website_bereikbaar": true
+ },
+ "mkbedrijfsfinaniciering": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqFpoRf5RV55i3XNUx'}",
+  "gescand": "2026-10-23",
+  "naam": "Mk•bedrijfsfinaniciering",
+  "status": "fout",
+  "website": "https://www.mk-bf.nl/"
  },
  "moeke": {
   "adres_op_site": "Willem van Arenbergstraat 6, 6663 MZ Lent",
@@ -13508,6 +13676,14 @@
   "website": "https://nacional-nijmegen.nl/",
   "website_bereikbaar": true
  },
+ "ned-finance-b-v": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqFsXVcX2U9PPfPzus'}",
+  "gescand": "2026-10-23",
+  "naam": "Ned Finance B.v.",
+  "status": "fout",
+  "website": "http://www.nedfinance.nl/"
+ },
  "ned-tax": {
   "adres_op_site": "Industrieweg 103, 6541 TV Nijmegen",
   "bronnen": [
@@ -13734,6 +13910,14 @@
   "tekst": "",
   "website": "https://www.nimma-gemina.nl/",
   "website_bereikbaar": true
+ },
+ "nimma-hypotheken": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqG7fVtSbuKcrbAE9L'}",
+  "gescand": "2026-10-23",
+  "naam": "Nimma Hypotheken",
+  "status": "fout",
+  "website": "http://www.nimmahypotheken.nl/"
  },
  "nimma-moves": {
   "adres_op_site": "Archipelstraat 27-29, 6524 LL Nijmegen",
@@ -14070,6 +14254,14 @@
   "tekst": "Loopt jouw bedrijf vast op internationale belastingregels, verrekenprijzen tussen vestigingen of dividendbelasting? Dan zit je bij dit fiscale adviesbureau aan het Jonkerbosplein goed. Het team richt zich op vennootschapsbelasting, belastingverdragen en Europees recht, transfer pricing, de innovatiebox en bronbelasting op dividend.\n\nDe partners werkten jarenlang bij grote advieskantoren en begonnen in 2016 samen een eigen kantoor. Ze werken vooral voor middelgrote en grote ondernemingen, ook beursgenoteerde, en voor andere adviseurs en accountantskantoren. Die schakelen het team regelmatig in voor een second opinion of bij een geschil met de Belastingdienst. Op hun blog lees je hoe ze over recente rechtspraak denken.\n\nWil je weten wat ze voor jouw organisatie kunnen doen? Bel of mail het kantoor in Nijmegen en maak een afspraak.",
   "website": "http://www.novio.tax/",
   "website_bereikbaar": true
+ },
+ "numberzz-finance-people": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqGDsK3zgHxJv9PL4G'}",
+  "gescand": "2026-10-23",
+  "naam": "Numberzz | Finance & People",
+  "status": "fout",
+  "website": "https://www.numberzz.nl/"
  },
  "oersoep-brouwlab": {
   "adres_op_site": "Waalplein 7, 6541 AX Nijmegen",
@@ -14729,6 +14921,14 @@
   "tekst": "",
   "website": "http://www.pekingnijmegen.nl/",
   "website_bereikbaar": false
+ },
+ "pentrax-inkomensverklaringen": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqGM3tMwP2ukrVqPXq'}",
+  "gescand": "2026-10-23",
+  "naam": "Pentrax Inkomensverklaringen",
+  "status": "fout",
+  "website": "http://www.pentrax.nl/"
  },
  "permiso": {
   "adres_op_site": "Postadres: Vleeshouwerstraat 3, 6511 VC Nijmegen; bezoekadres (alleen op afspraak): De Bouwkamp 1, 6576 JX Ooij",
@@ -15903,6 +16103,14 @@
   "website": "http://qaccountants.nl/",
   "website_bereikbaar": false
  },
+ "quickratio-2-0": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqGS1jgcsxmLSVtPEo'}",
+  "gescand": "2026-10-23",
+  "naam": "Quickratio 2.0",
+  "status": "fout",
+  "website": "http://www.quickratio20.nl/"
+ },
  "radboud-university-food-beverage": {
   "adres_op_site": "",
   "bronnen": [
@@ -16677,6 +16885,14 @@
   "tekst": "",
   "website": "http://www.roelofsendrubbel.nl/",
   "website_bereikbaar": true
+ },
+ "roelofs-hypotheken-assurantien-b-v": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqGcvaz3MFrgvxMzJi'}",
+  "gescand": "2026-10-23",
+  "naam": "Roelofs Hypotheken & Assurantiën B.V.",
+  "status": "fout",
+  "website": "https://stmakelaars.nl/nijmegen/"
  },
  "rolluik": {
   "adres_op_site": "Tweede Walstraat 120, 6511 LW Nijmegen",
@@ -17829,6 +18045,14 @@
   "tekst": "Moet je je trein nog halen, maar knort je maag al? Op het Stationsplein bij station Nijmegen zit een vestiging van Smullers, de snackketen die je op stations door heel Nederland tegenkomt. Hier draait alles om snel iets lekkers meenemen: je pakt je snack zonder lang te wachten, betaalt contactloos en loopt zo door naar je perron.\n\nOp de kaart staan typisch Hollandse snacks: friet van Nederlandse aardappelen, kroketten en andere snacks, burgers, en als toetje een ijsje of een milkshake. Eet je geen vlees? Er zijn ook vegetarische snacks, zoals een vegaburger.\n\nDe Nijmeegse vestiging is elke dag open vanaf half twaalf, en van donderdag tot en met zaterdag zelfs tot laat in de avond. Handig dus als je na een avondje stad nog een snack wilt halen voor de laatste trein.",
   "website": "http://www.smullers.nl",
   "website_bereikbaar": true
+ },
+ "snoeijs-consultants": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqGfQUXSCRj1Rdn6Wr'}",
+  "gescand": "2026-10-23",
+  "naam": "Snoeijs Consultants",
+  "status": "fout",
+  "website": "https://www.snoeijsconsultants.nl/"
  },
  "societeit-de-kroeg": {
   "adres_op_site": "Hertogstraat 141, Nijmegen",
@@ -19281,6 +19505,14 @@
   "website": "https://terrarossa.nl",
   "website_bereikbaar": true
  },
+ "teunissen-assurantien": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqGqZvBBYo5tWvgH1z'}",
+  "gescand": "2026-10-23",
+  "naam": "Teunissen Assurantiën",
+  "status": "fout",
+  "website": "http://www.teunissenassurantien.nl/"
+ },
  "thali-express": {
   "adres_op_site": "Van Welderenstraat 97b, 6511 ME Nijmegen",
   "bronnen": [
@@ -20084,6 +20316,14 @@
   "status": "fout",
   "website": "http://www.tummers-advocatuur.nl/"
  },
+ "uitvaart-verzekering-nl": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqH2EEHm5juXbSFEXy'}",
+  "gescand": "2026-10-23",
+  "naam": "Uitvaart-verzekering.nl",
+  "status": "fout",
+  "website": "http://www.uitvaart-verzekering.nl/"
+ },
  "ultimo": {
   "adres_op_site": "Lage Markt 47, 6511 VK Nijmegen",
   "bronnen": [
@@ -20462,6 +20702,14 @@
   "status": "fout",
   "website": "https://www.vda-advocatuur.nl/"
  },
+ "van-heck-advies": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqH6hmL3V9oB2E7aAh'}",
+  "gescand": "2026-10-23",
+  "naam": "Van Heck Advies",
+  "status": "fout",
+  "website": "http://www.vanheckadvies.nl/"
+ },
  "van-hilst-koffie-en-thee-moenenstraat": {
   "adres_op_site": "Brouwerijstraat 7D, 4356 AL Oostkapelle (alleen afhalen op afspraak; kantoor op Brouwerijstraat 7A, geen bezoek)",
   "bronnen": [
@@ -20555,6 +20803,14 @@
   "naam": "Van Woerkom Bouwrecht",
   "status": "fout",
   "website": "http://www.vanwoerkom-bouwrecht.nl/"
+ },
+ "van-woezik-financieel-advies": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqHG8C8axf4itZruyL'}",
+  "gescand": "2026-10-23",
+  "naam": "Van Woezik Financieel Advies",
+  "status": "fout",
+  "website": "https://www.vanwoezik.nl/"
  },
  "vandaag-accountancy-en-advies": {
   "adres_op_site": "St. Annastraat 61, 6524 EH Nijmegen",
@@ -20836,6 +21092,14 @@
   "tekst": "",
   "website": "http://www.viefnijmegen.nl/",
   "website_bereikbaar": false
+ },
+ "viisi-nijmegen-hypotheekadvies": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqHSYDaanw1prDxHcB'}",
+  "gescand": "2026-10-23",
+  "naam": "Viisi Nijmegen - Hypotheekadvies",
+  "status": "fout",
+  "website": "https://www.viisi.nl/hypotheekadvies-nijmegen/"
  },
  "villa-voorstad": {
   "adres_op_site": "Marialaan 106, 6541 RN Nijmegen",
@@ -21588,6 +21852,14 @@
   "tekst": "",
   "website": "http://www.yukimi.nl/",
   "website_bereikbaar": false
+ },
+ "yvvy-hypotheken": {
+  "categorie_scan": "hypotheekadviseur",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsqHaDrM8duFEekV6La'}",
+  "gescand": "2026-10-23",
+  "naam": "Yvvy Hypotheken",
+  "status": "fout",
+  "website": "http://www.yvvy.nl/"
  },
  "zappa-s": {
   "adres_op_site": "Plein 1944 155, 6511 JH Nijmegen",
