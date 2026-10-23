@@ -141,3 +141,15 @@ eigen beschrijving is. Teksten, openingstijden en kenmerken komen uit de website
 
 Betaalde pakketten staan in `data/bedrijvengids-pakketten.json` (pakket, betaald_tot, logo, fotos, knop, actie). Foto's van Uitgelicht en Partner (tot 10) komen per mail binnen (afspraak met Frans, okt 2026): zet ze in `assets/uploads/bedrijvengids/<slug>/` en de paden in `fotos`; de eerste wordt de hoofdfoto, de rest staat in een carrousel op de bedrijfspagina. Uitgelicht = bovenaan de categorie, maximaal 3, volgorde wisselt per dag; na `betaald_tot` valt het bedrijf bij de nachtelijke herbouw (workflow *Agenda*) terug naar gratis. Elke gratis pagina heeft een knop *Dit is mijn bedrijf* naar het aanmeldformulier met de gegevens al ingevuld. Zo'n aanmelding is een wijziging van een bestaande vermelding: de mail aan de redactie zet de huidige gegevens (`data/bedrijvengids-vermeldingen.json`) naast de ingestuurde en zegt of het e-mailadres bij de website hoort. Na akkoord zet `tools/aanmeldingen.py` de wijziging in `data/bedrijvengids-wijzigingen.json`; die gaat voor op scan en oude gids. Voorstel voor de categorieën:
 `/mnt/project-files/advies/bedrijvengids-categorieen.md`.
+
+### Bedrijvengids: beslissingen en de jaarlijkse herscan
+
+Alle beslissingen van de redactie staan in bestanden, zodat een nieuwe scan ze niet ongedaan maakt:
+
+- `data/bedrijvengids-scan.json`: per bedrijf de status. `goedgekeurd` = tekst en kenmerken akkoord, `verwijderd` = uit de gids, met `reden` (wie en wanneer). Een verwijderd bedrijf komt nooit vanzelf terug, ook niet via een nieuwe scan of een claim; alleen door de status met de hand te veranderen.
+- `data/bedrijvengids-correcties.json`: adressen en ligging die de redactie heeft verbeterd (gaan voor op oude gids en OpenStreetMap).
+- `data/bedrijvengids-websites.json`: uitkomst van de wekelijkse websitecontrole; zonder werkende website valt een bedrijf vanzelf uit de gids.
+- `data/bedrijvengids-wijzigingen.json`: goedgekeurde claims (*Dit is mijn bedrijf*), gaan voor op alles.
+
+Jaarlijkse herscan (bijvoorbeeld oktober 2027): Actions > *Bedrijven scannen* met categorie `sportschool` en `opnieuw` = `ja`. Goedgekeurde bedrijven krijgen dan een nieuw voorstel (de pagina toont het als concept tot de redactie het goedkeurt), verwijderde blijven weg, nieuwe bedrijven uit OpenStreetMap worden meegenomen. Daarna een datacheck zoals in `docs/datacheck-sportscholen-2026-10.md`: adres op de eigen site, geen sportschool, twijfel of open, twijfelachtige kenmerken.
+

@@ -133,8 +133,11 @@ def main(argv):
     for b in gids["gids"] + gids["overig"]:
         eerder = scan.get(b["slug"], {})
         klaar = eerder.get("status") == "voorstel" and eerder.get("website_bereikbaar") and eerder.get("tekst")
-        # Wat de redactie al goedkeurde of verwijderde, blijft staan; alleen met --alleen opnieuw
-        if eerder.get("status") in ("goedgekeurd", "verwijderd") and not alleen:
+        # Verwijderd blijft verwijderd (alleen met --alleen opnieuw). Goedgekeurd blijft staan, behalve bij --opnieuw
+        # (de jaarlijkse herscan): dan wordt het een nieuw voorstel dat de redactie weer goedkeurt.
+        if eerder.get("status") == "verwijderd" and not alleen:
+            continue
+        if eerder.get("status") == "goedgekeurd" and not alleen and not opnieuw:
             continue
         if alleen and b["slug"] not in alleen:
             continue
