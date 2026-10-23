@@ -50,6 +50,20 @@ CATEGORIEEN = {
     "fysiotherapeut": "Fysiotherapie", "dietist": "Diëtisten en voedingsadvies", "coach": "Coaches en therapeuten",
     "alternatief": "Alternatieve geneeswijzen", "opticien": "Opticiens", "huisarts": "Huisartsen", "dierenarts": "Dierenartsen",
     "tandarts": "Tandartsen",
+    "kledingwinkel": "Kledingwinkels", "tweedehands-winkel": "Kringloop en vintage", "woonwinkel": "Woonwinkels en interieur",
+    "juwelier": "Juweliers", "bloemist": "Bloemisten", "hobbywinkel": "Hobby en creatief", "parfumerie": "Parfumerieën",
+    "elektronica": "Elektronica en reparatie", "fietsenwinkel": "Fietsenwinkels en fietsenmakers", "boekhandel": "Boekhandels",
+    "winkel": "Overige winkels", "hotel": "Hotels", "bed-and-breakfast": "B&B's", "camping": "Campings en vakantieparken",
+    "aannemersbedrijf": "Aannemers en verbouw", "schilder": "Schilders en stukadoors", "loodgieter": "Loodgieters en installateurs",
+    "hovenier": "Hoveniers", "zonnepanelen": "Zonnepanelen", "meubelmaker": "Meubelmakers", "makelaar": "Makelaars",
+    "dakdekker": "Dakdekkers", "slotenmaker": "Slotenmakers", "elektricien": "Elektriciens", "verhuisbedrijf": "Verhuisbedrijven",
+    "schoonmaakbedrijf": "Schoonmaak en glazenwassers",
+    "marketingbureau": "Marketing-, reclame- en webbureaus", "accountant-boekhouder": "Accountants en boekhouders",
+    "advocatenkantoor": "Advocaten", "notaris": "Notarissen", "hypotheekadviseur": "Hypotheek- en financieel adviseurs",
+    "verzekeraar": "Verzekeringen", "uitzendbureau": "Uitzendbureaus en werving", "opleiding-en-training": "Cursussen en opleidingen",
+    "rijschool": "Rijscholen", "fotograaf": "Fotografen en videografen", "autobedrijf": "Autobedrijven en garages",
+    "kinderopvang": "Kinderopvang", "taxi": "Taxi", "begrafenis": "Uitvaart", "hondentraining": "Hondentraining en dierenverzorging",
+    "it-bedrijf": "IT en software", "zakelijk-overig": "Overige zakelijke diensten", "geen-bedrijf": "Geen bedrijf voor de gids",
 }
 # Kenmerken zijn filters voor bezoekers, dus alleen als de site het zelf noemt; per categorie een eigen lijst
 KENMERKEN_SPORT = [
@@ -63,7 +77,32 @@ KENMERKEN_DRINKEN = [
     "terras", "aan het water", "live muziek", "speciaalbier", "sport kijken", "zaal of kelder", "werkplek", "eigen branderij",
     "taart en gebak", "vegan", "lunch", "ontbijt", "afhalen", "hond welkom", "kindvriendelijk", "groepen", "rolstoeltoegankelijk",
     "bedrijfsuitje", "vrijgezellenfeest"]
-KENMERKEN = list(dict.fromkeys(KENMERKEN_SPORT + KENMERKEN_ETEN + KENMERKEN_DRINKEN))
+# Zakelijk en diensten: voor wie, hoe je ze spreekt, en per categorie de specialismen
+KENMERKEN_DIENST = [
+    "particulieren", "zakelijke klanten", "zzp en mkb", "gratis kennismaking", "online of op afstand", "aan huis of op locatie",
+    "avond of weekend", "Engelstalig", "spoed", "parkeren", "rolstoeltoegankelijk"]
+SPECIALISMEN = {
+    "marketingbureau": ["websites", "webshops", "SEO", "online adverteren", "social media", "branding en logo", "video", "teksten", "drukwerk"],
+    "accountant-boekhouder": ["jaarrekening", "belastingaangifte", "salarisadministratie", "boekhouding", "startende ondernemers", "particuliere aangifte"],
+    "advocatenkantoor": ["arbeidsrecht", "familierecht en scheiding", "strafrecht", "ondernemingsrecht", "huurrecht", "letselschade",
+                         "vreemdelingenrecht", "sociale zekerheid", "erfrecht", "mediation", "gefinancierde rechtshulp"],
+    "notaris": ["huis kopen", "testament", "samenwonen en huwelijk", "erfenis", "ondernemingen", "mediation"],
+    "hypotheekadviseur": ["hypotheek", "starters", "oversluiten", "verzekeringen", "pensioen", "financiële planning", "onafhankelijk"],
+    "verzekeraar": ["schadeverzekering", "zorgverzekering", "zakelijke verzekeringen", "uitvaartverzekering", "onafhankelijk", "hypotheek"],
+    "uitzendbureau": ["uitzendwerk", "werving en selectie", "detachering", "studenten", "techniek", "logistiek", "zorg", "horeca", "kantoor"],
+    "opleiding-en-training": ["taalcursus", "muziekles", "bijles en huiswerkbegeleiding", "creatieve cursus", "zakelijke training", "kinderen",
+                              "volwassenen", "proefles", "certificaat of diploma"],
+    "rijschool": ["auto", "automaat", "motor", "aanhanger", "vrachtwagen en bus", "spoedopleiding", "proefles", "theorie", "faalangst"],
+    "fotograaf": ["trouwen", "portret", "bedrijfsfotografie", "video", "drone", "studio", "evenementen", "newborn en zwangerschap", "productfotografie"],
+    "autobedrijf": ["APK", "onderhoud en reparatie", "occasions", "nieuwe auto's", "elektrische auto's", "schadeherstel", "banden",
+                    "airco", "leenauto", "poetsen en detailing"],
+    "kinderopvang": ["kinderdagverblijf", "bso", "peuteropvang", "gastouder", "tweetalig", "natuur en buiten", "flexibele opvang"],
+    "taxi": ["luchthavenvervoer", "rolstoelvervoer", "zakelijk vervoer", "groepsvervoer", "24 uur", "elektrisch", "trouwauto"],
+    "begrafenis": ["uitvaartverzorging", "crematie", "natuurbegraven", "dag en nacht bereikbaar", "eigen uitvaartcentrum", "persoonlijk afscheid"],
+    "hondentraining": ["puppycursus", "gedragstherapie", "trimsalon", "uitlaatservice", "dierenpension", "privéles", "groepslessen", "katten"],
+}
+KENMERKEN = list(dict.fromkeys(KENMERKEN_SPORT + KENMERKEN_ETEN + KENMERKEN_DRINKEN + KENMERKEN_DIENST
+                               + [k for lijst in SPECIALISMEN.values() for k in lijst]))
 
 # Per categorie: welke kenmerken, en wat Claude moet weten om te bepalen of een bedrijf erbij hoort
 PER_CATEGORIE = {
@@ -97,6 +136,36 @@ PER_CATEGORIE = {
         "laat de tekst leeg. Uitgebreide lunchkaart: lunch. Kenmerken: eigen branderij als ze zelf branden; werkplek bij wifi "
         "en plekken om te werken; taart en gebak bij zelfgebakken taart of gebak; terras alleen als de site een terras noemt.")},
 }
+# Zakelijk en diensten: dezelfde opbouw. Bedrijven zonder vestiging in Nijmegen of zonder echte dienstverlening voor
+# Nijmegenaren (een holding, een postadres, een landelijk callcenter) horen er niet bij.
+ZAKELIJK = (
+    "Hoort het bedrijf niet in deze categorie, kies dan de categorie die wel past, of zakelijk-overig of it-bedrijf. "
+    "Is het geen bedrijf waar een bezoeker van de gids iets aan heeft (een holding, een postadres, een landelijk "
+    "hoofdkantoor zonder balie in Nijmegen, een vacaturesite), kies dan geen-bedrijf en leg het uit in de opmerkingen. "
+    "Werkt iemand vanuit huis, noem dan in de tekst geen huisadres en zet in de opmerkingen dat het een thuisadres lijkt. "
+    "Specialismen en kenmerken alleen als de site ze zelf noemt.")
+for _slug, _uitleg in {
+    "marketingbureau": "Een marketing-, reclame- of webbureau maakt websites, campagnes, social media of huisstijlen voor anderen. "
+                       "Een drukkerij of signbedrijf: winkel. Een IT-beheerder of softwarebedrijf zonder marketing: it-bedrijf.",
+    "accountant-boekhouder": "Accountants, boekhouders, administratiekantoren en belastingadviseurs.",
+    "advocatenkantoor": "Advocaten en juridisch adviseurs. Een notaris: notaris. Een deurwaarder of incassobureau: zakelijk-overig. "
+                        "Rechtswinkels en juridische loketten horen er wel bij.",
+    "notaris": "Notariskantoren. Een advocaat zonder notaris: advocatenkantoor.",
+    "hypotheekadviseur": "Hypotheekadviseurs en financieel planners. Een bank of verzekeraar met vooral verzekeringen: verzekeraar.",
+    "verzekeraar": "Verzekeringskantoren en -adviseurs met een kantoor in Nijmegen. Vooral hypotheken: hypotheekadviseur.",
+    "uitzendbureau": "Uitzendbureaus, detacheerders en werving- en selectiebureaus. Een overheidsloket (UWV, Werkplein): geen-bedrijf.",
+    "opleiding-en-training": "Cursussen, trainingen, bijles, taal- en muziekscholen voor particulieren of bedrijven. Een gewone "
+                             "basis- of middelbare school of de universiteit: geen-bedrijf. Een dansschool: dansschool. Een rijschool: rijschool.",
+    "rijschool": "Rijscholen en rijopleidingen.",
+    "fotograaf": "Fotografen en videografen. Een fotowinkel of pasfotozaak: winkel.",
+    "autobedrijf": "Garages, autobedrijven, dealers, schadeherstel, bandenservice en autopoetsers. Fietsen of scooters: fietsenwinkel. "
+                   "Autoverhuur of lease zonder werkplaats: zakelijk-overig.",
+    "kinderopvang": "Kinderdagverblijven, bso's, peuteropvang en gastouderbureaus. Een basisschool: geen-bedrijf.",
+    "taxi": "Taxibedrijven en besloten vervoer.",
+    "begrafenis": "Uitvaartondernemers en uitvaartcentra. Een begraafplaats of crematorium hoort er ook bij.",
+    "hondentraining": "Hondenscholen, trimsalons, dierenpensions en uitlaatservices. Een dierenarts: dierenarts. Een dierenwinkel: winkel.",
+}.items():
+    PER_CATEGORIE[_slug] = {"kenmerken": SPECIALISMEN[_slug] + KENMERKEN_DIENST, "uitleg": _uitleg + " " + ZAKELIJK}
 
 SCHEMA = {
     "type": "object",
@@ -234,6 +303,8 @@ def beoordelen(uit, categorie, betaald):
         reden = "website niet uit te lezen, liever geen halve gegevens"
     elif not uit.get("lijkt_actief", True):
         reden = "gestopt of verhuisd volgens de eigen website"
+    elif uit.get("hoofdcategorie") == "geen-bedrijf":
+        reden = "geen bedrijf voor de gids (holding, postadres, school of loket)"
     elif not uit.get("tekst", "").strip():
         reden = "te weinig informatie op de eigen website"
     else:

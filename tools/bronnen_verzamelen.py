@@ -64,6 +64,120 @@ BRONNEN = {
         # In Nederland is een coffeeshop iets anders dan een koffiebar
         "andere_soort": r"coffeeshop|coffee shop|grow|smart ?shop|bakker|bakery|snack|cafetaria|vending|automaat",
     },
+    # Zakelijk en diensten: OpenStreetMap heeft er weinig, Overture is hier de hoofdbron
+    "marketingbureau": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"advertising_agency",
+        "overture": lambda basis, soort: soort in (
+            "marketing_agency", "advertising_agency", "internet_marketing_service", "b2b_marketing_consultant",
+            "b2b_advertising_and_marketing_service", "web_designer"),
+        "soort": "Marketingbureau",
+        "andere_soort": r"drukkerij|print|reclameborden|signing|belettering",
+    },
+    "accountant-boekhouder": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"accountant|tax_advisor",
+        "overture": lambda basis, soort: soort in ("accountant", "bookkeeper", "tax_service"),
+        "soort": "Accountant",
+        "andere_soort": r"hypothe|verzeker|advoca|notari",
+    },
+    "advocatenkantoor": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"lawyer",
+        "overture": lambda basis, soort: soort in ("attorney_or_law_firm", "legal_service", "employment_law", "tax_law", "paralegal_service"),
+        "soort": "Advocaat",
+        "andere_soort": r"notari|deurwaarder|incasso|mediat|vertaal|translat",
+    },
+    "notaris": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"notary",
+        "overture": lambda basis, soort: soort in ("notary_public", "legal_service", "attorney_or_law_firm"),
+        # Overture zet notarissen vaak onder juridische diensten: alleen wie notaris in de naam heeft
+        "naam": r"notari",
+        "soort": "Notaris",
+    },
+    "hypotheekadviseur": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"mortgage|financial_advisor",
+        "overture": lambda basis, soort: soort in ("mortgage_broker", "mortgage_lender", "financial_advising"),
+        "soort": "Hypotheekadviseur",
+        "andere_soort": r"\bbank\b|rabobank|abn ?amro|\bing\b|sns|volksbank|accountant|administratie",
+    },
+    "verzekeraar": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"insurance",
+        "overture": lambda basis, soort: soort in ("insurance_agency", "health_insurance_office", "auto_insurance"),
+        "soort": "Verzekeringen",
+    },
+    "uitzendbureau": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"employment_agency",
+        "overture": lambda basis, soort: soort in ("employment_agency", "b2b_executive_search_consultants"),
+        "soort": "Uitzendbureau",
+        "andere_soort": r"uwv|gemeente|werkplein",
+    },
+    "opleiding-en-training": {
+        "osm": {"Onderwijs en kinderopvang", "Overig"},
+        "osm_sub": r"music_school|language_school|training",
+        "overture": lambda basis, soort: soort in (
+            "tutoring_service", "language_school", "music_school", "photography_class", "art_school", "cooking_school",
+            "computer_school", "business_school", "vocational_school"),
+        "soort": "Opleiding",
+        "andere_soort": r"rijschool|driving|dansschool|basisschool|kinderopvang",
+    },
+    "rijschool": {
+        "osm": {"Onderwijs en kinderopvang"},
+        "osm_sub": r"driving_school",
+        "overture": lambda basis, soort: soort == "driving_school",
+        "soort": "Rijschool",
+    },
+    "fotograaf": {
+        "osm": {"Winkels", "Zakelijke diensten"},
+        "osm_sub": r"^photo",
+        "overture": lambda basis, soort: soort in (
+            "photography_service", "event_photography_service", "video_film_production", "photographer",
+            "wedding_photography", "portrait_studio"),
+        "soort": "Fotograaf",
+        "andere_soort": r"pasfoto|fotowinkel|kodak|hema",
+    },
+    "autobedrijf": {
+        "osm": {"Winkels"},
+        "osm_sub": r"^car(_repair)?$",
+        "overture": lambda basis, soort: soort in (
+            "automotive_repair", "auto_dealer", "used_auto_dealer", "car_dealer", "auto_body_shop", "auto_detailing",
+            "automotive_service", "auto_glass_service", "auto_electrical_repair", "auto_restoration_service", "tire_dealer_and_repair",
+            "tire_shop", "oil_change_station", "car_wash"),
+        "soort": "Autobedrijf",
+        "andere_soort": r"fiets|bike|scooter|motor|camper|caravan|verhuur|rental|lease|taxi",
+    },
+    "kinderopvang": {
+        "osm": {"Onderwijs en kinderopvang"},
+        "osm_sub": r"childcare|kindergarten",
+        "overture": lambda basis, soort: soort in ("child_care_and_day_care", "day_care_preschool", "preschool"),
+        "soort": "Kinderopvang",
+        "andere_soort": r"basisschool|school\b",
+    },
+    "taxi": {
+        "osm": {"Overig"},
+        "osm_sub": r"taxi",
+        "overture": lambda basis, soort: soort in ("taxi_service", "taxi_or_ride_share_service", "limo_service", "airport_shuttle"),
+        "soort": "Taxi",
+    },
+    "begrafenis": {
+        "osm": {"Overig", "Winkels"},
+        "osm_sub": r"funeral",
+        "overture": lambda basis, soort: soort in ("funeral_service", "funeral_home", "cremation_service", "funeral_services_and_cemeteries"),
+        "soort": "Uitvaart",
+    },
+    "hondentraining": {
+        "osm": {"Winkels"},
+        "osm_sub": r"pet_grooming|dog",
+        "overture": lambda basis, soort: soort in (
+            "dog_trainer", "pet_training", "pet_groomer", "pet_boarding", "pet_sitting", "dog_walker", "pet_care_service",
+            "animal_or_pet_service"),
+        "soort": "Hondentraining",
+        "andere_soort": r"dierenarts|dierenkliniek|vet\b|dierenspeciaal|dierenwinkel|pets place|jumper",
+    },
 }
 
 # Een link naar zo'n site is geen eigen website: dan valt het bedrijf af (standaard: geen eigen site = niet in de gids)
@@ -181,6 +295,8 @@ def main(categorie, bron):
             continue
         if regels.get("osm_sub") and not re.search(regels["osm_sub"], x["subcategorie"]):
             continue
+        if regels.get("naam") and not re.search(regels["naam"], x["naam"].lower()):
+            continue
         kandidaten.append({"soort": regels["soort"], "naam": x["naam"], "adres": adres(x["adres"]), "postcode": postcode(x["postcode"]),
                            "plaats": x["plaats"] or "Nijmegen", "gemeente": "Nijmegen", "website": x["website"], "telefoon": x["telefoon"],
                            "bron": "OpenStreetMap", "betrouwbaarheid": "", "ook_in_openstreetmap": "ja", "lat": x["lat"], "lon": x["lon"],
@@ -189,6 +305,8 @@ def main(categorie, bron):
     for naam, zeker, sites, tels, adressen, status, basis, soort, lon, lat, dataset in overture_laden(bron):
         a = (adressen or [{}])[0] or {}
         if not naam or (a.get("locality") or "").lower() not in PLAATSEN or not regels["overture"](basis, soort or ""):
+            continue
+        if regels.get("naam") and not re.search(regels["naam"], naam.lower()):
             continue
         kandidaten.append({"soort": regels["soort"], "naam": naam, "adres": adres(a.get("freeform")), "postcode": postcode(a.get("postcode")),
                            "plaats": (a.get("locality") or "").title(), "gemeente": "Nijmegen",

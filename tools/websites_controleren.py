@@ -12,6 +12,7 @@ import concurrent.futures
 import json
 import pathlib
 import re
+import http.client
 import socket
 import ssl
 import time
@@ -49,7 +50,7 @@ def controleer(url):
                 url = "http://" + url[8:]
                 continue
             laatste = str(reden)[:100]
-        except (socket.timeout, TimeoutError, ConnectionError, OSError) as fout:
+        except (socket.timeout, TimeoutError, ConnectionError, OSError, http.client.HTTPException) as fout:
             laatste = str(fout)[:100] or "geen antwoord"
         time.sleep(3)
     # Geen antwoord of verbinding verbroken: vaak een site die bots weert; de link laten staan
