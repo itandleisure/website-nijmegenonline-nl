@@ -119,7 +119,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=8" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=9" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -156,7 +156,11 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
         elif soort == "postcode":
             regels.append('          <label for="%s">%s%s</label>\n          <input id="%s" name="%s" type="text" autocomplete="postal-code" maxlength="8" data-postcode%s>'
                           % (id_, esc(label), ster, id_, veld, req))
-            regels.append('          <p class="formulier__hint">Bijvoorbeeld 6511 AB. In Duitsland 5 cijfers, bijvoorbeeld 47533.</p>')
+            regels.append('          <p class="formulier__hint" data-postcode-hint>Bijvoorbeeld 6511 AB. In Duitsland 5 cijfers, bijvoorbeeld 47533.</p>')
+        elif soort == "land":
+            # Nederland staat vooraf gekozen; formulier.js past de controle van de postcode aan het land aan
+            regels.append('          <label for="%s">%s%s</label>\n          <select id="%s" name="%s"%s>%s</select>'
+                          % (id_, esc(label), ster, id_, veld, req, "".join('<option>%s</option>' % esc(o) for o in opties)))
         elif soort == "keuzes":
             regels.append('          <fieldset class="formulier__keuzes"><legend>%s%s</legend>' % (esc(label), ster))
             regels += ['            <label><input type="checkbox" name="%s" value="%s"> %s</label>' % (veld, esc(o), esc(o)) for o in opties]
@@ -273,7 +277,10 @@ def bedrijf_aanmelden(categorieen):
         ("vermelding", "", "verborgen", False, None),
         ("bedrijf", "Naam van het bedrijf", "text", True, None),
         ("categorie", "Soort bedrijf", "text", True, categorieen),
-        ("adres", "Adres (straat, huisnummer, postcode en plaats)", "text", True, None),
+        ("adres", "Straat en huisnummer", "text", True, None),
+        ("postcode", "Postcode", "postcode", True, None),
+        ("plaats", "Plaats", "text", True, None),
+        ("land", "Land", "land", True, ["Nederland", "Duitsland"]),
         ("site", "Website", "url", False, None),
         ("telefoon", "Telefoonnummer", "tel", True, None),
         ("bedrijfsmail", "E-mailadres van het bedrijf", "email", False, None),

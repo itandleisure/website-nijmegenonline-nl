@@ -42,8 +42,9 @@ var FORMULIEREN = {
   },
   bedrijf: {
     tabblad: 'Bedrijven', bewaarMaanden: 3, onderwerp: 'Aanmelding bedrijvengids', goedkeuren: true,
-    openbaar: ['bedrijf', 'categorie', 'adres', 'site', 'telefoon', 'bedrijfsmail', 'openingstijden', 'omschrijving'],
-    velden: [['bedrijf', 'Bedrijf'], ['categorie', 'Soort bedrijf'], ['adres', 'Adres'], ['site', 'Website'],
+    openbaar: ['bedrijf', 'categorie', 'adres', 'postcode', 'plaats', 'land', 'site', 'telefoon', 'bedrijfsmail', 'openingstijden', 'omschrijving'],
+    velden: [['bedrijf', 'Bedrijf'], ['categorie', 'Soort bedrijf'], ['adres', 'Adres'], ['postcode', 'Postcode'],
+      ['plaats', 'Plaats'], ['land', 'Land'], ['site', 'Website'],
       ['telefoon', 'Telefoon'], ['bedrijfsmail', 'E-mail bedrijf'], ['openingstijden', 'Openingstijden'],
       ['omschrijving', 'Omschrijving'], ['foto', 'Logo of foto'], ['naam', 'Contactpersoon'], ['email', 'E-mail'],
       ['pakket', 'Pakket'],            // gratis, uitgelicht of partner
@@ -115,7 +116,7 @@ function doPost(e) {
     ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats', 'telefoon'].forEach(function (v) { if (!g[v]) fouten.push(v); });
   }
   if (type === 'bedrijf') {
-    ['bedrijf', 'categorie', 'adres', 'telefoon', 'omschrijving'].forEach(function (v) { if (!g[v]) fouten.push(v); });
+    ['bedrijf', 'categorie', 'adres', 'postcode', 'plaats', 'telefoon', 'omschrijving'].forEach(function (v) { if (!g[v]) fouten.push(v); });
   }
   if (type === 'partner') {
     if (!g.bedrijf) fouten.push('bedrijf');
@@ -815,7 +816,19 @@ function blad(cfg) {
   }
   // Kopregel (ook bijwerken als er kolommen bij zijn gekomen, zoals Status bij een oudere versie)
   var kop = kolommen(cfg);
-  if (sheet.getLastColumn() < kop.length || sheet.getRange(1, 1).getValue() !== 'Datum') {
+  var oud = sheet.getLastColumn() ? sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0] : [];
+  if (oud[0] === 'Datum' && oud.join('|') !== kop.join('|') && sheet.getLastRow() > 1) {
+    // Er zijn velden bijgekomen: bestaande rijen op kolomnaam naar de nieuwe plek zetten, zodat
+    // bijvoorbeeld Status en ID niet verschuiven. Kolommen die niet meer bestaan blijven achteraan staan.
+    var rijen = sheet.getRange(2, 1, sheet.getLastRow() - 1, oud.length).getValues();
+    var weg = oud.filter(function (n) { return n && kop.indexOf(n) < 0; });
+    var nieuw = kop.concat(weg);
+    var plekOud = nieuw.map(function (n) { return oud.indexOf(n); });
+    var omgezet = rijen.map(function (r) { return plekOud.map(function (j) { return j < 0 ? '' : r[j]; }); });
+    sheet.getRange(1, 1, 1, nieuw.length).setValues([nieuw]).setFontWeight('bold');
+    sheet.getRange(2, 1, omgezet.length, nieuw.length).setValues(omgezet);
+    if (cfg.goedkeuren) sheet.getRange(1, 3, sheet.getMaxRows(), kop.length - 2).setNumberFormat('@');
+  } else if (sheet.getLastColumn() < kop.length || oud[0] !== 'Datum') {
     sheet.getRange(1, 1, 1, kop.length).setValues([kop]).setFontWeight('bold');
     // Datum, tijden en teksten als tekst bewaren, zodat Sheets er geen eigen notatie van maakt
     if (cfg.goedkeuren) sheet.getRange(1, 3, sheet.getMaxRows(), kop.length - 2).setNumberFormat('@');

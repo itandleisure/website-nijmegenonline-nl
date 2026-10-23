@@ -306,7 +306,9 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
 
 def mijn_bedrijf(b, cat, root):
     """Knop naar het aanmeldformulier met het bedrijf al ingevuld (assets/js/formulier.js vult de velden uit de url)."""
-    velden = {"vermelding": b["slug"], "bedrijf": b["naam"], "categorie": cat["enkelvoud"], "adres": adresregel(b),
+    pc = re.sub(r"^(\d{4})\s*([A-Za-z]{2})$", lambda m: "%s %s" % (m.group(1), m.group(2).upper()), (b["postcode"] or "").strip())
+    velden = {"vermelding": b["slug"], "bedrijf": b["naam"], "categorie": cat["enkelvoud"], "adres": b["adres"], "postcode": pc,
+              "plaats": b["plaats"], "land": "Duitsland" if re.match(r"^\d{5}$", pc) else "Nederland",
               "site": b.get("website") or "", "telefoon": b.get("telefoon") or ""}
     link = "%sbedrijf-aanmelden/?%s" % (root, urllib.parse.urlencode({k: v for k, v in velden.items() if v}))
     return ('        <aside class="mijnbedrijf">\n          <p><strong>Is %s jouw bedrijf?</strong> Vul je gegevens aan met foto\'s, openingstijden '

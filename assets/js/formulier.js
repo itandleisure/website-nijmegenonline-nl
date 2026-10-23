@@ -60,6 +60,14 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       einddatum.min = datum.value;
     });
   }
+  // Met een landkeuze: het voorbeeld onder de postcode past zich aan het land aan
+  var land = form.querySelector('select[name="land"]');
+  var pcHint = form.querySelector("[data-postcode-hint]");
+  function landHint() {
+    if (!land || !pcHint) return;
+    pcHint.textContent = land.value === "Duitsland" ? "5 cijfers, bijvoorbeeld 47533." : "Bijvoorbeeld 6511 AB.";
+  }
+  if (land) land.addEventListener("change", landHint);
   // Velden vooraf invullen vanuit de url, bijvoorbeeld de knop "Dit is mijn bedrijf" in de bedrijvengids
   new URLSearchParams(location.search).forEach(function (waarde, sleutel) {
     if (["form", "pagina", "duur", "website"].indexOf(sleutel) !== -1) return;
@@ -69,6 +77,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       v.value = waarde;
     });
   });
+  landHint();
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var ontbreekt = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (v) {
@@ -85,7 +94,11 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     if (pc && pc.value.trim()) {
       var waarde = pc.value.trim().toUpperCase();
       var nl = waarde.match(/^(\d{4})\s*([A-Z]{2})$/);
-      if (!nl && !/^\d{5}$/.test(waarde)) { meld("Controleer de postcode, bijvoorbeeld 6511 AB (of 5 cijfers in Duitsland).", true); pc.focus(); return; }
+      var de = /^\d{5}$/.test(waarde);
+      var fout = land && land.value === "Duitsland" ? (de ? "" : "Een Duitse postcode heeft 5 cijfers, bijvoorbeeld 47533.")
+        : land ? (nl ? "" : "Controleer de postcode, bijvoorbeeld 6511 AB.")
+        : (nl || de ? "" : "Controleer de postcode, bijvoorbeeld 6511 AB (of 5 cijfers in Duitsland).");
+      if (fout) { meld(fout, true); pc.focus(); return; }
       pc.value = nl ? nl[1] + " " + nl[2] : waarde;
     }
     var begin = form.querySelector('[name="datum"]'), eind = form.querySelector('[name="einddatum"]');

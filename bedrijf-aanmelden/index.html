@@ -70,8 +70,15 @@
           <label for="bedrijf-categorie">Soort bedrijf <span aria-hidden="true">*</span></label>
           <input id="bedrijf-categorie" name="categorie" type="text" autocomplete="off" list="bedrijf-categorie-lijst" required>
           <datalist id="bedrijf-categorie-lijst"><option value="Accountant Boekhouder"><option value="Acupuncturist"><option value="All You Can Eat Restaurant"><option value="Alternatieve Geneeswijze"><option value="Bakkerij"><option value="Bedrijfsuitje"><option value="Begrafenis"><option value="Bierbrouwerij"><option value="Bloemist"><option value="Borrelen"><option value="Cafe"><option value="Coach"><option value="Cocktailbar"><option value="Concert"><option value="Dansen"><option value="Dietist"><option value="Diner"><option value="Elektronicazaak"><option value="Familieuitje"><option value="Fotograaf"><option value="Groothandel"><option value="High Tea"><option value="Hobbywinkel"><option value="Indiaas Restaurant"><option value="Informatiepunt"><option value="Installatietechniek"><option value="Interieuradvies Ontwerp Styling"><option value="Italiaans Restaurant"><option value="Kapper"><option value="Keuken en Sanitair Winkel"><option value="Kinderfeestje"><option value="Kledingwinkel"><option value="Koffiezaak"><option value="Kringloopcentra"><option value="Kunstgalerie &amp; Atelier"><option value="Lunch"><option value="Makelaar"><option value="Marketingbureau"><option value="Massagesalon"><option value="Meubelproductie"><option value="Michelin Restaurant"><option value="Musea"><option value="Muziekschool"><option value="Nagelsalon"><option value="Onderwijs en Educatie"><option value="Opleiding en Training"><option value="Pannenkoek Restaurant"><option value="Personal Training"><option value="Pizzeria"><option value="Poppodia"><option value="Reclamebureau"><option value="Reparatie"><option value="Schilder"><option value="Schoonheidsspecialist"><option value="Slijterij"><option value="Sportschool"><option value="Steak Restaurant"><option value="Taxi"><option value="Therapeut"><option value="Trouwen"><option value="Trouwlocatie"><option value="Tweedehands Winkel"><option value="Uitzendbureau"><option value="Vakantiepark"><option value="Vechtsport"><option value="Veganistisch"><option value="Vegetarisch"><option value="Verhuur"><option value="Vintage"><option value="Voedingsdeskundige"><option value="Voorstellingen"><option value="Vriendenuitje"><option value="Vriendinnenuitje"><option value="Vrije Tijd en Uitgaan"><option value="Vrijgezellenfeest"><option value="Webshop"><option value="Wellness"><option value="Woonwinkel"><option value="Yoga"><option value="Zaalverhuur"><option value="Zuid Amerikaans Restaurant"></datalist>
-          <label for="bedrijf-adres">Adres (straat, huisnummer, postcode en plaats) <span aria-hidden="true">*</span></label>
+          <label for="bedrijf-adres">Straat en huisnummer <span aria-hidden="true">*</span></label>
           <input id="bedrijf-adres" name="adres" type="text" autocomplete="on" required>
+          <label for="bedrijf-postcode">Postcode <span aria-hidden="true">*</span></label>
+          <input id="bedrijf-postcode" name="postcode" type="text" autocomplete="postal-code" maxlength="8" data-postcode required>
+          <p class="formulier__hint" data-postcode-hint>Bijvoorbeeld 6511 AB. In Duitsland 5 cijfers, bijvoorbeeld 47533.</p>
+          <label for="bedrijf-plaats">Plaats <span aria-hidden="true">*</span></label>
+          <input id="bedrijf-plaats" name="plaats" type="text" autocomplete="on" required>
+          <label for="bedrijf-land">Land <span aria-hidden="true">*</span></label>
+          <select id="bedrijf-land" name="land" required><option>Nederland</option><option>Duitsland</option></select>
           <label for="bedrijf-site">Website</label>
           <input id="bedrijf-site" name="site" type="url" autocomplete="url">
           <label for="bedrijf-telefoon">Telefoonnummer <span aria-hidden="true">*</span></label>
@@ -143,7 +150,7 @@
       </div>
     </div>
   </main>
-  <script src="../assets/js/formulier.js?v=8" defer></script>
+  <script src="../assets/js/formulier.js?v=9" defer></script>
 
   <!-- footer -->
   <footer>
