@@ -6,6 +6,13 @@
   "website": "http://www.024carcleaning.nl/",
   "werkt": false
  },
+ "123bouwplan": {
+  "eind_url": "https://www.123bouwplan.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.123bouwplan.nl/",
+  "werkt": true
+ },
  "1920-speakeasy": {
   "eind_url": "https://1920-speakeasy.nl/",
   "gecontroleerd": "2026-10-23",
@@ -55,6 +62,13 @@
   "website": "https://www.4itruvian.nl/",
   "werkt": true
  },
+ "52nijmegen": {
+  "eind_url": "https://www.kadans.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "subpagina weg (404), homepage werkt",
+  "website": "https://www.kadans.com/portfolio-items/52nijmegen-52-nijmegen-novio-tech-campus/",
+  "werkt": true
+ },
  "a-a-bemiddeling": {
   "eind_url": "https://www.aabemiddeling.nl/",
   "gecontroleerd": "2026-10-23",
@@ -97,6 +111,62 @@
   "website": "https://www.aangenaamaleppo.nl/",
   "werkt": true
  },
+ "aankoopmakelaar-nijmegen": {
+  "eind_url": "https://aankoopmakelaarnijmegen.net/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://aankoopmakelaarnijmegen.net/",
+  "werkt": true
+ },
+ "aannemersbedrijf-cmb": {
+  "eind_url": "https://cmbbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.cmbbouw.nl/",
+  "werkt": true
+ },
+ "aannemersbedrijf-peter-van-woezik": {
+  "eind_url": "http://www.petervanwoezik.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.petervanwoezik.nl/",
+  "werkt": true
+ },
+ "aannemersbedrijf-r-boekhoorn-b-v": {
+  "eind_url": "https://www.rboekhoorn.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.rboekhoorn.nl/",
+  "werkt": true
+ },
+ "aannemersbedrijf-w-g-m-sanders": {
+  "eind_url": "https://wgmsanders.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.wgmsanders.nl/",
+  "werkt": true
+ },
+ "aannemingsbedrijf-a-g-van-schaik-zn-b-v": {
+  "eind_url": "https://www.vanschaikbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://vanschaikbouw.nl/",
+  "werkt": true
+ },
+ "aannemingsbedrijf-fokker": {
+  "eind_url": "https://www.fokkervof.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.fokkervof.nl/",
+  "werkt": true
+ },
+ "aannemingsbedrijf-n-a-van-kleef-en-zn": {
+  "eind_url": "https://bouwtechnische-keuring.net/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.navankleef.nl/",
+  "werkt": true
+ },
  "aanpoters-full-service-online-marketingbureau": {
   "eind_url": "https://aanpoters.nl/",
   "gecontroleerd": "2026-10-23",
@@ -116,6 +186,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.aartsensomers.nl/",
+  "werkt": true
+ },
+ "abc-tuinbedrijf": {
+  "eind_url": "https://abc-tuinbedrijf.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://abc-tuinbedrijf.nl/",
   "werkt": true
  },
  "abo-vastgoed-financieel-advies": {
@@ -159,6 +236,13 @@
   "reden": "domein bestaat niet",
   "website": "http://www.acta-advocaten.nl/#xl_xr_page_index",
   "werkt": false
+ },
+ "actiefmakelaars-nijmegen-b-v": {
+  "eind_url": "https://driessenmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.actiefmakelaarsnijmegen.nl/",
+  "werkt": true
  },
  "adalet-turk-hukuku-turks-recht-turkse-advocaten": {
   "eind_url": "https://www.adalet-consultancy.nl/",
@@ -224,7 +308,7 @@
   "werkt": true
  },
  "advocatenkantoor-bos": {
-  "eind_url": "http://www.advocatenkantoorbos.com/",
+  "eind_url": "https://www.advocatenkantoorbos.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.advocatenkantoorbos.com/",
@@ -242,6 +326,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.agn.nl/",
+  "werkt": true
+ },
+ "airco-nijmegen-jonkerbosplein": {
+  "eind_url": "https://airconijmegen.com",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://airconijmegen.com",
+  "werkt": true
+ },
+ "airco-nijmegen-jonkerbosplein-2": {
+  "eind_url": "https://airconijmegen.com",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://airconijmegen.com",
   "werkt": true
  },
  "akhi-s": {
@@ -265,6 +363,13 @@
   "website": "http://alcredis-polis.nl/",
   "werkt": false
  },
+ "alles-vastgoed": {
+  "eind_url": "https://www.allesvastgoed.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://www.allesvastgoed.nl/",
+  "werkt": true
+ },
  "alpha-digital": {
   "eind_url": "https://alphadigital.nl/",
   "gecontroleerd": "2026-10-23",
@@ -277,6 +382,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.gasterijalstoen.nl",
+  "werkt": true
+ },
+ "alsec-schoonmaakbedrijf": {
+  "eind_url": "https://www.alsec.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.alsec.nl/",
+  "werkt": true
+ },
+ "ampire-vastgoedgroep": {
+  "eind_url": "https://ampirevastgoedgroep.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://ampirevastgoedgroep.nl/",
   "werkt": true
  },
  "an-bairro-alto-annie-van-velzenhof": {
@@ -313,6 +432,20 @@
   "reden": "pagina bestaat niet (404)",
   "website": "http://www.anders-consultancy-design.nl/",
   "werkt": false
+ },
+ "andras-rietdekkersbedrijf": {
+  "eind_url": "https://www.rietdekkersbedrijfandras.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.rietdekkersbedrijfandras.nl/",
+  "werkt": true
+ },
+ "andre-s-klussenbedrijf": {
+  "eind_url": "https://www.andresklussenbedrijf.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.andresklussenbedrijf.nl/",
+  "werkt": true
  },
  "anita-hol-bubeck": {
   "eind_url": "http://www.anitahol-bubeck.nl/",
@@ -354,6 +487,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.antenna.nl/",
+  "werkt": true
+ },
+ "anti-vliegen-shop": {
+  "eind_url": "https://antivliegenshop.nl/?route=information%2Fcontact",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.antivliegenshop.nl/index.php?route=information/contact",
   "werkt": true
  },
  "anwb-rijopleiding-nijmegen": {
@@ -419,6 +559,20 @@
   "website": "https://arendvh.nl/",
   "werkt": true
  },
+ "ariens-solar": {
+  "eind_url": "https://ariensenergie.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.ariensenergie.nl/",
+  "werkt": true
+ },
+ "ariens-solartechniek": {
+  "eind_url": "https://ariensenergie.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://arienssolar.nl/",
+  "werkt": true
+ },
  "arsenaal-1824": {
   "eind_url": "https://arsenaal1824.nl/",
   "gecontroleerd": "2026-10-23",
@@ -475,6 +629,13 @@
   "website": "https://www.atelier-nijmegen.nl/",
   "werkt": true
  },
+ "atelier-joost-seegers": {
+  "eind_url": "https://www.joostseegers.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://joostseegers.nl/",
+  "werkt": true
+ },
  "atelier-l-d": {
   "eind_url": "https://atelier-ld.nl/",
   "gecontroleerd": "2026-10-23",
@@ -487,6 +648,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://ateliertheelicht.nl/",
+  "werkt": true
+ },
+ "attis-aankoopmakelaardij": {
+  "eind_url": "https://www.attisaankoop.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.attis.nl/",
   "werkt": true
  },
  "aukemaontwerp": {
@@ -536,6 +704,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.autoserviceportaal.nl/",
+  "werkt": true
+ },
+ "auto-sleutels-nijmegen": {
+  "eind_url": "https://www.autosleutelsnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.autosleutelsnijmegen.nl/",
   "werkt": true
  },
  "auto-traa": {
@@ -597,7 +772,7 @@
  "autobedrijf-jos-buurman": {
   "eind_url": "http://www.josbuurman.nl",
   "gecontroleerd": "2026-10-23",
-  "reden": "503 (weert mogelijk bots)",
+  "reden": "200",
   "website": "https://www.josbuurman.nl",
   "werkt": true
  },
@@ -741,6 +916,13 @@
   "website": "http://www.avalonfitcentre.nl/",
   "werkt": false
  },
+ "avs-bouw": {
+  "eind_url": "http://www.avsbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.avsbouw.nl/",
+  "werkt": true
+ },
  "avs-fieldmarketing": {
   "eind_url": "https://avsfieldmarketing.nl/contact/",
   "gecontroleerd": "2026-10-23",
@@ -782,6 +964,20 @@
   "reden": "domein bestaat niet",
   "website": "http://babyzorgpippeloentje.nl/",
   "werkt": false
+ },
+ "badkamer-renovatie-nijmegen": {
+  "eind_url": "https://badkamerrenovatienijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://badkamerrenovatienijmegen.nl/",
+  "werkt": true
+ },
+ "badkamerrenovaties-badkamer-renovatie-nijmegen": {
+  "eind_url": "https://badkamerrenovatienijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://badkamerrenovatienijmegen.com/",
+  "werkt": true
  },
  "bagels-beans-lange-hezelstraat": {
   "eind_url": "https://www.bagelsbeans.nl/",
@@ -923,6 +1119,13 @@
   "website": "https://basmatinijmegen.nl",
   "werkt": true
  },
+ "batenburg-installatietechniek": {
+  "eind_url": "https://batenburg-installatietechniek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.schekman.nl",
+  "werkt": true
+ },
  "bdo-nijmegen-accountants-adviseurs": {
   "eind_url": "https://www.bdo.nl/nl-nl/home",
   "gecontroleerd": "2026-10-23",
@@ -931,7 +1134,7 @@
   "werkt": true
  },
  "beata-stawiarska-photography": {
-  "eind_url": "http://www.beatastawiarskaphoto.nl/",
+  "eind_url": "https://beatastawiarskaphoto.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.beatastawiarskaphoto.nl/",
@@ -951,11 +1154,25 @@
   "website": "http://www.restaurant-beau.nl",
   "werkt": true
  },
+ "beaufort-era-makelaars": {
+  "eind_url": "https://www.beaufortmakelaars.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://beaufortmakelaars.nl/",
+  "werkt": true
+ },
  "bedrijfsbureau-stichting-soos": {
   "eind_url": "https://nidokinderopvang.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.stichtingsoos.nl/",
+  "werkt": true
+ },
+ "bedrijvenvereniging-nijmegen-zuid": {
+  "eind_url": "https://bnznijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://bnznijmegen.nl/",
   "werkt": true
  },
  "begraafplaats-vredehof": {
@@ -1014,6 +1231,20 @@
   "website": "https://www.benefitsports.nl/",
   "werkt": true
  },
+ "benzo-schoonmaakorganisatie": {
+  "eind_url": "https://benzo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.benzo.nl/",
+  "werkt": true
+ },
+ "berg-zn-c-j-vd": {
+  "eind_url": "https://www.euromoversvandenberg.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.euromoversvandenberg.nl",
+  "werkt": true
+ },
  "bert-beelen-fotografie": {
   "eind_url": "http://www.bertbeelen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -1028,11 +1259,25 @@
   "website": "https://www.storymini-nijmegen.nl",
   "werkt": true
  },
+ "betaalbare-badkamers-bv-nijmegen": {
+  "eind_url": "https://betaalbare-badkamers.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.betaalbare-badkamers.nl/",
+  "werkt": true
+ },
  "betadocent": {
   "eind_url": "https://betadocent.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://betadocent.nl/",
+  "werkt": true
+ },
+ "beton-renovatie-en-steigerbouw": {
+  "eind_url": "https://pw-beton-steigerwerken.netlify.app/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://pw-beton-steigerwerken.netlify.app/",
   "werkt": true
  },
  "betty-mora-italian-canteen": {
@@ -1042,6 +1287,13 @@
   "website": "http://www.bettyandmora.com/",
   "werkt": true
  },
+ "beye-tuinen": {
+  "eind_url": "http://www.beye-tuinen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.beye-tuinen.nl",
+  "werkt": false
+ },
  "bhalu-nijmegen": {
   "eind_url": "https://bhalu.nl/",
   "gecontroleerd": "2026-10-23",
@@ -1050,7 +1302,7 @@
   "werkt": true
  },
  "bierproeven-nu": {
-  "eind_url": "http://www.bierproeven.nu/",
+  "eind_url": "https://www.bierproeven.nu/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.bierproeven.nu/",
@@ -1082,6 +1334,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.legerdesheils.nl/",
+  "werkt": true
+ },
+ "bijl-loodgietersklusjes": {
+  "eind_url": "http://www.loodgietersklusjes.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.loodgietersklusjes.nl/",
   "werkt": true
  },
  "bijles-van-linde": {
@@ -1125,6 +1384,13 @@
   "reden": "domein bestaat niet",
   "website": "http://www.binnenbereik.com/",
   "werkt": false
+ },
+ "bisther-vastgoed": {
+  "eind_url": "https://bisther.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bisther.nl/",
+  "werkt": true
  },
  "bistro-flores": {
   "eind_url": "https://flores.nl",
@@ -1266,6 +1532,20 @@
   "website": "http://www.bobautowas.nl/",
   "werkt": true
  },
+ "bob-witteveen-makelaardij-petuniastraat": {
+  "eind_url": "https://www.bobwitteveenmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bobwitteveenmakelaardij.nl/",
+  "werkt": true
+ },
+ "bob-witteveen-makelaardij-sint-jacobslaan": {
+  "eind_url": "http://bobwitteveenmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://bobwitteveenmakelaardij.nl/",
+  "werkt": true
+ },
  "bochane": {
   "eind_url": "https://www.bochane.nl/dacia/",
   "gecontroleerd": "2026-10-23",
@@ -1294,11 +1574,39 @@
   "website": "https://boekkundig.nl/",
   "werkt": true
  },
+ "boerboom-aanneming-en-onderhoud": {
+  "eind_url": "https://www.boerboom-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://boerboom-nijmegen.nl/",
+  "werkt": true
+ },
  "boerske": {
   "eind_url": "http://www.boerske.nl",
   "gecontroleerd": "2026-10-23",
   "reden": "twijfel: [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1032)",
   "website": "http://www.boerske.nl",
+  "werkt": true
+ },
+ "bokmans-maatwerk": {
+  "eind_url": "https://bokmansmaatwerk.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.bokmansmaatwerk.nl/",
+  "werkt": true
+ },
+ "bongerd-dijcke": {
+  "eind_url": "http://www.bongerd-dijcke.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "400 (weert mogelijk bots)",
+  "website": "http://www.bongerd-dijcke.nl/",
+  "werkt": true
+ },
+ "bongers-lemmers-makelaardij": {
+  "eind_url": "https://www.bongers-lemmers.nl/?y_source=1_Mzc3NDczMC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.bongers-lemmers.nl/?y_source=1_Mzc3NDczMC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
   "werkt": true
  },
  "borboleta": {
@@ -1315,11 +1623,95 @@
   "website": "http://borisloning.com/",
   "werkt": false
  },
+ "bosbouw-b-v": {
+  "eind_url": "https://bosbouwbv.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://bosbouwbv.nl/",
+  "werkt": true
+ },
+ "boschman-schoonmaakbedrijf": {
+  "eind_url": "https://www.boschmanschoonmaak.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.boschmanschoonmaak.nl/",
+  "werkt": true
+ },
+ "boulka-service-techniek": {
+  "eind_url": "http://www.boulkaservice-techniek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1032)",
+  "website": "http://www.boulkaservice-techniek.nl/",
+  "werkt": true
+ },
+ "bouma-totaalonderhoud": {
+  "eind_url": "http://www.boumatotaalonderhoud.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.boumatotaalonderhoud.nl/",
+  "werkt": true
+ },
+ "bouw-onderhoud-tegelwerken-schoonenberg": {
+  "eind_url": "https://schoonenbergbouw.nl/contact/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.schoonenbergbouw.nl/contact/",
+  "werkt": true
+ },
+ "bouw-renovatie-en-timmerwerken-wim-hutmacher": {
+  "eind_url": "https://www.bouwbedrijfwimhutmacher.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bouwbedrijfwimhutmacher.nl/",
+  "werkt": true
+ },
+ "bouwbedrijf-geluk-b-v": {
+  "eind_url": "https://www.bouwbedrijfgeluk.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bouwbedrijfgeluk.nl/",
+  "werkt": true
+ },
  "bouwflex-nijmegen": {
   "eind_url": "https://www.randstad.nl/vakgebied/bouw",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.bouwflex.nl/",
+  "werkt": true
+ },
+ "bouwketel": {
+  "eind_url": "https://bouwketel.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bouwketel.nl/",
+  "werkt": true
+ },
+ "bouwmeester-vastgoed": {
+  "eind_url": "https://www.bouwmeestervastgoed.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bouwmeestervastgoed.nl/",
+  "werkt": true
+ },
+ "bouwplan": {
+  "eind_url": "https://bouwplan-nederland.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://bouwplan-nederland.nl/",
+  "werkt": true
+ },
+ "bouwsocieteit-midden-gelderland": {
+  "eind_url": "https://bouwsocieteitmg.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "subpagina weg (404), homepage werkt",
+  "website": "https://bouwsocieteitmg.nl/bedrijven/80/bouwbedrijf-van-grunsven",
+  "werkt": true
+ },
+ "bovengronds-landschapsarchitectuur-en-stedenbouw": {
+  "eind_url": "https://www.bovengronds.cc/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bovengronds.cc/",
   "werkt": true
  },
  "boy-surminski-photography": {
@@ -1328,6 +1720,13 @@
   "reden": "200",
   "website": "http://www.boysurminski.com/",
   "werkt": true
+ },
+ "boys-with-wood": {
+  "eind_url": "http://www.boyswithwood.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "http://www.boyswithwood.com/",
+  "werkt": false
  },
  "bram-kahmann-b-v": {
   "eind_url": "https://bramkahmann.com/",
@@ -1351,9 +1750,9 @@
   "werkt": true
  },
  "brandgrens024": {
-  "eind_url": "http://brandgrens024.nl/",
+  "eind_url": "https://www.brandgrens024.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "503 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://brandgrens024.nl/",
   "werkt": true
  },
@@ -1434,6 +1833,13 @@
   "website": "https://www.brouwtoren.nl",
   "werkt": true
  },
+ "bruisten-totaal-afbouw": {
+  "eind_url": "http://bruistentotaalafbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://bruistentotaalafbouw.nl/",
+  "werkt": true
+ },
  "brunet-advocaten": {
   "eind_url": "http://www.brunet.nl/",
   "gecontroleerd": "2026-10-23",
@@ -1456,14 +1862,28 @@
   "werkt": true
  },
  "bt-communicatie": {
-  "eind_url": "https://www.btcommunicatie.nl/",
+  "eind_url": "http://www.btcommunicatie.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "500 (weert mogelijk bots)",
   "website": "http://www.btcommunicatie.nl/",
   "werkt": true
  },
+ "btg-beveiligingsinstallaties": {
+  "eind_url": "http://www.btgbeveiliging.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.btgbeveiliging.nl/",
+  "werkt": true
+ },
+ "buiten-makelaars-en-taxateurs": {
+  "eind_url": "https://www.buiten.nu/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.buiten.nu/",
+  "werkt": true
+ },
  "buitenlanddesk": {
-  "eind_url": "https://buitenlanddesk.nl/",
+  "eind_url": "http://www.buitenlanddesk.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.buitenlanddesk.nl/",
@@ -1532,6 +1952,13 @@
   "website": "https://www.burgerme.nl/vestiging-nijmegen/",
   "werkt": true
  },
+ "buro-noorderligt": {
+  "eind_url": "http://www.noorderligt.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.noorderligt.nl/",
+  "werkt": false
+ },
  "buskens-nijmegen": {
   "eind_url": "https://buskensnijmegen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -1567,6 +1994,13 @@
   "website": "https://www.buuvnijmegen.nl",
   "werkt": true
  },
+ "bvd-trading": {
+  "eind_url": "http://www.bvdtrading.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.bvdtrading.nl/",
+  "werkt": true
+ },
  "byron": {
   "eind_url": "https://byron.nl/",
   "gecontroleerd": "2026-10-23",
@@ -1575,7 +2009,7 @@
   "werkt": true
  },
  "byte-me-internet-strategie": {
-  "eind_url": "http://pitstop.nu/",
+  "eind_url": "http://www.byte-me.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.byte-me.nl/",
@@ -1596,7 +2030,7 @@
   "werkt": true
  },
  "cafe-daen": {
-  "eind_url": "http://www.cafedaen.nl/",
+  "eind_url": "https://www.cafedaen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.cafedaen.nl/",
@@ -1680,7 +2114,7 @@
   "werkt": true
  },
  "cafe-de-plak": {
-  "eind_url": "https://www.cafedeplak.nl/",
+  "eind_url": "http://www.cafedeplak.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.cafedeplak.nl/",
@@ -1792,9 +2226,9 @@
   "werkt": true
  },
  "cafe-restaurant-merkus": {
-  "eind_url": "https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fcafezaalmerkus%2F%3Flocale%3Dnl_NL",
+  "eind_url": "http://www.cafezaalmerkus.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "400 (weert mogelijk bots)",
   "website": "http://www.cafezaalmerkus.nl/",
   "werkt": true
  },
@@ -1890,7 +2324,7 @@
   "werkt": true
  },
  "cali-nijmegen": {
-  "eind_url": "http://www.bar-cali.nl/",
+  "eind_url": "https://www.bar-cali.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.bar-cali.nl/",
@@ -1911,7 +2345,7 @@
   "werkt": true
  },
  "capital-media-services": {
-  "eind_url": "https://www.capitalmediaservices.nl/",
+  "eind_url": "http://www.capitalmediaservices.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.capitalmediaservices.nl/",
@@ -1957,6 +2391,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.care-autoschade.nl",
+  "werkt": true
+ },
+ "carefos": {
+  "eind_url": "https://www.carefos.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.carefos.nl/",
   "werkt": true
  },
  "carglass": {
@@ -2008,6 +2449,13 @@
   "website": "https://www.cemcompany.nl/",
   "werkt": true
  },
+ "cemo-bouw": {
+  "eind_url": "https://cemobouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.cemobouw.nl/",
+  "werkt": true
+ },
  "chantal-heijnen-photography": {
   "eind_url": "https://chantalheijnen.com/",
   "gecontroleerd": "2026-10-23",
@@ -2037,7 +2485,7 @@
   "werkt": false
  },
  "chidoz": {
-  "eind_url": "http://www.chidoz.mx",
+  "eind_url": "https://chidoz.mx/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.chidoz.mx",
@@ -2086,9 +2534,9 @@
   "werkt": true
  },
  "christel-verbiesen-oranjesingel": {
-  "eind_url": "http://christelverbiesen.nl/",
+  "eind_url": "https://www.christelverbiesen.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "409 (weert mogelijk bots)",
+  "reden": "200",
   "website": "https://christelverbiesen.nl/",
   "werkt": true
  },
@@ -2111,6 +2559,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.circlek.nl/",
+  "werkt": true
+ },
+ "clarity-cleaning": {
+  "eind_url": "https://clarity-cleaning.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.clarity-cleaning.nl/",
   "werkt": true
  },
  "classic-car-detailing": {
@@ -2190,6 +2645,13 @@
   "website": "http://www.mixnmatch.nl",
   "werkt": true
  },
+ "colora-wijchen": {
+  "eind_url": "https://colora.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "subpagina weg (404), homepage werkt",
+  "website": "https://www.colora.nl/colora-wijchen",
+  "werkt": true
+ },
  "colorblock-creations": {
   "eind_url": "https://colorblock.nl/wp-content/cache/all/index.html",
   "gecontroleerd": "2026-10-23",
@@ -2239,6 +2701,13 @@
   "website": "https://www.computerkruis.nl",
   "werkt": true
  },
+ "concrete-station-nijmegen": {
+  "eind_url": "https://www.betonstations.nl/locatie/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.betonstation-nijmegen.nl/",
+  "werkt": true
+ },
  "coo-digital": {
   "eind_url": "https://coodigital.nl/",
   "gecontroleerd": "2026-10-23",
@@ -2272,6 +2741,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://coronanijmegen.nl/",
+  "werkt": true
+ },
+ "cotedi": {
+  "eind_url": "https://www.cotedi.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.cotedi.nl/",
   "werkt": true
  },
  "created": {
@@ -2330,6 +2806,13 @@
   "website": "http://www.crudo.nl/",
   "werkt": true
  },
+ "csb-steigerbouw": {
+  "eind_url": "https://csbsteigerbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.csbsteigerbouw.nl/",
+  "werkt": true
+ },
  "cuisine-culinaire": {
   "eind_url": "https://ccnafd-nijmegen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -2358,6 +2841,13 @@
   "website": "https://www.ru.nl/services/eten-en-drinken/cultuurcafe",
   "werkt": true
  },
+ "cuppens-en-zonen": {
+  "eind_url": "https://www.cuppens.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.cuppens.nl/",
+  "werkt": true
+ },
  "cwz-paviljoen": {
   "eind_url": "https://www.cwz.nl/naar-het-ziekenhuis/restaurant-en-faciliteiten",
   "gecontroleerd": "2026-10-23",
@@ -2384,6 +2874,34 @@
   "gecontroleerd": "2026-10-23",
   "reden": "403 (weert mogelijk bots)",
   "website": "https://www.dachmar.nl/",
+  "werkt": true
+ },
+ "dakdekkersbedrijf-dsn-nijmegen": {
+  "eind_url": "https://www.dakdekkersbedrijf-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.dakdekkersbedrijf-nijmegen.nl/",
+  "werkt": true
+ },
+ "dakdekkersbedrijf-nijmegen": {
+  "eind_url": "https://www.dakwerknijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://dakwerknijmegen.nl/",
+  "werkt": true
+ },
+ "dakkapel-nijmegen": {
+  "eind_url": "https://dakkapelnijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://dakkapelnijmegen.com/",
+  "werkt": true
+ },
+ "dakonderhoud-van-empel": {
+  "eind_url": "https://dakonderhoudvanempel.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://dakonderhoudvanempel.nl/",
   "werkt": true
  },
  "dakota": {
@@ -2428,6 +2946,20 @@
   "website": "https://dashed.nl/",
   "werkt": true
  },
+ "david-ski-schilderwerk-latexspuiten": {
+  "eind_url": "http://www.davidskischilderwerk.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "http://www.davidskischilderwerk.nl/",
+  "werkt": false
+ },
+ "davidak": {
+  "eind_url": "http://www.davidak.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "http://www.davidak.nl/",
+  "werkt": false
+ },
  "dayi-autobedrijf": {
   "eind_url": "https://dayiautos.nl/",
   "gecontroleerd": "2026-10-23",
@@ -2470,11 +3002,25 @@
   "website": "https://achtertuin.nu/",
   "werkt": true
  },
+ "de-allrounder-bestratingen": {
+  "eind_url": "https://www.deallrounderbestratingen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.deallrounderbestratingen.nl/",
+  "werkt": true
+ },
  "de-bakkerijspecialist": {
   "eind_url": "https://www.bakkerij-specialist.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.bakkerij-specialist.nl/",
+  "werkt": true
+ },
+ "de-beveiligingswinkel": {
+  "eind_url": "https://www.beveiligingswinkel.nl/nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.beveiligingswinkel.nl/",
   "werkt": true
  },
  "de-bieb": {
@@ -2498,6 +3044,13 @@
   "website": "http://deborneo.com/",
   "werkt": false
  },
+ "de-bouwkabouter-v-o-f": {
+  "eind_url": "https://www.bouwkabouter.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://bouwkabouter.nl/",
+  "werkt": true
+ },
  "de-bovenkamer": {
   "eind_url": "http://www.rozenkamer.com/",
   "gecontroleerd": "2026-10-23",
@@ -2517,13 +3070,6 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://lunchenopdemarkt.nl/",
-  "werkt": true
- },
- "de-bv-notaris": {
-  "eind_url": "https://x.com/bvoprichten1",
-  "gecontroleerd": "2026-10-23",
-  "reden": "200",
-  "website": "https://twitter.com/bvoprichten1",
   "werkt": true
  },
  "de-derde-kamer": {
@@ -2561,11 +3107,18 @@
   "website": "http://nijmegen-gids.nl/restaurant/cafe-de-eeuwige-jeugd",
   "werkt": false
  },
+ "de-elektromonteur": {
+  "eind_url": "http://www.deelektromonteur.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.deelektromonteur.nl/",
+  "werkt": true
+ },
  "de-fabriek": {
-  "eind_url": "https://www.defabrieknijmegen.nl/",
+  "eind_url": "https://huubenheurman.nl/de-fabriek",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "http://www.defabrieknijmegen.nl/",
+  "website": "http://www.huubenheurman.nl/de-fabriek",
   "werkt": true
  },
  "de-firma": {
@@ -2596,6 +3149,20 @@
   "website": "http://degelagkamer.nl",
   "werkt": true
  },
+ "de-geldersche": {
+  "eind_url": "https://www.geldersche.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.geldersche.nl/",
+  "werkt": true
+ },
+ "de-gilde-aannemers": {
+  "eind_url": "http://www.degildeaannemers.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.degildeaannemers.com/",
+  "werkt": true
+ },
  "de-graaf-advocatuur": {
   "eind_url": "https://degraafadvocatuur.nl/",
   "gecontroleerd": "2026-10-23",
@@ -2608,6 +3175,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://kion.nl/locaties/de-groene-wereld.html",
+  "werkt": true
+ },
+ "de-hamer-beton-b-v": {
+  "eind_url": "https://www.dehamer.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.dehamer.nl/",
   "werkt": true
  },
  "de-hypotheekshop": {
@@ -2641,7 +3215,7 @@
  "de-jong-belastingadviseurs": {
   "eind_url": "http://dejongbelastingadviseurs.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "500 (weert mogelijk bots)",
+  "reden": "503 (weert mogelijk bots)",
   "website": "http://dejongbelastingadviseurs.nl/",
   "werkt": true
  },
@@ -2694,8 +3268,15 @@
   "website": "https://www.dmz.nl/",
   "werkt": true
  },
+ "de-natuurmakerij": {
+  "eind_url": "http://www.denatuurmakerij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.denatuurmakerij.nl/",
+  "werkt": false
+ },
  "de-nieuwe-creatieven": {
-  "eind_url": "http://www.denieuwecreatieven.com/",
+  "eind_url": "https://www.denieuwecreatieven.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.denieuwecreatieven.com/",
@@ -2813,6 +3394,13 @@
   "website": "http://restaurant-sjalot.nl",
   "werkt": true
  },
+ "de-stijl": {
+  "eind_url": "https://www.vgmdestijl.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.vgmdestijl.nl/",
+  "werkt": true
+ },
  "de-stoof": {
   "eind_url": "https://cafedestoof.nl/",
   "gecontroleerd": "2026-10-23",
@@ -2841,6 +3429,13 @@
   "website": "https://deuitzenders.nl/",
   "werkt": true
  },
+ "de-veer-montage-de-veer-retail": {
+  "eind_url": "https://www.deveermontage.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.deveermontage.nl/",
+  "werkt": true
+ },
  "de-venster-fotografie": {
   "eind_url": "http://www.devenster.nl/",
   "gecontroleerd": "2026-10-23",
@@ -2853,6 +3448,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.de-waagh.nl",
+  "werkt": true
+ },
+ "de-waal-schilderwerken": {
+  "eind_url": "https://www.dewaalschilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.dewaalschilderwerken.nl/",
+  "werkt": true
+ },
+ "de-waalhoven": {
+  "eind_url": "https://www.nieuwbouw-dewaalhoven.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.dewaalhoven.nl/",
   "werkt": true
  },
  "de-waard-bemiddeling-en-bewindvoering": {
@@ -2914,7 +3523,7 @@
  "delimore": {
   "eind_url": "http://bestellen2.vissersenergygroup.nl/locaties/esso-vissers-nijmegen/bezorgmethode?utm_source=google&utm_medium=zoekresultaat&utm_campaign=GoogleMBNijmegen",
   "gecontroleerd": "2026-10-23",
-  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1032)",
+  "reden": "503 (weert mogelijk bots)",
   "website": "https://bestellen2.vissersenergygroup.nl/locaties/esso-vissers-nijmegen/bezorgmethode?utm_source=google&utm_medium=zoekresultaat&utm_campaign=GoogleMBNijmegen",
   "werkt": true
  },
@@ -2930,6 +3539,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://dhaa.nl/",
+  "werkt": true
+ },
+ "dennesenbouw-b-v": {
+  "eind_url": "https://www.dennesenbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.dennesenbouw.nl/",
   "werkt": true
  },
  "dentalprofs": {
@@ -2953,12 +3569,26 @@
   "website": "https://www.developersnetwork.nl/",
   "werkt": true
  },
+ "dg-vastgoedstyling": {
+  "eind_url": "https://www.dgvastgoedstyling.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.dgvastgoedstyling.nl/",
+  "werkt": true
+ },
  "dierencrematorium-amadeus-nijmegen": {
   "eind_url": "https://huisdierencrematoriumamadeus.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://huisdierencrematoriumamadeus.nl/",
   "werkt": true
+ },
+ "digam-works": {
+  "eind_url": "http://digam.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://digam.nl/",
+  "werkt": false
  },
  "digital-divers": {
   "eind_url": "https://digitaldivers.nl/",
@@ -2981,6 +3611,13 @@
   "website": "https://www.digitize-hendriks.nl/",
   "werkt": true
  },
+ "dijo-schilderwerken": {
+  "eind_url": "https://dijoschilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.dijoschilderwerken.nl/",
+  "werkt": true
+ },
  "diomax-schadeherstel-en-spuiterij": {
   "eind_url": "https://diomax-schadeherstel.nl/",
   "gecontroleerd": "2026-10-23",
@@ -2995,11 +3632,39 @@
   "website": "https://dionysosnijmegen.nl/",
   "werkt": true
  },
+ "direct-ontruimd": {
+  "eind_url": "https://directontruimd.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.directontruimd.nl/",
+  "werkt": true
+ },
  "dirkzwager-advocaten-notarissen": {
   "eind_url": "https://www.dirkzwager.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.dirkzwager.nl",
+  "werkt": true
+ },
+ "disveld-makelaardij": {
+  "eind_url": "http://www.disveldmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.disveldmakelaardij.nl/",
+  "werkt": true
+ },
+ "dkc-rademakers": {
+  "eind_url": "https://www.rademakers-elektro.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://rademakers-elektro.nl/",
+  "werkt": true
+ },
+ "dks-klusbedrijf": {
+  "eind_url": "https://www.dksklusbedrijf.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "520 (weert mogelijk bots)",
+  "website": "https://www.dksklusbedrijf.nl/",
   "werkt": true
  },
  "dmarketing": {
@@ -3037,6 +3702,13 @@
   "website": "http://www.donpedronijmegen.nl/",
   "werkt": false
  },
+ "donker-groen": {
+  "eind_url": "https://donkergroep.com/nl/donker-groen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://donkergroep.com/nl/donker-groen/",
+  "werkt": true
+ },
  "doorplakkers": {
   "eind_url": "https://doorplakkers.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3056,6 +3728,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
   "website": "https://doppionijmegen.com/",
+  "werkt": true
+ },
+ "dorien-van-voorden": {
+  "eind_url": "http://dorienvanvoorden.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://dorienvanvoorden.nl/",
   "werkt": true
  },
  "dorus-mannes": {
@@ -3087,9 +3766,9 @@
   "werkt": true
  },
  "draaikunde": {
-  "eind_url": "https://draaikunde.nl/",
+  "eind_url": "http://www.draaikunde.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "503 (weert mogelijk bots)",
   "website": "http://www.draaikunde.nl/",
   "werkt": true
  },
@@ -3105,6 +3784,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.driegezustersnijmegen.nl/",
+  "werkt": true
+ },
+ "driessen-makelaardij": {
+  "eind_url": "https://driessenmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://driessenmakelaardij.nl/",
   "werkt": true
  },
  "drive-inn": {
@@ -3135,6 +3821,13 @@
   "website": "https://dsnijmegen.nl/",
   "werkt": true
  },
+ "dubbeld-dakwerken": {
+  "eind_url": "https://dakwerkennijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.dubbelddakwerken.nl/",
+  "werkt": true
+ },
  "duqaat": {
   "eind_url": "https://www.duqaat.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3142,11 +3835,25 @@
   "website": "http://www.duqaat.nl/",
   "werkt": true
  },
+ "dutch-amfibious-transport-vehicles": {
+  "eind_url": "https://www.datbv.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.datbv.com/",
+  "werkt": true
+ },
  "dutch-ducks-development": {
   "eind_url": "https://dutch-ducks-development.itch.io/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://dutch-ducks-development.itch.io/",
+  "werkt": true
+ },
+ "duurzamer-nederland-b-v": {
+  "eind_url": "https://duurzamer-nederland.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.duurzamer-nederland.nl/",
   "werkt": true
  },
  "dux-advocaten": {
@@ -3170,11 +3877,25 @@
   "website": "http://www.dxlegal.nl/",
   "werkt": true
  },
+ "dzw-dak-en-zinkwerken": {
+  "eind_url": "https://www.dzwvof.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.dzwvof.nl",
+  "werkt": true
+ },
  "e-dependence": {
   "eind_url": "https://www.e-dependence.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "403 (weert mogelijk bots)",
   "website": "https://www.e-dependence.nl/",
+  "werkt": true
+ },
+ "e-zon": {
+  "eind_url": "https://e-zon.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.e-zon.nl",
   "werkt": true
  },
  "eastside-performance": {
@@ -3224,6 +3945,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://edwinsmits.nl/",
+  "werkt": true
+ },
+ "eenzo": {
+  "eind_url": "https://eenzo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "500 (weert mogelijk bots)",
+  "website": "https://eenzo.nl/",
   "werkt": true
  },
  "eetbar-bloom": {
@@ -3317,6 +4045,13 @@
   "website": "https://www.eetpaleismarhaba.nl/",
   "werkt": true
  },
+ "ehbd": {
+  "eind_url": "https://www.eerstehulpbijdakproblemen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://eerstehulpbijdakproblemen.nl/",
+  "werkt": true
+ },
  "eindbaas-cursus": {
   "eind_url": "https://google-cursus.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3331,6 +4066,13 @@
   "website": "http://www.einder.com/",
   "werkt": true
  },
+ "ek-afbouw-en-montage": {
+  "eind_url": "https://ekbouwen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://ekbouwen.nl/",
+  "werkt": true
+ },
  "el-sombrero": {
   "eind_url": "https://www.elsombreronijmegen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3343,6 +4085,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "500 (weert mogelijk bots)",
   "website": "https://bureauelastiek.nl/",
+  "werkt": true
+ },
+ "electra-and-zo-etib": {
+  "eind_url": "https://www.electraenzo.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.electraenzo.nl/",
+  "werkt": true
+ },
+ "elektriciengids": {
+  "eind_url": "https://elektriciengids.com",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://elektriciengids.com",
   "werkt": true
  },
  "elevel": {
@@ -3380,6 +4136,13 @@
   "website": "http://www.elodiecommunicatie.nl/",
   "werkt": true
  },
+ "elyps-landschapsarchitectuur-stedelijk-ontwerp-b-v": {
+  "eind_url": "http://www.elyps.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.elyps.nl/",
+  "werkt": true
+ },
  "emixion": {
   "eind_url": "https://emixion.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3392,6 +4155,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.emmyeethuis.nl/",
+  "werkt": true
+ },
+ "engelaar-en-engelaar": {
+  "eind_url": "https://www.engelaar.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.engelaar.nl/",
+  "werkt": true
+ },
+ "engelaar-engelaar-dakbedekking": {
+  "eind_url": "https://www.engelaar.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.engelaar.nl",
   "werkt": true
  },
  "enjoy360-virtual-tours": {
@@ -3408,11 +4185,32 @@
   "website": "https://www.envolutions.nl/",
   "werkt": true
  },
+ "ep-gericht": {
+  "eind_url": "https://www.epgericht.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.epgericht.nl/",
+  "werkt": true
+ },
+ "epv-montage": {
+  "eind_url": "http://epvmontage.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.epvmontage.nl/",
+  "werkt": true
+ },
  "erciyes-car-service": {
   "eind_url": "http://www.erciyescarservice.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.erciyescarservice.nl/",
+  "werkt": true
+ },
+ "erik-kleijn-bouw": {
+  "eind_url": "https://www.erikkleijnbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.erikkleijnbouw.nl/",
   "werkt": true
  },
  "erik-tax": {
@@ -3429,6 +4227,20 @@
   "website": "http://www.hullenaar.nl/",
   "werkt": true
  },
+ "erkan-klussenbedrijf-aannemer-nijmegen": {
+  "eind_url": "https://er-kan.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.er-kan.nl/",
+  "werkt": true
+ },
+ "erkende-vochtexperts": {
+  "eind_url": "https://www.erkendevochtbestrijders.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.erkendevochtbestrijders.nl/",
+  "werkt": true
+ },
  "essenses": {
   "eind_url": "http://www.essenses.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3436,11 +4248,32 @@
   "website": "http://www.essenses.nl/",
   "werkt": false
  },
+ "estg": {
+  "eind_url": "https://www.estg.eu/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "429 (weert mogelijk bots)",
+  "website": "https://www.estg.eu/",
+  "werkt": true
+ },
  "euromaster-nijmegen": {
   "eind_url": "https://www.euromaster.nl/garages/gelderland/nijmegen/yjhjeas-euromaster-nijmegen",
   "gecontroleerd": "2026-10-23",
   "reden": "202",
   "website": "https://www.euromaster.nl/garages/gelderland/nijmegen/yjhjeas-euromaster-nijmegen",
+  "werkt": true
+ },
+ "euromovers-cj-van-den-berg-zn": {
+  "eind_url": "https://www.euromoversvandenberg.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.euromoversvandenberg.nl",
+  "werkt": true
+ },
+ "eva-met-verve": {
+  "eind_url": "https://www.evametverve.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.evametverve.nl/",
   "werkt": true
  },
  "evenster-website-review-optimalisatie": {
@@ -3478,6 +4311,13 @@
   "website": "http://www.exercisebodyandmind.nl/",
   "werkt": true
  },
+ "exklusief": {
+  "eind_url": "https://www.exklusief.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.exklusief.nl/",
+  "werkt": true
+ },
  "f-graphics-vormgeving-online-illustraties": {
   "eind_url": "https://3ami.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3497,6 +4337,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.stichtingfabrikaat.nl/",
+  "werkt": true
+ },
+ "fair-bouw-nijmegen": {
+  "eind_url": "https://www.fairbouwnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.fairbouwnijmegen.nl/",
   "werkt": true
  },
  "faistos": {
@@ -3521,11 +4368,18 @@
   "werkt": true
  },
  "feestcafe-de-gezelligheid": {
-  "eind_url": "https://www.feestcafedegezelligheid.nl/",
+  "eind_url": "http://www.feestcafedegezelligheid.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "503 (weert mogelijk bots)",
   "website": "http://www.feestcafedegezelligheid.nl/",
   "werkt": true
+ },
+ "ferma-cleaning": {
+  "eind_url": "http://www.fermacleaning.nl/index.php?action=6",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.fermacleaning.nl/index.php?action=6",
+  "werkt": false
  },
  "ff-uitzenders": {
   "eind_url": "http://www.ff-uitzenders.nl/",
@@ -3563,7 +4417,7 @@
   "werkt": true
  },
  "filosofisch-cafe-nijmegen": {
-  "eind_url": "http://www.filosofisch-cafe.nl/",
+  "eind_url": "https://www.filosofisch-cafe.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.filosofisch-cafe.nl/",
@@ -3577,7 +4431,7 @@
   "werkt": true
  },
  "finpolis": {
-  "eind_url": "https://www.finpolis.nl/",
+  "eind_url": "http://finpolis.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://finpolis.nl/",
@@ -3618,6 +4472,13 @@
   "website": "http://www.fittunit.nl/",
   "werkt": true
  },
+ "fix-it-rioolservice": {
+  "eind_url": "http://www.fix-it-riool.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.fix-it-riool.nl/",
+  "werkt": true
+ },
  "fleur-janssen-fotografie": {
   "eind_url": "http://fleurjanssen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3649,8 +4510,15 @@
  "flexis": {
   "eind_url": "https://flexisuitzendbureau.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "reden": "twijfel: [Errno 104] Connection reset by peer",
   "website": "https://flexisuitzendbureau.nl/",
+  "werkt": true
+ },
+ "florijk-tuinprojecten": {
+  "eind_url": "https://www.florijk.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://florijktuinprojecten.nl/",
   "werkt": true
  },
  "foe-ho": {
@@ -3659,6 +4527,13 @@
   "reden": "domein bestaat niet",
   "website": "http://chinees-indisch-bezorgcentrum-foe-ho.nl",
   "werkt": false
+ },
+ "fontein-makelaardij": {
+  "eind_url": "https://www.fonteinmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.fonteinmakelaardij.nl/",
+  "werkt": true
  },
  "foodmanagers-werving-selectie": {
   "eind_url": "https://foodmanagers.nl/",
@@ -3689,9 +4564,9 @@
   "werkt": true
  },
  "foto-focus": {
-  "eind_url": "http://www.fotofocus.nl/",
+  "eind_url": "https://www.fotofocus.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "503 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://www.fotofocus.nl/",
   "werkt": true
  },
@@ -3807,6 +4682,13 @@
   "website": "http://www.fuelmarketing.nl/",
   "werkt": true
  },
+ "fundam-t-makelaars-en-taxateurs": {
+  "eind_url": "https://fundamentmakelaarstaxateurs.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.fundamentmt.nl/",
+  "werkt": true
+ },
  "funkenstein": {
   "eind_url": "https://funkenstein.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3815,11 +4697,18 @@
   "werkt": true
  },
  "funkyfarmer-nl": {
-  "eind_url": "http://www.funkyfarmer.nl/",
+  "eind_url": "https://www.funkyfarmer.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "503 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://www.funkyfarmer.nl/",
   "werkt": true
+ },
+ "fvdl-schilderwerk": {
+  "eind_url": "http://fvdlschilderwerk.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://fvdlschilderwerk.nl/",
+  "werkt": false
  },
  "fwork-uitzendorganisatie": {
   "eind_url": "http://www.fwork.nl/",
@@ -3940,6 +4829,27 @@
   "website": "http://www.excluservice.nl/",
   "werkt": true
  },
+ "garagebox-nijmegen": {
+  "eind_url": "http://www.garageboxmalden.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.garageboxmalden.nl/",
+  "werkt": true
+ },
+ "gastouder-madelief": {
+  "eind_url": "http://www.gastouder-madelief.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.gastouder-madelief.nl/",
+  "werkt": true
+ },
+ "gebouw-a": {
+  "eind_url": "https://www.kadans.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "subpagina weg (404), homepage werkt",
+  "website": "https://www.kadans.com/portfolio-items/gebouw-a-novio-tech-campus-nijmegen/",
+  "werkt": true
+ },
  "gedragsland": {
   "eind_url": "https://www.gedragsland.nl/",
   "gecontroleerd": "2026-10-23",
@@ -3954,10 +4864,24 @@
   "website": "https://www.geertfilms.nl/",
   "werkt": true
  },
- "genootschap-van-makelaars-in-hypotheken": {
-  "eind_url": "http://hypotheekmakelaarsgmh.nl/",
+ "geknipt-voor-uw-tuin": {
+  "eind_url": "https://gekniptvooruwtuin.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "503 (weert mogelijk bots)",
+  "reden": "200",
+  "website": "https://gekniptvooruwtuin.nl/",
+  "werkt": true
+ },
+ "gelsing": {
+  "eind_url": "http://www.gelsing.nl/?utm_source=bingplaces",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.gelsing.nl/?utm_source=bingplaces",
+  "werkt": true
+ },
+ "genootschap-van-makelaars-in-hypotheken": {
+  "eind_url": "https://www.hypotheekmakelaarsgmh.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
   "website": "http://hypotheekmakelaarsgmh.nl/",
   "werkt": true
  },
@@ -3969,7 +4893,7 @@
   "werkt": true
  },
  "gesha-coffee-bar": {
-  "eind_url": "http://Gesha.nl/",
+  "eind_url": "https://gesha.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://Gesha.nl/",
@@ -3980,6 +4904,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "403 (weert mogelijk bots)",
   "website": "https://getuconcerts.nl/",
+  "werkt": true
+ },
+ "gevelx-b-v": {
+  "eind_url": "http://www.gevelx.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "http://www.gevelx.nl/",
   "werkt": true
  },
  "ghost-art-digital-media": {
@@ -3994,6 +4925,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.gtkadvocaten.nl/",
+  "werkt": true
+ },
+ "gietvloer-nijmegen": {
+  "eind_url": "https://gietvloernijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://gietvloernijmegen.com/",
   "werkt": true
  },
  "giros": {
@@ -4109,10 +5047,17 @@
   "werkt": true
  },
  "golestan": {
-  "eind_url": "http://www.cafedeplak.nl/",
+  "eind_url": "https://www.cafedeplak.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.cafedeplak.nl/",
+  "werkt": true
+ },
+ "gommers": {
+  "eind_url": "http://www.gommers.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.gommers.nl",
   "werkt": true
  },
  "goodforpeople": {
@@ -4143,6 +5088,20 @@
   "website": "http://www.cafegoossens.nl/",
   "werkt": true
  },
+ "gorterplaats": {
+  "eind_url": "https://gorterplaats.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://gorterplaats.nl/",
+  "werkt": true
+ },
+ "graat-natuurrijke-tuinen": {
+  "eind_url": "https://graatnatuurrijketuinen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://graatnatuurrijketuinen.nl/",
+  "werkt": true
+ },
  "grafische-republiek": {
   "eind_url": "https://grafische-republiek.com/",
   "gecontroleerd": "2026-10-23",
@@ -4169,6 +5128,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://grandcafemoenen.nl",
+  "werkt": true
+ },
+ "gravestein-stoffering": {
+  "eind_url": "https://gravesteinstoffering.nl/nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://gravesteinstoffering.nl",
   "werkt": true
  },
  "great-british-cars-magazine": {
@@ -4218,6 +5184,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.groepsgeluk.nl/",
+  "werkt": true
+ },
+ "grote-boel": {
+  "eind_url": "http://www.waalsprong.nl/groteboel",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "http://www.waalsprong.nl/groteboel",
   "werkt": true
  },
  "grut": {
@@ -4276,6 +5249,13 @@
   "website": "https://handsontao.nl/",
   "werkt": true
  },
+ "hans-janssen": {
+  "eind_url": "https://www.hansjanssen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://hansjanssennijmegen.nl/",
+  "werkt": true
+ },
  "hans-janssen-hypotheken": {
   "eind_url": "https://www.hansjanssenhypotheken.nl/",
   "gecontroleerd": "2026-10-23",
@@ -4284,7 +5264,7 @@
   "werkt": true
  },
  "hans-peter-van-velthoven-fotografie": {
-  "eind_url": "http://www.hp-ph.com/",
+  "eind_url": "https://www.hp-ph.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.hp-ph.com/",
@@ -4318,6 +5298,13 @@
   "website": "https://www.harborgym.com",
   "werkt": true
  },
+ "hawa-services": {
+  "eind_url": "https://www.hawaservices.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.hawaservices.nl/",
+  "werkt": true
+ },
  "hb-productions": {
   "eind_url": "https://hbproductions.nl/",
   "gecontroleerd": "2026-10-23",
@@ -4326,9 +5313,9 @@
   "werkt": true
  },
  "healtality": {
-  "eind_url": "https://healtality.nl/",
+  "eind_url": "http://www.healtality.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "503 (weert mogelijk bots)",
   "website": "http://www.healtality.nl/",
   "werkt": true
  },
@@ -4381,11 +5368,25 @@
   "website": "https://www.hellotuesday.nl/",
   "werkt": true
  },
+ "hendriks-dakbedekkingen-en-onderhoud": {
+  "eind_url": "https://hendriksdakbedekki.wixsite.com/hendriksdakbedekking",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://hendriksdakbedekki.wixsite.com/hendriksdakbedekking",
+  "werkt": true
+ },
  "hendriks-handelsonderneming": {
   "eind_url": "https://www.hendrikshandelonderneming.nl/contact.html",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.hendrikshandelonderneming.nl/contact.html",
+  "werkt": true
+ },
+ "hendriks-makelaardij-nijmegen": {
+  "eind_url": "https://hendriks.nl/makelaar-nijmegen",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://hendriks.nl/Vestiging/11/Nijmegen.html",
   "werkt": true
  },
  "henk-braam-fotografie": {
@@ -4444,11 +5445,46 @@
   "website": "http://hercurius.nl/",
   "werkt": false
  },
+ "hermsen-dakbedekkingen": {
+  "eind_url": "http://www.hermsen-dak.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.hermsen-dak.nl/",
+  "werkt": true
+ },
+ "hermsen-garantiemakelaars": {
+  "eind_url": "https://hermsenmakelaarsnijmegen.nl/?utm_source=gmb&utm_medium=link&utm_term=&utm_content=&utm_campaign=",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://hermsenmakelaarsnijmegen.nl/?utm_source=gmb&utm_medium=link&utm_term=&utm_content=&utm_campaign=",
+  "werkt": true
+ },
+ "hero-bouwmanagers": {
+  "eind_url": "https://herobouwmanagers.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.herobouwmanagers.nl/",
+  "werkt": true
+ },
  "hesters-vocals": {
   "eind_url": "http://www.hestersvocals.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not va",
   "website": "http://www.hestersvocals.nl/",
+  "werkt": true
+ },
+ "hestia": {
+  "eind_url": "https://hestia.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://hestia.nl/",
+  "werkt": true
+ },
+ "het-buitenland": {
+  "eind_url": "https://www.hetbuitenland.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://hetbuitenland.nl/",
   "werkt": true
  },
  "het-cafe-het-duurzame-warenhuis": {
@@ -4487,7 +5523,7 @@
   "werkt": true
  },
  "het-lemke": {
-  "eind_url": "http://www.zottelemke.nl/",
+  "eind_url": "https://zottelemke.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.zottelemke.nl/",
@@ -4515,7 +5551,7 @@
   "werkt": false
  },
  "hete-kip-op-locatie": {
-  "eind_url": "http://www.hetekipoplocatie.nl/",
+  "eind_url": "https://www.hetekipoplocatie.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.hetekipoplocatie.nl/",
@@ -4570,11 +5606,25 @@
   "website": "https://www.mariejosehoefs.nl/?y_source=1_MjU0NzE0OTAtNDgzLWxvY2F0aW9uLndlYnNpdGU%3D",
   "werkt": true
  },
+ "hoeneys-houtwerk": {
+  "eind_url": "https://www.hoeneys.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.hoeneys.nl/",
+  "werkt": true
+ },
  "hofs-fma": {
   "eind_url": "https://hofsfmajunior.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://hofsfma.nl/",
+  "werkt": true
+ },
+ "hoge-wei-ii": {
+  "eind_url": "https://www.woneninhogewei.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://www.woneninhogewei.nl/",
   "werkt": true
  },
  "holt-nijmegen": {
@@ -4596,6 +5646,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://holyroti.nl",
+  "werkt": true
+ },
+ "homan-makelaardij-nijmegen": {
+  "eind_url": "http://www.homanmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.homanmakelaardij.nl/",
   "werkt": true
  },
  "honden-in-nijmegen": {
@@ -4633,11 +5690,25 @@
   "website": "http://Www.hondentrimsalonnijmegen.nl/",
   "werkt": true
  },
+ "honigh-glasbewassing-en-schoonmaak": {
+  "eind_url": "https://schoonmaakbedrijfhonigh.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.schoonmaakbedrijfhonigh.nl/",
+  "werkt": true
+ },
  "hoogsteder-b-v": {
   "eind_url": "https://autoexpert-hoogsteder.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://autoexpert-hoogsteder.nl/",
+  "werkt": true
+ },
+ "horst-elektra-plus": {
+  "eind_url": "http://horstelektraplus.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://horstelektraplus.nl/",
   "werkt": true
  },
  "hotel-credible": {
@@ -4653,6 +5724,62 @@
   "reden": "200",
   "website": "https://hobnijmegen.nl",
   "werkt": true
+ },
+ "hout-van-goud": {
+  "eind_url": "https://houtvangoud.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.houtvangoud.nl/",
+  "werkt": true
+ },
+ "houtgenoten": {
+  "eind_url": "https://www.houtgenoten.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.houtgenoten.nl/",
+  "werkt": true
+ },
+ "houwen-makelaars": {
+  "eind_url": "https://www.houwenmakelaars.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.houwenmakelaars.nl/",
+  "werkt": true
+ },
+ "hoveniersbedrijf-de-ruijter": {
+  "eind_url": "https://deruijteroosterhout.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.deruijteroosterhout.com/",
+  "werkt": true
+ },
+ "hoveniersbedrijf-mahler": {
+  "eind_url": "https://www.mahlerhoveniers.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.mahlerhoveniers.nl/",
+  "werkt": true
+ },
+ "hp-bouw": {
+  "eind_url": "http://hp-bouw.nl/contact/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://hp-bouw.nl/contact/",
+  "werkt": false
+ },
+ "hsd-bouwtotaal": {
+  "eind_url": "http://www.hsdbouwtotaal.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.hsdbouwtotaal.nl/",
+  "werkt": false
+ },
+ "ht-betonstaal": {
+  "eind_url": "http://www.htbetonstaal.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.htbetonstaal.nl/",
+  "werkt": false
  },
  "hubert": {
   "eind_url": "https://hubertnijmegen.nl/",
@@ -4680,6 +5807,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.humphreys.nl/restaurants/humphreys-nijmegen/",
+  "werkt": true
+ },
+ "huting-schilderwerken": {
+  "eind_url": "http://www.huting-schilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.huting-schilderwerken.nl/",
   "werkt": true
  },
  "huurteams-nijmegen": {
@@ -4741,7 +5875,7 @@
  "id-hypotheken": {
   "eind_url": "http://www.id-hypotheken.nl/contact",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1032)",
   "website": "http://www.id-hypotheken.nl/contact",
   "werkt": true
  },
@@ -4787,6 +5921,13 @@
   "website": "https://www.impact-nijmegen.nl/",
   "werkt": true
  },
+ "imran-services-b-v": {
+  "eind_url": "https://imranservices.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.imranservices.nl/",
+  "werkt": true
+ },
  "in-de-blaauwe-hand": {
   "eind_url": "https://indeblaauwehand.nl",
   "gecontroleerd": "2026-10-23",
@@ -4801,11 +5942,25 @@
   "website": "https://www.indekazerne.nl/",
   "werkt": true
  },
+ "in-home-design": {
+  "eind_url": "https://inhome-design.co.uk/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://inhome-design.co.uk/",
+  "werkt": true
+ },
  "in-to-languages": {
   "eind_url": "https://www.ru.nl/radboud-into-languages",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.into.nl/",
+  "werkt": true
+ },
+ "inbeeld": {
+  "eind_url": "https://www.inbeeldmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.inbeeldmakelaardij.nl/",
   "werkt": true
  },
  "india-gate": {
@@ -4850,6 +6005,27 @@
   "website": "https://insightonline.nl/",
   "werkt": true
  },
+ "installatiebureau-wellen": {
+  "eind_url": "https://wellen.net/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.wellen.net",
+  "werkt": true
+ },
+ "installatietechniek-hartog": {
+  "eind_url": "http://www.hartogbv.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.hartogbv.nl/",
+  "werkt": false
+ },
+ "inter-france": {
+  "eind_url": "https://www.interfrance.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.interfrance.nl/",
+  "werkt": true
+ },
  "interscreen": {
   "eind_url": "https://www.interscreen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -4871,6 +6047,13 @@
   "website": "http://www.intervisiebegeleidertraining.nl/",
   "werkt": true
  },
+ "invo-tuinontwerp-en-advies": {
+  "eind_url": "http://www.invo-nijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.invo-nijmegen.com/",
+  "werkt": true
+ },
  "iphone-reparatie-nijmegen": {
   "eind_url": "http://iphonereparatienijmegen.com/",
   "gecontroleerd": "2026-10-23",
@@ -4879,7 +6062,7 @@
   "werkt": false
  },
  "ir-search-b-v": {
-  "eind_url": "https://ir-search.nl/nl/ir-search/",
+  "eind_url": "http://www.ir-search.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.ir-search.nl/",
@@ -4920,6 +6103,13 @@
   "website": "https://jontwerp.nl/",
   "werkt": true
  },
+ "j-s-a-elektrotechniek": {
+  "eind_url": "https://jsaelektrotechniek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://jsaelektrotechniek.nl/",
+  "werkt": true
+ },
  "jacobs-auto-s": {
   "eind_url": "https://www.jacobsautosnijmegen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -4932,6 +6122,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.jadda.nl/",
+  "werkt": true
+ },
+ "james-allworthy": {
+  "eind_url": "http://www.jamesallworthy.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://jamesallworthy.com/",
   "werkt": true
  },
  "james-horeca-b-v": {
@@ -4948,6 +6145,13 @@
   "website": "http://jan-advocatuur.nl/",
   "werkt": true
  },
+ "jan-bos-glas-en-schilderwerken-totaalbouw-bv": {
+  "eind_url": "https://janbosschilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.janbosschilderwerken.nl/",
+  "werkt": true
+ },
  "jan-klaassen-eetcafe": {
   "eind_url": "https://jan-klaassen.com/",
   "gecontroleerd": "2026-10-23",
@@ -4962,11 +6166,25 @@
   "website": "https://www.jannijmegen.nl",
   "werkt": true
  },
+ "jan-van-lieshout-makelaardij-o-g": {
+  "eind_url": "https://www.janvanlieshout.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.janvanlieshout.nl/",
+  "werkt": true
+ },
  "jan-zandberg-advocaat": {
   "eind_url": "http://www.zandbergadvocaten.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "twijfel: [Errno 104] Connection reset by peer",
   "website": "http://www.zandbergadvocaten.nl/",
+  "werkt": true
+ },
+ "jansen-en-van-ralen-bv": {
+  "eind_url": "http://www.jansenenvanralen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.jansenenvanralen.nl",
   "werkt": true
  },
  "je-ontwikkeling-jouw-partner-in-digitaal-leren": {
@@ -5025,11 +6243,25 @@
   "website": "http://www.johnnys.nl/",
   "werkt": true
  },
+ "jonker-techniek": {
+  "eind_url": "http://www.jonkertechniek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.jonkertechniek.nl/",
+  "werkt": false
+ },
  "joomblocks-com": {
   "eind_url": "https://www.joomblocks.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.joomblocks.com/",
+  "werkt": true
+ },
+ "joseph-schilderwerken": {
+  "eind_url": "https://www.josephschilderwerken.info/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.josephschilderwerken.info/",
   "werkt": true
  },
  "joyomedia": {
@@ -5089,9 +6321,9 @@
   "werkt": true
  },
  "jurriaan-huting": {
-  "eind_url": "https://huting.net/",
+  "eind_url": "http://huting.net/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "503 (weert mogelijk bots)",
   "website": "http://huting.net/",
   "werkt": true
  },
@@ -5116,6 +6348,13 @@
   "website": "http://www.kalacafe.nl/",
   "werkt": true
  },
+ "kamerverhuur": {
+  "eind_url": "http://www.kamerverhuur-benw.nl/nl-NL/contact",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.kamerverhuur-benw.nl/nl-NL/contact",
+  "werkt": true
+ },
  "kaniwa": {
   "eind_url": "https://kaniwa.foodticket.nl/foodticket/cgi/bestel.cgi",
   "gecontroleerd": "2026-10-23",
@@ -5138,7 +6377,7 @@
   "werkt": false
  },
  "karaoke-cafe-van-deelen": {
-  "eind_url": "https://cafevandeelen.nl/",
+  "eind_url": "http://cafevandeelen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://cafevandeelen.nl/",
@@ -5163,6 +6402,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.karstenrussfotografie.com/",
+  "werkt": true
+ },
+ "kartal-meubels": {
+  "eind_url": "https://www.kartalmeubels.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: [Errno 104] Connection reset by peer",
+  "website": "https://www.kartalmeubels.nl/",
   "werkt": true
  },
  "karwas": {
@@ -5194,17 +6440,38 @@
   "werkt": true
  },
  "kc-nijmegen": {
-  "eind_url": "https://kcnijmegen.nl/wordpress/",
+  "eind_url": "http://www.kcnijmegen.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "twijfel: The read operation timed out",
   "website": "http://www.kcnijmegen.nl/",
   "werkt": true
+ },
+ "kdv-bso-struin": {
+  "eind_url": "https://struin.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.struin.nl/",
+  "werkt": true
+ },
+ "keet-makelaardij-interieur": {
+  "eind_url": "http://www.keetmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "http://www.keetmakelaardij.nl/",
+  "werkt": false
  },
  "keijser-van-der-velden-advocaten": {
   "eind_url": "https://www.keijservandervelden.nl/nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.keijservandervelden.nl/",
+  "werkt": true
+ },
+ "keizer-karel-bedrijfsmakelaars": {
+  "eind_url": "https://www.kkbedrijfsmakelaars.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.kkbedrijfsmakelaars.nl/",
   "werkt": true
  },
  "keizer-karel-webdesign": {
@@ -5226,6 +6493,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://kernkracht-academie.nl/",
+  "werkt": true
+ },
+ "keuken-kampioen-nijmegen": {
+  "eind_url": "https://www.keukenkampioen.nl/showrooms/nijmegen/?utm_source=bing&utm_medium=organic&utm_campaign=bing_places",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.keukenkampioen.nl/showrooms/nijmegen/?utm_source=bing&utm_medium=organic&utm_campaign=bing_places",
+  "werkt": true
+ },
+ "keukenskasten": {
+  "eind_url": "http://www.keukenskasten.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.keukenskasten.nl/",
   "werkt": true
  },
  "key-design": {
@@ -5292,7 +6573,7 @@
   "werkt": true
  },
  "kinderopvang-de-eerste-stap-bij-ons": {
-  "eind_url": "http://www.deeerstestap.nl/",
+  "eind_url": "https://www.deeerstestap.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.deeerstestap.nl/",
@@ -5310,6 +6591,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.kinderopvangheyendael.nl/",
+  "werkt": true
+ },
+ "kinderopvang-ikke-b-v": {
+  "eind_url": "http://www.kinderopvangikke.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.kinderopvangikke.nl/",
   "werkt": true
  },
  "kindertuin": {
@@ -5345,6 +6633,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.kion.nl",
+  "werkt": true
+ },
+ "kion-kinderopvang": {
+  "eind_url": "https://kion.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.kion.nl/",
+  "werkt": true
+ },
+ "kion-kinderopvang-de-kroon": {
+  "eind_url": "https://kion.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.kion.nl/",
   "werkt": true
  },
  "kip-media": {
@@ -5394,6 +6696,41 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.kk.nl/",
+  "werkt": true
+ },
+ "klusbedrijf-klasse": {
+  "eind_url": "https://www.schildersbedrijfklasse.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://schildersbedrijfklasse.nl/",
+  "werkt": true
+ },
+ "klusnijmegen": {
+  "eind_url": "https://klusnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://klusnijmegen.nl/",
+  "werkt": true
+ },
+ "klussenbedrijf-mint": {
+  "eind_url": "https://klussenbedrijfmint.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.klussenbedrijfmint.nl/",
+  "werkt": true
+ },
+ "klussenier-arno-vink": {
+  "eind_url": "https://arnovink.klussenier.nl/klusbedrijf/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.arnovink.klussenier.nl/",
+  "werkt": true
+ },
+ "klussenier-stephan-de-kruif": {
+  "eind_url": "https://www.klussenierstephandekruif.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.klussenierstephandekruif.nl/",
   "werkt": true
  },
  "koenproducties": {
@@ -5452,6 +6789,13 @@
   "website": "http://www.kollervision.nl/",
   "werkt": true
  },
+ "kolmeijer-nijmegen": {
+  "eind_url": "https://www.kolmeijernijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.kolmeijernijmegen.nl/",
+  "werkt": true
+ },
  "komagene-nijmegen": {
   "eind_url": "http://www.komagenenijmegen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -5478,6 +6822,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.koolnijmegen.nl",
+  "werkt": true
+ },
+ "koophuis-makelaars-nijmegen": {
+  "eind_url": "https://www.koophuis.nl/vestigingen/10/Koophuis-makelaars-Nijmegen",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.koophuis.nl/vestigingen/10/Koophuis-makelaars-Nijmegen",
   "werkt": true
  },
  "koos": {
@@ -5522,6 +6873,20 @@
   "website": "http://www.kronkel.nl",
   "werkt": true
  },
+ "kropman": {
+  "eind_url": "https://kropman.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.kropman.nl/",
+  "werkt": true
+ },
+ "ksr-afbouw-en-timmerbedrijf": {
+  "eind_url": "http://www.ksrafbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.ksrafbouw.nl/",
+  "werkt": false
+ },
  "kuijpers": {
   "eind_url": "https://autovakmeester.nl/vestiging/autoservice-kuijpers/",
   "gecontroleerd": "2026-10-23",
@@ -5549,6 +6914,13 @@
   "reden": "pagina bestaat niet (404)",
   "website": "http://www.kuun.nl/",
   "werkt": false
+ },
+ "kwast-meesters-bv": {
+  "eind_url": "https://www.kwastmeesters.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.kwastmeesters.nl/",
+  "werkt": true
  },
  "kwh-people-interim-recruitment": {
   "eind_url": "https://www.kwh-people.com/",
@@ -5627,6 +6999,13 @@
   "website": "http://www.groovydoodles.nl/",
   "werkt": true
  },
+ "lamers-high-tech-systems-bv": {
+  "eind_url": "https://aalberts-am.com/lamers/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.lamershts.com",
+  "werkt": true
+ },
  "landgoed-brakkesteyn": {
   "eind_url": "https://www.landgoedbrakkesteyn.nl/wp-content/uploads/2026/06/Zomerdeals-2026-Landgoed-Brakkesteyn.pdf?pid=14934",
   "gecontroleerd": "2026-10-23",
@@ -5646,6 +7025,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.laradeelt.nl/",
+  "werkt": true
+ },
+ "lars-rikken": {
+  "eind_url": "http://www.larsrikken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.larsrikken.nl/",
+  "werkt": true
+ },
+ "laurens-evers-timmerwerk": {
+  "eind_url": "https://everstimmerwerk.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.everstimmerwerk.nl/",
   "werkt": true
  },
  "law24-b-v": {
@@ -5686,7 +7079,7 @@
  "leafsum-fotografie": {
   "eind_url": "http://www.leafsum.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not va",
+  "reden": "200",
   "website": "http://www.leafsum.nl/",
   "werkt": true
  },
@@ -5718,6 +7111,34 @@
   "website": "https://LegalTube.nl/",
   "werkt": true
  },
+ "legservice-nederland": {
+  "eind_url": "https://www.legservicenederland.nl/contact/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.legservicenederland.nl/contact/",
+  "werkt": true
+ },
+ "lekdetec": {
+  "eind_url": "https://www.lekdetec.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.lekdetec.nl/",
+  "werkt": true
+ },
+ "lennard-keijser": {
+  "eind_url": "http://lennardkeijser.nl/contact/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://lennardkeijser.nl/contact/",
+  "werkt": true
+ },
+ "lens-klussenbedrijf": {
+  "eind_url": "http://www.lensklussenbedrijf.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.lensklussenbedrijf.com/",
+  "werkt": false
+ },
  "lent": {
   "eind_url": "https://hetketelhuisje.nl/",
   "gecontroleerd": "2026-10-23",
@@ -5739,11 +7160,25 @@
   "website": "https://www.lentmark-kiosk.nl/",
   "werkt": true
  },
+ "lents-leven": {
+  "eind_url": "http://www.funda.nl/koop/lent/huis-49056642-groot-brittanniestraat-222/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.funda.nl/koop/lent/huis-49056642-groot-brittanniestraat-222/",
+  "werkt": true
+ },
  "letterdesk": {
   "eind_url": "https://www.letterdesk.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://letterdesk.nl/",
+  "werkt": true
+ },
+ "level2-makelaars": {
+  "eind_url": "https://www.level2makelaars.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://level2makelaars.nl/",
   "werkt": true
  },
  "lida-derks": {
@@ -5851,6 +7286,13 @@
   "website": "http://www.livepianobar.nl",
   "werkt": false
  },
+ "lock-it-24-7-slotenmaker-nijmegen-arnhem": {
+  "eind_url": "https://www.lock-it.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.lock-it.nl/",
+  "werkt": true
+ },
  "lodewijk": {
   "eind_url": "http://www.lodewijk-nijmegen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -5865,6 +7307,13 @@
   "website": "https://www.eetbarloek.nl",
   "werkt": true
  },
+ "loermans-schilderwerken": {
+  "eind_url": "https://www.loermansschilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.loermansschilderwerken.nl/",
+  "werkt": true
+ },
  "loetje": {
   "eind_url": "https://www.loetje.nl/locaties/nijmegen/",
   "gecontroleerd": "2026-10-23",
@@ -5877,6 +7326,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.loof.red/",
+  "werkt": true
+ },
+ "looijschilder-schilderwerken": {
+  "eind_url": "https://looijschilder.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.looijschilder.nl/",
   "werkt": true
  },
  "lookinsharp": {
@@ -5928,6 +7384,13 @@
   "website": "https://ondernemers.lsalingua.nl/",
   "werkt": true
  },
+ "luc-beumer-vastgoed": {
+  "eind_url": "https://lucbeumervastgoed.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.lucbeumervastgoed.nl/",
+  "werkt": true
+ },
  "lucas-prigge": {
   "eind_url": "https://lucasprigge.com/",
   "gecontroleerd": "2026-10-23",
@@ -5970,6 +7433,13 @@
   "website": "https://www.blixemnijmegen.nl/",
   "werkt": true
  },
+ "lundia-showroom": {
+  "eind_url": "https://lundia.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://lundia.com/",
+  "werkt": true
+ },
  "lyceo-nijmegen-archipelstraat": {
   "eind_url": "https://www.lyceo.nl/vestigingen/nijmegen/archipelstraat/?utm_source=GMB&utm_medium=nijmegen-archipelstraat&utm_campaign=local",
   "gecontroleerd": "2026-10-23",
@@ -5982,6 +7452,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.madeinasia.nl/",
+  "werkt": true
+ },
+ "maaswaaldakbedekkingen": {
+  "eind_url": "https://maaswaaldakbedekkingen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "https://maaswaaldakbedekkingen.nl/",
   "werkt": true
  },
  "maatschap-de-mul-zegger-notarissen": {
@@ -6026,11 +7503,32 @@
   "website": "https://www.mainiusadministratie.nl/",
   "werkt": true
  },
+ "maison-nijmegen": {
+  "eind_url": "https://www.maisonnijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "https://www.maisonnijmegen.nl",
+  "werkt": true
+ },
  "major7-music-teachers": {
   "eind_url": "https://major7.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.major7.nl/",
+  "werkt": true
+ },
+ "makelaardien": {
+  "eind_url": "http://www.makelaardien.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.makelaardien.nl/",
+  "werkt": true
+ },
+ "makelpunt-nederland": {
+  "eind_url": "https://makelpunt.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.makelpunt.nl/",
   "werkt": true
  },
  "malle-babbe": {
@@ -6104,10 +7602,17 @@
   "werkt": true
  },
  "marijke-m-foncke": {
-  "eind_url": "http://www.fonckeschrijfwerk.nl/contact.html",
+  "eind_url": "https://www.fonckeschrijfwerk.nl/contact.html",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.fonckeschrijfwerk.nl/contact.html",
+  "werkt": true
+ },
+ "marjan-van-heerde-makelaardij": {
+  "eind_url": "https://marjanvanheerde.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://marjanvanheerde.nl/",
   "werkt": true
  },
  "marjolein-broeren": {
@@ -6194,6 +7699,13 @@
   "website": "https://matersaccountants.nl/",
   "werkt": true
  },
+ "maurice-toonen-schilderwerken": {
+  "eind_url": "http://mauricetoonen-schilderwerken.nl/index.html",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://mauricetoonen-schilderwerken.nl/index.html",
+  "werkt": true
+ },
  "maxflex-uitzendbureau": {
   "eind_url": "https://www.maxflex.nl/",
   "gecontroleerd": "2026-10-23",
@@ -6208,6 +7720,13 @@
   "website": "https://www.maxstudios.nl/",
   "werkt": true
  },
+ "maxworkz": {
+  "eind_url": "https://www.maxworkz.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://maxworkz.nl/",
+  "werkt": true
+ },
  "mazars-nijmegen": {
   "eind_url": "https://www.forvismazars.com/nl/nl",
   "gecontroleerd": "2026-10-23",
@@ -6220,6 +7739,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.oostendorp-auto.nl/",
+  "werkt": true
+ },
+ "mbe-flex": {
+  "eind_url": "https://www.mbegroep.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.mbegroep.nl/",
   "werkt": true
  },
  "mccafe": {
@@ -6244,7 +7770,7 @@
   "werkt": true
  },
  "meet-ribs-nijmegen": {
-  "eind_url": "https://www.meetandribs.nl/",
+  "eind_url": "http://www.meetandribs.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.meetandribs.nl/",
@@ -6262,6 +7788,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.uitvaartverzorgernijmegen.nl/",
+  "werkt": true
+ },
+ "melssen-bouw": {
+  "eind_url": "https://www.melssenbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.melssenbouw.nl/",
   "werkt": true
  },
  "meneer-otis": {
@@ -6286,7 +7819,7 @@
   "werkt": true
  },
  "merano": {
-  "eind_url": "https://www.meranonijmegen.nl/",
+  "eind_url": "http://www.meranonijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.meranonijmegen.nl/",
@@ -6313,6 +7846,13 @@
   "website": "https://www.met-marijn.nl/",
   "werkt": true
  },
+ "met-maurice": {
+  "eind_url": "http://www.met-maurice.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.met-maurice.nl/",
+  "werkt": true
+ },
  "metamigo": {
   "eind_url": "https://metamigo.nl/",
   "gecontroleerd": "2026-10-23",
@@ -6320,10 +7860,31 @@
   "website": "https://metamigo.nl/",
   "werkt": true
  },
+ "meubelmakerij-tommiek": {
+  "eind_url": "https://tommiek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.tommiek.nl/",
+  "werkt": true
+ },
+ "meubelmakerij-van-mameren": {
+  "eind_url": "https://meubelmakerijvanmameren.nl/contact/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://meubelmakerijvanmameren.nl/contact/",
+  "werkt": true
+ },
+ "meubelstoffering-by-anke": {
+  "eind_url": "https://www.meubelstofferingbyanke.nl/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=10001132211091622967",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.meubelstofferingbyanke.nl/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=10001132211091622967",
+  "werkt": true
+ },
  "mexita": {
   "eind_url": "http://www.mexita.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1032)",
+  "reden": "200",
   "website": "http://www.mexita.nl/",
   "werkt": true
  },
@@ -6332,6 +7893,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://mhautomotive.nl/",
+  "werkt": true
+ },
+ "mhv-schilderwerken": {
+  "eind_url": "https://mhvschilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.mhvschilderwerken.nl/",
   "werkt": true
  },
  "mi-barrio": {
@@ -6356,7 +7924,7 @@
   "werkt": true
  },
  "mio-personal-training": {
-  "eind_url": "http://www.mio.training/",
+  "eind_url": "https://mio.training/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.mio.training/",
@@ -6409,6 +7977,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.modation.nl/",
+  "werkt": true
+ },
+ "moed-onroerend-goed": {
+  "eind_url": "https://www.moedbv.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.moedbv.nl/",
   "werkt": true
  },
  "moeke": {
@@ -6467,6 +8042,13 @@
   "website": "https://monomarketing.nl/",
   "werkt": true
  },
+ "monumenten-advies-bureau": {
+  "eind_url": "http://www.monumentenadviesbureau.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.monumentenadviesbureau.nl/",
+  "werkt": true
+ },
  "monuta-uitvaartcentrum-rustoord": {
   "eind_url": "https://www.monuta.nl/vestiging/begraafplaats-rustoord/",
   "gecontroleerd": "2026-10-23",
@@ -6479,6 +8061,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.mooibekeken.nl/",
+  "werkt": true
+ },
+ "more-schilderwerken-klussenbedrijf": {
+  "eind_url": "https://www.morehands.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.morehands.nl/",
   "werkt": true
  },
  "more-than-content": {
@@ -6521,6 +8110,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://mrk-one.nl/",
+  "werkt": true
+ },
+ "ms-stoffering": {
+  "eind_url": "https://ms-stoffering.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.ms-stoffering.nl/",
   "werkt": true
  },
  "mulder-belastingadvies": {
@@ -6587,7 +8183,7 @@
   "werkt": true
  },
  "my35-nijmegen": {
-  "eind_url": "http://www.my35.nl/",
+  "eind_url": "https://www.my35.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.my35.nl/",
@@ -6615,7 +8211,7 @@
   "werkt": true
  },
  "najade-uitvaarten": {
-  "eind_url": "http://najade-uitvaarten.nl/",
+  "eind_url": "https://najade-uitvaarten.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://najade-uitvaarten.nl/",
@@ -6629,6 +8225,13 @@
   "werkt": true
  },
  "nannies-joulestraat": {
+  "eind_url": "https://nannies.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.nannies.nl/",
+  "werkt": true
+ },
+ "nannies-kinderdagverblijven-kerkenbos": {
   "eind_url": "https://nannies.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
@@ -6670,6 +8273,13 @@
   "website": "https://www.naswerkt.nl/",
   "werkt": true
  },
+ "natuurtuin-de-kaardebol": {
+  "eind_url": "https://www.kaardebolnijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://www.kaardebolnijmegen.nl",
+  "werkt": true
+ },
  "ndavr-digital": {
   "eind_url": "https://ndavr.nl/",
   "gecontroleerd": "2026-10-23",
@@ -6698,6 +8308,20 @@
   "website": "http://www.nederlandsdebaas.nl/",
   "werkt": true
  },
+ "neo-schilderwerken": {
+  "eind_url": "https://www.stucvlies.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "https://www.stucvlies.nl/",
+  "werkt": true
+ },
+ "nesu-bv-schoonmaakbedrijf": {
+  "eind_url": "https://www.nesu.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.nesu.nl",
+  "werkt": true
+ },
  "nevel-wild-ales": {
   "eind_url": "https://www.nevel.org/",
   "gecontroleerd": "2026-10-23",
@@ -6713,7 +8337,7 @@
   "werkt": true
  },
  "new-dutch": {
-  "eind_url": "http://www.newdutchstreetfood.nl/",
+  "eind_url": "https://newdutchstreetfood.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.newdutchstreetfood.nl/",
@@ -6740,6 +8364,13 @@
   "website": "https://www.nextmessage.nl/nl/",
   "werkt": true
  },
+ "nextroof-dakdekkers": {
+  "eind_url": "https://www.nextroofdakdekkers.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.nextroofdakdekkers.nl/",
+  "werkt": true
+ },
  "nextup-marketing": {
   "eind_url": "https://www.nextupmarketing.nl/",
   "gecontroleerd": "2026-10-23",
@@ -6761,6 +8392,20 @@
   "website": "http://www.nidokinderopvang.nl/",
   "werkt": true
  },
+ "niesta-dakwerken": {
+  "eind_url": "http://www.niestadakwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.niestadakwerken.nl/",
+  "werkt": true
+ },
+ "nijmeegs-aannemersbedrijf-h-j-giesbertz-b-v": {
+  "eind_url": "https://www.aannemersbedrijf-giesbertz.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.aannemersbedrijf-giesbertz.nl/",
+  "werkt": true
+ },
  "nijmeegse-avondschool": {
   "eind_url": "http://www.nijmeegse-avondschool.nl/contactgegevens/",
   "gecontroleerd": "2026-10-23",
@@ -6768,11 +8413,32 @@
   "website": "http://www.nijmeegse-avondschool.nl/contactgegevens/",
   "werkt": true
  },
+ "nijmegen-dakdekker": {
+  "eind_url": "https://nijmegendakdekker.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://nijmegendakdekker.com",
+  "werkt": true
+ },
  "nijmegen-outdoor": {
   "eind_url": "https://nijmegenoutdoor.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.nijmegenoutdoor.nl/",
+  "werkt": true
+ },
+ "nijmegen-stukadoor": {
+  "eind_url": "https://nijmegenstukadoor.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://nijmegenstukadoor.com/",
+  "werkt": true
+ },
+ "nijmegen-verhuisbedrijf": {
+  "eind_url": "https://nijmegenverhuisbedrijf.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://nijmegenverhuisbedrijf.com/",
   "werkt": true
  },
  "nijmegen-volvo-car-nederland": {
@@ -6810,17 +8476,24 @@
   "website": "http://www.nimmamoves.nl/",
   "werkt": true
  },
+ "nimma-vastgoed-beheer": {
+  "eind_url": "http://www.nimmavastgoed.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.nimmavastgoed.nl/",
+  "werkt": true
+ },
  "nimweegse-nuilertjes": {
-  "eind_url": "https://www.iederznvak.nl/",
+  "eind_url": "http://www.iederznvak.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.iederznvak.nl/",
   "werkt": true
  },
  "niro-design-freelance-conversie-specialist": {
-  "eind_url": "https://royschieving.nl/",
+  "eind_url": "http://www.nirodesign.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "503 (weert mogelijk bots)",
   "website": "http://www.nirodesign.nl/",
   "werkt": true
  },
@@ -6829,6 +8502,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.nisantasi.nl/arnhem/marina-nijmegen/",
+  "werkt": true
+ },
+ "nkinterieurbouw": {
+  "eind_url": "https://nkinterieurbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.nkinterieurbouw.nl/",
+  "werkt": true
+ },
+ "nmg-makelaardij": {
+  "eind_url": "https://nmgwonen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://nmgwonen.nl",
   "werkt": true
  },
  "nn-banden": {
@@ -6908,6 +8595,13 @@
   "website": "http://Www.noviofit.nl/",
   "werkt": true
  },
+ "novio-living": {
+  "eind_url": "https://www.novioliving.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.novioliving.nl/",
+  "werkt": true
+ },
  "noviol-bv-smeermiddelen": {
   "eind_url": "https://www.noviol.eu/",
   "gecontroleerd": "2026-10-23",
@@ -6916,9 +8610,9 @@
   "werkt": true
  },
  "noviotax": {
-  "eind_url": "http://www.novio.tax/",
+  "eind_url": "https://novio.tax/",
   "gecontroleerd": "2026-10-23",
-  "reden": "twijfel: [Errno 104] Connection reset by peer",
+  "reden": "200",
   "website": "http://www.novio.tax/",
   "werkt": true
  },
@@ -6943,12 +8637,26 @@
   "website": "http://www.nuchter.nl/",
   "werkt": true
  },
+ "numaga-vastgoed": {
+  "eind_url": "https://www.numagavastgoed.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.numagavastgoed.nl/",
+  "werkt": true
+ },
  "numberzz-finance-people": {
   "eind_url": "https://www.numberzz.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.numberzz.nl/",
   "werkt": true
+ },
+ "nuwoning": {
+  "eind_url": "http://www.nuwoning.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.nuwoning.nl",
+  "werkt": false
  },
  "oefenruimte": {
   "eind_url": "https://oefenruimte.nu/",
@@ -7006,6 +8714,13 @@
   "website": "https://www.onestepmedia.nl/",
   "werkt": true
  },
+ "ongediertebestrijding-nijmegen": {
+  "eind_url": "https://ongediertebestrijdingnijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://ongediertebestrijdingnijmegen.com/",
+  "werkt": true
+ },
  "onited-vh-infradax-overheid-nijmegen": {
   "eind_url": "https://www.onited.com/",
   "gecontroleerd": "2026-10-23",
@@ -7025,6 +8740,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
   "website": "https://onsthuisnijmegen.nl",
+  "werkt": true
+ },
+ "onstenk-bouw-onderhoud": {
+  "eind_url": "https://onstenkbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.onstenkbouw.nl/",
+  "werkt": true
+ },
+ "ontstoppingsbedrijf-nijmegen": {
+  "eind_url": "https://ontstoppingsbedrijfnijmegen.net/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://ontstoppingsbedrijfnijmegen.net/",
   "werkt": true
  },
  "ookini": {
@@ -7055,11 +8784,25 @@
   "website": "https://www.toyota-nijmegen.nl",
   "werkt": true
  },
+ "ooststede-makelaars": {
+  "eind_url": "https://www.ooststede.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.ooststede.nl/",
+  "werkt": true
+ },
  "ophirah-e-commerce-projecten": {
   "eind_url": "https://batao.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://ophirah.nl/",
+  "werkt": true
+ },
+ "opmeer-schilder": {
+  "eind_url": "http://schildersbedrijfopmeer.nl/contact/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "500 (weert mogelijk bots)",
+  "website": "http://schildersbedrijfopmeer.nl/contact/",
   "werkt": true
  },
  "opscheppers-horeca-creatives": {
@@ -7098,9 +8841,9 @@
   "werkt": true
  },
  "orthotic-shop-us": {
-  "eind_url": "http://www.beijons.nl/",
+  "eind_url": "https://proeflokaalbeijons.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "503 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://www.beijons.nl/",
   "werkt": true
  },
@@ -7174,6 +8917,13 @@
   "website": "https://paradiso-nijmegen.nl",
   "werkt": true
  },
+ "parc-margriet": {
+  "eind_url": "http://www.parcmargriet.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.parcmargriet.nl/",
+  "werkt": false
+ },
  "parkzicht": {
   "eind_url": "https://www.parkzicht-nijmegen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -7226,7 +8976,7 @@
  "pasta-e-fagioli": {
   "eind_url": "http://www.pastaefagioli.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "500 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://www.pastaefagioli.nl/",
   "werkt": true
  },
@@ -7271,6 +9021,13 @@
   "reden": "200",
   "website": "http://www.paulienvarkevisser.com/",
   "werkt": true
+ },
+ "peels-bouwmij": {
+  "eind_url": "http://www.klokbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.klokbouw.nl/",
+  "werkt": false
  },
  "peijnenburg-re-integratie-nijmegen": {
   "eind_url": "https://peijnenburgreintegratie.nl/locaties/nijmegen",
@@ -7399,7 +9156,7 @@
   "werkt": true
  },
  "pianofluitpraktijk": {
-  "eind_url": "http://www.pianofluitpraktijk.nl/",
+  "eind_url": "https://www.pianofluitpraktijk.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.pianofluitpraktijk.nl/",
@@ -7538,6 +9295,13 @@
   "website": "http://www.plato-accountants.nl/",
   "werkt": true
  },
+ "play2gether": {
+  "eind_url": "http://www.play2gether.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.play2gether.nl/",
+  "werkt": false
+ },
  "plek-nijmegen": {
   "eind_url": "https://pleknijmegen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -7606,6 +9370,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.doornroosje.nl/merleyn",
+  "werkt": true
+ },
+ "postema-makelaars-taxateurs": {
+  "eind_url": "https://www.postema-makelaars.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.postema-makelaars.nl/",
+  "werkt": true
+ },
+ "pouwerhuis": {
+  "eind_url": "https://www.pouwerhuis.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pouwerhuis.nl/",
   "werkt": true
  },
  "pp-personeelsdiensten-hogelandseweg": {
@@ -7685,6 +9463,13 @@
   "website": "https://profileheurkensgroep.nl/",
   "werkt": true
  },
+ "project-uniek": {
+  "eind_url": "https://www.projectuniek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.projectuniek.nl/",
+  "werkt": true
+ },
  "provectas": {
   "eind_url": "http://Www.provectas.nl/",
   "gecontroleerd": "2026-10-23",
@@ -7699,11 +9484,25 @@
   "website": "https://www.proxeus.nl/",
   "werkt": true
  },
+ "psb-montage": {
+  "eind_url": "https://www.psbmontage.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://psbmontage.nl/",
+  "werkt": true
+ },
  "puck-specialty-coffee": {
   "eind_url": "http://puckspecialtycoffee.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://puckspecialtycoffee.nl/",
+  "werkt": true
+ },
+ "pulles-makelaardij": {
+  "eind_url": "https://www.pullesmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pullesmakelaardij.nl/",
   "werkt": true
  },
  "pulse-flow": {
@@ -7734,6 +9533,13 @@
   "website": "http://www.puux.nl/",
   "werkt": true
  },
+ "pz-schilders": {
+  "eind_url": "https://www.pzschilders.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.pzschilders.nl/",
+  "werkt": true
+ },
  "q-accountants-and-tax": {
   "eind_url": "http://qaccountants.nl/",
   "gecontroleerd": "2026-10-23",
@@ -7753,6 +9559,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.racarcleaning.nl/",
+  "werkt": true
+ },
+ "r-giesen-elektro": {
+  "eind_url": "https://www.giesenelektro.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.giesenelektro.nl/",
   "werkt": true
  },
  "r-rengers-auto-s": {
@@ -7777,10 +9590,17 @@
   "werkt": true
  },
  "radboud-university-food-beverage": {
-  "eind_url": "https://www.ru.nl/",
+  "eind_url": "http://www.ru.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "subpagina weg (404), homepage werkt",
   "website": "http://www.ru.nl/refter",
+  "werkt": true
+ },
+ "raijmann-tegelwerken": {
+  "eind_url": "https://raijmanntegelwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://raijmanntegelwerken.nl/",
   "werkt": true
  },
  "rake-taal": {
@@ -7923,6 +9743,27 @@
   "website": "https://www.renatos.nl/pizzerianijmegen",
   "werkt": true
  },
+ "rene-fluitman": {
+  "eind_url": "http://renefluitman.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://renefluitman.nl/",
+  "werkt": true
+ },
+ "rene-lansink-meubels-op-maat": {
+  "eind_url": "http://www.renelansink.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.renelansink.nl/",
+  "werkt": true
+ },
+ "renewatt-thuisbatterij": {
+  "eind_url": "https://renewatt.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://renewatt.nl/",
+  "werkt": true
+ },
  "repair-professionals": {
   "eind_url": "https://www.repairprofessionals.nl/",
   "gecontroleerd": "2026-10-23",
@@ -7935,6 +9776,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://reputate.co/nl/",
+  "werkt": true
+ },
+ "residence-tergouw": {
+  "eind_url": "https://uwdroom.com/#contact-uwdroom",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://uwdroom.com/#contact-uwdroom",
   "werkt": true
  },
  "restaurant-de-hemel": {
@@ -7987,7 +9835,7 @@
   "werkt": false
  },
  "restaurant-wokforgo": {
-  "eind_url": "http://www.wokforgo.nl/",
+  "eind_url": "https://wokforgo.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.wokforgo.nl/",
@@ -8021,10 +9869,24 @@
   "website": "https://www.revenuecreative.com/",
   "werkt": true
  },
+ "reverti-arbo-re-integratie": {
+  "eind_url": "https://www.reverti.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.reverti.nl/",
+  "werkt": true
+ },
+ "revibouw": {
+  "eind_url": "https://www.revibouw.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.revibouw.com/",
+  "werkt": true
+ },
  "rex": {
   "eind_url": "https://rexnijmegen.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "twijfel: [Errno 104] Connection reset by peer",
+  "reden": "200",
   "website": "https://rexnijmegen.nl/",
   "werkt": true
  },
@@ -8035,8 +9897,15 @@
   "website": "http://www.reynhard.nl/",
   "werkt": true
  },
+ "rh-cleaning": {
+  "eind_url": "http://rh-cleaning.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://rh-cleaning.nl/",
+  "werkt": true
+ },
  "rhodon": {
-  "eind_url": "http://www.rhodonnijmegen.nl",
+  "eind_url": "https://www.rhodonnijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.rhodonnijmegen.nl",
@@ -8064,7 +9933,7 @@
   "werkt": true
  },
  "rijschool-nivoxl": {
-  "eind_url": "http://www.NivoXL.nl/",
+  "eind_url": "https://nivoxl.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.NivoXL.nl/",
@@ -8098,6 +9967,13 @@
   "website": "http://rinisurinaamseten.nl/",
   "werkt": true
  },
+ "riool-ontstoppen-nijmegen-ontstoppingsbedrijf-prof": {
+  "eind_url": "https://www.ontstoppingbedrijf-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://ontstoppingbedrijf-nijmegen.nl/",
+  "werkt": true
+ },
  "ristorante-pizzeria-la-casa": {
   "eind_url": "https://ristorante-lacasa.nl/",
   "gecontroleerd": "2026-10-23",
@@ -8126,6 +10002,13 @@
   "website": "https://rmic.nl/",
   "werkt": true
  },
+ "rob-disbergen-makelaars": {
+  "eind_url": "https://robdisbergen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.robdisbergen.nl/",
+  "werkt": true
+ },
  "rob-gieling-fotografie": {
   "eind_url": "http://www.robgieling.nl/",
   "gecontroleerd": "2026-10-23",
@@ -8145,6 +10028,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "503 (weert mogelijk bots)",
   "website": "https://www.robinsglutenfree.nl/",
+  "werkt": true
+ },
+ "robin-schilderwerken": {
+  "eind_url": "https://rdj-schilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://rdj-schilderwerken.nl/",
   "werkt": true
  },
  "roc-diensten": {
@@ -8175,6 +10065,20 @@
   "website": "https://stmakelaars.nl/nijmegen/",
   "werkt": true
  },
+ "roje-schoonmaak": {
+  "eind_url": "http://rojeschoonmaak.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (",
+  "website": "http://rojeschoonmaak.nl/",
+  "werkt": true
+ },
+ "rolling-stonesstraat-te-lent-verkocht": {
+  "eind_url": "https://kamernet.nl:443/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.kamernet.nl/",
+  "werkt": true
+ },
  "rolluik": {
   "eind_url": "https://rolluiknijmegen.nl/",
   "gecontroleerd": "2026-10-23",
@@ -8187,6 +10091,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://romagna-nijmegen.metro.rest/?lang=nl#times",
+  "werkt": true
+ },
+ "rommei": {
+  "eind_url": "https://rommei.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://rommei.nl/",
   "werkt": true
  },
  "ron-moes-uitvaart-fotograaf": {
@@ -8204,10 +10115,17 @@
   "werkt": true
  },
  "rosh-studios": {
-  "eind_url": "https://www.rosh-studios.com/",
+  "eind_url": "http://www.rosh-studios.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.rosh-studios.com/",
+  "werkt": true
+ },
+ "rotsvast-nijmegen": {
+  "eind_url": "https://www.rotsvast.nl/vestigingen/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.rotsvast.nl/rotsvast-nijmegen/",
   "werkt": true
  },
  "roxy-s-tiki-bar": {
@@ -8220,7 +10138,7 @@
  "roxys-tikibar": {
   "eind_url": "https://roxystikibar.nl",
   "gecontroleerd": "2026-10-23",
-  "reden": "503 (weert mogelijk bots)",
+  "reden": "200",
   "website": "https://roxystikibar.nl",
   "werkt": true
  },
@@ -8267,9 +10185,9 @@
   "werkt": true
  },
  "sabrina-wennekes-fotografie": {
-  "eind_url": "http://www.sabrinawennekesfotografie.nl/",
+  "eind_url": "https://sabrinawennekesfotografie.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "503 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://www.sabrinawennekesfotografie.nl/",
   "werkt": true
  },
@@ -8281,14 +10199,14 @@
   "werkt": true
  },
  "sahin-en-stoetzer-advocaten-laauwikstraat": {
-  "eind_url": "http://www.sensadvocaten.com/",
+  "eind_url": "https://www.sensadvocaten.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.sensadvocaten.com/",
   "werkt": true
  },
  "sahin-en-stoetzer-advocaten-theo-dobbestraat": {
-  "eind_url": "http://www.sensadvocaten.com/",
+  "eind_url": "https://www.sensadvocaten.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.sensadvocaten.com/",
@@ -8306,6 +10224,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.salarisenzo.nl/",
+  "werkt": true
+ },
+ "salon-suites-nijmegen": {
+  "eind_url": "https://www.salonsuites.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.salonsuites.nl/",
+  "werkt": true
+ },
+ "samosa-ontwerp-op-maat": {
+  "eind_url": "https://www.ontwerpopmaat.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.ontwerpopmaat.com/",
   "werkt": true
  },
  "sanacount-accountants-advisers-bv": {
@@ -8334,6 +10266,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://sannemylenefotografie.nl/",
+  "werkt": true
+ },
+ "sannij": {
+  "eind_url": "https://sannij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.sannij.nl/",
   "werkt": true
  },
  "saray": {
@@ -8392,11 +10331,102 @@
   "website": "http://www.schiet7kleuren.nl/",
   "werkt": true
  },
+ "schilder-eco": {
+  "eind_url": "https://www.schilder.eco/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.schilder.eco/",
+  "werkt": true
+ },
+ "schilder-frans": {
+  "eind_url": "https://schilderfrans.nl/index.asp?pa_id=4",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://schilderfrans.nl/index.asp?pa_id=4",
+  "werkt": true
+ },
+ "schilder-nijmegen": {
+  "eind_url": "https://schildernijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://schildernijmegen.com/",
+  "werkt": true
+ },
+ "schildersbedrijf-de-schilders": {
+  "eind_url": "https://www.deschildersnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.deschildersnijmegen.nl/",
+  "werkt": true
+ },
+ "schildersbedrijf-dollekens": {
+  "eind_url": "https://dollekensschilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://dollekensschilderwerken.nl/",
+  "werkt": true
+ },
+ "schildersbedrijf-marieke-grotenhuis": {
+  "eind_url": "http://www.schildersbedrijfmariekegrotenhuis.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.schildersbedrijfmariekegrotenhuis.nl/",
+  "werkt": true
+ },
+ "schildersbedrijf-matos": {
+  "eind_url": "https://www.schildermatos.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.schildermatos.nl/",
+  "werkt": true
+ },
+ "schildersbedrijf-van-de-werdt": {
+  "eind_url": "https://vandewerdt.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://vandewerdt.nl/",
+  "werkt": true
+ },
  "schipperheijn-verzekeringen": {
   "eind_url": "https://schipperheijn.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://schipperheijn.nl/",
+  "werkt": true
+ },
+ "schmitt-bouw": {
+  "eind_url": "https://www.schmitt-bouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.schmitt-bouw.nl/",
+  "werkt": true
+ },
+ "schoonmaakbedrijf-nijmegen": {
+  "eind_url": "https://schoonmaakbedrijfnijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://schoonmaakbedrijfnijmegen.com/",
+  "werkt": true
+ },
+ "schoonmaakbedrijf-schoon-fris": {
+  "eind_url": "https://schoon-fris.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.schoon-fris.nl/",
+  "werkt": true
+ },
+ "schoonmaakorganisatie-succes": {
+  "eind_url": "https://www.succes-bv.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.succes-bv.nl/",
+  "werkt": true
+ },
+ "schoppema-glas-en-schilderwerken": {
+  "eind_url": "https://www.schoppemaschilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.schoppemaschilderwerken.nl/",
   "werkt": true
  },
  "schouten-fiscaal": {
@@ -8456,9 +10486,9 @@
   "werkt": true
  },
  "sef-maessen": {
-  "eind_url": "http://sefmaessen.nl/",
+  "eind_url": "https://sefmaessen.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "500 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://sefmaessen.nl/",
   "werkt": true
  },
@@ -8481,6 +10511,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.serifbaba.nl/",
+  "werkt": true
+ },
+ "seuren-glasservice": {
+  "eind_url": "https://www.seuren.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.seuren.nl",
   "werkt": true
  },
  "shabu-shabu": {
@@ -8574,6 +10611,13 @@
   "website": "https://www.dago.nl/",
   "werkt": true
  },
+ "slotambulance": {
+  "eind_url": "https://slotambulance.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.slotambulance.nl",
+  "werkt": true
+ },
  "smarlet": {
   "eind_url": "http://www.smarlet.nl/",
   "gecontroleerd": "2026-10-23",
@@ -8586,6 +10630,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.smeenk-law.nl/",
+  "werkt": true
+ },
+ "smit-cleaning": {
+  "eind_url": "https://smitcleaning.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "500 (weert mogelijk bots)",
+  "website": "https://smitcleaning.nl/",
   "werkt": true
  },
  "smits-opleidingen-nijmegen": {
@@ -8637,11 +10688,39 @@
   "website": "https://www.carolusmagnus.nl/societeit",
   "werkt": true
  },
+ "soeteman-makelaars-berg-en-dalseweg": {
+  "eind_url": "https://soeteman.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.soeteman.nl/",
+  "werkt": true
+ },
+ "soeteman-makelaars-oranjesingel": {
+  "eind_url": "https://soeteman.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.soeteman.nl/",
+  "werkt": true
+ },
+ "solar2led": {
+  "eind_url": "https://solar2led.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.solar2led.nl/",
+  "werkt": true
+ },
  "solarsociaal": {
   "eind_url": "https://solarsociaal.wixsite.com/solarsociaal",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://solarsociaal.wixsite.com/solarsociaal",
+  "werkt": true
+ },
+ "solidu-bouw-en-advies": {
+  "eind_url": "https://solidu.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://solidu.nl/",
   "werkt": true
  },
  "song-da-street-food": {
@@ -8658,11 +10737,39 @@
   "website": "https://www.soundensoul.nl/",
   "werkt": true
  },
+ "spara-energy": {
+  "eind_url": "http://www.ekonergy.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.ekonergy.nl/",
+  "werkt": true
+ },
+ "spectrum-onderhoud-en-schilderwerk": {
+  "eind_url": "https://spectrumschilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://spectrumschilderwerken.nl/",
+  "werkt": true
+ },
  "spel-in-bedrijf": {
   "eind_url": "https://spelinbedrijf.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "520 (weert mogelijk bots)",
   "website": "https://spelinbedrijf.nl/",
+  "werkt": true
+ },
+ "spirototaal": {
+  "eind_url": "https://www.spirototaal.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "https://www.spirototaal.nl/",
+  "werkt": true
+ },
+ "splendid-spaces": {
+  "eind_url": "https://splendidspaces.nl//",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.splendidspaces.nl/",
   "werkt": true
  },
  "sportcafe-the-yard": {
@@ -8707,6 +10814,13 @@
   "website": "https://spotnijmegen.nl",
   "werkt": true
  },
+ "sprekend-landschap-paul-klinkenberg": {
+  "eind_url": "http://sprekendlandschap.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://sprekendlandschap.nl/",
+  "werkt": true
+ },
  "sqpeople-nijmegen": {
   "eind_url": "https://fun-facts.nl/",
   "gecontroleerd": "2026-10-23",
@@ -8720,6 +10834,13 @@
   "reden": "domein bestaat niet",
   "website": "http://www.stjacobs.nl/",
   "werkt": false
+ },
+ "st-makelaars": {
+  "eind_url": "https://stmakelaars.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://stmakelaars.nl/",
+  "werkt": true
  },
  "staatvandienst": {
   "eind_url": "https://www.staatvandienst.nl/locaties/nijmegen/",
@@ -8738,7 +10859,7 @@
  "stadscafe-jan": {
   "eind_url": "http://www.stadscafejan.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "401 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://www.stadscafejan.nl/",
   "werkt": true
  },
@@ -8848,10 +10969,24 @@
   "werkt": true
  },
  "stichting-wetswinkel-nijmegen": {
-  "eind_url": "https://wetswinkelnijmegen.nl/",
+  "eind_url": "http://www.wetswinkelnijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.wetswinkelnijmegen.nl/",
+  "werkt": true
+ },
+ "stoffeeratelier-geurts": {
+  "eind_url": "https://www.stoffeerateliergeurts.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.stoffeerateliergeurts.nl/",
+  "werkt": true
+ },
+ "stonevest-b-v": {
+  "eind_url": "http://www.stonevest.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "http://www.stonevest.nl/",
   "werkt": true
  },
  "stoom-oersoep": {
@@ -8882,6 +11017,13 @@
   "website": "http://www.cafestretto.nl",
   "werkt": true
  },
+ "strijbosch-thunnissen-makelaars": {
+  "eind_url": "https://stmakelaars.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://stmakelaars.nl/",
+  "werkt": true
+ },
  "strik-patisserie-heyendaalseweg": {
   "eind_url": "https://strik-patisserie.nl/",
   "gecontroleerd": "2026-10-23",
@@ -8903,6 +11045,13 @@
   "website": "https://stroomlent.nl",
   "werkt": true
  },
+ "stucwerk-verbrand": {
+  "eind_url": "https://www.cjaa.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "subpagina weg (404), homepage werkt",
+  "website": "http://cjaa.nl/contact/",
+  "werkt": true
+ },
  "studentvoorstudent": {
   "eind_url": "https://studentvoorstudent.nl/",
   "gecontroleerd": "2026-10-23",
@@ -8915,6 +11064,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.studiehulpnederland.nl/nijmegen",
+  "werkt": true
+ },
+ "studio-beuk": {
+  "eind_url": "https://tafelrestauratie.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://tafelrestauratie.nl/",
   "werkt": true
  },
  "studio-brechting": {
@@ -8966,11 +11122,25 @@
   "website": "http://www.studioxd.nl/",
   "werkt": true
  },
+ "studiodebruijn": {
+  "eind_url": "https://www.studiodebruijn.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://studiodebruijn.nl/",
+  "werkt": true
+ },
  "studiomik": {
   "eind_url": "https://www.studiomik.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.studiomik.nl/",
+  "werkt": true
+ },
+ "stukadoorsbedrijf-werts": {
+  "eind_url": "https://www.stukadoorsbedrijfwerts.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.stukadoorsbedrijfwerts.nl/",
   "werkt": true
  },
  "stunnenberg-scandinavische-taallessen": {
@@ -9011,7 +11181,7 @@
  "subway-oosterhout-park15": {
   "eind_url": "http://Www.subway.com/",
   "gecontroleerd": "2026-10-23",
-  "reden": "twijfel: timed out",
+  "reden": "403 (weert mogelijk bots)",
   "website": "http://Www.subway.com/",
   "werkt": true
  },
@@ -9027,6 +11197,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "subpagina weg (404), homepage werkt",
   "website": "https://restaurants.subway.com/netherlands/nijmegen/zwanenveld-8405?utm_source=yxt-bing&utm_medium=local&utm_term=acq&utm_content=52922&utm_campaign=evergreen-2020&y_source=1_MTQ5MjUyMTMtNDgzLWxvY2F0aW9uLndlYnNpdGU%3D",
+  "werkt": true
+ },
+ "sultan-bouw": {
+  "eind_url": "https://www.sultanbouw.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.sultanbouw.com/",
   "werkt": true
  },
  "sultan-restaurant-nijmegen": {
@@ -9058,9 +11235,9 @@
   "werkt": true
  },
  "susan-s-hondentrimsalon": {
-  "eind_url": "https://www.susanshondentrimsalon.nl/",
+  "eind_url": "http://www.susanshondentrimsalon.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "503 (weert mogelijk bots)",
   "website": "http://www.susanshondentrimsalon.nl/",
   "werkt": true
  },
@@ -9098,6 +11275,13 @@
   "reden": "403 (weert mogelijk bots)",
   "website": "http://www.sushipoint.nl/sushi-nijmegen",
   "werkt": true
+ },
+ "swambouw-aannemersbedrijf": {
+  "eind_url": "https://swambouw-aannemersbedrijf-construction-company.business.site/?utm_source=gmb&utm_medium=referral",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "https://swambouw-aannemersbedrijf-construction-company.business.site/?utm_source=gmb&utm_medium=referral",
+  "werkt": false
  },
  "swiet-famiri": {
   "eind_url": "https://swietkitchen.nl/",
@@ -9274,6 +11458,20 @@
   "website": "https://www.taxitcn.nl",
   "werkt": true
  },
+ "te-koop-etudestraat-31-te-nijmegen": {
+  "eind_url": "https://hendriks.nl/woningaanbod",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://hendriks.nl/Nijmegen/Etudestraat-31/33734429/tekoop.html",
+  "werkt": true
+ },
+ "te-koop-spijkerhofplein-68": {
+  "eind_url": "https://hendriks.nl/woningaanbod",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://hendriks.nl/Nijmegen/Spijkerhofplein-68/1623204/tekoop.html",
+  "werkt": true
+ },
  "te-witt-fiscaal-advies": {
   "eind_url": "https://www.twfa.nl/",
   "gecontroleerd": "2026-10-23",
@@ -9288,8 +11486,15 @@
   "website": "http://www.teamf.nl/",
   "werkt": true
  },
+ "team-service-schoonmaakbedrijf": {
+  "eind_url": "https://teamup4.com/nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.teamup4.com/",
+  "werkt": true
+ },
  "tekstmakerij": {
-  "eind_url": "http://tekstmakerij.nl/",
+  "eind_url": "http://www.tekstmakerij.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.tekstmakerij.nl/",
@@ -9317,7 +11522,7 @@
   "werkt": true
  },
  "thali-express": {
-  "eind_url": "https://www.thaliexpress.nl/",
+  "eind_url": "http://www.thaliexpress.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.thaliexpress.nl/",
@@ -9442,6 +11647,13 @@
   "website": "http://www.theeschenkerijdegoffert.nl/",
   "werkt": true
  },
+ "theo-bouten": {
+  "eind_url": "http://www.dakwerkbedrijf.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "500 (weert mogelijk bots)",
+  "website": "http://www.dakwerkbedrijf.nl/",
+  "werkt": true
+ },
  "theo-hafmans-fotografie": {
   "eind_url": "https://theohafmans.com/",
   "gecontroleerd": "2026-10-23",
@@ -9454,6 +11666,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.tzt.nl",
+  "werkt": true
+ },
+ "thermohouse": {
+  "eind_url": "https://thermohouse.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.thermohouse.nl/",
   "werkt": true
  },
  "thiemefoyer": {
@@ -9483,6 +11702,13 @@
   "reden": "domein bestaat niet",
   "website": "http://www.thuisbijinge.nl/",
   "werkt": false
+ },
+ "tidahome": {
+  "eind_url": "https://www.tidahome.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://tidahome.com/",
+  "werkt": true
  },
  "tierney-s": {
   "eind_url": "https://www.tierneysirishpub.nl/irish-pub-nijmegen/",
@@ -9519,6 +11745,13 @@
   "website": "https://www.tipcommunicatie.nl/?utm_source=google&utm_medium=organic&utm_campaign=GoogleMijnBedrijf",
   "werkt": true
  },
+ "tiszameer-hongarije-huizen-te-koop": {
+  "eind_url": "https://www.huurkoop0-aanbetalingtiszameer.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://www.huurkoop0-aanbetalingtiszameer.nl/",
+  "werkt": true
+ },
  "toko-oost": {
   "eind_url": "https://toko-oost.nl/",
   "gecontroleerd": "2026-10-23",
@@ -9541,10 +11774,17 @@
   "werkt": true
  },
  "toon": {
-  "eind_url": "http://www.toon-nijmegen.nl",
+  "eind_url": "http://www.lima-nijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.toon-nijmegen.nl",
+  "werkt": true
+ },
+ "tower-living": {
+  "eind_url": "https://towerliving.nl/nl-nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://towerliving.nl/",
   "werkt": true
  },
  "toyota-dealers-scholten": {
@@ -9645,6 +11885,13 @@
   "website": "http://www.tromik.nl/",
   "werkt": true
  },
+ "tt-montage": {
+  "eind_url": "http://www.ttmontage.nl/index.html",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.ttmontage.nl/index.html",
+  "werkt": true
+ },
  "tu-thai-food": {
   "eind_url": "https://www.tuthaifood.nl/",
   "gecontroleerd": "2026-10-23",
@@ -9657,6 +11904,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://tubioplan.nl/",
+  "werkt": true
+ },
+ "tuinservice-van-der-werf": {
+  "eind_url": "http://www.tuinservicevanderwerf.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "302 (weert mogelijk bots)",
+  "website": "http://www.tuinservicevanderwerf.nl/",
   "werkt": true
  },
  "tulpenfonds": {
@@ -9678,6 +11932,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "subpagina weg (404), homepage werkt",
   "website": "http://www.snelgeslaagd.com/turkseles",
+  "werkt": true
+ },
+ "twice-up": {
+  "eind_url": "https://twice-up.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://twice-up.nl/",
   "werkt": true
  },
  "tydesign": {
@@ -9771,6 +12032,13 @@
   "website": "http://www.piecken.nl",
   "werkt": true
  },
+ "unlockit-24-7-slotenmaker-nijmegen-arnhem": {
+  "eind_url": "https://unlockitbv.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.unlockitbv.nl/",
+  "werkt": true
+ },
  "utile-dulci-training-coaching-nijmegen": {
   "eind_url": "http://www.utiledulci.nl/",
   "gecontroleerd": "2026-10-23",
@@ -9785,8 +12053,15 @@
   "website": "http://uw-magazine.nl/",
   "werkt": true
  },
+ "uwdak-nederland": {
+  "eind_url": "https://uwdaknederland.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://uwdaknederland.nl/",
+  "werkt": true
+ },
  "uwgoedkopeautoverzekering": {
-  "eind_url": "http://www.uwgoedkopeautoverzekering.nl/",
+  "eind_url": "http://uwgoedkopeautoverzekering.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://uwgoedkopeautoverzekering.nl/",
@@ -9820,11 +12095,25 @@
   "website": "http://www.hegeman-groep.nl/",
   "werkt": true
  },
+ "van-anken": {
+  "eind_url": "https://www.vananken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.vananken.nl/",
+  "werkt": true
+ },
  "van-arkel-van-den-boom-advocaten": {
   "eind_url": "https://ab-advocaten.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.ab-advocaten.nl",
+  "werkt": true
+ },
+ "van-benthum-interieurontwerp-advies-en-styling": {
+  "eind_url": "http://www.vanbenthumontwerp.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.vanbenthumontwerp.nl/",
   "werkt": true
  },
  "van-bergen-ondernemerszaken": {
@@ -9839,6 +12128,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://vanbommelap.com/",
+  "werkt": true
+ },
+ "van-breukelen-makelaardij": {
+  "eind_url": "http://vanbreukelenmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.vanbreukelenmakelaardij.nl/",
   "werkt": true
  },
  "van-buren": {
@@ -9862,11 +12158,25 @@
   "website": "http://www.van-dam-sparerib-grill.nl",
   "werkt": false
  },
+ "van-de-vooren-schilderwerken": {
+  "eind_url": "http://www.vandevoorenschilderwerken.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "451 (weert mogelijk bots)",
+  "website": "http://www.vandevoorenschilderwerken.nl/",
+  "werkt": true
+ },
  "van-de-vorst-administratie": {
   "eind_url": "https://www.vdv-administratie.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.vdv-administratie.nl/",
+  "werkt": true
+ },
+ "van-de-water-bouw-bv": {
+  "eind_url": "https://www.vandewaterbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.vandewaterbouw.nl/",
   "werkt": true
  },
  "van-den-assem-advocatuur": {
@@ -9909,6 +12219,20 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.vanhilst.com/",
+  "werkt": true
+ },
+ "van-laar-service": {
+  "eind_url": "https://vanlaar-service.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://vanlaar-service.nl/",
+  "werkt": true
+ },
+ "van-leeuwe-natuursteen": {
+  "eind_url": "https://vanleeuwe-natuursteen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://vanleeuwe-natuursteen.nl/",
   "werkt": true
  },
  "van-mossel-maxus-nijmegen": {
@@ -10009,11 +12333,39 @@
   "website": "https://veenhuizenadministratie.nl/",
   "werkt": true
  },
+ "veerdonk-mulder-bouwbedrijf-b-v": {
+  "eind_url": "http://www.veerdonk-mulder.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.veerdonk-mulder.nl/",
+  "werkt": true
+ },
  "veggie-india": {
   "eind_url": "https://veggieindia.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.veggieindia.nl/",
+  "werkt": true
+ },
+ "veranderstroom": {
+  "eind_url": "https://duurzaamxl.nl/zonnepanelen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.veranderstroom.nl/",
+  "werkt": true
+ },
+ "verbeek-bedrijfsmakelaars": {
+  "eind_url": "https://www.verbeek-bedrijfsmakelaars.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.verbeek-bedrijfsmakelaars.nl/",
+  "werkt": true
+ },
+ "verbeek-financieel-adviseurs": {
+  "eind_url": "https://www.verbeek-makelaars.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.verbeek-makelaars.nl/",
   "werkt": true
  },
  "verder-arbeidsrecht": {
@@ -10030,11 +12382,25 @@
   "website": "https://verdoornadvies.nl/",
   "werkt": true
  },
+ "verfstreek": {
+  "eind_url": "http://www.verfstreek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.verfstreek.nl/",
+  "werkt": true
+ },
  "verheesplus-reclame": {
   "eind_url": "https://www.verheesplusreclame.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.verheesplusreclame.nl/",
+  "werkt": true
+ },
+ "verhuisbedrijf-nijmegen": {
+  "eind_url": "https://verhuisbedrijfnijmegen.net",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://verhuisbedrijfnijmegen.net",
   "werkt": true
  },
  "verkeersschool-paul-lam": {
@@ -10044,6 +12410,13 @@
   "website": "https://www.paullam.nl/",
   "werkt": true
  },
+ "verkroost-nijmegen-b-v": {
+  "eind_url": "https://verkroost.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.verkroost.nl/",
+  "werkt": true
+ },
  "vermeulen-advocaten": {
   "eind_url": "https://www.vermeulenadvocaten.nl/",
   "gecontroleerd": "2026-10-23",
@@ -10051,11 +12424,25 @@
   "website": "http://www.vermeulenadvocaten.nl/",
   "werkt": true
  },
+ "vernooij-makelaardij": {
+  "eind_url": "https://www.vernooijmakelaardij.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.vernooijmakelaardij.nl/",
+  "werkt": true
+ },
  "versfabriek": {
   "eind_url": "https://versfabriek.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.versfabriek.nl/",
+  "werkt": true
+ },
+ "vertogen-van-de-ven-b-v": {
+  "eind_url": "http://www.vertogen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.vertogen.nl/",
   "werkt": true
  },
  "verweij-advocaten-bijleveldsingel": {
@@ -10075,7 +12462,7 @@
  "verzekeringen-flavius-assurantien-en-financien": {
   "eind_url": "http://www.flavius.nl",
   "gecontroleerd": "2026-10-23",
-  "reden": "twijfel: [Errno 104] Connection reset by peer",
+  "reden": "twijfel: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1032)",
   "website": "http://www.flavius.nl",
   "werkt": true
  },
@@ -10105,6 +12492,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://vgor.nl/",
+  "werkt": true
+ },
+ "vib-isolatietechniek": {
+  "eind_url": "https://www.coolconstruct.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.vib-isolatie.nl/",
   "werkt": true
  },
  "videoexpress": {
@@ -10156,11 +12550,32 @@
   "website": "https://visioaer.nl/",
   "werkt": true
  },
+ "vissers-meubelen": {
+  "eind_url": "https://www.vissersmeubelen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.vissersmeubelen.com/",
+  "werkt": true
+ },
+ "vithex-gietvloeren": {
+  "eind_url": "https://vithexgietvloeren.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.vithexgietvloeren.nl/",
+  "werkt": true
+ },
  "vlees-co": {
   "eind_url": "https://vleesenco.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.vleesenco.nl/",
+  "werkt": true
+ },
+ "vloerstripper": {
+  "eind_url": "https://vloerstripper.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.vloerstripper.nl/",
   "werkt": true
  },
  "vof-duives": {
@@ -10206,9 +12621,9 @@
   "werkt": false
  },
  "vrije-academie-nijmegen": {
-  "eind_url": "https://www.karinbuchholtz.nl/",
+  "eind_url": "http://www.karinbuchholtz.com/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "503 (weert mogelijk bots)",
   "website": "http://www.karinbuchholtz.com/",
   "werkt": true
  },
@@ -10220,7 +12635,7 @@
   "werkt": true
  },
  "vugts-and-co-bv": {
-  "eind_url": "https://vugts.co/",
+  "eind_url": "http://vugts.co/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://vugts.co/",
@@ -10247,11 +12662,32 @@
   "website": "https://vwg.nl/",
   "werkt": true
  },
+ "w-huijink-dak-en-montagebedrijf": {
+  "eind_url": "https://www.whuijink.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://whuijink.nl/",
+  "werkt": true
+ },
+ "w-p-bartels-installatiebedrijf": {
+  "eind_url": "https://www.wpbartels.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.wpbartels.nl/",
+  "werkt": true
+ },
  "waal-webdesign": {
   "eind_url": "https://waalwebdesign.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://waalwebdesign.nl/",
+  "werkt": true
+ },
+ "waalstad-b-v": {
+  "eind_url": "https://www.waalstadbv.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.waalstadbv.nl/",
   "werkt": true
  },
  "waalstede-dela": {
@@ -10262,9 +12698,9 @@
   "werkt": true
  },
  "waalzicht": {
-  "eind_url": "https://cafewaalzicht.eatbu.com/?lang=nl",
+  "eind_url": "http://www.cafewaalzicht.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "200",
+  "reden": "502 (weert mogelijk bots)",
   "website": "http://www.cafewaalzicht.nl/",
   "werkt": true
  },
@@ -10437,7 +12873,7 @@
   "werkt": true
  },
  "webtivity": {
-  "eind_url": "https://stefanvanlierop.nl/",
+  "eind_url": "http://stefanvanlierop.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://stefanvanlierop.nl/",
@@ -10453,7 +12889,7 @@
  "weejoo": {
   "eind_url": "https://weejoo.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "503 (weert mogelijk bots)",
+  "reden": "200",
   "website": "https://weejoo.nl/",
   "werkt": true
  },
@@ -10463,6 +12899,20 @@
   "reden": "domein bestaat niet",
   "website": "http://www.cafeweerlicht.nl",
   "werkt": false
+ },
+ "weijers-plus": {
+  "eind_url": "https://www.weijersplus.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.weijersplus.nl/",
+  "werkt": true
+ },
+ "weijers-techniek": {
+  "eind_url": "http://www.weijersriooltechniek.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: [Errno 104] Connection reset by peer",
+  "website": "http://www.weijersriooltechniek.nl/",
+  "werkt": true
  },
  "wen-kunst-webdesign": {
   "eind_url": "https://www.wenkunst.nl/",
@@ -10506,11 +12956,25 @@
   "website": "https://www.werkenvakmanschap.nl/vacatures/",
   "werkt": true
  },
+ "werkenbijkion": {
+  "eind_url": "https://werkenbijkion.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://werkenbijkion.nl/",
+  "werkt": true
+ },
  "werktalent": {
   "eind_url": "https://www.werktalent.com/vestigingen/gelderland/nijmegen",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.werktalent.com/vestigingen/gelderland/nijmegen",
+  "werkt": true
+ },
+ "wgd-bouw": {
+  "eind_url": "https://wgdbouw.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.wgdbouw.nl/",
   "werkt": true
  },
  "why-not": {
@@ -10605,7 +13069,7 @@
   "werkt": true
  },
  "wiskundebijles-nijmegen": {
-  "eind_url": "https://wiskundebijles-nijmegen.nl/",
+  "eind_url": "http://www.wiskundebijles-nijmegen.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.wiskundebijles-nijmegen.nl/",
@@ -10639,6 +13103,41 @@
   "website": "http://www.newdutchart.nl/",
   "werkt": true
  },
+ "wonen-met-rutger": {
+  "eind_url": "http://www.wonenmetrutger.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.wonenmetrutger.nl/",
+  "werkt": true
+ },
+ "woodb-design": {
+  "eind_url": "http://www.woodb.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.woodb.nl/",
+  "werkt": true
+ },
+ "woodbegood": {
+  "eind_url": "http://www.woodbegood.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.woodbegood.nl/",
+  "werkt": true
+ },
+ "woondiensten-ontruiming": {
+  "eind_url": "http://www.woondiensten-ontruiming.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.woondiensten-ontruiming.nl/",
+  "werkt": true
+ },
+ "wooninnijmegen": {
+  "eind_url": "http://www.wooninnijmegen.nl/privacybeleid",
+  "gecontroleerd": "2026-10-23",
+  "reden": "503 (weert mogelijk bots)",
+  "website": "http://www.wooninnijmegen.nl/privacybeleid",
+  "werkt": true
+ },
  "wp-wolf-wordpress-cursus": {
   "eind_url": "https://wpress-cursus.nl/",
   "gecontroleerd": "2026-10-23",
@@ -10658,6 +13157,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.xtrememarinesports.nl/",
+  "werkt": true
+ },
+ "xyleem-meubelmakerij": {
+  "eind_url": "https://www.xyleem.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.xyleem.nl/",
   "werkt": true
  },
  "yeller-taxi-nijmegen": {
@@ -10703,10 +13209,17 @@
   "werkt": true
  },
  "yvvy-hypotheken": {
-  "eind_url": "http://www.yvvy.nl/",
+  "eind_url": "https://www.yvvy.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.yvvy.nl/",
+  "werkt": true
+ },
+ "zaag-meubelwerk": {
+  "eind_url": "http://www.zaag.pro/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.zaag.pro/",
   "werkt": true
  },
  "zaan-trading": {
@@ -10717,7 +13230,7 @@
   "werkt": true
  },
  "zangles": {
-  "eind_url": "http://www.zangtechniek.nl/",
+  "eind_url": "https://zangtechniek.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.zangtechniek.nl/",
@@ -10812,6 +13325,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "http://www.looppunt-nijmegen.nl/",
+  "werkt": true
+ },
+ "zuiderveld-nijmegen": {
+  "eind_url": "https://ikwilhuren.nu/login",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://ikwilhuren.nu/nijmegen/zuiderveld/98964",
   "werkt": true
  },
  "zuidkantine": {

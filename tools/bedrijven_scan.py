@@ -100,6 +100,18 @@ SPECIALISMEN = {
     "kinderopvang": ["kinderdagverblijf", "bso", "peuteropvang", "gastouder", "tweetalig", "natuur en buiten", "flexibele opvang"],
     "taxi": ["luchthavenvervoer", "rolstoelvervoer", "zakelijk vervoer", "groepsvervoer", "24 uur", "elektrisch", "trouwauto"],
     "begrafenis": ["uitvaartverzorging", "crematie", "natuurbegraven", "dag en nacht bereikbaar", "eigen uitvaartcentrum", "persoonlijk afscheid"],
+    "aannemersbedrijf": ["verbouwen", "nieuwbouw", "renovatie", "badkamer", "keuken", "vloeren", "aanbouw en dakkapel", "verduurzamen", "klusjes"],
+    "schilder": ["binnen", "buiten", "stucwerk", "behangen", "houtrot", "monumenten", "spuitwerk"],
+    "loodgieter": ["lekkage", "cv-ketel", "warmtepomp", "badkamer", "riolering", "airco", "24 uur service"],
+    "hovenier": ["tuinontwerp", "tuinaanleg", "tuinonderhoud", "bestrating", "groene daken", "bomen snoeien"],
+    "zonnepanelen": ["zonnepanelen", "thuisbatterij", "laadpaal", "warmtepomp", "zakelijk"],
+    "meubelmaker": ["maatwerk", "keukens", "kasten", "tafels", "restauratie", "stoffering", "workshops"],
+    "makelaar": ["verkoop", "aankoop", "huur en verhuur", "taxatie", "bedrijfspanden", "nieuwbouw", "NVM", "vaste courtage"],
+    "dakdekker": ["platte daken", "pannendaken", "lekkage", "dakgoten", "dakisolatie", "groene daken", "zink- en loodwerk"],
+    "slotenmaker": ["24 uur service", "buitengesloten", "inbraakbeveiliging", "sleutels bijmaken", "kluizen", "politiekeurmerk"],
+    "elektricien": ["groepenkast", "laadpaal", "verlichting", "storing", "domotica", "keuring", "zonnepanelen"],
+    "verhuisbedrijf": ["particuliere verhuizing", "bedrijfsverhuizing", "verhuislift", "opslag", "inpakservice", "internationaal"],
+    "schoonmaakbedrijf": ["kantoren", "particulieren", "glazenwassen", "eindschoonmaak", "vloeren", "ongediertebestrijding"],
     "hondentraining": ["puppycursus", "gedragstherapie", "trimsalon", "uitlaatservice", "dierenpension", "privéles", "groepslessen", "katten"],
 }
 KENMERKEN = list(dict.fromkeys(KENMERKEN_SPORT + KENMERKEN_ETEN + KENMERKEN_DRINKEN + KENMERKEN_DIENST
@@ -165,6 +177,20 @@ for _slug, _uitleg in {
     "taxi": "Taxibedrijven en besloten vervoer.",
     "begrafenis": "Uitvaartondernemers en uitvaartcentra. Een begraafplaats of crematorium hoort er ook bij.",
     "hondentraining": "Hondenscholen, trimsalons, dierenpensions en uitlaatservices. Een dierenarts: dierenarts. Een dierenwinkel: winkel.",
+    "aannemersbedrijf": "Aannemers, bouw- en klusbedrijven, timmerlieden en badkamer- of keukenverbouwers. Is het vooral schilderwerk, "
+                        "installatie, daken of tuinen, kies dan schilder, loodgieter, dakdekker of hovenier. Een groothandel of projectontwikkelaar "
+                        "zonder werk voor particulieren of bedrijven in Nijmegen: zakelijk-overig.",
+    "schilder": "Schilders, stukadoors en behangers. Een kunstschilder: galerie.",
+    "loodgieter": "Loodgieters en installateurs (cv, warmtepomp, sanitair, airco).",
+    "hovenier": "Hoveniers en tuinarchitecten. Een tuincentrum: winkel.",
+    "zonnepanelen": "Installateurs van zonnepanelen, thuisbatterijen en laadpalen. Een elektricien met zonnepanelen als bijzaak: elektricien.",
+    "meubelmaker": "Meubelmakers, interieurbouwers, stoffeerders en meubelrestaurateurs. Een meubelwinkel zonder eigen werkplaats: woonwinkel.",
+    "makelaar": "Makelaars en taxateurs. Een woningcorporatie of vastgoedbelegger: zakelijk-overig.",
+    "dakdekker": "Dakdekkers en dakbedekkingsbedrijven.",
+    "slotenmaker": "Slotenmakers en bedrijven voor inbraakbeveiliging.",
+    "elektricien": "Elektriciens en elektrotechnische installateurs.",
+    "verhuisbedrijf": "Verhuisbedrijven en verhuisliften.",
+    "schoonmaakbedrijf": "Schoonmaakbedrijven, glazenwassers en ongediertebestrijders. Een stomerij of wasserette: winkel.",
 }.items():
     PER_CATEGORIE[_slug] = {"kenmerken": SPECIALISMEN[_slug] + KENMERKEN_DIENST, "uitleg": _uitleg + " " + ZAKELIJK}
 

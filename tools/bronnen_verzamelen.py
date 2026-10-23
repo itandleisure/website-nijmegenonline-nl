@@ -178,6 +178,87 @@ BRONNEN = {
         "soort": "Hondentraining",
         "andere_soort": r"dierenarts|dierenkliniek|vet\b|dierenspeciaal|dierenwinkel|pets place|jumper",
     },
+    # Wonen en klussen
+    "aannemersbedrijf": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"builder|carpenter|construction|handyman",
+        "overture": lambda basis, soort: soort in (
+            "contractor", "building_or_construction_service", "building_contractor", "bathroom_remodeling", "kitchen_remodeling",
+            "flooring_contractor", "carpenter", "handyman", "masonry_concrete", "paving_contractor", "home_service"),
+        "soort": "Aannemer",
+        "andere_soort": r"schilder|stukad|loodgiet|installat|dakdek|elektr|hovenier|tuin|verhuis|schoonma|makelaar",
+    },
+    "schilder": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"painter|plasterer",
+        "overture": lambda basis, soort: soort in ("painting", "plasterer"),
+        "soort": "Schilder",
+        "andere_soort": r"kunst|atelier|art\b|galerie|portret",
+    },
+    "loodgieter": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"plumber|hvac|heating",
+        "overture": lambda basis, soort: soort in ("plumbing", "hvac_service"),
+        "soort": "Loodgieter",
+    },
+    "hovenier": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"gardener|landscap",
+        "overture": lambda basis, soort: soort in ("landscaping", "landscape_architect", "gardener"),
+        "soort": "Hovenier",
+        "andere_soort": r"tuincentrum|kwekerij|intratuin",
+    },
+    "zonnepanelen": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"solar",
+        "overture": lambda basis, soort: soort in ("solar_installation", "solar_energy_equipment_supplier"),
+        "soort": "Zonnepanelen",
+    },
+    "meubelmaker": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"cabinet_maker|joiner|upholster",
+        "overture": lambda basis, soort: soort in ("furniture_manufacturer", "furniture_reupholstery", "furniture_repair", "cabinet_sales_service"),
+        "soort": "Meubelmaker",
+        "andere_soort": r"ikea|leen bakker|kwantum|jysk|xenos|outlet|woonwinkel",
+    },
+    "makelaar": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"estate_agent",
+        "overture": lambda basis, soort: soort in ("real_estate_agent", "real_estate_service", "commercial_real_estate"),
+        "soort": "Makelaar",
+        "andere_soort": r"woningcorporatie|portaal|talis|woonwaarts|standvast|vastgoedbeheer|beleggingen|holding",
+    },
+    "dakdekker": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"roofer",
+        "overture": lambda basis, soort: soort == "roofing",
+        "soort": "Dakdekker",
+    },
+    "slotenmaker": {
+        "osm": {"Zakelijke diensten", "Winkels", "Overig"},
+        "osm_sub": r"locksmith",
+        "overture": lambda basis, soort: soort in ("key_and_locksmith", "home_security"),
+        "soort": "Slotenmaker",
+    },
+    "elektricien": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"electrician",
+        "overture": lambda basis, soort: soort == "electrician",
+        "soort": "Elektricien",
+    },
+    "verhuisbedrijf": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"removal|mover",
+        "overture": lambda basis, soort: soort in ("mover", "moving_company", "furniture_assembly"),
+        "soort": "Verhuisbedrijf",
+    },
+    "schoonmaakbedrijf": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"cleaning|window_clean",
+        "overture": lambda basis, soort: soort in ("cleaning_service", "home_cleaning", "window_washing", "carpet_cleaning", "pest_control_service"),
+        "soort": "Schoonmaak",
+        "andere_soort": r"stomerij|wasserette|dry clean|autowas|car wash",
+    },
 }
 
 # Een link naar zo'n site is geen eigen website: dan valt het bedrijf af (standaard: geen eigen site = niet in de gids)
