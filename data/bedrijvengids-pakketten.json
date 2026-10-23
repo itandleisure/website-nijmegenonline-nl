@@ -1,3 +1,11 @@
 {
- "_uitleg": "Betaalde pakketten per bedrijf (slug zoals in de url /bedrijvengids/<slug>/). pakket: uitgelicht, partner of hoofdpartner. Na betaald_tot valt het bedrijf bij de nachtelijke herbouw terug naar gratis. Alles behalve pakket en betaald_tot is optioneel. Voorbeeld: \"apollo-gym\": {\"pakket\": \"uitgelicht\", \"betaald_tot\": \"2027-10-31\", \"logo\": \"https://...\", \"fotos\": [\"https://...\"], \"knop\": {\"tekst\": \"Plan een proefles\", \"link\": \"https://...\"}, \"actie\": {\"tekst\": \"Twee weken gratis sporten\", \"tot\": \"2026-12-31\"}}"
+ "_uitleg": "Betaalde pakketten per bedrijf (slug zoals in de url /bedrijvengids/<slug>/). pakket: uitgelicht, partner of hoofdpartner. Na betaald_tot valt het bedrijf bij de nachtelijke herbouw terug naar gratis. Alles behalve pakket en betaald_tot is optioneel. Voorbeeld: \"apollo-gym\": {\"pakket\": \"uitgelicht\", \"betaald_tot\": \"2027-10-31\", \"logo\": \"https://...\", \"fotos\": [\"https://...\"], \"knop\": {\"tekst\": \"Plan een proefles\", \"link\": \"https://...\"}, \"actie\": {\"tekst\": \"Twee weken gratis sporten\", \"tot\": \"2026-12-31\"}} ook_in: lijst met andere categorieën (slugs) waar het bedrijf ook met zijn kaart staat, bijv. [\"restaurant\"].",
+ "de-bruijn-lunchen-op-de-markt": {
+  "pakket": "partner",
+  "betaald_tot": "2099-12-31",
+  "ook_in": [
+   "restaurant"
+  ],
+  "_notitie": "partner van NijmegenOnline (partners/partners.json, zonder einddatum); besluit Frans 23-10-2026"
+ }
 }

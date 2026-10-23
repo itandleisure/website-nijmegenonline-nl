@@ -49,10 +49,15 @@ def tabel(koppen, rijen):
 
 def main(categorie, bron):
     bron = pathlib.Path(bron)
-    gids = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))[categorie]
+    alle = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))
+    gids = alle[categorie]
     scan = json.loads((ROOT / "data" / "bedrijvengids-scan.json").read_text(encoding="utf-8"))
     sites = json.loads((ROOT / "data" / "bedrijvengids-websites.json").read_text(encoding="utf-8"))
-    bedrijven = gids["gids"] + gids["overig"]
+    # Bedrijven die al bij een eerdere categorie staan (en daar niet uitgefilterd zijn) tellen hier niet mee
+    elders = set()
+    for cat in list(alle)[:list(alle).index(categorie)]:
+        elders |= {b["slug"] for b in alle[cat]["gids"] + alle[cat]["overig"] if cat not in (scan.get(b["slug"], {}).get("niet_in") or {})}
+    bedrijven = [b for b in gids["gids"] + gids["overig"] if b["slug"] not in elders]
     volledig = []   # (naam, adres, website, uitkomst, reden)
 
     vooraf = []
