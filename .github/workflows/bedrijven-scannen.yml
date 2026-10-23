@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       categorie:
-        description: "Categorie (slug), bijvoorbeeld sportschool"
+        description: "Categorie (slug), bijvoorbeeld sportschool; meer categorieën met komma's"
         default: "sportschool"
       maximum:
         description: "Hoeveel bedrijven hooguit"
@@ -18,6 +18,9 @@ on:
       opnieuw:
         description: "Ook bedrijven die al een tekst hebben opnieuw scannen (ja/nee)"
         default: "nee"
+      batch:
+        description: "Goedkoop via de batch: sites zelf lezen, half zo duur, klaar binnen een paar uur (ja/nee)"
+        default: "ja"
 
 permissions:
   contents: write
@@ -29,6 +32,7 @@ concurrency:
 jobs:
   scannen:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,9 +46,10 @@ jobs:
           MAXIMUM: ${{ inputs.maximum }}
           ALLEEN: ${{ inputs.alleen }}
           OPNIEUW: ${{ inputs.opnieuw }}
+          BATCH: ${{ inputs.batch }}
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::error::Het secret ANTHROPIC_API_KEY ontbreekt"; exit 1; fi
-          python tools/bedrijven_scan.py "$CATEGORIE" --max "$MAXIMUM" --alleen "$ALLEEN" $([ "$OPNIEUW" = "ja" ] && echo --opnieuw)
+          python tools/bedrijven_scan.py "$CATEGORIE" --max "$MAXIMUM" --alleen "$ALLEEN" $([ "$OPNIEUW" = "ja" ] && echo --opnieuw) $([ "$BATCH" != "nee" ] && echo --batch)
       - name: Opslaan
         if: always()
         run: |

@@ -183,7 +183,8 @@ BRONNEN = {
 # Een link naar zo'n site is geen eigen website: dan valt het bedrijf af (standaard: geen eigen site = niet in de gids)
 GEEN_EIGEN_SITE = ("facebook.com", "instagram.com", "thuisbezorgd.nl", "tripadvisor", "detelefoongids.nl", "google.com",
                    "goo.gl", "linktr.ee", "ubereats.com", "deliveroo", "iens.nl", "thefork", "eet.nu", "yelp.",
-                   "booking.com", "wix.com/", "telefoonboek.nl", "openingstijden.", "foursquare.com", "zomato.com", "linkedin.com")
+                   "booking.com", "wix.com/", "telefoonboek.nl", "openingstijden.", "foursquare.com", "zomato.com", "linkedin.com",
+                   "twitter.com", "//x.com", "youtube.com", "tiktok.com", "werkzoeken.nl", "indeed.")
 
 KEUKEN = {
     "italian": "Italiaans", "pizza": "Italiaans", "sushi": "Japans", "japanese": "Japans", "chinese": "Chinees",

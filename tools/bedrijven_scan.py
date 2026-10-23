@@ -10,7 +10,8 @@ gestopt is of staat er te weinig op, dan krijgt het bedrijf status "verwijderd" 
 begint. Hoort het volgens de site in een andere categorie (een cafetaria tussen de restaurants), dan komt het in
 "niet_in" en verschijnt het later bij die andere categorie. Betalende bedrijven worden nooit automatisch verwijderd.
 
-Gebruik: ANTHROPIC_API_KEY=... python tools/bedrijven_scan.py [categorie] [--opnieuw] [--max N] [--alleen slug,slug]
+Gebruik: ANTHROPIC_API_KEY=... python tools/bedrijven_scan.py [categorie[,categorie]] [--batch] [--opnieuw] [--max N] [--alleen slug,slug]
+Met --batch: eerst de sites zelf lezen, dan alles in één batch (half zo duur, klaar binnen een paar uur).
 Draait normaal via .github/workflows/bedrijven-scannen.yml.
 """
 import concurrent.futures
@@ -265,7 +266,8 @@ def zelf_lezen(website):
     return "\n\n---\n\n".join("Pagina %s:\n%s" % (u, t) for u, t in zip(bronnen, stukken)), bronnen
 
 
-def vraag(client, b, categorie, pagina_tekst=""):
+def verzoek(b, categorie, pagina_tekst=""):
+    """De parameters voor één bedrijf, voor messages.create en voor een batch."""
     bericht = ("Bedrijf: %s\nAdres bij ons: %s, %s %s\nWebsite: %s\nVermoedelijke categorie: %s\n%s\n\n"
                "Lees de website en vul de gegevens in." % (b["naam"], b["adres"], b["postcode"], b["plaats"], homepage(b["website"]),
                                                            CATEGORIEEN.get(categorie, categorie),
@@ -274,23 +276,32 @@ def vraag(client, b, categorie, pagina_tekst=""):
         # De site is door ons zelf opgehaald: de tekst gaat mee in het bericht, zonder web_fetch
         bericht += ("\n\nDe website kon je niet zelf openen; hieronder staat de tekst van de pagina's, door ons opgehaald. "
                     "Gebruik alleen deze tekst.\n\n<website>\n%s\n</website>" % pagina_tekst)
-    messages = [{"role": "user", "content": bericht}]
-    # Geen allowed_domains: veel sites sturen door naar een ander domein, en dan zou het ophalen mislukken
-    tools = [] if pagina_tekst else [{"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 5}]
+    params = {"model": MODEL, "max_tokens": 8000, "system": SYSTEEM, "messages": [{"role": "user", "content": bericht}],
+              "output_config": {"effort": "low", "format": {"type": "json_schema", "schema": schema(categorie)}}}
+    if not pagina_tekst:
+        # Geen allowed_domains: veel sites sturen door naar een ander domein, en dan zou het ophalen mislukken
+        params["tools"] = [{"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 5}]
+    return params
+
+
+def uitlezen(r):
+    if r.stop_reason == "refusal":
+        raise RuntimeError("geweigerd")
+    if r.stop_reason == "pause_turn":
+        raise RuntimeError("gepauzeerd")
+    uit = json.loads(next(blok.text for blok in r.content if blok.type == "text"))
+    uit["kosten_tokens"] = {"in": r.usage.input_tokens, "uit": r.usage.output_tokens}
+    return uit
+
+
+def vraag(client, b, categorie, pagina_tekst=""):
+    params = verzoek(b, categorie, pagina_tekst)
     for _ in range(5):
-        r = client.messages.create(
-            model=MODEL, max_tokens=8000, system=SYSTEEM, messages=messages, **({"tools": tools} if tools else {}),
-            output_config={"effort": "low", "format": {"type": "json_schema", "schema": schema(categorie)}},
-        )
+        r = client.messages.create(**params)
         if r.stop_reason == "pause_turn":
-            messages = [{"role": "user", "content": bericht}, {"role": "assistant", "content": r.content}]
+            params["messages"] = params["messages"][:1] + [{"role": "assistant", "content": r.content}]
             continue
-        if r.stop_reason == "refusal":
-            raise RuntimeError("geweigerd")
-        tekst = next(blok.text for blok in r.content if blok.type == "text")
-        uit = json.loads(tekst)
-        uit["kosten_tokens"] = {"in": r.usage.input_tokens, "uit": r.usage.output_tokens}
-        return uit
+        return uitlezen(r)
     raise RuntimeError("te vaak gepauzeerd")
 
 
@@ -317,16 +328,9 @@ def beoordelen(uit, categorie, betaald):
     return uit
 
 
-def main(argv):
-    categorie = next((a for a in argv if not a.startswith("--")), "sportschool")
-    opnieuw = "--opnieuw" in argv
-    maximum = int(argv[argv.index("--max") + 1]) if "--max" in argv else 999
-    alleen = set(argv[argv.index("--alleen") + 1].replace(",", " ").split()) if "--alleen" in argv and argv[argv.index("--alleen") + 1] else set()
+def te_scannen(categorie, scan, opnieuw, alleen):
     gids = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))[categorie]
-    scan = json.loads(UIT.read_text(encoding="utf-8")) if UIT.exists() else {}
-    pakketten = json.loads((ROOT / "data" / "bedrijvengids-pakketten.json").read_text(encoding="utf-8"))
-    client = anthropic.Anthropic()
-    te_doen = []
+    uit = []
     for b in gids["gids"] + gids["overig"]:
         eerder = scan.get(b["slug"], {})
         klaar = eerder.get("status") == "voorstel" and eerder.get("website_bereikbaar") and eerder.get("tekst")
@@ -339,11 +343,40 @@ def main(argv):
         if alleen and b["slug"] not in alleen:
             continue
         if b.get("website") and (alleen or not (klaar and not opnieuw)):
-            te_doen.append(b)
+            uit.append(b)
+    return uit
+
+
+def main(argv):
+    # Eén of meer categorieën, met komma's: "advocatenkantoor,notaris"
+    categorieen = next((a for a in argv if not a.startswith("--")), "sportschool").replace(" ", "").split(",")
+    opnieuw = "--opnieuw" in argv
+    maximum = int(argv[argv.index("--max") + 1]) if "--max" in argv else 999
+    alleen = set(argv[argv.index("--alleen") + 1].replace(",", " ").split()) if "--alleen" in argv and argv[argv.index("--alleen") + 1] else set()
+    scan = json.loads(UIT.read_text(encoding="utf-8")) if UIT.exists() else {}
+    pakketten = json.loads((ROOT / "data" / "bedrijvengids-pakketten.json").read_text(encoding="utf-8"))
+    client = anthropic.Anthropic()
+    te_doen, gezien = [], set()
+    for categorie in categorieen:
+        for b in te_scannen(categorie, scan, opnieuw, alleen):
+            if b["slug"] not in gezien:
+                gezien.add(b["slug"])
+                te_doen.append((b, categorie))
     te_doen = te_doen[:maximum]
     slot = threading.Lock()
 
-    def scan_een(b):
+    def opslaan(b, categorie, uit):
+        if uit.get("status") != "fout":
+            uit["status"] = "voorstel"
+            uit = beoordelen(uit, categorie, (pakketten.get(b["slug"]) or {}).get("pakket") in ("uitgelicht", "partner", "hoofdpartner"))
+        uit.update({"naam": b["naam"], "website": b["website"], "categorie_scan": categorie, "gescand": time.strftime("%Y-%m-%d")})
+        with slot:
+            scan[b["slug"]] = uit
+            print("%-40s %s" % (b["slug"], uit.get("status")), flush=True)
+            UIT.write_text(json.dumps(scan, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+
+    def scan_een(paar):
+        b, categorie = paar
         try:
             uit = vraag(client, b, categorie)
             if not uit.get("website_bereikbaar"):
@@ -354,21 +387,53 @@ def main(argv):
                     uit = vraag(client, b, categorie, tekst)
                     uit["bronnen"], uit["zelf_gelezen"] = bronnen, True
                     uit["kosten_tokens"] = {k: uit["kosten_tokens"][k] + kosten[k] for k in kosten}
-            uit["status"] = "voorstel"
-            uit = beoordelen(uit, categorie, (pakketten.get(b["slug"]) or {}).get("pakket") in ("uitgelicht", "partner", "hoofdpartner"))
         except Exception as fout:  # één kapotte site mag de rest niet tegenhouden
             uit = {"status": "fout", "fout": str(fout)[:300]}
-        uit.update({"naam": b["naam"], "website": b["website"], "categorie_scan": categorie,
-                    "gescand": time.strftime("%Y-%m-%d")})
-        with slot:
-            scan[b["slug"]] = uit
-            print("%-40s %s" % (b["slug"], uit.get("status")), flush=True)
-            UIT.write_text(json.dumps(scan, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+        opslaan(b, categorie, uit)
+
+    if "--batch" in argv:
+        # Goedkoper (zie de README): eerst lezen we de sites zelf, dan gaat alles in één batch (50% korting).
+        # Zelf lezen scheelt veel tokens, omdat alleen de platte tekst meegaat. Sites die we niet kunnen lezen
+        # krijgen in de batch de web_fetch-tool; wat in de batch mislukt, doen we daarna nog los.
+        with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
+            gelezen = list(pool.map(lambda paar: zelf_lezen(paar[0]["website"]), te_doen))
+        # Weinig tekst (een site die alles met JavaScript laadt): dan mag Claude zelf rondkijken met web_fetch
+        gelezen = [(t, br) if len(t) >= 1500 else ("", []) for t, br in gelezen]
+        verzoeken = [{"custom_id": "b%d" % i, "params": verzoek(b, categorie, tekst)}
+                     for i, ((b, categorie), (tekst, _)) in enumerate(zip(te_doen, gelezen))]
+        print("%d bedrijven, %d zelf gelezen" % (len(te_doen), sum(1 for t, _ in gelezen if t)), flush=True)
+        opnieuw_los = []
+        if verzoeken:
+            batch = client.messages.batches.create(requests=verzoeken)
+            while batch.processing_status != "ended":
+                time.sleep(60)
+                batch = client.messages.batches.retrieve(batch.id)
+                print("batch %s: %d bezig, %d klaar" % (batch.id, batch.request_counts.processing, batch.request_counts.succeeded), flush=True)
+            for r in client.messages.batches.results(batch.id):
+                i = int(r.custom_id[1:])
+                b, categorie = te_doen[i]
+                tekst, bronnen = gelezen[i]
+                try:
+                    if r.result.type != "succeeded":
+                        raise RuntimeError(r.result.type)
+                    uit = uitlezen(r.result.message)
+                    uit["batch"] = True
+                    if tekst:
+                        uit["bronnen"], uit["zelf_gelezen"] = bronnen, True
+                except Exception:
+                    opnieuw_los.append((b, categorie))
+                    continue
+                opslaan(b, categorie, uit)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+            list(pool.map(scan_een, opnieuw_los))
+        print("Klaar: %d in de batch, %d daarna los" % (len(verzoeken), len(opnieuw_los)))
+        return
 
     # Een paar sites tegelijk: één site lezen duurt al snel een halve minuut
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         list(pool.map(scan_een, te_doen))
-    print("Klaar: %d gescand, %d zonder website overgeslagen" % (len(te_doen), sum(1 for b in gids["overig"] if not b.get("website"))))
+    print("Klaar: %d gescand" % len(te_doen))
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])

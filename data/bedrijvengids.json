@@ -24600,27 +24600,6 @@
   "gids": [],
   "overig": [
    {
-    "naam": "De BV Notaris",
-    "adres": "Sint Canisiussingel 19C",
-    "postcode": "6511 TE",
-    "plaats": "Nijmegen",
-    "telefoon": "+31243888684",
-    "website": "https://twitter.com/bvoprichten1",
-    "lat": "51.843182",
-    "lon": "5.870285",
-    "soort": "Notaris",
-    "bron": "Overture (meta)",
-    "in_gids": false,
-    "email": "",
-    "facebook": "",
-    "instagram": "",
-    "openingstijden": [],
-    "foto": "",
-    "beschrijving": "",
-    "tekst": "",
-    "slug": "de-bv-notaris"
-   },
-   {
     "naam": "De Woonnotaris",
     "adres": "Sint Canisiussingel 26",
     "postcode": "6511 TJ",
