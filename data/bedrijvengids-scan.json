@@ -5394,6 +5394,14 @@
   "website": "http://lunchenopdemarkt.nl/",
   "website_bereikbaar": true
  },
+ "de-bv-notaris": {
+  "categorie_scan": "notaris",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsnWYFWPUkq4XaB2r2J'}",
+  "gescand": "2026-10-23",
+  "naam": "De BV Notaris",
+  "status": "fout",
+  "website": "https://twitter.com/bvoprichten1"
+ },
  "de-derde-kamer": {
   "adres_op_site": "Grote Markt 34, 6511 KB Nijmegen",
   "bronnen": [
@@ -6496,6 +6504,14 @@
   "website": "https://dewitwasserij.nl",
   "website_bereikbaar": true
  },
+ "de-woonnotaris": {
+  "categorie_scan": "notaris",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsnWWX2Um2gp4UQpQyC'}",
+  "gescand": "2026-10-23",
+  "naam": "De Woonnotaris",
+  "status": "fout",
+  "website": "http://www.dewoonnotaris.nl/"
+ },
  "de-zaak-meester-fiscaal-juristen": {
   "adres_op_site": "Turfstraat 11, 6811 HK Arnhem; Industriestraat 1-B, 6851 EM Huissen",
   "bronnen": [
@@ -6609,6 +6625,14 @@
   "tekst": "Zin in een avond Griekse gezelligheid zonder dat je naar het vliegveld hoeft? Aan het begin van de Bloemerstraat, midden in het centrum, kun je al sinds 1985 terecht bij Dionysos voor de klassiekers uit de Griekse keuken.\n\nOp de kaart vind je herkenbare favorieten zoals feta, kalamaria, bifteki en moussaka, vers bereid in de eigen keuken. Er zijn schotels voor twee personen om samen te delen, vegetarische hoofdgerechten en ook iets voor de kleintjes. Begin gerust met een ouzo vooraf. Het is een echt familiebedrijf waar inmiddels drie generaties meewerken, en die huiselijke sfeer merk je aan tafel.\n\nDionysos is open van woensdag tot en met zondag, vanaf vier uur 's middags. Bel even om een tafel te reserveren, dan zit je er zeker van.",
   "website": "https://dionysosnijmegen.nl/",
   "website_bereikbaar": true
+ },
+ "dirkzwager-advocaten-notarissen": {
+  "categorie_scan": "notaris",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsnWby85HmAjsmsmZaC'}",
+  "gescand": "2026-10-23",
+  "naam": "Dirkzwager advocaten & notarissen",
+  "status": "fout",
+  "website": "http://www.dirkzwager.nl"
  },
  "dock17": {
   "adres_op_site": "Waalkade 17, 6511 XP Nijmegen",
@@ -9244,6 +9268,14 @@
   "tekst": "Heb je een juridische vraag en wil je advies dat je ook echt begrijpt? Bij Hekkelman werken advocaten en notarissen samen. Ze helpen ondernemers, overheden, instellingen en particulieren, met uitleg in gewone taal en advies dat bij jouw situatie past.\n\nHet kantoor bestrijkt veel rechtsgebieden. Je kunt er terecht voor arbeidsrecht, ondernemingsrecht, vastgoedrecht, bestuursrecht, aanbestedingen en faillissementen. Ook voor IT- en privacyrecht, agrarisch recht en familie- en erfrecht kun je bij hen aankloppen. In Nijmegen zitten zowel de advocatuur als het notariaat, dus je kunt hier ook terecht voor notariële zaken.\n\nOp de website kun je een advocaat of notaris kiezen die bij je vraag past. Je kunt je vraag ook meteen via het contactformulier sturen en daarbij aangeven welk kantoor jou het liefst helpt. Liever even bellen? Dat kan ook.",
   "website": "https://www.hekkelman.nl/",
   "website_bereikbaar": true
+ },
+ "hekkelman-advocaten-notarissen": {
+  "categorie_scan": "notaris",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsnWYEumHXV8z1NRjqh'}",
+  "gescand": "2026-10-23",
+  "naam": "Hekkelman Advocaten & Notarissen",
+  "status": "fout",
+  "website": "http://www.hekkelman.nl"
  },
  "het-cafe-het-duurzame-warenhuis": {
   "adres_op_site": "Burchtstraat 126, 6511 RK Nijmegen",
@@ -12066,6 +12098,14 @@
   "website": "http://www.loongsing.nl/",
   "website_bereikbaar": true
  },
+ "lotgerink-en-veerbeek-notarissen": {
+  "categorie_scan": "notaris",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsnWXW6wp7w2LVRnrm6'}",
+  "gescand": "2026-10-23",
+  "naam": "Lotgerink En Veerbeek Notarissen",
+  "status": "fout",
+  "website": "https://www.lvnotarissen.nl/"
+ },
  "louis": {
   "adres_op_site": "",
   "bronnen": [],
@@ -12283,6 +12323,14 @@
   "tekst": "Zin om samen een heleboel smaken uit Azië te proeven? Bij MIA, op het Stationsplein vlak naast Nijmegen Centraal, bestel je kleine gerechten die op tafel komen zodat iedereen overal van kan proeven. Op de kaart staan Thaise, Chinese en Vietnamese gerechten, zoals dim sum, gyoza, sushi, verse summer rolls en noedels. Er is ook een apart blok met vegetarische en vegan hapjes.\n\nOverdag is het een prettige plek om met een kop thee of Japanse koffie te werken of te studeren, want er is gratis wifi. Je kunt het eten ook laten bezorgen of afhalen, bijvoorbeeld voor een avondje aan de Waal.\n\nMIA is elke dag open vanaf het middaguur. Reserveer online een tafel, of parkeer in de Keizer Karelgarage, dan loop je er in een minuutje heen.",
   "website": "https://www.madeinasia.nl/",
   "website_bereikbaar": true
+ },
+ "maatschap-de-mul-zegger-notarissen": {
+  "categorie_scan": "notaris",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsnWbiHQpcdpbD1TBjK'}",
+  "gescand": "2026-10-23",
+  "naam": "Maatschap de Mul Zegger Notarissen",
+  "status": "fout",
+  "website": "http://dmz.nl/notaris"
  },
  "madame-liberty": {
   "adres_op_site": "Vierdaagseplein 1, 6524 AG Nijmegen",
