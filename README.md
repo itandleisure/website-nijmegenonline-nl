@@ -162,5 +162,7 @@ Zo is de categorie sportscholen opgezet; elke volgende categorie gaat op dezelfd
 3. **Scan** van de eigen website (`tools/bedrijven_scan.py`): tekst in de afgesproken stijl (warm, je/jij, tip van een lokale vriend, geen claims die niet te controleren zijn), kenmerken alleen als de site ze noemt, openingstijden alleen als ze leesbaar op de site staan.
 4. **Automatisch uitfilteren, met reden in de scan:** site niet uit te lezen (geen halve gegevens: liever weg, het bedrijf kan zichzelf aanmelden), lege of tijdelijke site, past niet in de categorie, twijfel of het bedrijf nog open is.
 5. **Datacheck** voor Frans, één lijst: adres op de eigen site wijkt af, twijfelachtige kenmerken, wat er is uitgefilterd en waarom. Frans beslist alles in één keer; de besluiten gaan in de databestanden en in `docs/`.
+**Google als tweede bron (gewenst door Frans, 23-10-2026, nog te bouwen):** via de officiële Google Places API, niet scrapen. Gebruiken voor openingstijden en telefoon (vult de gaten van de eigen site), voor "permanent gesloten" (automatisch uitfilteren) en voor een link "Bekijk de reviews op Google" met cijfer en aantal, met Google als bron. Vooraf in de voorwaarden van Google nagaan wat mag (bewaren van gegevens, reviews als inspiratie voor teksten). Nodig: een Google Cloud-account met API-sleutel van Frans; kost enkele centen per bedrijf.
+
 6. **Daarna** de goedgekeurde teksten live, plus de indeling van de categoriepagina (alles gelijk, alleen Uitgelicht valt op) en het blok onder de blogs over dat onderwerp.
 
