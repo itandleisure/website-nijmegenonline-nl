@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Musea in Nijmegen | NijmegenOnline</title>
+  <meta name="description" content="Alle musea in Nijmegen, de oudste stad van Nederland: van Romeinse geschiedenis tot moderne kunst.">
+  <link rel="canonical" href="https://www.nijmegenonline.nl/bedrijvengids-categorie/musea/">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="Musea in Nijmegen">
+  <meta property="og:description" content="Alle musea in Nijmegen, de oudste stad van Nederland: van Romeinse geschiedenis tot moderne kunst.">
+  <meta property="og:url" content="https://www.nijmegenonline.nl/bedrijvengids-categorie/musea/">
+  <meta property="og:site_name" content="NijmegenOnline">
+  <meta property="og:image" content="https://www.nijmegenonline.nl/assets/img/logo-nijmegenonline.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=23">
+  <link rel="stylesheet" href="../../partners/slider.css?v=5">
+  <script src="../../partners/slider.js?v=6" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Musea in Nijmegen", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anatomisch en Pathologisch Museum", "url": "https://www.nijmegenonline.nl/bedrijvengids/anatomisch-en-pathologisch-museum/"}, {"@type": "ListItem", "position": 2, "name": "Atelier Ad van Hoof", "url": "https://www.nijmegenonline.nl/bedrijvengids/atelier-ad-van-hoof/"}, {"@type": "ListItem", "position": 3, "name": "Binnenvaartmuseum Nijmegen", "url": "https://www.nijmegenonline.nl/bedrijvengids/binnenvaartmuseum-nijmegen/"}, {"@type": "ListItem", "position": 4, "name": "De Bastei", "url": "https://www.nijmegenonline.nl/bedrijvengids/de-bastei/"}, {"@type": "ListItem", "position": 5, "name": "Huis van de Nijmeegse Geschiedenis", "url": "https://www.nijmegenonline.nl/bedrijvengids/huis-van-de-nijmeegse-geschiedenis/"}, {"@type": "ListItem", "position": 6, "name": "Infocentrum WO2 Nijmegen", "url": "https://www.nijmegenonline.nl/bedrijvengids/infocentrum-wo2-nijmegen/"}, {"@type": "ListItem", "position": 7, "name": "Landhoofd", "url": "https://www.nijmegenonline.nl/bedrijvengids/landhoofd/"}, {"@type": "ListItem", "position": 8, "name": "Maelwael van Lymborch Huis", "url": "https://www.nijmegenonline.nl/bedrijvengids/maelwael-van-lymborch-huis/"}, {"@type": "ListItem", "position": 9, "name": "Museum Kam", "url": "https://www.nijmegenonline.nl/bedrijvengids/museum-kam/"}, {"@type": "ListItem", "position": 10, "name": "Museum Kinderdorp Neerbosch", "url": "https://www.nijmegenonline.nl/bedrijvengids/museum-kinderdorp-neerbosch/"}, {"@type": "ListItem", "position": 11, "name": "Museum of Anatomy and Pathology", "url": "https://www.nijmegenonline.nl/bedrijvengids/museum-of-anatomy-and-pathology/"}, {"@type": "ListItem", "position": 12, "name": "MuZIEum", "url": "https://www.nijmegenonline.nl/bedrijvengids/muzieum/"}, {"@type": "ListItem", "position": 13, "name": "Nationaal Fietsmuseum Velorama", "url": "https://www.nijmegenonline.nl/bedrijvengids/nationaal-fietsmuseum-velorama/"}, {"@type": "ListItem", "position": 14, "name": "Natuurmuseum Nijmegen", "url": "https://www.nijmegenonline.nl/bedrijvengids/natuurmuseum-nijmegen/"}, {"@type": "ListItem", "position": 15, "name": "Valkhof Museum", "url": "https://www.nijmegenonline.nl/bedrijvengids/valkhof-museum/"}, {"@type": "ListItem", "position": 16, "name": "Vrijheidsmuseum", "url": "https://www.nijmegenonline.nl/bedrijvengids/vrijheidsmuseum/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kan ik met de Museumkaart naar musea in Nijmegen?", "acceptedAnswer": {"@type": "Answer", "text": "Bij de meeste wel. Filter op museumkaart."}}, {"@type": "Question", "name": "Welk museum is leuk met kinderen?", "acceptedAnswer": {"@type": "Answer", "text": "Filter op kinderen voor musea met speurtochten of een kinderprogramma."}}]}</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" defer></script>
+</head>
+<body>
+  <div class="testbalk">Dit is een testomgeving. De echte pagina staat op <a href="https://www.nijmegenonline.nl/bedrijvengids-categorie/musea/">www.nijmegenonline.nl</a>.</div>
+
+  <!-- header -->
+  <header>
+    <div class="bovenbalk">
+      <div class="container">
+        <ul>
+          <li><a href="../../kom-in-contact/">Kom in contact</a></li>
+          <li><a href="../../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+          <li><a href="../../vacatures/">Vacatures</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hoofdbalk">
+      <div class="container kop">
+        <a class="logo" href="../../"><img src="../../assets/img/logo-nijmegenonline.png" alt="NijmegenOnline" width="603" height="120"></a>
+        <nav class="hoofdmenu" aria-label="Hoofdmenu">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../blog/">Inspiratie opdoen</a></li>
+            <li><a href="../../thema/">Gidsen</a></li>
+            <li><a href="../../bedrijvengids/">Bedrijvengids</a></li>
+            <li><a href="../../nijmegen-evenementen-overzicht/">Agenda</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- /header -->
+
+  <main class="artikel-wrap">
+    <div class="container">
+      <div class="artikel-layout">
+      <article class="artikel gids">
+        <div class="kruimelpad"><a href="../../">Home</a> › Bedrijvengids › Musea in Nijmegen</div>
+        <p class="gidslabel">Bedrijvengids</p>
+        <h1>Musea in Nijmegen</h1>
+        <div class="inhoud-tekst"><p>Nijmegen is de oudste stad van Nederland, en dat zie je terug in de musea: Romeinse vondsten, de Tweede Wereldoorlog, kunst en cultuur van over de hele wereld. Veel musea hebben ook programma's voor kinderen.</p><p>Op deze pagina vind je alle 16 musea in Nijmegen, met openingstijden, een eigen pagina en een kaart. Filter hieronder op wat jij belangrijk vindt, zoals kinderen, rondleiding of museumkaart.</p></div>
+        <section class="gids-sectie" id="uitgelicht">
+          <h2>Uitgelicht</h2>
+          <div class="bedrijflijst bedrijflijst--uitgelicht">
+            <a class="bedrijfkaart bedrijfkaart--uitgelicht" href="../../adverteren-bij-nijmegenonline/" data-kenmerken="kinderen|museumkaart"><img src="../../assets/uploads/2024/04/vrijheidsmuseum-Grootouders-vertellen-verkleind-bevrijdingsdag-533x400.webp" alt="" loading="lazy"><span class="bedrijfkaart__tekst"><span class="bedrijfkaart__label">Voorbeeld</span><strong>Jouw museum</strong><span>Uitgelicht staat bovenaan, met foto en actieknop</span><span class="bedrijfkaart__actie">Gratis rondleiding op zondag</span><span class="bedrijfkaart__kenmerken"><span>kinderen</span><span>museumkaart</span></span><span class="bedrijfkaart__knop">Bekijk hoe het werkt</span></span></a>
+            <a class="vrijeplek" href="../../bedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=musea"><strong>Nog 3 plekken vrij</strong><span>Zet jouw museum hier bovenaan, boven 16 andere musea. Met foto's, je actie, een eigen knop en je banner bij onze blogs over musea.</span><span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>
+          </div>
+        </section>
+
+        <section class="gids-sectie">
+          <h2>Alle musea in Nijmegen</h2>
+          <div class="bedrijflijst">
+            <a class="bedrijfkaart" href="../../bedrijvengids/anatomisch-en-pathologisch-museum/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Anatomisch en Pathologisch Museum</strong><span>Geert Grooteplein Noord 21, 6525 EZ Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/atelier-ad-van-hoof/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Atelier Ad van Hoof</strong><span>Van den Havestraat 6A, 6521 JS Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/binnenvaartmuseum-nijmegen/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Binnenvaartmuseum Nijmegen</strong><span>Waalhaven 1K, 6541 AG Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/de-bastei/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>De Bastei</strong><span>Lange Baan 4, 6511 XJ Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/huis-van-de-nijmeegse-geschiedenis/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Huis van de Nijmeegse Geschiedenis</strong><span>Mariënburg 26, 6511 PS Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/infocentrum-wo2-nijmegen/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Infocentrum WO2 Nijmegen</strong><span>Ridderstraat 27, 6511 TM Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/landhoofd/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Landhoofd</strong><span>Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/maelwael-van-lymborch-huis/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Maelwael van Lymborch Huis</strong><span>Burchtstraat 63, 6511 RC Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/museum-kam/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Museum Kam</strong><span>Museum Kamstraat 45, 6522 GB Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/museum-kinderdorp-neerbosch/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Museum Kinderdorp Neerbosch</strong><span>Scherpenkampweg 58, 6545 AL Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/museum-of-anatomy-and-pathology/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Museum of Anatomy and Pathology</strong><span>Geert Grooteplein Noord 21, 6525 EZ Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/muzieum/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>MuZIEum</strong><span>Ziekerstraat 6B, 6511 LH Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/nationaal-fietsmuseum-velorama/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Nationaal Fietsmuseum Velorama</strong><span>Waalkade 107, 6511 XR Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/natuurmuseum-nijmegen/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Natuurmuseum Nijmegen</strong><span>Gerard Noodtstraat 121, 6511 ST Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/valkhof-museum/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Valkhof Museum</strong><span>Kelfkensbos 59, 6511 TB Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/vrijheidsmuseum/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Vrijheidsmuseum</strong><span>Wylerbaan 4G, 6561 KR Groesbeek</span></span></a>
+          </div>
+        </section>
+        <div class="partner-slider" data-plaatsing="blog" data-onderwerp="musea"></div>
+        <section class="gids-sectie">
+          <h2>Op de kaart</h2>
+          <div id="gidskaart" class="gidskaart" role="region" aria-label="Kaart met bedrijven"></div>
+          <script type="application/json" id="kaartdata">{"groepen": ["Uitgaan en vrije tijd"], "punten": [["Anatomisch en Pathologisch Museum", 51.824909, 5.861992, "../../bedrijvengids/anatomisch-en-pathologisch-museum/", "Geert Grooteplein Noord 21, 6525 EZ Nijmegen", "Uitgaan en vrije tijd"], ["Atelier Ad van Hoof", 51.84248, 5.8721, "../../bedrijvengids/atelier-ad-van-hoof/", "Van den Havestraat 6A, 6521 JS Nijmegen", "Uitgaan en vrije tijd"], ["Binnenvaartmuseum Nijmegen", 51.851311, 5.850054, "../../bedrijvengids/binnenvaartmuseum-nijmegen/", "Waalhaven 1K, 6541 AG Nijmegen", "Uitgaan en vrije tijd"], ["De Bastei", 51.848452, 5.869021, "../../bedrijvengids/de-bastei/", "Lange Baan 4, 6511 XJ Nijmegen", "Uitgaan en vrije tijd"], ["Huis van de Nijmeegse Geschiedenis", 51.845216, 5.866409, "../../bedrijvengids/huis-van-de-nijmeegse-geschiedenis/", "Mariënburg 26, 6511 PS Nijmegen", "Uitgaan en vrije tijd"], ["Infocentrum WO2 Nijmegen", 51.847282, 5.868255, "../../bedrijvengids/infocentrum-wo2-nijmegen/", "Ridderstraat 27, 6511 TM Nijmegen", "Uitgaan en vrije tijd"], ["Landhoofd", 51.850769, 5.856126, "../../bedrijvengids/landhoofd/", "Nijmegen", "Uitgaan en vrije tijd"], ["Maelwael van Lymborch Huis", 51.846773, 5.867263, "../../bedrijvengids/maelwael-van-lymborch-huis/", "Burchtstraat 63, 6511 RC Nijmegen", "Uitgaan en vrije tijd"], ["Museum Kam", 51.841946, 5.878211, "../../bedrijvengids/museum-kam/", "Museum Kamstraat 45, 6522 GB Nijmegen", "Uitgaan en vrije tijd"], ["Museum Kinderdorp Neerbosch", 51.843209, 5.798468, "../../bedrijvengids/museum-kinderdorp-neerbosch/", "Scherpenkampweg 58, 6545 AL Nijmegen", "Uitgaan en vrije tijd"], ["Museum of Anatomy and Pathology", 51.824646, 5.861423, "../../bedrijvengids/museum-of-anatomy-and-pathology/", "Geert Grooteplein Noord 21, 6525 EZ Nijmegen", "Uitgaan en vrije tijd"], ["MuZIEum", 51.845064, 5.863828, "../../bedrijvengids/muzieum/", "Ziekerstraat 6B, 6511 LH Nijmegen", "Uitgaan en vrije tijd"], ["Nationaal Fietsmuseum Velorama", 51.848605, 5.870011, "../../bedrijvengids/nationaal-fietsmuseum-velorama/", "Waalkade 107, 6511 XR Nijmegen", "Uitgaan en vrije tijd"], ["Natuurmuseum Nijmegen", 51.844631, 5.87038, "../../bedrijvengids/natuurmuseum-nijmegen/", "Gerard Noodtstraat 121, 6511 ST Nijmegen", "Uitgaan en vrije tijd"], ["Valkhof Museum", 51.8466, 5.871387, "../../bedrijvengids/valkhof-museum/", "Kelfkensbos 59, 6511 TB Nijmegen", "Uitgaan en vrije tijd"], ["Vrijheidsmuseum", 51.785626, 5.93663, "../../bedrijvengids/vrijheidsmuseum/", "Wylerbaan 4G, 6561 KR Groesbeek", "Uitgaan en vrije tijd"]]}</script>
+          <script src="../../assets/js/kaart.js?v=2" defer></script>
+        </section>
+        <section class="gids-sectie pakketvergelijk">
+          <h2>Heb je een museum in Nijmegen?</h2>
+          <p>Elk museum staat gratis in onze gids. Wil je opvallen tussen 16 musea? Kies dan voor Uitgelicht of Partner.</p>
+          <div class="tabel-scroll"><table>
+            <thead><tr><th></th><th>Gratis</th><th>Uitgelicht<br><small>&euro; 149 per jaar,<br>eerste jaar &euro; 99</small></th><th>Partner<br><small>&euro; 449 per jaar</small></th></tr></thead>
+            <tbody>
+              <tr><th>Eigen pagina met adres, kaart en openingstijden</th><td class="ja">&#10003;</td><td class="ja">&#10003;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Tekst door onze redactie</th><td>kort</td><td>uitgebreid</td><td>uitgebreid</td></tr>
+              <tr><th>Foto&#x27;s op je eigen pagina</th><td>1</td><td>tot 10</td><td>tot 10</td></tr>
+              <tr><th>Bovenaan deze pagina, met foto en label Uitgelicht</th><td class="nee">&ndash;</td><td class="ja">&#10003;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Actie en eigen knop (tickets, agenda, route)</th><td class="nee">&ndash;</td><td class="ja">&#10003;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Uitgelicht onder onze blogs over musea</th><td class="nee">&ndash;</td><td class="ja">&#10003;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Banner in de partnerbalk</th><td class="nee">&ndash;</td><td>bij blogs over musea</td><td>op de hele site</td></tr>
+              <tr><th>Artikel over je bedrijf en een plek in de nieuwsbrief</th><td class="nee">&ndash;</td><td class="nee">&ndash;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Overzicht van weergaven en kliks</th><td>jaarlijks</td><td>jaarlijks</td><td>elk kwartaal</td></tr>
+            </tbody>
+          </table></div>
+          <p class="pakketvergelijk__knoppen"><a class="knop" href="../../bedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=musea">Kies Uitgelicht</a> <a href="../../adverteren-bij-nijmegenonline/">Alle mogelijkheden</a> &middot; Staat je museum er al? Klik op je pagina op <em>Dit is mijn bedrijf</em>.</p>
+        </section>
+        <section class="gids-sectie">
+          <h2>Lees ook</h2>
+          <ul>
+            <li><a href="../../museums-in-nijmegen-wat-ga-jij-ontdekken/">Museums in Nijmegen, wat ga jij ontdekken?</a></li>
+            <li><a href="../../hoe-het-afrika-museum-je-elke-keer-weer-inspireert/">Hoe het Afrika museum je elke keer weer inspireert</a></li>
+          </ul>
+        </section>
+        <section class="gids-sectie faq">
+          <h2>Veelgestelde vragen</h2>
+          <details><summary>Kan ik met de Museumkaart naar musea in Nijmegen?</summary><p>Bij de meeste wel. Filter op museumkaart.</p></details>
+          <details><summary>Welk museum is leuk met kinderen?</summary><p>Filter op kinderen voor musea met speurtochten of een kinderprogramma.</p></details>
+        </section>
+        <p class="bron">Gegevens: onze eigen gids, aangevuld met © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-bijdragers</a> en Overture Maps.</p>
+      </article>
+
+      <!-- zijbalk -->
+      <aside class="zijbalk" aria-label="Zijbalk">
+        <div class="zijbalk__blok zijbalk__zoeken">
+          <form role="search" method="get" action="https://www.nijmegenonline.nl/">
+            <label for="zoek" class="zijbalk__titel">Zoeken</label>
+            <div class="zoekveld">
+              <input id="zoek" type="search" name="swps" placeholder="Zoek op NijmegenOnline">
+              <button type="submit" aria-label="Zoeken">Zoek</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="zijbalk__blok zijbalk__partners">
+          <div class="partner-slider" data-plaatsing="zijbalk" data-weergave="verticaal" data-per-keer="2"></div>
+        </div>
+
+        <div class="zijbalk__blok">
+          <h2 class="zijbalk__titel">Binnenkort in Nijmegen</h2>
+          <ul class="zijbalk__agenda">
+            <!-- binnenkort -->
+            <li><span class="zijbalk__datum">24 okt, 20.00 uur</span><a href="../../events/sean-taylor/">Sean Taylor</a></li>
+            <li><span class="zijbalk__datum">25 okt, 14.00 uur</span><a href="../../events/highlight-tours-in-het-vrijheidsmuseum-4/">Highlight Tours in het Vrijheidsmuseum</a></li>
+            <li><span class="zijbalk__datum">25 okt, 13.00 uur</span><a href="../../events/uitwisselingsconcert-harmonie-hatert-met-dov-wijchen/">Uitwisselingsconcert Harmonie Hatert met DOV Wijchen</a></li>
+            <!-- /binnenkort -->
+          </ul>
+          <a class="zijbalk__link" href="../../nijmegen-evenementen-overzicht/">Bekijk de hele agenda</a>
+        </div>
+
+        <div class="zijbalk__blok zijbalk__cta">
+          <h2 class="zijbalk__titel">Jouw bedrijf in de bedrijvengids?</h2>
+          <p>Laat Nijmegen zien wat je doet. Aanmelden is eenvoudig.</p>
+          <a class="knop" href="../../bedrijvengids/">Naar de bedrijvengids</a>
+        </div>
+
+        <div class="zijbalk__blok">
+          <h2 class="zijbalk__titel">Partner worden?</h2>
+          <p>Bereik inwoners en bezoekers van Nijmegen met een plek in de partnerslider.</p>
+          <a class="zijbalk__link" href="../../adverteren-bij-nijmegenonline/">Adverteren bij NijmegenOnline</a>
+        </div>
+      </aside>
+      <!-- /zijbalk -->
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <ul>
+        <li><a href="../../">Home</a></li>
+        <li><a href="../../blog/">Inspiratie opdoen</a></li>
+        <li><a href="../../thema/">Gidsen</a></li>
+        <li><a href="../../bestemmingen/">Bestemmingen</a></li>
+        <li><a href="../../bedrijvengids/">Bedrijvengids</a></li>
+        <li><a href="../../nijmegen-evenementen-overzicht/">Agenda</a></li>
+        <li><a href="../../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+        <li><a href="../../kom-in-contact/">Kom in contact</a></li>
+        <li><a href="../../algemene-voorwaarden/">Algemene voorwaarden</a></li>
+      </ul>
+      <p>&copy; NijmegenOnline. Testversie, gebouwd vanuit GitHub.</p>
+    </div>
+  </footer>
+  <!-- /footer -->
+</body>
+</html>

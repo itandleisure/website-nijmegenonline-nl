@@ -27,6 +27,8 @@ AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, li
 def controleer(url):
     """Geeft (werkt, eind_url, reden)."""
     laatste = ""
+    if not re.match(r"https?://", url):
+        url = "https://" + url.lstrip("/")
     for poging in range(2):
         try:
             verzoek = urllib.request.Request(url, headers={"User-Agent": AGENT, "Accept-Language": "nl"})
@@ -50,7 +52,7 @@ def controleer(url):
                 url = "http://" + url[8:]
                 continue
             laatste = str(reden)[:100]
-        except (socket.timeout, TimeoutError, ConnectionError, OSError, http.client.HTTPException) as fout:
+        except (socket.timeout, TimeoutError, ConnectionError, OSError, http.client.HTTPException, ValueError) as fout:
             laatste = str(fout)[:100] or "geen antwoord"
         time.sleep(3)
     # Geen antwoord of verbinding verbroken: vaak een site die bots weert; de link laten staan

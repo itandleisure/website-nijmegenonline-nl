@@ -45,12 +45,12 @@ CATEGORIEEN = {
     "zwembad": "Zwembaden", "padel": "Padel", "schaatsen": "Schaatsbanen", "sportschool": "Sportscholen", "crossfit": "CrossFit",
     "pilates": "Pilates", "klimmen": "Klimmen en boulderen", "atletiek": "Atletiek en hardlopen", "yoga": "Yoga", "hockey": "Hockey",
     "dansschool": "Dansscholen", "personal-training": "Personal training en bootcamp", "tennis": "Tennis en squash", "golf": "Golf",
-    "vechtsport": "Vechtsport", "zwemles": "Zwemles",
+    "vechtsport": "Vechtsport", "zwemles": "Zwemles", "sportvereniging": "Sportverenigingen en -accommodaties",
     "kapper": "Kappers en barbers", "massagesalon": "Massage", "wellness": "Sauna en wellness", "schoonheidssalon": "Schoonheidssalons",
     "nagelsalon": "Nagelsalons", "pedicure": "Pedicure", "permanente-make-up": "Permanente make-up", "tattoo": "Tattoo en piercing",
     "fysiotherapeut": "Fysiotherapie", "dietist": "Diëtisten en voedingsadvies", "coach": "Coaches en therapeuten",
     "alternatief": "Alternatieve geneeswijzen", "opticien": "Opticiens", "huisarts": "Huisartsen", "dierenarts": "Dierenartsen",
-    "tandarts": "Tandartsen",
+    "tandarts": "Tandartsen", "psycholoog": "Psychologen en psychotherapeuten",
     "kledingwinkel": "Kledingwinkels", "tweedehands-winkel": "Kringloop en vintage", "woonwinkel": "Woonwinkels en interieur",
     "juwelier": "Juweliers", "bloemist": "Bloemisten", "hobbywinkel": "Hobby en creatief", "parfumerie": "Parfumerieën",
     "elektronica": "Elektronica en reparatie", "fietsenwinkel": "Fietsenwinkels en fietsenmakers", "boekhandel": "Boekhandels",
@@ -149,6 +149,161 @@ PER_CATEGORIE = {
         "laat de tekst leeg. Uitgebreide lunchkaart: lunch. Kenmerken: eigen branderij als ze zelf branden; werkplek bij wifi "
         "en plekken om te werken; taart en gebak bij zelfgebakken taart of gebak; terras alleen als de site een terras noemt.")},
 }
+# Beauty en wellness: hoe je boekt en voor wie, plus per categorie de behandelingen
+KENMERKEN_BEAUTY = ["online boeken", "zonder afspraak", "avond of weekend", "heren", "kinderen", "vegan of natuurlijke producten",
+                    "cadeaubon", "parkeren", "rolstoeltoegankelijk"]
+for _slug, (_spec, _uitleg) in {
+    "kapper": (["knippen", "kleuren", "barber", "krullen", "bruidskapsel", "extensions", "afro en textuur"],
+               "Kappers, kapsalons en barbershops. Een haarkliniek of haartransplantatie: zakelijk-overig."),
+    "massagesalon": (["ontspanningsmassage", "sportmassage", "hot stone", "thaise massage", "zwangerschapsmassage", "duo-massage", "aan huis"],
+                     "Massagesalons en masseurs. Erotische massage of een privéhuis hoort niet in de gids: geen-bedrijf. "
+                     "Een fysiotherapeut met massage als bijzaak: fysiotherapeut."),
+    "wellness": (["sauna", "hammam", "zwembad", "beautybehandelingen", "arrangementen", "dagentree", "privé-sauna"],
+                 "Sauna's, wellnessresorts en dayspa's. Een schoonheidssalon die 'spa' in de naam heeft maar geen sauna of "
+                 "wellnessfaciliteiten: schoonheidssalon."),
+    "schoonheidssalon": (["gezichtsbehandeling", "huidverbetering", "wimpers en wenkbrauwen", "harsen", "make-up", "laserontharing", "zonnebank"],
+                         "Schoonheidssalons, huidtherapeuten, wimper- en wenkbrauwstudio's en visagisten. Vooral nagels: nagelsalon. "
+                         "Vooral permanente make-up: permanente-make-up. Een zonnestudio hoort er ook bij."),
+    "nagelsalon": (["gellak", "acryl", "nail art", "manicure", "pedicure"], "Nagelsalons en nagelstylisten."),
+    "pedicure": (["medisch pedicure", "diabetische voet", "voetverzorging", "aan huis", "podotherapie"],
+                 "Pedicures en podotherapeuten. Vooral nagellak en nail art: nagelsalon."),
+    "tattoo": (["tattoo", "piercing", "cover-up", "fine line", "laserverwijdering"], "Tattoostudio's en piercingshops."),
+    "permanente-make-up": (["wenkbrauwen", "lippen", "eyeliner", "microblading", "correctie"],
+                           "Studio's en salons die vooral permanente make-up of microblading doen. Is het een gewone schoonheidssalon "
+                           "met permanente make-up als één van de vele behandelingen: schoonheidssalon."),
+}.items():
+    SPECIALISMEN[_slug] = _spec
+    PER_CATEGORIE[_slug] = {"kenmerken": _spec + KENMERKEN_BEAUTY, "uitleg": _uitleg + " Kenmerken alleen als de site ze zelf noemt."}
+KENMERKEN = list(dict.fromkeys(KENMERKEN + KENMERKEN_BEAUTY + [k for lijst in SPECIALISMEN.values() for k in lijst]))
+
+# Gezondheid en welzijn
+KENMERKEN_ZORG = ["vergoed door de zorgverzekering", "zonder verwijzing", "online afspraak", "avond of weekend", "aan huis",
+                  "Engelstalig", "kinderen", "parkeren", "rolstoeltoegankelijk"]
+for _slug, (_spec, _uitleg) in {
+    "fysiotherapeut": (["sportfysiotherapie", "manuele therapie", "bekkenfysiotherapie", "kinderfysiotherapie", "oefentherapie",
+                        "dry needling", "osteopathie", "chiropractie", "revalidatie"],
+                       "Fysiotherapeuten, oefentherapeuten, osteopaten en chiropractors."),
+    "dietist": (["afvallen", "sportvoeding", "allergieën", "darmklachten", "kinderen", "diabetes", "zwangerschap"],
+                "Diëtisten en voedingsdeskundigen."),
+    "psycholoog": (["angst en stress", "depressie", "trauma en EMDR", "burn-out", "kinderen en jeugd", "relaties", "basis-ggz",
+                    "specialistische ggz", "online therapie"],
+                   "Psychologen, psychotherapeuten en ggz-praktijken. Een coach zonder BIG-registratie: coach."),
+    "coach": (["loopbaancoaching", "life coaching", "relatietherapie", "burn-out", "stress", "hypnotherapie", "meditatie",
+               "mindfulness", "online coaching", "kinderen en jongeren"],
+              "Coaches, counselors en therapeuten zonder BIG-registratie, en meditatie- en mindfulnesscentra. Een psycholoog "
+              "of psychotherapeut met BIG-registratie: psycholoog."),
+    "alternatief": (["acupunctuur", "natuurgeneeskunde", "homeopathie", "reiki", "chinese geneeskunde", "kruiden", "energetische therapie"],
+                    "Praktijken voor alternatieve en complementaire geneeswijzen. Doe geen medische claims in de tekst die de site "
+                    "niet zelf doet, en schrijf neutraal."),
+    "opticien": (["brillen", "contactlenzen", "oogmeting", "zonnebrillen", "hoortoestellen", "merkmonturen"], "Opticiens en optometristen."),
+    "huisarts": (["nieuwe patiënten welkom", "online afspraak", "e-consult", "spreekuur zonder afspraak", "apotheek in het pand"],
+                 "Huisartsenpraktijken en gezondheidscentra. Een ziekenhuis of specialist: zakelijk-overig."),
+    "dierenarts": (["honden en katten", "konijnen en knaagdieren", "paarden", "spoed", "dierenapotheek"], "Dierenartsen en dierenklinieken."),
+    "tandarts": (["nieuwe patiënten welkom", "mondhygiënist", "orthodontie", "implantaten", "angstpatiënten", "spoed", "kinderen"],
+                 "Tandartsen, orthodontisten en mondhygiënisten."),
+}.items():
+    SPECIALISMEN[_slug] = _spec
+    PER_CATEGORIE[_slug] = {"kenmerken": _spec + KENMERKEN_ZORG,
+                            "uitleg": _uitleg + " Schrijf over zorg zakelijk en zonder beloftes. Kenmerken alleen als de site ze zelf noemt."}
+KENMERKEN = list(dict.fromkeys(KENMERKEN + KENMERKEN_ZORG + [k for lijst in SPECIALISMEN.values() for k in lijst]))
+
+# Overnachten en Winkelen
+for _slug, (_spec, _alg, _uitleg) in {
+    "hotel": (["ontbijt", "restaurant", "vergaderzaal", "fietsverhuur", "hond welkom", "sauna of wellness", "laadpaal"],
+              ["parkeren", "rolstoeltoegankelijk", "centrum", "groepen"],
+              "Hotels, hostels en appartementenhotels. Een B&B of gastenverblijf: bed-and-breakfast. Een camping: camping."),
+    "bed-and-breakfast": (["ontbijt", "eigen badkamer", "eigen ingang", "tuin", "hond welkom", "fietsverhuur"],
+                          ["parkeren", "rolstoeltoegankelijk", "centrum", "groepen"],
+                          "B&B's, gastenverblijven en vakantiewoningen. Een hotel: hotel."),
+    "camping": (["kampeerplaatsen", "camperplaatsen", "trekkershutten", "glamping", "zwembad", "hond welkom", "speeltuin"],
+                ["parkeren", "groepen"], "Campings, camperplaatsen en vakantieparken."),
+    "kledingwinkel": (["dames", "heren", "kinderen", "schoenen", "duurzaam", "grote maten", "bruidsmode", "accessoires"],
+                      ["webshop", "zondag open", "cadeaubon"], "Kleding-, schoenen- en modewinkels. Tweedehands of vintage: tweedehands-winkel."),
+    "tweedehands-winkel": (["kringloop", "vintage kleding", "antiek", "meubels", "goede doel", "spullen brengen"],
+                           ["webshop", "zondag open"], "Kringloopwinkels, vintage- en antiekwinkels."),
+    "woonwinkel": (["meubels", "verlichting", "vloeren", "gordijnen", "bedden en matrassen", "keukens", "badkamers", "woonaccessoires"],
+                   ["webshop", "zondag open", "bezorgen", "advies aan huis"], "Woonwinkels, meubelzaken, keuken- en badkamerwinkels. Een meubelmaker op maat: meubelmaker."),
+    "juwelier": (["sieraden", "horloges", "trouwringen", "goudsmid", "reparatie", "oud goud inkoop"],
+                 ["webshop", "zondag open", "cadeaubon"], "Juweliers, goudsmeden en horlogewinkels."),
+    "bloemist": (["boeketten", "bezorgen", "rouwwerk", "bruidswerk", "planten", "tuincentrum", "workshops"],
+                 ["webshop", "zondag open"], "Bloemisten, plantenwinkels en tuincentra. Een hovenier: hovenier."),
+    "hobbywinkel": (["knutselen", "stoffen en garen", "speelgoed", "spellen", "muziekinstrumenten", "platen en cd's", "modelbouw", "workshops"],
+                    ["webshop", "zondag open", "cadeaubon"], "Hobby-, creatief-, speelgoed- en muziekwinkels."),
+    "parfumerie": (["parfum", "make-up", "huidverzorging", "natuurlijke cosmetica", "advies"],
+                   ["webshop", "zondag open", "cadeaubon"], "Parfumerieën en cosmeticawinkels. Een drogisterijketen: winkel."),
+    "elektronica": (["telefoons", "computers", "reparatie", "witgoed", "audio en hifi", "camera's", "tweedehands of refurbished"],
+                    ["webshop", "zondag open", "bezorgen"], "Elektronicawinkels en reparatiezaken voor telefoons en computers. Een IT-bedrijf voor bedrijven: it-bedrijf."),
+    "fietsenwinkel": (["e-bikes", "reparatie", "fietsverhuur", "racefietsen", "bakfietsen", "tweedehands fietsen", "haal- en brengservice"],
+                      ["webshop", "zondag open"], "Fietsenwinkels, fietsenmakers en fietsverhuur."),
+    "boekhandel": (["nieuwe boeken", "tweedehands boeken", "strips", "kinderboeken", "Engelstalige boeken", "kantoorartikelen", "lezingen"],
+                   ["webshop", "zondag open", "cadeaubon"], "Boekhandels, antiquariaten en stripwinkels."),
+}.items():
+    SPECIALISMEN[_slug] = _spec
+    PER_CATEGORIE[_slug] = {"kenmerken": _spec + _alg + ["rolstoeltoegankelijk"] * ("rolstoeltoegankelijk" not in _alg),
+                            "uitleg": _uitleg + " Grote ketens horen er ook bij als het de vestiging in Nijmegen is. "
+                                      "Kenmerken alleen als de site ze zelf noemt."}
+KENMERKEN = list(dict.fromkeys(KENMERKEN + ["webshop", "zondag open", "cadeaubon", "bezorgen", "advies aan huis", "centrum", "groepen"]
+                                + [k for lijst in SPECIALISMEN.values() for k in lijst]))
+
+# De rest van Sport
+for _slug, (_spec, _uitleg) in {
+    "dansschool": (["salsa", "stijldansen", "hiphop en streetdance", "ballet", "kinderen en jeugd", "bruiloftsdans", "proefles"],
+                   "Dansscholen en dansstudio's. Een discotheek of club: uitjes."),
+    "yoga": (["yoga", "pilates", "tai chi", "meditatie", "zwangerschapsyoga", "proefles", "online lessen"],
+             "Yoga-, pilates- en tai-chistudio's en -docenten."),
+    "vechtsport": (["boksen", "kickboksen", "muay thai", "judo", "karate", "jiujitsu", "mma", "zelfverdediging", "kinderen en jeugd", "proefles"],
+                   "Vechtsportscholen en -verenigingen."),
+    "zwembad": (["recreatief zwemmen", "baantjes", "zwemles", "aquasport", "glijbaan", "buitenbad"], "Zwembaden en zwemscholen."),
+    "padel": (["banen huren", "padelles", "toernooien", "binnenbanen", "buitenbanen"], "Padelbanen, -hallen en -clubs."),
+    "sportvereniging": (["voetbal", "hockey", "tennis", "atletiek", "klimmen", "schaatsen", "roeien en kanoën", "golf", "korfbal",
+                         "rugby", "paardrijden", "skaten", "jeugd", "recreanten"],
+                        "Sportverenigingen, sportparken en sportaccommodaties: voetbal, hockey, tennis, atletiek, klimmen, roeien en "
+                        "dergelijke. Een fitnessschool: sportschool. Padel: padel. Vechtsport, yoga of dans hebben een eigen categorie."),
+}.items():
+    SPECIALISMEN[_slug] = _spec
+    PER_CATEGORIE[_slug] = {"kenmerken": _spec + ["senioren", "parkeren", "rolstoeltoegankelijk", "kinderfeestje", "bedrijfsuitje"],
+                            "uitleg": _uitleg + " Kenmerken alleen als de site ze zelf noemt."}
+KENMERKEN = list(dict.fromkeys(KENMERKEN + [k for lijst in SPECIALISMEN.values() for k in lijst]))
+
+# De rest van Eten en drinken
+for _slug, (_spec, _uitleg) in {
+    "bakkerij": (["brood", "taart en gebak", "glutenvrij", "zuurdesem", "taart bestellen", "zitplekken"],
+                 "Bakkers, banketbakkers, patisserieën en chocolatiers. Vooral zitten en lunchen: lunch."),
+    "bierbrouwerij": (["proeflokaal", "rondleiding", "speciaalbier", "wijn", "sterke drank", "proeverijen", "webshop"],
+                      "Brouwerijen, slijterijen en wijnwinkels. Een café dat zelf brouwt maar vooral een kroeg is: cafe."),
+    "afhaal": (["friet en snacks", "pizza", "burgers", "shoarma en kebab", "sushi", "bezorgen", "afhalen", "laat open", "halal", "zitplekken"],
+               "Snackbars, cafetaria's, afhaal- en bezorgzaken. Een restaurant waar je vooral aan tafel eet: restaurant. "
+               "Grote ketens (McDonald's, Burger King, Domino's) horen er ook bij als het de vestiging in Nijmegen is."),
+    "catering": (["bedrijfscatering", "bruiloften", "feesten", "buffet", "barbecue", "foodtruck", "vegan", "kok aan huis"],
+                 "Cateraars, foodtrucks en koks aan huis."),
+    "ijssalon": (["schepijs", "softijs", "vegan ijs", "ijstaarten", "wafels en crêpes", "seizoensgebonden"],
+                 "IJssalons en gelaterie. Een ijssalon die in de winter dicht is, is nog steeds actief."),
+}.items():
+    SPECIALISMEN[_slug] = _spec
+    PER_CATEGORIE[_slug] = {"kenmerken": _spec + ["terras", "kindvriendelijk", "rolstoeltoegankelijk", "parkeren"],
+                            "uitleg": _uitleg + " Kenmerken alleen als de site ze zelf noemt."}
+KENMERKEN = list(dict.fromkeys(KENMERKEN + [k for lijst in SPECIALISMEN.values() for k in lijst]))
+
+# Uitgaan en vrije tijd: voor wie en wanneer, plus per categorie wat je er doet
+KENMERKEN_UIT = ["bedrijfsuitje", "vrijgezellenfeest", "kinderfeestje", "familie", "slecht weer", "trouwen", "groepen",
+                 "eten en drinken", "online tickets", "parkeren", "rolstoeltoegankelijk"]
+for _slug, (_spec, _uitleg) in {
+    "uitjes": (["escape room", "bowlen", "lasergamen", "karten", "midgetgolf", "trampolinespringen", "rondvaart", "stadstour",
+                "club en dansen", "karaoke", "workshops", "speelparadijs"],
+               "Uitjes en activiteiten: escape rooms, bowlen, lasergamen, karten, rondvaarten, stadstours, clubs, speelparadijzen en "
+               "workshops. Een museum, theater, bioscoop of zaal heeft een eigen categorie."),
+    "musea": (["kinderen", "rondleiding", "museumkaart", "wisseltentoonstellingen", "museumcafé"], "Musea en tentoonstellingsruimtes."),
+    "podia": (["theater", "concerten", "comedy", "dans", "jeugdvoorstellingen", "café of foyer"],
+              "Theaters, poppodia, concertzalen en culturele centra met een programma. Een club zonder programma: uitjes."),
+    "bioscoop": (["arthouse", "blockbusters", "kinderfilms", "café of foyer"], "Bioscopen en filmhuizen."),
+    "galerie": (["exposities", "kunst kopen", "workshops", "open atelier"], "Kunstgaleries, ateliers en kunstenaars met een eigen ruimte."),
+    "zaalverhuur": (["vergaderen", "feesten", "trouwen", "catering", "tot 50 personen", "meer dan 100 personen"],
+                    "Zalen en locaties die je huurt voor een feest, bruiloft, vergadering of evenement. Een restaurant met een zaaltje: restaurant."),
+}.items():
+    SPECIALISMEN[_slug] = _spec
+    PER_CATEGORIE[_slug] = {"kenmerken": _spec + KENMERKEN_UIT, "uitleg": _uitleg + " Kenmerken alleen als de site ze zelf noemt."}
+KENMERKEN = list(dict.fromkeys(KENMERKEN + KENMERKEN_UIT + [k for lijst in SPECIALISMEN.values() for k in lijst]))
+
 # Zakelijk en diensten: dezelfde opbouw. Bedrijven zonder vestiging in Nijmegen of zonder echte dienstverlening voor
 # Nijmegenaren (een holding, een postadres, een landelijk callcenter) horen er niet bij.
 ZAKELIJK = (
