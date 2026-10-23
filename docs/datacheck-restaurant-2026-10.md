@@ -46,6 +46,13 @@ Die komen terug bij Snackbars en afhaal, Lunchrooms en Cafés als we die categor
 schuiven bij hun eigen site ook diner: Zeezicht, De Witwasserij, Brasserie Jolie, Madame Liberty, Wijck, Nostra en Shibui Ramen.
 Voorstel: deze zeven toch bij de restaurants zetten. Zeg het als je ze liever bij lunch of afhaal ziet.
 
+## Besluit van Frans (23 oktober 2026)
+
+Alles is uitgevoerd. A: Jan Klaassen Eetcafe, Landgoed Brakkesteyn, India Gate en Dionysos zijn verwijderd. B: de adressen
+staan in `data/bedrijvengids-correcties.json`. C: Het Lemke heet nu Brasserie 't Zotte Lemke, en Dushi blijft staan met Plasmolen als plaats.
+D: de twijfelachtige kenmerken zijn weg. E: de zeven twijfelgevallen zijn lunchrooms en komen bij die categorie.
+Resultaat: 141 restaurants.
+
 ## Wat automatisch is gebeurd
 
 - **Meteen niet meegenomen (143):** geen of geen eigen website (alleen Facebook of Thuisbezorgd), permanent gesloten volgens Overture, een naam die bij een andere categorie hoort (bakkerij, cafetaria, shoarma) of een onzekere bron.

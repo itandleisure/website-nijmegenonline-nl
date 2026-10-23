@@ -670,10 +670,10 @@ def foto_url(foto, root):
 
 
 def correcties_toepassen(bedrijven, pad):
-    """Correcties van de redactie (data/bedrijvengids-correcties.json): adres, postcode, ligging, extra vestiging."""
+    """Correcties van de redactie (data/bedrijvengids-correcties.json): naam, adres, postcode, ligging, extra vestiging."""
     corr = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
     for b in bedrijven:
-        b.update({k: v for k, v in corr.get(b["slug"], {}).items() if k in ("adres", "postcode", "plaats", "lat", "lon", "extra_vestiging")})
+        b.update({k: v for k, v in corr.get(b["slug"], {}).items() if k in ("naam", "adres", "postcode", "plaats", "lat", "lon", "extra_vestiging")})
 
 
 def websites_toepassen(bedrijven, pad):

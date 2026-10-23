@@ -594,8 +594,7 @@
    "vegetarisch",
    "glutenvrij",
    "afhalen",
-   "bezorgen",
-   "terras"
+   "bezorgen"
   ],
   "keuken": "Indiaas",
   "kosten_tokens": {
@@ -2774,7 +2773,8 @@
   "naam": "Dionysos",
   "openingstijden": "ma-di gesloten, wo-zo vanaf 16:00",
   "opmerkingen": "Op de homepage staat een melding over tijdelijke sluiting wegens vakantie ('vanaf 14 augustus weer open'); mogelijk is dat een oude melding. Volgens de site is oprichter Kostas Gliatis op 13-12-2025 overleden; het familiebedrijf gaat verder. 'Kindvriendelijk' is gebaseerd op de menurubriek 'Voor de kleintjes'.",
-  "status": "voorstel",
+  "reden": "melding tijdelijk gesloten op de site (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "Zin in een avond Griekse gezelligheid zonder dat je naar het vliegveld hoeft? Aan het begin van de Bloemerstraat, midden in het centrum, kun je al sinds 1985 terecht bij Dionysos voor de klassiekers uit de Griekse keuken.\n\nOp de kaart vind je herkenbare favorieten zoals feta, kalamaria, bifteki en moussaka, vers bereid in de eigen keuken. Er zijn schotels voor twee personen om samen te delen, vegetarische hoofdgerechten en ook iets voor de kleintjes. Begin gerust met een ouzo vooraf. Het is een echt familiebedrijf waar inmiddels drie generaties meewerken, en die huiselijke sfeer merk je aan tafel.\n\nDionysos is open van woensdag tot en met zondag, vanaf vier uur 's middags. Bel even om een tafel te reserveren, dan zit je er zeker van.",
   "website": "https://dionysosnijmegen.nl/",
   "website_bereikbaar": true
@@ -2792,7 +2792,6 @@
    "terras",
    "lunch",
    "vegetarisch",
-   "groepen",
    "aan het water"
   ],
   "keuken": "Grill",
@@ -4729,8 +4728,7 @@
   "hoofdcategorie": "restaurant",
   "kenmerken": [
    "vegan",
-   "vegetarisch",
-   "afhalen"
+   "vegetarisch"
   ],
   "keuken": "Indiaas",
   "kosten_tokens": {
@@ -4741,7 +4739,8 @@
   "naam": "India Gate",
   "openingstijden": "di-zo 17:00-22:30 (keuken tot 21:30)",
   "opmerkingen": "De homepage spreekt zichzelf tegen: er staat een melding dat het restaurant tijdelijk gesloten is vanwege vakantie, maar er staat ook een bericht dat ze na de vakantie weer open zijn. Controleer even of het restaurant nu open is. Op de site staat 'bestellen' met een telefoonnummer. Of dat afhalen of bezorgen betekent, wordt niet gezegd. Ik heb afhalen gekozen, maar dat is een aanname. De pdf-menukaart heb ik niet gelezen.",
-  "status": "voorstel",
+  "reden": "melding tijdelijk gesloten op de site (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "Zin in iets kruidigs na een dag in de binnenstad? In de Molenstraat vind je India Gate, een Indiaas tandoori-restaurant waar je kunt kiezen van mild tot flink pittig. In de tandoor, de kleioven met gloeiende houtskool, worden spiesen met kip, lam en groente gegrild en wordt het naanbrood tegen de wand gebakken.\n\nOp de kaart staan klassiekers als tikka masala, bhuna, butter chicken en biryani. Vooraf kun je samosa of onion bhaji nemen, en je drinkt er een mango lassi of een Cobra-bier bij. Eet je geen vlees? Dan is er genoeg vegetarisch, zoals saag paneer, en er staat ook een vegan jackfruitcurry op de kaart.\n\nJe kunt telefonisch reserveren, maar ook bestellen en thuis eten. Bel dus even van tevoren, en dan kun je 's avonds aanschuiven voor een culinair uitstapje naar India.",
   "website": "https://restaurantindiagate.nl",
   "website_bereikbaar": true
@@ -4967,7 +4966,8 @@
   "naam": "Jan Klaassen Eetcafe",
   "openingstijden": "ma-zo 16:00-23:00",
   "opmerkingen": "Het adres op de site (Hazenkampseweg 126, 6531 NN) is anders dan het adres bij ons (Dobbelmannweg 53, 6531 KV). Graag controleren. De site lijkt verouderd: de copyright loopt van 2008 tot 2011 en er staat een melding bij dat het om een historisch archief gaat waarvan de gegevens mogelijk niet meer kloppen. Het is dus onzeker of de zaak nog open is en of de kaart en openingstijden nog gelden. Onderaan de site staat ook een link naar een gokwebsite die niets met het eetcafé te maken heeft. De keuken heb ik als 'Internationaal' ingevuld, omdat de kaart Italiaanse, Franse en Spaanse invloeden mengt.",
-  "status": "voorstel",
+  "reden": "site verouderd (archief 2008-2011), waarschijnlijk dicht (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "Zin om na het werk ergens rustig aan tafel te schuiven zonder er een hele avond van te maken? In dit eetcafé in Nijmegen-Oost kun je elke dag vanaf het eind van de middag terecht voor een uitgebreid diner.\n\nDe kaart is gevarieerd en heeft een knipoog: denk aan in knoflook gebakken mosselen, carpaccio of een salade met gegrilde tonijn vooraf, en daarna struisvogelfilet, lamsrack, bouillabaisse of een hele regenboogforel. Vegetariërs vinden ook genoeg, zoals een gevulde paprika of een taartje met geitenkaas. Bij je hoofdgerecht krijg je salade, groenten en friet, en die kun je zo vaak bijvragen als je wilt. Kinderen hebben hun eigen menu, met een ijsje na.\n\nHet eetcafé raadt aan om vooraf te reserveren. Bel dus even voordat je gaat.",
   "website": "http://www.jan-klaassen.com",
   "website_bereikbaar": true
@@ -5459,8 +5459,7 @@
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
   "kenmerken": [
-   "vegetarisch",
-   "groepen"
+   "vegetarisch"
   ],
   "keuken": "Frans",
   "kosten_tokens": {
@@ -5597,7 +5596,8 @@
   "naam": "Landgoed Brakkesteyn",
   "openingstijden": "",
   "opmerkingen": "De opgegeven link verwijst niet naar de homepage, maar naar een pdf met zomerdeals voor 2026 (geldig t/m augustus 2026). De homepage kon ik niet openen, omdat alleen de opgegeven URL toegankelijk was. De tekst gaat daarom alleen over de groepsarrangementen uit die pdf en wordt na augustus 2026 verouderd. Of er een gewone à-la-carte-restaurantkaart is, kon ik niet controleren, en openingstijden staan er niet in. Ook de keuken 'Barbecue' komt alleen uit de zomerdeal, dus de hoofdcategorie restaurant is niet bevestigd. Graag de tekst herzien op basis van de homepage. Prijzen staan in de pdf maar zijn bewust weggelaten.",
-  "status": "voorstel",
+  "reden": "link naar een pdf met zomerdeals, geen restaurantinformatie (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "Zoek je deze zomer een plek om met je team, je familie of je vriendengroep iets te vieren? Dan kun je terecht op Landgoed Brakkesteyn, aan de Driehuizerweg in het groen van Nijmegen-West. Hier kun je een barbecue of een borrel regelen voor groepen vanaf dertig personen.\n\nBij de barbecue grilt de chef op een OFYR-barbecue. Je bouwt er je eigen burger, en er zijn picanha, zalm, gamba's en seizoensgroenten, met salades en brood erbij. Kies je voor een middagborrel, dan heb je de keuze uit Spaanse hapjes zoals albondigas en tortilla of Hollandse klassiekers zoals bitterballen en een kaasplankje. Eet je vegetarisch of vegan, of heb je een allergie? Daar houden ze rekening mee.\n\nHeb je zin om iets te organiseren? Bel of mail het landgoed even om de mogelijkheden te bespreken.",
   "website": "https://www.landgoedbrakkesteyn.nl/wp-content/uploads/2026/06/Zomerdeals-2026-Landgoed-Brakkesteyn.pdf?pid=14934",
   "website_bereikbaar": true
@@ -6016,7 +6016,6 @@
    "lunch",
    "afhalen",
    "bezorgen",
-   "groepen",
    "parkeren"
   ],
   "keuken": "Aziatisch",
@@ -6642,8 +6641,7 @@
    "terras",
    "kindvriendelijk",
    "lunch",
-   "parkeren",
-   "groepen"
+   "parkeren"
   ],
   "keuken": "Grand café",
   "kosten_tokens": {
@@ -7517,8 +7515,7 @@
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
   "kenmerken": [
-   "terras",
-   "groepen"
+   "terras"
   ],
   "keuken": "Italiaans",
   "kosten_tokens": {
@@ -8407,7 +8404,6 @@
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
   "kenmerken": [
-   "terras",
    "vegan",
    "vegetarisch",
    "glutenvrij",
@@ -8789,8 +8785,7 @@
   "kenmerken": [
    "vegetarisch",
    "kindvriendelijk",
-   "groepen",
-   "afhalen"
+   "groepen"
   ],
   "keuken": "Grieks",
   "kosten_tokens": {
