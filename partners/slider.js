@@ -16,7 +16,10 @@
     return new Date().toISOString().slice(0, 10);
   }
 
-  function isActief(p, plaatsing) {
+  // Met onderwerpen (bijvoorbeeld ["sportschool"], het pakket Uitgelicht) alleen in sliders met dat data-onderwerp;
+  // zonder onderwerpen (Partner) overal waar de plaatsing klopt.
+  function isActief(p, plaatsing, onderwerp) {
+    if (p.onderwerpen && p.onderwerpen.length && p.onderwerpen.indexOf(onderwerp) === -1) return false;
     var d = vandaag();
     if (p.start && d < p.start) return false;
     if (p.eind && d > p.eind) return false;
@@ -60,13 +63,13 @@
     hussel(partners).forEach(function (p) {
       if (zichtbaar.length < 2) {
         sliders.forEach(function (el, i) {
-          if (isActief(p, el.getAttribute('data-plaatsing') || 'alle')) lijsten[i].push(p);
+          if (isActief(p, el.getAttribute('data-plaatsing') || 'alle', el.getAttribute('data-onderwerp'))) lijsten[i].push(p);
         });
         return;
       }
       for (var k = 0; k < zichtbaar.length; k++) {
         var el = zichtbaar[(beurt + k) % zichtbaar.length];
-        if (isActief(p, el.getAttribute('data-plaatsing') || 'alle')) {
+        if (isActief(p, el.getAttribute('data-plaatsing') || 'alle', el.getAttribute('data-onderwerp'))) {
           lijsten[sliders.indexOf(el)].push(p);
           beurt = (beurt + k + 1) % zichtbaar.length;
           return;

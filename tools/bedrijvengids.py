@@ -299,7 +299,7 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
         out.append('          <p class="bron">Kaart: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-bijdragers</a></p>\n        </section>')
     if anderen:
         out.append('        <section class="gids-sectie">\n          <h2>Meer sportscholen in Nijmegen</h2>\n          <div class="bedrijflijst">')
-        out.extend("            " + bedrijfkaart(x, root) for x in anderen[:4])
+        out.extend("            " + (uitgelicht_kaart(x, root) if x.get("uitgelicht") else gewone_kaart(x, root)) for x in anderen[:4])
         out.append('          </div>\n          <p class="gids-verder"><a href="%sbedrijvengids-categorie/%s/">Bekijk alle %s</a></p>\n        </section>'
                    % (root, cat["slug"], esc(cat["naam"][0].lower() + cat["naam"][1:])))
     out.append('        <script src="%sassets/js/bedrijf.js?v=1" defer data-bedrijf="%s"></script>' % (root, esc(b["slug"])))
@@ -407,62 +407,6 @@ def start_pagina(groepen, root="../"):
     return "\n".join(out)
 
 
-def categorie_pagina(cat, gids, overig, artikelen, root="../../", voorstel=False):
-    """voorstel: nieuwe indeling (oktober 2026) ter beoordeling op /voorstel/; alle gratis vermeldingen gelijk,
-    alleen Uitgelicht valt op, met lege plekken als advertentie en een vergelijking van de pakketten."""
-    if voorstel:
-        return categorie_voorstel(cat, gids, overig, artikelen, root)
-    canonical = "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"])
-    alle = gids + overig
-    lijst = {"@context": "https://schema.org", "@type": "ItemList", "name": cat["naam"], "itemListElement": [
-        {"@type": "ListItem", "position": n + 1, "name": b["naam"],
-         "url": "%s/bedrijvengids/%s/" % (SITE, b["slug"])} for n, b in enumerate(alle)]}
-    faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-        {"@type": "Question", "name": v, "acceptedAnswer": {"@type": "Answer", "text": a}} for v, a in cat["faq"]]}
-    extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in (lijst, faq))
-    out = [kop(cat["naam"], cat["beschrijving"], canonical, root, gids[0]["foto"] if gids else None, extra + LEAFLET)]
-    out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel gids">')
-    out.append('        <div class="kruimelpad"><a href="%s">Home</a> › Bedrijvengids › %s</div>' % (root, esc(cat["naam"])))
-    out.append('        <p class="gidslabel">Bedrijvengids</p>')
-    out.append("        <h1>%s</h1>" % esc(cat["naam"]))
-    out.append('        <div class="inhoud-tekst">%s</div>' % cat["intro"])
-    out.append('        <p class="gidsteller">%d sportscholen in Nijmegen, waarvan %d met een eigen pagina in onze gids.</p>' % (len(alle), len(gids)))
-    out.append(filter_blok(alle))
-    # Uitgelicht: alle betalende bedrijven, maximaal 3 tegelijk; de volgorde wisselt elke dag (herbouw 's nachts)
-    uitgelicht = [b for b in alle if b.get("uitgelicht")]
-    random.Random(datetime.date.today().isoformat() + cat["slug"]).shuffle(uitgelicht)
-    uitgelicht = uitgelicht[:MAX_UITGELICHT]
-    aangemeld = [b for b in gids if b not in uitgelicht]
-    if uitgelicht:
-        out.append('        <section class="gids-sectie">\n          <h2>Uitgelicht</h2>\n          <div class="bedrijflijst bedrijflijst--uitgelicht">')
-        out.extend("            " + bedrijfkaart(b, root) for b in uitgelicht)
-        out.append("          </div>\n        </section>")
-    if aangemeld:
-        out.append('        <section class="gids-sectie">\n          <h2>Uit onze bedrijvengids</h2>\n          <div class="bedrijflijst bedrijflijst--groot">')
-        out.extend("            " + bedrijfkaart(b, root) for b in aangemeld)
-        out.append("          </div>\n        </section>")
-    out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
-    out.append('        <section class="gids-sectie">\n          <h2>Op de kaart</h2>')
-    out.append(kaart_blok([(cat["groep"], b) for b in alle], root))
-    out.append('        </section>')
-    out.append('        <section class="gids-sectie">\n          <h2>Alle sportscholen in Nijmegen</h2>\n          <div class="bedrijflijst">')
-    out.extend("            " + bedrijfkaart(b, root) for b in overig if b not in uitgelicht)
-    out.append('          </div>')
-    out.append('          <p class="bron">Gegevens: onze eigen gids, aangevuld met © <a href="https://www.openstreetmap.org/copyright" target="_blank" '
-               'rel="noopener">OpenStreetMap-bijdragers</a> en Overture Maps. Klopt er iets niet, of staat jouw sportschool er niet bij? '
-               '<a href="%sbedrijf-aanmelden/">Meld je bedrijf aan</a>.</p>\n        </section>' % root)
-    if artikelen:
-        out.append('        <section class="gids-sectie">\n          <h2>Lees ook</h2>\n          <ul>')
-        out.extend('            <li><a href="%s%s/">%s</a></li>' % (root, s, esc(t)) for s, t in artikelen)
-        out.append("          </ul>\n        </section>")
-    out.append('        <section class="gids-sectie faq">\n          <h2>Veelgestelde vragen</h2>')
-    out.extend("          <details><summary>%s</summary><p>%s</p></details>" % (esc(v), esc(a)) for v, a in cat["faq"])
-    out.append("        </section>")
-    out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
-    out.append(VOET)
-    return "\n".join(out)
-
-
 VOORBEELD = {"slug": "", "naam": "Jouw sportschool", "adres": "Uitgelicht staat bovenaan, met foto en actieknop", "postcode": "", "plaats": "",
              "foto": "assets/uploads/2022/11/sporten-in-nijmegen-533x400.webp", "kenmerken": ["proefles", "groepslessen"],
              "actie": {"tekst": "Eerste maand gratis sporten"}, "openingstijden": [], "uitgelicht": True}
@@ -491,11 +435,18 @@ def gewone_kaart(b, root):
             % (root, b["slug"], esc("|".join(km)), esc(b["naam"]), esc(adresregel(b)), chips))
 
 
-def categorie_voorstel(cat, gids, overig, artikelen, root):
+def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
+    """Indeling oktober 2026: alle gratis vermeldingen gelijk en zonder foto; alleen Uitgelicht valt op, lege plekken
+    zijn advertentie, en onderaan staat wat Uitgelicht en Partner opleveren."""
     canonical = "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"])
     alle = sorted(gids + overig, key=lambda b: b["naam"].lower())
-    out = [kop(cat["naam"] + " (voorstel)", cat["beschrijving"], canonical, root, None, LEAFLET).replace(
-        "<head>", '<head>\n  <meta name="robots" content="noindex">', 1)]
+    lijst = {"@context": "https://schema.org", "@type": "ItemList", "name": cat["naam"], "itemListElement": [
+        {"@type": "ListItem", "position": n + 1, "name": b["naam"],
+         "url": "%s/bedrijvengids/%s/" % (SITE, b["slug"])} for n, b in enumerate(alle)]}
+    faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": v, "acceptedAnswer": {"@type": "Answer", "text": a}} for v, a in cat["faq"]]}
+    extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in (lijst, faq))
+    out = [kop(cat["naam"], cat["beschrijving"], canonical, root, None, extra + LEAFLET)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel gids">')
     out.append('        <div class="kruimelpad"><a href="%s">Home</a> › Bedrijvengids › %s</div>' % (root, esc(cat["naam"])))
     out.append('        <p class="gidslabel">Bedrijvengids</p>')
@@ -514,7 +465,7 @@ def categorie_voorstel(cat, gids, overig, artikelen, root):
         out.append("            " + uitgelicht_kaart(VOORBEELD, root, voorbeeld=True))
     if len(uitgelicht) < MAX_UITGELICHT:
         out.append('            <a class="vrijeplek" href="%sbedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=%s"><strong>Nog %d %s vrij</strong>'
-                   '<span>Zet jouw sportschool hier bovenaan, boven %d andere sportscholen. Met foto\'s, je actie en een eigen knop.</span>'
+                   '<span>Zet jouw sportschool hier bovenaan, boven %d andere sportscholen. Met foto\'s, je actie, een eigen knop en je banner bij onze sportblogs.</span>'
                    '<span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>'
                    % (root, esc(cat["slug"]), MAX_UITGELICHT - len(uitgelicht), "plek" if MAX_UITGELICHT - len(uitgelicht) == 1 else "plekken", len(alle)))
     out.append("          </div>\n        </section>")
@@ -522,17 +473,18 @@ def categorie_voorstel(cat, gids, overig, artikelen, root):
     out.append('        <section class="gids-sectie">\n          <h2>Alle sportscholen in Nijmegen</h2>\n          <div class="bedrijflijst">')
     out.extend("            " + gewone_kaart(b, root) for b in alle if b not in uitgelicht)
     out.append('          </div>\n        </section>')
+    out.append('        <div class="partner-slider" data-plaatsing="blog" data-onderwerp="%s"></div>' % cat["slug"])
     out.append('        <section class="gids-sectie">\n          <h2>Op de kaart</h2>')
     out.append(kaart_blok([(cat["groep"], b) for b in alle], root))
     out.append('        </section>')
     # Vergelijking voor ondernemers: wat levert betalen op
-    rijen = [("Vermelding met adres, kaart en openingstijden", "ja", "ja", "ja"),
+    rijen = [("Eigen pagina met adres, kaart en openingstijden", "ja", "ja", "ja"),
              ("Tekst door onze redactie", "kort", "uitgebreid", "uitgebreid"),
-             ("Bovenaan deze pagina, met label Uitgelicht", "nee", "ja", "ja"),
-             ("Logo en foto's (tot 10)", "nee", "ja", "ja"),
+             ("Foto's op je eigen pagina", "1", "tot 10", "tot 10"),
+             ("Bovenaan deze pagina, met foto en label Uitgelicht", "nee", "ja", "ja"),
              ("Actie en eigen knop (proefles, inschrijven, bellen)", "nee", "ja", "ja"),
              ("Uitgelicht onder onze blogs over sport en gezondheid", "nee", "ja", "ja"),
-             ("Banner op de hele site, niet alleen bij sport", "nee", "nee", "ja"),
+             ("Banner in de partnerbalk", "nee", "bij blogs over sport", "op de hele site"),
              ("Artikel over je bedrijf en een plek in de nieuwsbrief", "nee", "nee", "ja"),
              ("Overzicht van weergaven en kliks", "jaarlijks", "jaarlijks", "elk kwartaal")]
     out.append('        <section class="gids-sectie pakketvergelijk">\n          <h2>Heb je een sportschool in Nijmegen?</h2>'
@@ -582,6 +534,8 @@ def blog_blokken(cat, alle):
             continue
         tekst = re.sub(r"\n?[ \t]*<!-- gidstip -->.*?<!-- /gidstip -->", "", pad.read_text(encoding="utf-8"), flags=re.S)
         tekst = tekst.replace("      </article>", "        <!-- gidstip -->%s<!-- /gidstip -->\n      </article>" % blok, 1)
+        tekst = re.sub(r'class="partner-slider" data-plaatsing="blog"(?: data-onderwerp="[^"]*")?',
+                       'class="partner-slider" data-plaatsing="blog" data-onderwerp="%s"' % cat["slug"], tekst)
         pad.write_text(tekst, encoding="utf-8")
 
 
@@ -741,7 +695,6 @@ def main(bron):
         json.dumps(vermeldingen(gids + overig, cat), ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     artikelen = [(s, titel_van(s)) for s in cat["artikelen"] if titel_van(s)]
     schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen))
-    schrijf("bedrijvengids-categorie/%s/voorstel" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen, "../../../", voorstel=True))
     for b in gids + overig:
         anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
         schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen))

@@ -45,13 +45,13 @@ PAKKETTEN = [("Gratis", "0", "voor elk bedrijf"), ("Uitgelicht", "149", "eerste 
 KENMERKEN = [
     ("Eigen pagina in de bedrijvengids met adres, kaart en openingstijden", ["ja", "ja", "ja", "ja"]),
     ("Tekst door onze redactie geschreven", ["kort", "uitgebreid, jaarlijks bijgewerkt", "uitgebreid", "uitgebreid"]),
-    ("Logo en foto's", ["nee", "tot 10 foto's", "tot 10 foto's", "tot 10 foto's"]),
+    ("Foto's op je eigen pagina", ["1", "tot 10, met logo", "tot 10, met logo", "tot 10, met logo"]),
     ("Bovenaan je categorie met het label Uitgelicht (maximaal 3 per categorie)", ["nee", "ja", "ja", "ja"]),
     ("Actieknop (reserveren, offerte, bellen) en een aanbieding", ["nee", "ja", "ja", "ja"]),
     ("Uitgelicht onder onze blogberichten over jouw onderwerp", ["nee", "ja", "ja", "ja"]),
     ("Je evenementen uitgelicht in de agenda", ["nee", "ja", "ja", "ja"]),
     ("Nieuwsbrief", ["nee", "1&times; per jaar in Nieuw in de gids", "2&times; een eigen tegel", "logo in elke editie"]),
-    ("Banner", ["nee", "nee", "in je eigen branche", "op de hele site"]),
+    ("Banner in de partnerbalk", ["nee", "bij blogs over jouw onderwerp", "op de hele site", "op de hele site, vaker in beeld"]),
     ("Artikel over je bedrijf (gemarkeerd als partnerbijdrage)", ["nee", "nee", "1 per jaar", "3 per jaar"]),
     ("Sponsor van een categorie- of themapagina", ["nee", "nee", "nee", "ja"]),
     ("Overzicht van weergaven en kliks", ["jaarlijks", "jaarlijks", "elk kwartaal", "elk kwartaal"]),
@@ -264,7 +264,7 @@ def algemene_voorwaarden(tekst, meta):
 
 # Zie het verdienmodel (Claude Doc "Verdienmodel NijmegenOnline"); prijzen per jaar, excl. btw
 BEDRIJF_PAKKETTEN = [
-    ("gratis", "Gratis: eigen pagina met adres, kaart, openingstijden en een korte tekst"),
+    ("gratis", "Gratis: eigen pagina met adres, kaart, openingstijden, een korte tekst en één foto"),
     ("uitgelicht", "Uitgelicht (€149 per jaar, het eerste jaar €99): bovenaan je categorie, met logo, foto's en een actieknop"),
     ("partner", "Partner (€449 per jaar): Uitgelicht, plus een banner in je branche, een artikel en de nieuwsbrief"),
 ]

@@ -26,6 +26,9 @@ dezelfde partners willen tonen.
   `agenda`, `bedrijvengids` of `kerst`. Een pagina kiest zijn plaatsing met `data-plaatsing`.
 - `start` en `eind` (JJJJ-MM-DD): optioneel. Buiten deze periode verschijnt de partner niet.
   Leeg laten betekent altijd.
+- `onderwerpen`: optioneel, voor het pakket Uitgelicht. Met bijvoorbeeld `["sportschool"]` verschijnt de banner
+  alleen in sliders met `data-onderwerp="sportschool"`: op de categoriepagina en onder de blogberichten over dat
+  onderwerp (tools/bedrijvengids.py zet dat attribuut). Zonder `onderwerpen` (Partner) komt de banner overal.
 - `gewicht`: een partner met gewicht 2 staat vaker vooraan dan een met gewicht 1.
 
 ## Slider op een pagina zetten
