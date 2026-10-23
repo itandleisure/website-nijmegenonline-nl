@@ -1779,12 +1779,10 @@
   "gescand": "2026-10-23",
   "hoofdcategorie": "lunch",
   "kenmerken": [
-   "terras",
    "vegan",
    "kindvriendelijk",
    "groepen",
    "lunch",
-   "ontbijt",
    "afhalen",
    "bezorgen"
   ],
@@ -6070,7 +6068,8 @@
   "naam": "Golestan",
   "openingstijden": "dagelijks vanaf 12:00; lunch 12:00-16:00, avondeten 17:00-21:30",
   "opmerkingen": "De naam bij ons (Golestan) klopt niet met de website: op dit adres en deze site zit Collectief Café de Plak. Graag de naam controleren. Het is een eetcafé met lunch én een dinerkaart, daarom staat de hoofdcategorie op restaurant in plaats van lunchroom. Volgens de site is het café dicht van zondag 25 oktober tot en met maandag 2 november vanwege onderhoud aan het pand. Ze doen ook catering op festivals.",
-  "status": "voorstel",
+  "reden": "dubbel met Café De Plak, staat bij de restaurants (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "Zin in een stevig bord eten in een café met een eigen verhaal? Aan de Bloemerstraat zit al sinds 1976 een collectief eetcafé zonder baas: alle medewerkers beslissen samen, en dat proef je aan de ontspannen, eigenzinnige sfeer en het retro interieur.\n\nJe kunt er elke dag vanaf twaalf uur terecht. Tot vier uur is er lunch, vanaf vijf uur avondeten, en tussendoor soep, voorgerechten en gebak. Bekend is het kaasgehakt met handgesneden frites en een flinke berg groente, vers en betaalbaar. In de kelder zijn regelmatig feesten, en die ruimte kun je ook afhuren voor je eigen feest of een etentje met een groep.\n\nReserveren gaat niet, dus loop gewoon binnen. Zijn alle tafels bezet? Dan schuif je aan de bar aan tot er iets vrijkomt.",
   "website": "http://www.cafedeplak.nl/",
   "website_bereikbaar": true
@@ -8639,8 +8638,7 @@
    "vegetarisch",
    "ontbijt",
    "lunch",
-   "hond welkom",
-   "groepen"
+   "hond welkom"
   ],
   "keuken": "Ontbijt en lunch",
   "kosten_tokens": {
@@ -12857,7 +12855,8 @@
   "naam": "Sportcafé The Yard",
   "openingstijden": "ma 11:30-22:00, di-do 11:30-00:00, vr 11:30-22:00, za-zo 11:30-17:30",
   "opmerkingen": "De link verwijst naar de algemene horecapagina van de Radboud Universiteit. De pagina van The Yard zelf staat op ru.nl/diensten/eten-en-drinken/the-yard. Op de site heet de zaak 'Sportsbar The Yard'. Overdag zijn er broodjes en koffie, maar het accent ligt op de sportbar met bier, pool en live sport. Daarom staat de hoofdcategorie op 'cafe' in plaats van lunchroom. Het terras is een dakterras. Tussen 21 december 2026 en 3 januari 2027 is de zaak gesloten.",
-  "status": "voorstel",
+  "reden": "sportbar, geen lunchroom (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "Net klaar met sporten op de campus en zin in iets lekkers? Loop dan even door naar The Yard, de sportbar in het Gymnasion aan de Heyendaalseweg. Vanaf half twaalf kun je er elke dag terecht voor koffie, een broodje, een eiwitshake of iets kleins tussendoor.\n\nVanaf het eind van de middag wordt het gezelliger: dan gaan de taps open en staan er ook flesjes bier klaar. Je kunt een potje poolen, live sport kijken op de schermen of naar het dakterras gaan, waar je uitkijkt over de sportvelden.\n\nOp doordeweekse avonden is de bar langer open, in het weekend sluit hij aan het eind van de middag. Neem je sporttas mee en schuif aan na je training of wedstrijd.",
   "website": "http://www.ru.nl/horeca",
   "website_bereikbaar": true

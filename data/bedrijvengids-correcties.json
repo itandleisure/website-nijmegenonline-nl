@@ -41,5 +41,19 @@
  },
  "het-lemke": {
   "naam": "Brasserie 't Zotte Lemke"
+ },
+ "bluf-nijmegen": {
+  "adres": "Van Welderenstraat 95"
+ },
+ "droom-de-boekweit": {
+  "adres": "Boekweit 4"
+ },
+ "zeezicht": {
+  "adres": "Marikenstraat 46-48"
+ },
+ "museumcafe": {
+  "adres": "Lange Baan 4",
+  "postcode": "6511 XJ",
+  "plaats": "Nijmegen"
  }
 }

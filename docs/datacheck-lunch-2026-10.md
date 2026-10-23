@@ -34,6 +34,10 @@ Mijn voorstel staat erbij. Zeg "akkoord", of noem wat je anders wilt.
 
 ---
 
+## Besluit van Frans (23 oktober 2026)
+
+Uitgevoerd: Golestan en Sportcafé The Yard zijn verwijderd, de vier adressen staan in `data/bedrijvengids-correcties.json` en de twijfelachtige kenmerken zijn weg. Resultaat: 54 lunchrooms, plus De Bruijn als partner.
+
 ## Samenvatting
 
 |  | Aantal |
