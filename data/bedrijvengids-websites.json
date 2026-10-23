@@ -1,0 +1,366 @@
+{
+ "apollo-gym": {
+  "eind_url": "https://apollogym.nl/gratis-dagkaart/#fixed-section",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://apollogym.nl/gratis-dagkaart/#fixed-section",
+  "werkt": true
+ },
+ "area-11-personal-fit": {
+  "eind_url": "http://www.evolvepersonaltraining.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.evolvepersonaltraining.nl/",
+  "werkt": false
+ },
+ "ashtanga-mysore-nijmegen": {
+  "eind_url": "http://www.imxprs.com/free/franki/website-ayn",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "http://www.imxprs.com/free/franki/website-ayn",
+  "werkt": true
+ },
+ "avalon-fitcentre": {
+  "eind_url": "http://www.avalonfitcentre.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.avalonfitcentre.nl/",
+  "werkt": false
+ },
+ "basic-fit-kerkenbos": {
+  "eind_url": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-kerkenbos-24-7-647daab03c8d4517a522f2f9c3c32332.html",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-kerkenbos-24/7-647daab03c8d4517a522f2f9c3c32332.html",
+  "werkt": true
+ },
+ "basic-fit-vlaamsegas": {
+  "eind_url": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-vlaamsegas-d630317ca8554edc9ca738d360875d38.html",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.basic-fit.com/nl-nl/clubs/basic-fit-nijmegen-vlaamsegas-d630317ca8554edc9ca738d360875d38.html",
+  "werkt": true
+ },
+ "basic-fit-weg-door-jonkerbos": {
+  "eind_url": "http://www.basicfit.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "timed out",
+  "website": "http://www.basicfit.nl/",
+  "werkt": false
+ },
+ "benefit-sports": {
+  "eind_url": "https://www.benefitsports.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.benefitsports.nl/",
+  "werkt": true
+ },
+ "biggym-nijmegen": {
+  "eind_url": "https://biggym.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.biggym.nl/",
+  "werkt": true
+ },
+ "bodytecnijmegen": {
+  "eind_url": "http://www.bodytecnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.bodytecnijmegen.nl/",
+  "werkt": false
+ },
+ "compleetfit-nijmegen": {
+  "eind_url": "https://compleetfitnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.compleetfitnijmegen.nl/",
+  "werkt": true
+ },
+ "crossfit-nijmegen": {
+  "eind_url": "https://crossfit-nijmegen.com/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.crossfit-nijmegen.com",
+  "werkt": true
+ },
+ "eastside-performance": {
+  "eind_url": "http://www.eastsideperformance.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.eastsideperformance.nl/",
+  "werkt": true
+ },
+ "easyactive-6534": {
+  "eind_url": "https://easyactive.nl/locatie/easy-active-nijmegen",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "https://easyactive.nl/locatie/easy-active-nijmegen",
+  "werkt": false
+ },
+ "f4f-nijmegen": {
+  "eind_url": "http://www.fitforfree.nl/vestigingen/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "http://www.fitforfree.nl/vestigingen/nijmegen/",
+  "werkt": false
+ },
+ "fit-for-free": {
+  "eind_url": "https://www.fitforfree.nl/sportschool/nijmegen",
+  "gecontroleerd": "2026-10-23",
+  "reden": "pagina bestaat niet (404)",
+  "website": "https://www.fitforfree.nl/sportschool/nijmegen",
+  "werkt": false
+ },
+ "fit20": {
+  "eind_url": "https://www.fit20.com/nl/studios/nijmegen/contact",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.fit20nijmegen.nl/",
+  "werkt": true
+ },
+ "fitsmart-personal-training": {
+  "eind_url": "https://fitsmart.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.fitsmart.nl/",
+  "werkt": true
+ },
+ "fittunit": {
+  "eind_url": "https://fittunit.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.fittunit.nl/",
+  "werkt": true
+ },
+ "freyheyt-sportlounge": {
+  "eind_url": "https://www.freyheytnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "Remote end closed connection without response",
+  "website": "https://www.freyheytnijmegen.nl/",
+  "werkt": false
+ },
+ "go4fit-nijmegen": {
+  "eind_url": "https://www.go4fit.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.go4fit.nl/",
+  "werkt": true
+ },
+ "groepsgeluk": {
+  "eind_url": "https://groepsgeluk.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.groepsgeluk.nl/",
+  "werkt": true
+ },
+ "harbor-gym": {
+  "eind_url": "https://www.harborgym.com",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.harborgym.com",
+  "werkt": true
+ },
+ "healtality": {
+  "eind_url": "https://healtality.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.healtality.nl/",
+  "werkt": true
+ },
+ "heavy-duty-outdoor-gym": {
+  "eind_url": "https://heavydutyoutdoorgym.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.heavydutyoutdoorgym.nl/",
+  "werkt": true
+ },
+ "het-fitcentrum": {
+  "eind_url": "https://www.roc-nijmegen.nl/organisatie/leerbedrijven/het-fitcentrum",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://hetfitcentrum.roc-nijmegen.nl/",
+  "werkt": true
+ },
+ "immovation": {
+  "eind_url": "https://www.immovation.nu",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.immovation.nu",
+  "werkt": true
+ },
+ "impact": {
+  "eind_url": "https://impact-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.impact-nijmegen.nl/",
+  "werkt": true
+ },
+ "kracht-coaching-personal-trainer-nijmegen": {
+  "eind_url": "http://www.moves-you.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.moves-you.nl/",
+  "werkt": true
+ },
+ "mio-personal-training": {
+  "eind_url": "https://mio.training/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.mio.training/",
+  "werkt": true
+ },
+ "my35-nijmegen": {
+  "eind_url": "https://www.my35.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.my35.nl/",
+  "werkt": true
+ },
+ "new-age-22": {
+  "eind_url": "http://newage22.com",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://newage22.com",
+  "werkt": true
+ },
+ "nijmegen-outdoor": {
+  "eind_url": "https://nijmegenoutdoor.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.nijmegenoutdoor.nl/",
+  "werkt": true
+ },
+ "nimma-gemina": {
+  "eind_url": "https://nimmabasketball.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.nimma-gemina.nl/",
+  "werkt": true
+ },
+ "nimma-moves": {
+  "eind_url": "https://nimmamoves.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.nimmamoves.nl/",
+  "werkt": true
+ },
+ "novio-fit": {
+  "eind_url": "http://Www.noviofit.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "http://Www.noviofit.nl/",
+  "werkt": true
+ },
+ "perry-ubeda-weerbaarheidscentrum": {
+  "eind_url": "http://perryubeda.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://perryubeda.nl/",
+  "werkt": true
+ },
+ "personal-fitness-nederland-nijmegen": {
+  "eind_url": "https://www.personalfitnessnederland.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.personalfitnessnederland.nl/",
+  "werkt": true
+ },
+ "provectas": {
+  "eind_url": "https://www.provectas.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://Www.provectas.nl/",
+  "werkt": true
+ },
+ "pulse-flow": {
+  "eind_url": "https://pulseandflow.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://pulseandflow.nl",
+  "werkt": true
+ },
+ "riverland-healthcentre": {
+  "eind_url": "https://riverlandhealthcentre.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://riverlandhealthcentre.nl/",
+  "werkt": true
+ },
+ "sanasport-health-club": {
+  "eind_url": "https://sanasport-fitness-nijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.sanasport-fitness-nijmegen.nl/",
+  "werkt": true
+ },
+ "sportcity-nijmegen": {
+  "eind_url": "https://www.sportcity.nl/nijmegen",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.sportcity.nl/nijmegen",
+  "werkt": true
+ },
+ "sportloods-oost": {
+  "eind_url": "https://sportloodsoost.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.sportloodsoost.nl/",
+  "werkt": true
+ },
+ "sports-palace": {
+  "eind_url": "https://www.sportspalace.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.sportspalace.nl/",
+  "werkt": true
+ },
+ "the-gym-society": {
+  "eind_url": "https://www.thegymsociety.com/nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.thegymsociety.nl/",
+  "werkt": true
+ },
+ "the-kettlebell-club": {
+  "eind_url": "https://thekettlebellclub.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://www.thekettlebellclub.nl/",
+  "werkt": true
+ },
+ "trainingscentrum-michi": {
+  "eind_url": "http://www.trainingscentrum-michi.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "403 (weert mogelijk bots)",
+  "website": "http://www.trainingscentrum-michi.nl/",
+  "werkt": true
+ },
+ "ultrasport": {
+  "eind_url": "https://ultrasport.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.ultrasport.nl/",
+  "werkt": true
+ },
+ "wav-e-studios-nijmegen": {
+  "eind_url": "https://wav-estudios.com/wav-e-locaties/nijmegen/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "https://wav-estudios.com/wav-e-studios-nijmegen/",
+  "werkt": true
+ },
+ "xtreme-marine-sports": {
+  "eind_url": "https://xtrememarinesports.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "200",
+  "website": "http://www.xtrememarinesports.nl/",
+  "werkt": true
+ },
+ "zlim-nijmegen": {
+  "eind_url": "https://zlimnijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "https://zlimnijmegen.nl",
+  "werkt": false
+ }
+}
