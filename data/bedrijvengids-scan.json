@@ -4015,6 +4015,33 @@
   "website": "http://www.coffeelovers.nl/locaties/marienburg-nijmegen",
   "website_bereikbaar": true
  },
+ "coffeemeister": {
+  "adres_op_site": "St. Canisiussingel 26C, 6511 TJ Nijmegen",
+  "bronnen": [
+   "https://coffeemeister.nl/",
+   "https://coffeemeister.nl/pages/service-contact",
+   "https://coffeemeister.nl/pages/over-coffeemeister"
+  ],
+  "categorie_scan": "koffiezaak",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "koffiezaak",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 46787,
+   "uit": 981
+  },
+  "lijkt_actief": true,
+  "naam": "Coffeemeister",
+  "openingstijden": "",
+  "opmerkingen": "Ik heb de tekst leeg gelaten, omdat Coffeemeister geen koffiebar is. Het is een webshop waar je koffiebonen, koffiecups, filterkoffie, proefpakketten en koffieabonnementen koopt. De site noemt zichzelf 'jouw online koffiewinkel' en een 'direct-to-consumer platform van de eigen branderij in Almelo'. Het adres aan de Sint Canisiussingel staat op de contactpagina als vestigingsadres van CoffeeMeister B.V. (met KVK-nummer). Nergens staat dat je daar langs kunt komen, koffie kunt drinken of in een winkel terechtkunt. Er staan ook geen openingstijden op de site. Ze branden de koffie wel zelf, maar in Almelo en niet in Nijmegen. Daarom heb ik het kenmerk 'eigen branderij' niet aangezet, want als filter voor bezoekers in Nijmegen klopt dat niet. De categorie koffiezaak past niet goed, maar in de lijst staat geen categorie voor een webshop. Ik raad aan om te overwegen deze vermelding uit de gids te halen.",
+  "reden": "automatisch: te weinig informatie op de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.coffeemeister.nl/",
+  "website_bereikbaar": true
+ },
  "coffeeshop-24-7-nijmegen": {
   "adres_op_site": "Tweede Walstraat 108, 6511 LW Nijmegen",
   "bronnen": [
@@ -4295,6 +4322,40 @@
   "website": "https://www.crossfit-nijmegen.com",
   "website_bereikbaar": true
  },
+ "crossroads-cycling-culture": {
+  "adres_op_site": "Daalseweg 109, 6521 GG Nijmegen",
+  "bronnen": [
+   "https://crossroads-nijmegen.cc/",
+   "https://crossroads-nijmegen.cc/ontdek-ons-cafe/",
+   "https://crossroads-nijmegen.cc/social-rides/"
+  ],
+  "categorie_scan": "koffiezaak",
+  "extra_categorieen": [
+   {
+    "bewijs": "Kom langs voor specialty coffee, belegde broodjes, taart en een fijne plek om even te zitten. Ideaal voor een lunchpauze",
+    "categorie": "lunch"
+   }
+  ],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "koffiezaak",
+  "kenmerken": [
+   "lunch",
+   "taart en gebak"
+  ],
+  "keuken": "Koffie & lunch",
+  "kosten_tokens": {
+   "in": 41106,
+   "uit": 1098
+  },
+  "lijkt_actief": true,
+  "naam": "Crossroads Cycling Culture 🚲",
+  "openingstijden": "di-za 09:00-17:00, zo-ma gesloten",
+  "opmerkingen": "Het is een combinatie van een fietswinkel, een werkplaats en een koffiebar. De site zegt niet of de taart zelf gebakken wordt, toch is 'taart en gebak' gekozen omdat er taart op de kaart staat. De koffie komt van Single Estate Coffee Roasters, dus er is geen eigen branderij. Een terras of wifi wordt niet genoemd. De menukaart (pdf) is niet gelezen.",
+  "status": "voorstel",
+  "tekst": "Zin in een goede flat white voor of na je rondje door de Ooij? Aan de Daalseweg in Nijmegen-Oost zit een koffiebar die midden in een fietswinkel staat. Je drinkt er specialty coffee van Single Estate Coffee Roasters, en er zijn belegde broodjes, lunch en taart bij. Je hoeft niet op de fiets te komen: buurtbewoners zijn net zo welkom als wielrenners.\n\nKom je wel op de fiets, dan zet je hem gewoon veilig binnen neer. Er is zelfs een douche die iedereen mag gebruiken. Tussen twee slokken door kun je kijken naar racefietsen en fietskleding, of je fiets laten nakijken in de werkplaats.\n\nWil je fietsmaatjes vinden? Fiets dan gratis mee met een van de wekelijkse social rides en drink daarna samen koffie. Je bent welkom van dinsdag tot en met zaterdag.",
+  "website": "http://www.crossroads-nijmegen.cc/",
+  "website_bereikbaar": true
+ },
  "crossroads-nijmegen": {
   "adres_op_site": "Daalseweg 109, 6521 GG Nijmegen",
   "bronnen": [
@@ -4423,6 +4484,31 @@
   "tekst": "Zit je even te wachten tijdens een ziekenhuisbezoek, of wil je na het bezoekuur nog iets eten met familie? Dan kun je terecht in het CWZ Paviljoen, in de Binnenhof van het Canisius Wilhelmina Ziekenhuis. Het is een plek om even bij te komen met koffie of een hapje, en er worden veel streekproducten gebruikt.\n\nIn het paviljoen zit ook een winkeltje. Daar haal je fruit, een tijdschrift, een wenskaart of een klein cadeautje voor wie op de afdeling ligt. Het paviljoen is ook in het weekend open, en dat is handig als het restaurant de Binnenhof dan dicht is. Buiten de openingstijden kun je bij de automaten tegenover het winkeltje altijd nog iets te eten of drinken halen.\n\nLoop dus gerust even binnen als je in het CWZ bent.",
   "website": "https://www.cwz.nl/naar-het-ziekenhuis/restaurant-en-faciliteiten",
   "website_bereikbaar": true
+ },
+ "dakota": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.coffeeshop.freeuk.com/dakota.html"
+  ],
+  "categorie_scan": "koffiezaak",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "koffiezaak",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 15557,
+   "uit": 524
+  },
+  "lijkt_actief": false,
+  "naam": "Dakota",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website (http://www.coffeeshop.freeuk.com/dakota.html) niet openen: url_not_accessible. Daarom heb ik geen tekst geschreven. Mijn vermoeden is dat Dakota een Nederlandse coffeeshop is die cannabis verkoopt en geen koffiebar. De URL komt van een overzichtssite van coffeeshops ('coffeeshop.freeuk.com'), en Dakota aan de Lange Hezelstraat in Nijmegen staat bekend als coffeeshop. Dat laatste heb ik niet op de site kunnen controleren. In dat geval hoort het bedrijf niet in de categorie koffiezaak. Of het bedrijf nog actief is, kon ik ook niet nagaan. Graag handmatig controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.coffeeshop.freeuk.com/dakota.html",
+  "website_bereikbaar": false
  },
  "dakota-nijmegen": {
   "adres_op_site": "",
@@ -9946,6 +10032,29 @@
   "tekst": "Heb je zin om eindeloos door te bestellen? Aan de Griftdijk Zuid in Lent kun je bij Lent Plaza aanschuiven voor all you can dine sushi en grill. Je kiest zelf uit rolls als de dragon roll of een mango-zalmcreatie, en daarnaast uit gegrilde gerechten zoals ossenhaas met teriyaki of lamskoteletjes. Kip en lam zijn halal, en de sojasaus en rijstazijn zijn alcoholvrij.\n\nIn 2023 is het restaurant flink verbouwd en kreeg het een eigentijds interieur. Kinderen eten mee voor een eigen tarief, dus je kunt hier prima met het hele gezin naartoe. Zit je liever thuis op de bank? Dan kun je ook afhalen of laten bezorgen, en voor grotere gezelschappen verzorgen ze Chinese catering in en rond Nijmegen.\n\nJe bent welkom van dinsdag tot en met zondag vanaf vier uur 's middags. Bekijk vooraf het menu en bel om een tafel te reserveren.",
   "website": "https://restaurant-lentplaza.nl/",
   "website_bereikbaar": true
+ },
+ "lentmark-kiosk-koffie-ijs-en-lekkers": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "koffiezaak",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "koffiezaak",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 15562,
+   "uit": 452
+  },
+  "lijkt_actief": true,
+  "naam": "LENTmark Kiosk: koffie, ijs en lekkers.",
+  "openingstijden": "",
+  "opmerkingen": "De website https://www.lentmark-kiosk.nl/ kon niet worden opgehaald (fout: url_not_allowed), dus de inhoud is niet gecontroleerd. Daarom is er geen tekst geschreven en zijn er geen kenmerken of openingstijden ingevuld. De categorie koffiezaak is alleen gebaseerd op de bedrijfsnaam ('koffie, ijs en lekkers'). Mogelijk past ijssalon als extra categorie, maar dat kon niet op de site worden nagekeken. Of het bedrijf nog actief is, is ook niet gecontroleerd. Graag later opnieuw proberen of het handmatig nakijken.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://www.lentmark-kiosk.nl/",
+  "website_bereikbaar": false
  },
  "lijn-3": {
   "adres_op_site": "Kerkstraat 205, 6543 KJ Nijmegen",
@@ -17160,6 +17269,31 @@
   "status": "voorstel",
   "tekst": "Komt er een verjaardag aan, of wil je je collega's verrassen? Bestel dan eens een taart bij deze bakkerij aan de Cargadoorweg. Ze bakken alles plantaardig, met groente en fruit die anders weggegooid zouden worden en met lokale biologische noten en granen. Denk aan een wortel-sinaasappeltaart of een herfsttaart met Biscoff en geredde pompoen.\n\nOok het team is bijzonder: in de bakkerij worden vluchtelingen opgeleid tot vakmensen. Ga je trouwen? Dan kun je hier een bruidstaart helemaal op maat laten maken, en ook voor zakelijke traktaties kun je hier terecht.\n\nJe bestelt online. Doe je dat vóór 11 uur, dan kun je je taart de volgende dag ophalen of laten bezorgen binnen zo'n 10 kilometer van de bakkerij. Ophalen kan van dinsdag tot en met zaterdag.",
   "website": "https://www.trashuretaarten.nl/",
+  "website_bereikbaar": true
+ },
+ "tribes-coffee": {
+  "adres_op_site": "St. Canisiussingel 26C, 6511 TJ Nijmegen",
+  "bronnen": [
+   "http://www.tribescoffee.nl/"
+  ],
+  "categorie_scan": "koffiezaak",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "koffiezaak",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 26599,
+   "uit": 734
+  },
+  "lijkt_actief": true,
+  "naam": "Tribes Coffee",
+  "openingstijden": "",
+  "opmerkingen": "Tribes Coffee lijkt geen koffiebar te zijn waar je als bezoeker iets kunt drinken. Het is een koffiemerk en groothandel voor de horeca. Ze branden zelf biologische koffiebonen ('Vers gebrande koffie voor de beste horeca ondernemers'), importeren Rocket Espresso-machines, verkopen molens, PUQpress- en Pro-Fondi-apparatuur en leveren een kant-en-klare Espresso Martini met tap. Er staan geen openingstijden op de site en er is geen zaak waar je zelf naartoe kunt. Wel kun je langskomen voor een demo, maar dat is bedoeld voor ondernemers. Voor particulieren verwijzen ze naar een webshop (coffeemeister.nl). Daarom heb ik geen tekst geschreven. Ik raad aan de vermelding als koffiezaak te heroverwegen; 'koffiezaak' is alleen als dichtstbijzijnde categorie ingevuld. Het adres komt overeen met ons adres.",
+  "reden": "automatisch: te weinig informatie op de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.tribescoffee.nl/",
   "website_bereikbaar": true
  },
  "tu-thai-food": {
