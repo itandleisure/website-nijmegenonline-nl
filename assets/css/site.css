@@ -397,8 +397,15 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .mijnbedrijf p:last-child { margin: 0; }
 .gidsactie { padding: 10px 14px; border-radius: 8px; background: #fff6e0; border-left: 4px solid #e8a317; }
 .gidsactie strong { margin-right: 6px; }
-.gidsfotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; margin: 16px 0; }
-.gidsfotos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; }
+.gidsfotos { position: relative; margin: 16px 0; }
+.gidsfotos__rij { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; border-radius: 8px; }
+.gidsfotos__rij::-webkit-scrollbar { display: none; }
+.gidsfotos__rij img { flex: 0 0 85%; width: 85%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; scroll-snap-align: start; }
+@media (min-width: 640px) { .gidsfotos__rij img { flex-basis: calc(50% - 4px); width: calc(50% - 4px); } }
+.gidsfotos__pijl { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.92); color: var(--kop); font-size: 1.6rem; line-height: 1; cursor: pointer; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
+.gidsfotos__pijl--vorige { left: 8px; }
+.gidsfotos__pijl--volgende { right: 8px; }
+.gidsfotos__pijl[hidden] { display: none; }
 .bedrijf h1 { hyphens: auto; overflow-wrap: break-word; }
 
 /* Openingstijden per dag in het aanmeldformulier (assets/js/formulier.js) */

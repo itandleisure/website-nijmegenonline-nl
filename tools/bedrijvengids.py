@@ -285,7 +285,12 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
     else:
         out.append('        <div class="inhoud-tekst">%s</div>' % kort)
     if b.get("fotos"):
-        out.append('        <div class="gidsfotos">%s</div>' % "".join('<img src="%s" alt="%s" loading="lazy">' % (esc(f), esc(b["naam"])) for f in b["fotos"]))
+        # Carrousel (Uitgelicht en Partner, tot 10 foto's): vegen op mobiel, pijlen via assets/js/bedrijf.js
+        out.append('        <div class="gidsfotos" role="region" aria-label="Foto\'s van %s"><div class="gidsfotos__rij" tabindex="0">%s</div>'
+                   '<button type="button" class="gidsfotos__pijl gidsfotos__pijl--vorige" aria-label="Vorige foto" hidden>&#8249;</button>'
+                   '<button type="button" class="gidsfotos__pijl gidsfotos__pijl--volgende" aria-label="Volgende foto" hidden>&#8250;</button></div>'
+                   % (esc(b["naam"]), "".join('<img src="%s" alt="%s, foto %d" loading="lazy">' % (esc(foto_url(f, root)), esc(b["naam"]), n + 1)
+                                                for n, f in enumerate(b["fotos"]))))
     out.append('        <section class="gids-sectie">\n          <h2>Contact en openingstijden</h2>')
     out.append('          <ul class="evenement-info%s">%s</ul>\n        </section>' % (" evenement-info--uitgelicht" if b.get("uitgelicht") else "", "".join(regels)))
     if not b.get("uitgelicht"):
@@ -304,7 +309,7 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
         out.extend("            " + (uitgelicht_kaart(x, root) if x.get("uitgelicht") else gewone_kaart(x, root)) for x in anderen[:4])
         out.append('          </div>\n          <p class="gids-verder"><a href="%sbedrijvengids-categorie/%s/">Bekijk alle %s</a></p>\n        </section>'
                    % (root, cat["slug"], esc(cat["naam"][0].lower() + cat["naam"][1:])))
-    out.append('        <script src="%sassets/js/bedrijf.js?v=1" defer data-bedrijf="%s"></script>' % (root, esc(b["slug"])))
+    out.append('        <script src="%sassets/js/bedrijf.js?v=2" defer data-bedrijf="%s"></script>' % (root, esc(b["slug"])))
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
