@@ -153,6 +153,31 @@
   "website": "https://www.aangenaamaleppo.nl/",
   "website_bereikbaar": true
  },
+ "aartsen-somers": {
+  "adres_op_site": "Stijn Buysstraat 38, 6512 CR Nijmegen",
+  "bronnen": [
+   "https://www.aartsensomers.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "zakelijk-overig",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 20522,
+   "uit": 534
+  },
+  "lijkt_actief": false,
+  "naam": "Aartsen & Somers",
+  "openingstijden": "",
+  "opmerkingen": "Op de homepage staat dat Aartsen & Somers sinds 1 april 2025 stopt met alle incassowerk. Voor incassozaken verwijst de site naar mr. E. Aartsen van Aartsen Legal (www.aartsen-juridischadviesbureau.nl, 085-8001685, info@aartsen-legal.nl), op hetzelfde adres aan de Stijn Buysstraat 38. Het bedrijf was vooral een incassobureau met daarnaast juridisch advies, en geen advocatenkantoor. Daarom staat de categorie op zakelijk-overig. Het lijkt niet meer actief. Ik raad aan deze vermelding te verwijderen, of te vervangen door Aartsen Legal na controle van die website. Daarom heb ik geen tekst geschreven.",
+  "reden": "automatisch: gestopt of verhuisd volgens de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://www.aartsensomers.nl/",
+  "website_bereikbaar": true
+ },
  "abo-vastgoed-financieel-advies": {
   "adres_op_site": "Hertogstraat 42, 6511 SC Nijmegen",
   "bronnen": [
@@ -258,6 +283,61 @@
   "tekst": "",
   "website": "https://www.janssen-cs.nl/?y_source=1_Mzc3NDM4Ni00ODMtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
   "website_bereikbaar": false
+ },
+ "acta-advocaten": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 26686,
+   "uit": 636
+  },
+  "lijkt_actief": true,
+  "naam": "Acta advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website niet openen. http://www.acta-advocaten.nl/, https://www.acta-advocaten.nl/ en https://acta-advocaten.nl/ gaven allemaal de foutmelding 'url_not_allowed'. Daardoor heb ik niets kunnen controleren: geen adres, geen specialismen, geen openingstijden en ook niet of het kantoor nog actief is. De categorie advocatenkantoor komt alleen van de naam en de categorie die jullie al hadden. Lijkt_actief staat op true omdat ik geen aanwijzing heb gevonden dat het kantoor gestopt is, maar dat heb ik dus niet kunnen nagaan. Graag later opnieuw proberen of handmatig nakijken.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.acta-advocaten.nl/#xl_xr_page_index",
+  "website_bereikbaar": false
+ },
+ "adalet-turk-hukuku-turks-recht-turkse-advocaten": {
+  "adres_op_site": "Kerkenbos 1015-F, 6546 BB Nijmegen",
+  "bronnen": [
+   "https://www.adalet-consultancy.nl/",
+   "https://www.adalet-consultancy.nl/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "erfrecht",
+   "familierecht en scheiding",
+   "particulieren",
+   "zakelijke klanten",
+   "gratis kennismaking",
+   "avond of weekend"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 41758,
+   "uit": 1156
+  },
+  "lijkt_actief": true,
+  "naam": "Adalet Türk Hukuku-turks Recht- Turkse Advocaten",
+  "openingstijden": "ma-vr 09:00-19:00, za 09:00-17:00, zo gesloten",
+  "opmerkingen": "Het adres op de site (Kerkenbos 1015-F) wijkt af van ons adres (Kerkenbos 1061). Het gaat om een juridisch adviesbureau voor Turks recht. Het werkt samen met advocaten in Turkije, maar de site noemt zichzelf geen Nederlands advocatenkantoor. Daarom moet de redactie de bedrijfsnaam ‘Turkse Advocaten’ nog controleren. ‘Avond of weekend’ is gekozen omdat het kantoor op werkdagen tot 19:00 en op zaterdag open is.",
+  "status": "voorstel",
+  "tekst": "Heb je een erfenis, een huis of een scheiding die in Turkije geregeld moet worden? Dan wil je iemand die zowel het Nederlandse als het Turkse systeem snapt. Op bedrijventerrein Kerkenbos in Nijmegen-West zit een juridisch adviesbureau dat zich daar sinds 2006 helemaal op richt.\n\nHet team kent het Turkse recht goed en werkt samen met advocaten in Turkije. Ze helpen particulieren en bedrijven onder meer met erfrecht en het verdelen van een nalatenschap, met kopen of verkopen van onroerend goed en met het laten erkennen van een Nederlandse uitspraak, zoals een echtscheiding, in Turkije. Ook bij contracten en aanvragen bij Turkse instanties kun je er terecht. Er werkt een beëdigd vertaler Turks-Nederlands, dus je documenten worden meteen goed vertaald.\n\nHet eerste gesprek is gratis en vrijblijvend. Je kunt bellen, mailen of appen, ook op zaterdag.",
+  "website": "http://www.adalet-consultancy.nl/",
+  "website_bereikbaar": true
  },
  "adb-fiscale-advisering-accountancy": {
   "adres_op_site": "Vestiging Nijmegen, Energieweg 57, 6541 CW Nijmegen",
@@ -373,6 +453,57 @@
   "website": "http://www.admhendriks.nl/",
   "website_bereikbaar": false,
   "zelf_gelezen": true
+ },
+ "advocatenkantoor-bos": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://www.advocatenkantoorbos.com/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 22253,
+   "uit": 675
+  },
+  "lijkt_actief": false,
+  "naam": "Advocatenkantoor Bos",
+  "openingstijden": "",
+  "opmerkingen": "Het domein advocatenkantoorbos.com toont alleen een parkeerpagina van Aeroscoop ('Domein in beheer'); er staat geen informatie over het advocatenkantoor op. Onduidelijk of het kantoor nog actief is of een andere website heeft. Graag handmatig controleren (bijvoorbeeld via KvK of de NOvA-advocatenzoeker).",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.advocatenkantoorbos.com/",
+  "website_bereikbaar": false,
+  "zelf_gelezen": true
+ },
+ "advocatenkantoor-refuge": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.advocatenkantoorrefuge.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17694,
+   "uit": 378
+  },
+  "lijkt_actief": true,
+  "naam": "Advocatenkantoor Refuge",
+  "openingstijden": "",
+  "opmerkingen": "De website geeft alleen de melding 'Deze website is momenteel niet beschikbaar.' Daarom kon ik geen informatie over het kantoor, de specialismen of de openingstijden vinden. Ook valt niet na te gaan of het kantoor nog actief is. Ik heb de categorie advocatenkantoor aangehouden op basis van de naam. Graag later opnieuw controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.advocatenkantoorrefuge.nl/",
+  "website_bereikbaar": false
  },
  "akhi-s": {
   "adres_op_site": "Malvert 7023, 6538 DP Nijmegen",
@@ -2585,6 +2716,33 @@
   "tekst": "",
   "website": "https://www.brouwtoren.nl",
   "website_bereikbaar": true
+ },
+ "brunet-advocaten": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.brunet.nl/",
+   "https://www.brunet.nl/",
+   "https://brunet.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 26643,
+   "uit": 558
+  },
+  "lijkt_actief": true,
+  "naam": "Brunet Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "De website kon niet worden geladen. Ik heb http://www.brunet.nl/, https://www.brunet.nl/ en https://brunet.nl/ geprobeerd en kreeg steeds de melding 'url_not_accessible'. Daarom is er geen tekst geschreven en is er niets gecontroleerd: adres, specialismen, openingstijden en of het kantoor nog actief is. De categorie advocatenkantoor komt alleen uit onze eigen gegevens. Graag later opnieuw controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.brunet.nl/",
+  "website_bereikbaar": false
  },
  "brunswick-nijmegen": {
   "adres_op_site": "",
@@ -5473,6 +5631,37 @@
   "website": "http://degelagkamer.nl",
   "website_bereikbaar": false
  },
+ "de-graaf-advocatuur": {
+  "adres_op_site": "Oranjesingel 2A, 6511 NS Nijmegen (ingang om de hoek in de Arksteestraat)",
+  "bronnen": [
+   "https://degraafadvocatuur.nl/",
+   "https://degraafadvocatuur.nl/fusie-en-bedrijfsovername/",
+   "https://degraafadvocatuur.nl/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "ondernemingsrecht",
+   "zakelijke klanten",
+   "zzp en mkb"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 24830,
+   "uit": 1104
+  },
+  "lijkt_actief": true,
+  "naam": "De Graaf Advocatuur",
+  "openingstijden": "",
+  "opmerkingen": "Eenmanskantoor van mr. Jan de Graaf. Copyright op de site staat op 2021; actualiteit niet te controleren. 'zzp en mkb' afgeleid uit focus op ondernemers, niet letterlijk genoemd.",
+  "status": "voorstel",
+  "tekst": "Loop je als ondernemer vast in een conflict met een mede-aandeelhouder, een bestuur dat steken laat vallen of een klant die maar niet betaalt? Aan de Oranjesingel, met de ingang net om de hoek in de Arksteestraat, zit Jan de Graaf, advocaat met het ondernemingsrecht als kernspecialisatie.\n\nHij helpt bij het opstellen van contracten, herstructureringen en schuldsanering, en heeft zich vooral toegelegd op fusies, overnames en bestuurdersaansprakelijkheid. Bij een overname denkt hij mee van intentieverklaring en onderzoek naar risico's tot onderhandelingen en de afronding. Voor fiscale en financiële vragen schakelt hij accountants en fiscalisten uit zijn netwerk in. Zijn insteek: snel tot de kern komen en lange, dure procedures liefst vermijden.\n\nSpeelt er iets in je bedrijf? Bel of mail dan op tijd, want hoe eerder hij meekijkt, hoe meer er nog te regelen valt.",
+  "website": "https://degraafadvocatuur.nl/",
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
+ },
  "de-industrie": {
   "adres_op_site": "Weurtseweg 105, 6541 AP Nijmegen",
   "bronnen": [
@@ -5664,6 +5853,29 @@
   "tekst": "Heb je geen zin om te koken en wel trek in babi pangang, foe yong hai of een complete rijsttafel? Dan fiets je in Nijmegen-Oost zo naar de Tooropstraat. Daar zit De Mandarijn, herkenbaar aan de rode pui met een Chinees dakje boven de deur. Ze maken Chinees-Indische gerechten vers klaar om mee naar huis te nemen.\n\nDe afhaalkaart is flink, van soep tot rijsttafel, en er is ook een maandmenu. Geef je een verjaardag, familiefeest of bedrijfslunch? Dan kun je een warm buffet laten verzorgen, thuis of op kantoor, ook in Lent, Beek en Berg en Dal.\n\nBestel online of bel even, en haal je eten op het tijdstip dat jij hebt afgesproken. Parkeren kan in de buurt. Let op: op maandag zijn ze dicht, behalve op feestdagen.",
   "website": "https://chineesrestaurantdemandarijn.nl/",
   "website_bereikbaar": true
+ },
+ "de-mul-zegger-advocaten": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17591,
+   "uit": 398
+  },
+  "lijkt_actief": true,
+  "naam": "De Mul Zegger Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "De website https://www.dmz.nl/ kon niet worden opgehaald: de fetch gaf de fout 'url_not_allowed'. Daarom is er geen tekst geschreven en zijn er geen kenmerken, openingstijden of adres van de site overgenomen. De categorie advocatenkantoor is alleen gebaseerd op de bedrijfsnaam en de vermoedelijke categorie. Of het bedrijf nog actief is, hebben we niet kunnen controleren. Graag handmatig nakijken.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://www.dmz.nl/",
+  "website_bereikbaar": false
  },
  "de-nieuwe-winkel": {
   "adres_op_site": "Gebroeders van Limburgplein 7, 6511 BW Nijmegen",
@@ -6284,6 +6496,37 @@
   "website": "https://dewitwasserij.nl",
   "website_bereikbaar": true
  },
+ "de-zaak-meester-fiscaal-juristen": {
+  "adres_op_site": "Turfstraat 11, 6811 HK Arnhem; Industriestraat 1-B, 6851 EM Huissen",
+  "bronnen": [
+   "https://www.dezaakmeester.nl/",
+   "https://www.dezaakmeester.nl/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "particulieren",
+   "zakelijke klanten",
+   "familierecht en scheiding",
+   "erfrecht"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 33114,
+   "uit": 889
+  },
+  "lijkt_actief": false,
+  "naam": "De Zaak Meester Fiscaal Juristen",
+  "openingstijden": "",
+  "opmerkingen": "Het bedrijf lijkt verhuisd. Op de homepage en de contactpagina staan alleen vestigingen in Arnhem (Turfstraat 11) en Huissen (Industriestraat 1-B). Het adres dat wij hebben (Van Somerenstraat 28, Nijmegen) staat nergens op de site. De Zaak Meester bestaat nog wel. Het kantoor van fiscaal juristen helpt particulieren, ondernemers en accountants- en administratiekantoren met belastingaangiften, bezwaarschriften, omzetbelasting, (echt)scheiding en erven en schenken. Omdat er geen vestiging in Nijmegen meer lijkt te zijn, heb ik geen tekst geschreven. Advies: haal de vermelding uit de gids of controleer eerst bij het bedrijf. Fiscaal juristen zijn geen advocaten. Advocatenkantoor heb ik gekozen omdat die categorie ook juridisch adviseurs omvat, maar zakelijk-overig of accountant-boekhouder kan ook. Op de site staan geen openingstijden.",
+  "reden": "automatisch: gestopt of verhuisd volgens de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.dezaakmeester.nl/",
+  "website_bereikbaar": true
+ },
  "delimore": {
   "adres_op_site": "",
   "bronnen": [
@@ -6719,6 +6962,63 @@
   "website": "http://www.duqaat.nl/",
   "website_bereikbaar": true
  },
+ "dux-advocaten": {
+  "adres_op_site": "Kerkenbos 1232a, 6546 BE Nijmegen",
+  "bronnen": [
+   "https://www.duxadvocaten.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "ondernemingsrecht",
+   "huurrecht",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 21430,
+   "uit": 725
+  },
+  "lijkt_actief": true,
+  "naam": "Dux Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Er staan geen openingstijden op de homepage. De site heeft ook een Engelstalige versie, maar nergens staat dat er Engelstalig advies wordt gegeven, dus dat kenmerk heb ik niet gekozen. Ik heb alleen de homepage gelezen.",
+  "status": "voorstel",
+  "tekst": "Loop je als ondernemer vast op een contract, een lastige huurkwestie of zorgen over de continuïteit van je bedrijf? Dan kun je bij dit advocatenkantoor aan het Kerkenbos in Nijmegen-West terecht voor helder en praktisch juridisch advies.\n\nDe advocaten van DUX richten zich op ondernemingsrecht, huur- en vastgoedrecht, contractenrecht en faillissementsrecht. Denk aan het overdragen van aandelen, fusies en samenwerkingsafspraken, maar ook aan huurprijsaanpassing, gebreken bij oplevering, distributie- en franchisecontracten en surseance of een doorstart. Ze zeggen zelf dat ze toegankelijk en duidelijk willen zijn, en daar heb je wat aan als je juist met je eigen werk bezig wilt blijven.\n\nWil je je situatie eens voorleggen? Bel of mail het kantoor en maak een afspraak.",
+  "website": "http://www.duxadvocaten.nl/",
+  "website_bereikbaar": true
+ },
+ "dx-legal": {
+  "adres_op_site": "Van Broeckhuysenstraat 50, 6511 PK Nijmegen",
+  "bronnen": [
+   "https://www.dxlegal.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "ondernemingsrecht",
+   "zakelijke klanten",
+   "zzp en mkb",
+   "Engelstalig"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 19690,
+   "uit": 826
+  },
+  "lijkt_actief": true,
+  "naam": "Dx Legal",
+  "openingstijden": "",
+  "opmerkingen": "Het adres op de site (Van Broeckhuysenstraat 50, 6511 PK) is anders dan het adres bij ons (Oranjesingel 2). Graag nakijken welk adres klopt. De nieuwste blogs zijn van mei 2017, dus de site wordt mogelijk niet meer bijgehouden. Het kantoor is wel gewoon te bereiken via de genoemde contactgegevens. Er staan geen openingstijden op de site.",
+  "status": "voorstel",
+  "tekst": "Heb je een horecazaak of een ander bedrijf en loop je vast op een contract, een openstaande factuur of een dreigend faillissement? Dan kun je bij DX Legal terecht. Achter dit Nijmeegse advocatenkantoor zit Chris Diks. Hij werkt sinds 2017 zelfstandig en heeft eerder jarenlang bij grotere regionale kantoren gewerkt, waar hij ook als curator in faillissementen optrad.\n\nZijn vakgebieden zijn ondernemingsrecht, faillissementsrecht en horecarecht. Hij helpt bij incasso's, stelt contracten op of kijkt ze na, geeft advies en staat je zo nodig bij in een procedure. Omdat hij zelf een horecazaak heeft, kent hij de praktijk van ondernemers van binnenuit. Liever in het Engels? Dat is geen probleem.\n\nOp de site lees je zijn blogs en zie je hoe hij zijn tarieven opbouwt. Bel of mail gerust om je zaak voor te leggen.",
+  "website": "http://www.dxlegal.nl/",
+  "website_bereikbaar": true
+ },
  "eastside-performance": {
   "adres_op_site": "van Rosenburgweg 10, 6537 TM Nijmegen",
   "bronnen": [
@@ -6801,6 +7101,37 @@
   "status": "verwijderd",
   "tekst": "",
   "website": "http://eazie.nl/",
+  "website_bereikbaar": true
+ },
+ "echtscheiding-nijmegen": {
+  "adres_op_site": "Bedrijvencentrum Augustinus, Graafseweg 274, kamer 3.14, 6532 ZV Nijmegen",
+  "bronnen": [
+   "https://echtscheidingnijmegen.nl/",
+   "https://echtscheidingnijmegen.nl/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "familierecht en scheiding",
+   "mediation",
+   "particulieren",
+   "gratis kennismaking",
+   "avond of weekend"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 55101,
+   "uit": 1262
+  },
+  "lijkt_actief": true,
+  "naam": "Echtscheiding Nijmegen",
+  "openingstijden": "",
+  "opmerkingen": "Dit is een mediationpraktijk (MfN-registermediators) en geen advocatenkantoor. Omdat juridisch adviseurs onder deze categorie vallen, staat hij toch hier. Op de site staan zowel 'Silke Kroes' als 'Silke Croes'; in de tekst heb ik 'Croes' gebruikt. De site noemt '24/7 bereikbaar', maar vaste openingstijden staan er niet op.",
+  "status": "voorstel",
+  "tekst": "Ga je uit elkaar en wil je dat samen goed regelen, zonder dat het uitdraait op een strijd? Bij Echtscheiding Nijmegen helpen scheidingsmediators Renate Bollen, Marc Rutten en Silke Croes je met de praktische én de emotionele kant van een scheiding.\n\nZe kijken samen met jullie naar alles wat geregeld moet worden: het ouderschapsplan als er kinderen zijn, wat er met het huis gebeurt, alimentatie, pensioen en andere geldzaken. Ook een kindgesprek hoort bij de mogelijkheden. Het kantoor zit in Bedrijvencentrum Augustinus aan de Graafseweg, en de tijden zijn flexibel, ook 's avonds en in het weekend.\n\nTwijfel je nog over hoe je moet beginnen? Plan dan een gratis kennismakingsgesprek. Volgens de site kun je meestal binnen een week terecht.",
+  "website": "http://www.echtscheidingnijmegen.nl/contact",
   "website_bereikbaar": true
  },
  "eetbar-bloom": {
@@ -7210,6 +7541,36 @@
   "website": "https://www.elsombreronijmegen.nl/",
   "website_bereikbaar": false
  },
+ "elexer-advocaten": {
+  "adres_op_site": "Berg en Dalseweg 101, 6522 BC Nijmegen",
+  "bronnen": [
+   "https://elexer.nl/",
+   "https://elexer.nl/nl/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "ondernemingsrecht",
+   "zakelijke klanten",
+   "gratis kennismaking",
+   "parkeren"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 31489,
+   "uit": 913
+  },
+  "lijkt_actief": true,
+  "naam": "Elexer Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "De site noemt een 'vrijblijvende kennismaking'. Of die gratis is, staat er niet letterlijk bij. Openingstijden staan niet op de site. De site is ook in het Engels beschikbaar, maar Engelstalige dienstverlening wordt niet uitdrukkelijk genoemd.",
+  "status": "voorstel",
+  "tekst": "Loopt er binnen je onderneming een discussie tussen aandeelhouders of zit je met een zakelijk conflict dat uit de hand dreigt te lopen? Aan de Berg en Dalseweg zit Elexer advocaten, een klein, gespecialiseerd kantoor dat opgericht is door advocaten met ervaring bij grote kantoren, in het bedrijfsleven en in de wetenschap.\n\nZe richten zich op ondernemingen, instellingen en investeerders. Je kunt er terecht voor ondernemingsrecht en vennootschapsrecht, financieel recht, jaarrekeningenrecht en accountantstuchtrecht. Bij een geschil zoeken ze eerst naar een oplossing in overleg, en als het nodig is, gaan ze met je naar de rechter. Je kunt dus rekenen op een nuchtere, persoonlijke aanpak.\n\nWil je kennismaken? Plan dan via de website een vrijblijvend gesprek. Je kunt bij het kantoor makkelijk parkeren.",
+  "website": "https://elexer.nl/",
+  "website_bereikbaar": true
+ },
  "elfferich-administratie-belastingadvies": {
   "adres_op_site": "Porrenhofstraat 96, 6663 SG Lent",
   "bronnen": [
@@ -7327,6 +7688,34 @@
   "status": "voorstel",
   "tekst": "Liever vooruitkijken dan achteraf schrikken van je cijfers? Erik van Hemert werkt al meer dan twintig jaar als financieel en fiscaal adviseur voor ondernemers. Vanuit de Sint Annastraat helpt hij zzp'ers en mkb-bedrijven, maar ook coöperaties, verenigingen en stichtingen.\n\nJe kunt bij hem terecht voor belastingadvies en het invullen van je aangiftes, voor de salarisadministratie en voor boekhouden met hulp van AI. Wil je meer overzicht? Dan kan hij je een financieel dashboard geven of als parttime CFO met je meedenken over groei. Zit je nu nog bij een ander kantoor, dan helpt een overstapservice je bij de wissel.\n\nHeb je een fiscale vraag of wil je eerst eens kennismaken? Bel Erik gewoon op. Vaak heb je dan meteen al een antwoord.",
   "website": "http://www.erik.tax/",
+  "website_bereikbaar": true
+ },
+ "evius-arbeidsrecht-advocaten": {
+  "adres_op_site": "Estel Residence, Barbarossastraat 83, 6522 DK Nijmegen",
+  "bronnen": [
+   "https://www.evius.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "arbeidsrecht",
+   "particulieren",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 24437,
+   "uit": 740
+  },
+  "lijkt_actief": true,
+  "naam": "Evius Arbeidsrecht Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Volgens de site is het bezoekadres Barbarossastraat 83 (Estel Residence), 6522 DK Nijmegen. Bij ons staat Kerkenbos 1063J, dus het adres moet worden bijgewerkt. Er zijn geen openingstijden gevonden. Alleen de homepage is gelezen.",
+  "status": "voorstel",
+  "tekst": "Ruzie over je ontslag, onzeker over je re-integratie na ziekte, of sta je als werkgever voor een reorganisatie? Dan wil je iemand die het arbeidsrecht van binnen en buiten kent. Bij Evius, met advocaat Eva van Otterloo, kun je terecht voor precies dat specialisme. Het kantoor zit in de Estel Residence aan de Barbarossastraat.\n\nDe adviezen zijn helder en to the point. Werkgevers en werknemers kunnen er allebei terecht, met vragen over concurrentiebedingen, arbeidsvoorwaarden, cao's, discriminatie op de werkvloer en medezeggenschap. Al in het eerste gesprek wordt gekeken naar je kansen, de risico's en de beste aanpak. Organisaties kunnen hun HR-team via de Evius Academy ook een in-house training laten volgen.\n\nWil je weten waar je staat? Bel of mail om een eerste gesprek in te plannen.",
+  "website": "http://www.evius.nl/",
   "website_bereikbaar": true
  },
  "ex-nihilo-bv": {
@@ -8073,6 +8462,35 @@
   "website": "https://getuconcerts.nl/",
   "website_bereikbaar": false
  },
+ "giebels-tromp-kuster-advocaten": {
+  "adres_op_site": "Berg en Dalseweg 127, 6522 BE Nijmegen",
+  "bronnen": [
+   "https://gtkadvocaten.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "familierecht en scheiding",
+   "mediation",
+   "gefinancierde rechtshulp",
+   "particulieren"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 22241,
+   "uit": 736
+  },
+  "lijkt_actief": true,
+  "naam": "Giebels, Tromp & Kuster Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staan geen openingstijden. Het kantoor richt zich ook op jeugdrecht en psychiatrisch patiëntenrecht, maar daar is geen passend kenmerk voor. Alleen de homepage gelezen; die bevatte genoeg informatie.",
+  "status": "voorstel",
+  "tekst": "Ga je scheiden, loopt er een procedure over je kinderen of zoek je een manier om een familieconflict zonder rechter op te lossen? Dan kun je terecht bij dit kleine advocatenkantoor aan de Berg en Dalseweg. Sinds 2009 helpen drie advocaten hier mensen op momenten die er echt toe doen.\n\nZe richten zich op familierecht, jeugdrecht, mediation en psychiatrisch patiëntenrecht. Je spreekt direct met je eigen advocaat, en die legt alles uit in gewone taal. Heb je een rechtsbijstandverzekering of kom je in aanmerking voor pro-deohulp? Dan kijken ze samen met jou naar de mogelijkheden.\n\nValt jouw vraag net buiten hun vakgebied? Bel dan toch even: ze kijken of ze je zelf kunnen helpen of verwijzen je door naar een collega. Bellen of mailen is de makkelijkste manier om te beginnen.",
+  "website": "http://www.gtkadvocaten.nl/",
+  "website_bereikbaar": true
+ },
  "giros": {
   "adres_op_site": "Hertogstraat 44, 6511 SC Nijmegen",
   "bronnen": [
@@ -8279,6 +8697,42 @@
   "website": "http://www.goedvolknijmegen.nl",
   "website_bereikbaar": false
  },
+ "goedrecht-advocaten": {
+  "adres_op_site": "Laauwikstraat 8a, 6663 CJ Nijmegen-Lent",
+  "bronnen": [
+   "https://www.goedrechtadvocaten.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "arbeidsrecht",
+   "familierecht en scheiding",
+   "strafrecht",
+   "ondernemingsrecht",
+   "huurrecht",
+   "letselschade",
+   "mediation",
+   "particulieren",
+   "zakelijke klanten",
+   "zzp en mkb",
+   "gratis kennismaking"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 22690,
+   "uit": 778
+  },
+  "lijkt_actief": true,
+  "naam": "Goedrecht Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staat het huisnummer als 8a, bij ons staat 8. Openingstijden worden niet genoemd. Alleen de homepage is gelezen.",
+  "status": "voorstel",
+  "tekst": "Een conflict met je werkgever, een scheiding of een klant die maar niet betaalt? Dan wil je een advocaat die snel schakelt en echt meedenkt. Dat kun je vinden aan de Laauwikstraat in Lent, bij dit kantoor dat zowel ondernemers als particulieren helpt.\n\nMkb'ers kunnen hier terecht voor een vaste huisadvocaat, bijvoorbeeld voor incasso, contracten, ondernemingsstructuren en huur en vastgoed. Ook de scheepvaart en ruimtelijke ordening zijn specialismen. Als particulier kun je aankloppen bij arbeidsconflicten, echtscheiding en alimentatie, letselschade, huurrecht of strafrecht. Ook mediation hoort erbij.\n\nTwijfel je of je een advocaat nodig hebt? Maak dan een afspraak voor het gratis spreekuur: het eerste halfuur kennismaken kost niets. Vul het terugbelformulier in of bel even, dan plannen ze een moment met je in.",
+  "website": "https://www.goedrechtadvocaten.nl/",
+  "website_bereikbaar": true
+ },
  "golestan": {
   "adres_op_site": "Bloemerstraat 90, 6511 EM Nijmegen",
   "bronnen": [
@@ -8455,6 +8909,36 @@
   "website": "http://www.grandcafemoenen.nl/",
   "website_bereikbaar": true
  },
+ "grip-advocaten": {
+  "adres_op_site": "Oranjesingel 2, 6511 NS Nijmegen",
+  "bronnen": [
+   "https://www.gripadvocaten.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "familierecht en scheiding",
+   "erfrecht",
+   "mediation",
+   "particulieren",
+   "gratis kennismaking"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 31423,
+   "uit": 742
+  },
+  "lijkt_actief": true,
+  "naam": "Grip Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Openingstijden staan niet op de homepage. Het kantoor helpt volgens de site soms ook bij vragen uit andere rechtsgebieden, maar zegt niet welke; die hebben we daarom weggelaten.",
+  "status": "voorstel",
+  "tekst": "Ga je scheiden, loopt een omgangsregeling stroef of is er onenigheid over een erfenis? Dan wil je iemand naast je die snapt hoe zwaar dat kan zijn. Dit advocatenkantoor aan de Oranjesingel, vlak bij het centrum, richt zich op familierecht en erfrecht. Denk aan echtscheidingen, alimentatie, boedelverdeling, testamenten en de afwikkeling van een nalatenschap.\n\nZe werken persoonlijk en zoeken eerst naar een oplossing buiten de rechtbank. Advocaat Mark-Jan Germs is ook MfN-gecertificeerd mediator, dus samen tot afspraken komen is hier een serieuze optie. Lukt dat niet, dan staan ze je ook bij in een procedure.\n\nTwijfel je nog? Het eerste oriënterende gesprek is gratis en vrijblijvend. Bel of vul het contactformulier in voor een afspraak, dan hoor je meteen welke mogelijkheden er zijn.",
+  "website": "https://www.gripadvocaten.nl/",
+  "website_bereikbaar": true
+ },
  "groenewoud": {
   "adres_op_site": "Groesbeekseweg 227, 6525 NW Nijmegen",
   "bronnen": [
@@ -8532,6 +9016,36 @@
   "status": "verwijderd",
   "tekst": "",
   "website": "https://eventix.shop/8r42zkmg",
+  "website_bereikbaar": true
+ },
+ "guyot-advocaten": {
+  "adres_op_site": "Guyotstraat 2, 6524 AV Nijmegen",
+  "bronnen": [
+   "https://guyotadvocaten.nl/",
+   "https://guyotadvocaten.nl/diensten/",
+   "https://guyotadvocaten.nl/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "ondernemingsrecht",
+   "mediation",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 43929,
+   "uit": 1115
+  },
+  "lijkt_actief": true,
+  "naam": "Guyot Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staat ook mediation bij arbeidsrecht (David Pijl is MfN-geregistreerd mediator), maar arbeidsrecht lijkt geen eigen praktijkgebied. Ik heb het daarom niet als kenmerk opgenomen. Op de teampagina staat dat één medewerker (Jos Diederen) er niet meer werkt. Er staan geen openingstijden op de site. De tarievenpagina heb ik niet gelezen.",
+  "status": "voorstel",
+  "tekst": "Heb je als ondernemer ruzie met een zakenpartner, twijfel je over je algemene voorwaarden of loopt er iets mis rond een pand of appartementsrecht? In de Guyotstraat in Nijmegen zit een klein advocatenkantoor dat zich richt op ondernemingsrecht, vastgoed en incasso.\n\nHet team helpt je bij het uitonderhandelen en opstellen van contracten, bijvoorbeeld tussen aandeelhouders of met andere bedrijven. Bij een conflict brengen ze je juridische positie helder in kaart en bepalen ze samen met jou de strategie, tot en met een procedure als dat nodig is. Wil je liever niet naar de rechter? De advocaten zijn ook mediator en helpen je dan om er samen met de andere partij uit te komen. Je kunt hier rekenen op persoonlijk contact en korte lijnen.\n\nBel of mail het kantoor om je situatie voor te leggen en samen te kijken wat de volgende stap is.",
+  "website": "http://www.guyotadvocaten.nl/",
   "website_bereikbaar": true
  },
  "hafiza-i": {
@@ -8693,6 +9207,42 @@
   "status": "goedgekeurd",
   "tekst": "Heb je zin in après-ski, maar is de dichtstbijzijnde piste te ver weg? In de Molenstraat, midden in het centrum van Nijmegen, haal je het wintersportgevoel gewoon naar de stad. Het barpersoneel loopt rond in lederhosen en dirndl, het bier komt in flinke pullen en de muziek bestaat uit meezingers waar je niet stil bij blijft staan.\n\nJe komt hier niet voor een rustig biertje in een hoekje. Je komt om te dansen, te hossen en uit volle borst mee te zingen met vrienden. De skihut hoort bij het Drie Gezusters-complex, dus je zit meteen op een plek waar je de hele avond kunt uitgaan.\n\nWil je alvast in de stemming komen? Zet de Spotify-lijst met Heidi's hitjes aan. Kijk daarna op Facebook welke feestavonden eraan komen, trommel je vrienden op en ga naar de Molenstraat.",
   "website": "https://skihutnijmegen.nl/",
+  "website_bereikbaar": true
+ },
+ "hekkelman": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://www.hekkelman.nl/",
+   "https://www.hekkelman.nl/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [
+   {
+    "bewijs": "Meer dan 85 advocaten en notarissen staan dagelijks voor je klaar.",
+    "categorie": "notaris"
+   }
+  ],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "arbeidsrecht",
+   "ondernemingsrecht",
+   "erfrecht",
+   "particulieren",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 77277,
+   "uit": 1654
+  },
+  "lijkt_actief": true,
+  "naam": "Hekkelman",
+  "openingstijden": "",
+  "opmerkingen": "Op de gelezen pagina's (homepage en contactpagina) staat geen adres. Oranjesingel 1 is dus niet gecontroleerd. Op de site staan Advocatuur Nijmegen, Notariaat Nijmegen en Notariaat Arnhem. Er staan geen openingstijden op de site. Familierecht staat op de site alleen als 'Familie- en erfrecht'. Of het kantoor ook scheidingen doet, staat er niet expliciet, dus het kenmerk 'familierecht en scheiding' is niet toegekend.",
+  "status": "voorstel",
+  "tekst": "Heb je een juridische vraag en wil je advies dat je ook echt begrijpt? Bij Hekkelman werken advocaten en notarissen samen. Ze helpen ondernemers, overheden, instellingen en particulieren, met uitleg in gewone taal en advies dat bij jouw situatie past.\n\nHet kantoor bestrijkt veel rechtsgebieden. Je kunt er terecht voor arbeidsrecht, ondernemingsrecht, vastgoedrecht, bestuursrecht, aanbestedingen en faillissementen. Ook voor IT- en privacyrecht, agrarisch recht en familie- en erfrecht kun je bij hen aankloppen. In Nijmegen zitten zowel de advocatuur als het notariaat, dus je kunt hier ook terecht voor notariële zaken.\n\nOp de website kun je een advocaat of notaris kiezen die bij je vraag past. Je kunt je vraag ook meteen via het contactformulier sturen en daarbij aangeven welk kantoor jou het liefst helpt. Liever even bellen? Dat kan ook.",
+  "website": "https://www.hekkelman.nl/",
   "website_bereikbaar": true
  },
  "het-cafe-het-duurzame-warenhuis": {
@@ -9274,6 +9824,34 @@
   "website": "https://www.humphreys.nl/onze-restaurants/humphreys-nijmegen/",
   "website_bereikbaar": true
  },
+ "huurteams-nijmegen": {
+  "adres_op_site": "Groenestraat 294 (BCG-gebouw), Nijmegen",
+  "bronnen": [
+   "https://www.huurteamsnijmegen.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "huurrecht",
+   "particulieren",
+   "Engelstalig"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 20141,
+   "uit": 836
+  },
+  "lijkt_actief": true,
+  "naam": "Huurteams Nijmegen",
+  "openingstijden": "Inloopspreekuur wo 13:00-15:00; telefonisch ma-vr 08:30-12:00",
+  "opmerkingen": "Dit is geen advocatenkantoor, maar een gratis huurteam/juridisch loket voor huurders (Stichting Huurteams Nijmegen), gefinancierd door de gemeenten. Het past bij de categorie juridische loketten. Op de site staan ook pagina's voor 'Verhuurders Advies' en 'Incasso'; die zijn niet gelezen. 'Engelstalig' is gekozen omdat er een Engelse versie van de site is.",
+  "status": "voorstel",
+  "tekst": "Ben je bang dat je te veel huur betaalt, gebeurt er niks met die lekkage of klopt je servicekostenafrekening niet? Dan kun je gratis terecht bij Huurteams Nijmegen. Dit team helpt huurders in Nijmegen, Wijchen en Druten bij conflicten met hun verhuurder, van huurprijschecks en onderhoudsgebreken tot huurcontracten en intimidatie.\n\nZo werkt het: je maakt een afspraak, het team komt anoniem je woning bekijken en je krijgt een schriftelijk advies. Daarna beslis je zelf of je een procedure bij de Huurcommissie wilt beginnen. Als je dat wilt, nemen zij het werk van je over.\n\nLiever eerst even langskomen? Op woensdagmiddag is er een inloopspreekuur in het BCG-gebouw aan de Groenestraat. Op werkdagen kun je ze 's ochtends bellen, of je meldt je aan via het formulier op de site.",
+  "website": "http://www.huurteamsnijmegen.nl/",
+  "website_bereikbaar": true
+ },
  "i-love-sushi": {
   "adres_op_site": "Molenweg 6, 6542 PW Nijmegen",
   "bronnen": [
@@ -9327,6 +9905,35 @@
   "tekst": "",
   "website": "https://ibosaf.nl/",
   "website_bereikbaar": false
+ },
+ "ijzer-advocaten": {
+  "adres_op_site": "Molenveldlaan 43, 6523 RJ Nijmegen",
+  "bronnen": [
+   "https://www.ijzeradvocaten.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "huurrecht",
+   "zakelijke klanten",
+   "avond of weekend",
+   "spoed"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 24759,
+   "uit": 765
+  },
+  "lijkt_actief": true,
+  "naam": "Ijzer Advocaten",
+  "openingstijden": "ma-zo 07:00-22:00 (telefonisch bereikbaar)",
+  "opmerkingen": "De openingstijden gaan over telefonische bereikbaarheid ('Bereikbaar 7 dagen per week van 7:00 tot 22:00 uur'). Niet duidelijk of het kantoor ook particulieren helpt; de focus ligt op vastgoedpartijen, overheid en ondernemers.",
+  "status": "voorstel",
+  "tekst": "Is er gedoe met een huurcontract, een bouwproject of een vergunning van de gemeente? Dan kun je terecht bij IJzer Advocaten aan de Molenveldlaan in Nijmegen. Dit kantoor heeft zich toegelegd op vastgoed en overheid, met onder meer huurrecht, bouwrecht, appartementsrecht, milieurecht en ruimtelijk bestuursrecht.\n\nDe advocaten werken voor uiteenlopende sectoren, van woningcorporaties en overheden tot horeca, retail, bouw en agrarische ondernemers. Ze houden van een nuchtere, persoonlijke aanpak en werken met heldere all-in-tarieven. Handig om te weten: je kunt ze elke dag van de week bellen, van de vroege ochtend tot de avond, ook in het weekend.\n\nWil je weten wat ze voor je kunnen doen? Bel of mail gerust voor een vrijblijvend eerste contact.",
+  "website": "https://www.ijzeradvocaten.nl/",
+  "website_bereikbaar": true
  },
  "il-nano": {
   "adres_op_site": "Berg En Dalseweg 243b, Nijmegen",
@@ -9730,6 +10337,31 @@
   "website": "https://www.jadda.nl/",
   "website_bereikbaar": true
  },
+ "jan-advocatuur": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://jan-advocatuur.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17914,
+   "uit": 365
+  },
+  "lijkt_actief": false,
+  "naam": "Jan* Advocatuur",
+  "openingstijden": "",
+  "opmerkingen": "Op de website staat 'JAN* Advocatuur: bestaat niet meer'. Bezoekers worden doorverwezen naar Janssen Rechtshulp (https://janssenrechtshulp.nl). Het advies is deze vermelding te verwijderen of te vervangen door Janssen Rechtshulp, nadat is nagegaan of dat kantoor in Nijmegen zit.",
+  "reden": "automatisch: gestopt of verhuisd volgens de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://jan-advocatuur.nl/",
+  "website_bereikbaar": true
+ },
  "jan-klaassen-eetcafe": {
   "adres_op_site": "Hazenkampseweg 126, 6531 NN Nijmegen",
   "bronnen": [
@@ -9796,6 +10428,31 @@
   "tekst": "Zin om midden in de stad neer te strijken, of je nu wilt lunchen, borrelen of uitgebreid dineren? Op de Grote Markt vind je bij JAN een plek waar dat van 's ochtends tot laat allemaal kan.\n\nOverdag schuif je aan voor lunch of brunch, of gewoon voor een stuk taart. Later op de dag gaat het om borrelhapjes, cocktails en een goed glas wijn. 's Avonds bestel je shared dining-gerechten om met je tafel te delen, maar je kunt ook gewoon iets voor jezelf kiezen. Vegetarisch eten staat ook op de kaart. Bij mooi weer zit je op het terras, met de drukte van de markt om je heen.\n\nKom je met een groep vrienden? Reserveer dan je tafel via de website. JAN is elke dag vanaf tien uur open, en op vrijdag en zaterdag tot één uur 's nachts.",
   "website": "https://www.jannijmegen.nl",
   "website_bereikbaar": true
+ },
+ "jan-zandberg-advocaat": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.zandbergadvocaten.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17612,
+   "uit": 404
+  },
+  "lijkt_actief": true,
+  "naam": "Jan Zandberg, Advocaat",
+  "openingstijden": "",
+  "opmerkingen": "Website http://www.zandbergadvocaten.nl/ kon niet worden opgehaald (toegang geweigerd: url_not_allowed). Er is daarom geen tekst geschreven en zijn geen kenmerken bepaald. Of het kantoor nog actief is, kon niet worden gecontroleerd. De categorie advocatenkantoor is gebaseerd op de bedrijfsnaam. Graag handmatig controleren.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.zandbergadvocaten.nl/",
+  "website_bereikbaar": false
  },
  "johnny-s-burger-co": {
   "adres_op_site": "Smetiusstraat 12, 6511 ES Nijmegen",
@@ -10013,6 +10670,34 @@
   "website": "https://kaniwa.foodticket.nl/foodticket/cgi/bestel.cgi",
   "website_bereikbaar": false
  },
+ "kantoor-kruijsen": {
+  "adres_op_site": "Weezenhof 2816, 6536 HR Nijmegen",
+  "bronnen": [
+   "http://www.kantoorkruijsen.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "huurrecht",
+   "particulieren",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 19112,
+   "uit": 751
+  },
+  "lijkt_actief": true,
+  "naam": "Kantoor Kruijsen",
+  "openingstijden": "",
+  "opmerkingen": "Eenmanspraktijk; het adres Weezenhof 2816 ligt in een woonwijk en lijkt een thuisadres. Bemiddeling noemt ze vooral als vrijwillige buurtbemiddelaar, daarom is mediation niet als kenmerk gekozen. Geen openingstijden op de site.",
+  "status": "voorstel",
+  "tekst": "Zit je vast in een huurconflict en voelt het als een doolhof? Dan kun je terecht bij Heleen Kruijsen. Vanuit haar kantoor aan de Weezenhof in Nijmegen-Dukenburg doet ze sinds 2000 niets anders dan advocatenwerk, met huurrecht als specialisme: woonruimte en bedrijfsruimte.\n\nOf het nu gaat om een tijdelijk huurcontract, een huurprijs die niet meer klopt, een pop-up store, franchise of studentenkamers: ze geeft advies dat je begrijpt en staat je bij als je toch naar de rechter moet. Vooraf legt ze uit welke kansen en risico's er zijn, hoe lang het duurt en wat het kost. Komen jullie er samen nog uit? Dan denkt ze ook mee over bemiddeling. Daarnaast verzorgt ze in overleg cursussen voor bedrijven.\n\nMail of bel gerust voor een eerste gesprek over jouw situatie.",
+  "website": "http://www.kantoorkruijsen.nl/",
+  "website_bereikbaar": true
+ },
  "karaoke-cafe-van-deelen": {
   "adres_op_site": "Bloemerstraat 2, 6511 EJ Nijmegen",
   "bronnen": [
@@ -10071,6 +10756,34 @@
   "status": "goedgekeurd",
   "tekst": "Zin in een lunch met een spinnende kat op schoot? In de Van Welderenstraat, vlak bij het centrum van Nijmegen, deel je je tafel met acht katten. Nori klimt over de touwbrug, Karel apporteert propjes papier en de jonge broertjes Beer en Loki ontdekken hun nieuwe thuis.\n\nJe komt er voor koffie, huisgemaakt gebak of een lunch, bijvoorbeeld een toast met brie of soep. Naast de vaste kaart staan er regelmatig seizoensgerechten op het menu. Voor een gewoon bezoekje hoef je niet te reserveren, je loopt gewoon binnen.\n\nWil je een high tea? Reserveer die dan minstens een dag van tevoren via WhatsApp of e-mail. Let op: bij hittedagen gaat de zaak eerder dicht, zodat de katten rust krijgen.",
   "website": "https://kattencafebalthazar.nl",
+  "website_bereikbaar": true
+ },
+ "keijser-van-der-velden-advocaten": {
+  "adres_op_site": "Groesbeekseweg 69, 6524 CR Nijmegen",
+  "bronnen": [
+   "https://www.keijservandervelden.nl/nl/",
+   "https://www.keijservandervelden.nl/nl/financieel-recht",
+   "https://www.keijservandervelden.nl/nl/contact"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 33479,
+   "uit": 1024
+  },
+  "lijkt_actief": true,
+  "naam": "Keijser Van Der Velden Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Het kantoor is sterk gespecialiseerd in financieel recht en pensioenrecht en richt zich vooral op financiële ondernemingen en andere advocaten, niet op particulieren. Er is geen passend kenmerk voor dit specialisme. Het kantoor geeft ook cursussen, maar dat lijkt geen wezenlijk deel van het aanbod, dus er is geen extra categorie opleiding-en-training toegevoegd.",
+  "status": "voorstel",
+  "tekst": "Werk je bij een bank, een beleggingsfonds, een pensioenuitvoerder of een cryptoplatform, en zit je met een lastige vraag over regels en toezicht? Dan kun je terecht bij dit gespecialiseerde advocatenkantoor aan de Groesbeekseweg in Nijmegen. Het richt zich volledig op financieel recht en pensioenvraagstukken.\n\nDe advocaten adviseren partijen op de financiële markten. Ze procederen ook bij geschillen, bijvoorbeeld over zorgplicht, governance, compliance of verplichte deelneming in een pensioenfonds, en ze hebben ervaring met collectieve acties voor beleggers. Andere advocaten en adviseurs kloppen hier ook aan wanneer een zaak raakt aan het financiële recht. Daarnaast geeft het team cursussen waarmee advocaten en notarissen opleidingspunten kunnen halen.\n\nWil je een zaak bespreken? Neem dan telefonisch of per mail contact op met het kantoor.",
+  "website": "http://www.keijservandervelden.nl/",
   "website_bereikbaar": true
  },
  "keldercafe-nijmegen": {
@@ -10395,6 +11108,33 @@
   "website": "http://www.debijstand.nl/",
   "website_bereikbaar": false
  },
+ "kollervision": {
+  "adres_op_site": "Berg en Dalseweg 127, 6522 BE Nijmegen",
+  "bronnen": [
+   "https://www.kollervision.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "zakelijke klanten",
+   "mediation"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 20233,
+   "uit": 772
+  },
+  "lijkt_actief": true,
+  "naam": "Kollervision",
+  "openingstijden": "",
+  "opmerkingen": "Geen advocatenkantoor in strikte zin: het is juridisch advies, mediation en compliance-advies (regelgeving voor medische hulpmiddelen) voor MedTech-bedrijven en ziekenhuizen. Eventueel past zakelijk-overig beter. Er staat alleen een mobiel nummer op de site; misschien is het een thuisadres. Alleen de homepage is gelezen.",
+  "status": "voorstel",
+  "tekst": "Werk je bij een MedTech-bedrijf of ziekenhuis en raak je verstrikt in de regels voor medische hulpmiddelen, diagnostica of cosmetica? Dan is KollerVision aan de Berg en Dalseweg een goed adres om aan te kloppen.\n\nHet bureau combineert gezondheidsrecht met bedrijfskunde en kwaliteitszorg. Je krijgt hulp bij het opzetten en bijhouden van kwaliteitssystemen en technische dossiers, bij het voldoen aan Nederlandse en Europese wetgeving en ISO-normen, en bij het traject naar een CE-markering. Dat geldt voor startende bedrijven en voor gevestigde spelers. Ook bij juridische vragen en mediation in de zorg kun je hier terecht, met praktisch advies in begrijpelijke taal.\n\nHeb je een zorgjuridische kwestie of een product dat de markt op moet? Bel of mail gerust voor een eerste gesprek.",
+  "website": "http://www.kollervision.nl/",
+  "website_bereikbaar": true
+ },
  "komagene-nijmegen": {
   "adres_op_site": "",
   "bronnen": [
@@ -10476,6 +11216,34 @@
   "status": "goedgekeurd",
   "tekst": "Zin in een avond waarop alles om vuur draait? In de Smetiusstraat, midden in het centrum, staat bij Kool een houtoven die de hele avond brandt. Hier schuif je aan voor een borrel met knapperige flatbreads uit het vuur, of je bestelt een tafel vol kleine gerechten om samen te delen.\n\nDe keuken is seizoensgebonden en werkt met lokale leveranciers, en de kaart kan elke week wisselen. Denk aan oesters en mosselen uit de oven, groenten met verrassende kruiden en aan het eind nog warme kaas uit de oven. Er staan ook veel vegetarische gerechten op de kaart. De sfeer is relaxed: je kunt net zo goed even een hapje aan de bar eten als uitgebreid gaan dineren.\n\nKool is open van donderdag tot en met zondag vanaf half zes. Bel of mail even als je zeker wilt zijn van een plek.",
   "website": "https://www.koolnijmegen.nl",
+  "website_bereikbaar": true
+ },
+ "kop-advocaten": {
+  "adres_op_site": "Molenveldlaan 158, 6523 RN Nijmegen",
+  "bronnen": [
+   "https://www.kopadvocaten.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "arbeidsrecht",
+   "particulieren",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 21327,
+   "uit": 723
+  },
+  "lijkt_actief": true,
+  "naam": "Kop Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "De site heeft een Engelstalige versie, maar zegt niet expliciet dat er Engelstalig advies wordt gegeven. Daarom staat het kenmerk 'Engelstalig' er niet bij. Er staan geen openingstijden op de homepage.",
+  "status": "voorstel",
+  "tekst": "Ben je net op staande voet ontslagen, of heb je als werkgever een lastig conflict met een medewerker? Dan is het fijn als je kunt sparren met iemand die het arbeidsrecht van binnen en buiten kent. Dat kan bij Kop Advocaten, een team arbeidsrechtadvocaten aan de Molenveldlaan in Nijmegen.\n\nHet kantoor staat zowel werknemers als werkgevers bij. Denk aan ontslag wegens disfunctioneren, reorganisaties, ontslagvergoedingen, een vaststellingsovereenkomst, ziekte en re-integratie of een verstoorde arbeidsrelatie. Ze beloven eerlijk advies en een aanpak die bij jouw situatie past, zonder het stijve imago van de klassieke advocaat.\n\nZit je met een vraag over je baan of je personeel? Bel het kantoor of plan via de website een gesprek in, dan hoor je snel wat je mogelijkheden zijn.",
+  "website": "https://www.kopadvocaten.nl/",
   "website_bereikbaar": true
  },
  "kracht-coaching-personal-trainer-nijmegen": {
@@ -10715,6 +11483,31 @@
   "website": "https://www.landgoedbrakkesteyn.nl/wp-content/uploads/2026/06/Zomerdeals-2026-Landgoed-Brakkesteyn.pdf?pid=14934",
   "website_bereikbaar": true
  },
+ "law24-b-v": {
+  "adres_op_site": "Piet Heinkade 55, 1019 GM Amsterdam",
+  "bronnen": [
+   "http://www.law24.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17753,
+   "uit": 429
+  },
+  "lijkt_actief": false,
+  "naam": "Law24 B.v.",
+  "openingstijden": "",
+  "opmerkingen": "De website is alleen een placeholder met de tekst 'Website binnenkort beschikbaar'. De paginatitel is 'Medivise | Medisch Advies'. Er staat alleen een adres in Amsterdam (Piet Heinkade 55) en niet het adres aan de Oranjesingel in Nijmegen. Het bedrijf lijkt verhuisd te zijn of niet meer actief in Nijmegen. Er is te weinig informatie voor een tekst, dus controleer of het bedrijf in de gids moet blijven.",
+  "reden": "automatisch: gestopt of verhuisd volgens de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.law24.nl/",
+  "website_bereikbaar": true
+ },
  "le-cafe": {
   "adres_op_site": "Grotestraat 6, 6511VD Nijmegen",
   "bronnen": [
@@ -10837,6 +11630,31 @@
   "status": "goedgekeurd",
   "tekst": "Zin in een goed glas wijn zonder gedoe? Aan de Bloemerstraat, midden in het centrum, kun je bij Lebowski aan de bar schuiven of met je vrienden een tafel bezetten. Een huiswijn zul je hier niet vinden. Wel een flinke selectie open wijnen die per seizoen wisselt, vaak van kleinere wijnhuizen of minder bekende druiven. Twijfel je wat je moet kiezen? Dan denkt het personeel graag met je mee.\n\nOverdag is het er rustig, 's avonds wordt het een stuk levendiger. Het ruime terras is verwarmd en beschut, dus ook in de winter kun je buiten zitten. Geef je een feestje of afstudeerborrel? Dan kun je de kelder of een extra ruimte huren.\n\nReserveren voor een tafel kan niet, dus loop gewoon binnen. Met een grotere groep stuur je ze vooraf een mailtje.",
   "website": "http://www.bar-lebowski.nl/",
+  "website_bereikbaar": true
+ },
+ "legaltube": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://legaltube.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "geen-bedrijf",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 28650,
+   "uit": 449
+  },
+  "lijkt_actief": true,
+  "naam": "Legaltube",
+  "openingstijden": "",
+  "opmerkingen": "LegalTube is geen advocatenkantoor. Het is een online mediakanaal met nieuws, video's, awards en een jaargids voor de advocatuur, gericht op juridische professionals (uitgever lijkt Capital Media Services). Ik zie geen balie of dienstverlening voor bezoekers in Nijmegen, dus het past niet in de categorie advocaten. Het adres Staringstraat 11 kwam ik niet tegen op de homepage.",
+  "reden": "automatisch: geen bedrijf voor de gids (holding, postadres, school of loket) (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://LegalTube.nl/",
   "website_bereikbaar": true
  },
  "lent-plaza": {
@@ -11020,6 +11838,31 @@
   "status": "voorstel",
   "tekst": "Heb je een eigen zaak en raak je het overzicht in je cijfers kwijt? Op de Energieweg, op het bedrijventerrein in Nijmegen-West, zit de Nijmeegse vestiging van Lineo Accountants & Adviseurs. Het kantoor heeft ook vestigingen in Uden en Den Bosch en richt zich op zzp'ers en mkb-bedrijven.\n\nJe kunt er terecht voor je boekhouding, jaarrekening en belastingaangifte, en ook voor salarisadministratie en HR. Daarnaast denken ze mee over fiscale en juridische vragen, financiële planning en estate planning, het waarderen van je bedrijf en het regelen van een opvolger. Ze werken veel met persoonlijk contact en stemmen hun aanpak af op jouw bedrijf.\n\nAlles begint met een kennismakingsgesprek waarin ze kijken naar jouw situatie en plannen. Bel de vestiging in Nijmegen of stuur een bericht via de website om een afspraak te maken.",
   "website": "https://www.lineoacc.nl/",
+  "website_bereikbaar": true
+ },
+ "lins-advocatuur-mr-linda-joosten": {
+  "adres_op_site": "",
+  "bronnen": [
+   "http://www.linsadvocatuur.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 17990,
+   "uit": 400
+  },
+  "lijkt_actief": true,
+  "naam": "Lins Advocatuur - mr. Linda Joosten",
+  "openingstijden": "",
+  "opmerkingen": "De website laadt, maar toont alleen een 'under construction'-pagina ('Sorry, we zijn bezig met werkzaamheden op de site'). Er staat geen informatie over aanbod, rechtsgebieden, adres of openingstijden op, dus er is geen tekst geschreven. Of het kantoor nog actief is, valt hieruit niet op te maken. Het adres Jonkerbosplein 52 is niet gecontroleerd. Kijk later nog eens.",
+  "reden": "automatisch: te weinig informatie op de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.linsadvocatuur.nl/",
   "website_bereikbaar": true
  },
  "little-india": {
@@ -11985,6 +12828,31 @@
   "status": "verwijderd",
   "tekst": "",
   "website": "http://www.meetandribs.nl/",
+  "website_bereikbaar": true
+ },
+ "meier-schneiter-rechtsanwalte": {
+  "adres_op_site": "Zentralstrasse 120, Postfach 347, 5430 Wettingen 1 (Zwitserland)",
+  "bronnen": [
+   "https://www.msraw.ch/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "geen-bedrijf",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 20392,
+   "uit": 454
+  },
+  "lijkt_actief": true,
+  "naam": "Meier Schneiter Rechtsanwälte",
+  "openingstijden": "",
+  "opmerkingen": "De website hoort bij een Zwitsers advocatenkantoor en mediationbureau in Wettingen/Baden, Zwitserland (Zwitsers telefoonnummer, Anwaltsregister). Nergens op de site staat iets over Nijmegen of over de Molenveldlaan 84. De koppeling met dit adres lijkt een fout in onze gegevens. Daarom heb ik geen tekst geschreven en geen-bedrijf gekozen. Controleer of er op de Molenveldlaan wel een ander bedrijf zit.",
+  "reden": "automatisch: geen bedrijf voor de gids (holding, postadres, school of loket) (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.msraw.ch/",
   "website_bereikbaar": true
  },
  "meneer-otis": {
@@ -13814,6 +14682,38 @@
   "website": "http://www.pekingnijmegen.nl/",
   "website_bereikbaar": false
  },
+ "permiso": {
+  "adres_op_site": "Postadres: Vleeshouwerstraat 3, 6511 VC Nijmegen; bezoekadres (alleen op afspraak): De Bouwkamp 1, 6576 JX Ooij",
+  "bronnen": [
+   "https://www.permiso.nl/",
+   "https://permiso.nl/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [
+   {
+    "bewijs": "We concentreren ons op dit moment daarom op het ontwikkelen en aanbieden van passende cursussen voor iedereen die met vergunningen en omgevingsplannen te maken heeft.",
+    "categorie": "opleiding-en-training"
+   }
+  ],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 45048,
+   "uit": 1141
+  },
+  "lijkt_actief": true,
+  "naam": "Permiso",
+  "openingstijden": "",
+  "opmerkingen": "Volgens de site is Vleeshouwerstraat 3 in Nijmegen alleen een postadres. Het bezoekadres is De Bouwkamp 1 in Ooij en je kunt er alleen op afspraak langs. Het is geen advocatenkantoor in de gewone zin, maar een juridisch adviesbureau voor vergunningen en omgevingsrecht met een eigen cursusaanbod. Daarom heb ik 'opleiding-en-training' als extra categorie toegevoegd. Als hoofdcategorie zou die ook kunnen. De eigenaar is jurist. Een titel als advocaat wordt niet genoemd. Openingstijden staan niet op de site.",
+  "status": "voorstel",
+  "tekst": "Ga je bouwen of verbouwen en weet je niet of je een vergunning nodig hebt? Of welke regels er dan gelden? Permiso is een expertisecentrum voor vergunningen en omgevingsrecht. Jurist Jola van Dijk heeft het opgezet en ze vindt het belangrijk om het vak in begrijpelijke taal uit te leggen.\n\nJe kunt op twee manieren bij Permiso terecht. Wil je het zelf leren? Volg dan een cursus over vergunningenmanagement of de Omgevingswet, of laat een incompany-training op maat maken voor je team. Wil je het liever uit handen geven? Begin dan met een inventarisatie van de vergunningen die je project nodig heeft. Daarna kan Permiso de hele aanvraag voor je regelen, inclusief het overleg met de gemeente.\n\nPermiso werkt vooral voor aannemers, opdrachtgevers en overheden. Bellen of appen mag, of vraag via de site of ze je terugbellen.",
+  "website": "https://www.permiso.nl/",
+  "website_bereikbaar": true
+ },
  "perplex": {
   "adres_op_site": "",
   "bronnen": [
@@ -14515,6 +15415,34 @@
   "website": "http://www.plesanteethuys.nl",
   "website_bereikbaar": false
  },
+ "poelmann-van-den-broek-advocaten": {
+  "adres_op_site": "Wijchenseweg 10, 6537 TL Nijmegen",
+  "bronnen": [
+   "http://www.poelmannvandenbroek.nl"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "ondernemingsrecht",
+   "arbeidsrecht",
+   "zakelijke klanten"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 24304,
+   "uit": 807
+  },
+  "lijkt_actief": true,
+  "naam": "Poelmann van den Broek Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Het adres op de site (Wijchenseweg 10, 6537 TL Nijmegen) wijkt af van ons adres (Sint Canisiussingel 19f). Waarschijnlijk is het kantoor verhuisd, dus graag het adres bijwerken. Het kantoor heeft ook een vestiging in Amsterdam. De klanten zijn alleen ondernemers. Ik heb alleen de homepage gelezen.",
+  "status": "voorstel",
+  "tekst": "Heb je als ondernemer een conflict met een zakenpartner, of wil je juist vooruitkijken bij een overname, een bouwproject of een IT-contract? Dan kun je terecht bij dit advocatenkantoor aan de Wijchenseweg, dat zich volledig richt op bedrijven.\n\nHet team werkt op heel wat rechtsgebieden. Denk aan omgevingsrecht en de Omgevingswet, energie en netaansluitingen, AI en smart buildings, arbeidsrecht en herstructureringen. Het kantoor probeert eerst samen met jou tot een oplossing te komen, en als het toch op een procedure uitdraait, sta je er niet alleen voor. Wil je je eigen kennis bijspijkeren? Kijk dan eens bij de academy met cursussen en events, of luister naar de podcast.\n\nHeb je een vraag? Laat je terugbellen: een advocaat die in jouw onderwerp gespecialiseerd is, belt je dezelfde werkdag nog terug.",
+  "website": "http://www.poelmannvandenbroek.nl",
+  "website_bereikbaar": true
+ },
  "poke-perfect": {
   "adres_op_site": "In de Betouwstraat 28, 6511 GD Nijmegen",
   "bronnen": [
@@ -14609,6 +15537,72 @@
   "tekst": "Zin om een band te ontdekken voordat de rest van Nijmegen hem kent? Dan zit je goed in Merleyn, het kleinere zusje van Doornroosje, midden in het centrum aan de Hertogstraat. Het is een intieme zaal, waar je de muzikanten bijna kunt aanraken.\n\nHet programma is gevarieerd en vaak verrassend. De ene avond staat er garagepunk of zware progmetal, de andere avond rauwe country, Spaanstalige electropop of indierock uit Australië. Daarnaast zijn er clubavonden zoals een indiedisco en queer feesten, waar je tot diep in de nacht kunt dansen.\n\nGa je vaak? Vraag dan naar de Merleynpas, waarmee je een jaar lang naar alle concerten in Merleyn kunt. Kijk in de agenda op de site van Doornroosje wat er binnenkort speelt, en koop op tijd je kaartje, want populaire shows raken uitverkocht.",
   "website": "https://www.doornroosje.nl/merleyn",
   "website_bereikbaar": true
+ },
+ "privacy-direct": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://privacydirect.nl/",
+   "https://privacydirect.nl/over-ons/",
+   "https://privacydirect.nl/over-ons/maatschappelijk-verantwoord-ondernemen/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [
+   {
+    "bewijs": "Privacy workshops In-house privacy trainingen",
+    "categorie": "opleiding-en-training"
+   }
+  ],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "zakelijk-overig",
+  "kenmerken": [
+   "zakelijke klanten",
+   "gratis kennismaking"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 41440,
+   "uit": 1213
+  },
+  "lijkt_actief": true,
+  "naam": "Privacy Direct",
+  "niet_in": {
+   "advocatenkantoor": "automatisch: hoort bij Overige zakelijke diensten (scan 23-10-2026)"
+  },
+  "openingstijden": "",
+  "opmerkingen": "Geen advocatenkantoor maar een privacy- en compliance-adviesbureau (AVG, FG as a service, Wwft); daarom zakelijk-overig gekozen. Adres staat niet in de aangeleverde tekst, dus Wijchenseweg 116 niet kunnen controleren. Nieuwsberichten op de site lijken uit 2020-2021, copyright 2023.",
+  "status": "voorstel",
+  "tekst": "Werk je met persoonsgegevens en vraag je je af of je organisatie de AVG echt op orde heeft? Dan kun je aankloppen bij Privacy Direct, een privacyadviesbureau uit Nijmegen dat sinds 2018 organisaties helpt om praktisch met privacyregels om te gaan.\n\nJe kunt er terecht voor juridisch advies over de AVG, een privacy-nulmeting, een Data Protection Impact Assessment of hulp bij cyberbeveiliging. Heb je een Functionaris voor de Gegevensbescherming nodig, dan kun je er een extern inhuren of tijdelijke ondersteuning regelen. Daarnaast begeleidt het bureau kantoren zoals notarissen en makelaars bij Wwft-compliance en verzorgt het trainingen en workshops, ook in-house.\n\nBenieuwd wat ze voor jouw organisatie kunnen doen? Via het contactformulier op de site plan je een vrijblijvend gesprek in.",
+  "website": "http://www.privacydirect.nl/",
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
+ },
+ "pro-deo-advocaat-nijmegen": {
+  "adres_op_site": "Geen adres ingevuld; contactpagina vermeldt 'Correspondentieadres - Geen Bezoek'",
+  "bronnen": [
+   "https://prodeoadvocaatnijmegen.com/",
+   "https://prodeoadvocaatnijmegen.com/over-ons/",
+   "https://prodeoadvocaatnijmegen.com/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "geen-bedrijf",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 28216,
+   "uit": 1003
+  },
+  "lijkt_actief": true,
+  "naam": "Pro Deo Advocaat Nijmegen",
+  "openingstijden": "",
+  "opmerkingen": "Dit is geen advocatenkantoor maar een doorverwijswebsite (leadgeneratie) van het landelijke EuroJurist Platform. De site zegt zelf: 'De website is geen advocaten- of juristenkantoor en verleent zelf geen juridische bijstand' en 'Het adres dat op deze website wordt vermeld, is uitsluitend een postadres en geen bezoeklocatie.' Het adres Graafseweg 274 is dus geen bezoeklocatie; er zit geen advocaat in Nijmegen met een balie. De site richt zich ook op heel Nederland. Daarom geen-bedrijf. Het 024-nummer verwijst naar een centrale intakebalie (ma-vr 08:00-18:00, za-zo 09:00-17:00). Ter overweging: de naam 'Pro Deo Advocaat Nijmegen' kan bezoekers misleiden; opname in de gids als advocaat lijkt ongewenst.",
+  "reden": "automatisch: geen bedrijf voor de gids (holding, postadres, school of loket) (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "https://prodeoadvocaatnijmegen.com/",
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
  },
  "proefdruk-nijmegen": {
   "adres_op_site": "",
@@ -14886,6 +15880,72 @@
   "tekst": "",
   "website": "http://www.ru.nl/refter",
   "website_bereikbaar": false
+ },
+ "rechtswinkel": {
+  "adres_op_site": "Daalsehof 2, 6521 GT Nijmegen (ma en wo); Cipresstraat 154, 6423 HR Nijmegen (za)",
+  "bronnen": [
+   "https://rechtswinkelnijmegen.nl/",
+   "https://rechtswinkelnijmegen.nl/openingstijden/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "huurrecht",
+   "arbeidsrecht",
+   "familierecht en scheiding",
+   "erfrecht",
+   "particulieren",
+   "avond of weekend",
+   "parkeren"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 35466,
+   "uit": 1081
+  },
+  "lijkt_actief": true,
+  "naam": "Rechtswinkel",
+  "openingstijden": "ma 19:30-20:30, wo 19:30-20:30 (Daalsehof 2); za 10:30-12:00 (Cipresstraat 154)",
+  "opmerkingen": "Gratis inloopspreekuur van rechtenstudenten, vrijwilligersorganisatie (stichting). Er zijn twee locaties: het zaterdagspreekuur is aan de Cipresstraat 154. Telefonisch zijn ze op dit moment niet bereikbaar, contact gaat via algemeen@rechtswinkelnijmegen.nl. Parkeren is betaald in de zijstraten. Erfrecht is afgeleid uit 'vragen over het testament van uw ouders'.",
+  "status": "voorstel",
+  "tekst": "Zit je met een huurbaas die het lekkende dakraam maar niet laat repareren, of twijfel je over een vaststellingsovereenkomst van je werkgever? Bij de Rechtswinkel Nijmegen-Oost kun je gratis advies krijgen van rechtenstudenten van de Radboud Universiteit.\n\nZe denken mee over allerlei vragen: een conflict met de gemeente, huur, werk, familiezaken zoals een testament of ouderschapsplan, en gedoe over aankopen, contracten of schade. Ze kunnen een brief voor je opstellen, een lastig juridisch begrip uitleggen of je doorverwijzen als dat nodig is. Zaken worden in het team samen besproken.\n\nEen afspraak maken hoeft niet: loop gewoon binnen op maandag- of woensdagavond aan de Daalsehof, of op zaterdagochtend aan de Cipresstraat. Neem wel je brieven, contracten en e-mails mee.",
+  "website": "https://rechtswinkelnijmegen.nl/",
+  "website_bereikbaar": true
+ },
+ "rechtswinkel-nijmegen-oost": {
+  "adres_op_site": "Maandag en woensdag: Daalsehof 2, 6521 GT Nijmegen; zaterdag: Cipresstraat 154, 6423 HR Nijmegen",
+  "bronnen": [
+   "https://rechtswinkelnijmegen.nl/",
+   "https://rechtswinkelnijmegen.nl/openingstijden/",
+   "https://rechtswinkelnijmegen.nl/werkwijze/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "particulieren",
+   "huurrecht",
+   "arbeidsrecht",
+   "familierecht en scheiding",
+   "avond of weekend",
+   "gratis kennismaking"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 42375,
+   "uit": 1361
+  },
+  "lijkt_actief": true,
+  "naam": "Rechtswinkel Nijmegen-oost",
+  "openingstijden": "Vrije inloop: ma 19:30-20:30 en wo 19:30-20:30 (Daalsehof 2), za 10:30-12:00 (Cipresstraat 154)",
+  "opmerkingen": "Er zijn twee spreekuurlocaties: Daalsehof 2 (ma/wo-avond) en Cipresstraat 154 (za-ochtend). Op de site staat bij de Cipresstraat postcode 6423 HR, waarschijnlijk een tikfout voor 6523 HR. Het advies is helemaal gratis. Daarom is 'gratis kennismaking' gekozen, maar dat kenmerk dekt de lading niet helemaal. De telefoon is volgens de site op dit moment niet bereikbaar, dus contact gaat per e-mail. Het gaat om een vrijwilligersorganisatie (stichting).",
+  "status": "voorstel",
+  "tekst": "Zit je met een huurbaas die het lekkende dakraam maar niet repareert, of snap je niets van een brief van de gemeente? Bij de Rechtswinkel in Nijmegen-Oost krijg je gratis juridisch advies van vrijwilligers. Ze helpen bij vragen over huur, werk, familiezaken, contracten, schade en conflicten met de overheid.\n\nJe zit tegenover twee medewerkers, die naar je verhaal luisteren en samen met jou je papieren doornemen. Lukt het niet om meteen een antwoord te geven, dan krijg je kort daarna een schriftelijk advies. Ze kunnen ook een brief voor je opstellen of je doorverwijzen naar een advocaat, mediator of notaris.\n\nEen afspraak maken hoeft niet: je loopt gewoon binnen tijdens het spreekuur. Op maandag- en woensdagavond is dat aan de Daalsehof, op zaterdagochtend aan de Cipresstraat. Neem wel je contracten, brieven en e-mails mee.",
+  "website": "http://www.rechtswinkelnijmegen.nl/",
+  "website_bereikbaar": true
  },
  "remers-accountancy": {
   "adres_op_site": "Joubertstraat 5, 6543 NP Nijmegen",
@@ -15535,6 +16595,41 @@
   "website": "https://www.roc-nijmegen.nl/het-cafe",
   "website_bereikbaar": false
  },
+ "roelofs-drubbel-advocatenkantoor": {
+  "adres_op_site": "",
+  "bronnen": [
+   "https://www.roelofsendrubbel.nl/",
+   "https://www.roelofsendrubbel.nl/contact/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "particulieren",
+   "zakelijke klanten",
+   "gefinancierde rechtshulp",
+   "arbeidsrecht",
+   "familierecht en scheiding",
+   "huurrecht",
+   "letselschade",
+   "strafrecht"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 33881,
+   "uit": 838
+  },
+  "lijkt_actief": false,
+  "naam": "Roelofs & Drubbel Advocatenkantoor",
+  "openingstijden": "",
+  "opmerkingen": "Het lijkt erop dat het kantoor niet meer in Nijmegen zit. Alleen in de meta-description van de homepage staat nog een vestiging in Nijmegen. De zichtbare tekst noemt alleen Almere, Lelystad en Voorburg. Op de contactpagina staan ook alleen adressen in Almere (Transistorstraat 31), Lelystad (Pekstraat 2) en Voorburg (Appelgaarde 47). Sint Annastraat 57 en Nijmegen komen er niet in voor. Daarom heb ik geen tekst geschreven. Advies: nagaan of de vermelding verwijderd moet worden. Het kantoor zelf is nog actief en noemt deze rechtsgebieden: gesubsidieerde rechtsbijstand, arbeidsrecht, bestuursrecht, belastingrecht, familierecht, huurrecht, intellectuele eigendom, letselschade, overeenkomsten en strafrecht.",
+  "reden": "automatisch: gestopt of verhuisd volgens de eigen website (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.roelofsendrubbel.nl/",
+  "website_bereikbaar": true
+ },
  "rolluik": {
   "adres_op_site": "Tweede Walstraat 120, 6511 LW Nijmegen",
   "bronnen": [
@@ -15741,6 +16836,14 @@
   "website": "http://www.rpdfiscaal.nl/",
   "website_bereikbaar": false
  },
+ "rutgers-advocatuur": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsfZfaLPohPHtNWSFs9'}",
+  "gescand": "2026-10-23",
+  "naam": "Rutgers Advocatuur",
+  "status": "fout",
+  "website": "http://www.rutgers-advocatuur.nl/"
+ },
  "ruygh": {
   "adres_op_site": "",
   "bronnen": [],
@@ -15763,6 +16866,76 @@
   "tekst": "",
   "website": "http://barruygh.nl/",
   "website_bereikbaar": false
+ },
+ "sahin-en-stoetzer-advocaten-laauwikstraat": {
+  "adres_op_site": "Theo Dobbestraat 191-193, 6663 RJ Lent",
+  "bronnen": [
+   "https://www.sensadvocaten.com/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "strafrecht",
+   "arbeidsrecht",
+   "familierecht en scheiding",
+   "huurrecht",
+   "letselschade",
+   "vreemdelingenrecht",
+   "gefinancierde rechtshulp",
+   "particulieren",
+   "zakelijke klanten",
+   "online of op afstand"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 42190,
+   "uit": 982
+  },
+  "lijkt_actief": true,
+  "naam": "Sahin en Stoetzer Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Het adres op de site (Theo Dobbestraat 191-193, 6663 RJ Lent) is anders dan ons adres (Laauwikstraat 6, 6663 CJ Lent). Waarschijnlijk is het kantoor verhuisd, dus graag het adres bijwerken. 'Online of op afstand' is gekozen op basis van de dienst 'Online scheiden'. Er staan geen openingstijden op de site.",
+  "status": "voorstel",
+  "tekst": "Zit je met een ontslag, een scheiding of een strafzaak, of loopt je verblijfsvergunning vast? Dan wil je iemand naast je die weet hoe het werkt. In Lent, net over de Waal, zit een advocatenkantoor waar een flink team advocaten op meerdere rechtsgebieden werkt.\n\nJe kunt er terecht voor strafrecht, arbeidsrecht, huurrecht, letselschade, personen- en familierecht en asiel- en vreemdelingenrecht, waaronder het Turks associatierecht. Wil je scheiden, dan kan dat ook online. Het kantoor helpt vooral particulieren, maar ook ondernemers zijn welkom. Heb je weinig te besteden? Dan kun je er ook terecht met gefinancierde rechtshulp (pro deo).\n\nWil je een afspraak maken? Bel of mail het kantoor, vul het contactformulier op de site in of loop gewoon even binnen aan de Theo Dobbestraat.",
+  "website": "http://www.sensadvocaten.com/",
+  "website_bereikbaar": true
+ },
+ "sahin-en-stoetzer-advocaten-theo-dobbestraat": {
+  "adres_op_site": "Theo Dobbestraat 191-193, 6663 RJ Lent",
+  "bronnen": [
+   "https://www.sensadvocaten.com/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "strafrecht",
+   "arbeidsrecht",
+   "familierecht en scheiding",
+   "huurrecht",
+   "letselschade",
+   "vreemdelingenrecht",
+   "gefinancierde rechtshulp",
+   "particulieren",
+   "zakelijke klanten",
+   "online of op afstand"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 42192,
+   "uit": 906
+  },
+  "lijkt_actief": true,
+  "naam": "Sahin En Stoetzer Advocaten",
+  "openingstijden": "",
+  "opmerkingen": "Op de site staat huisnummer 191-193. Er staan geen openingstijden op de site. 'Online of op afstand' is gekozen omdat de site 'Online scheiden' noemt.",
+  "status": "voorstel",
+  "tekst": "Zit je met een ontslag, een scheiding of een strafzaak en weet je niet waar je moet beginnen? Aan de Theo Dobbestraat in Lent, net over de Waal, vind je een advocatenkantoor waar meerdere advocaten samen veel rechtsgebieden behandelen.\n\nHet team richt zich vooral op particulieren, maar ook als ondernemer kun je er terecht. Je kunt er onder meer aankloppen voor strafrecht, arbeidsrecht, huurrecht, letselschade, echtscheiding en personen- en familierecht. Ook bij asiel- en vreemdelingenrecht, waaronder het Turks associatierecht, helpen ze je verder. Heb je weinig te besteden? Het kantoor werkt ook op basis van gefinancierde rechtshulp (pro deo). Scheiden kan bovendien online.\n\nWil je je zaak bespreken? Bel of mail het kantoor, vul het contactformulier in of loop gewoon even binnen om een afspraak te maken.",
+  "website": "http://www.sensadvocaten.com/",
+  "website_bereikbaar": true
  },
  "saison": {
   "adres_op_site": "Wijchenseweg 174, 6538 SX Nijmegen",
@@ -15917,6 +17090,35 @@
   "website": "https://www.saraylounge.nl/",
   "website_bereikbaar": true
  },
+ "schade-24": {
+  "adres_op_site": "Lange Dreef 11, 4131NJ Vianen",
+  "bronnen": [
+   "https://schade24.com/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "letselschade",
+   "particulieren",
+   "gratis kennismaking",
+   "aan huis of op locatie"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 23079,
+   "uit": 955
+  },
+  "lijkt_actief": true,
+  "naam": "Schade 24",
+  "openingstijden": "",
+  "opmerkingen": "Op de website staat alleen een adres in Vianen (Lange Dreef 11), niet het adres Oranjesingel 28 in Nijmegen. Het telefoonnummer begint wel met 024. Het bedrijf is misschien verhuisd of heeft geen balie meer in Nijmegen. Controleer dit voordat het in de gids komt. Het gaat om een schadebureau met juristen, niet uitdrukkelijk om een advocatenkantoor. Openingstijden staan niet op de site.",
+  "status": "voorstel",
+  "tekst": "Heb je een ongeluk gehad, ben je slachtoffer van een medische fout of heeft de storm je dak beschadigd? Dan zit je niet te wachten op gedoe met aansprakelijkheid, formulieren en discussies met verzekeraars. Schade24 neemt dat werk van je over.\n\nDe juristen van dit schadebureau helpen je een vergoeding te krijgen bij letselschade, bedrijfsongevallen, medische fouten, stormschade, materiële schade en vertraagde vluchten. Je betaalt daar zelf niets voor. Na je melding volgt een adviesgesprek op kantoor of, als dat beter uitkomt, bij jou op locatie. Daarna stellen ze de tegenpartij aansprakelijk en zorgen ze dat het geld bij je terechtkomt.\n\nWil je je schade melden? Dat kan via het online formulier, per mail of telefonisch op 024 6793842. Binnen 24 uur nemen ze contact met je op.",
+  "website": "http://www.schade24.com/",
+  "website_bereikbaar": true
+ },
  "schaning-zzp-mkb": {
   "adres_op_site": "Laauwikstraat 8, 6663 CJ Lent",
   "bronnen": [
@@ -15947,6 +17149,36 @@
   "status": "voorstel",
   "tekst": "Zit je als ondernemer met een stapel bonnetjes of een belastingaangifte waar je geen zin in hebt? In Lent, in Nijmegen-Noord, zit een klein administratie- en adviesbureau dat het je zo makkelijk mogelijk wil maken. Eigenaar Sem is gediplomeerd belastingconsulent en werkt samen met administratief medewerker Mary.\n\nJe kunt er terecht voor aangiften van alle soorten belastingen, ook als particulier, en voor een papierloze boekhouding met handige apps die facturen en bankmutaties grotendeels automatisch verwerken. Ze denken ook mee over je ondernemingsvorm, bezwaarprocedures, zakelijk autorijden en inkomensbescherming. Daarnaast helpen ze nabestaanden bij het afwikkelen van een erfenis.\n\nHeldere taal en persoonlijk advies staan voorop. Bel even om een kennismakingsgesprek af te spreken.",
   "website": "https://www.schaning.eu/",
+  "website_bereikbaar": true
+ },
+ "scheidingspraktijk-apart-verder": {
+  "adres_op_site": "Kerkenbos 1037, 6546 BB Nijmegen",
+  "bronnen": [
+   "https://apartverder.nl/"
+  ],
+  "categorie_scan": "advocatenkantoor",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "advocatenkantoor",
+  "kenmerken": [
+   "familierecht en scheiding",
+   "mediation",
+   "gefinancierde rechtshulp",
+   "particulieren",
+   "gratis kennismaking"
+  ],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 24186,
+   "uit": 1080
+  },
+  "lijkt_actief": true,
+  "naam": "Scheidingspraktijk Apart Verder",
+  "openingstijden": "",
+  "opmerkingen": "Het adres op de site (Kerkenbos 1037, 6546 BB Nijmegen) is anders dan het adres bij ons (Sint Canisiussingel 19H). Waarschijnlijk zijn ze verhuisd binnen Nijmegen, dus het adres moet worden bijgewerkt. Het is een scheidingsbemiddelaar en mediator, geen advocatenkantoor. Volgens de site werken ze samen met een vast advocatenkantoor. Ik heb het onder advocatenkantoor gezet, omdat juridisch adviseurs volgens de instructie in deze categorie horen. Op de site staan geen openingstijden. Er staat wel dat ze 'een van de meest complete echtscheidingspraktijken van Nederland' zijn, maar die bewering heb ik niet overgenomen.",
+  "status": "voorstel",
+  "tekst": "Ga je uit elkaar en weet je niet waar je moet beginnen met het huis, de kinderen en de financiën? Dan kun je terecht bij deze scheidingspraktijk in Nijmegen. Als gecertificeerd MfN-familiemediator en scheidingsbemiddelaar helpen ze jou en je ex-partner om samen afspraken te maken, neutraal en met oog voor de emoties die erbij komen kijken.\n\nZe begeleiden je bij elke stap: van het berekenen van kinder- en partneralimentatie tot het verdelen van vermogen en pensioen, en de vraag of je in je woning kunt blijven. Alle afspraken komen in een ouderschapsplan en een convenant, en de gerechtelijke procedure regelen ze ook voor je. Komt je inkomen in aanmerking voor gesubsidieerde rechtsbijstand, dan kan dat ook.\n\nTwijfel je nog? Vraag dan een gratis adviesgesprek aan via de site of bel even.",
+  "website": "http://www.apartverder.nl",
   "website_bereikbaar": true
  },
  "schouten-fiscaal": {
@@ -15982,6 +17214,14 @@
   "website": "https://www.schoutenfiscaal.nl/",
   "website_bereikbaar": true,
   "zelf_gelezen": true
+ },
+ "schroder-law": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKsgrWdHUS1WhzChm6zV'}",
+  "gescand": "2026-10-23",
+  "naam": "Schroder.law",
+  "status": "fout",
+  "website": "https://schroder.law/"
  },
  "science-cafe-nijmegen": {
   "adres_op_site": "The Shamrock, Smetiusstr. 17, Nijmegen",
@@ -16470,6 +17710,14 @@
   "tekst": "",
   "website": "https://cafesjorsensjimmie.nl/",
   "website_bereikbaar": false
+ },
+ "smeenk-law": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshSzYNvhiNZdk7C22d'}",
+  "gescand": "2026-10-23",
+  "naam": "Smeenk Law",
+  "status": "fout",
+  "website": "http://www.smeenk-law.nl/"
  },
  "smokehouse-de-kronenburger": {
   "adres_op_site": "",
@@ -16981,6 +18229,22 @@
   "tekst": "Zin om de hele dag op één plek te blijven hangen? In de Stikke Hezelstraat kun je bij Steven terecht voor ontbijt, lunch, diner en een borrel. Het is een mix van café, bistro en bar, met een terras waar de zon volop op staat.\n\nOverdag schuif je aan voor een ontbijtje of een lunch, en 's avonds is er een aparte dinerkaart. Daarna kun je blijven hangen met iets van de drank- en borrelkaart of een glas van de wijnkaart. Ga je met een flinke groep, bijvoorbeeld voor een verjaardag of reünie? Dan kun je hier lunchen, borrelen of dineren met maximaal 80 personen.\n\nSteven is elke dag vanaf 10 uur open. Kom je met de auto, dan kun je parkeren aan de Heselaan of in de garage bij de Eiermarkt. Voor een groep vul je het formulier op de site in, dan nemen ze contact met je op.",
   "website": "http://www.stevennijmegen.nl/",
   "website_bereikbaar": true
+ },
+ "stichting-bwn": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshUJAe7UGBQvu4fnYm'}",
+  "gescand": "2026-10-23",
+  "naam": "Stichting Bwn",
+  "status": "fout",
+  "website": "https://stichtingbwn.nl/"
+ },
+ "stichting-wetswinkel-nijmegen": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshV4JtTEubkvLn3GoZ'}",
+  "gescand": "2026-10-23",
+  "naam": "Stichting Wetswinkel Nijmegen",
+  "status": "fout",
+  "website": "http://www.wetswinkelnijmegen.nl/"
  },
  "stoom-oersoep": {
   "adres_op_site": "",
@@ -18519,6 +19783,14 @@
   "website": "https://www.tiffin-nijmegen.nl/",
   "website_bereikbaar": true
  },
+ "tijs-advocatuur": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshVMRhDHSpa2EEfHur'}",
+  "gescand": "2026-10-23",
+  "naam": "Tijs. Advocatuur",
+  "status": "fout",
+  "website": "https://tijsadvocatuur.nl/"
+ },
  "toko-oost": {
   "adres_op_site": "",
   "bronnen": [
@@ -18756,6 +20028,14 @@
   "website": "http://tuthaifood.nl/",
   "website_bereikbaar": true
  },
+ "tummers-advocatuur": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshVrwEZxxJBrHZh93C'}",
+  "gescand": "2026-10-23",
+  "naam": "Tummers Advocatuur",
+  "status": "fout",
+  "website": "http://www.tummers-advocatuur.nl/"
+ },
  "ultimo": {
   "adres_op_site": "Lage Markt 47, 6511 VK Nijmegen",
   "bronnen": [
@@ -18848,6 +20128,22 @@
   "tekst": "",
   "website": "https://www.underconstructionnijmegen.nl",
   "website_bereikbaar": false
+ },
+ "unidos-bewindvoering": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshWGVABU9qNXFoNWBb'}",
+  "gescand": "2026-10-23",
+  "naam": "Unidos Bewindvoering",
+  "status": "fout",
+  "website": "http://unidosbewindvoering.nl/"
+ },
+ "unidos-next": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshWfJr9LNN5XGWdvNv'}",
+  "gescand": "2026-10-23",
+  "naam": "Unidos Next",
+  "status": "fout",
+  "website": "https://unidosnext.nl/"
  },
  "universiteitscafe-piecken": {
   "adres_op_site": "",
@@ -18942,6 +20238,14 @@
   "tekst": "Ben je in de buurt van het Radboudumc en zoek je een plek om rustig te lunchen of uitgebreid te dineren? Op vijf minuten lopen van het ziekenhuis, aan de Van Peltlaan, vind je Valdin. De kaart is internationaal: van clubsandwiches, poke bowls en salades bij de lunch tot gyoza's, Aziatische steak tartaar en carpaccio 's avonds. Er is ook een kinderkaart, en alles kun je ook meenemen.\n\nOp mooie dagen zit je op het terras, en bij de borrel kies je uit wijnen en speciaalbieren, waaronder bieren uit de regio. Kom je met een grote groep? Dan is er een aparte borrelruimte met arrangementen. Wie wil blijven slapen, kan terecht in het boutiquehotel boven het restaurant.\n\nValdin is alle zeven dagen van de week open. Reserveer een tafel online of bel even.",
   "website": "https://www.valdin.nl",
   "website_bereikbaar": true
+ },
+ "van-arkel-van-den-boom-advocaten": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshX3NtcKzCConzBoeu'}",
+  "gescand": "2026-10-23",
+  "naam": "Van Arkel & Van Den Boom Advocaten",
+  "status": "fout",
+  "website": "http://www.ab-advocaten.nl"
  },
  "van-bergen-ondernemerszaken": {
   "adres_op_site": "Waldeck Pyrmontsingel 77, 6524 BA Nijmegen",
@@ -19102,6 +20406,14 @@
   "website": "https://www.vdv-administratie.nl/",
   "website_bereikbaar": true
  },
+ "van-den-assem-advocatuur": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshX8q6xtFbmM9H8vSQ'}",
+  "gescand": "2026-10-23",
+  "naam": "Van Den Assem Advocatuur",
+  "status": "fout",
+  "website": "https://www.vda-advocatuur.nl/"
+ },
  "van-hilst-koffie-en-thee-moenenstraat": {
   "adres_op_site": "Brouwerijstraat 7D, 4356 AL Oostkapelle (alleen afhalen op afspraak; kantoor op Brouwerijstraat 7A, geen bezoek)",
   "bronnen": [
@@ -19155,6 +20467,46 @@
   "tekst": "",
   "website": "http://www.vanhilst.com/",
   "website_bereikbaar": true
+ },
+ "van-niftrik-advocatuur": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshXUfHXwXrzQCbohoQ'}",
+  "gescand": "2026-10-23",
+  "naam": "Van Niftrik Advocatuur",
+  "status": "fout",
+  "website": "https://www.vanniftrikadvocatuur.nl/"
+ },
+ "van-schie-advocaten": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshXmXiVvL9esNb1ZSj'}",
+  "gescand": "2026-10-23",
+  "naam": "Van Schie Advocaten",
+  "status": "fout",
+  "website": "http://www.vanschieadvocaten.nl/"
+ },
+ "van-swaaij-cassatie-consultancy": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshXwT1ndRhDyEMs23t'}",
+  "gescand": "2026-10-23",
+  "naam": "Van Swaaij Cassatie & Consultancy",
+  "status": "fout",
+  "website": "http://www.vscc.nl/"
+ },
+ "van-vliet-advocaten": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshYHH1BRkJ7ECvZQYU'}",
+  "gescand": "2026-10-23",
+  "naam": "Van Vliet Advocaten",
+  "status": "fout",
+  "website": "http://www.vanvlietadvocaten.nl/"
+ },
+ "van-woerkom-bouwrecht": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshYUwZQjuibNT8Bm8D'}",
+  "gescand": "2026-10-23",
+  "naam": "Van Woerkom Bouwrecht",
+  "status": "fout",
+  "website": "http://www.vanwoerkom-bouwrecht.nl/"
  },
  "vandaag-accountancy-en-advies": {
   "adres_op_site": "St. Annastraat 61, 6524 EH Nijmegen",
@@ -19258,6 +20610,14 @@
   "website": "https://www.veggieindia.nl/",
   "website_bereikbaar": true
  },
+ "verder-arbeidsrecht": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshYhpsyH3BNuiW1JGs'}",
+  "gescand": "2026-10-23",
+  "naam": "Verder Arbeidsrecht",
+  "status": "fout",
+  "website": "http://www.verder-arbeidsrecht.nl/"
+ },
  "verdoorn-adviesgroep-b-v": {
   "adres_op_site": "Kerkenbos 1079d, 6546 BB Nijmegen",
   "bronnen": [
@@ -19294,6 +20654,14 @@
   "website": "https://verdoornadvies.nl/",
   "website_bereikbaar": true
  },
+ "vermeulen-advocaten": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshZ7PvKToCHviL3iGi'}",
+  "gescand": "2026-10-23",
+  "naam": "Vermeulen Advocaten",
+  "status": "fout",
+  "website": "http://www.vermeulenadvocaten.nl/"
+ },
  "versfabriek": {
   "adres_op_site": "De Biezen 1, 6541 BN Nijmegen",
   "bronnen": [
@@ -19324,6 +20692,22 @@
   "tekst": "Heb je je ooit afgevraagd wat er met al dat koffiedik uit de Nijmeegse horeca gebeurt? Bij Versfabriek groeien er oesterzwammen op. Midden in de stad haalt deze kwekerij koffiedrab op bij partners in en rond Nijmegen. Onder begeleiding van een bioloog kweken ze daar in een week of zes verse zwammen, die via een korte keten naar restaurants, cateraars en hogescholen gaan.\n\nJe kunt er zelf ook langs. Elke derde zaterdag van de maand is er een workshop waarin je leert hoe je je eigen oesterzwammen kweekt, en er zijn rondleidingen achter de schermen. Dat werkt ook goed als bedrijfsuitje. Wil je liever thuis koken met de verse zwammen of de veganistische paddenstoelensnacks proberen? Die bestel je online.\n\nNeem contact op om een workshop of rondleiding te boeken.",
   "website": "http://www.versfabriek.nl/",
   "website_bereikbaar": true
+ },
+ "verweij-advocaten-bijleveldsingel": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshZJZ9LRpxTiU4xB6R'}",
+  "gescand": "2026-10-23",
+  "naam": "Verweij Advocaten",
+  "status": "fout",
+  "website": "http://www.verweijadvocaten.nl"
+ },
+ "verweij-advocaten-keizer-karelplein": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshZRkFQ3zUq6cakXh2'}",
+  "gescand": "2026-10-23",
+  "naam": "Verweij Advocaten",
+  "status": "fout",
+  "website": "http://www.verweijadvocaten.nl/"
  },
  "vesters": {
   "adres_op_site": "Groesbeeksedwarsweg 307, 6521 DK Nijmegen",
@@ -19485,6 +20869,14 @@
   "tekst": "",
   "website": "http://www.plaats1.com/",
   "website_bereikbaar": true
+ },
+ "vrouwenrechtswinkel-nijmegen": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshZaB16mvx2UwAUkbt'}",
+  "gescand": "2026-10-23",
+  "naam": "Vrouwenrechtswinkel Nijmegen",
+  "status": "fout",
+  "website": "https://vrouwenrechtswinkelnijmegen.nl/nl/home-page/"
  },
  "vurrukkulluk": {
   "adres_op_site": "Heyendaalseweg 243, 6525 SH Nijmegen",
@@ -19694,6 +21086,22 @@
   "tekst": "Zin in een burger die net wat meer is dan een broodje met vlees? Dan zit je goed in de Hertogstraat, in het centrum van Nijmegen. Wally doet maar één ding: burgers, en dat doen ze met aandacht. Het vlees is biologisch, de vegetarische burgers maken ze zelf naar eigen recept en de briochebroodjes komen uit hun eigen bakkerij.\n\nDaarnaast staan er friet, salades, milkshakes, zelfgemaakte limonade en eigen speciaalbiertjes op de kaart. Elk seizoen bedenken de chefs nieuwe gerechten met lokale producten, zoals een burger met Groesbeekse pompoen en friet met atjar en seroendeng.\n\nKom langs voor een snelle hap of neem juist de tijd en laat de tafel volzetten. Wil je liever thuis eten? Je kunt ook bellen om te bestellen. Je bent elke avond welkom, en van vrijdag tot en met zondag al vanaf drie uur.",
   "website": "https://www.restaurantwally.nl",
   "website_bereikbaar": true
+ },
+ "waterdicht-hollandiaweg": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshZvW7TF14Edr4kPWt'}",
+  "gescand": "2026-10-23",
+  "naam": "Waterdicht",
+  "status": "fout",
+  "website": "https://waterdicht.nl/"
+ },
+ "waterdicht-sint-annastraat": {
+  "categorie_scan": "advocatenkantoor",
+  "fout": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgKshaCssZv9WELhdoucv'}",
+  "gescand": "2026-10-23",
+  "naam": "Waterdicht",
+  "status": "fout",
+  "website": "http://www.waterdicht.nl/"
  },
  "wav-e-studios-nijmegen": {
   "adres_op_site": "",
