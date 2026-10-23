@@ -69,7 +69,7 @@
   },
   "openingstijden": "",
   "opmerkingen": "Het adres wijkt af. Op de site staat Lange Hezelstraat 85, 6511 CD Nijmegen, maar dat adres komt uit Instagram-berichten van rond 2022 die op de homepage staan. Bij ons staat Hoeckelumstraat 19. Ik weet niet of de zaak verhuisd is of dat ons adres bijvoorbeeld een opslag of postadres is. De homepage gaat vooral over de webshop. Ik heb nergens openingstijden of een menukaart gevonden. Daarom heb ik koffiezaak gekozen in plaats van lunchroom: de site noemt koffie met kardemom en zoetigheid zoals baklava, maar geen lunchgerechten. De contactpagina en de pagina Over ons kon ik niet lezen, omdat de limiet voor het ophalen van pagina's bereikt was. Het keukentype Syrisch heb ik zelf afgeleid uit 'Proef en ontmoet Syrië'. Het woord 'keuken' komt niet letterlijk op de site voor, dus mogelijk moet dit veld leeg blijven.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om Syrië te proeven zonder je fiets uit Nijmegen te halen? Bij Aangenaam Aleppo draait alles om koffie met kardemom. Die specialiteit komt uit Aleppo en heeft een warme, kruidige smaak. Uit de berichten van de zaak blijkt dat je er ook terechtkunt voor baklava, nougat en ander Syrisch lekkers.\n\nHet bedrijf bestaat sinds 2018 en wil Nijmegenaren laten kennismaken met de cultuur en de ambachtelijke producten van Aleppo. In het assortiment vind je onder meer gemalen koffie, thee, olijfolie, granaatappelmelasse en de bekende Aleppo-zeep van olijfolie. Ook cadeaupakketten zijn een goede keuze als je iemand iets bijzonders wilt geven.\n\nKom langs voor een kop kardemomkoffie en vraag gerust naar het verhaal achter de producten. Je kunt ook vanuit huis bestellen via de webshop.",
   "website": "https://www.aangenaamaleppo.nl/",
   "website_bereikbaar": true
@@ -714,7 +714,7 @@
   "naam": "Bar 2",
   "openingstijden": "ma-zo 20:00-04:00",
   "opmerkingen": "De postcode op de site is 6511 HC, bij ons staat 6511 HB. De site spreekt zichzelf tegen: in de tekst staat 'zes dagen per week geopend', maar in de tabel met openingstijden en bovenaan de homepage staat 'elke dag vanaf 20:00'. Er staat ook een ticketpagina op de site, maar die hebben we niet gelezen. Misschien zijn er dus evenementen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Heb je zin om laat op de avond nog even door te gaan in de Molenstraat? Bij Bar 2 kun je elke avond vanaf acht uur terecht, en de deur blijft open tot diep in de nacht. Het is een hippe kroeg met een eigen sfeer, waar je met vrienden een drankje doet en waar je vaak ook gewoon kunt dansen.\n\nDe zaak is ontstaan uit een vriendinnenproject: zes vriendinnen stonden jarenlang tijdens de Vierdaagsefeesten in de Molenstraat met een buitenbar, 'bar nummer 2'. In november 2018 werd dat hun eigen vaste kroeg.\n\nKijk vooraf even naar het weekprogramma op de site voor de vaste drankacties per avond, en zoek ze op via Facebook of Instagram. Spreek af met je vrienden en sluit je avond in de binnenstad hier af.",
   "website": "http://www.bar2.nl/",
   "website_bereikbaar": true
@@ -748,7 +748,7 @@
   },
   "openingstijden": "wo-zo vanaf 17:00",
   "opmerkingen": "De site toont de kaart alleen als afbeeldingen (food/snacks), dus de keuken en de omvang van de dinerkaart zijn niet te bepalen. Daarom staat de hoofdcategorie op cafe en niet op restaurant; graag controleren. De site meldt dat het pand beperkt rolstoeltoegankelijk is en geen mindervalidentoilet heeft, dus het kenmerk rolstoeltoegankelijk is niet gekozen. De site zelf toont veel PHP-foutmeldingen ('Deprecated'), maar de inhoud is wel leesbaar.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om je avond rustig te beginnen met een goed drankje en iets lekkers erbij? Dan zit je goed bij Bar Cali in de Priemstraat, midden in het centrum van Nijmegen. Hier draait het om koele drankjes en goed eten, van een hapje bij de borrel tot een complete maaltijd.\n\nBar Cali is van woensdag tot en met zondag vanaf 17.00 uur open. Liever thuis eten? Er is ook een menu om af te halen. Bel vanaf half vier je bestelling door, dan staat die vanaf vijf uur voor je klaar. Vanaf september is er weer elke maand een pubquiz.\n\nWil je zeker zijn van een plek? Reserveer telefonisch of loop gewoon even binnen.",
   "website": "https://bar-cali.nl/",
   "website_bereikbaar": true
@@ -779,7 +779,7 @@
   "naam": "Bar Concorde",
   "openingstijden": "ma gesloten, di-do 17:30-01:00, vr 17:30-02:00, za 15:30-02:00, zo 18:30-00:00",
   "opmerkingen": "Volgens de site is Bar Concorde nog niet open ('staat ons iconische toestel nog even in de hangar', 'Binnenkort stijgt Concorde officieel op'). De bar zit binnen Nightingale Karaokebar. De openingstijden zijn die van Nightingale Karaokebar, niet per se van de bar zelf. Het kenmerk 'groepen' is afgeleid uit de privé-karaokekamers; dat staat er niet letterlijk zo. De homepage kon niet direct worden opgehaald.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om de avond te beginnen met een cocktail voordat je de microfoon pakt? In Nightingale Karaokebar aan de 1e Walstraat, midden in het centrum, komt Bar Concorde: een bar met een vliegtuigthema, waar proosten voelt als instappen voor een vlucht.\n\nStraks kun je er terecht voor cocktails, wijn die met zorg is uitgekozen en goed bier. Het is een fijne plek om op te warmen voor een karaokesessie in een van de vijf privékamers, of om na afloop nog even na te praten.\n\nLet wel op: de bar wordt nog afgebouwd en is nog niet officieel open. Houd de website of de socials van Nightingale in de gaten, en reserveer alvast een karaokekamer voor je volgende avondje uit.",
   "website": "https://nightingalekaraokebar.nl/bar-concorde",
   "website_bereikbaar": true
@@ -812,7 +812,7 @@
   "naam": "Bar Glitch",
   "openingstijden": "wo-vr 19:00-01:00, za 13:30-01:30, zo 13:30-19:00, of op afspraak/reservering",
   "opmerkingen": "Zondag: in de tekst staat 'tot het rustig wordt', in het overzicht staat 19:00. Ik heb alleen de homepage gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een cocktail die gewoon klopt? Op de Grotestraat 5, midden in het centrum, schudden ze bij Bar Glitch klassiekers zoals een Pornstar Martini of Piña Colada volgens het originele recept. Daarnaast staan er speciaalbieren, wijnen en bubbels op de kaart, met borrelhapjes om erbij te bestellen. De ruimte is knus en eigenzinnig, met kunst aan de muur.\n\nWil je zelf leren shaken? Met een groep van 6 tot 50 mensen boek je een cocktailworkshop van anderhalf à twee uur. Je kunt de bar ook afhuren voor een verjaardag, bedrijfsborrel of kerstborrel met maximaal 80 gasten.\n\nGlitch is open van woensdag tot en met zondag, in het weekend al vanaf de middag. Reserveer een tafel via de site en proost op een avond in de binnenstad.",
   "website": "https://barglitch.nl/",
   "website_bereikbaar": true
@@ -896,7 +896,7 @@
   "naam": "Bar Socio",
   "openingstijden": "",
   "opmerkingen": "De site is in opbouw ('We werken aan onze nieuwe website') en vermeldt geen openingstijden. Onderaan de contactpagina staat een tekst over online casino's met een link; dat lijkt spam of een gehackte site. Geef dit door aan het bedrijf. 'Groepen' is gebaseerd op 'Grote groep, mail ons dan?'. Kenmerken zoals een terras worden op de site niet genoemd. Van de menukaarten in pdf is alleen de foodkaart gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om na het werk wat te drinken, met een plankje kaas erbij? In de Van Welderenstraat, vlak bij het centrum, vind je deze kaas- en borrelbar. Hier draait alles om samen aan tafel zitten, wat bites delen en je glas nog eens laten bijvullen.\n\nNaast de kaaskaart en een aparte wijnkaart staan er genoeg borrelhapjes op het menu: bruschetta's met burrata of taleggio uit de oven, gefrituurde olijven, Padrón-pepers, charcuterie en bitterballen, die er ook in een vegaversie zijn. Wil je liever geen alcohol? Er is ook een drankenkaart met allerlei andere drankjes.\n\nReserveren kan niet, dus loop gewoon binnen. Kom je met een grote groep, stuur dan van tevoren even een mailtje.",
   "website": "https://www.barsocio.nl/",
   "website_bereikbaar": true
@@ -929,7 +929,7 @@
   "naam": "Barrika Foodbar",
   "openingstijden": "ma gesloten/op afspraak, di 16:00-22:00, wo-do 16:00-01:00, vr-za 15:00-02:00, zo 16:00-22:00",
   "opmerkingen": "De site noemt zich zowel eetcafé als foodbar, met een dinerkaart. Restaurant als hoofdcategorie kan dus ook. De menukaart heb ik niet zelf gelezen, dus 'Internationaal' als keuken is een inschatting. Op de homepage staan een pubquiz (op een flyer) en combideals met Laserquest Nijmegen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om na het winkelen in de binnenstad meteen door te borrelen, en blijf je daarna gewoon hangen voor het eten? Dan zit je goed in de Van Welderenstraat, op een paar minuten lopen van het station. Bij deze foodbar hoor je Caribische klanken, en de middag gaat er zonder dat je het merkt over in de avond.\n\nOp de kaart staan onder meer smash burgers, kaasfondue en een vegetarische rendang. In het weekend gaan de deuren tot laat open, en het kan zomaar gebeuren dat je met je vrienden op de bar staat mee te zingen. Nieuw is de tapcorner: daar heb je met je groep je eigen plek en tap je zelf je fust leeg.\n\nJe kunt gewoon binnenlopen, maar reserveren mag ook, per telefoon of mail. Wil je iets vieren met je familie of collega's? Bel even, dan denken ze met je mee.",
   "website": "https://www.barrika.nl/",
   "website_bereikbaar": true
@@ -964,7 +964,7 @@
   },
   "openingstijden": "",
   "opmerkingen": "Geen lunchroom: het is een (club)café/bar dat 's avonds opent; categorie aangepast naar cafe. Openingstijden zijn tegenstrijdig: homepage zegt ma-do vanaf 19:00 en vr-zo vanaf 17:00, contactpagina zegt zo-vr vanaf 19:00 en za vanaf 17:00, tot de laatste gast vertrekt. Daarom leeg gelaten. Sommige events (LouLou) zijn 21+. Er is een pagina 'Groepen', maar die is niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een avond uit in het centrum zonder meteen de hele nacht in te plannen? In de Betouwstraat vind je Bas, het vroegere Bascafé dat sinds maart 2025 in een flink vernieuwd jasje zit. Het is nu een club café waar muziek en goed gemixte drankjes centraal staan.\n\nAan de bar bestel je cocktails, mixdrankjes of een speciaalbiertje. Doordeweeks hangt er een vertrouwde kroegsfeer met bekende meezingers en acties, in het weekend gaat het tempo omhoog en draait LouLou tech- en housetracks tot laat. Op mooie zomeravonden kun je ook buiten op het terras zitten.\n\nKom je met de fiets? Die zet je in de stalling aan de Bisschop Hamerstraat, en dan loop je zo naar binnen. Kijk vooraf even in de weekagenda wat er die avond op het programma staat.",
   "website": "http://www.basnijmegen.nl/",
   "website_bereikbaar": true,
@@ -1736,7 +1736,7 @@
   },
   "openingstijden": "ma-vr 09:00-17:00 (branderij)",
   "opmerkingen": "Op Het Loog 6 zit de branderij met webshop, niet een lunchroom. Daarom staat de categorie op koffiezaak en niet op lunch. Ik heb niet kunnen nagaan of je bij de branderij zelf koffie kunt kopen of drinken. De cafés zitten op andere adressen: Lange Hezelstraat 58, twee locaties bij het Radboudumc (Geert Grooteplein Noord 15 en 28) en Heyendaalseweg 141. Die cafés kunnen beter elk een eigen vermelding krijgen. Het WhatsApp-nummer op de site (+31 97010205821) ziet er vreemd uit.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zet je thuis graag zelf een goede kop koffie? Op Het Loog in Nijmegen-Noord zit de branderij van Blommers Coffee Roasters. Hier worden specialty koffiebonen gebrand, zowel voor filterkoffie als voor espresso, en er zijn ook decaf en proefpakketten. Daarmee ontdek je makkelijk welke smaak jij lekker vindt.\n\nNaast bonen kun je bij Blommers terecht voor alles wat je nodig hebt om koffie te zetten, van malers en waterkokers tot espressomachines. Horecazaken en kantoren kunnen hier ook koffie en apparatuur regelen.\n\nWil je liever meteen een kop proeven? Blommers heeft ook eigen cafés, onder meer aan de Lange Hezelstraat in het centrum. De branderij is op werkdagen overdag bereikbaar. Bestel je bonen online of neem eerst contact op voor advies.",
   "website": "https://www.blommers.coffee/nl/",
   "website_bereikbaar": true
@@ -2257,7 +2257,7 @@
   "naam": "Buskens Nijmegen",
   "openingstijden": "Bar: ma gesloten, di-do 16:00-00:00, vr-zo 12:00-00:00; keuken: di-do 16:00-22:00, vr-zo 12:00-22:00",
   "opmerkingen": "De site noemt zichzelf 'Wijnbar van het jaar 2024' (Star Wine List); dat staat bewust niet in de tekst. Er is een volledige dinerkaart, dus ook restaurant zou kunnen. Over een terras staat niets op de site.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goed glas wijn in een pand vol Nijmeegse verhalen? Aan de Berg en Dalseweg zit wijnbar Buskens, in een rijksmonument dat in 1910 als café werd geopend. Vroeger schoven hier schrijvers en muzikanten aan, nu kom je er voor een borrel, een lunch of een avond eten.\n\nDe wijnkaart verandert steeds, met veel flessen van lokale importeurs. Wil je echt gaan proeven? Kies dan een high wine met een paar proefglazen en bites, of laat je verrassen met het menu van de chef met wijnen die erbij passen. Daarnaast staan er geregeld events op de agenda, van oesters met bubbels tot een bingoavond.\n\nReserveren hoeft niet, je loopt gewoon binnen. Kom je met zes mensen of meer, stuur dan even een mailtje. Op maandag is Buskens dicht.",
   "website": "https://buskensnijmegen.nl/",
   "website_bereikbaar": true
@@ -2348,7 +2348,7 @@
   },
   "openingstijden": "zo, di, wo 09:30-17:00; do-za 09:30-21:00; ma gesloten",
   "opmerkingen": "Ik heb gekozen voor 'cafe' en niet voor 'restaurant'. De kaart bestaat vooral uit lunch en snacks; alleen van donderdag tot en met zaterdag is er 's avonds een daghap, er is geen volledige dinerkaart. De keuken heb ik 'Internationaal' genoemd, omdat de kaart een mix is (onder meer bakwan jagung, pollo tonnato en Holtkamp-bitterballen); dat is mijn eigen typering. Op de site staat niets over een terras. Maandag staat niet bij de openingstijden, dus ik ga ervan uit dat het café dan gesloten is.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een plek in Nijmegen-Oost waar je de hele dag kunt aanschuiven? In dit buurtcafé aan de Koolemans Beynenstraat begin je met koffie en blijf je hangen voor de lunch. Denk aan een croque op zuurdesembrood van bakkerij Boterzout, een twaalfuurtje of een royale salade met burrata.\n\nIn de middag wordt het borrelen. Je bestelt de hele dag snacks, zoals bitterballen van oesterzwam, kippenvleugeltjes in kokossaus of een plank met kaas en vleeswaren van De Laak. De keuken is een gevarieerde mix met Hollandse, Italiaanse en Indonesische invloeden. Er staan ook vegetarische gerechten op de kaart, en voor de kleintjes is er een kindermenu met babycino en pannenkoekjes.\n\nVan donderdag tot en met zaterdag ben je tot 's avonds welkom en kun je mee-eten met de daghap. Wil je zeker zijn van een tafel? Reserveer dan even online.",
   "website": "https://buurtcafeadriaan.nl/",
   "website_bereikbaar": true
@@ -2501,7 +2501,7 @@
   },
   "openingstijden": "ma-di gesloten, wo-do vanaf 16:00, vr-za vanaf 12:00, zo vanaf 13:00",
   "opmerkingen": "Ik heb alleen de homepage gelezen. Volgens de site is het vooral een café met borrel, lunch en diner. Het is geen echte lunchroom: de site noemt geen ontbijt en het café is pas vanaf 12:00 of 16:00 open. Daarom staat het in de categorie cafe en niet bij lunchrooms. Op de site staan alleen de openingstijden en geen sluitingstijden. Het voetbal dat op groot scherm wordt uitgezonden, komt uit een Instagram-bericht over 'onze mannen' in de Europa League. Ik ga ervan uit dat het om NEC gaat, maar dat staat er niet letterlijk; check dit graag. Het kenmerk groepen is gekozen omdat de site aparte zalen noemt.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een speciaalbiertje met uitzicht op de St. Stevenstoren? Op de Grote Markt vind je dit café al bijna dertig jaar in de Oude Laekenhal, een monumentaal pand met veel sfeer. Je kunt er borrelen, lunchen en dineren, en er is een ruime keuze aan speciaalbieren en wijnen.\n\nKom je met een groep? Bestel dan een van de Daenplanken, waarop verschillende hapjes mooi worden opgediend. Wil je een feestje of bedrijfsborrel geven? Dan kun je de Daenzaal of de Daengewelven in de kelder huren. Bij wedstrijden van NEC staat het grote scherm aan, en in de herfst kun je er bokbier proeven.\n\nVan maandag tot en met dinsdag is het café dicht. Wil je zeker zijn van een tafel? Reserveer dan via de website.",
   "website": "http://www.cafedaen.nl/",
   "website_bereikbaar": true
@@ -2530,7 +2530,7 @@
   },
   "openingstijden": "ma-wo 16:00-18:30, do-vr 16:00-19:30",
   "opmerkingen": "Dit is geen lunchroom maar een faculteitscafé (kroeg) van de Medische Faculteit van het Radboudumc. Daarom staat de categorie op cafe. Het café is alleen open op werkdagen vanaf 16:00 uur. Borrels zijn alleen mogelijk voor studenten en medewerkers van het Radboudumc. Het is niet duidelijk of gewone bezoekers welkom zijn. Ik heb het kenmerk 'groepen' gekozen omdat de site borrels voor groepen noemt. Volgens de beschrijving van de kenmerken hoort 'groepen' alleen bij een groepsmenu of een aparte ruimte voor groepen, en dat noemt de site niet. Graag nakijken of dit kenmerk moet blijven. Alleen de homepage is gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zit je na een lange collegedag of dienst op de Radboudcampus en heb je zin in een biertje met studiegenoten of collega's? Dan kom je terecht in Café de Aesculaaf aan het Geert Grooteplein Noord. Het is de kroeg van de Medische Faculteit, die door medische studenten wordt gerund en waar elke werkdag vanaf vier uur een team van studenten achter de tap staat.\n\nDe kaart draait vooral om speciaalbier. Elke paar weken is er een nieuw biermenu met vier bieren die je op maandag kunt proeven. Er staat ook regelmatig een Nijmeegs biertje tussen. Ben je student of medewerker van het Radboudumc, dan kun je hier ook een borrel geven, bijvoorbeeld als je afstudeert of als een collega afscheid neemt.\n\nLoop na je laatste college eens binnen en neem een kijkje bij de 'wall of fame' met foto's van de tappers.",
   "website": "http://www.aesculaaf.nl/",
   "website_bereikbaar": true
@@ -2602,7 +2602,7 @@
   },
   "openingstijden": "",
   "opmerkingen": "De vermoedelijke categorie (lunchroom) klopt niet: de site beschrijft een café voor de borrel, met zaalverhuur. Ontbijt, lunch of een menukaart worden nergens genoemd. De openingstijden staan niet op de site. De pagina cafe.html heb ik niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Ben je in de binnenstad en heb je zin in een borrel? Loop dan de Grotestraat in, dat gezellige straatje midden in het centrum van Nijmegen. Op nummer 8 vind je dit café, waar je makkelijk blijft hangen voor een drankje met vrienden.\n\nGeef je zelf een feestje? Het café heeft ook een aparte zaal voor maximaal 60 personen, met een eigen bar, eigen toiletten, een muziekinstallatie en een beamer. Die zaal is geschikt voor een verjaardag, een afstudeerborrel of een vergadering, en je huurt hem met of zonder personeel.\n\nWil je de zaal eerst zien? Loop gerust eens binnen of bel of mail even om de mogelijkheden te bespreken.",
   "website": "https://cafeburgemeester.nl",
   "website_bereikbaar": true
@@ -2628,7 +2628,7 @@
   "naam": "Café De Deut",
   "openingstijden": "ma-vr 11:00-02:00, za 10:00-02:00, zo 11:00-01:30",
   "opmerkingen": "Ons adres mist de straat; volgens de site is het Koningstraat 36. Op de site staan ook een menukaart en een bezorgmodule (RestroPress). Die heb ik niet gecontroleerd, dus eten en afhalen zijn niet opgenomen. Op de site staat 'geen evenementen'.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een biertje tussen barokke lampjes, heiligenbeeldjes en allerlei vreemde snuisterijen? Dan moet je bij De Deut aan de Koningstraat zijn, vlak bij het Koningsplein in het centrum. Het café noemt zichzelf met trots het kitscherigste van de stad, en zo voelt het ook: als een uit de hand gelopen huiskamer van je oma, met rock-'n-roll, gitaarmuziek en classics op de achtergrond.\n\nBierliefhebbers kunnen hier hun hart ophalen. Er zijn zo'n vijftien bieren van de tap en tientallen op fles en blik, en de kaart wisselt regelmatig. Elke maand komt er een nieuw Bier van de Maand van de tap.\n\nJe bent er elke dag welkom vanaf de ochtend tot diep in de nacht. Kom je met een groep? Bel of mail dan even om te reserveren.",
   "website": "https://www.cafededeut.nl",
   "website_bereikbaar": true
@@ -2685,7 +2685,7 @@
   "naam": "Cafe de Fuik",
   "openingstijden": "",
   "opmerkingen": "Op de gelezen pagina's staan geen openingstijden en geen adres. De site richt zich sterk op studenten en drankacties. Het kenmerk 'groepen' is gekozen op basis van Metermaandag ('Meld je aan met je groep'). De Instagram-feed op de site toont oudere berichten (Boktocht 2024).",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om je week met je vrienden af te sluiten en daarna nog even flink te dansen? In de Eerste Walstraat, midden in het centrum van Nijmegen, vind je Café de Fuik, een feestcafé dat vooral bij studenten al jaren populair is. Rond tien uur 's avonds gaan de tafels en stoelen aan de kant, en dan draaien de dj's dansplaten en meezingers.\n\nElke avond van de week heeft zijn eigen thema. Op maandag drink je met je groep meters om een score te halen die blijft staan, en op woensdag 'breek' je de week met een speciale deal. Later in de week staan er nog andere acties met shots op het programma. Na afloop kun je de feestfoto's online terugzien.\n\nBekijk de weekagenda op de site, trommel je maten op en ga een avondje stappen.",
   "website": "https://www.cafedefuik.nl/",
   "website_bereikbaar": true
@@ -2792,7 +2792,7 @@
   "naam": "Café De Opera",
   "openingstijden": "ma-za 10:00-02:00, zo 11:00-01:30",
   "opmerkingen": "Ons adres mist de straatnaam. Volgens de site is dat Koningstraat 34. De site noemt ook diner, maar de menukaart staat alleen als afbeelding/pdf online en is niet gelezen. De categorie café lijkt het best te passen. De agenda is op dit moment leeg.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een speciaalbiertje op een van de gezelligste plekken in het centrum? Aan de Koningstraat, met uitzicht op het Koningsplein, schenkt dit café al sinds 1982. Er zitten 21 bieren op de tap en je kiest uit een flinke kaart met flessen. Liever geen bier? Dan zijn er ook wijn en cocktails, en het personeel helpt je graag met kiezen.\n\nJe kunt er vanaf 's ochtends terecht voor koffie met taart en voor een lunch met verse producten van lokale leveranciers. Of je blijft hangen tot in de kleine uurtjes. Zak weg op de banken of lees de krant aan de grote leestafel bij het raam. Bij mooi weer gaat de pui open en zit je buiten op het ruime terras op het plein.\n\nWil je reserveren? Dat kan in overleg, op donderdag tot en met zaterdag tot 20.00 uur.",
   "website": "https://www.cafedeopera.nl",
   "website_bereikbaar": true
@@ -2816,7 +2816,7 @@
   "naam": "Café de Opstand",
   "openingstijden": "ma-di gesloten, wo-do 16:00-01:00, vr-za 15:00-02:00, zo 15:00-00:00",
   "opmerkingen": "Alleen de homepage gelezen. Popronde (12 september) was een eenmalig optreden, daarom geen 'live muziek'. De site noemt vrijwilligers voor 'het boeken van bands', dus mogelijk zijn er vaker optredens; controleer dit op de agendapagina. Er is een 'keuken', maar het menu is niet bekeken. 'Speciaalbier' is niet aangevinkt omdat alleen enkele seizoensbieren zichtbaar waren.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een kroeg waar je uitgaat en je tegelijk thuis voelt? In de Van Welderenstraat vind je dit collectieve café. Het wordt draaiend gehouden door vrijwilligers en iedereen is er welkom. De sfeer is idealistisch, eigenwijs en vooral gezellig.\n\nOp de tap staan wisselende seizoensbieren, zoals een herfstbock. Op woensdagavond kies je uit tientallen wodka's, waarvan een groot deel volgens een eigen recept is gemaakt. Elke eerste zondag van de maand is er een gratis pubquiz en op de tweede zondag kun je bordspellen spelen. Je mag je eigen spel meenemen, maar er is ook een spellenhoek. Verder staan er brei- en haakmiddagen en queer borrels op de agenda.\n\nHet café is open van woensdag tot en met zondag, steeds vanaf de middag. Kijk even op de agenda en schuif gewoon aan.",
   "website": "https://www.de-opstand.nl",
   "website_bereikbaar": true
@@ -3047,7 +3047,7 @@
   },
   "openingstijden": "ma-za 11:00-sluit, zo 12:00-sluit",
   "opmerkingen": "Dit is een bruin borrelcafé en geen lunchroom. Er staat wel een lunchkaart op de site (12:00-16:00), maar ik heb als hoofdcategorie cafe gekozen in plaats van lunch. Het adres op de site is nummer 12-14, bij ons staat 12. Het kenmerk 'groepen' heb ik gekozen omdat er een aparte feestzaal boven het café is.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goed getapt speciaalbier op een zonnig plein midden in de stad? Dan kun je terecht bij dit bruine café aan het Faberplein, in de Van Broeckhuysenstraat. Er zijn dertien bieren van de tap en nog veel meer op fles, en daarnaast schenken ze gin-tonics en wijn. De mensen achter de bar weten waar ze het over hebben.\n\nOverdag kun je er lunchen met tosti's, broodjes of een uitsmijter. Vanaf de middag bestel je pubfood zoals loaded fries en burgers, en tot laat staan bitterballen, nacho's en borrelplanken klaar. 's Zomers zit je op het terras met uitzicht over het plein, 's winters is het binnen knus. Elke maand is er een pubquiz.\n\nGa je een feestje geven? Boven het café zit een zaal die je kunt huren. Stuur een mailtje om te reserveren.",
   "website": "http://www.cafefaber.nl/",
   "website_bereikbaar": true
@@ -3124,7 +3124,7 @@
   "naam": "Cafe Hubert",
   "openingstijden": "do 15:00-23:00, vr 15:00-01:00, za 13:00-01:00, zo 13:00-17:00",
   "opmerkingen": "De site noemt zich 'Eetcafé & koffiebar'. Op de kaart staan vooral seizoenshapjes en schalen om te delen, daarom gekozen voor cafe en niet voor restaurant. Er is een programma met markten, workshops, een pubquiz en pingpong, en de site heeft het over 'muziek', maar ik heb geen optredens met bands gezien. Daarom is 'live muziek' niet aangevinkt. De volledige teksten van de pagina's Eetcafé en Over Hubert kon ik niet helemaal lezen, omdat ik tegen de limiet van het aantal opvragingen aanliep. Terras, menukaart en zaalverhuur heb ik dus niet kunnen nakijken.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een plek waar je binnenloopt voor koffie en blijft hangen tot de laatste fles leeg is? Aan de Winselingseweg vind je Hubert, een eetcafé en koffiebar met een huiskamersfeer die gezellig en een beetje rauw is. Je drinkt er koffie, koud bier of een goed glas wijn, en eet seizoenshapjes en schalen om met elkaar te delen. De kaart verandert regelmatig.\n\nHubert is meer dan een café. Achter de zaak zit een stichting die jonge makers ruimte geeft, en dat merk je aan het programma: vintage markten, workshops, een pubquiz en pingpongavonden.\n\nJe kunt er terecht van donderdag tot en met zondag, vanaf de middag. Kijk even in de agenda wat er speelt, reserveer een tafel en neem je vrienden mee.",
   "website": "http://www.hubertnijmegen.nl/",
   "website_bereikbaar": true
@@ -3182,7 +3182,7 @@
   "naam": "Café Jos",
   "openingstijden": "ma gesloten, di-za 15:00-01:00, zo 14:00-20:00",
   "opmerkingen": "Er is een hapjeskaart (niet bekeken). Proeverijen en borrels voor groepen en bedrijven zijn mogelijk.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om iets anders te drinken dan je vaste pilsje? Aan de Daalseweg vind je een bruin buurtcafé waar de drankkaart een avontuur op zich is: zo'n 36 bieren van de tap, ruim tweehonderd op fles en een vatkamer met bijzondere brouwsels. Daarnaast staan er whisky's, wijnen en een flinke keuze aan koffie en thee op de kaart.\n\nCafé Jos bestaat al sinds 1977. Vroeger was het een echte studentenkroeg, en sinds 1987 mag het zich Meesterschenkerij noemen. De sfeer is nog altijd die van een gezellig buurtcafé, en het team vertelt je graag waar een drankje vandaan komt en hoe het smaakt. Bij mooi weer zit je buiten op het terras.\n\nMet een groep of je collega's kun je een bier- of whiskyproeverij boeken, of een drankmenu dat op jullie wensen is afgestemd. Loop gerust binnen vanaf dinsdagmiddag.",
   "website": "https://www.cafejos.nl/",
   "website_bereikbaar": true
@@ -3238,7 +3238,7 @@
   "naam": "Café Maxim",
   "openingstijden": "ma-do 15:00-01:00, vr-za 14:00-02:00, zo 14:00-01:00",
   "opmerkingen": "Op de site staat huisnummer 87-89, bij ons alleen 87. Live muziek is alleen te horen tijdens het festival Billy in Bottendaal, er is geen vaste agenda met bands. Daarom heb ik 'live muziek' niet als kenmerk gekozen. Het kenmerk 'bedrijfsuitje' rust op de vermelding van bedrijfsborrels.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een biertje in een café waar de buurt samenkomt? Dan zit je goed in de Burghardt van den Berghstraat, midden in Bottendaal. Hier schuif je aan de bar of zoek je bij mooi weer een plekje op het terras, en ben je zo gewend.\n\nOp de kaart staan tapbieren en speciaalbieren, met Maxim Blond, het eigen bier van het café. Je kunt er ook terecht voor wijn, alcoholvrije cocktails en borrelhapjes om te delen. Van oktober tot en met april is er elke tweede zondag van de maand een pubquiz, en het café doet mee aan buurtfeesten als Billy in Bottendaal en Bottendaal Alive.\n\nIets te vieren? Met een groep vanaf acht personen spreek je samen een borrel of feestje af. Bel, vul het contactformulier in of loop gewoon even binnen, elke dag vanaf de middag.",
   "website": "https://www.cafemaxim.nl",
   "website_bereikbaar": true
@@ -3275,7 +3275,7 @@
   },
   "openingstijden": "ma-wo 17:00-00:00, do 11:00-00:00, vr-za 11:00-01:00, zo gesloten",
   "opmerkingen": "Bij ons staat de zaak als lunchroom, maar het is een (speciaalbier)café. Daarom is de categorie 'cafe' gekozen. De site spreekt zichzelf tegen over het jubileum: er staat '75 jaar in 2024' en ook '70 jaar dit jaar'. Het kenmerk 'groepen' is gekozen vanwege het zaaltje voor groepen tot 50 personen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een avond bijpraten met een bijzonder biertje in je hand? Aan de Sint Jacobslaan, tussen Hazenkamp, Sint Anna en Grootstal, vind je dit bruine café. Het wordt gerund door de vierde generatie van de familie Huisman. Op de bierlijst staan veel speciaalbieren. Wat er op dat moment op de kaart staat, check je via Untappd. Hou je het liever simpel? Dan kun je ook kiezen voor pils, wijn, een cocktail of iets zonder alcohol.\n\nJe komt hier niet alleen om te drinken. Je kunt darten, biljarten, poolen of een bordspel pakken. Heb je trek, dan bestel je tot 22:00 uur iets van de pubfoodkaart. Houd ook de agenda in de gaten, want er staan geregeld pubquizzen, tap-take-overs en voetbalavonden op het programma.\n\nGeef je een feestje of een borrel? Dan kun je hier een zaaltje huren. Loop gerust eens binnen na een wandeling door de Goffert.",
   "website": "http://www.piethuisman.nl/",
   "website_bereikbaar": true
@@ -3310,7 +3310,7 @@
   },
   "openingstijden": "ma-di 19:00-01:00, wo 16:00-01:00, do-vr 16:00-02:00, za 14:00-02:00, zo 14:00-01:00",
   "opmerkingen": "De vermoedelijke categorie (lunchroom) klopt niet. Dit is een kroeg met pool, darts, tafelvoetbal en airhockey, die pas vanaf de middag of avond open is. Daarom staat de hoofdcategorie op cafe. Alleen de homepage is gelezen, want die bevatte genoeg informatie.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een avond waarop je meer doet dan alleen aan de bar hangen? In dit poolcafé aan de Van Welderenstraat, vlak bij het centrum, pak je een keu voor een potje pool of gooi je een paar pijltjes. Ook tafelvoetbal en airhockey staan klaar, en op verzoek mag je de poker- en beerpongtafel gebruiken.\n\nDe sfeer is ongedwongen: je komt voor het spel, een drankje of een hapje. Voetbal- en dartwedstrijden zie je hier op een groot scherm. Organiseer je een verjaardag, een bedrijfsuitje of een kinderfeestje? Dan ben je hier ook welkom, en voor groepen past het café zelfs de openingstijden aan.\n\nJe kunt van tevoren een tafel reserveren via de site. Doordeweeks gaat de deur 's avonds open, in het weekend al vanaf de middag.",
   "website": "http://www.cafepool.nl/",
   "website_bereikbaar": true
@@ -3362,7 +3362,7 @@
   "naam": "Cafe Samson VOF",
   "openingstijden": "ma-za 10:00-02:00, zo 12:00-02:00",
   "opmerkingen": "Ik heb alleen de homepage gelezen. Op de site staat een WK-poule, maar niet duidelijk is of er wedstrijden worden uitgezonden. Daarom is 'sport kijken' niet als kenmerk opgenomen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een middag lezen met een goed biertje erbij? In de Houtstraat, vlak bij het centrum van Nijmegen, vind je een café zoals je het van een café verwacht. Je komt er al vroeg op de dag binnen voor koffie met zelfgebakken gebak en je blijft makkelijk hangen tot laat in de avond.\n\nBierliefhebbers hebben hier veel te kiezen: er staan meer dan honderd speciaalbieren op de kaart en daarnaast schenken ze een flinke reeks open wijnen. Weet je niet wat je moet nemen? Vraag de obers om advies. Voor de trek is er lunch of een borrelhapje, en aan de stamtafel of op het terras liggen kranten en tijdschriften voor je klaar.\n\nLoop gewoon eens binnen, want het café is zeven dagen per week tot diep in de nacht open.",
   "website": "https://www.cafesamson.nl/",
   "website_bereikbaar": true
@@ -3422,7 +3422,7 @@
   },
   "openingstijden": "dagelijks vanaf 14:00",
   "opmerkingen": "De vermoedelijke categorie lunchroom klopt niet: de zaak is dagelijks pas open vanaf 14:00 uur en is vooral een café met een dinerkaart. De homepage noemt nog wel lunchen en 'een heerlijk broodje' in de vroege middag, maar dat past niet bij de openingstijden. Daarom niet als lunchroom ingedeeld. De menukaart staat in een pdf die niet is gelezen. Op de site staat geen terras vermeld.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een plek waar je zonder plan kunt binnenlopen en toch blijft hangen? Aan de Sint Annastraat zit dit gezellige buurtcafé, waar je terechtkunt voor een borrel, een hapje en een avondje uit.\n\nBegin met een speciaal biertje of een glas wijn van de kaart, samengesteld met twee Nijmeegse wijnhandels. Ga je voor iets meer, dan kies je uit een borrelplank, vlees, verse vis, iets vegetarisch, een salade, een burger of een pizza. De sfeer is ontspannen en je bent er altijd welkom.\n\nHeb je iets te vieren, zoals je verjaardag, je afstuderen of zelfs je bruiloft? Dan denken ze graag met je mee over de mogelijkheden. Het café is dagelijks open vanaf twee uur 's middags, dus loop gewoon eens binnen of bekijk vooraf de menukaart op de site.",
   "website": "http://www.stanneke.nl/",
   "website_bereikbaar": true
@@ -3459,7 +3459,7 @@
   "naam": "Café ’t Haantje",
   "openingstijden": "dagelijks vanaf 14:00",
   "opmerkingen": "Ik heb alleen de homepage gelezen. Op de site staat niet hoe laat het café sluit. 'Kindvriendelijk' heb ik gekozen omdat de site kindermiddagen, Sinterklaas en kindercarnaval noemt.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een biertje in een echte bruine kroeg in Nijmegen-Oost? Aan de Daalseweg zit dit familiecafé, dat al sinds 1957 in handen is van dezelfde familie. Inmiddels staat de derde generatie achter de tap. Je ziet er jong en oud: de een leest de krant bij de koffie, de ander probeert een van de speciaalbieren.\n\nEr is altijd wat te doen. Je kunt er biljarten en voetbal kijken op een groot scherm, en elke maand staan er bands met pop, rock of blues. Daarnaast zijn er pubquizzen, een Oktoberfest en middagen voor kinderen. Het café doet ook mee aan de festivals in Oost, zoals Troost van Oost en Easter Jazz.\n\nWil je een borrel, verjaardag of vergadering houden? Dan kun je de zaal huren, met een eigen bar en een beamer. Kijk in de agenda wat er speelt en schuif vanaf twee uur 's middags aan, binnen of op het terras.",
   "website": "https://www.haantje-nijmegen.nl/",
   "website_bereikbaar": true
@@ -3508,7 +3508,7 @@
   "naam": "Cafe TweeKeerBellen",
   "openingstijden": "ma-za 20:00-04:00, zo op afspraak",
   "opmerkingen": "De cocktailworkshop is een groepsactiviteit die je per mail aanvraagt. Ik heb er geen aparte categorie voor gekozen, want het is maar een klein deel van het aanbod. De site noemt prijzen voor de meter bier; die heb ik weggelaten. Er staat ook een link naar een ticketshop (Eventix), maar welke evenementen daar te koop zijn, staat niet op de site.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om met je vriendengroep, vereniging of dispuut de avond door te halen? In de Betouwstraat, vlak bij het centrum, is deze studentenkroeg al jaren een vaste stop voor wie tot in de kleine uurtjes wil blijven hangen. Je gooit hier een potje mexen aan tafel of je danst op bekende hits en vergeten meezingers.\n\nElke avond heeft zijn eigen thema. Op maandag speel je bierbingo, op dinsdag en woensdag bestel je een meter bier om te delen. Donderdag is de studentenstapavond, waarop je zelf een plaatje kunt aanvragen. In het weekend kun je terecht als je eens niet naar huis gaat. Met een groep kun je ook een cocktailworkshop doen.\n\nVan maandag tot en met zaterdag ben je vanaf acht uur 's avonds welkom. Voor de workshop of een avond op zondag stuur je een mail.",
   "website": "https://www.cafetweekeerbellen.nl/",
   "website_bereikbaar": true
@@ -3578,7 +3578,7 @@
   "naam": "Cafe van Ouds",
   "openingstijden": "ma gesloten, di-do 18:00-00:00, vr 16:00-00:00, za 14:00-00:00",
   "opmerkingen": "De zondag ontbreekt in de openingstijden op de site. Voor groepen vanaf 30 personen is het café volgens de site op afspraak elke dag open. Livemuziek wordt als activiteit genoemd, maar ik heb geen agenda met optredens gezien, dus dat kenmerk is weggelaten. Alleen de homepage is gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een avond met een goed glas bier en een volle tafel bites? Achter de Stevenskerk, in de Augustijnenstraat, vind je deze bruine borrelkroeg met een flinke bierkaart: meer dan tweehonderd speciaalbieren en zestien tapbieren. Wil je iets anders, dan kun je ook kiezen uit wijn, whisky of koffie.\n\nJe kunt binnen in het knusse café zitten of buiten op het terras. Er is ook genoeg te beleven, met onder meer een pubquiz, stand-up comedy en sport op meerdere schermen. Als NEC speelt, kijkt half Nijmegen hier mee. Heb je iets te vieren? Dan kun je de zaak afhuren voor een verjaardag of bedrijfsfeest.\n\nKom je met meer dan zes personen of op een wedstrijdavond, reserveer dan op tijd een tafel. Van dinsdag tot en met zaterdag ben je vanaf de (vroege) avond welkom.",
   "website": "https://cafevanoudsnijmegen.nl",
   "website_bereikbaar": true
@@ -3604,7 +3604,7 @@
   "naam": "Café Van Rijn",
   "openingstijden": "ma 18:00-00:00, di 16:00-04:00, wo 16:00-04:30, do 18:00-04:30, vr-za 16:00-04:30, zo gesloten",
   "opmerkingen": "De slogan noemt speciaalbier 'overdag', maar volgens de openingstijden gaat het café pas om 16:00 of 18:00 open. In de agenda staan op dit moment geen evenementen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een speciaalbiertje dat de avond langzaam laat uitlopen tot diep in de nacht? Dan zit je goed aan de Molenstraat, midden in het centrum. Hier tappen ze een flinke reeks speciaalbieren en staan er nog meer in de koelkast. Wie het rustiger aan wil doen, kan ook gewoon een kop koffie bestellen.\n\nVan Rijn draait vooral op de avond en de nacht. Op dinsdag en donderdag is het studentenavond en in het weekend komen vooral jonge werkenden er feestvieren. Op de meeste avonden ben je tot ver na middernacht welkom.\n\nOp maandag ga je vanaf zes uur naar binnen, op zondag is de zaak dicht. Je bereikt ze het snelst met een DM via Instagram. Loop eens binnen voor een eerste biertje en kijk of je de spatjes-nacht volhoudt.",
   "website": "https://cafe-vanrijn.nl/",
   "website_bereikbaar": true
@@ -3634,7 +3634,7 @@
   },
   "openingstijden": "ma-zo 12:00-17:00 (openingstijden museum; gesloten met 1e en 2e kerstdag, nieuwjaarsdag en tijdens de 4Daagse)",
   "opmerkingen": "Ik heb de categorie veranderd van lunchroom naar koffiezaak. Op de kaart staan alleen koffie, thee, frisdrank en gevulde koek, dus geen lunch of ontbijt. Het café hoort bij het Nationaal Fietsmuseum Velorama. De openingstijden zijn die van het museum. Het is onduidelijk of je het café zonder museumkaartje kunt bezoeken. Het kenmerk groepen staat erbij vanwege het groepsarrangement: minimaal 8 personen, op afspraak. Er stond geen adres bij ons, dus het adres heb ik van de site overgenomen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Even pauzeren tussen de oude rijwielen door? In het Nationaal Fietsmuseum Velorama aan de Waalkade vind je Café Velocitas, een knus huiskamercafé dat de naam draagt van de oudste wielerclub van Nijmegen.\n\nHier hoef je geen uitgebreide lunch te verwachten. Je bestelt koffie, cappuccino, thee of iets fris en neemt er een gevulde koek bij. Daarna kun je verder met je rondje langs de collectie.\n\nKom je met een groep van minstens acht personen? Dan kun je op afspraak een arrangement regelen met entree, koffie of thee en een punt appeltaart. Mail het museum vooraf met je wensen en combineer je bezoek met een wandeling langs de Waal.",
   "website": "https://velorama.nl/cafe-velocitas",
   "website_bereikbaar": true
@@ -3731,7 +3731,7 @@
   },
   "openingstijden": "di-do 14:00-02:00, vr-za 13:00-02:00, zo 14:00-01:00, ma gesloten (behalve maandelijkse jazzavond)",
   "opmerkingen": "De vermoedelijke categorie (lunchroom) klopt niet: dit is een borrelcafé/kroeg met speciaalbieren, whisky's en borrelhapjes, open vanaf 13:00/14:00 tot 01:00/02:00. Er staat geen lunch of ontbijt op de site. Ik heb hoofdcategorie 'cafe' gekozen. De borrelkaart bestaat alleen uit afbeeldingen en die kon ik niet lezen. Op de site staat dat het toilet niet rolstoeltoegankelijk is. Of het café op maandag dicht is, staat er niet met zoveel woorden: maandag staat niet bij de openingstijden, en volgens de site is er één maandag per maand een jazzavond.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om ergens te borrelen waar je ogen ook iets te doen hebben? In dit café aan de Houtstraat zit je tussen allerlei curiosa en rariteiten, een eigentijdse knipoog naar de wonderkamers uit de zeventiende eeuw. Er valt dus altijd wel iets te ontdekken terwijl je bijpraat.\n\nOp de kaart vind je veel speciaalbieren, whisky's en wijnen, maar ook bijzondere limonades en hapjes voor bij de borrel. Eén maandag per maand verandert het café in een kleine jazzclub, waar jonge jazzmuzikanten spelen onder de naam Kleines Kammer Konzert. En je hond mag gewoon mee naar binnen.\n\nReserveren kan niet, dus loop gewoon binnen. Van dinsdag tot en met zondag ben je vanaf de middag welkom, tot laat in de avond.",
   "website": "http://www.cafewunderkammer.nl/",
   "website_bereikbaar": true
@@ -3794,7 +3794,7 @@
   "naam": "Camelot",
   "openingstijden": "ma-wo 10:00-00:00, do 10:00-01:00, vr-za 10:00-02:00, zo 11:00-00:00",
   "opmerkingen": "Er wordt niet gereserveerd. Voor grote groepen moet je eerst bellen. De site noemt geen terras.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een speciaalbiertje midden in de stad? Op de Grote Markt stap je zo binnen bij Camelot, een bier- en eetcafé waar ze echt van bier houden. Naast Hertog Jan van de vaste tap schenken ze nog acht wisselende speciaalbieren, dus je kunt er rustig iets nieuws proberen.\n\nHonger krijg je hier ook niet. Overdag eet je er een broodje, een uitsmijter, een tosti of een kom soep. Vanaf vijf uur kun je er dineren, en de hele dag door bestel je hapjes bij de borrel. Er staan steeds meer vegetarische en vegan gerechten op de kaart. Eén donderdagavond per maand is er live muziek van jonge artiesten.\n\nCamelot is elke dag open en je hoeft niet te reserveren, dus loop gewoon binnen. Kom je met een grote groep? Bel dan even om te vragen of er nog een goed plekje vrij is.",
   "website": "https://www.cafecamelot.nl",
   "website_bereikbaar": true
@@ -4355,7 +4355,7 @@
   "naam": "Crossroads Cycling Culture 🚲",
   "openingstijden": "di-za 09:00-17:00, zo-ma gesloten",
   "opmerkingen": "Het is een combinatie van een fietswinkel, een werkplaats en een koffiebar. De site zegt niet of de taart zelf gebakken wordt, toch is 'taart en gebak' gekozen omdat er taart op de kaart staat. De koffie komt van Single Estate Coffee Roasters, dus er is geen eigen branderij. Een terras of wifi wordt niet genoemd. De menukaart (pdf) is niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goede flat white voor of na je rondje door de Ooij? Aan de Daalseweg in Nijmegen-Oost zit een koffiebar die midden in een fietswinkel staat. Je drinkt er specialty coffee van Single Estate Coffee Roasters, en er zijn belegde broodjes, lunch en taart bij. Je hoeft niet op de fiets te komen: buurtbewoners zijn net zo welkom als wielrenners.\n\nKom je wel op de fiets, dan zet je hem gewoon veilig binnen neer. Er is zelfs een douche die iedereen mag gebruiken. Tussen twee slokken door kun je kijken naar racefietsen en fietskleding, of je fiets laten nakijken in de werkplaats.\n\nWil je fietsmaatjes vinden? Fiets dan gratis mee met een van de wekelijkse social rides en drink daarna samen koffie. Je bent welkom van dinsdag tot en met zaterdag.",
   "website": "http://www.crossroads-nijmegen.cc/",
   "website_bereikbaar": true
@@ -4457,7 +4457,7 @@
   },
   "openingstijden": "ma 15:00-20:00, di-do 15:00-23:00, vr 15:00-20:00, za-zo gesloten (kerstsluiting 21 december 2026 t/m 3 januari 2027)",
   "opmerkingen": "Dit is geen lunchroom maar een campuscafé/borrelplek met drankjes en borrelhapjes vanaf de middag. Daarom is de categorie op 'cafe' gezet in plaats van lunch. De site noemt een aanbod 'vanaf 15:30', maar volgens de openingstijden gaat het café om 15:00 open.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "College erop zitten of een lange werkdag achter de rug? Op de campus van de Radboud Universiteit loop je dan zo het CultuurCafé binnen, in het Collegezalencomplex aan het Mercatorpad. Dit is de plek waar studenten en medewerkers samen afsluiten met een borrel.\n\nVanaf het eind van de middag kies je uit een flinke selectie wijnen en bieren, van de tap of uit de fles. Trek je wat, bestel dan een schaal nacho's of bittergarnituur om met je tafel te delen. Schijnt de zon, dan zoek je een plekje op het terras.\n\nHet café is alleen doordeweeks open, vanaf drie uur 's middags. Op dinsdag, woensdag en donderdag blijft het tot laat gezellig. Dus spreek met je studiegenoten of collega's af en proost samen op het weekend dat eraan komt.",
   "website": "https://www.ru.nl/services/eten-en-drinken/cultuurcafe",
   "website_bereikbaar": true
@@ -4670,7 +4670,7 @@
   "naam": "de Bieb",
   "openingstijden": "",
   "opmerkingen": "De site zegt dat de zaak 6 dagen per week open is (programma van maandag t/m zaterdag), maar noemt geen openingstijden. Het kenmerk 'groepen' heb ik gekozen omdat ze op dinsdag een dienblad met 12 bier aanbieden. Dat is een afleiding, dus graag even controleren. Op de homepage staat nog een link naar tickets voor een Herfstboktocht op 18 oktober.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om na een dag blokken je boeken even in te ruilen voor een koud biertje? Dan zit je goed in deze studentikoze stapkroeg aan de Molenstraat, midden in het uitgaanshart van Nijmegen. Leden van het Heerendispuut Priapus openden de zaak in 2022, en dat zie je meteen terug: hier draait alles om gezelligheid en sterke verhalen.\n\nElke avond van de week heeft zijn eigen thema. Op maandag gaan de dobbelstenen rond, op dinsdag bestel je een vol dienblad voor je hele groep, en later in de week zijn er avonden met shots, mixdrankjes of een 'Bacotrein'. Op donderdag is het 'No College', voor wie vrijdag toch niet naar college gaat.\n\nZoek je een avond uit met vrienden of je studiegenoten? Loop gewoon binnen en kijk op de site welke actie er die avond is.",
   "website": "https://debiebnijmegen.nl/",
   "website_bereikbaar": true
@@ -5120,7 +5120,7 @@
   "naam": "De Kluizenaar",
   "openingstijden": "ma-wo 16:00-00:00, do 16:00-01:00, vr 15:00-02:00, za 14:00-01:00, zo 14:00-22:00",
   "opmerkingen": "De site meldt ook '22:00 uur (Reserveren aan de deur!)' bij 'nieuwe openingstijden'. Wat dat precies betekent, is onduidelijk (misschien sluit de keuken dan?). Sport kijken is gebaseerd op een Instagrampost uit 2024 over het EK, dus het is onzeker of ze nog steeds wedstrijden uitzenden. Een terras wordt niet genoemd; wel staat er bij die post dat wedstrijden ook buiten te zien waren. De claims 'de grootste biercollectie' en 'de beste spareribs van Nijmegen' heb ik niet overgenomen. De keuken heb ik als 'Hollands' ingevuld, maar het is eigenlijk een mix van cafégerechten. Ik heb alleen de homepage gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een biertje dat je nog nooit geproefd hebt? In de Burghardt van den Berghstraat, midden in Bottendaal, zit al ruim dertig jaar een speciaalbiercafé met een flinke bierkaart. De bieren zoeken ze in binnen- en buitenland bij elkaar, en het team helpt je graag kiezen. Bierliefhebbers met de Untappd-app kunnen hun vondsten daar meteen in terugvinden.\n\nKrijg je trek, dan bestel je er iets van de keuken bij. Op de kaart staan stevige cafégerechten, zoals spareribs gekookt in cola en sambal, Limburgs zuurvlees en een flinke schnitzel. Heb je liever een rustige avond thuis? Bel je bestelling door en haal die op aan de bar.\n\nDoordeweeks ben je er vanaf vier uur 's middags welkom, in het weekend al eerder. Kom je met zes mensen of meer, reserveer dan even.",
   "website": "https://www.dekluizenaar.nl/",
   "website_bereikbaar": true
@@ -5245,7 +5245,7 @@
   },
   "openingstijden": "ma-di gesloten, wo-do vanaf 16:00, vr-zo vanaf 15:00",
   "opmerkingen": "De vermoedelijke categorie 'Lunchrooms en ontbijt' klopt niet. Het is een borrelcafé dat pas vanaf 15:00/16:00 opengaat, met wijn, bier, cocktails en bites, dus ik heb gekozen voor 'cafe'. De menukaart (pdf) heb ik niet gelezen. De site noemt geen sluitingstijden en geen huisnummer. Je kunt het café niet exclusief huren voor feesten of borrels.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om na het werk ergens met een goed glas te proosten, vlak bij de Grote Markt? Bovenaan de Grotestraat vind je dit knusse café, waar het draait om borrelen: een uitgebreide wijnkaart, lekkere bieren, verrassende cocktails en bites om te delen.\n\nKijk tijdens je drankje ook even naar het interieur. Bijna al het houtwerk is gemaakt van oud hout. Het barblad komt zelfs van een boom uit park Brakkenstein. Ook bij de leveranciers letten ze waar het kan op duurzaamheid en natuur.\n\nDe zaak is klein, dus in het weekend kun je niet reserveren. Kom gewoon op tijd binnenlopen. Is het vol, dan drink je eerst iets aan de bar tot er een tafeltje vrijkomt. Je bent welkom van woensdag tot en met zondag vanaf de middag.",
   "website": "https://depaljas.nl",
   "website_bereikbaar": true
@@ -5351,7 +5351,7 @@
   "naam": "De Plak",
   "openingstijden": "dagelijks vanaf 12:00; lunch 12:00-16:00, avondeten 17:00-21:30",
   "opmerkingen": "Volgens de site is het café van zondag 25 oktober tot en met maandag 2 november dicht vanwege onderhoud aan het pand. Dit is tijdelijk. Op de site staat geen sluitingstijd. De keuken lijkt (deels) vegetarisch en veganistisch te zijn. Het aanbod van vlees of vis staat niet in het deel van de menukaart dat ik heb gelezen, dus de keuze voor 'Vegetarisch' moet nog worden nagekeken. Er staat een agenda met feesten op de site, maar ik heb niet kunnen zien of er bands optreden. Daarom heb ik 'live muziek' niet aangevinkt.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een volle tafel, een goed gevuld bord en een eerlijke prijs? Op de Bloemerstraat vind je sinds 1976 een eetcafé dat door een collectief wordt gerund. Er is geen baas en de medewerkers beslissen samen. Het interieur is retro en de sfeer gemoedelijk.\n\nDe bekendste schotel is het kaasgehakt met handgesneden frites en veel groente. Op de kaart staan ook vegetarische en veganistische gerechten, zoals halloumispiesjes en een salade met tofu. Je kunt er elke dag vanaf het middaguur terecht om te lunchen, 's middags een stuk taart te eten of 's avonds te dineren. In de kelder worden regelmatig feesten gehouden.\n\nReserveren kan niet: loop gewoon binnen en wacht even aan de bar als alle tafels bezet zijn. Kom je met minstens vijftien mensen, dan kun je de kelder afhuren.",
   "website": "https://www.cafedeplak.nl/",
   "website_bereikbaar": true
@@ -5465,7 +5465,7 @@
   "naam": "De Ruyter",
   "openingstijden": "di-wo 16:00-00:00, do-vr 16:00-01:00, za 16:00-00:00, zo 16:00-22:00, ma gesloten",
   "opmerkingen": "In ons bestand ontbreekt de straat; volgens de site is het adres De Ruyterstraat 2. De menukaart is een pdf en die is niet gelezen. Daardoor is de keuken niet precies bekend en is ook niet gecontroleerd welke speciaalbieren er zijn. Het kenmerk speciaalbier is gekozen op basis van de 12 taps met wisseltaps. De site noemt geen terras.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om na het werk ergens in Bottendaal neer te strijken met een goed glas? Op de hoek van de De Ruyterstraat vind je een lichte wijn- en foodbar, op de plek waar vroeger een slagerij en daarna een bruine kroeg zat. Op weg naar de toiletten in de kelder zie je nog foto's van die slagerij.\n\nJe kunt hier een stuk of twaalf wijnen per glas proeven, en er staan ook bijzondere flessen in de klimaatkast. Bierliefhebbers kunnen kiezen uit twaalf tapkranen, waarvan een flink deel regelmatig wisselt. De chef maakt borrelplanken en wisselende gerechten, dus je kunt hier makkelijk van een borrel doorschuiven naar een ongedwongen diner.\n\nJe bent vanaf vier uur 's middags welkom, behalve op maandag. Wil je zeker zijn van een tafel, reserveer dan even online.",
   "website": "https://www.lokaalderuyter.nl/",
   "website_bereikbaar": true
@@ -5589,7 +5589,7 @@
   "naam": "De Stoof",
   "openingstijden": "iedere dag geopend vanaf 10:00",
   "opmerkingen": "De site geeft alleen een openingstijd en geen sluitingstijd. Volgens de site is het café 'op een nieuwe plek' heropend. Er staat geen terras op de site.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een biertje met huiskamersfeer midden in het oude centrum? Op de Lange Hezelstraat 58a is De Stoof weer terug, het bruine café dat veel Nijmegenaren nog van vroeger kennen. Het zit op een nieuwe plek en heeft een opgefrist interieur, maar het is nog steeds een gezellige kroeg waar jong en oud aanschuift.\n\nOp de tap staan onder meer bieren van Brouwerij Florijn, en op de flessenkaart vind je tripels, IPA's, trappisten en zure bieren. Heb je trek, dan kun je kiezen uit tosti's, flammkuchen, stoofpotjes zoals Joops runderstoofvlees, of een borrelplank met bitterballen.\n\nWil je iets te vieren hebben? Achter in het café kun je een zaal huren met een eigen bar, muziek en een beamer. Het café is elke dag open vanaf tien uur, dus loop gerust eens binnen.",
   "website": "https://cafedestoof.nl/",
   "website_bereikbaar": true
@@ -5708,7 +5708,7 @@
   },
   "openingstijden": "Café: di-do 19:00-00:30, vr 12:00-01:00, za 14:00-01:00, zo 14:00-00:00, ma gesloten. Winkel: wo 12:00-18:00, do 12:00-19:00, vr-za 12:00-18:00, zo 12:00-17:00, ma-di gesloten",
   "opmerkingen": "Gekozen voor de categorie café in plaats van lunchroom: het is een bordspelcafé dat vooral 's avonds open is, met drankjes en borrelhapjes en zonder lunch- of ontbijtkaart. Er is ook een bordspelwinkel, maar daar past geen categorie bij. De site noemt het café kindvriendelijk, maar er is geen kindermenu of speelhoek. De tarieven staan als 'prijs op aanvraag' op de site. Er is een pagina over verhuur, die is niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een avondje Catan, een potje Magic of gewoon een nieuw spel uitproberen? Aan de Grotestraat in het centrum, vlak bij station Nijmegen, vind je een bordspelwinkel en een bordspelcafé onder één dak. Je loopt langs kasten vol spellen, kiest wat je leuk lijkt en het team legt aan tafel uit hoe het werkt.\n\nOndertussen bestel je koffie, een speciaalbiertje of een cocktail, met hapjes als bitterballen, mini-loempia's of een stuk taart. Veel snacks zijn vegetarisch. Vind je een spel echt leuk? Dan neem je het meteen mee naar huis uit de winkel. In de agenda staan ook avonden met Dungeons & Dragons, Magic-toernooien en een open speltafel.\n\nAlleen of met z'n tweeën loop je gewoon binnen. Kom je met vier of meer mensen, reserveer dan even een tafel.",
   "website": "https://dewitteraafbordspellen.nl/",
   "website_bereikbaar": true
@@ -6782,7 +6782,7 @@
   "naam": "Feestcafe de Gezelligheid",
   "openingstijden": "ma-wo gesloten, do 19:00-00:30, vr 19:00-02:00, za 14:00-02:00, zo 14:00-19:00 (vr en za toegang tot 01:00)",
   "opmerkingen": "Het café was vroeger het Nimweegs Feestcafé. 'Zaal of kelder' is gekozen omdat je het hele café kunt afhuren voor feesten en borrels; er is geen aparte zaal. Op de site staat 'het gezelligste café van Nijmegen'; dat hebben we niet overgenomen. De agenda noemt incidentele sluitingen voor besloten feesten.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om na een lange werkweek even helemaal los te gaan? Aan de Bloemerstraat, op loopafstand van het station, staat dit feestcafé. Vroeger heette het Nimweegs Feestcafé. Drie stellen die er jarenlang als stamgast kwamen, hebben de kroeg overgenomen. Je bestelt er een koud biertje of een wijntje en laat de dag achter je. Op vrijdag is de VrijMiBo een vaste afspraak.\n\nAls NEC speelt, staat de wedstrijd soms op het grote scherm. Kijk daarvoor in de agenda. Je kunt de zaak ook vastleggen voor een verjaardag of een bedrijfsborrel. Dat kan op elke dag behalve zaterdag. Het team zorgt dan voor warme en koude hapjes, en aan het eind van de avond voor een broodje kroket.\n\nJe kunt er van donderdag tot en met zondag terecht. Heb je een feest in gedachten? Bel, app of mail het team, of loop gewoon een keer binnen.",
   "website": "http://www.feestcafedegezelligheid.nl/",
   "website_bereikbaar": true
@@ -7057,7 +7057,7 @@
   "naam": "Franco James",
   "openingstijden": "ma-wo gesloten, do-vr 17:00-'till fun', za 15:00-'till fun', zo 15:00-21:00",
   "opmerkingen": "De site noemt geen sluitingstijd voor do-za ('Till fun'). Wet Spaghetti-avond op donderdag 'starting at 9a', waarschijnlijk 21:00 bedoeld. Het is niet duidelijk of dit live muziek is, daarom heb ik het kenmerk live muziek niet gekozen. Het e-mailadres eindigt op .nl, de website op .bar. Ik heb 'groepen' gekozen omdat de kelder geschikt is voor maximaal 16 personen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goed glas wijn en wat lekkers erbij, midden in de binnenstad? In de Priemstraat schenkt deze wijnbar flessen van kleine wijnmakers uit onder meer Piemonte, de Rhône, de Loire en Rheinhessen, ook oranje wijn. Daarbij kies je kleine hapjes, of je gaat voor het driegangen chefsmenu, dat ook vegetarisch kan. De kaart wisselt dagelijks.\n\nOp donderdagavond is het Wet Spaghetti-avond en verder zijn er geregeld proeverijen en avonden waarop een wijnmaker de bar overneemt. Wat er op het programma staat, zie je op hun Instagram. Onder de bar ligt een sfeervolle wijnkelder voor maximaal zestien mensen, die je kunt huren voor een diner, borrel of vergadering.\n\nDe bar is open van donderdag tot en met zondag. Je kunt gewoon binnenlopen, dus spreek af en schuif aan.",
   "website": "http://www.francojames.bar/",
   "website_bereikbaar": true
@@ -7141,7 +7141,7 @@
   "naam": "Freddy's",
   "openingstijden": "ma-wo 10:00-00:00, do-za 10:00-01:00, zo 11:00-00:00",
   "opmerkingen": "Op de site staat 'Koningsstraat 26', bij ons staat 'Koningstraat 26' (postcode is hetzelfde). Volledige naam: Freddy's Beerkitchen. Het noemt zich zelf een eetcafé met lunch en diner, dus heb ik restaurant als hoofdcategorie gekozen en café als extra; de voorgestelde categorie was café. De claim 'De beste burgers van Nijmegen' is niet overgenomen. De menupagina's zijn niet apart gelezen, omdat het ophalen daarvan mislukte.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een terrasje midden in de stad? Sinds 2016 zit Freddy's aan het Koningsplein, met een platenspeler die de hele dag muziek draait. Je kunt er binnenlopen voor een snelle koffie, maar ook uitgebreid lunchen of de avond lang blijven tafelen.\n\nOp de kaart staan vooral burgers, plus lunchgerechten die net iets anders zijn dan je gewend bent. Kom je alleen voor een drankje, dan kies je uit speciaalbier, wijn en highballs, met een aparte borrelkaart erbij. Is het fris buiten? Het terras wordt verwarmd.\n\nFreddy's is elke dag open vanaf de ochtend en blijft in het weekend open tot laat. Kleine en grote groepen zijn welkom. Reserveer via de site of stuur een appje en schuif aan.",
   "website": "https://freddysbeerkitchen.nl/",
   "website_bereikbaar": true
@@ -7597,7 +7597,7 @@
   "naam": "Goossens",
   "openingstijden": "ma-wo 12:00-23:00, do 12:00-00:00, vr-za 12:00-01:00, zo 12:00-23:00",
   "opmerkingen": "Openingstijden verschillen op de site: contactpagina noemt ma-wo en zo 12:00-23:00, do tot 00:00, vr-za tot 01:00; de footer noemt ma-do en zo 11:00-00:00, vr-za 11:00-01:00. Contactpagina-tijden overgenomen. Huisnummer op site is 31-A. Menukaart-PDF was niet leesbaar. Visgerechten van Graat alleen op zaterdag tot 17:00.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een wijntje in de zon midden in de stad? Aan de Grote Markt vind je Café Goossens: binnen een klein, knus bruin café, buiten een ruim terras met plekken in de zon en in de schaduw. In de winter zit je daar onder een overkapping met heaters, zodat je ook dan lekker naar het marktleven kunt kijken.\n\nDe nieuwe eigenaren geven het oude café een Italiaans tintje. Er staan wijnen van lokale wijnhandels op de kaart, acht taps met speciaalbier en uit het eigen keukentje komen bruschetta en focaccia voor lunch of borrel. Op zaterdag schuift vishandel Graat aan met kleine visgerechtjes, zoals mosselen en de vis van de dag.\n\nIets te vieren? Je kunt tafels op het terras reserveren voor je verjaardag of examenfeestje. Stuur ze een aanvraag via de site en schuif aan.",
   "website": "http://www.cafegoossens.nl/",
   "website_bereikbaar": true,
@@ -7735,7 +7735,7 @@
   "naam": "Groenewoud",
   "openingstijden": "di-zo 12:00-22:00",
   "opmerkingen": "De postcode op de site (6525 NW) wijkt af van onze gegevens (6523 NW). Op de menukaartpagina stond geen leesbare kaart. 'Vegetarisch' is gekozen omdat er bij groepsmenu's rekening wordt gehouden met vegetarische wensen. Er is geen apart vegetarisch menu gevonden, dus controleer dit even. De site linkt naar Michelin en Gault&Millau, maar welke vermelding of onderscheiding het restaurant daar heeft, is niet nagegaan.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om uitgebreid te tafelen in een pand met een lange geschiedenis? Aan de Groesbeekseweg, net buiten het centrum, eet je in een karakteristiek gebouw dat al sinds 1763 bestaat. Op het bord vind je een moderne Franse keuken: verfijnde gerechten die meegaan met de seizoenen en een eigentijdse draai krijgen.\n\nJe kunt hier zowel lunchen als dineren, met z'n tweeën of juist met een grotere groep. Kom je met zeven personen of meer, dan stelt de keuken een gezamenlijk menu voor je samen. Daarbij wordt rekening gehouden met allergieën en vegetarische wensen. De wijnkaart helpt je aan een passend glas bij elke gang.\n\nGroenewoud is open van dinsdag tot en met zondag. Reserveren doe je via de website of telefonisch, dus plan gerust je volgende etentje.",
   "website": "https://www.restaurantgroenewoud.nl",
   "website_bereikbaar": true
@@ -7945,7 +7945,7 @@
   "naam": "Heidi's Skihut",
   "openingstijden": "",
   "opmerkingen": "Op de site staan geen openingstijden en geen kaart met dranken of eten. Evenementen staan alleen op Facebook. De pagina 'INFO' bevat alleen de algemene voorwaarden van K.O. Company B.V. Daarin staat dat evenementen vanaf 18 jaar zijn, maar het is niet duidelijk of die leeftijdsgrens ook voor gewone avonden geldt. De zaak noemt zichzelf een feestcafé en hoort bij het Drie Gezusters-complex. Het is vooral een plek om te feesten, dus 'uitjes' is ook te verdedigen. Op de homepage staat een link naar tickets (/tickets), maar die pagina is niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Heb je zin in après-ski, maar is de dichtstbijzijnde piste te ver weg? In de Molenstraat, midden in het centrum van Nijmegen, haal je het wintersportgevoel gewoon naar de stad. Het barpersoneel loopt rond in lederhosen en dirndl, het bier komt in flinke pullen en de muziek bestaat uit meezingers waar je niet stil bij blijft staan.\n\nJe komt hier niet voor een rustig biertje in een hoekje. Je komt om te dansen, te hossen en uit volle borst mee te zingen met vrienden. De skihut hoort bij het Drie Gezusters-complex, dus je zit meteen op een plek waar je de hele avond kunt uitgaan.\n\nWil je alvast in de stemming komen? Zet de Spotify-lijst met Heidi's hitjes aan. Kijk daarna op Facebook welke feestavonden eraan komen, trommel je vrienden op en ga naar de Molenstraat.",
   "website": "https://skihutnijmegen.nl/",
   "website_bereikbaar": true
@@ -8244,7 +8244,7 @@
   "naam": "Holt Nijmegen",
   "openingstijden": "ma gesloten, di-za 10:00-18:00, zo 11:00-18:00",
   "opmerkingen": "Ik heb alleen de homepage gelezen. Holt is ook een hotel, en daarvoor is er geen passende categorie. De site spreekt zichzelf tegen over het aantal kamers: op de ene plek staan er 6, op de andere 5. Het café is volgens de openingstijden maar tot 18:00 open. Daarom twijfel ik tussen 'cafe' en 'lunch' als hoofdcategorie. De extra categorie zaalverhuur geldt voor het afhuren van de hele zaak voor besloten borrels, met pubquiz of bierproeverij erbij. De site noemt ook ijs, maar niet als belangrijk deel van het aanbod. Ik heb geen terras genoemd gezien.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Heb je zin in een plek waar je 's ochtends koffie drinkt en 's middags rustig doorgaat met een biertje? Op de hoek in de Houtstraat, vlak bij de Grote Markt, zit Holt. Het noemt zichzelf een all day café en zit ergens tussen koffiebar, lunchroom en kroeg in.\n\nVoor de lunch kies je uit stevige sandwiches, salades of een plank met kaas en vleeswaren, en er zijn ook vega- en vegan opties. Aan de tap zie je steeds wisselende craftbieren, en je kunt ook een cocktail of spritz bestellen. Je borrelplank stel je zelf samen. Wil je blijven slapen, dan kun je boven een van de hotelkamers boeken.\n\nJe kunt gewoon binnenlopen, maar kom je met een groep, reserveer dan even. 's Avonds kun je de hele zaak afhuren, bijvoorbeeld voor een pubquiz of bierproeverij.",
   "website": "https://www.holt-nijmegen.nl/",
   "website_bereikbaar": true
@@ -8275,7 +8275,7 @@
   },
   "openingstijden": "",
   "opmerkingen": "Holy Beans is vooral een koffiebranderij met een winkel voor koffiebonen (en een webshop), geen lunchroom. Op de site staat geen menukaart met ontbijt of lunch, en ook niet dat je er koffie kunt drinken. Daarom staat de hoofdcategorie op koffiezaak, maar die categorie past ook niet helemaal, want het gaat om een bonenwinkel. Openingstijden staan niet op de site. In het contactformulier staat 'High Tea' als onderwerp, maar verder wordt daar niets over uitgelegd. De winkel zit in het pand van De Hemel (Commanderie van Sint Jan).",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Ruik je vers gebrande koffie als je bij de Grote Markt rondloopt? Grote kans dat die geur van de Franseplaats komt. Daar branden ze in de Commanderie van Sint Jan, een klooster uit 1196 en hetzelfde pand als De Hemel, elke week koffie in kleine partijen van vijf kilo. Elke zak wordt nog met de hand dichtgemaakt.\n\nJe hoeft niet uit eindeloos veel soorten te kiezen. Er zijn drie vaste brandingen: een stevige uit Colombia, een bloemige uit Ethiopië en een zachte uit Brazilië. Je neemt ze mee als hele boon of gemalen voor jouw manier van koffiezetten. Weet je nog niet welke je wilt? Met het proefpakket probeer je ze alle drie.\n\nLoop gerust even binnen in de winkel. Je kunt ook online bestellen of een abonnement nemen, en binnen Nijmegen wordt je koffie op de fiets bezorgd.",
   "website": "http://www.holybeans.nl/",
   "website_bereikbaar": true
@@ -8368,7 +8368,7 @@
   "naam": "House of Billiards",
   "openingstijden": "ma-do 13:00-01:00, vr-za 13:00-02:00, zo 13:00-01:00",
   "opmerkingen": "Poolcafé met pool, snooker, darts en karaoke; de categorie 'uitjes' is gekozen omdat er geen aparte categorie voor biljart is. Het kenmerk 'groepen' is gebaseerd op het groepstarief voor karaoke (vanaf 8 personen). De site noemt geen terras, eten of sportuitzendingen. Er is ook een huistoernooi, maar de dag waarop dat gespeeld wordt is niet gecontroleerd.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om een avond lekker te ballen zonder dat je eerst een vereniging hoeft te zoeken? Aan de Graafseweg, vlak bij het centrum, zit al een kwart eeuw een poolcafé waar je gewoon binnenloopt voor een potje pool of snooker met een drankje erbij.\n\nBen je uitgekeken op de tafels, dan pak je de darts, of je gaat met je vrienden samen karaoke zingen. Speel je wat fanatieker? Dan is er een huistoernooi met poules en een knock-outfase, waar je je kunt meten met andere spelers. De spelregels voor pool en snooker staan handig op de site, dus ook als beginner weet je snel waar je aan toe bent.\n\nJe kunt er elke dag vanaf het begin van de middag terecht, en in het weekend tot laat in de nacht. Met een groep? Reserveer dan van tevoren een tafel of de karaoke via de website.",
   "website": "https://hobnijmegen.nl",
   "website_bereikbaar": true
@@ -8631,7 +8631,7 @@
   "naam": "In de Blaauwe Hand",
   "openingstijden": "ma gesloten, di-wo 15:00-00:00, do-vr 15:00-01:00, za 13:00-01:00, zo 14:00-22:00 (per 31-8-2026)",
   "opmerkingen": "De site noemt zichzelf 'het oudste café van Nijmegen sinds 1542'. Die claim is niet in de tekst overgenomen als feit, alleen als iets wat het café zelf zegt. Reserveren is niet mogelijk. Er wordt ook avondeten geserveerd, maar het is vooral een café, dus de hoofdcategorie is cafe. Ik heb alleen de homepage gelezen, met daarop de openingstijden en het adres.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om een biertje te drinken op een plek waar Nijmegenaren al eeuwenlang hetzelfde doen? In het straatje Achter de Hoofdwacht, vlak bij de Grote Markt, vind je dit café. Het zegt zelf al sinds 1542 open te zijn. Binnen zit je in een mooi gerestaureerd historisch interieur.\n\nBierliefhebbers kunnen hier hun hart ophalen. Er zijn twaalf tapkranen, waarvan zeven met steeds wisselende bieren, en er is een eigen huistripel, de Rooie Tieptop. Daarnaast staan er nog meer dan zestig flessen op de kaart. Krijg je trek, dan kun je kiezen uit een wisselende kaart met snacks, flammkuchen en avondeten.\n\nReserveren kan niet, dus loop gewoon binnen. Het café is vanaf de middag open, behalve op maandag.",
   "website": "https://indeblaauwehand.nl",
   "website_bereikbaar": true
@@ -8960,7 +8960,7 @@
   "naam": "Jan Nijmegen",
   "openingstijden": "ma-do 10:00-00:00, vr-za 10:00-01:00, zo 10:00-00:00",
   "opmerkingen": "De postcode op de site is 6511 KB, bij ons staat 6511 VR. JAN noemt zichzelf een plek voor lunch, borrel en diner met shared dining. Overweeg daarom restaurant als hoofdcategorie. De menukaart (pdf) en andere subpagina's zijn niet gelezen. Alleen de homepage is gebruikt.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om midden in de stad neer te strijken, of je nu wilt lunchen, borrelen of uitgebreid dineren? Op de Grote Markt vind je bij JAN een plek waar dat van 's ochtends tot laat allemaal kan.\n\nOverdag schuif je aan voor lunch of brunch, of gewoon voor een stuk taart. Later op de dag gaat het om borrelhapjes, cocktails en een goed glas wijn. 's Avonds bestel je shared dining-gerechten om met je tafel te delen, maar je kunt ook gewoon iets voor jezelf kiezen. Vegetarisch eten staat ook op de kaart. Bij mooi weer zit je op het terras, met de drukte van de markt om je heen.\n\nKom je met een groep vrienden? Reserveer dan je tafel via de website. JAN is elke dag vanaf tien uur open, en op vrijdag en zaterdag tot één uur 's nachts.",
   "website": "https://www.jannijmegen.nl",
   "website_bereikbaar": true
@@ -9205,7 +9205,7 @@
   },
   "openingstijden": "ma-di gesloten, wo op aanvraag, do 20:00-00:00, vr-za 20:00-02:00, zo op aanvraag",
   "opmerkingen": "Ik heb gekozen voor 'cafe' en niet voor de opgegeven categorie 'Lunchrooms en ontbijt'. Het is een bruin karaokecafé dat alleen 's avonds open is, en de site noemt geen eten. De agenda had geen evenementen, maar de site zegt dat het café 'gewoon geopend' is. Op de foto's staat een terras ('terras_vol.jpg'), maar in de tekst wordt geen terras genoemd, dus dat kenmerk heb ik niet gekozen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Heb je zin om eens flink uit volle borst mee te zingen? Dan moet je in de Bloemerstraat zijn. In dit knusse bruine café wordt elke vrijdag- en zaterdagavond de microfoon doorgegeven: vanaf een uur of tien kan iedereen het podium op, of je nu echt goed kunt zingen of vooral voor de lol meedoet.\n\nEen dj draait muziek uit alle tijden en neemt je verzoeknummer aan, ook via de BCM Request-app op je telefoon. Ondertussen haal je een drankje aan de bar en moedig je je vrienden aan. Ook op andere avonden kun je gewoon binnenlopen voor een biertje in een ontspannen sfeer.\n\nDonderdag tot en met zaterdag zijn de deuren 's avonds open, op woensdag en zondag alleen op aanvraag. Trommel je vrienden op, zoek alvast je favoriete nummer uit en kom een avondje zingen.",
   "website": "http://cafevandeelen.nl/",
   "website_bereikbaar": true
@@ -9909,7 +9909,7 @@
   },
   "openingstijden": "ma gesloten, di-vr vanaf 15:00, za-zo vanaf 13:00",
   "opmerkingen": "Vermoedelijke categorie lunchroom klopt niet: de site beschrijft een bruine kroeg (speciaalbier, cocktails, borrelhappen), open vanaf 13:00/15:00. Menukaart-PDF was niet leesbaar.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goed getapt biertje net buiten de drukte van de Grote Markt? Bovenaan de Grotestraat vind je een eigentijdse bruine kroeg waar Annelieke en George met hun team je persoonlijk ontvangen. Met acht kranen en een flinke kaart vol flesbieren valt er genoeg te ontdekken, en wie liever iets anders drinkt, kiest uit cocktails of wijn met een borrelhap erbij.\n\nIn de zomer zit je op het groene terras, in de winter kruip je bij een van de open haardjes. Op de piano liggen spellen klaar, er wordt gekaart en er zijn muziekquizzen, bingomiddagen en af en toe live muziek. Tijdens carnaval is dit de thuisbasis van CV de Deurdrievers.\n\nLoop gewoon eens binnen vanaf de middag, maandag zijn ze dicht.",
   "website": "http://www.lecafenijmegen.nl/",
   "website_bereikbaar": true,
@@ -10002,7 +10002,7 @@
   "naam": "Lebowski",
   "openingstijden": "di-do 15:00-00:00, vr 15:00-01:00, za 14:00-01:00, zo 14:00-22:00",
   "opmerkingen": "Het is een wijnbar. Er is een agendapagina, maar die heb ik niet gelezen. Daardoor is niet duidelijk of er live muziek is, en dat kenmerk staat er dus niet bij. De menukaart (pdf) heb ik ook niet gelezen. Op de groepenpagina staan diners en bites genoemd als arrangement. Op maandag is de zaak volgens de openingstijden gesloten.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goed glas wijn zonder gedoe? Aan de Bloemerstraat, midden in het centrum, kun je bij Lebowski aan de bar schuiven of met je vrienden een tafel bezetten. Een huiswijn zul je hier niet vinden. Wel een flinke selectie open wijnen die per seizoen wisselt, vaak van kleinere wijnhuizen of minder bekende druiven. Twijfel je wat je moet kiezen? Dan denkt het personeel graag met je mee.\n\nOverdag is het er rustig, 's avonds wordt het een stuk levendiger. Het ruime terras is verwarmd en beschut, dus ook in de winter kun je buiten zitten. Geef je een feestje of afstudeerborrel? Dan kun je de kelder of een extra ruimte huren.\n\nReserveren voor een tafel kan niet, dus loop gewoon binnen. Met een grotere groep stuur je ze vooraf een mailtje.",
   "website": "http://www.bar-lebowski.nl/",
   "website_bereikbaar": true
@@ -10901,7 +10901,7 @@
   "naam": "Marcus Antonius",
   "openingstijden": "ma 20:00-sluit, di-wo gesloten, do 20:00-sluit, vr 16:00-sluit, za 20:00-sluit, zo 16:00-sluit",
   "opmerkingen": "Op de site staat 'St. Anthonisplaats', bij ons staat 'Sint Anthoniusplaats': waarschijnlijk een tikfout op de site. De site is een oude WordPress-versie (6.0.2) met noindex, en het interview gaat over de opening. Of de openingstijden nog kloppen, kun je beter even controleren. De zaak noemt zich een gay danscafé met een dansvloer. Je zou het daarom ook onder 'uitjes' (club) kunnen zetten.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om te dansen, nieuwe mensen te leren kennen en gewoon helemaal jezelf te zijn? Aan de Sint Anthoniusplaats, schuin tegenover het Roze Huis, vind je een gay danscafé waar iedereen uit de LHBTI+-gemeenschap welkom is, en hetero's net zo goed.\n\nHet café is licht en modern ingericht. Je kunt er rustig met een drankje en een hapje aan de bar blijven hangen, maar je kunt ook de dansvloer opgaan. Via de digitale jukebox zet je zelf je favoriete nummers in de rij, zodat de avond precies klinkt zoals jij wilt.\n\nOp donderdag, zaterdag en maandag gaan de deuren 's avonds open, op vrijdag en zondag al vanaf de middag. Kijk even in de agenda op de site voor de specials en loop gewoon binnen.",
   "website": "https://marcus-antonius.nl/",
   "website_bereikbaar": true
@@ -12241,7 +12241,7 @@
   "naam": "Olivier wijnbar",
   "openingstijden": "ma gesloten, di-vr 14:00-00:00, za 12:00-01:00, zo 12:00-22:00",
   "opmerkingen": "In het reserveringsformulier kun je kiezen tussen 'Binnen' en 'Buiten'. Dat wijst op een terras, maar het woord terras staat nergens op de site, dus dat kenmerk heb ik niet toegevoegd. Over de toegankelijkheid voor rolstoelen staat niets op de site.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goed glas wijn na een middagje winkelen in het centrum? In de Hertogstraat vind je Olivier, een sfeervolle wijnbar waar je zo aanschuift voor een borrel met vrienden of een avondje uit met z'n tweeën.\n\nOp de kaart staan wijnen en andere dranken, met daarbij barbites en borrelplanken, zoals een Italiaanse plank met vleeswaren, kaas, brood en olijven. Ze proberen zoveel mogelijk producten uit de buurt te halen. Wil je er echt de tijd voor nemen, dan boek je een High Wine met hapjes. Dat kan ook met een groep, voor een verjaardag of een bedrijfsuitje. Het hele jaar door zijn er ook wijnproeverijen, van een basisles tot themaproeverijen over bijvoorbeeld Spanje.\n\nJe kunt binnen of buiten zitten. Reserveren doe je via de site of telefonisch. Op maandag is Olivier dicht.",
   "website": "http://Www.oliviernijmegen.nl/",
   "website_bereikbaar": true
@@ -12543,7 +12543,7 @@
   "naam": "PAAK Vinylbar",
   "openingstijden": "ma-di gesloten, wo-do 17:00-00:00, vr 17:00-03:00, za 12:00-03:00, zo 13:00-00:00",
   "opmerkingen": "De site is in het Engels. Op de eventsavonden zijn ze open tot 04:00 en vragen ze na 23:00 entree, wat afwijkt van de gewone openingstijden. Het eten komt van een tijdelijke pop-up van Le Petit Prince (do-za 13:00-20:00), daarom staat er geen keuken ingevuld. De drankkaart staat alleen in afbeeldingen, dus speciaalbier heb ik niet kunnen controleren. Op de homepage staat dat de bar ook uitgaansavonden met dj's tot laat organiseert; het is daarom de vraag of 'uitjes' er als extra categorie bij moet.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een avond waarop de muziek van echte platen komt? In deze vinylbar aan de Bloemerstraat, vlak bij het station, draaien dj's en selectors elke dag hun favoriete platen. Overdag kun je er rustig een potje pingpongen, een spelletje doen, op het knusse terras zitten of door de bakken van de eigen platenwinkel gaan.\n\n's Avonds draait alles om huisgemaakte cocktails, highballs, wijn en bier. Op donderdag wordt de platenwinkel een podium voor live muziek, en in het weekend dansen ze tot diep in de nacht op dj-avonden. Voor wat te eten kun je terecht bij de tijdelijke pop-up van Le Petit Prince, met sando's en curry.\n\nWil je met een groep komen, voor een cocktailworkshop of een verjaardag? Stuur ze dan even een berichtje. Kijk voor je gaat ook op de agenda wat er die week te doen is.",
   "website": "https://paakvinylbar.com/menu",
   "website_bereikbaar": true
@@ -14521,7 +14521,7 @@
   "naam": "Roxy's Tiki Bar",
   "openingstijden": "ma-wo gesloten, do 19:00-01:00, vr 16:00-01:00, za 15:00-01:00, zo 17:00-00:00",
   "opmerkingen": "Workshops zijn voor groepen van 6 tot 20 personen. Bedrijfsuitje wordt niet letterlijk genoemd; dit kenmerk is afgeleid van de groepsworkshop, dus graag controleren.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Even op vakantie zonder het vliegtuig in te hoeven? Op de Grotestraat in Nijmegen stap je zo een tropische tikibar binnen. Hier draait alles om exotische rumcocktails zoals de Mai Tai, de Zombie of de Jungle Bird, en die krijg je geserveerd in een echte tikimok. Heb je meer zin in een klassieker, dan maken ze ook gewoon een Mojito of Moscow Mule voor je.\n\nTrek gekregen? Bestel dan een burger, een wrap, een schaal nacho's uit de oven of een borrelplank om te delen. Er zijn ook vegetarische en vegane opties.\n\nWil je met een groep zelf leren shaken? Dan kun je een tiki-cocktailworkshop boeken, waarin je proeft en je eigen cocktail bedenkt. Kom gewoon langs van donderdag tot en met zondag, of mail om een workshop te plannen.",
   "website": "http://www.roxystikibar.nl/",
   "website_bereikbaar": true
@@ -14590,7 +14590,7 @@
   },
   "openingstijden": "",
   "opmerkingen": "De vermoedelijke categorie 'Lunchrooms en ontbijt' klopt niet: de site beschrijft een borrelcafé met speciaalbier en wijn, zonder lunch of ontbijt. Daarom staat de categorie op cafe. De site zegt dat het café elke dag open is, maar de openingstijden staan alleen in een afbeelding en konden niet worden gelezen. Op de borrelpagina staat nog een oude coronamelding, dus de site wordt mogelijk niet bijgehouden.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om de werkdag af te sluiten met een goed glas? Aan het Hertogplein, op de rand van het centrum, zit Café Royal in een mooi monumentaal pand. Het is een echt borrelcafé waar je na je werk zonder gedoe aanschuift voor een vers getapt biertje of een glas wijn.\n\nHou je van speciaalbier, dan zit je hier goed: op de kaart staan onder meer Duvel, Filou, Kasteel Rouge en abdijbieren als Leffe en Affligem. Tijdens de Vierdaagsefeesten is het plein extra druk met live optredens, de hele week lang.\n\nHeb je iets te vieren? Het café kun je ook afhuren voor een borrel, feestje of receptie. Loop gewoon eens binnen in de Hertogstraat en vraag wat er kan.",
   "website": "http://www.royaletendrinken.nl/",
   "website_bereikbaar": true
@@ -16478,7 +16478,7 @@
   "naam": "Tappers",
   "openingstijden": "",
   "opmerkingen": "Op de site staat alleen '6 dagen per week open'. Welke dagen dat zijn en hoe laat ze open zijn, staat er niet bij. Uit de site blijkt niet duidelijk of het om speciaalbier gaat. Er wordt alleen een 'uitgebreide bierkaart' met proeverij genoemd. Tappers hoort bij Gezellige Zaken Nijmegen. Ik heb alleen de homepage gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om met je vrienden of collega's de avond in te duiken? In de Van Welderenstraat vind je Tappers, een kroeg waar je terechtkunt voor een ontspannen borrel en waar het later op de avond ook een feestje kan worden. Er staat goede muziek op, het barpersoneel is gezellig en de week wordt opgevrolijkt met deals en activiteiten. Je kunt er zes dagen per week terecht.\n\nDoe je het liever met een groep? Dan kun je bij Tappers ook een teamuitje of feestje regelen, bijvoorbeeld een proeverij van de uitgebreide bierkaart of een cocktailworkshop.\n\nWil je zeker zijn van een plekje? Stuur dan even een appje om te reserveren en laat weten met hoeveel mensen je komt.",
   "website": "http://www.tappersnijmegen.nl/",
   "website_bereikbaar": true
@@ -16833,7 +16833,7 @@
   "naam": "The Shuffle",
   "openingstijden": "",
   "opmerkingen": "Er staan geen openingstijden op de site. De capaciteit van de zaal klopt niet overal: in de metabeschrijving staat 20 tot 250 personen, in de tekst op de pagina 20 tot 180. Het concertagenda staat alleen op Facebook. De link naar de dartbond verwijst naar seizoen 12-13 en is mogelijk verouderd. Bij ons ontbreekt de straat in het adres.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Heb je zin in een avondje biljarten, darten of gewoon een biertje aan de bar? Dan kun je terecht in The Shuffle, een gezellig café in een authentiek pand aan de Berg en Dalseweg. Je schuift aan de bar of zoekt een tafeltje op. Biljartvereniging 't Losse Polsje speelt hier en soms zie je ook dartteams hun competitie spelen.\n\nHou je van muziek? Elke maand is er een blues-sessie en daarnaast spelen er regelmatig bands. Ben je iets aan het plannen? Je kunt de feestruimte gebruiken voor een verjaardag, een vergadering of een ander evenement, voor groepen van ongeveer 20 tot 180 personen.\n\nKijk op hun Facebookpagina wat er in de agenda staat, of bel even om je feest te bespreken. Dat doe je het liefst na vijf uur 's middags.",
   "website": "https://www.cafetheshuffle.nl/",
   "website_bereikbaar": true
@@ -16887,7 +16887,7 @@
   "naam": "The Yard",
   "openingstijden": "ma 11:30-22:00, di-do 11:30-00:00, vr 11:30-22:00, za-zo 11:30-17:30",
   "opmerkingen": "De straat en het huisnummer ontbraken in onze gegevens; volgens de site is het Heyendaalseweg 141. Van 21 december 2026 tot en met 3 januari 2027 is The Yard gesloten voor de kerst. Het kenmerk 'lunch' is gekozen op basis van de broodjes; de site noemt geen lunchkaart.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Net klaar met sporten op de campus en zin in iets lekkers? Dan loop je zo door naar The Yard, de sportsbar in het Gymnasion aan de Heyendaalseweg. Vanaf half twaalf kun je er elke dag terecht voor koffie, een broodje, een eiwitshake of een snelle snack tussendoor.\n\nLater op de middag wordt het gezelliger: vanaf half vier gaan de taps open en staan er ook flessen bier klaar. Je kunt een potje poolen, live sport volgen op de schermen of vanaf het dakterras naar de wedstrijden op de sportvelden kijken.\n\nOp dinsdag, woensdag en donderdag blijft de bar tot middernacht open, in het weekend sluit hij vroeg. Spreek dus met je teamgenoten af voor een borrel na de training en kijk vooraf even naar de openingstijden.",
   "website": "https://www.ru.nl/services/eten-en-drinken/the-yard",
   "website_bereikbaar": true
@@ -16922,7 +16922,7 @@
   "naam": "Theatercafe N°23",
   "openingstijden": "ma-za bar 10:00-23:00, keuken 12:00-16:30 en 17:00-20:00; zo en schoolvakanties alleen open bij activiteiten",
   "opmerkingen": "Op de site heet het café 'Lindenberg Café' (in Lindenberg Cultuurhuis). De naam 'Theatercafe N°23' komt nergens voor, dus de naam kan verouderd zijn. Het café wordt niet als terras of zaalverhuur genoemd. De Lindenberg zelf doet wel aan zaalverhuur, maar dat gaat over het cultuurhuis en niet over het café. Het café heeft ook een volwaardige keuken, dus restaurant als hoofdcategorie kan ook.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Ga je naar een voorstelling of cursus in de Lindenberg aan de Ridderstraat? Dan kun je ervoor of erna even in het café van het cultuurhuis zitten. Je loopt er ook gewoon binnen voor koffie, een borrel of een hapje, ook als je verder niets op het programma hebt.\n\nDe keuken kookt vers en let op duurzaamheid. Veel gerechten zijn vegetarisch of vegan, en de ingrediënten komen van boeren en telers die goed zorgen voor hun dieren en land. De kaart verandert regelmatig. Je kunt er lunchen en vroeg dineren voor de voorstelling begint.\n\nOp maandag tot en met zaterdag is de bar open tot laat. Op zondag en in schoolvakanties ben je alleen welkom als er iets te doen is in het huis. Kijk dus eerst even in de agenda en reserveer online of telefonisch een tafel.",
   "website": "http://www.delindenberg.com",
   "website_bereikbaar": true
@@ -17073,7 +17073,7 @@
   "naam": "Tierney's",
   "openingstijden": "ma-wo 15:00-02:00, do 14:00-02:00, vr-za 12:00-04:00, zo 12:00-02:00",
   "opmerkingen": "De site is in het Engels. Tierney's is een keten met vestigingen in Haarlem en Nijmegen. Het eigen bier komt van Stolen Bicycle Brewery. Het kenmerk speciaalbier is daarop gebaseerd, maar de bierkaart heb ik niet gelezen. In de agenda staan ook muziek, karaoke en comedy, maar alleen de pubquiz op maandag stond er concreet voor Nijmegen. Daarom heb ik live muziek niet als kenmerk gekozen. Het volledig Ierse ontbijt en de Sunday lunch komen alleen uit Google-reviews en staan niet in de tekst. Ook catering heb ik niet als categorie opgenomen: de pagina over externe catering heb ik niet bekeken.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goed getapte pint en een potje voetbal op het scherm? In de Molenstraat, midden in het uitgaanshart van Nijmegen, vind je de Nijmeegse vestiging van Tierney's, een Ierse pub die ook een zaak in Haarlem heeft. Je kunt er overdag rustig binnenlopen voor een drankje of een hapje. 's Avonds wordt het levendiger.\n\nDe drankkaart is ruim, en je kunt er het bier van hun eigen Stolen Bicycle Brewery proeven. Bij je bier bestel je stevige pubgerechten. Grote sportwedstrijden worden uitgezonden, en elke maandagavond om acht uur is er een internationale pubquiz waar je met je vrienden aan meedoet.\n\nOp vrijdag en zaterdag blijft de pub open tot diep in de nacht. Wil je zeker zijn van een tafel, reserveer dan via de website.",
   "website": "https://www.tierneysirishpub.nl/irish-pub-nijmegen/",
   "website_bereikbaar": true
@@ -17536,7 +17536,7 @@
   "naam": "Van Buren",
   "openingstijden": "ma-vr vanaf 12:00, za vanaf 11:00, zo vanaf 12:00",
   "opmerkingen": "Er staan geen sluitingstijden op de site. De arrangementen en de zaalhuur lopen via de externe site eventidee.nl. Die links verwijzen deels naar Arnhem en Schede. De volledige dinerkaart past ook bij de categorie restaurant, maar de site profileert zich vooral als café/studentencafé.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een middag die vanzelf overgaat in een avond? In de Molenstraat kom je bij Café Van Buren binnen voor brunch of lunch, en daarna blijf je gewoon hangen voor de borrel aan de bar of op het terras. Bestel dan een van de speciaalbieren van de tap, een glas wijn of een kop koffie.\n\nHet pand voelt knus en bourgondisch. Aan de muren hangen oude portretten van Nijmeegse studentenverenigingen, professoren van de Radboud en leden van het Koningshuis. De naam verwijst naar de schuilnaam die Willem-Alexander gebruikte. 's Avonds kun je hier ook dineren, met vlees van de Big Green Egg en vegan gerechten op de kaart. Verder zijn er pubquizzen, muziekbingo's en grote clubavonden.\n\nKom je met een groep? Kijk dan naar de arrangementen, of reserveer online een tafel.",
   "website": "https://www.cafevanburen.nl/",
   "website_bereikbaar": true
@@ -17924,7 +17924,7 @@
   },
   "openingstijden": "",
   "opmerkingen": "De categorie lunchroom klopt niet: dit is een bruin café/latin kroeg met een kaart met borrelsnacks, en er staat geen ontbijt- of lunchkaart op de site. Daarom gekozen voor 'cafe'. Er staan geen openingstijden op de site. Het domein stuurt door naar cafewaalzicht.eatbu.com. De dansschool Aguanile geeft er les, maar is een aparte organisatie. Op de site staan twee verschillende telefoonnummers (+31657345580 en +31657345905) en twee mailadressen (waalzicht2021@gmail.com en info@cafewaalzicht.nl). Rolstoeltoegankelijk, hond welkom en kindvriendelijk zijn alleen gebaseerd op de standaard serviceicoontjes 'Accessible', 'Pets allowed' en 'Kid's corner'.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een drankje met de Stevenskerk recht tegenover je? Op het eiland Veur Lent aan de Oosterhoutsedijk zit dit oude bruine café, dat al sinds 1911 bekendstaat in Lent. Tegenwoordig heeft het een Caribische twist: je drinkt er een speciaalbiertje, je eet wat borrelhapjes en ondertussen klinkt er salsa uit de speakers. Op het verstopte terrasje tussen de palmbomen zie je de boten over de Waal varen, en in de serre zit je ook bij slechter weer lekker.\n\nOp vrijdagavond kun je vrij dansen op salsa, bachata en kizomba, en doordeweeks geeft een dansschool er les, met een gratis proefles om kennis te maken. In de zaal kun je ook een feest of vergadering houden, of een kinderfeestje vieren.\n\nKijk op de site of social media welke evenementen eraan komen en reserveer even voor je langskomt.",
   "website": "http://www.cafewaalzicht.nl/",
   "website_bereikbaar": true
@@ -18352,7 +18352,7 @@
   "naam": "YUCA",
   "openingstijden": "ma-di gesloten, wo-do 17:00-00:00, vr-zo 12:00-00:00",
   "opmerkingen": "Gemeld als café, maar de site presenteert zich als restaurant en cocktailbar met een volledige dinerkaart (shared dining). Daarom is restaurant de hoofdcategorie en staat cafe als extra categorie. Het logo noemt ook 'club'. De zaak is alleen met pin te betalen. De eventpagina met live muziek heb ik niet zelf gelezen. Lunch is er alleen van vrijdag tot en met zondag.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een avond die begint met tropische hapjes om te delen en eindigt met een cocktail op de beat van de muziek? Dan zit je goed aan Plein 1944, midden in het centrum van Nijmegen.\n\nBij YUCA bestel je kleine gerechten voor de hele tafel. Daarna schuif je door naar de bar voor een van hun eigen cocktails. De sfeer is stijlvol maar informeel, met een tropisch randje. In het weekend kun je er ook al lunchen. Op de eventkalender vind je verder live muziek en clubavonden, dus het kan zomaar laat worden.\n\nYUCA is open van woensdag tot en met zondag. Je kunt een tafel reserveren of gewoon binnenlopen. Neem wel je pinpas mee, want contant geld nemen ze niet aan.",
   "website": "https://yucanijmegen.com",
   "website_bereikbaar": true
