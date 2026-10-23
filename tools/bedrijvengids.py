@@ -18,6 +18,7 @@ import json
 import random
 import pathlib
 import re
+import shutil
 import sys
 import unicodedata
 import urllib.parse
@@ -215,9 +216,15 @@ def osm_uit_csv(pad, soorten, plaatsen=("Nijmegen",)):
 
 def samenvoegen(gids, overig, bezet_elders=frozenset()):
     """Bedrijven uit de gids gaan voor; dezelfde naam uit OSM/Overture valt dan weg."""
+    # Ook dezelfde website telt als hetzelfde bedrijf ("Eetbar MikMak" in de gids, "MikMak" in OpenStreetMap)
     bekend = {sleutel(b["naam"]) for b in gids}
+    sites = {domein(b["website"]).lower() for b in gids if b.get("website")}
     gids.sort(key=lambda b: b["naam"].lower())
-    overig = sorted((b for b in overig if sleutel(b["naam"]) not in bekend), key=lambda b: (b["naam"].lower(), b["adres"]))
+    uniek = {}
+    for b in overig:
+        if sleutel(b["naam"]) not in bekend and not (b.get("website") and domein(b["website"]).lower() in sites):
+            uniek.setdefault((b["naam"], b["adres"]), b)
+    overig = sorted(uniek.values(), key=lambda b: (b["naam"].lower(), b["adres"]))
     # Eigen pagina's voor de aangevulde bedrijven; dezelfde naam op meer adressen (ketens) krijgt de straat erbij
     # Eerder uitgedeelde slugs blijven staan (de url mag niet veranderen); alleen nieuwe bedrijven krijgen er een
     vorig = {}
@@ -807,6 +814,13 @@ def main(bron):
     (ROOT / "data" / "bedrijvengids-vermeldingen.json").write_text(
         json.dumps(alle_vermeldingen, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     schrijf("bedrijvengids", start_pagina(list(groepen.items())))
+    # Pagina's die bij geen enkele categorie meer horen en geen doorverwijzing hebben (bijvoorbeeld een dubbel, of een
+    # cafetaria die volgens de scan bij afhaal hoort) haal ik weg; ze zijn nooit als echte vermelding online geweest
+    bewaren = {b["slug"] for _, gids, overig in (x for cats in groepen.values() for x in cats) for b in gids + overig}
+    bewaren |= {b["slug"] for b, _ in alle_weg}
+    for map_ in (ROOT / "bedrijvengids").iterdir():
+        if map_.is_dir() and map_.name not in bewaren:
+            shutil.rmtree(map_)
 
 
 if __name__ == "__main__":
