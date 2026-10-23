@@ -2,13 +2,16 @@
 
 Schrijft data/bedrijvengids-websites.json: per bedrijf de uitkomst. tools/bedrijvengids.py laat de link weg bij een
 site die niet bestaat (domein onbekend, geen verbinding, 404/410) en gebruikt het adres waar een site naar doorstuurt.
-Een site die bots weert (403, 429, 5xx) telt als werkend: die opent in een browser meestal wel.
+Alleen een onbekend domein of een 404/410 telt als kapot. Een site die bots weert (403, 429, 5xx, verbroken of
+trage verbinding) telt als werkend: die opent in een browser meestal wel. Een verdwenen subpagina (404) wordt de
+homepage van dezelfde site, als die wel werkt.
 
 Draait via .github/workflows/websites-controleren.yml (vanuit de sandbox van Claude is internet dicht).
 """
 import concurrent.futures
 import json
 import pathlib
+import re
 import socket
 import ssl
 import time
@@ -30,6 +33,11 @@ def controleer(url):
                 return True, r.geturl(), "%d" % r.status
         except urllib.error.HTTPError as fout:
             if fout.code in (404, 410):
+                home = re.match(r"https?://[^/]+/", url + "/").group(0)
+                if home.rstrip("/") != url.rstrip("/"):
+                    werkt, eind, reden = controleer(home)
+                    if werkt:
+                        return True, eind, "subpagina weg (%d), homepage werkt" % fout.code
                 return False, url, "pagina bestaat niet (%d)" % fout.code
             return True, url, "%d (weert mogelijk bots)" % fout.code
         except urllib.error.URLError as fout:
@@ -41,10 +49,11 @@ def controleer(url):
                 url = "http://" + url[8:]
                 continue
             laatste = str(reden)[:100]
-        except (socket.timeout, TimeoutError, ConnectionError) as fout:
+        except (socket.timeout, TimeoutError, ConnectionError, OSError) as fout:
             laatste = str(fout)[:100] or "geen antwoord"
         time.sleep(3)
-    return False, url, laatste or "geen antwoord"
+    # Geen antwoord of verbinding verbroken: vaak een site die bots weert; de link laten staan
+    return True, url, "twijfel: " + (laatste or "geen antwoord")
 
 
 def main():
