@@ -73,6 +73,13 @@ PER_CATEGORIE = {
         "Kenmerken: terras alleen als de site een terras noemt; vegan alleen als er vegan gerechten of een vegan menu genoemd "
         "worden (vegetarisch is iets anders); kindvriendelijk bij een kindermenu of speelhoek; groepen bij een groepsmenu of "
         "zaal voor groepen. Noem in de tekst de keuken (bijvoorbeeld Italiaans, Japans, Hollands) en vul het veld keuken in.")},
+    "lunch": {"kenmerken": KENMERKEN_ETEN, "uitleg": (
+        "Een lunchroom is een zaak waar je overdag zit voor ontbijt, lunch of brunch, met broodjes, salades, soep of "
+        "eiergerechten. Een volwaardige dinerkaart in de avond: restaurant. Vooral koffie met hooguit iets zoets erbij: "
+        "koffiezaak. Vooral brood en gebak om mee te nemen: bakkerij. Een kroeg: cafe. Afhalen of bezorgen zonder zitplaatsen: afhaal. "
+        "Kenmerken: ontbijt alleen bij ontbijt of brunch op de kaart; terras alleen als de site een terras noemt; vegan alleen "
+        "bij vegan gerechten (vegetarisch is iets anders); kindvriendelijk bij een kindermenu of speelhoek; groepen alleen bij een "
+        "groepsmenu of aparte ruimte voor groepen, niet bij 'groepen in overleg'. Vul het veld keuken alleen in als de site een keuken noemt.")},
 }
 
 SCHEMA = {

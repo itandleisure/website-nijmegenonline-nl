@@ -279,6 +279,7 @@
 /op-kamers-in-nijmegen-waar-begin-ik-mijn-zoektocht/ /het-geheim-van-een-studentenkamer-vinden-in-nijmegen/ 301
 /dansen-is-weer-helemaal-hip-hier-kan-je-dat-doen/ /de-beste-dansscholen-in-nijmegen/ 301
 # bedrijvengids (tools/bedrijvengids.py)
+/bedrijvengids/a-tazza-rima-thee-koffie-meer/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/als-toen/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/ankara-restaurant/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/ararat-armeens-restaurant/ /bedrijvengids-categorie/restaurant/ 301
@@ -294,12 +295,14 @@
 /bedrijvengids/betty-mora-italian-canteen/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/bhalu-nijmegen/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/bij-babs/ /bedrijvengids-categorie/restaurant/ 301
-/bedrijvengids/bij-jan/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/bodytecnijmegen/ /bedrijvengids-categorie/sportschool/ 301
 /bedrijvengids/borboleta/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/brasserie-de-altena/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/brasserie-le-duc/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids/broodje-horeca/ /bedrijvengids-categorie/lunch/ 301
+/bedrijvengids/broodje-maxima/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/brunswick-nijmegen/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids/cafe-the-templar/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/chicken-nijmegen/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/chinees-indisch-restaurant-lotus/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/commanderie-van-sint-jan/ /bedrijvengids-categorie/restaurant/ 301
@@ -349,6 +352,7 @@
 /bedrijvengids/landgoed-brakkesteyn/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/little-india/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/little-yard/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids/louis/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/lume/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/lunch-lovers/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/manna/ /bedrijvengids-categorie/restaurant/ 301
@@ -372,6 +376,8 @@
 /bedrijvengids/paul-van-zoelen/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/peking/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/personal-fitness-nederland-nijmegen/ /bedrijvengids-categorie/sportschool/ 301
+/bedrijvengids/phocas-over-the-top/ /bedrijvengids-categorie/lunch/ 301
+/bedrijvengids/piccolino-patathuisje/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/pinoccio-nijmegen/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/pizza-cafe-desem/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/plesant/ /bedrijvengids-categorie/restaurant/ 301
@@ -399,6 +405,7 @@
 /bedrijvengids/taj-plaza/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/tasty-on-the-road/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/the-foodfather-nijmegen/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids/thuis-bij-inge/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/toko-oost/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/trafo/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/ubeda-sports/ /bedrijvengids-categorie/sportschool/ 301
@@ -426,6 +433,7 @@
 /bedrijvengids-categorie/veganistisch/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids-categorie/vegetarisch/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids-categorie/zuid-amerikaans-restaurant/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids-categorie/high-tea/ /bedrijvengids-categorie/lunch/ 301
 # agenda (tools/agenda.py)
 /agenda/ /nijmegen-evenementen-overzicht/ 301
 /events/10e-nijmeegse-cultuurquiz/ /nijmegen-evenementen-overzicht/ 301

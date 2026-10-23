@@ -121,6 +121,42 @@ CATEGORIEEN = [{
     "voorbeeld": {"naam": "Jouw restaurant", "foto": "assets/uploads/2022/11/restaurant-eten-in-nijmegen.webp",
                   "kenmerken": ["terras", "vegan"], "actie": "Gratis dessert bij een diner voor twee"},
     "knop_voorbeeld": "reserveren, menukaart, bellen",
+}, {
+    "slug": "lunch",
+    "listdom": {"lunch", "high-tea"},
+    "bron_csv": "lunch-aangevuld.csv",
+    "plaatsen": {"Nijmegen", "Lent", "Oosterhout"},
+    "naam": "Lunchrooms en ontbijt in Nijmegen",
+    "enkelvoud": "Lunchroom",
+    "groep": "Eten en drinken",
+    "soorten": {"Lunchroom"},
+    "schema": "CafeOrCoffeeShop",
+    "beschrijving": "Lunchen of ontbijten in Nijmegen: alle lunchrooms op een rij, van een broodje op de markt tot "
+                    "uitgebreid brunchen, met adressen, openingstijden, terrassen en een kaart.",
+    "intro": "<p>Even pauze tijdens het shoppen, uitgebreid brunchen op zondag of een snelle lunch tussen twee colleges door? "
+             "In Nijmegen zit je nooit ver van een goede lunchroom: rond de Grote Markt en de Hertogstraat, in de "
+             "Benedenstad aan het water, maar ook in Oost, Lent en op de campus.</p>"
+             "<p>Op deze pagina vind je alle lunchrooms in Nijmegen.</p>",
+    "faq": [
+        ("Waar kun je goed brunchen in Nijmegen?",
+         "Veel lunchrooms in Nijmegen serveren in het weekend een uitgebreid ontbijt of brunch. Filter op ontbijt om "
+         "de zaken te zien die dat zelf op hun site noemen."),
+        ("Waar kun je in Nijmegen op een terras lunchen?",
+         "In het centrum vind je terrassen op de Grote Markt, het Kelfkensbos en de Waalkade. Filter op terras voor de "
+         "lunchrooms die er zelf een hebben."),
+        ("Kan ik vegan lunchen in Nijmegen?",
+         "Ja, steeds meer lunchrooms hebben vegan broodjes, bowls of taart. Filter op vegan om ze te vinden."),
+    ],
+    "artikelen": ["lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes", "hapje-eten-en-drinken-in-nijmegen",
+                  "op-zoek-naar-de-beste-high-tea-locaties-in-nijmegen-5-tips-waar-je-meteen-enthousiast-van-wordt"],
+    "blogs": ["lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes", "hapje-eten-en-drinken-in-nijmegen",
+              "op-zoek-naar-de-beste-high-tea-locaties-in-nijmegen-5-tips-waar-je-meteen-enthousiast-van-wordt"],
+    "meervoud": "lunchrooms",
+    "blogonderwerp": "lunchen en ontbijten",
+    "filtervoorbeeld": "een terras of vegan lunch",
+    "voorbeeld": {"naam": "Jouw lunchroom", "foto": "assets/uploads/2023/04/de-bruijn-lunchen-op-de-markt-terras-768x384.webp",
+                  "kenmerken": ["terras", "ontbijt"], "actie": "Gratis koffie bij elke lunch"},
+    "knop_voorbeeld": "reserveren, menukaart, bellen",
 }]
 
 
@@ -417,6 +453,7 @@ def pakketten_toepassen(bedrijven, pad, vandaag):
         if not actief:
             continue
         b["pakket"] = p["pakket"]
+        b["ook_in"] = p.get("ook_in", [])
         if p.get("logo") and not b["foto"]:
             b["foto"] = p["logo"]
         if p.get("fotos"):
@@ -765,7 +802,7 @@ def main(bron):
     pad = ROOT / "data" / "bedrijvengids.json"
     opgeslagen = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
     scan = json.loads((ROOT / "data" / "bedrijvengids-scan.json").read_text(encoding="utf-8"))
-    gebruikt, groepen, alle_weg, alle_vermeldingen = set(), {}, [], {}
+    gebruikt, groepen, alle_weg, alle_vermeldingen, gebouwd = set(), {}, [], {}, []
     for cat in CATEGORIEEN:
         csv_ = bron / "advies" / "osm-bedrijvengids" / cat["bron_csv"]
         if xml_.exists() and csv_.exists():
@@ -800,14 +837,19 @@ def main(bron):
             doorverwijzen(b, cat)
         alle_weg += [(b, cat) for b in weg]
         alle_vermeldingen.update(vermeldingen(gids + overig, cat))
+        gebouwd.append((cat, gids, overig))
+        print("%s: %d uit de gids, %d aangevuld, %d niet (meer) in de gids" % (cat["slug"], len(gids), len(overig), len(weg)))
+    # Betalende bedrijven kunnen ook bij andere categorieën staan ("ook_in" in data/bedrijvengids-pakketten.json): daar
+    # alleen met hun kaart, de pagina blijft bij de eigen categorie
+    for cat, gids, overig in gebouwd:
+        extra = [b for c, g, o in gebouwd if c is not cat for b in g + o if cat["slug"] in b.get("ook_in", [])]
         artikelen = [(s_, titel_van(s_)) for s_ in cat["artikelen"] if titel_van(s_)]
-        schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen))
+        schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig + extra, artikelen))
         for b in gids + overig:
             anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
             schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen))
-        blog_blokken(cat, gids + overig)
-        groepen.setdefault(cat["groep"], []).append((cat, gids, overig))
-        print("%s: %d uit de gids, %d aangevuld, %d niet (meer) in de gids" % (cat["slug"], len(gids), len(overig), len(weg)))
+        blog_blokken(cat, gids + overig + extra)
+        groepen.setdefault(cat["groep"], []).append((cat, gids, overig + extra))
     if xml_.exists():
         pad.write_text(json.dumps(opgeslagen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     schrijf_redirects(alle_weg, [(oud, cat["slug"]) for cat in CATEGORIEEN for oud in sorted(cat["listdom"]) if oud != cat["slug"]])
