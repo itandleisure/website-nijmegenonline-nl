@@ -479,12 +479,18 @@ def titel_van(slug_):
     return html.unescape(re.sub(r"<[^>]+>", "", m.group(1))).strip() if m else None
 
 
-def scan_toepassen(bedrijven, pad):
-    """Teksten uit tools/bedrijven_scan.py: een voorstel komt als concept (noindex) op de pagina, goedgekeurd gaat Google in."""
+def scan_toepassen(bedrijven, pad, eigen_tekst=False):
+    """Teksten uit tools/bedrijven_scan.py: een voorstel komt als concept (noindex) op de pagina, goedgekeurd gaat Google in.
+    eigen_tekst: bedrijven met een tekst uit de oude gids houden die tot de redactie het voorstel goedkeurt;
+    kenmerken en openingstijden krijgen ze wel meteen."""
     scan = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
     for b in bedrijven:
         s = scan.get(b["slug"], {})
         if s.get("status") not in ("voorstel", "goedgekeurd") or not s.get("tekst") or not s.get("lijkt_actief", True):
+            continue
+        if eigen_tekst and s["status"] != "goedgekeurd":
+            b["tijden_site"] = b.get("tijden_site") or s.get("openingstijden", "")
+            b["kenmerken"] = s.get("kenmerken", [])
             continue
         b["tekst"] = "\n".join("<p>%s</p>" % esc(a.strip()) for a in re.split(r"\n\s*\n", s["tekst"]) if a.strip())
         b["concept"] = s["status"] != "goedgekeurd"
@@ -586,6 +592,7 @@ def main(bron):
         opgeslagen = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))[cat["slug"]]
         gids, overig = opgeslagen["gids"], opgeslagen["overig"]
     scan_toepassen(overig, ROOT / "data" / "bedrijvengids-scan.json")
+    scan_toepassen(gids, ROOT / "data" / "bedrijvengids-scan.json", eigen_tekst=True)
     websites_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-websites.json")
     wijzigingen_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-wijzigingen.json")
     pakketten_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-pakketten.json", datetime.date.today())

@@ -130,7 +130,7 @@ def main(argv):
     scan = json.loads(UIT.read_text(encoding="utf-8")) if UIT.exists() else {}
     client = anthropic.Anthropic()
     te_doen = []
-    for b in gids["overig"]:
+    for b in gids["gids"] + gids["overig"]:
         eerder = scan.get(b["slug"], {})
         klaar = eerder.get("status") == "voorstel" and eerder.get("website_bereikbaar") and eerder.get("tekst")
         # Wat de redactie al goedkeurde of verwijderde, blijft staan; alleen met --alleen opnieuw
