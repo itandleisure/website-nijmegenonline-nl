@@ -167,7 +167,7 @@
   },
   "openingstijden": "ma-zo 08:00-17:00",
   "opmerkingen": "Alleen overdag open (08.00-17.00) met ontbijt, lunch en borrel, dus gekozen voor lunch in plaats van restaurant. De naam op de site is 'AN'; Bairro Alto en De Kantine zijn zusterzaken. Er is ook een pagina over een Bottomless Boozy Brunch en je kunt er taart bestellen (Bakery), maar de details daarvan zijn niet gelezen. De homepage zelf gaf weinig tekst, daarom is de zoekindex van de site gebruikt. De keuken is niet duidelijk omschreven; 'Internationaal' is een inschatting.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om je dag te beginnen met een goede kop koffie en uitzicht op het groen? Aan de rand van het Hart van de Waalsprong in Lent, met de natuur en de Waal op de achtergrond, vind je AN. Al vanaf acht uur 's ochtends kun je er terecht voor specialty coffee van een eigen blend en een ontbijtje.\n\nVoor de lunch kies je van een huisgemaakte kaart met klassiekers van de zusterzaken Bairro Alto en De Kantine, aangevuld met verrassende gerechten. Later op de middag schuif je aan voor een borrel met wijn, een espresso martini en snacks zoals oesterzwambitterballen of bloemkoolbites.\n\nAN is elke dag open van 08.00 tot 17.00 uur. Reserveren kan niet, dus loop gewoon even binnen aan het Annie van Velzenhof.",
   "website": "https://www.an-bairroalto.nl/",
   "website_bereikbaar": true
@@ -265,7 +265,7 @@
   "naam": "Anne&Max",
   "openingstijden": "ma-zo 08:00-17:00, officiële feestdagen 10:00-17:00",
   "opmerkingen": "Dit is een vestiging van de keten Anne&Max. De canonical URL is nu /vestigingen/nijmegen/. In de FAQ wordt gevraagd of de zaak geschikt is voor kinderen, maar het antwoord was niet te lezen, dus 'kindvriendelijk' is niet aangevinkt. Op de site staat ook catering aanvragen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om de dag rustig te beginnen in de Lange Hezelstraat? In de Nijmeegse vestiging van Anne&Max, een keten van koffie- en lunchzaken, zit je in een monumentaal pand met hoge ramen en veel daglicht. Het voelt een beetje als een huiskamer.\n\nJe komt er 's ochtends voor specialty coffee met een croissant of een uitgebreid ontbijt. Tussen de middag schuif je aan voor de lunch voordat je verder de stad in gaat. Valt er iets te vieren? Dan kun je ook een high tea doen. Bij mooi weer zit je op het terras, en de Waal en het Kronenburgerpark zijn vlakbij.\n\nJe bent er elke dag van 's ochtends vroeg tot eind van de middag welkom. Je kunt reserveren, maar ook afhalen of laten bezorgen.",
   "website": "https://www.annemax.nl/vestigingen/nijmegenlangehezel/",
   "website_bereikbaar": true
@@ -472,7 +472,7 @@
   "naam": "Atelier",
   "openingstijden": "di-za vanaf 08:30 tot laat, zo vanaf 09:00 tot laat, ma gesloten",
   "opmerkingen": "Het gaat om Atelier Bar & Hotel: een all-day bar (brunch, barfood en borrel) met een boutiquehotel erboven. Het hotel past in geen van de categorieën. Op de homepage staat 'open everyday', maar volgens de contactpagina is de bar van dinsdag tot en met zondag open. Dat maandag gesloten is, is daarvan afgeleid. Op de homepage staat ook 'new website loading', dus de site wordt mogelijk binnenkort vernieuwd. De keuken heet op de site 'bistro-twist'. De site linkt verder naar 'Reformer Pilates & City Sauna' onder 'Explore Nijmegen'. Die pagina heb ik niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een uitgebreide brunch midden in de stad, die zomaar kan overlopen in een borrel? Dan zit je goed bij Atelier aan de Van der Brugghenstraat, vlak bij het Hertogplein. Dit is een all-day bar met een bistro-achtige kaart: frisse, gezonde gerechten en hartige brunchklassiekers, en daarbij een goede kop koffie of een vers sapje.\n\nLater op de dag schuif je aan voor barfood en een cocktail, een glas wijn of een speciaalbiertje. Daarmee is het een fijne plek voor een lunchafspraak, een middagje met vrienden of een avond die wat langer duurt. Boven de bar zit trouwens een klein boutiquehotel, mocht je bezoek van buiten de stad krijgen.\n\nDe bar is van dinsdag tot en met zondag open vanaf de ochtend tot laat. Je kunt online een tafel reserveren, dus kijk even op de site en plan je brunch.",
   "website": "https://www.atelier-nijmegen.nl/",
   "website_bereikbaar": true
@@ -591,7 +591,7 @@
   "naam": "Bagels & Beans",
   "openingstijden": "",
   "opmerkingen": "Ik kon de vestigingspagina voor Nijmegen niet ophalen en heb het adres en de openingstijden niet kunnen controleren. Ook op de overzichtspagina met vestigingen werd Nijmegen niet gevonden. Kijk daarom na of de vestiging aan de Van Broeckhuysenstraat nog open is. Het kenmerk 'ontbijt' heb ik niet aangevinkt, omdat het menu in een PDF staat die ik niet heb gelezen. Of 'afhalen' of 'bezorgen' in Nijmegen kan, is niet bevestigd. De site heeft wel een algemene bestelpagina.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Heb je zin om rustig wakker te worden met een bagel en een goede kop koffie? Dan kun je in Nijmegen terecht bij de vestiging van de keten Bagels & Beans. De formule draait om rustig aan doen: je schuift aan voor ambachtelijke bagels met allerlei soorten beleg, verse sappen en koffie die ze zelf branden.\n\nOp de kaart staan hartige klassiekers, zoals een clubsandwich-bagel met kalkoenfilet of een bagel met gerookte wilde zalm met MSC-keurmerk. Heb je meer trek in iets zoets, dan is er bijvoorbeeld een bagel met pindakaas, aardbei en banaan. Er zijn ook salades.\n\nBekijk de menukaart vooraf op de website en loop binnen voor een ontbijt of lunch. Wil je liever thuis eten? Via de site kun je ook bestellen.",
   "website": "https://bagelsbeans.nl",
   "website_bereikbaar": true
@@ -625,7 +625,7 @@
   "naam": "Bairro Alto",
   "openingstijden": "ma-zo 08:30-17:00",
   "opmerkingen": "De pagina met menukaarten laadde zonder inhoud; daarom is niet nagegaan of er vegan of glutenvrije opties zijn. Een terras wordt niet genoemd, alleen het parkje tegenover de zaak. Bairro Alto hoort bij dezelfde groep als De Kantine en AN. Op de site heet de zaak zelf 'Koffiebar'.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een rustige ochtend midden in de stad? Aan de Kannenmarkt, met uitzicht op een groen stadsparkje, schuif je aan voor ontbijt, een goed belegd broodje bij de lunch of gewoon een kop koffie met iets lekkers. De taarten en cakes komen uit hun eigen bakkerij.\n\nMet mooi weer is het picknicksysteem leuk: je stelt online of aan de bar zelf een mand samen, bijvoorbeeld met açaibowls, salades, broodjes, cake en verse sapjes. Je krijgt er ook een kleedje bij, dus je kunt meteen naar het parkje voor de deur, naar de Waal of naar het Kronenburgpark. Moet je werken? Naast de deur zit Bairro's Buro, waar je met je laptop kunt zitten en via een QR-code je bestelling doet.\n\nJe bent elke dag van 's ochtends tot eind van de middag welkom. Reserveren kan niet, dus loop gewoon even binnen.",
   "website": "https://www.bairroalto.nl/",
   "website_bereikbaar": true
@@ -1507,7 +1507,7 @@
   },
   "openingstijden": "ma 09:30-17:00, di gesloten, wo-zo 09:30-17:00",
   "opmerkingen": "Het is een foodcafé dat alleen overdag open is (09:30-17:00), met ontbijt, lunch, high tea en borrel. Daarom staat het onder lunch en niet onder restaurant. Er is geen dinerkaart. De menukaarten staan alleen als pdf op de site en die zijn niet gelezen. Er is geen echte keuken (zoals Italiaans) genoemd, dus het veld keuken is 'Lunchgerechten'. Op de site staat 'bijzondere medewerkers'. Mogelijk gaat het om een zaak die mensen met een afstand tot de arbeidsmarkt laat meewerken, maar dat zegt de site niet met zoveel woorden.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om uitgebreid te ontbijten of rustig te lunchen in het centrum? Aan de Van Welderenstraat zit BLUF. Foodcafé in een sfeervol pand uit de jaren '20. Je komt er voor een lunchgerecht, een kop koffie of thee met iets zoets dat ze zelf bakken, of een borrel aan het eind van de middag.\n\nMet een groepje kun je samen delen: er zijn een shared lunch, shared tasting met zoetigheden, high tea, high wine en high beer. Bijna alles wordt vers in de eigen keuken gemaakt, samen met een bijzonder team medewerkers. Daardoor houden ze makkelijk rekening met dieetwensen en allergieën. Kijk ook even op het krijtbord, want daar staan de specials.\n\nJe kunt er overdag terecht, behalve op dinsdag. Wil je zeker zijn van een tafeltje? Reserveer dan van tevoren via de website.",
   "website": "https://www.blufnijmegen.nl/",
   "website_bereikbaar": true
@@ -1699,7 +1699,7 @@
   },
   "openingstijden": "wo-ma 09:00-17:00, di gesloten",
   "opmerkingen": "De zaak is alleen overdag open (9-17 uur) en noemt zichzelf een 'lunchroom'. Er is geen dinerkaart, daarom is 'lunch' gekozen als hoofdcategorie in plaats van restaurant. Er wordt geen alcohol geschonken. Het kenmerk 'parkeren' is gekozen op basis van de FAQ: in de buurt zijn openbare parkeerplekken, betaald direct bij de zaak en gratis verderop in de wijk. Volgens de FAQ is er ook catering, maar het antwoord daarover was niet volledig te lezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een rustige ochtend met een versgezette cappuccino en een plak huisgemaakte taart? Dan zit je goed bij Brasserie Jolie aan de Daalseweg in Nijmegen-Oost. Je komt hier voor ontbijt, lunch of gewoon koffie met iets lekkers, en alles wordt in eigen keuken gemaakt, zoveel mogelijk met lokale producten van het seizoen.\n\nOp de kaart vind je tosti's, frisse salades, warme soepen en de pulled chicken, waar veel vaste gasten voor terugkomen. Elke week is er een nieuwe taart, soep en bananenbrood. Vegetariërs vinden genoeg keus, glutenvrij brood is er altijd en je hond mag gewoon mee naar binnen. Met een groep vriendinnen kun je ook aanschuiven voor een uitgebreide high tea.\n\nReserveer een tafel of bestel online en haal je lunch op. Let op: op dinsdag zijn ze dicht.",
   "website": "http://www.brasseriejolie.nl/",
   "website_bereikbaar": true
@@ -1798,7 +1798,7 @@
   },
   "openingstijden": "ma-za 08:30-17:00, zo 09:30-15:30, feestdagen gesloten",
   "opmerkingen": "Er is alleen overdag een lunchroom met broodjes, soep en koffie, en geen dinerkaart. Daarom heb ik lunch als hoofdcategorie gekozen in plaats van restaurant. Het terras en het ontbijt staan alleen in de Instagram-berichten op de site. Volgens een recent bericht sluit de zaak die week tijdelijk om 14.30 uur. Catering wordt geregeld via de hele organisatie (Het Bakkerscafé) en niet specifiek via deze vestiging.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een ontspannen ontbijt of lunch in Bottendaal? Aan de Castellastraat kijk je uit op het autovrije plein bij de oude Dobbelmanfabriek met zijn hoge schoorsteen. Daar zit Brood op de plank, een van de twee vestigingen van Het Bakkerscafé. Het is keuken, bakkerswinkel en lunchroom in één.\n\nHet biologische brood komt vers uit de eigen bakkerij. Soepen, beleg, sauzen en chutneys worden hier zelf gemaakt, en de vleeswaren en kazen komen van lokale leveranciers. De zaak heeft het Vegan Friendly-keurmerk, dus ook als je plantaardig eet kun je hier terecht. Het Bakkerscafé is een sociale onderneming, waar mensen werken en leren in de bediening en de keuken.\n\nKom je met kinderen? Dan staat de kinderkast met speelgoed voor ze klaar. Als het mooi weer is, zit je lekker op het terras. Met een groep groter dan acht personen? Neem dan even contact op voor een aanbod op maat. Je kunt ook bestellen om mee te nemen of laten bezorgen.",
   "website": "http://www.bakkerscafe.nl",
   "website_bereikbaar": true
@@ -1954,7 +1954,7 @@
   "naam": "BUUR West",
   "openingstijden": "",
   "opmerkingen": "De opgegeven link stuurt door naar de algemene homepage van BUUR (locaties Waterkwartier en Brakkenstein). De menukaart en de pagina van Waterkwartier konden we niet laden, dus het aanbod (ontbijt/lunch), de openingstijden en kenmerken zoals een terras zijn niet gecontroleerd. BUUR is vooral een buurthuiskamer met horeca en wijkactiviteiten; misschien past 'cafe' beter dan 'lunch'. Navragen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om even uit te blazen in Nijmegen-West? Aan de Voorstadslaan in het Waterkwartier zit BUUR, een buurtkamer waar je terechtkunt voor iets te eten of te drinken en waar je makkelijk een praatje maakt met de mensen om je heen.\n\nBUUR heeft meerdere locaties. Deze in het Waterkwartier is meer dan een plek om iets te eten: in de agenda vind je van alles, van een buddycafé, waar nieuwkomers en Nijmegenaren elkaar ontmoeten, tot avonden waarop muzikanten samen folkmelodieën leren spelen. Heb je zelf een idee voor een activiteit of wil je als vrijwilliger meedoen? Dat kan ook.\n\nKijk in de agenda op de website wat er deze week te doen is en loop gewoon eens binnen.",
   "website": "https://buurnijmegen.nl/buur-west/",
   "website_bereikbaar": true
@@ -2064,7 +2064,7 @@
   "naam": "Cafe Biessels",
   "openingstijden": "ma-wo 10:00-00:00, do-za 10:00-01:00, zo 10:00-00:00",
   "opmerkingen": "Vermoedelijke categorie was lunchroom, maar de zaak profileert zich als lunch, diner en borrel met lange openingstijden tot na middernacht en pubquiz/muziekbingo; daarom cafe als hoofdcategorie met lunch en restaurant als extra. Inhoud van de menukaarten (pdf's) niet beschikbaar; geen terras genoemd op de gelezen pagina's.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Even bijkomen tussen het winkelen door, of juist de avond beginnen op de Grote Markt? Bij Biessels in het hart van Nijmegen zit je de hele dag goed: 's ochtends met koffie en de krant, 's middags met een broodje of twee kroketten op brood, en later met een borrelplank of een diner.\n\nDe kaart is breed, met aparte lunch-, diner- en nagerechtenkaarten en een kindermenu, dus je kunt hier ook prima met het hele gezin aanschuiven. Elke maand is er een pubquiz en een muziekbingo met een wisselend thema, leuk voor een avondje uit met vrienden.\n\nKom je met de auto, dan parkeer je vlakbij in de Eiermarktgarage. Wil je zeker zijn van een tafel voor het diner? Reserveer dan even via de site, telefonisch of per mail.",
   "website": "http://www.biesselscafe.nl",
   "website_bereikbaar": true,
@@ -2104,7 +2104,7 @@
   "naam": "Café Camelot Nijmegen",
   "openingstijden": "ma-wo 10:00-00:00, do 10:00-01:00, vr-za 10:00-02:00, zo 11:00-00:00",
   "opmerkingen": "Volgens de site is dit vooral een bier- en eetcafé met lunch en diner en dus geen lunchroom. Daarom staat de hoofdcategorie op cafe in plaats van lunch. Vegetarisch en vegan staan bij de kenmerken omdat de site 'steeds meer vegetarische en veganistische opties' noemt. Wel moet je aan het personeel vragen wat er mogelijk is, en de menukaart zelf heb ik niet kunnen lezen. Een terras wordt niet genoemd.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een speciaalbiertje midden in het centrum? Op de Grote Markt vind je dit bier- en eetcafé. Naast Hertog Jan van de tap schenken ze nog acht andere speciaalbieren, dus je kunt hier rustig wat nieuws proberen.\n\nJe kunt er ook de hele dag eten. Overdag eet je er sandwiches, tosti's, soep of een uitsmijter, en 's avonds kun je er dineren. De hele dag door is er een borrelkaart, met onder meer ambachtelijke rundvleeskroketten. Eet je vegetarisch of vegan? Vraag dan gerust aan het personeel wat er mogelijk is. Eén keer per maand speelt er op donderdagavond live muziek.\n\nJe hoeft niet te reserveren, je loopt gewoon binnen. Kom je met een grotere groep? Bel dan even van tevoren, dan kijken ze of er nog plek voor jullie is.",
   "website": "http://www.cafecamelot.nl/",
   "website_bereikbaar": true
@@ -2210,7 +2210,7 @@
   "naam": "Café de Blonde Pater",
   "openingstijden": "ma-do 08:30-18:30, vr-za 08:30-19:00, zo 09:30-19:00",
   "opmerkingen": "De openingstijden op de site spreken elkaar tegen: in de kop staat 'ma tm za 8.30 – 19.00u', in de footer 'ma tm donderdag 8.30 - 18.30u'. Ik heb de tijden uit de footer overgenomen. De site noemt ook een cateringtak (Catering Club) en Pater Deli; die pagina's heb ik niet gelezen. Ik heb het kenmerk groepen niet gekozen, omdat er alleen 'mogelijkheden voor groepen' worden genoemd. Superlatieven van de site ('hét leukste café', 'de beste koffie') heb ik weggelaten.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Even bijkomen na het winkelen in de Houtstraat? Dan zit je goed bij de Blonde Pater. Het café beslaat twee ruime panden in hartje centrum en heeft een flink terras aan wat de zaak zelf de oudste winkelstraat van Nederland noemt.\n\nDe dag begint hier vroeg met ontbijt en koffie van barista's die er al jaren in worden opgeleid. Daarna schuif je aan voor de lunch, en later op de middag voor een borrel met wijn of speciaalbier. Eet je vegetarisch of heb je een dieetwens? Geef het gewoon door. 's Avonds kun je het café afhuren voor een feest of een zakelijke borrel.\n\nKom je met een groep of wil je ontbijten? Bel of mail dan even voor de mogelijkheden. Let op: in het weekend kun je voor de lunch niet reserveren, dus kom dan op tijd.",
   "website": "http://www.blondepater.nl/",
   "website_bereikbaar": true
@@ -2345,7 +2345,7 @@
   "naam": "Café De Zon",
   "openingstijden": "ma 10:00-17:00, di gesloten, wo-za 10:00-22:00, zo 10:00-21:00 (keuken wo-zo tot 20:00, ma tot 16:00); ijssalon wo-zo 12:00-20:00",
   "opmerkingen": "Vermoedelijke categorie was lunchroom, maar de site noemt zichzelf een bruin café/dorpskroeg met lunch én diner. Daarom is gekozen voor cafe met restaurant, lunch en ijssalon als extra categorieën. Over de ijssalon zegt de site 'zes dagen in de week', maar het schema dat erbij staat laat er vijf zien (wo-zo). Er staat een pagina 'Feestjes en groepen' en er wordt 'Brunchen' genoemd. Die zijn niet verder gecontroleerd, dus de kenmerken groepen en ontbijt zijn niet ingevuld. Een terras wordt op de homepage niet genoemd.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een plek op het eiland waar je in de ochtend met koffie begint en 's avonds blijft hangen voor een borrel? Aan de Oosterhoutsedijk in Lent zit sinds 1926 een bruin dorpscafé waar je de geschiedenis meteen voelt als je binnenstapt.\n\nOverdag kun je er terecht voor koffie en lunch. Van woensdag tot en met zondag blijft de keuken open voor het diner. Van woensdag tot en met zondag kun je er in het seizoen ook een ijsje halen. Elke tweede vrijdag van de maand is er een pubquiz, en verder kun je er terecht voor high tea, een picknick of een bierproeverij.\n\nKijk vóór je gaat even naar de openingstijden, want op dinsdag is het dicht. Ga je met een groep of wil je iets te vieren hebben? Neem dan vooraf contact op.",
   "website": "http://www.cafedezonlent.nl/",
   "website_bereikbaar": true
@@ -3330,7 +3330,7 @@
   "naam": "Crossroads Nijmegen",
   "openingstijden": "di-za 09:00-17:00, zo-ma gesloten",
   "opmerkingen": "Het bedrijf is vooral een fietswinkel met werkplaats, bikefitting en een café in de winkel ('Crossroads Cycling Culture'). De horeca valt goed onder lunchroom/koffiezaak, maar in de lijst staat geen categorie voor de fietswinkel zelf. De menukaart (pdf) heb ik niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Ga je een rondje fietsen over de heuvels rond Nijmegen, of wil je gewoon even rustig zitten in Nijmegen-Oost? Aan de Daalseweg zit Crossroads, een fietswinkel met een gezellig café erin. Fietsers en buurtbewoners kunnen hier allebei prima terecht.\n\nJe drinkt er specialty coffee van Single Estate Coffee Roasters, zoals een flat white of cappuccino, en je kunt kiezen uit belegde broodjes, lunch en taart. Je fiets zet je gewoon veilig binnen neer, en na je rit kun je zelfs douchen. Tussen twee slokken door kijk je rond tussen de racefietsen en fietskleding. Wil je eens met een groep meerijden? Elke week vertrekken er social rides.\n\nJe kunt langskomen van dinsdag tot en met zaterdag, overdag. Bekijk vooraf de menukaart op de site en neem je fiets mee.",
   "website": "https://crossroads-nijmegen.cc/",
   "website_bereikbaar": true
@@ -3427,7 +3427,7 @@
   },
   "openingstijden": "ma-vr 08:00-19:45, za-zo 11:00-18:45",
   "opmerkingen": "Dit is een ziekenhuisvoorziening in het CWZ (Binnenhof), geen gewoon restaurant. Daarom heb ik 'lunch' gekozen in plaats van 'restaurant'. Er staat geen menukaart op de site. Op de pagina staat geen adres. Het adres bij ons is leeg, dus vul het adres van het CWZ aan. Het is de vraag of deze vermelding in de gids hoort.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zit je even te wachten tijdens een ziekenhuisbezoek, of wil je na het bezoekuur nog iets eten met familie? Dan kun je terecht in het CWZ Paviljoen, in de Binnenhof van het Canisius Wilhelmina Ziekenhuis. Het is een plek om even bij te komen met koffie of een hapje, en er worden veel streekproducten gebruikt.\n\nIn het paviljoen zit ook een winkeltje. Daar haal je fruit, een tijdschrift, een wenskaart of een klein cadeautje voor wie op de afdeling ligt. Het paviljoen is ook in het weekend open, en dat is handig als het restaurant de Binnenhof dan dicht is. Buiten de openingstijden kun je bij de automaten tegenover het winkeltje altijd nog iets te eten of drinken halen.\n\nLoop dus gerust even binnen als je in het CWZ bent.",
   "website": "https://www.cwz.nl/naar-het-ziekenhuis/restaurant-en-faciliteiten",
   "website_bereikbaar": true
@@ -3530,7 +3530,7 @@
   "naam": "De 4 Heeren",
   "openingstijden": "ma-vr vanaf 12:00, za vanaf 16:00, zo gesloten",
   "opmerkingen": "De site noemt het zelf een café-restaurant met lunch en diner. Daarom is gekozen voor 'restaurant' als hoofdcategorie en niet voor de vermoedelijke categorie 'lunchroom'. Ontbijt staat niet op de site. De site noemt geen keuken, dus dat veld is leeg. Op de homepage staat 'Gratis parkeren bij De 4 Heeren' en op de pagina 'Over De 4 Heeren' 'parkeerruimte tegenover het pand (Douglas na 17:00 uur)'. Dat laatste is niet helemaal duidelijk. Op de site staan nog een kerstmenu voor 2025 en een copyrightvermelding uit 2022, maar de menukaarten zijn van april 2026.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om lekker uit eten te gaan zonder dat je naar het drukke centrum hoeft? Op de hoek van de Sint Annastraat en de Groenestraat zit een gezellig café-restaurant met een kaart die elk seizoen verandert. Doordeweeks kun je er vanaf het middaguur lunchen met verse broodjes, en 's avonds schuif je aan voor een diner van meerdere gangen of een proeverij.\n\nIs het mooi weer, zoek dan een plekje op het ruime, zonnige loungeterras. Na het werk kun je er ook gewoon even zitten met een kop koffie of een borrel. Heb je iets te vieren of wil je vergaderen? Er is een aparte zaal met een eigen ingang. Voor een avondje uit met een twist kun je het puzzeldiner proberen.\n\nParkeren gaat makkelijk, want je kunt er gratis parkeren. Reserveer online of bel even voor een tafel.",
   "website": "http://www.deheeren-nijmegen.nl/",
   "website_bereikbaar": true
@@ -3653,7 +3653,7 @@
   },
   "openingstijden": "ma-za 08:30-17:00, zo 09:30-17:00",
   "opmerkingen": "Alleen overdag open (dagzaak), dus ingedeeld als lunch en niet als restaurant. Het reserveringsnummer voor WhatsApp (06-18396489) is een ander nummer dan het telefoonnummer (06-28765612). Over een terras staat niets op de site. Het kenmerk afhalen is gekozen op basis van 'Coffee to go'.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om te ontbijten of te lunchen met de St. Stevenstoren pal boven je? Op de Grote Markt, midden in hartje Nijmegen, zit dit lunchcafé dat alleen overdag open is. Het draait er om goede koffie en een lunch die er ook nog eens mooi uitziet.\n\nHet leuke is dat je je lunch zelf samenstelt uit kleine gerechtjes. Je kiest uit kleine koude en warme broodjes, salades, soepjes, steamed buns en lekkernijen, en met je tafelgenoten vul je samen één kaartje in. 's Ochtends kun je er terecht voor een compleet ontbijtje, en bij de lunch past ook een biertje of een glas wijn.\n\nWeinig tijd? Neem dan een coffee to go mee. Reserveren gaat simpel via WhatsApp, en cadeaubonnen kun je er ook ophalen.",
   "website": "http://lunchenopdemarkt.nl/",
   "website_bereikbaar": true
@@ -3691,7 +3691,7 @@
   "naam": "De Derde Kamer",
   "openingstijden": "ma-zo 10:00-01:00",
   "opmerkingen": "De zaak noemt zichzelf een café en is tot 01:00 open met borrelplanken en cocktails. Daarom staat de hoofdcategorie op cafe in plaats van lunchroom. Ontbijt staat nergens op de site genoemd. De menukaart zelf is niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om met uitzicht op de Stevenstoren even neer te strijken? Midden op de Grote Markt heb je met dit café een echte huiskamer in het centrum. Vanaf de ochtend kun je er terecht voor koffie met gebak, en daarna rollen lunch, borrel en diner de hele dag door in elkaar over.\n\nAls je gaat lunchen, bestel dan het broodje hete kip met kaas, ui en kerriesaus. Later op de dag deel je een van de borrelplanken, en op zomerse dagen zit je op het terras met een frozen daiquiri. Op de kaart vind je ook vegetarische en glutenvrije gerechten. Tijdens carnaval, Koningsdag en de Vierdaagse is het café een vast trefpunt.\n\nOnline reserveren kan niet. Bel even om te vragen of er nog plek is, of loop gewoon binnen. De deur gaat elke dag om tien uur open.",
   "website": "http://www.cafedederdekamer.nl/",
   "website_bereikbaar": true
@@ -3815,7 +3815,7 @@
   "naam": "De Fabriek",
   "openingstijden": "ma-zo 10:00-17:00",
   "opmerkingen": "Alleen de homepage en de take-awaypagina konden worden gelezen. De pagina's menukaart, high tea en over ons gaven een foutmelding, dus de inhoud van de kaart (bijvoorbeeld vegan of vegetarische gerechten, terras) is niet gecontroleerd. 'Ontbijt' is gekozen omdat de site een 'high breakfast' noemt. De zaak verhuurt ook een mini-appartement en heeft een webshop met woonaccessoires en giftcards. Het telefoonnummer werkt alleen via WhatsApp, bellen kan niet.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om de dag rustig te beginnen of om met vriendinnen bij te kletsen? In de Van Welderenstraat, vlak bij het centrum, vind je De Fabriek: een lunchroom en conceptstore in één. Je komt hier voor de lunch, of je gaat voor een uitgebreide high tea, een high hartig of een high breakfast.\n\nVier je iets met een groep? Voor een babyshower kun je de zaak privé reserveren, en voor een vergadering of een eigen bijeenkomst is er een aparte ruimte. Liever thuis genieten? Dan bestel je een high tea of een hartige box om mee te nemen. Na het eten kun je nog even rondkijken tussen de woonaccessoires in de winkel.\n\nDe Fabriek is elke dag overdag open. Reserveer vooraf een tafel en kom gezellig langs.",
   "website": "http://www.defabrieknijmegen.nl/",
   "website_bereikbaar": true
@@ -3928,7 +3928,7 @@
   "naam": "De Kantine van Bairro Alto",
   "openingstijden": "ma-zo 08:30-17:00",
   "opmerkingen": "Op de site staan twee adressen: Gorterplaats 2 in de footer en Gorterplaats 2A bij de Google Maps-link bovenaan. Volgens de metabeschrijving van de menupagina is de zaak open van dinsdag t/m zondag, maar de pagina zelf zegt elke dag 08.30-17.00. Wij hebben die laatste tijden overgenomen. Of de tuin als terras telt, moet de redactie nog nagaan: de site noemt alleen een 'fijn tuintje'. Daarom staat het kenmerk 'terras' erbij met deze kanttekening. De kaart lijkt grotendeels vegetarisch, maar dat staat nergens met zoveel woorden. Bairro's Bakery hoort erbij als aparte eigen bakkerij en staat niet bij de extra categorieën. De zaak hoort bij Bairro Alto, dat ook de locaties AN en Bairro Alto heeft.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Ken je het Splendorterrein al? Via een smal zijstraatje van de Groenestraat kom je bij De Kantine, een verstopt plekje dat binnen voelt als een huiskamer. Bij mooi weer zit je in het fijne tuintje.\n\nTot 12 uur kun je hier ontbijten met açai, Griekse yoghurt met huisgemaakte granola of een ontbijtplankje. Daarna gaat de lunchkaart open, met onder meer avocadotoast, een kimchi-tosti, soep en een uitgebreide lunchbowl. Er staan ook veel vegetarische gerechten op de kaart, zoals een brioche met pulled oesterzwam. Aan het eind van de middag bestel je iets voor bij de borrel, bijvoorbeeld oesterzwambitterballen of nacho's. De taarten en cakes komen uit de eigen bakkerij hiernaast.\n\nJe bent elke dag welkom tussen half negen en vijf uur. Kom je met een groep van zes tot acht personen? Dan kun je reserveren.",
   "website": "https://www.kantine-bairroalto.nl",
   "website_bereikbaar": true
@@ -4264,7 +4264,7 @@
   },
   "openingstijden": "ma 12:00-16:00, di-vr 11:00-16:00, za 10:00-17:00, zo 12:00-17:00 (keuken sluit doordeweeks om 15:30, in het weekend om 16:00)",
   "opmerkingen": "Het is een lunchcafé dat alleen overdag open is (Instagram: deserre_lunchcafe), en geen restaurant. Daarom heb ik lunch als hoofdcategorie gekozen. De lunchkaart staat alleen als afbeelding op de site, dus de gerechten heb ik niet kunnen lezen; uitsmijter en tosti komen uit de bestandsnamen van de foto's. Afhalen is gebaseerd op een foto met de titel 'To go drankjes'. Er is ook een pagina Evenementen, maar die heb ik niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een rustig moment midden in de stad? Bij De Serre aan Plein 1944 zit je in een huiselijke sfeer met uitzicht op het plein. Jonge onderneemster Felicity Reinders runt de zaak samen met een hartelijk team.\n\nJe komt hier voor een goede kop koffie met gebak, een uitgebreide lunch met bijvoorbeeld een uitsmijter of tosti, of een van de matchadrankjes, ook ijskoud. Er staan verschillende vegetarische gerechten op de kaart, en voor de lunch kun je ook glutenvrije opties vragen. Drankjes neem je ook mee.\n\nReserveren hoeft niet, maar kom je met meer dan vier personen lunchen, stuur dan even een mailtje. Kom je met de auto? Parkeergarage Mariënburg ligt om de hoek. Loop gerust binnen tussen het winkelen door!",
   "website": "https://www.deserrenijmegen.com/",
   "website_bereikbaar": true
@@ -4425,7 +4425,7 @@
   },
   "openingstijden": "ma-di 11:00-17:00 (alleen wasserette), wo-vr 09:00-17:00, za 09:30-17:00, zo 10:00-17:00",
   "opmerkingen": "Dit is geen restaurant maar een combinatie van wasserette en foodcafé dat alleen overdag open is, met een lunch- en borrelkaart. Daarom is lunch als hoofdcategorie gekozen. Over de maximale groepsgrootte voor zaalverhuur zegt de site twee dingen: 75 en 70 personen. Op maandag en dinsdag is alleen de wasserette open. De menukaart (pdf) is niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Wat als je wasdag eigenlijk een fijn uitje is? In de Hertogstraat, vlak bij het centrum, combineert De Wit Wasserij een wasserette met een gezellig foodcafé. Terwijl de machines draaien, zit jij aan de koffie of een speciaalbiertje, of je neemt een glas biologische wijn.\n\nDe kaart is de hele dag door te bestellen en is licht en eigentijds: croissants met beleg, bowls met acai of yoghurt, biologische sandwiches, verse salades en zelfgemaakte zoetigheid, ook in een vegan versie. Ze werken veel met lokale producten. Heb je geen zin om zelf te wassen? Dan halen ze je was thuis op, ook met een wasabonnement.\n\nLet op: op maandag en dinsdag is alleen de wasserette open. Van woensdag tot en met zondag kun je overdag binnenlopen voor een lunch of een kop koffie.",
   "website": "https://dewitwasserij.nl",
   "website_bereikbaar": true
@@ -4602,7 +4602,7 @@
   "naam": "Doppio Espresso",
   "openingstijden": "ma-zo 08:30-18:00",
   "opmerkingen": "Dit is een vestiging van een keten (Doppio Espresso, met hoofdkantoor in Joure). Ik heb de pdf-menukaart van Nijmegen niet kunnen openen, dus kenmerken als vegan, terras en afhalen zijn niet gecontroleerd. 'Italiaans' als keuken komt uit de omschrijving van het concept ('het vertrouwde Italiaanse gevoel'), niet uit een expliciete keukenvermelding. Op feestdagen kunnen de openingstijden afwijken.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om even te ontsnappen aan de drukte rond Plein 1944? In deze Nijmeegse vestiging van de koffieketen Doppio Espresso schuif je aan voor een cappuccino, maar je kunt er ook terecht voor een vlot ontbijt, een verse lunch of iets zoets bij je koffie.\n\nHet concept heeft een Italiaanse inslag: koffie met aandacht gezet, met daarbij ontbijt- en lunchgerechten, smoothies en lekkers voor tussendoor. Of je nu met je laptop komt werken, met een vriendin wilt bijpraten of gewoon een rustig kwartiertje voor jezelf zoekt, er is wel een plekje voor je.\n\nDe zaak is elke dag open vanaf half negen 's ochtends tot zes uur 's avonds, dus ook in het weekend kun je er langs. Bekijk vooraf de menukaart van Nijmegen op de site en loop gewoon binnen als je in de binnenstad bent.",
   "website": "https://www.doppio-espresso.nl/vestiging/nijmegen/",
   "website_bereikbaar": true
@@ -4666,7 +4666,7 @@
   },
   "openingstijden": "di-zo 08:30-17:00",
   "opmerkingen": "Down Town is een brunchcafé dat alleen overdag open is, geen restaurant met dinerkaart. Daarom is lunch de hoofdcategorie in plaats van restaurant. Reserveren kan niet. De zaak is wel af te huren voor speciale gelegenheden. De menukaartpagina is niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een uitgebreide brunch midden in de stad? Op de Kannenmarkt, in hartje Nijmegen, vind je Down Town: een all-day brunchcafé met een vleugje New York, met grote deuren en marmeren tafeltjes in een karakteristiek pand.\n\nJe drinkt hier specialty coffee met bonen van Blommers, gemaakt met de melk die jij het lekkerst vindt. Erbij eet je pancakes, een açaí bowl met vers fruit, avocado toast of een benny met bacon of zalm. Liever iets zoets? Uit de eigen bakery komen taartjes, scones en croissants. Bij mooi weer zit je op het terras in de zon, en heb je haast, dan neem je gewoon iets mee.\n\nReserveren kan niet, dus loop gewoon binnen. Je bent welkom van dinsdag tot en met zondag, tot vijf uur 's middags.",
   "website": "http://www.downtownnmgn.nl/",
   "website_bereikbaar": true
@@ -4766,7 +4766,7 @@
   },
   "openingstijden": "ma-vr 09:00-17:00, za-zo gesloten",
   "opmerkingen": "Ik heb gekozen voor lunch en niet voor restaurant: de zaak is alleen op werkdagen van 09:00 tot 17:00 open en richt zich op lunch, koffie en vergaderen. Op de site staat als adres 'Boekweit 4', bij ons 'Boekweitweg 4'; graag even controleren welke straatnaam klopt. De menukaart is een los bestand en heb ik niet kunnen lezen, dus de keuken staat niet vast. DROOM! heeft meer vestigingen; deze tekst gaat alleen over de vestiging in De Boekweit.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Werk je op de Winkelsteeg en ben je toe aan iets beters dan een boterham achter je bureau? Dan vind je in bedrijvenverzamelgebouw De Boekweit een fijne plek voor een ambachtelijke lunch, een kop koffie met huisgemaakte appeltaart of een borrel na het werk.\n\nDROOM! is een sociale horecazaak. Mensen met en zonder afstand tot de arbeidsmarkt werken hier samen in de keuken en achter de koffiemachine, en waar dat nodig is krijgen ze begeleiding van een coach. Je kunt er ook een vergaderruimte huren, de broodjesservice inschakelen voor je team of een verse maaltijd en appeltaart online bestellen en ophalen.\n\nDe zaak is op doordeweekse dagen overdag open en in de buurt kun je gratis parkeren. Kom gewoon langs voor een lunch of reserveer via de site.",
   "website": "https://droomdeboekweit.nl/",
   "website_bereikbaar": true
@@ -5004,7 +5004,7 @@
   "naam": "Eetcafé My Way",
   "openingstijden": "ma-za 10:00-20:00, zo gesloten (ontbijt & lunch 10:00-15:00)",
   "opmerkingen": "De site noemt zichzelf een 'Turks Restaurant' met schotelgerechten in de avond, maar sluit al om 20:00. Het ontbijt en de lunch lijken de kern te vormen, daarom is lunch gekozen als hoofdcategorie, met restaurant als extra categorie. De klantrecensies op de homepage zijn opvultekst (lorem ipsum).",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om je zaterdag te beginnen met een tafel vol kleine schaaltjes? Bij Eetcafé My Way aan de Arend Noorduijnstraat, midden in het centrum, kun je tot drie uur 's middags terecht voor een Turks ontbijt. Neem een bord met kaas, olijven, roerei en vers brood, of ga met z'n tweeën voor de serpme kahvaltı, een uitgebreid ontbijt met thee zoveel je wilt.\n\nIs het lunchtijd? Dan haal je hier vers belegde broodjes, of je bestelt warme eiergerechten zoals menemen met sucuk. Later op de dag schuif je aan voor schotelgerechten en een toetje, in een ontspannen en huiselijke sfeer.\n\nDe zaak is van maandag tot en met zaterdag open. Kom je met een groep of heb je iets te vieren? Bel even van tevoren om een tafel te reserveren.",
   "website": "https://eetcafemyway.nl/",
   "website_bereikbaar": true
@@ -5372,7 +5372,7 @@
   "naam": "Fabrikaat",
   "openingstijden": "vr 12:00-19:00, za 12:00-17:00, zo 10:00-17:00; doordeweeks op afspraak",
   "opmerkingen": "Fabrikaat is vooral een stichting voor kunst en ontwerp (placemaking, werkplaats voor rivierklei) met een café, een winkel, workshops en overnachtingen. Het café is alleen van vrijdag tot en met zondag open. Op de site staat 'Nijmegen' als plaats in plaats van Lent. Er is een tuin, maar het woord 'terras' komt niet voor, dus dat kenmerk is niet gekozen. De menukaart (pdf) is niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om even te ontsnappen aan de stad? Fiets naar de dijk bij Fort Beneden-Lent. Daar zit Fabrikaat, een werkplaats waar ontwerpers met rivierklei en andere lokale grondstoffen werken. In het bijbehorende café zit je in de serre of op een zonnige dag in de tuin met uitzicht op de Spiegelwaal en het groene Rivierenpark.\n\nJe kunt er terecht voor koffie met gebak, een lunch of een borrel, met producten van lokale ondernemers. Leuk detail: je drinkt en eet uit servies dat ze hier zelf van klei uit de omgeving hebben gemaakt. Wat je mooi vindt, koop je in de winkel ernaast.\n\nHaal meer uit je bezoek door het te combineren met een workshop of rondleiding. Het café is open van vrijdag tot en met zondag. Kom je met een grote groep, reserveer dan op tijd.",
   "website": "http://www.stichtingfabrikaat.nl/",
   "website_bereikbaar": true
@@ -5440,7 +5440,7 @@
   "naam": "Fika",
   "openingstijden": "ma-zo 09:00-18:00 (Fika Kantoor ma-vr 09:00-18:00)",
   "opmerkingen": "Ontbijt wordt genoemd op de infopagina, maar staat niet duidelijk op de huidige menukaart (pdf juli 2026). Vegan geldt alleen voor het gebak (via Trash'ure Taarten). Op de site staan arrangementen voor groepen en reserveren kan vanaf 5 personen; het kenmerk 'groepen' is niet toegekend omdat er geen apart groepsmenu wordt genoemd. Tussen 12:00 en 15:00 mag je in het lunchcafé geen laptop gebruiken.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Heb je zin in een echte Zweedse koffiepauze? In de Van Broeckhuysenstraat vind je een stukje Scandinavië: hier draait alles om fika, even pauzeren met goede koffie, iets lekkers en gezelschap. Voor de lunch bestel je smørrebrød, rijk belegde boterhammen op desembrood die je naar trek combineert. Daarnaast kun je er terecht voor ontbijt, taart zoals kanelbulle en kladdkaka, en vanaf drie uur voor een borrel met hapjes.\n\nNeem je de kinderen mee? Er is een eigen kinderkaart, en in de boekenkast liggen spelletjes en puzzels. In de kiosk ernaast haal je eten en koffie om mee te nemen, en snuffel je tussen lokale producten en vintage. Wil je werken? Doordeweeks kun je gratis terecht in de aparte flexwerkruimte.\n\nLoop gewoon binnen. Reserveren hoeft alleen voor de High Fika of als je met vijf of meer mensen komt.",
   "website": "https://fika-nijmegen.nl",
   "website_bereikbaar": true
@@ -5733,7 +5733,7 @@
   },
   "openingstijden": "ma-zo 08:00-18:00",
   "opmerkingen": "Fresca is alleen overdag open (8:00-18:00) en richt zich op koffie, ontbijt, taart en high tea, niet op diner. Daarom staat het onder lunch en niet onder restaurant. Op de menukaartpagina stonden alleen de dranken als tekst; de gerechten van de all-day-kaart heb ik niet kunnen lezen. Reserveren kan alleen voor een high tea. Het kenmerk lunch is afgeleid uit de all-day-kaart en de openingstijden; de site noemt lunch niet met zoveel woorden.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om je dag te beginnen met een cappuccino en een krantje in de ochtendzon? Aan de Van Broeckhuysenstraat vind je Fresca, een knusse koffie- en ontbijtzaak met een zonnig terras. Je kinderen kunnen ondertussen spelen op het grasveldje ernaast.\n\nHet ontbijt staat de hele dag op de kaart, dus ook als je uitgebreid hebt uitgeslapen ben je welkom. Je kiest uit gezonde gerechten en ook uit wat minder gezonde, en er zijn zelfgebakken taartjes, verse sappen en smoothies. Heb je een allergie of ben je zwanger? Dan denkt het team met je mee. Voor kinderen is er een aparte kidskaart.\n\nFresca is elke dag open van 8:00 tot 18:00. Reserveren hoeft niet: loop gewoon binnen en zoek een plekje. Wil je een high tea? Die reserveer je wel van tevoren.",
   "website": "https://frescanijmegen.nl",
   "website_bereikbaar": true
@@ -6420,7 +6420,7 @@
   "naam": "Het Café - Het Duurzame Warenhuis",
   "openingstijden": "ma-za 09:00-17:00, zo 12:00-17:00",
   "opmerkingen": "Het Café heeft een eigen website (hetcafenijmegen.nl) met het menu. Die is niet gelezen. Openingstijden van het café kunnen op feestdagen afwijken. Ik heb geen informatie over een terras of vegan gerechten gevonden.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een rustige pauze tijdens het winkelen in de Burchtstraat? Achter in Het Duurzame Warenhuis vind je Het Café. Daar haal je koffie met een taartje, of ga je zitten voor ontbijt of lunch.\n\nDe keuken werkt met verse, biologische producten van het seizoen, waar dat kan van boeren en leveranciers uit de buurt. Ieder seizoen komt er een nieuwe kaart en alles wordt er zelf gemaakt. Na je kopje loop je zo de winkel in, vol eerlijke en duurzame spullen.\n\nMet twee of drie mensen loop je gewoon binnen. Kom je met vier tot twintig mensen, dan kun je bellen of mailen om te reserveren, behalve op zaterdag. Het menu vind je op de eigen site van het café.",
   "website": "https://www.duurzamewarenhuis.nl",
   "website_bereikbaar": true
@@ -6626,7 +6626,7 @@
   "naam": "Historische Tuinderij De Warmoes",
   "openingstijden": "ma-di gesloten (wel open voor groepen/verhuur), wo-zo 10:00-17:00",
   "opmerkingen": "Ik heb alleen de homepage kunnen lezen. De pagina van het tuincafé kon ik niet openen, dus de kaart (lunch, ontbijt, vegetarisch of vegan) en een eventueel terras zijn niet gecontroleerd. Het is een ANBI-stichting die vooral een tuinderij is, met een tuincafé, een winkel, zelfoogst, activiteiten en zaalverhuur. De categorie 'lunch' is daarom een benadering. Het kenmerk 'bedrijfsuitje' heb ik afgeleid uit de menuonderdelen 'Zakelijke bijeenkomsten' en 'Vergaderen'.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om even uit de stad te zijn zonder ver te fietsen? Aan de Griftdijk Noord in Lent vind je een historische tuinderij waar vrijwilligers het hele jaar door meer dan honderd groenterassen telen, zonder gewasbeschermingsmiddelen en met oog voor de biodiversiteit. Zo houden ze de traditie van de Lentse warmoezeniers levend, die Nijmegen vroeger van groente en fruit voorzagen.\n\nIn het tuincafé proef je wat er op het land is gegroeid. Daarna kun je in de winkel verse oogst meenemen of zelf de tuin in gaan om te oogsten. Daarnaast is er een bloemenpluktuin en staan er regelmatig workshops en excursies op de agenda, van wildpluk tot zelf verse pasta maken.\n\nVan woensdag tot en met zondag kun je er tussen 10 en 17 uur terecht. Kijk vooraf even in de activiteitenkalender en fiets erheen.",
   "website": "https://dewarmoes.nl",
   "website_bereikbaar": true
@@ -7411,7 +7411,7 @@
   },
   "openingstijden": "",
   "opmerkingen": "Het is eerder een ontbijt- en lunchcafé dan een restaurant. Op de contactpagina is maar een deel van de openingstijden goed te lezen: '...rdag 09:00 - 16:00' (waarschijnlijk zaterdag) en zondag 09:00 - 16:00. Daarom is dit veld leeg gelaten; de tijden voor doordeweeks graag nog checken. Er staat geen terras, vegan menu of kindermenu op de site. 'Groepen' is gekozen omdat er een aparte groepspagina is ('Groepen'/arrangementen), maar die pagina is niet gelezen. Het keramiekatelier is een groot deel van het aanbod, maar daar bestaat geen passende categorie voor. Sip&paint vindt plaats bij Bar GOTO, dus niet bij KALA zelf. De pagina Food is wel opgehaald, maar de menukaart staat er alleen als afbeeldingen op. De beschrijving van de bowls komt van de homepage.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Wil je na een yogales nog even blijven hangen met een goed ontbijt? Of samen met vrienden een middag aan de slag met klei? In de Bloemerstraat, midden in het centrum, kan het allebei onder één dak. Het café serveert ontbijt en lunch met verse gerechten. De bekende nutrition bowls hebben een Midden-Oosterse inslag, met onder meer hummus, babaganoush, tahini, zoete aardappel en granaatappel.\n\nIn het atelier kun je keramiek beschilderen, met de hand vormen of aan de draaischijf leren werken. Dat kan in een losse introductieles of in een cursus van meerdere weken. Daarnaast is er een yogastudio met verschillende stijlen, ouder-en-kindyoga en specials.\n\nKijk in het lesrooster voor een proefles of reserveer een plek aan de schilderstafel. Kom je met de auto? Dan parkeer je het makkelijkst in de Keizer Karelgarage, op een paar minuten lopen.",
   "website": "http://www.kalacafe.nl/",
   "website_bereikbaar": true
@@ -7496,7 +7496,7 @@
   "naam": "Kattencafé Balthazar",
   "openingstijden": "ma 12:00-17:30, di-za 10:00-17:30, zo 11:00-17:30; gesloten op 1e en 2e kerstdag en 1 januari; bij temperaturen boven 30 graden tot 16:00",
   "opmerkingen": "De menukaart (pdf) is niet gelezen; de gerechten in de tekst komen uit fotobijschriften op de homepage (toast brie, wortel-pompoensoep). De site noemt een binnentuin, maar niet als terras voor gasten.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een lunch met een spinnende kat op schoot? In de Van Welderenstraat, vlak bij het centrum van Nijmegen, deel je je tafel met acht katten. Nori klimt over de touwbrug, Karel apporteert propjes papier en de jonge broertjes Beer en Loki ontdekken hun nieuwe thuis.\n\nJe komt er voor koffie, huisgemaakt gebak of een lunch, bijvoorbeeld een toast met brie of soep. Naast de vaste kaart staan er regelmatig seizoensgerechten op het menu. Voor een gewoon bezoekje hoef je niet te reserveren, je loopt gewoon binnen.\n\nWil je een high tea? Reserveer die dan minstens een dag van tevoren via WhatsApp of e-mail. Let op: bij hittedagen gaat de zaak eerder dicht, zodat de katten rust krijgen.",
   "website": "https://kattencafebalthazar.nl",
   "website_bereikbaar": true
@@ -7676,7 +7676,7 @@
   "naam": "Koffiebar Toos",
   "openingstijden": "",
   "opmerkingen": "De site gebruikt de naam Stichting Toos / Koffiehuis Toos. Het adres en de openingstijden staan niet op de gelezen pagina's (er staat alleen '5 dagen in de week'), dus het adres Prins Hendrikstraat 22 kon ik niet controleren. Volgens de koffiehuispagina wordt er ook catering gedaan, maar daar heb ik geen details over gevonden. Daarnaast biedt de stichting groepsbegeleiding voor jongvolwassenen aan; dat heb ik niet als categorie meegenomen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een plek waar je even kunt landen, met een goede cappuccino en een stuk huisgemaakte taart? In Nijmegen-Oost, net buiten het centrum, vind je dit kleine, warme koffiehuis. Je kunt er ontbijten met een yoghurt- of smoothiebowl, en voor de lunch zijn er soep van de week en een hele rij tosti's, van kimchi tot brie met zelfgemaakte pesto. Ook vegan en glutenvrij zoet staat op de kaart.\n\nAchter de koffie zit een mooi verhaal: hier werken jongvolwassenen die even zijn vastgelopen als volwaardige collega's aan hun groei. Met je bezoek steun je dat dus meteen. Je kunt ook een uitgestelde koffie kopen voor iemand die het goed kan gebruiken.\n\nHaast? Je koffie of tosti gaat ook prima mee voor onderweg. Kom vijf dagen per week gewoon binnenlopen.",
   "website": "https://www.stichtingtoos.nl",
   "website_bereikbaar": true
@@ -7960,7 +7960,7 @@
   "naam": "Kushiin",
   "openingstijden": "",
   "opmerkingen": "Op de gelezen pagina's staan geen adres en geen openingstijden. De menukaarten zijn PDF's met alleen afbeeldingen. Die konden we niet uitlezen, dus ontbijt en vegan/vegetarisch zijn niet gecontroleerd. Op de site staat 'altijd halal'. Daarvoor bestaat geen kenmerk, maar het staat wel in de tekst. Kushiin is een kleine keten met ook een vestiging in Utrecht. De bezoekpagina noemt onder 'Lunchen in Nijmegen?' per abuis Utrecht.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een lange lunch of gewoon even snel een matcha? Bij Kushiin in de Ziekerstraat kun je allebei. Deze koffiebar heeft Afrikaanse roots en een Nederlandse inslag, en in Nijmegen eet je er hartige broodjes, frisse salades en pastries. Alles wordt vers bereid en is halal, en de koffie- en matchabar maakt de zaak compleet.\n\nKushiin heeft ook een vestiging in Utrecht, maar deze tip gaat over de zaak in Nijmegen. Je kunt er rustig blijven hangen voor een goed gesprek, of je bestelt online en haalt je lunch dezelfde dag op.\n\nOok leuk: de koffiebonen, matcha en hojicha van Kushiin zijn te koop voor thuis. Bekijk het menu op de site en loop een keer binnen.",
   "website": "https://kushiin.nl/",
   "website_bereikbaar": true
@@ -8441,7 +8441,7 @@
   "naam": "Loek",
   "openingstijden": "ma-zo 10:00-18:00",
   "opmerkingen": "De Bottomless Brunch is een los evenement dat af en toe plaatsvindt en wordt op dit moment opnieuw gepland. Op de site wordt ook private dining en zaalverhuur genoemd (bijvoorbeeld een private borrel voor maximaal 55 personen), maar de private-diningpagina hebben we niet gelezen. Op de menupagina staat 'lunchgerechten of diner', terwijl de zaak volgens de openingstijden om 18:00 sluit. Het kenmerk 'groepen' hebben we niet gekozen: de site zegt alleen dat er 'ruimte voor groepen' is, zonder groepsmenu.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een zonnige lunch met een wijntje erbij? Op de hoek van het Faberplein, aan de Van Broeckhuysenstraat, vind je Loek: een ontspannen eetbar waar je overdag terechtkunt voor koffie, lunch en een borrel. Het grote terras vangt veel zon, en binnen zit je net zo fijn met een groep of gewoon met z'n tweeën aan de bar.\n\nDe kaart is klein, wisselt vaak en draait om producten van het seizoen. Begin je dag met een fruitbowl met huisgemaakte granola of met spiegeleieren met crispy chili-olie. Later op de dag bestel je een tosti met kimchi, een Koreaans kipbroodje of een gnocchisalade. Veel gerechten zijn er ook in een vegetarische versie, en voor de borrel zijn er hapjes om te delen.\n\nLoek is elke dag open van tien tot zes. Kom gerust even langs en zoek een plekje in de zon.",
   "website": "https://www.eetbarloek.nl",
   "website_bereikbaar": true
@@ -8587,7 +8587,7 @@
   "naam": "Lunch Café Wijck",
   "openingstijden": "ma gesloten, di-zo 11:00-20:00 (lunch 11:00-17:00, borrel tot 20:00)",
   "opmerkingen": "Ik heb alleen de homepage gelezen. Of er een terras is, staat er niet duidelijk bij (wel een buitenfoto), dus dat heb ik niet als kenmerk opgenomen. Kindvriendelijk staat erbij omdat er een kinderboterham op de kaart staat. Zuurdesem wordt niet op de site genoemd. Dat is een fout in de tekst en moet eruit.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goed belegde boterham midden in Nijmegen-West? Aan de Voorstadslaan zit je bij Wijck goed voor een uitgebreide lunch. Denk aan zuurdesem met oude kaas en uienchutney, gerookte kip met avocado en spek, of burrata met gegrilde groenten. Ze werken met verse producten en wat het seizoen te bieden heeft, en voor de kleinste gasten is er een kinderboterham.\n\nNa de lunch hoef je niet meteen weg: tot acht uur 's avonds kun je hier borrelen met een plank vol kaas, bitterballen of crispy chicken, en er is ook een vegaplank. Daarbij kies je uit een flinke lijst koffies, thees, wijnen en bieren.\n\nOp maandag is Wijck dicht, de rest van de week kun je gewoon binnenlopen. Kom je met meer dan vijf mensen? Bel of mail dan even van tevoren om te reserveren.",
   "website": "https://www.wijcknijmegen.nl/",
   "website_bereikbaar": true
@@ -8652,7 +8652,7 @@
   },
   "openingstijden": "ma 11:30-16:30, di-za 09:30-16:30, zo 10:00-16:30; gesloten op 1e en 2e kerstdag en nieuwjaarsdag",
   "opmerkingen": "Ik heb gekozen voor 'lunch' in plaats van 'restaurant': de zaak is alleen overdag open en heeft geen dinerkaart. Het kenmerk 'groepen' heb ik toegevoegd omdat je kunt reserveren vanaf 6 personen, maar een groepsmenu of aparte zaal wordt niet genoemd, dus dat is twijfelachtig. Op de menupagina staat geen uitgebreide kaart, alleen een paar voorbeeldgerechten.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een stevig ontbijt of een lunch waar je echt vol van zit? Aan het eind van de Lange Hezelstraat zit Lunchbar de Viking, waar ze van stoere gerechten houden. Denk aan avocadotoast met ei of een pittige tosti met kip, en er zijn ook genoeg vega en vegan opties.\n\nDe koffie komt van Vascobelo en de taarten bakken ze zelf. In de winter warm je op in de knusse huiskamer, in de zomer zit je op het zonnige terras. Van maandag tot en met donderdag mag je er ook rustig met je laptop komen werken, en je hond is welkom.\n\nDe lunchbar is elke dag overdag open. Kom je met zes personen of meer, dan kun je reserveren. Kom dus gerust eens langs voor een stuk taart na het shoppen in de Hezelstraat.",
   "website": "https://www.lunchbardeviking.nl/",
   "website_bereikbaar": true
@@ -8760,7 +8760,7 @@
   },
   "openingstijden": "ma-zo 10:30-18:00",
   "opmerkingen": "In de metatitel staat 'ontbijt, lunch en diner', maar volgens de site is het alleen open van 10:30 tot 18:00 en is de kaart een brunchkaart. Daarom heb ik lunch als hoofdcategorie gekozen en niet restaurant. De groepsdiners lijken als losse arrangementen te worden aangeboden. Het e-mailadres op de site eindigt op therebyl.com; het lijkt bij een hotel te horen (Odyssey Hotel Group).",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in pancakes om vier uur 's middags? Bij Madame Liberty aan het Vierdaagseplein kan dat gewoon. Hier draait alles om brunch die de hele dag doorgaat: eitjes zoals jij ze wilt, avocadotoast, hoge stapels pancakes, vers gebak en een vers sapje erbij.\n\nJe kunt er ook prima werken. Klap je laptop open aan een lange tafel terwijl de koffie blijft komen, of schuif aan met vrienden voor een lange, luie zondag. Ook groepen zijn welkom: voor een groepsdiner, een jubileum of een zakelijke bijeenkomst denken ze met je mee.\n\nJe bent er elke dag van half elf tot zes uur welkom. Reserveer online een tafel en neem gerust de tijd.",
   "website": "http://www.madamelibertynijmegen.com/",
   "website_bereikbaar": true
@@ -9210,7 +9210,7 @@
   },
   "openingstijden": "ma-vr 09:00-16:00, za-zo 10:00-16:00",
   "opmerkingen": "Het is een lunchcafé dat alleen overdag open is (tot 16:00), dus als hoofdcategorie is lunch gekozen in plaats van restaurant. Een terras staat alleen in de bijschriften van foto's ('Een vol terras van Meneer Vos'). De keuken 'Hollands' is een schatting, want de site noemt geen keuken. Het menu (een PDF) is niet gelezen. Het is een maatschappelijke onderneming van Pluryn.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Ben je op zoek naar een ontspannen plek voor een broodje met koffie, wat dichter bij het groen? Aan de Winkelsteegseweg vind je Meneer Vos, een lunchcafé waar je elke dag binnen kunt lopen voor een lunch, een stuk huisgemaakt gebak of gewoon iets te drinken. De broodjes komen van Buurtmarkt Breedeweg en de koffie en thee van Coffyn.\n\nMeneer Vos hoort bij Pluryn. Mensen met een beperking werken hier in de keuken en de bediening, met begeleiding uit de zorg en de horeca. Neem je kinderen mee? Binnen is er een speelhoek en buiten staan speeltoestellen en een zandbak. Ook je hond is welkom, als die aangelijnd is.\n\nWil je vergaderen of iets vieren? Er zijn drie zalen voor groepen. Kom je met een groep lunchen, reserveer dan even van tevoren.",
   "website": "https://www.pluryn.nl/locaties/meneer-vos",
   "website_bereikbaar": true
@@ -9619,7 +9619,7 @@
   },
   "openingstijden": "ma-za 11:00-20:00, zo gesloten",
   "opmerkingen": "Ik heb alleen de homepage gelezen. Het is vooral een saladebar met sappen en afhaal, daarom staat de hoofdcategorie op lunch en niet op restaurant, ook al zijn ze tot 20:00 open. Over een terras of vegan gerechten zegt de site niets. Het menu bevat wel 'Vegetarian spekkies'. In het menu van de site staat een vreemde link naar een artikel over een waterfilter (AquaLogic), vermoedelijk gesponsorde inhoud.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in iets fris en kleurrijks tussen het winkelen door? Bij MUNT in de In de Betouwstraat, midden in het centrum, draait alles om salades, bowls, soepen en vers geperste sappen. Het pand is licht en sfeervol, fijn om even neer te strijken.\n\nJe kiest bijvoorbeeld een salade met Aziatische kip, gerookte zalm of geitenkaas met hummus, of je stelt je eigen salade samen. Ook voor een proteïnebowl, yoghurt of een gezonde lekkernij zit je hier goed, en er staan vegetarische opties op de kaart.\n\nHeb je weinig tijd? Neem je salade dan gewoon mee. MUNT is van maandag tot en met zaterdag open van 11:00 tot 20:00, dus ook voor een vroege, lichte avondmaaltijd kun je hier gewoon binnenlopen.",
   "website": "http://www.munt-saladebar.nl",
   "website_bereikbaar": true
@@ -9652,7 +9652,7 @@
   "naam": "Museumcafé",
   "openingstijden": "ma-wo 11:30-17:00, do-zo 10:30-17:00; in schoolvakanties ma-zo 10:30-17:00",
   "opmerkingen": "Het café zit in Museum De Bastei, maar het adres stond niet op de pagina die ik heb gelezen. Het adres bij ons is leeg, dus dat moet nog worden aangevuld. De menukaart (PDF) en de contactpagina kon ik niet openen, omdat de limiet voor het ophalen van pagina's bereikt was. Daardoor weet ik niet wat er precies op de kaart staat (lunch, ontbijt, vegan, enzovoort). Volgens de site is het café gesloten op donderdag 8 oktober van 12.30 tot 14.30 uur. Je kunt er alleen pinnen. De catering komt van Pura.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een broodje of een kop koffie met uitzicht over de Waal? Klim dan naar de bovenste verdieping van Museum De Bastei. Daar zit het museumcafé, met een dakterras dat uitkijkt van het Valkhofpark tot aan de rivier, de drie bruggen, de uiterwaarden en Veur-Lent aan de overkant.\n\nJe hoeft geen museumkaartje te kopen: het café is ook zonder museumbezoek gratis te bezoeken. Het is dus een mooie plek om even bij te komen van de drukte in de binnenstad, of om na een rondje door de expo nog wat na te praten. De catering verzorgt Pura, en je kunt de ruimte ook boeken voor een zakelijke lunch, een teamuitje of een familiefeest.\n\nHet café is overdag open. Neem wel je pinpas mee, want contant geld wordt niet aangenomen. Bekijk de menukaart op de site en loop gewoon eens binnen.",
   "website": "https://www.debastei.nl/nl/plan-je-bezoek/museumcafe",
   "website_bereikbaar": true
@@ -9770,7 +9770,7 @@
   },
   "openingstijden": "ma-za 10:00-17:00, zo 12:00-17:00",
   "opmerkingen": "De zaak heet nu 'New Dutch & Zeezicht' (twee lunchrooms die samen verder zijn gegaan). Volgens de site is het adres Marikenstraat 46-48, bij ons staat 46. Het is een lunchroom die alleen overdag open is, daarom staat de hoofdcategorie op lunch en niet op restaurant. Het menu is een PDF met alleen afbeeldingen. Die kon niet worden uitgelezen, dus gerechten, de keuken en vegan of vegetarische opties zijn niet gecontroleerd. 'Lunchroom' bij keuken is daarom geen echte keukenstijl, maar een omschrijving van het soort zaak.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om even op adem te komen tijdens het winkelen? Boven in de Marikenstraat, vlak naast het monument De Schommel, vind je de lunchroom van New Dutch en Zeezicht. Die twee zaken zijn samengegaan en zitten nu op één plek.\n\nOp zonnige dagen zit je op het ruime terras in de schaduw van grote kastanjebomen. In het voorjaar en najaar zitten er verwarmde kussens op de stoelen, dus ook op frissere dagen kun je prima buiten zitten. Binnen is plek voor zo'n 85 gasten, en de kaart is groot genoeg om voor iedereen iets lekkers te vinden.\n\nJe kunt er elke dag overdag terecht, op zondag vanaf het middaguur. Reserveren doe je door te mailen of te bellen, maar je kunt ook gewoon even binnenlopen.",
   "website": "http://www.newdutchstreetfood.nl/",
   "website_bereikbaar": true
@@ -10049,7 +10049,7 @@
   },
   "openingstijden": "ma-zo 10:00-19:30 (keuken tot 18:00); gesloten 25 en 26 december en 1 januari",
   "opmerkingen": "Het gaat om een lunch-wijnbar met alleen een lunchkaart en de High Wining, er is geen dinerkaart. Daarom is lunch gekozen in plaats van restaurant. Op de site staat geen adres, dus het adres bij ons is niet gecontroleerd. Groepen kunnen maximaal 8 personen zijn. In het weekend wordt gewerkt met twee tijdsloten.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een lange middag met een goed bord eten en een glas wijn erbij? Dan zit je goed bij deze lunch-wijnbar in het centrum van Nijmegen. De kaart is mediterraan, met verse ingrediënten en gerechten die met de seizoenen meewisselen.\n\nWijn speelt hier de hoofdrol: je kunt de hele kaart per glas bestellen, dus je proeft makkelijk een paar soorten naast elkaar. Vanaf drie uur 's middags kun je kiezen voor de High Wining, een soort high tea maar dan met wijn en drie rondes mediterrane hapjes. Als het mooi weer is, zit je lekker op het terras.\n\nNostra is elke dag open tot het begin van de avond. Wil je zeker zijn van een tafel? Reserveer dan even, en voor de High Wining doe je dat minstens een dag vooruit.",
   "website": "https://nostra.nl",
   "website_bereikbaar": true
@@ -10708,7 +10708,7 @@
   "naam": "Philipse",
   "openingstijden": "ma gesloten, di-za 10:30-17:00, zo 12:00-17:00",
   "opmerkingen": "Ik heb alleen de pagina Philipse Koffie kunnen lezen. Het menu met de high tea en de pagina's over feestjes en reserveren heb ik niet kunnen openen, omdat het maximale aantal opvragingen bereikt was. Daarom heb ik geen kenmerken als ontbijt, vegan of groepen ingevuld en ook geen keuken. De openingstijden staan op de site in losse kolommen (een dagenlijst en een tijdenlijst). Ik heb ze zo gekoppeld dat maandag gesloten is. In de footer staat ook Philipse Suite op Achter de Smidstraat 5; dat lijkt een apart onderdeel van het bedrijf.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in koffie in de schaduw van de Stevenskerk? In een van de oude Kanunnikenhuisjes op het Sint Stevenskerkhof, midden in het centrum, zit je bij Philipse Koffie als in een huiskamer. Er draaien plaatjes op de pick-up en je kunt er de hele dag binnenlopen.\n\nJe komt hier voor koffie, lunch of een uitgebreide high tea, en de lekkernijen worden zelf gemaakt. Is het zomer, ga dan op het terras zitten: de kerk houdt het daar lekker koel. Twee deuren verder zit TOV, een vintagewinkel met woonaccessoires, dus je kunt er meteen nog even rondneuzen.\n\nOp maandag is het dicht, de andere dagen kun je vanaf het eind van de ochtend terecht. Voor een high tea of een feestje reserveer je via de site.",
   "website": "https://www.philipsenijmegen.com/philipse-koffie",
   "website_bereikbaar": true
@@ -11439,7 +11439,7 @@
   "naam": "Puck Specialty Coffee",
   "openingstijden": "ma-zo 09:00-17:00 (keuken ontbijt/lunch 09:00-15:00)",
   "opmerkingen": "Het online menu is van lente 2023 (Menu-lente-2023.pdf) en is daardoor mogelijk verouderd. Op de site staan ook wijn en bier, en in de meta-keywords wordt 'borrel' genoemd. De pagina met workshops (product_cat=workshops) heb ik niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een goed bakkie en iets lekkers erbij? Aan de Van Welderenstraat schenken ze bij Puck elke week andere koffies van verschillende branderijen, en de barista's vertellen je er graag meer over. Liever iets anders? Dan kun je kiezen uit thee, chai of matcha, verse slowjuices of huisgemaakte limonade.\n\nTot drie uur 's middags kun je hier ontbijten en lunchen, met gerechten als Turkish eggs, french toast van Fries suikerbrood en toasts van zuurdesem met avocado of gerookte zalm. Er zijn ook vegan opties, en glutenvrij brood is mogelijk. In de vitrines staat huisgemaakt gebak voor wie alleen iets zoets wil.\n\nWil je zelf leren hoe je een goede espresso zet of een hartje in je cappuccino schenkt? Dan kun je je aanmelden voor een baristaworkshop. Je bent elke dag welkom van 9 tot 5, dus loop gerust eens binnen.",
   "website": "http://puckspecialtycoffee.nl/",
   "website_bereikbaar": true
@@ -11506,7 +11506,7 @@
   "naam": "PUNT",
   "openingstijden": "wo-zo 10:00-17:00",
   "opmerkingen": "Het café heet op de site 'Café PUNT' en hoort bij cultuurplek BLIK Nijmegen. Het adres op de site is Waalbandijk 14 E/F. Bij ons staat alleen nummer 14. Ik heb geen 'ontbijt' als kenmerk gekozen, want de site noemt geen ontbijt of brunch. Er staat alleen granola op de kaart. 'Borrel' wordt genoemd, maar de zaak sluit om 17:00, dus ik heb geen 'cafe' als extra categorie toegevoegd. Ik heb alleen de cafépagina gelezen, want de homepage kon niet direct worden opgehaald.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om even te ontsnappen aan de drukte van het centrum? Fiets dan naar het Honigterrein in Nijmegen-West. Daar vind je Café PUNT, in de industriële punt van cultuurplek BLIK aan de Waalbandijk. Het is zo'n plek waar je binnenloopt voor één kop koffie en dan toch nog een uurtje blijft zitten.\n\n's Ochtends begin je met specialty koffie en granola met hangop. Tussen de middag kies je uit stevige baguettes, bijvoorbeeld met runderwang of een vegan versie met oesterzwam. Chef Hidde werkt met eerlijke, lokale producten en de kaart wisselt regelmatig. Er staat ook huisgemaakt gebak op, zoals Basque cheesecake. Later op de middag schuif je op het terras aan voor een borrel met olijven, oude kaas of een cocktail.\n\nJe kunt van woensdag tot en met zondag terecht. Kijk ook even in het programma van BLIK, dan combineer je je lunch met wat cultuur.",
   "website": "https://www.bliknijmegen.nl/cafe",
   "website_bereikbaar": true
@@ -11540,7 +11540,7 @@
   "naam": "Puux",
   "openingstijden": "wo-ma 10:00-17:00",
   "opmerkingen": "Op de homepage staat een icoon met 'dinner', maar de openingstijden zijn tot 17:00, dus diner is niet aannemelijk. Een terras wordt alleen in Google-recensies genoemd en niet door de site zelf, daarom is het niet als kenmerk opgenomen. De menukaart was niet als aparte pagina te lezen. De soep van de week op de site (5 t/m 11 maart) is verouderd. Openingstijden: de site verwijst naar Google voor de actuele tijden.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een lunch waarbij je niet hoeft te twijfelen over wat er op je bord ligt? Aan de Groenestraat, op de Hazenkamp vlak bij het Goffertpark, vind je dit wijklunchcafé van Karsten en Maria. Zij koken zoveel mogelijk met biologische en natuurlijke producten, en die halen ze vaak gewoon bij de buren in de straat.\n\nOp de kaart staan broodjes, salades zoals de Salade Tikka en elke week een andere soep. Daarnaast is er koffie met zelfgebakken gebak en kun je kiezen uit een flinke rij smaken ambachtelijk ijs. Eet je vegan, vegetarisch of glutenvrij? Dan heb je hier echt wat te kiezen.\n\nJe kunt van woensdag tot en met maandag overdag langskomen, vanaf tien uur. Kijk voor de zekerheid even op Google wat de actuele tijden zijn, en loop dan binnen voor een rustige lunch in de wijk.",
   "website": "https://www.puux.nl",
   "website_bereikbaar": true
@@ -13018,7 +13018,7 @@
   "naam": "Spot. Lunchcafe",
   "openingstijden": "",
   "opmerkingen": "Op de gelezen pagina's staan geen openingstijden. De menukaart is een pdf en die heb ik niet gelezen, dus vegan, vegetarisch en glutenvrij zijn niet gecontroleerd. De site noemt 'Groepsarrangementen', maar zonder details. Daarom heb ik het kenmerk 'groepen' niet aangevinkt. Spot. hoort bij hetzelfde bedrijf als Sup & Surf Nijmegen, maar die activiteiten vinden op andere locaties plaats en staan niet in de tekst.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om even op adem te komen midden in de stad? In de Van Broeckhuysenstraat stap je bij Spot. een ontspannen lunchcafé met een surfsfeer binnen. Je ontbijt of luncht er met gerechten van lokale makers, en de koffie is ook prima als je alleen even wilt neerploffen.\n\nKom je met kleine kinderen? Dan is er een afgeschermd hoekje waar kinderen tot vier jaar veilig kunnen spelen. Wie wil werken, kan een flexplek of vaste werkplek huren, met een belhokje en een vergaderruimte erbij. In het atelier kun je bovendien keramiek beschilderen of zelf sieraden maken, leuk met vrienden of als groepsuitje.\n\nGewoon binnenlopen kan. Kom je met vijf personen of meer, bel dan even van tevoren om te reserveren.",
   "website": "https://spotnijmegen.nl",
   "website_bereikbaar": true
@@ -13344,7 +13344,7 @@
   "naam": "Subway",
   "openingstijden": "",
   "opmerkingen": "De link gaat naar de algemene Nederlandse site van de keten. Daar staat geen specifieke informatie over de vestiging in Nijmegen: geen adres, geen openingstijden en ook niets over zitplaatsen of een terras. Het adres en of deze vestiging nog actief is, konden we dus niet controleren. Mogelijk past 'afhaal' beter als hoofdcategorie. De site noemt catering als dienst van de keten, maar of deze vestiging dat aanbiedt, is niet bekend.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een broodje dat je helemaal zelf samenstelt? In de Augustijnenstraat, midden in het centrum van Nijmegen, zit een vestiging van de internationale sandwichketen Subway.\n\nJe kiest eerst je brood, dat in de zaak vers wordt afgebakken, en daarna je beleg, groenten en saus. Zo stel je een sub samen die precies naar jouw smaak is. Liever geen brood? Dan kun je ook voor een salade gaan. Handig voor een snelle lunch tussen het winkelen door, of als je even iets wilt eten voordat je verder trekt door de stad.\n\nBekijk het menu vooraf op de website van de keten, of loop gewoon even binnen als je in de buurt bent.",
   "website": "http://www.subway.com/nl-nl/",
   "website_bereikbaar": true
@@ -13368,7 +13368,7 @@
   "naam": "Subway",
   "openingstijden": "",
   "opmerkingen": "De link gaat naar de algemene Nederlandse site van de keten; daar staat geen informatie over deze vestiging (adres, openingstijden, zitplaatsen). We hebben het adres niet kunnen controleren en weten niet of deze vestiging zelf catering aanbiedt. Mogelijk past 'afhaal' beter, als er geen zitplaatsen zijn.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een broodje dat je helemaal zelf samenstelt? Bij de Subway aan de Heyendaalseweg, vlak bij de campus, kies je je eigen brood en beleg en laat je je sub precies zo opbouwen als jij hem wilt. Handig als je tussen colleges of werk door snel iets wilt eten.\n\nHet brood wordt vers afgebakken en naast subs staan er ook salades op de kaart. Elke dag is er bovendien een wisselende sub van de dag. Organiseer je iets met collega's of studiegenoten? Dan kun je via de keten ook catering regelen.\n\nWil je het makkelijk houden? Kijk vooraf op de site van Subway naar het menu, of loop gewoon even binnen in deze Nijmeegse vestiging.",
   "website": "http://www.subway.com/nl-nl/",
   "website_bereikbaar": true
@@ -13422,7 +13422,7 @@
   "naam": "Subway",
   "openingstijden": "ma-zo 09:00-20:30",
   "opmerkingen": "Het gaat om een vestiging van de keten Subway, en de pagina is een algemene locatiepagina van de keten. Of er zitplaatsen of een terras zijn, staat er niet op. Bezorgen en online bestellen worden alleen genoemd in de algemene tekst van de keten, dus het is niet bevestigd dat deze vestiging bezoorgt. Cateringplatters zijn bij het restaurant te bestellen, maar dat lijkt geen groot deel van het aanbod. Het glutenvrije brood is volgens de site 'gluten arm', omdat de keuken open is.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin in een vers belegd broodje terwijl je in Oosterhout boodschappen doet of onderweg bent? Bij de Subway aan de Rietgraaf stel je je sub, wrap of salade helemaal zelf samen: je kiest je brood, beleg, groenten en saus. Geen zin om te kiezen? Dan neem je een van de vaste recepten uit de Signature Series.\n\nOok als je plantaardig eet, kun je hier terecht. Er staan vegan opties op de kaart, zoals de Vegan Patty, en er is glutenvrij brood. Alleen werken ze met een open keuken, dus helemaal glutenvrij kunnen ze het niet garanderen.\n\nDeze vestiging van de keten is elke dag open van 's ochtends tot 's avonds. Wil je een catering platter voor op het werk of een feestje? Bel dan het liefst een dag van tevoren even naar het restaurant.",
   "website": "https://restaurants.subway.com/netherlands/oosterhout/rietgraaf-9?utm_source=yxt-bing&utm_medium=local&utm_term=acq&utm_content=69779&utm_campaign=evergreen-2020&y_source=1_MTU1ODU4MzItNDgzLWxvY2F0aW9uLndlYnNpdGU%3D",
   "website_bereikbaar": true
@@ -14208,7 +14208,7 @@
   },
   "openingstijden": "ma-zo 09:00-17:00",
   "opmerkingen": "Alleen overdag open (09:00-17:00), met ontbijt en lunch. Daarom staat het onder lunch en niet onder restaurant. In de metabeschrijving staat Mariënburg 71, maar in de contactgegevens staat Mariënburg 72. De site noemt geen terras. De pagina's over werken en vergaderen heb ik niet gelezen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om de dag rustig te beginnen met gepocheerde eitjes en een goede flat white? Dan zit je goed bij The Lobby aan de Mariënburg, midden in het centrum. Je zakt er weg in een fijne stoel en kiest van een kaart met ontbijt en lunch, gemaakt met verse ingrediënten: Turkish eggs, pancakes met kaneel, een burrata op zuurdesem of mapo tofu noodles.\n\nVoor wie niet alles eet is er ook wat: er staan vegan en glutenvrije gerechten op de kaart en glutenvrij brood kan ook. Daarnaast vind je er huisgemaakte smoothies, verse thee en in het weekend cinnamon buns.\n\nMoet je even werken of heb je een afspraak? Je kunt er ook een privéruimte boeken voor een zakelijke meeting. Je kunt elke dag van 9 tot 5 binnenlopen.",
   "website": "https://thelobbynijmegen.nl/",
   "website_bereikbaar": true
@@ -15547,7 +15547,7 @@
   },
   "openingstijden": "ma-za 10:00-17:00, zo 12:00-17:00",
   "opmerkingen": "De website stuurt door naar newdutchstreetfood.nl. Zeezicht is samengegaan met lunchroom New Dutch en heet nu 'New Dutch & Zeezicht'. Het adres op de site is Marikenstraat 46-48, bij ons staat nummer 42. De zaak is alleen overdag open en noemt zichzelf een lunchroom, daarom staat de hoofdcategorie op lunch en niet op restaurant. De menukaart is een PDF die we niet konden lezen (waarschijnlijk een afbeelding), dus de gerechten en de keuken zijn niet bekend. 'Lunchroom' in het veld keuken is daarom een noodoplossing en geen echte keuken. Graag de naam in de gids aanpassen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Even uitblazen tijdens het winkelen in de binnenstad? Loop naar de bovenste etage van de Marikenstraat. Daar zit, vlak naast het monument De Schommel, de lunchroom waar Zeezicht en New Dutch nu samen verder gaan.\n\nBuiten zit je op een ruim terras onder hoge kastanjebomen, die in de zomer lekker veel schaduw geven. In het voor- en najaar houden verwarmde stoelkussens je warm, dus je kunt dan ook gewoon buiten zitten. Binnen is de zaak gezellig ingericht en is er plek voor zo'n 85 gasten. Je kiest uit een flinke lunchkaart, dus voor iedereen aan tafel is er wat te vinden.\n\nJe bent overdag welkom, op zondag vanaf het middaguur. Wil je zeker zijn van een plekje? Je kunt reserveren door te bellen, te mailen of gewoon even binnen te lopen.",
   "website": "http://www.zeezicht-nijmegen.nl/",
   "website_bereikbaar": true
