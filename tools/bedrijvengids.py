@@ -59,6 +59,10 @@ CATEGORIE = {
          "de drukte en de begeleiding bij je passen voordat je een abonnement afsluit."),
     ],
     "artikelen": ["bammmm-en-je-bent-fit", "afvallen-met-sport-tips-voor-een-kleinere-maat", "7x-de-beste-warming-up-oefeningen"],
+    # Blogberichten over het onderwerp: daaronder komt het blok met de uitgelichte bedrijven (onderdeel van Uitgelicht)
+    "blogs": ["bammmm-en-je-bent-fit", "afvallen-met-sport-tips-voor-een-kleinere-maat", "7x-de-beste-warming-up-oefeningen",
+              "hoe-kan-een-dietist-je-helpen-gezonder-te-gaan-leven"],
+    "meervoud": "sportscholen",
 }
 
 
@@ -461,14 +465,15 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../", voorstel=False
 
 VOORBEELD = {"slug": "", "naam": "Jouw sportschool", "adres": "Uitgelicht staat bovenaan, met foto en actieknop", "postcode": "", "plaats": "",
              "foto": "assets/uploads/2022/11/sporten-in-nijmegen-533x400.webp", "kenmerken": ["proefles", "groepslessen"],
-             "actie": "Eerste maand gratis sporten", "openingstijden": [], "uitgelicht": True}
+             "actie": {"tekst": "Eerste maand gratis sporten"}, "openingstijden": [], "uitgelicht": True}
 
 
 def uitgelicht_kaart(b, root, voorbeeld=False):
     """Grote kaart voor betalende bedrijven: foto, kenmerken, de actie en een knop."""
     km = b.get("kenmerken") or []
     chips = '<span class="bedrijfkaart__kenmerken">%s</span>' % "".join("<span>%s</span>" % esc(k) for k in km[:4]) if km else ""
-    actie = '<span class="bedrijfkaart__actie">%s</span>' % esc(b["actie"]) if b.get("actie") else ""
+    actie = (b.get("actie") or {}).get("tekst", "")
+    actie = '<span class="bedrijfkaart__actie">%s</span>' % esc(actie) if actie else ""
     label = "Voorbeeld" if voorbeeld else "Uitgelicht"
     href = "%sadverteren-bij-nijmegenonline/" % root if voorbeeld else "%sbedrijvengids/%s/" % (root, b["slug"])
     foto = '<img src="%s" alt="" loading="lazy">' % esc(foto_url(b["foto"], root)) if b.get("foto") else ""
@@ -503,7 +508,7 @@ def categorie_voorstel(cat, gids, overig, artikelen, root):
     random.Random(datetime.date.today().isoformat() + cat["slug"]).shuffle(uitgelicht)
     uitgelicht = uitgelicht[:MAX_UITGELICHT]
     # Lege plekken: één voorbeeldkaart (zolang er niemand betaalt) en een uitnodiging om die plek te nemen
-    out.append('        <section class="gids-sectie">\n          <h2>Uitgelicht</h2>\n          <div class="bedrijflijst bedrijflijst--uitgelicht">')
+    out.append('        <section class="gids-sectie" id="uitgelicht">\n          <h2>Uitgelicht</h2>\n          <div class="bedrijflijst bedrijflijst--uitgelicht">')
     out.extend("            " + uitgelicht_kaart(b, root) for b in uitgelicht)
     if not uitgelicht:
         out.append("            " + uitgelicht_kaart(VOORBEELD, root, voorbeeld=True))
@@ -526,7 +531,9 @@ def categorie_voorstel(cat, gids, overig, artikelen, root):
              ("Bovenaan deze pagina, met label Uitgelicht", "nee", "ja", "ja"),
              ("Logo en foto's (tot 10)", "nee", "ja", "ja"),
              ("Actie en eigen knop (proefles, inschrijven, bellen)", "nee", "ja", "ja"),
-             ("Banner bij sport en gezondheid, artikel en nieuwsbrief", "nee", "nee", "ja"),
+             ("Uitgelicht onder onze blogs over sport en gezondheid", "nee", "ja", "ja"),
+             ("Banner op de hele site, niet alleen bij sport", "nee", "nee", "ja"),
+             ("Artikel over je bedrijf en een plek in de nieuwsbrief", "nee", "nee", "ja"),
              ("Overzicht van weergaven en kliks", "jaarlijks", "jaarlijks", "elk kwartaal")]
     out.append('        <section class="gids-sectie pakketvergelijk">\n          <h2>Heb je een sportschool in Nijmegen?</h2>'
                '\n          <p>Elke sportschool staat gratis in onze gids. Wil je opvallen tussen %d sportscholen? Kies dan voor Uitgelicht of Partner.</p>'
@@ -552,6 +559,30 @@ def categorie_voorstel(cat, gids, overig, artikelen, root):
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
+
+
+def blog_blokken(cat, alle):
+    """Onder de blogberichten van het onderwerp: de uitgelichte bedrijven. Zolang niemand betaalt een verwijzing
+    naar de categorie, met een uitnodiging voor ondernemers. Staat tussen <!-- gidstip --> en <!-- /gidstip -->."""
+    uitgelicht = [b for b in alle if b.get("uitgelicht")]
+    random.Random(datetime.date.today().isoformat() + cat["slug"] + "blog").shuffle(uitgelicht)
+    root = "../"
+    naar = '<a href="%sbedrijvengids-categorie/%s/">Bekijk alle %d %s in Nijmegen</a>' % (root, cat["slug"], len(alle), cat["meervoud"])
+    if uitgelicht:
+        blok = ('<section class="gidstip"><h2>%s uitgelicht</h2><div class="bedrijflijst bedrijflijst--uitgelicht">%s</div><p>%s</p></section>'
+                % (esc(cat["meervoud"][0].upper() + cat["meervoud"][1:]), "".join(uitgelicht_kaart(b, root) for b in uitgelicht[:MAX_UITGELICHT]), naar))
+    else:
+        blok = ('<section class="gidstip"><h2>%s</h2><p>Zin om te beginnen? In onze bedrijvengids vind je alle %d %s in Nijmegen, '
+                'met openingstijden, kenmerken en een kaart.</p><p>%s</p><p class="gidstip__ondernemer">Heb je zelf een %s? '
+                '<a href="%sadverteren-bij-nijmegenonline/">Laat je hier uitlichten</a>.</p></section>'
+                % (esc(cat["naam"]), len(alle), cat["meervoud"], naar, esc(cat["enkelvoud"].lower()), root))
+    for s_ in cat.get("blogs", []):
+        pad = ROOT / s_ / "index.html"
+        if not pad.exists():
+            continue
+        tekst = re.sub(r"\n?[ \t]*<!-- gidstip -->.*?<!-- /gidstip -->", "", pad.read_text(encoding="utf-8"), flags=re.S)
+        tekst = tekst.replace("      </article>", "        <!-- gidstip -->%s<!-- /gidstip -->\n      </article>" % blok, 1)
+        pad.write_text(tekst, encoding="utf-8")
 
 
 def filter_blok(bedrijven):
@@ -714,6 +745,7 @@ def main(bron):
     for b in gids + overig:
         anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
         schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen))
+    blog_blokken(cat, gids + overig)
     schrijf("bedrijvengids", start_pagina([(cat["groep"], [(cat, gids, overig)])]))
     print("%s: %d uit de gids, %d aangevuld" % (cat["slug"], len(gids), len(overig)))
 

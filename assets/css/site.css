@@ -433,3 +433,8 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .tabel-scroll { overflow-x: auto; }
 .pakketvergelijk__knoppen { margin-top: 14px; }
 .pakketvergelijk .knop { display: inline-block; background: var(--groen); color: #fff; font-weight: 700; padding: 9px 16px; border-radius: 6px; text-decoration: none; margin-right: 8px; }
+
+/* Blok onder blogberichten met de uitgelichte bedrijven van het onderwerp (tools/bedrijvengids.py, blog_blokken) */
+.gidstip { margin-top: 40px; background: #f6f9f3; border-radius: 10px; padding: 4px 20px 16px; }
+.gidstip h2 { margin-top: 20px; }
+.gidstip__ondernemer { font-size: 0.9rem; color: var(--grijs); }

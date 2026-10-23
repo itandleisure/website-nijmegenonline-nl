@@ -48,6 +48,7 @@ KENMERKEN = [
     ("Logo en foto's", ["nee", "tot 10 foto's", "tot 10 foto's", "tot 10 foto's"]),
     ("Bovenaan je categorie met het label Uitgelicht (maximaal 3 per categorie)", ["nee", "ja", "ja", "ja"]),
     ("Actieknop (reserveren, offerte, bellen) en een aanbieding", ["nee", "ja", "ja", "ja"]),
+    ("Uitgelicht onder onze blogberichten over jouw onderwerp", ["nee", "ja", "ja", "ja"]),
     ("Je evenementen uitgelicht in de agenda", ["nee", "ja", "ja", "ja"]),
     ("Nieuwsbrief", ["nee", "1&times; per jaar in Nieuw in de gids", "2&times; een eigen tegel", "logo in elke editie"]),
     ("Banner", ["nee", "nee", "in je eigen branche", "op de hele site"]),
