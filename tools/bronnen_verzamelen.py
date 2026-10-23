@@ -48,6 +48,22 @@ BRONNEN = {
         "andere_soort": r"bakker|bakery|cafetaria|snack|friture|frituur|shoarma|kebab|d[oö]ner|burger king|mcdonald|kfc|"
                         r"ijssalon|gelato|bubble|boba|kiosk|catering|internet",
     },
+    "cafe": {
+        "osm": {"Cafés, bars en uitgaan"},
+        "overture": lambda basis, soort: soort in (
+            "pub", "bar", "wine_bar", "cocktail_bar", "beer_bar", "lounge", "gay_bar", "beer_garden", "dive_bar",
+            "sports_bar", "beach_bar", "tiki_bar"),
+        "soort": "Café",
+        "andere_soort": r"coffeeshop|coffee shop|snack|cafetaria|shoarma|kebab|hotel\b|bowling|casino|shisha|hookah",
+    },
+    "koffiezaak": {
+        "osm": {"Lunch, koffie en ontbijt"},
+        "osm_sub": r"coffee",
+        "overture": lambda basis, soort: soort in ("coffee_shop", "coffee_roastery"),
+        "soort": "Koffiebar",
+        # In Nederland is een coffeeshop iets anders dan een koffiebar
+        "andere_soort": r"coffeeshop|coffee shop|grow|smart ?shop|bakker|bakery|snack|cafetaria|vending|automaat",
+    },
 }
 
 # Een link naar zo'n site is geen eigen website: dan valt het bedrijf af (standaard: geen eigen site = niet in de gids)
@@ -162,6 +178,8 @@ def main(categorie, bron):
 
     for x in csv.DictReader(open(bron / "advies" / "osm-bedrijvengids" / "osm-bedrijven-regio-nijmegen.csv", encoding="utf-8")):
         if x["categorie"] not in regels["osm"] or x["gemeente"] != "Nijmegen":
+            continue
+        if regels.get("osm_sub") and not re.search(regels["osm_sub"], x["subcategorie"]):
             continue
         kandidaten.append({"soort": regels["soort"], "naam": x["naam"], "adres": adres(x["adres"]), "postcode": postcode(x["postcode"]),
                            "plaats": x["plaats"] or "Nijmegen", "gemeente": "Nijmegen", "website": x["website"], "telefoon": x["telefoon"],

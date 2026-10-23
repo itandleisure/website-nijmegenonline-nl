@@ -55,5 +55,17 @@
   "adres": "Lange Baan 4",
   "postcode": "6511 XJ",
   "plaats": "Nijmegen"
+ },
+ "theatercafe-n23": {
+  "naam": "Lindenberg Café"
+ },
+ "the-yard": {
+  "naam": "Sportsbar The Yard",
+  "adres": "Heyendaalseweg 141",
+  "postcode": "6525 AJ"
+ },
+ "jan-nijmegen": {
+  "adres": "Grote Markt 32",
+  "postcode": "6511 KB"
  }
 }

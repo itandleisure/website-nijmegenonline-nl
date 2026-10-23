@@ -1,4 +1,18 @@
 {
+ "aangenaam-aleppo": {
+  "adres": "Hoeckelumstraat 19",
+  "bedrijf": "Aangenaam Aleppo",
+  "bedrijfsmail": "",
+  "categorie": "Koffiebar",
+  "foto": "",
+  "omschrijving": "Zin om Syrië te proeven zonder je fiets uit Nijmegen te halen? Bij Aangenaam Aleppo draait alles om koffie met kardemom. Die specialiteit komt uit Aleppo en heeft een warme, kruidige smaak. Uit de berichten van de zaak blijkt dat je er ook terechtkunt voor baklava, nougat en ander Syrisch lekkers.\n\nHet bedrijf bestaat sinds 2018 en wil Nijmegenaren laten kennismaken met de cultuur en de ambachtelijke producten van Aleppo. In het assortiment vind je onder meer gemalen koffie, thee, olijfolie, granaatappelmelasse en de bekende Aleppo-zeep van olijfolie. Ook cadeaupakketten zijn een goede keuze als je iemand iets bijzonders wilt geven.\n\nKom langs voor een kop kardemomkoffie en vraag gerust naar het verhaal achter de producten. Je kunt ook vanuit huis bestellen via de webshop.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6535 PE",
+  "site": "https://www.aangenaamaleppo.nl/",
+  "telefoon": "31645203033",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/aangenaam-aleppo/"
+ },
  "alba": {
   "adres": "Oranje Marieplein 5",
   "bedrijf": "Alba",
@@ -139,6 +153,62 @@
   "telefoon": "+31 24 737 0040",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/bankoh/"
  },
+ "bar-2": {
+  "adres": "Molenstraat 83",
+  "bedrijf": "Bar 2",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Heb je zin om laat op de avond nog even door te gaan in de Molenstraat? Bij Bar 2 kun je elke avond vanaf acht uur terecht, en de deur blijft open tot diep in de nacht. Het is een hippe kroeg met een eigen sfeer, waar je met vrienden een drankje doet en waar je vaak ook gewoon kunt dansen.\n\nDe zaak is ontstaan uit een vriendinnenproject: zes vriendinnen stonden jarenlang tijdens de Vierdaagsefeesten in de Molenstraat met een buitenbar, 'bar nummer 2'. In november 2018 werd dat hun eigen vaste kroeg.\n\nKijk vooraf even naar het weekprogramma op de site voor de vaste drankacties per avond, en zoek ze op via Facebook of Instagram. Spreek af met je vrienden en sluit je avond in de binnenstad hier af.",
+  "openingstijden": "ma-zo 20:00-04:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 HB",
+  "site": "http://www.bar2.nl/",
+  "telefoon": "+31243602752",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/bar-2/"
+ },
+ "bar-cali": {
+  "adres": "Priemstraat 13",
+  "bedrijf": "Bar Cali",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om je avond rustig te beginnen met een goed drankje en iets lekkers erbij? Dan zit je goed bij Bar Cali in de Priemstraat, midden in het centrum van Nijmegen. Hier draait het om koele drankjes en goed eten, van een hapje bij de borrel tot een complete maaltijd.\n\nBar Cali is van woensdag tot en met zondag vanaf 17.00 uur open. Liever thuis eten? Er is ook een menu om af te halen. Bel vanaf half vier je bestelling door, dan staat die vanaf vijf uur voor je klaar. Vanaf september is er weer elke maand een pubquiz.\n\nWil je zeker zijn van een plek? Reserveer telefonisch of loop gewoon even binnen.",
+  "openingstijden": "wo-zo vanaf 17:00",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "site": "https://bar-cali.nl/",
+  "telefoon": "+31 24 679 1500",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/bar-cali/"
+ },
+ "bar-concorde": {
+  "adres": "1e Walstraat 18",
+  "bedrijf": "Bar Concorde",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om de avond te beginnen met een cocktail voordat je de microfoon pakt? In Nightingale Karaokebar aan de 1e Walstraat, midden in het centrum, komt Bar Concorde: een bar met een vliegtuigthema, waar proosten voelt als instappen voor een vlucht.\n\nStraks kun je er terecht voor cocktails, wijn die met zorg is uitgekozen en goed bier. Het is een fijne plek om op te warmen voor een karaokesessie in een van de vijf privékamers, of om na afloop nog even na te praten.\n\nLet wel op: de bar wordt nog afgebouwd en is nog niet officieel open. Houd de website of de socials van Nightingale in de gaten, en reserveer alvast een karaokekamer voor je volgende avondje uit.",
+  "openingstijden": "ma gesloten, di-do 17:30-01:00, vr 17:30-02:00, za 15:30-02:00, zo 18:30-00:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 GG",
+  "site": "https://nightingalekaraokebar.nl/bar-concorde",
+  "telefoon": "",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/bar-concorde/"
+ },
+ "bar-glitch": {
+  "adres": "Grotestraat 5",
+  "bedrijf": "Bar Glitch",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een cocktail die gewoon klopt? Op de Grotestraat 5, midden in het centrum, schudden ze bij Bar Glitch klassiekers zoals een Pornstar Martini of Piña Colada volgens het originele recept. Daarnaast staan er speciaalbieren, wijnen en bubbels op de kaart, met borrelhapjes om erbij te bestellen. De ruimte is knus en eigenzinnig, met kunst aan de muur.\n\nWil je zelf leren shaken? Met een groep van 6 tot 50 mensen boek je een cocktailworkshop van anderhalf à twee uur. Je kunt de bar ook afhuren voor een verjaardag, bedrijfsborrel of kerstborrel met maximaal 80 gasten.\n\nGlitch is open van woensdag tot en met zondag, in het weekend al vanaf de middag. Reserveer een tafel via de site en proost op een avond in de binnenstad.",
+  "openingstijden": "wo-vr 19:00-01:00, za 13:30-01:30, zo 13:30-19:00, of op afspraak/reservering",
+  "plaats": "Nijmegen",
+  "postcode": "6511 VB",
+  "site": "https://barglitch.nl/",
+  "telefoon": "+31636344157",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/bar-glitch/"
+ },
  "bar-pasta": {
   "adres": "Groesbeeksedwarsweg 304",
   "bedrijf": "Bar Pasta",
@@ -152,6 +222,48 @@
   "site": "https://barpasta.nl/",
   "telefoon": "+31 6 23159507",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/bar-pasta/"
+ },
+ "bar-socio": {
+  "adres": "van Welderenstraat 90",
+  "bedrijf": "Bar Socio",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om na het werk wat te drinken, met een plankje kaas erbij? In de Van Welderenstraat, vlak bij het centrum, vind je deze kaas- en borrelbar. Hier draait alles om samen aan tafel zitten, wat bites delen en je glas nog eens laten bijvullen.\n\nNaast de kaaskaart en een aparte wijnkaart staan er genoeg borrelhapjes op het menu: bruschetta's met burrata of taleggio uit de oven, gefrituurde olijven, Padrón-pepers, charcuterie en bitterballen, die er ook in een vegaversie zijn. Wil je liever geen alcohol? Er is ook een drankenkaart met allerlei andere drankjes.\n\nReserveren kan niet, dus loop gewoon binnen. Kom je met een grote groep, stuur dan van tevoren even een mailtje.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6511 MR",
+  "site": "https://www.barsocio.nl/",
+  "telefoon": "+31248489643",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/bar-socio/"
+ },
+ "barrika-foodbar": {
+  "adres": "Van Welderenstraat 111",
+  "bedrijf": "Barrika Foodbar",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om na het winkelen in de binnenstad meteen door te borrelen, en blijf je daarna gewoon hangen voor het eten? Dan zit je goed in de Van Welderenstraat, op een paar minuten lopen van het station. Bij deze foodbar hoor je Caribische klanken, en de middag gaat er zonder dat je het merkt over in de avond.\n\nOp de kaart staan onder meer smash burgers, kaasfondue en een vegetarische rendang. In het weekend gaan de deuren tot laat open, en het kan zomaar gebeuren dat je met je vrienden op de bar staat mee te zingen. Nieuw is de tapcorner: daar heb je met je groep je eigen plek en tap je zelf je fust leeg.\n\nJe kunt gewoon binnenlopen, maar reserveren mag ook, per telefoon of mail. Wil je iets vieren met je familie of collega's? Bel even, dan denken ze met je mee.",
+  "openingstijden": "ma gesloten/op afspraak, di 16:00-22:00, wo-do 16:00-01:00, vr-za 15:00-02:00, zo 16:00-22:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 MG",
+  "site": "https://www.barrika.nl/",
+  "telefoon": "+31242049582",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/barrika-foodbar/"
+ },
+ "bascafe": {
+  "adres": "In de Betouwstraat 16",
+  "bedrijf": "Bascafe",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een avond uit in het centrum zonder meteen de hele nacht in te plannen? In de Betouwstraat vind je Bas, het vroegere Bascafé dat sinds maart 2025 in een flink vernieuwd jasje zit. Het is nu een club café waar muziek en goed gemixte drankjes centraal staan.\n\nAan de bar bestel je cocktails, mixdrankjes of een speciaalbiertje. Doordeweeks hangt er een vertrouwde kroegsfeer met bekende meezingers en acties, in het weekend gaat het tempo omhoog en draait LouLou tech- en housetracks tot laat. Op mooie zomeravonden kun je ook buiten op het terras zitten.\n\nKom je met de fiets? Die zet je in de stalling aan de Bisschop Hamerstraat, en dan loop je zo naar binnen. Kijk vooraf even in de weekagenda wat er die avond op het programma staat.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6511 GC",
+  "site": "http://www.basnijmegen.nl/",
+  "telefoon": "+31243220805",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/bascafe/"
  },
  "basic-fit-kerkenbos": {
   "adres": "Kerkenbos 1115",
@@ -279,6 +391,20 @@
   "telefoon": "+31243241627",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/bleeckerstreet/"
  },
+ "blommers-coffee-het-loog": {
+  "adres": "Het Loog 6",
+  "bedrijf": "Blommers Coffee",
+  "bedrijfsmail": "",
+  "categorie": "Koffiebar",
+  "foto": "",
+  "omschrijving": "Zet je thuis graag zelf een goede kop koffie? Op Het Loog in Nijmegen-Noord zit de branderij van Blommers Coffee Roasters. Hier worden specialty koffiebonen gebrand, zowel voor filterkoffie als voor espresso, en er zijn ook decaf en proefpakketten. Daarmee ontdek je makkelijk welke smaak jij lekker vindt.\n\nNaast bonen kun je bij Blommers terecht voor alles wat je nodig hebt om koffie te zetten, van malers en waterkokers tot espressomachines. Horecazaken en kantoren kunnen hier ook koffie en apparatuur regelen.\n\nWil je liever meteen een kop proeven? Blommers heeft ook eigen cafés, onder meer aan de Lange Hezelstraat in het centrum. De branderij is op werkdagen overdag bereikbaar. Bestel je bonen online of neem eerst contact op voor advies.",
+  "openingstijden": "ma-vr 09:00-17:00 (branderij)",
+  "plaats": "Nijmegen",
+  "postcode": "6541 AW",
+  "site": "https://www.blommers.coffee/nl/",
+  "telefoon": "0247997001",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/blommers-coffee-het-loog/"
+ },
  "bluf-nijmegen": {
   "adres": "Van Welderenstraat 95",
   "bedrijf": "BLUF Nijmegen",
@@ -363,6 +489,20 @@
   "telefoon": "+31248488560",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/brood-op-de-plank/"
  },
+ "buskens-nijmegen": {
+  "adres": "Berg en Dalseweg 33",
+  "bedrijf": "Buskens Nijmegen",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een goed glas wijn in een pand vol Nijmeegse verhalen? Aan de Berg en Dalseweg zit wijnbar Buskens, in een rijksmonument dat in 1910 als café werd geopend. Vroeger schoven hier schrijvers en muzikanten aan, nu kom je er voor een borrel, een lunch of een avond eten.\n\nDe wijnkaart verandert steeds, met veel flessen van lokale importeurs. Wil je echt gaan proeven? Kies dan een high wine met een paar proefglazen en bites, of laat je verrassen met het menu van de chef met wijnen die erbij passen. Daarnaast staan er geregeld events op de agenda, van oesters met bubbels tot een bingoavond.\n\nReserveren hoeft niet, je loopt gewoon binnen. Kom je met zes mensen of meer, stuur dan even een mailtje. Op maandag is Buskens dicht.",
+  "openingstijden": "Bar: ma gesloten, di-do 16:00-00:00, vr-zo 12:00-00:00; keuken: di-do 16:00-22:00, vr-zo 12:00-22:00",
+  "plaats": "Nijmegen",
+  "postcode": "6522 BA",
+  "site": "https://buskensnijmegen.nl/",
+  "telefoon": "+31243031030",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/buskens-nijmegen/"
+ },
  "buur-west": {
   "adres": "Voorstadslaan 267",
   "bedrijf": "BUUR West",
@@ -376,6 +516,20 @@
   "site": "https://buurnijmegen.nl/buur-west/",
   "telefoon": "+31 24 301 7747",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/buur-west/"
+ },
+ "buurtcafe-adriaan": {
+  "adres": "Koolemans Beynenstraat 80",
+  "bedrijf": "Buurtcafe Adriaan",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een plek in Nijmegen-Oost waar je de hele dag kunt aanschuiven? In dit buurtcafé aan de Koolemans Beynenstraat begin je met koffie en blijf je hangen voor de lunch. Denk aan een croque op zuurdesembrood van bakkerij Boterzout, een twaalfuurtje of een royale salade met burrata.\n\nIn de middag wordt het borrelen. Je bestelt de hele dag snacks, zoals bitterballen van oesterzwam, kippenvleugeltjes in kokossaus of een plank met kaas en vleeswaren van De Laak. De keuken is een gevarieerde mix met Hollandse, Italiaanse en Indonesische invloeden. Er staan ook vegetarische gerechten op de kaart, en voor de kleintjes is er een kindermenu met babycino en pannenkoekjes.\n\nVan donderdag tot en met zaterdag ben je tot 's avonds welkom en kun je mee-eten met de daghap. Wil je zeker zijn van een tafel? Reserveer dan even online.",
+  "openingstijden": "zo, di, wo 09:30-17:00; do-za 09:30-21:00; ma gesloten",
+  "plaats": "Nijmegen",
+  "postcode": "6521 EW",
+  "site": "https://buurtcafeadriaan.nl/",
+  "telefoon": "",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/buurtcafe-adriaan/"
  },
  "buuv": {
   "adres": "Hazenkampseweg 312",
@@ -419,6 +573,34 @@
   "telefoon": "+31243226426",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-camelot-nijmegen/"
  },
+ "cafe-daen": {
+  "adres": "Grote Markt 23",
+  "bedrijf": "Cafe Daen",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een speciaalbiertje met uitzicht op de St. Stevenstoren? Op de Grote Markt vind je dit café al bijna dertig jaar in de Oude Laekenhal, een monumentaal pand met veel sfeer. Je kunt er borrelen, lunchen en dineren, en er is een ruime keuze aan speciaalbieren en wijnen.\n\nKom je met een groep? Bestel dan een van de Daenplanken, waarop verschillende hapjes mooi worden opgediend. Wil je een feestje of bedrijfsborrel geven? Dan kun je de Daenzaal of de Daengewelven in de kelder huren. Bij wedstrijden van NEC staat het grote scherm aan, en in de herfst kun je er bokbier proeven.\n\nVan maandag tot en met dinsdag is het café dicht. Wil je zeker zijn van een tafel? Reserveer dan via de website.",
+  "openingstijden": "ma-di gesloten, wo-do vanaf 16:00, vr-za vanaf 12:00, zo vanaf 13:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 KA",
+  "site": "http://www.cafedaen.nl/",
+  "telefoon": "+31243606906",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-daen/"
+ },
+ "cafe-de-aesculaaf": {
+  "adres": "Geert Grooteplein Noord 21",
+  "bedrijf": "Café de Aesculaaf",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zit je na een lange collegedag of dienst op de Radboudcampus en heb je zin in een biertje met studiegenoten of collega's? Dan kom je terecht in Café de Aesculaaf aan het Geert Grooteplein Noord. Het is de kroeg van de Medische Faculteit, die door medische studenten wordt gerund en waar elke werkdag vanaf vier uur een team van studenten achter de tap staat.\n\nDe kaart draait vooral om speciaalbier. Elke paar weken is er een nieuw biermenu met vier bieren die je op maandag kunt proeven. Er staat ook regelmatig een Nijmeegs biertje tussen. Ben je student of medewerker van het Radboudumc, dan kun je hier ook een borrel geven, bijvoorbeeld als je afstudeert of als een collega afscheid neemt.\n\nLoop na je laatste college eens binnen en neem een kijkje bij de 'wall of fame' met foto's van de tappers.",
+  "openingstijden": "ma-wo 16:00-18:30, do-vr 16:00-19:30",
+  "plaats": "Nijmegen",
+  "postcode": "6525 EZ",
+  "site": "http://www.aesculaaf.nl/",
+  "telefoon": "+31613770995",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-de-aesculaaf/"
+ },
  "cafe-de-blonde-pater": {
   "adres": "Houtstraat 62",
   "bedrijf": "Café de Blonde Pater",
@@ -432,6 +614,76 @@
   "site": "http://www.blondepater.nl/",
   "telefoon": "+31243229647",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-de-blonde-pater/"
+ },
+ "cafe-de-burgemeester": {
+  "adres": "Grotestraat 8",
+  "bedrijf": "Café de Burgemeester",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Ben je in de binnenstad en heb je zin in een borrel? Loop dan de Grotestraat in, dat gezellige straatje midden in het centrum van Nijmegen. Op nummer 8 vind je dit café, waar je makkelijk blijft hangen voor een drankje met vrienden.\n\nGeef je zelf een feestje? Het café heeft ook een aparte zaal voor maximaal 60 personen, met een eigen bar, eigen toiletten, een muziekinstallatie en een beamer. Die zaal is geschikt voor een verjaardag, een afstudeerborrel of een vergadering, en je huurt hem met of zonder personeel.\n\nWil je de zaal eerst zien? Loop gerust eens binnen of bel of mail even om de mogelijkheden te bespreken.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6511 VD",
+  "site": "https://cafeburgemeester.nl",
+  "telefoon": "+31248440834",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-de-burgemeester/"
+ },
+ "cafe-de-deut": {
+  "adres": "",
+  "bedrijf": "Café De Deut",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een biertje tussen barokke lampjes, heiligenbeeldjes en allerlei vreemde snuisterijen? Dan moet je bij De Deut aan de Koningstraat zijn, vlak bij het Koningsplein in het centrum. Het café noemt zichzelf met trots het kitscherigste van de stad, en zo voelt het ook: als een uit de hand gelopen huiskamer van je oma, met rock-'n-roll, gitaarmuziek en classics op de achtergrond.\n\nBierliefhebbers kunnen hier hun hart ophalen. Er zijn zo'n vijftien bieren van de tap en tientallen op fles en blik, en de kaart wisselt regelmatig. Elke maand komt er een nieuw Bier van de Maand van de tap.\n\nJe bent er elke dag welkom vanaf de ochtend tot diep in de nacht. Kom je met een groep? Bel of mail dan even om te reserveren.",
+  "openingstijden": "ma-vr 11:00-02:00, za 10:00-02:00, zo 11:00-01:30",
+  "plaats": "Nijmegen",
+  "postcode": "6511 LB",
+  "site": "https://www.cafededeut.nl",
+  "telefoon": "+31243238110",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-de-deut/"
+ },
+ "cafe-de-fuik": {
+  "adres": "Eerste Walstraat 6",
+  "bedrijf": "Cafe de Fuik",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om je week met je vrienden af te sluiten en daarna nog even flink te dansen? In de Eerste Walstraat, midden in het centrum van Nijmegen, vind je Café de Fuik, een feestcafé dat vooral bij studenten al jaren populair is. Rond tien uur 's avonds gaan de tafels en stoelen aan de kant, en dan draaien de dj's dansplaten en meezingers.\n\nElke avond van de week heeft zijn eigen thema. Op maandag drink je met je groep meters om een score te halen die blijft staan, en op woensdag 'breek' je de week met een speciale deal. Later in de week staan er nog andere acties met shots op het programma. Na afloop kun je de feestfoto's online terugzien.\n\nBekijk de weekagenda op de site, trommel je maten op en ga een avondje stappen.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6511 GG",
+  "site": "https://www.cafedefuik.nl/",
+  "telefoon": "+31243234730",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-de-fuik/"
+ },
+ "cafe-de-opera": {
+  "adres": "",
+  "bedrijf": "Café De Opera",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een speciaalbiertje op een van de gezelligste plekken in het centrum? Aan de Koningstraat, met uitzicht op het Koningsplein, schenkt dit café al sinds 1982. Er zitten 21 bieren op de tap en je kiest uit een flinke kaart met flessen. Liever geen bier? Dan zijn er ook wijn en cocktails, en het personeel helpt je graag met kiezen.\n\nJe kunt er vanaf 's ochtends terecht voor koffie met taart en voor een lunch met verse producten van lokale leveranciers. Of je blijft hangen tot in de kleine uurtjes. Zak weg op de banken of lees de krant aan de grote leestafel bij het raam. Bij mooi weer gaat de pui open en zit je buiten op het ruime terras op het plein.\n\nWil je reserveren? Dat kan in overleg, op donderdag tot en met zaterdag tot 20.00 uur.",
+  "openingstijden": "ma-za 10:00-02:00, zo 11:00-01:30",
+  "plaats": "Nijmegen",
+  "postcode": "6511 LB",
+  "site": "https://www.cafedeopera.nl",
+  "telefoon": "+31243232197",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-de-opera/"
+ },
+ "cafe-de-opstand": {
+  "adres": "van Welderenstraat 104",
+  "bedrijf": "Café de Opstand",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een kroeg waar je uitgaat en je tegelijk thuis voelt? In de Van Welderenstraat vind je dit collectieve café. Het wordt draaiend gehouden door vrijwilligers en iedereen is er welkom. De sfeer is idealistisch, eigenwijs en vooral gezellig.\n\nOp de tap staan wisselende seizoensbieren, zoals een herfstbock. Op woensdagavond kies je uit tientallen wodka's, waarvan een groot deel volgens een eigen recept is gemaakt. Elke eerste zondag van de maand is er een gratis pubquiz en op de tweede zondag kun je bordspellen spelen. Je mag je eigen spel meenemen, maar er is ook een spellenhoek. Verder staan er brei- en haakmiddagen en queer borrels op de agenda.\n\nHet café is open van woensdag tot en met zondag, steeds vanaf de middag. Kijk even op de agenda en schuif gewoon aan.",
+  "openingstijden": "ma-di gesloten, wo-do 16:00-01:00, vr-za 15:00-02:00, zo 15:00-00:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 MS",
+  "site": "https://www.de-opstand.nl",
+  "telefoon": "+31 24 3226812",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-de-opstand/"
  },
  "cafe-de-plak": {
   "adres": "Bloemerstraat 90",
@@ -489,6 +741,48 @@
   "telefoon": "+31243811501",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-eten-en-drinken-lent/"
  },
+ "cafe-faber": {
+  "adres": "Van Broeckhuysenstraat 12",
+  "bedrijf": "Café Faber",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een goed getapt speciaalbier op een zonnig plein midden in de stad? Dan kun je terecht bij dit bruine café aan het Faberplein, in de Van Broeckhuysenstraat. Er zijn dertien bieren van de tap en nog veel meer op fles, en daarnaast schenken ze gin-tonics en wijn. De mensen achter de bar weten waar ze het over hebben.\n\nOverdag kun je er lunchen met tosti's, broodjes of een uitsmijter. Vanaf de middag bestel je pubfood zoals loaded fries en burgers, en tot laat staan bitterballen, nacho's en borrelplanken klaar. 's Zomers zit je op het terras met uitzicht over het plein, 's winters is het binnen knus. Elke maand is er een pubquiz.\n\nGa je een feestje geven? Boven het café zit een zaal die je kunt huren. Stuur een mailtje om te reserveren.",
+  "openingstijden": "ma-za 11:00-sluit, zo 12:00-sluit",
+  "plaats": "Nijmegen",
+  "postcode": "6511 PH",
+  "site": "http://www.cafefaber.nl/",
+  "telefoon": "+31248484411",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-faber/"
+ },
+ "cafe-hubert": {
+  "adres": "Winselingseweg 47",
+  "bedrijf": "Cafe Hubert",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een plek waar je binnenloopt voor koffie en blijft hangen tot de laatste fles leeg is? Aan de Winselingseweg vind je Hubert, een eetcafé en koffiebar met een huiskamersfeer die gezellig en een beetje rauw is. Je drinkt er koffie, koud bier of een goed glas wijn, en eet seizoenshapjes en schalen om met elkaar te delen. De kaart verandert regelmatig.\n\nHubert is meer dan een café. Achter de zaak zit een stichting die jonge makers ruimte geeft, en dat merk je aan het programma: vintage markten, workshops, een pubquiz en pingpongavonden.\n\nJe kunt er terecht van donderdag tot en met zondag, vanaf de middag. Kijk even in de agenda wat er speelt, reserveer een tafel en neem je vrienden mee.",
+  "openingstijden": "do 15:00-23:00, vr 15:00-01:00, za 13:00-01:00, zo 13:00-17:00",
+  "plaats": "Nijmegen",
+  "postcode": "6541 AH",
+  "site": "http://www.hubertnijmegen.nl/",
+  "telefoon": "+31645104690",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-hubert/"
+ },
+ "cafe-jos": {
+  "adres": "",
+  "bedrijf": "Café Jos",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om iets anders te drinken dan je vaste pilsje? Aan de Daalseweg vind je een bruin buurtcafé waar de drankkaart een avontuur op zich is: zo'n 36 bieren van de tap, ruim tweehonderd op fles en een vatkamer met bijzondere brouwsels. Daarnaast staan er whisky's, wijnen en een flinke keuze aan koffie en thee op de kaart.\n\nCafé Jos bestaat al sinds 1977. Vroeger was het een echte studentenkroeg, en sinds 1987 mag het zich Meesterschenkerij noemen. De sfeer is nog altijd die van een gezellig buurtcafé, en het team vertelt je graag waar een drankje vandaan komt en hoe het smaakt. Bij mooi weer zit je buiten op het terras.\n\nMet een groep of je collega's kun je een bier- of whiskyproeverij boeken, of een drankmenu dat op jullie wensen is afgestemd. Loop gerust binnen vanaf dinsdagmiddag.",
+  "openingstijden": "ma gesloten, di-za 15:00-01:00, zo 14:00-20:00",
+  "plaats": "Nijmegen",
+  "postcode": "6523 CA",
+  "site": "https://www.cafejos.nl/",
+  "telefoon": "+31243232001",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-jos/"
+ },
  "cafe-klein": {
   "adres": "van Welderenstraat 58",
   "bedrijf": "café Klein",
@@ -503,6 +797,104 @@
   "telefoon": "31247200074",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-klein/"
  },
+ "cafe-maxim": {
+  "adres": "Burghardt van den Berghstraat 87",
+  "bedrijf": "Café Maxim",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een biertje in een café waar de buurt samenkomt? Dan zit je goed in de Burghardt van den Berghstraat, midden in Bottendaal. Hier schuif je aan de bar of zoek je bij mooi weer een plekje op het terras, en ben je zo gewend.\n\nOp de kaart staan tapbieren en speciaalbieren, met Maxim Blond, het eigen bier van het café. Je kunt er ook terecht voor wijn, alcoholvrije cocktails en borrelhapjes om te delen. Van oktober tot en met april is er elke tweede zondag van de maand een pubquiz, en het café doet mee aan buurtfeesten als Billy in Bottendaal en Bottendaal Alive.\n\nIets te vieren? Met een groep vanaf acht personen spreek je samen een borrel of feestje af. Bel, vul het contactformulier in of loop gewoon even binnen, elke dag vanaf de middag.",
+  "openingstijden": "ma-do 15:00-01:00, vr-za 14:00-02:00, zo 14:00-01:00",
+  "plaats": "Nijmegen",
+  "postcode": "6512 DG",
+  "site": "https://www.cafemaxim.nl",
+  "telefoon": "+31 24 322 9706",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-maxim/"
+ },
+ "cafe-piet-huisman": {
+  "adres": "Sint Jacobslaan 30",
+  "bedrijf": "Café Piet Huisman",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een avond bijpraten met een bijzonder biertje in je hand? Aan de Sint Jacobslaan, tussen Hazenkamp, Sint Anna en Grootstal, vind je dit bruine café. Het wordt gerund door de vierde generatie van de familie Huisman. Op de bierlijst staan veel speciaalbieren. Wat er op dat moment op de kaart staat, check je via Untappd. Hou je het liever simpel? Dan kun je ook kiezen voor pils, wijn, een cocktail of iets zonder alcohol.\n\nJe komt hier niet alleen om te drinken. Je kunt darten, biljarten, poolen of een bordspel pakken. Heb je trek, dan bestel je tot 22:00 uur iets van de pubfoodkaart. Houd ook de agenda in de gaten, want er staan geregeld pubquizzen, tap-take-overs en voetbalavonden op het programma.\n\nGeef je een feestje of een borrel? Dan kun je hier een zaaltje huren. Loop gerust eens binnen na een wandeling door de Goffert.",
+  "openingstijden": "ma-wo 17:00-00:00, do 11:00-00:00, vr-za 11:00-01:00, zo gesloten",
+  "plaats": "Nijmegen",
+  "postcode": "6533 BT",
+  "site": "http://www.piethuisman.nl/",
+  "telefoon": "+31243552286",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-piet-huisman/"
+ },
+ "cafe-pool": {
+  "adres": "Van Welderenstraat 99",
+  "bedrijf": "Cafe Pool",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een avond waarop je meer doet dan alleen aan de bar hangen? In dit poolcafé aan de Van Welderenstraat, vlak bij het centrum, pak je een keu voor een potje pool of gooi je een paar pijltjes. Ook tafelvoetbal en airhockey staan klaar, en op verzoek mag je de poker- en beerpongtafel gebruiken.\n\nDe sfeer is ongedwongen: je komt voor het spel, een drankje of een hapje. Voetbal- en dartwedstrijden zie je hier op een groot scherm. Organiseer je een verjaardag, een bedrijfsuitje of een kinderfeestje? Dan ben je hier ook welkom, en voor groepen past het café zelfs de openingstijden aan.\n\nJe kunt van tevoren een tafel reserveren via de site. Doordeweeks gaat de deur 's avonds open, in het weekend al vanaf de middag.",
+  "openingstijden": "ma-di 19:00-01:00, wo 16:00-01:00, do-vr 16:00-02:00, za 14:00-02:00, zo 14:00-01:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 MG",
+  "site": "http://www.cafepool.nl/",
+  "telefoon": "+31243604355",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-pool/"
+ },
+ "cafe-samson-vof": {
+  "adres": "Houtstraat 4",
+  "bedrijf": "Cafe Samson VOF",
+  "bedrijfsmail": "cafesamson@gmail.com",
+  "categorie": "Café",
+  "foto": "https://www.nijmegenonline.nl/wp-content/uploads/2024/01/cafe-samson-in-nijmegen.jpg",
+  "omschrijving": "Zin in een middag lezen met een goed biertje erbij? In de Houtstraat, vlak bij het centrum van Nijmegen, vind je een café zoals je het van een café verwacht. Je komt er al vroeg op de dag binnen voor koffie met zelfgebakken gebak en je blijft makkelijk hangen tot laat in de avond.\n\nBierliefhebbers hebben hier veel te kiezen: er staan meer dan honderd speciaalbieren op de kaart en daarnaast schenken ze een flinke reeks open wijnen. Weet je niet wat je moet nemen? Vraag de obers om advies. Voor de trek is er lunch of een borrelhapje, en aan de stamtafel of op het terras liggen kranten en tijdschriften voor je klaar.\n\nLoop gewoon eens binnen, want het café is zeven dagen per week tot diep in de nacht open.",
+  "openingstijden": "ma-za 10:00-02:00, zo 12:00-02:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 JN",
+  "site": "https://www.cafesamson.nl/",
+  "telefoon": "0243233023",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-samson-vof/"
+ },
+ "cafe-st-anneke": {
+  "adres": "Sint Annastraat 55",
+  "bedrijf": "Cafe St. Anneke",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een plek waar je zonder plan kunt binnenlopen en toch blijft hangen? Aan de Sint Annastraat zit dit gezellige buurtcafé, waar je terechtkunt voor een borrel, een hapje en een avondje uit.\n\nBegin met een speciaal biertje of een glas wijn van de kaart, samengesteld met twee Nijmeegse wijnhandels. Ga je voor iets meer, dan kies je uit een borrelplank, vlees, verse vis, iets vegetarisch, een salade, een burger of een pizza. De sfeer is ontspannen en je bent er altijd welkom.\n\nHeb je iets te vieren, zoals je verjaardag, je afstuderen of zelfs je bruiloft? Dan denken ze graag met je mee over de mogelijkheden. Het café is dagelijks open vanaf twee uur 's middags, dus loop gewoon eens binnen of bekijk vooraf de menukaart op de site.",
+  "openingstijden": "dagelijks vanaf 14:00",
+  "plaats": "Nijmegen",
+  "postcode": "6524 EG",
+  "site": "http://www.stanneke.nl/",
+  "telefoon": "+31243236707",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-st-anneke/"
+ },
+ "cafe-t-haantje": {
+  "adres": "Daalseweg 19",
+  "bedrijf": "Café ’t Haantje",
+  "bedrijfsmail": "cafe@haantje-nijmegen.nl",
+  "categorie": "Café",
+  "foto": "https://www.nijmegenonline.nl/wp-content/uploads/2023/09/cafe-t-haantje-in-nijmegen.jpg",
+  "omschrijving": "Zin in een biertje in een echte bruine kroeg in Nijmegen-Oost? Aan de Daalseweg zit dit familiecafé, dat al sinds 1957 in handen is van dezelfde familie. Inmiddels staat de derde generatie achter de tap. Je ziet er jong en oud: de een leest de krant bij de koffie, de ander probeert een van de speciaalbieren.\n\nEr is altijd wat te doen. Je kunt er biljarten en voetbal kijken op een groot scherm, en elke maand staan er bands met pop, rock of blues. Daarnaast zijn er pubquizzen, een Oktoberfest en middagen voor kinderen. Het café doet ook mee aan de festivals in Oost, zoals Troost van Oost en Easter Jazz.\n\nWil je een borrel, verjaardag of vergadering houden? Dan kun je de zaal huren, met een eigen bar en een beamer. Kijk in de agenda wat er speelt en schuif vanaf twee uur 's middags aan, binnen of op het terras.",
+  "openingstijden": "dagelijks vanaf 14:00",
+  "plaats": "Nijmegen",
+  "postcode": "6521 GE",
+  "site": "https://www.haantje-nijmegen.nl/",
+  "telefoon": "024-3230257",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-t-haantje/"
+ },
+ "cafe-tweekeerbellen": {
+  "adres": "In de Betouwstraat 12",
+  "bedrijf": "Cafe TweeKeerBellen",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om met je vriendengroep, vereniging of dispuut de avond door te halen? In de Betouwstraat, vlak bij het centrum, is deze studentenkroeg al jaren een vaste stop voor wie tot in de kleine uurtjes wil blijven hangen. Je gooit hier een potje mexen aan tafel of je danst op bekende hits en vergeten meezingers.\n\nElke avond heeft zijn eigen thema. Op maandag speel je bierbingo, op dinsdag en woensdag bestel je een meter bier om te delen. Donderdag is de studentenstapavond, waarop je zelf een plaatje kunt aanvragen. In het weekend kun je terecht als je eens niet naar huis gaat. Met een groep kun je ook een cocktailworkshop doen.\n\nVan maandag tot en met zaterdag ben je vanaf acht uur 's avonds welkom. Voor de workshop of een avond op zondag stuur je een mail.",
+  "openingstijden": "ma-za 20:00-04:00, zo op afspraak",
+  "plaats": "Nijmegen",
+  "postcode": "6511 GC",
+  "site": "https://www.cafetweekeerbellen.nl/",
+  "telefoon": "+31243606902",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-tweekeerbellen/"
+ },
  "cafe-van-buren": {
   "adres": "Molenstraat 89",
   "bedrijf": "Café Van Buren",
@@ -516,6 +908,76 @@
   "site": "http://www.cafevanburen.nl/",
   "telefoon": "31243234168",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-van-buren/"
+ },
+ "cafe-van-ouds": {
+  "adres": "Augustijnenstraat 33",
+  "bedrijf": "Cafe van Ouds",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een avond met een goed glas bier en een volle tafel bites? Achter de Stevenskerk, in de Augustijnenstraat, vind je deze bruine borrelkroeg met een flinke bierkaart: meer dan tweehonderd speciaalbieren en zestien tapbieren. Wil je iets anders, dan kun je ook kiezen uit wijn, whisky of koffie.\n\nJe kunt binnen in het knusse café zitten of buiten op het terras. Er is ook genoeg te beleven, met onder meer een pubquiz, stand-up comedy en sport op meerdere schermen. Als NEC speelt, kijkt half Nijmegen hier mee. Heb je iets te vieren? Dan kun je de zaak afhuren voor een verjaardag of bedrijfsfeest.\n\nKom je met meer dan zes personen of op een wedstrijdavond, reserveer dan op tijd een tafel. Van dinsdag tot en met zaterdag ben je vanaf de (vroege) avond welkom.",
+  "openingstijden": "ma gesloten, di-do 18:00-00:00, vr 16:00-00:00, za 14:00-00:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 KD",
+  "site": "https://cafevanoudsnijmegen.nl",
+  "telefoon": "+31 24 323 3625",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-van-ouds/"
+ },
+ "cafe-van-rijn": {
+  "adres": "Molenstraat 103A",
+  "bedrijf": "Café Van Rijn",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een speciaalbiertje dat de avond langzaam laat uitlopen tot diep in de nacht? Dan zit je goed aan de Molenstraat, midden in het centrum. Hier tappen ze een flinke reeks speciaalbieren en staan er nog meer in de koelkast. Wie het rustiger aan wil doen, kan ook gewoon een kop koffie bestellen.\n\nVan Rijn draait vooral op de avond en de nacht. Op dinsdag en donderdag is het studentenavond en in het weekend komen vooral jonge werkenden er feestvieren. Op de meeste avonden ben je tot ver na middernacht welkom.\n\nOp maandag ga je vanaf zes uur naar binnen, op zondag is de zaak dicht. Je bereikt ze het snelst met een DM via Instagram. Loop eens binnen voor een eerste biertje en kijk of je de spatjes-nacht volhoudt.",
+  "openingstijden": "ma 18:00-00:00, di 16:00-04:00, wo 16:00-04:30, do 18:00-04:30, vr-za 16:00-04:30, zo gesloten",
+  "plaats": "Nijmegen",
+  "postcode": "6511 HD",
+  "site": "https://cafe-vanrijn.nl/",
+  "telefoon": "+31684544437",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-van-rijn/"
+ },
+ "cafe-velocitas": {
+  "adres": "",
+  "bedrijf": "Café Velocitas",
+  "bedrijfsmail": "",
+  "categorie": "Koffiebar",
+  "foto": "",
+  "omschrijving": "Even pauzeren tussen de oude rijwielen door? In het Nationaal Fietsmuseum Velorama aan de Waalkade vind je Café Velocitas, een knus huiskamercafé dat de naam draagt van de oudste wielerclub van Nijmegen.\n\nHier hoef je geen uitgebreide lunch te verwachten. Je bestelt koffie, cappuccino, thee of iets fris en neemt er een gevulde koek bij. Daarna kun je verder met je rondje langs de collectie.\n\nKom je met een groep van minstens acht personen? Dan kun je op afspraak een arrangement regelen met entree, koffie of thee en een punt appeltaart. Mail het museum vooraf met je wensen en combineer je bezoek met een wandeling langs de Waal.",
+  "openingstijden": "ma-zo 12:00-17:00 (openingstijden museum; gesloten met 1e en 2e kerstdag, nieuwjaarsdag en tijdens de 4Daagse)",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "site": "https://velorama.nl/cafe-velocitas",
+  "telefoon": "",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-velocitas/"
+ },
+ "cafe-wunderkammer": {
+  "adres": "Houtstraat 47",
+  "bedrijf": "Café Wunderkammer",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om ergens te borrelen waar je ogen ook iets te doen hebben? In dit café aan de Houtstraat zit je tussen allerlei curiosa en rariteiten, een eigentijdse knipoog naar de wonderkamers uit de zeventiende eeuw. Er valt dus altijd wel iets te ontdekken terwijl je bijpraat.\n\nOp de kaart vind je veel speciaalbieren, whisky's en wijnen, maar ook bijzondere limonades en hapjes voor bij de borrel. Eén maandag per maand verandert het café in een kleine jazzclub, waar jonge jazzmuzikanten spelen onder de naam Kleines Kammer Konzert. En je hond mag gewoon mee naar binnen.\n\nReserveren kan niet, dus loop gewoon binnen. Van dinsdag tot en met zondag ben je vanaf de middag welkom, tot laat in de avond.",
+  "openingstijden": "di-do 14:00-02:00, vr-za 13:00-02:00, zo 14:00-01:00, ma gesloten (behalve maandelijkse jazzavond)",
+  "plaats": "Nijmegen",
+  "postcode": "6511 JL",
+  "site": "http://www.cafewunderkammer.nl/",
+  "telefoon": "+31248450361",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cafe-wunderkammer/"
+ },
+ "camelot": {
+  "adres": "Grote Markt 37",
+  "bedrijf": "Camelot",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een speciaalbiertje midden in de stad? Op de Grote Markt stap je zo binnen bij Camelot, een bier- en eetcafé waar ze echt van bier houden. Naast Hertog Jan van de vaste tap schenken ze nog acht wisselende speciaalbieren, dus je kunt er rustig iets nieuws proberen.\n\nHonger krijg je hier ook niet. Overdag eet je er een broodje, een uitsmijter, een tosti of een kom soep. Vanaf vijf uur kun je er dineren, en de hele dag door bestel je hapjes bij de borrel. Er staan steeds meer vegetarische en vegan gerechten op de kaart. Eén donderdagavond per maand is er live muziek van jonge artiesten.\n\nCamelot is elke dag open en je hoeft niet te reserveren, dus loop gewoon binnen. Kom je met een grote groep? Bel dan even om te vragen of er nog een goed plekje vrij is.",
+  "openingstijden": "ma-wo 10:00-00:00, do 10:00-01:00, vr-za 10:00-02:00, zo 11:00-00:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 KB",
+  "site": "https://www.cafecamelot.nl",
+  "telefoon": "+31 24 322 6426",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/camelot/"
  },
  "chidoz": {
   "adres": "Molenstraat 112",
@@ -573,6 +1035,20 @@
   "telefoon": "+31 6 57239697",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/crossfit-nijmegen/"
  },
+ "crossroads-cycling-culture": {
+  "adres": "Daalseweg 109",
+  "bedrijf": "Crossroads Cycling Culture 🚲",
+  "bedrijfsmail": "",
+  "categorie": "Koffiebar",
+  "foto": "",
+  "omschrijving": "Zin in een goede flat white voor of na je rondje door de Ooij? Aan de Daalseweg in Nijmegen-Oost zit een koffiebar die midden in een fietswinkel staat. Je drinkt er specialty coffee van Single Estate Coffee Roasters, en er zijn belegde broodjes, lunch en taart bij. Je hoeft niet op de fiets te komen: buurtbewoners zijn net zo welkom als wielrenners.\n\nKom je wel op de fiets, dan zet je hem gewoon veilig binnen neer. Er is zelfs een douche die iedereen mag gebruiken. Tussen twee slokken door kun je kijken naar racefietsen en fietskleding, of je fiets laten nakijken in de werkplaats.\n\nWil je fietsmaatjes vinden? Fiets dan gratis mee met een van de wekelijkse social rides en drink daarna samen koffie. Je bent welkom van dinsdag tot en met zaterdag.",
+  "openingstijden": "di-za 09:00-17:00, zo-ma gesloten",
+  "plaats": "Nijmegen",
+  "postcode": "6521 GG",
+  "site": "http://www.crossroads-nijmegen.cc/",
+  "telefoon": "+31242064459",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/crossroads-cycling-culture/"
+ },
  "crossroads-nijmegen": {
   "adres": "Daalseweg 109",
   "bedrijf": "Crossroads Nijmegen",
@@ -586,6 +1062,20 @@
   "site": "https://crossroads-nijmegen.cc/",
   "telefoon": "+31 24 2064459",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/crossroads-nijmegen/"
+ },
+ "cultuurcafe": {
+  "adres": "Mercatorpad 1",
+  "bedrijf": "Cultuurcafé",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "College erop zitten of een lange werkdag achter de rug? Op de campus van de Radboud Universiteit loop je dan zo het CultuurCafé binnen, in het Collegezalencomplex aan het Mercatorpad. Dit is de plek waar studenten en medewerkers samen afsluiten met een borrel.\n\nVanaf het eind van de middag kies je uit een flinke selectie wijnen en bieren, van de tap of uit de fles. Trek je wat, bestel dan een schaal nacho's of bittergarnituur om met je tafel te delen. Schijnt de zon, dan zoek je een plekje op het terras.\n\nHet café is alleen doordeweeks open, vanaf drie uur 's middags. Op dinsdag, woensdag en donderdag blijft het tot laat gezellig. Dus spreek met je studiegenoten of collega's af en proost samen op het weekend dat eraan komt.",
+  "openingstijden": "ma 15:00-20:00, di-do 15:00-23:00, vr 15:00-20:00, za-zo gesloten (kerstsluiting 21 december 2026 t/m 3 januari 2027)",
+  "plaats": "Nijmegen",
+  "postcode": "6525 HS",
+  "site": "https://www.ru.nl/services/eten-en-drinken/cultuurcafe",
+  "telefoon": "+31 6 4612 0758",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/cultuurcafe/"
  },
  "cwz-paviljoen": {
   "adres": "",
@@ -642,6 +1132,20 @@
   "site": "https://achtertuin.nu/",
   "telefoon": "+31247009840",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/de-achtertuin/"
+ },
+ "de-bieb": {
+  "adres": "Molenstraat 65",
+  "bedrijf": "de Bieb",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om na een dag blokken je boeken even in te ruilen voor een koud biertje? Dan zit je goed in deze studentikoze stapkroeg aan de Molenstraat, midden in het uitgaanshart van Nijmegen. Leden van het Heerendispuut Priapus openden de zaak in 2022, en dat zie je meteen terug: hier draait alles om gezelligheid en sterke verhalen.\n\nElke avond van de week heeft zijn eigen thema. Op maandag gaan de dobbelstenen rond, op dinsdag bestel je een vol dienblad voor je hele groep, en later in de week zijn er avonden met shots, mixdrankjes of een 'Bacotrein'. Op donderdag is het 'No College', voor wie vrijdag toch niet naar college gaat.\n\nZoek je een avond uit met vrienden of je studiegenoten? Loop gewoon binnen en kijk op de site welke actie er die avond is.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6511 HB",
+  "site": "https://debiebnijmegen.nl/",
+  "telefoon": "",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/de-bieb/"
  },
  "de-bok": {
   "adres": "",
@@ -741,6 +1245,20 @@
   "telefoon": "+31644459249",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/de-kantine-van-bairro-alto/"
  },
+ "de-kluizenaar": {
+  "adres": "Burghardt van den Berghstraat 96",
+  "bedrijf": "De Kluizenaar",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een biertje dat je nog nooit geproefd hebt? In de Burghardt van den Berghstraat, midden in Bottendaal, zit al ruim dertig jaar een speciaalbiercafé met een flinke bierkaart. De bieren zoeken ze in binnen- en buitenland bij elkaar, en het team helpt je graag kiezen. Bierliefhebbers met de Untappd-app kunnen hun vondsten daar meteen in terugvinden.\n\nKrijg je trek, dan bestel je er iets van de keuken bij. Op de kaart staan stevige cafégerechten, zoals spareribs gekookt in cola en sambal, Limburgs zuurvlees en een flinke schnitzel. Heb je liever een rustige avond thuis? Bel je bestelling door en haal die op aan de bar.\n\nDoordeweeks ben je er vanaf vier uur 's middags welkom, in het weekend al eerder. Kom je met zes mensen of meer, reserveer dan even.",
+  "openingstijden": "ma-wo 16:00-00:00, do 16:00-01:00, vr 15:00-02:00, za 14:00-01:00, zo 14:00-22:00",
+  "plaats": "Nijmegen",
+  "postcode": "6512 DP",
+  "site": "https://www.dekluizenaar.nl/",
+  "telefoon": "+31 24 322 1235",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/de-kluizenaar/"
+ },
  "de-nieuwe-winkel": {
   "adres": "Gebroeders Van Limburgplein 7",
   "bedrijf": "De Nieuwe Winkel",
@@ -754,6 +1272,20 @@
   "site": "https://denieuwewinkel.com",
   "telefoon": "+31 24 322 5093",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/de-nieuwe-winkel/"
+ },
+ "de-paljas": {
+  "adres": "Grotestraat 7",
+  "bedrijf": "De Paljas",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om na het werk ergens met een goed glas te proosten, vlak bij de Grote Markt? Bovenaan de Grotestraat vind je dit knusse café, waar het draait om borrelen: een uitgebreide wijnkaart, lekkere bieren, verrassende cocktails en bites om te delen.\n\nKijk tijdens je drankje ook even naar het interieur. Bijna al het houtwerk is gemaakt van oud hout. Het barblad komt zelfs van een boom uit park Brakkenstein. Ook bij de leveranciers letten ze waar het kan op duurzaamheid en natuur.\n\nDe zaak is klein, dus in het weekend kun je niet reserveren. Kom gewoon op tijd binnenlopen. Is het vol, dan drink je eerst iets aan de bar tot er een tafeltje vrijkomt. Je bent welkom van woensdag tot en met zondag vanaf de middag.",
+  "openingstijden": "ma-di gesloten, wo-do vanaf 16:00, vr-zo vanaf 15:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 VB",
+  "site": "https://depaljas.nl",
+  "telefoon": "+31247009883",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/de-paljas/"
  },
  "de-pannenkoekenboot": {
   "adres": "Waalkade 100",
@@ -769,6 +1301,20 @@
   "telefoon": "0243601262",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/de-pannenkoekenboot/"
  },
+ "de-plak": {
+  "adres": "Bloemerstraat 90",
+  "bedrijf": "De Plak",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een volle tafel, een goed gevuld bord en een eerlijke prijs? Op de Bloemerstraat vind je sinds 1976 een eetcafé dat door een collectief wordt gerund. Er is geen baas en de medewerkers beslissen samen. Het interieur is retro en de sfeer gemoedelijk.\n\nDe bekendste schotel is het kaasgehakt met handgesneden frites en veel groente. Op de kaart staan ook vegetarische en veganistische gerechten, zoals halloumispiesjes en een salade met tofu. Je kunt er elke dag vanaf het middaguur terecht om te lunchen, 's middags een stuk taart te eten of 's avonds te dineren. In de kelder worden regelmatig feesten gehouden.\n\nReserveren kan niet: loop gewoon binnen en wacht even aan de bar als alle tafels bezet zijn. Kom je met minstens vijftien mensen, dan kun je de kelder afhuren.",
+  "openingstijden": "dagelijks vanaf 12:00; lunch 12:00-16:00, avondeten 17:00-21:30",
+  "plaats": "Nijmegen",
+  "postcode": "6511 EM",
+  "site": "https://www.cafedeplak.nl/",
+  "telefoon": "+31 24 322 2757",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/de-plak/"
+ },
  "de-portier": {
   "adres": "Kelfkensbos 57",
   "bedrijf": "De Portier",
@@ -782,6 +1328,20 @@
   "site": "http://www.portier-nijmegen.nl/",
   "telefoon": "+31 24 679 2719",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/de-portier/"
+ },
+ "de-ruyter": {
+  "adres": "",
+  "bedrijf": "De Ruyter",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om na het werk ergens in Bottendaal neer te strijken met een goed glas? Op de hoek van de De Ruyterstraat vind je een lichte wijn- en foodbar, op de plek waar vroeger een slagerij en daarna een bruine kroeg zat. Op weg naar de toiletten in de kelder zie je nog foto's van die slagerij.\n\nJe kunt hier een stuk of twaalf wijnen per glas proeven, en er staan ook bijzondere flessen in de klimaatkast. Bierliefhebbers kunnen kiezen uit twaalf tapkranen, waarvan een flink deel regelmatig wisselt. De chef maakt borrelplanken en wisselende gerechten, dus je kunt hier makkelijk van een borrel doorschuiven naar een ongedwongen diner.\n\nJe bent vanaf vier uur 's middags welkom, behalve op maandag. Wil je zeker zijn van een tafel, reserveer dan even online.",
+  "openingstijden": "di-wo 16:00-00:00, do-vr 16:00-01:00, za 16:00-00:00, zo 16:00-22:00, ma gesloten",
+  "plaats": "Nijmegen",
+  "postcode": "6512 GE",
+  "site": "https://www.lokaalderuyter.nl/",
+  "telefoon": "+31 24 845 3694",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/de-ruyter/"
  },
  "de-serre": {
   "adres": "Plein 1944 151A",
@@ -797,6 +1357,20 @@
   "telefoon": "+31627244333",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/de-serre/"
  },
+ "de-stoof": {
+  "adres": "Lange Hezelstraat 58A",
+  "bedrijf": "De Stoof",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een biertje met huiskamersfeer midden in het oude centrum? Op de Lange Hezelstraat 58a is De Stoof weer terug, het bruine café dat veel Nijmegenaren nog van vroeger kennen. Het zit op een nieuwe plek en heeft een opgefrist interieur, maar het is nog steeds een gezellige kroeg waar jong en oud aanschuift.\n\nOp de tap staan onder meer bieren van Brouwerij Florijn, en op de flessenkaart vind je tripels, IPA's, trappisten en zure bieren. Heb je trek, dan kun je kiezen uit tosti's, flammkuchen, stoofpotjes zoals Joops runderstoofvlees, of een borrelplank met bitterballen.\n\nWil je iets te vieren hebben? Achter in het café kun je een zaal huren met een eigen bar, muziek en een beamer. Het café is elke dag open vanaf tien uur, dus loop gerust eens binnen.",
+  "openingstijden": "iedere dag geopend vanaf 10:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 CL",
+  "site": "https://cafedestoof.nl/",
+  "telefoon": "+31243030372",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/de-stoof/"
+ },
  "de-waagh": {
   "adres": "Grote Markt 26",
   "bedrijf": "De Waagh",
@@ -810,6 +1384,20 @@
   "site": "https://dewaaghnijmegen.nl/",
   "telefoon": "+31 24 360 0809",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/de-waagh/"
+ },
+ "de-witte-raaf-bordspellencafe": {
+  "adres": "Grotestraat 11",
+  "bedrijf": "De Witte Raaf - Bordspellencafé",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een avondje Catan, een potje Magic of gewoon een nieuw spel uitproberen? Aan de Grotestraat in het centrum, vlak bij station Nijmegen, vind je een bordspelwinkel en een bordspelcafé onder één dak. Je loopt langs kasten vol spellen, kiest wat je leuk lijkt en het team legt aan tafel uit hoe het werkt.\n\nOndertussen bestel je koffie, een speciaalbiertje of een cocktail, met hapjes als bitterballen, mini-loempia's of een stuk taart. Veel snacks zijn vegetarisch. Vind je een spel echt leuk? Dan neem je het meteen mee naar huis uit de winkel. In de agenda staan ook avonden met Dungeons & Dragons, Magic-toernooien en een open speltafel.\n\nAlleen of met z'n tweeën loop je gewoon binnen. Kom je met vier of meer mensen, reserveer dan even een tafel.",
+  "openingstijden": "Café: di-do 19:00-00:30, vr 12:00-01:00, za 14:00-01:00, zo 14:00-00:00, ma gesloten. Winkel: wo 12:00-18:00, do 12:00-19:00, vr-za 12:00-18:00, zo 12:00-17:00, ma-di gesloten",
+  "plaats": "Nijmegen",
+  "postcode": "6511 VB",
+  "site": "https://dewitteraafbordspellen.nl/",
+  "telefoon": "",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/de-witte-raaf-bordspellencafe/"
  },
  "de-witwasserij": {
   "adres": "Hertogstraat 5",
@@ -1007,6 +1595,20 @@
   "telefoon": "+31647312428",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/fabrikaat/"
  },
+ "feestcafe-de-gezelligheid": {
+  "adres": "Bloemerstraat 46",
+  "bedrijf": "Feestcafe de Gezelligheid",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om na een lange werkweek even helemaal los te gaan? Aan de Bloemerstraat, op loopafstand van het station, staat dit feestcafé. Vroeger heette het Nimweegs Feestcafé. Drie stellen die er jarenlang als stamgast kwamen, hebben de kroeg overgenomen. Je bestelt er een koud biertje of een wijntje en laat de dag achter je. Op vrijdag is de VrijMiBo een vaste afspraak.\n\nAls NEC speelt, staat de wedstrijd soms op het grote scherm. Kijk daarvoor in de agenda. Je kunt de zaak ook vastleggen voor een verjaardag of een bedrijfsborrel. Dat kan op elke dag behalve zaterdag. Het team zorgt dan voor warme en koude hapjes, en aan het eind van de avond voor een broodje kroket.\n\nJe kunt er van donderdag tot en met zondag terecht. Heb je een feest in gedachten? Bel, app of mail het team, of loop gewoon een keer binnen.",
+  "openingstijden": "ma-wo gesloten, do 19:00-00:30, vr 19:00-02:00, za 14:00-02:00, zo 14:00-19:00 (vr en za toegang tot 01:00)",
+  "plaats": "Nijmegen",
+  "postcode": "6511 EK",
+  "site": "http://www.feestcafedegezelligheid.nl/",
+  "telefoon": "+31611287241",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/feestcafe-de-gezelligheid/"
+ },
  "fika": {
   "adres": "van Broeckhuysenstraat 5",
   "bedrijf": "Fika",
@@ -1063,6 +1665,20 @@
   "telefoon": "+31638394374",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/fittunit/"
  },
+ "franco-james": {
+  "adres": "Priemstraat 9",
+  "bedrijf": "Franco James",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een goed glas wijn en wat lekkers erbij, midden in de binnenstad? In de Priemstraat schenkt deze wijnbar flessen van kleine wijnmakers uit onder meer Piemonte, de Rhône, de Loire en Rheinhessen, ook oranje wijn. Daarbij kies je kleine hapjes, of je gaat voor het driegangen chefsmenu, dat ook vegetarisch kan. De kaart wisselt dagelijks.\n\nOp donderdagavond is het Wet Spaghetti-avond en verder zijn er geregeld proeverijen en avonden waarop een wijnmaker de bar overneemt. Wat er op het programma staat, zie je op hun Instagram. Onder de bar ligt een sfeervolle wijnkelder voor maximaal zestien mensen, die je kunt huren voor een diner, borrel of vergadering.\n\nDe bar is open van donderdag tot en met zondag. Je kunt gewoon binnenlopen, dus spreek af en schuif aan.",
+  "openingstijden": "ma-wo gesloten, do-vr 17:00-'till fun', za 15:00-'till fun', zo 15:00-21:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 WC",
+  "site": "http://www.francojames.bar/",
+  "telefoon": "+31247200066",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/franco-james/"
+ },
  "frank-s-food-grill": {
   "adres": "Hertogstraat 21",
   "bedrijf": "Frank's Food & Grill",
@@ -1090,6 +1706,20 @@
   "site": "https://frappant-nijmegen.nl/",
   "telefoon": "+31243230177",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/frappant/"
+ },
+ "freddy-s": {
+  "adres": "Koningstraat 26",
+  "bedrijf": "Freddy's",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een terrasje midden in de stad? Sinds 2016 zit Freddy's aan het Koningsplein, met een platenspeler die de hele dag muziek draait. Je kunt er binnenlopen voor een snelle koffie, maar ook uitgebreid lunchen of de avond lang blijven tafelen.\n\nOp de kaart staan vooral burgers, plus lunchgerechten die net iets anders zijn dan je gewend bent. Kom je alleen voor een drankje, dan kies je uit speciaalbier, wijn en highballs, met een aparte borrelkaart erbij. Is het fris buiten? Het terras wordt verwarmd.\n\nFreddy's is elke dag open vanaf de ochtend en blijft in het weekend open tot laat. Kleine en grote groepen zijn welkom. Reserveer via de site of stuur een appje en schuif aan.",
+  "openingstijden": "ma-wo 10:00-00:00, do-za 10:00-01:00, zo 11:00-00:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 LB",
+  "site": "https://freddysbeerkitchen.nl/",
+  "telefoon": "",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/freddy-s/"
  },
  "fresca": {
   "adres": "van Broeckhuysenstraat 16",
@@ -1161,6 +1791,20 @@
   "telefoon": "+31243602147",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/go4fit-nijmegen/"
  },
+ "goossens": {
+  "adres": "Grote Markt 31",
+  "bedrijf": "Goossens",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een wijntje in de zon midden in de stad? Aan de Grote Markt vind je Café Goossens: binnen een klein, knus bruin café, buiten een ruim terras met plekken in de zon en in de schaduw. In de winter zit je daar onder een overkapping met heaters, zodat je ook dan lekker naar het marktleven kunt kijken.\n\nDe nieuwe eigenaren geven het oude café een Italiaans tintje. Er staan wijnen van lokale wijnhandels op de kaart, acht taps met speciaalbier en uit het eigen keukentje komen bruschetta en focaccia voor lunch of borrel. Op zaterdag schuift vishandel Graat aan met kleine visgerechtjes, zoals mosselen en de vis van de dag.\n\nIets te vieren? Je kunt tafels op het terras reserveren voor je verjaardag of examenfeestje. Stuur ze een aanvraag via de site en schuif aan.",
+  "openingstijden": "ma-wo 12:00-23:00, do 12:00-00:00, vr-za 12:00-01:00, zo 12:00-23:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 KB",
+  "site": "http://www.cafegoossens.nl/",
+  "telefoon": "+31248455627",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/goossens/"
+ },
  "grand-cafe-de-waterwolf": {
   "adres": "Waalkade 50",
   "bedrijf": "Grand café de Waterwolf",
@@ -1203,6 +1847,20 @@
   "telefoon": "+31243656546",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/grand-cafe-moenen/"
  },
+ "groenewoud": {
+  "adres": "Groesbeekseweg 227",
+  "bedrijf": "Groenewoud",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om uitgebreid te tafelen in een pand met een lange geschiedenis? Aan de Groesbeekseweg, net buiten het centrum, eet je in een karakteristiek gebouw dat al sinds 1763 bestaat. Op het bord vind je een moderne Franse keuken: verfijnde gerechten die meegaan met de seizoenen en een eigentijdse draai krijgen.\n\nJe kunt hier zowel lunchen als dineren, met z'n tweeën of juist met een grotere groep. Kom je met zeven personen of meer, dan stelt de keuken een gezamenlijk menu voor je samen. Daarbij wordt rekening gehouden met allergieën en vegetarische wensen. De wijnkaart helpt je aan een passend glas bij elke gang.\n\nGroenewoud is open van dinsdag tot en met zondag. Reserveren doe je via de website of telefonisch, dus plan gerust je volgende etentje.",
+  "openingstijden": "di-zo 12:00-22:00",
+  "plaats": "Nijmegen",
+  "postcode": "6523 NW",
+  "site": "http://www.restaurantgroenewoud.nl/",
+  "telefoon": "+31243224969",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/groenewoud/"
+ },
  "hafiza-i": {
   "adres": "Arend Noorduijnstraat 26",
   "bedrijf": "Hafiza I",
@@ -1244,6 +1902,20 @@
   "site": "http://www.healtality.nl/",
   "telefoon": "+31650835828",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/healtality/"
+ },
+ "heidi-s-skihut": {
+  "adres": "Molenstraat 71",
+  "bedrijf": "Heidi's Skihut",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Heb je zin in après-ski, maar is de dichtstbijzijnde piste te ver weg? In de Molenstraat, midden in het centrum van Nijmegen, haal je het wintersportgevoel gewoon naar de stad. Het barpersoneel loopt rond in lederhosen en dirndl, het bier komt in flinke pullen en de muziek bestaat uit meezingers waar je niet stil bij blijft staan.\n\nJe komt hier niet voor een rustig biertje in een hoekje. Je komt om te dansen, te hossen en uit volle borst mee te zingen met vrienden. De skihut hoort bij het Drie Gezusters-complex, dus je zit meteen op een plek waar je de hele avond kunt uitgaan.\n\nWil je alvast in de stemming komen? Zet de Spotify-lijst met Heidi's hitjes aan. Kijk daarna op Facebook welke feestavonden eraan komen, trommel je vrienden op en ga naar de Molenstraat.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6511 HB",
+  "site": "https://skihutnijmegen.nl/",
+  "telefoon": "+31247503204",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/heidi-s-skihut/"
  },
  "het-cafe-het-duurzame-warenhuis": {
   "adres": "Burchtstraat 126",
@@ -1329,6 +2001,34 @@
   "telefoon": "+31 6 5897 5013",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/historische-tuinderij-de-warmoes/"
  },
+ "holt-nijmegen": {
+  "adres": "Houtstraat 75",
+  "bedrijf": "Holt Nijmegen",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Heb je zin in een plek waar je 's ochtends koffie drinkt en 's middags rustig doorgaat met een biertje? Op de hoek in de Houtstraat, vlak bij de Grote Markt, zit Holt. Het noemt zichzelf een all day café en zit ergens tussen koffiebar, lunchroom en kroeg in.\n\nVoor de lunch kies je uit stevige sandwiches, salades of een plank met kaas en vleeswaren, en er zijn ook vega- en vegan opties. Aan de tap zie je steeds wisselende craftbieren, en je kunt ook een cocktail of spritz bestellen. Je borrelplank stel je zelf samen. Wil je blijven slapen, dan kun je boven een van de hotelkamers boeken.\n\nJe kunt gewoon binnenlopen, maar kom je met een groep, reserveer dan even. 's Avonds kun je de hele zaak afhuren, bijvoorbeeld voor een pubquiz of bierproeverij.",
+  "openingstijden": "ma gesloten, di-za 10:00-18:00, zo 11:00-18:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 JM",
+  "site": "https://www.holt-nijmegen.nl/",
+  "telefoon": "+31248459516",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/holt-nijmegen/"
+ },
+ "holy-beans": {
+  "adres": "Franseplaats 1",
+  "bedrijf": "Holy Beans",
+  "bedrijfsmail": "",
+  "categorie": "Koffiebar",
+  "foto": "",
+  "omschrijving": "Ruik je vers gebrande koffie als je bij de Grote Markt rondloopt? Grote kans dat die geur van de Franseplaats komt. Daar branden ze in de Commanderie van Sint Jan, een klooster uit 1196 en hetzelfde pand als De Hemel, elke week koffie in kleine partijen van vijf kilo. Elke zak wordt nog met de hand dichtgemaakt.\n\nJe hoeft niet uit eindeloos veel soorten te kiezen. Er zijn drie vaste brandingen: een stevige uit Colombia, een bloemige uit Ethiopië en een zachte uit Brazilië. Je neemt ze mee als hele boon of gemalen voor jouw manier van koffiezetten. Weet je nog niet welke je wilt? Met het proefpakket probeer je ze alle drie.\n\nLoop gerust even binnen in de winkel. Je kunt ook online bestellen of een abonnement nemen, en binnen Nijmegen wordt je koffie op de fiets bezorgd.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6511 VS",
+  "site": "http://www.holybeans.nl/",
+  "telefoon": "+31243333094",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/holy-beans/"
+ },
  "hotel-credible": {
   "adres": "Hertogstraat 1",
   "bedrijf": "Hotel Credible",
@@ -1342,6 +2042,20 @@
   "site": "https://www.in-credible.nl/",
   "telefoon": "31243220498",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/hotel-credible/"
+ },
+ "house-of-billiards": {
+  "adres": "Graafseweg 39",
+  "bedrijf": "House of Billiards",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om een avond lekker te ballen zonder dat je eerst een vereniging hoeft te zoeken? Aan de Graafseweg, vlak bij het centrum, zit al een kwart eeuw een poolcafé waar je gewoon binnenloopt voor een potje pool of snooker met een drankje erbij.\n\nBen je uitgekeken op de tafels, dan pak je de darts, of je gaat met je vrienden samen karaoke zingen. Speel je wat fanatieker? Dan is er een huistoernooi met poules en een knock-outfase, waar je je kunt meten met andere spelers. De spelregels voor pool en snooker staan handig op de site, dus ook als beginner weet je snel waar je aan toe bent.\n\nJe kunt er elke dag vanaf het begin van de middag terecht, en in het weekend tot laat in de nacht. Met een groep? Reserveer dan van tevoren een tafel of de karaoke via de website.",
+  "openingstijden": "ma-do 13:00-01:00, vr-za 13:00-02:00, zo 13:00-01:00",
+  "plaats": "Nijmegen",
+  "postcode": "6512 BR",
+  "site": "https://hobnijmegen.nl",
+  "telefoon": "+31 24 360 5710",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/house-of-billiards/"
  },
  "hubert": {
   "adres": "Winselingseweg 47",
@@ -1399,6 +2113,20 @@
   "telefoon": "",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/immovation/"
  },
+ "in-de-blaauwe-hand": {
+  "adres": "Achter de Hoofdwacht 3",
+  "bedrijf": "In de Blaauwe Hand",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om een biertje te drinken op een plek waar Nijmegenaren al eeuwenlang hetzelfde doen? In het straatje Achter de Hoofdwacht, vlak bij de Grote Markt, vind je dit café. Het zegt zelf al sinds 1542 open te zijn. Binnen zit je in een mooi gerestaureerd historisch interieur.\n\nBierliefhebbers kunnen hier hun hart ophalen. Er zijn twaalf tapkranen, waarvan zeven met steeds wisselende bieren, en er is een eigen huistripel, de Rooie Tieptop. Daarnaast staan er nog meer dan zestig flessen op de kaart. Krijg je trek, dan kun je kiezen uit een wisselende kaart met snacks, flammkuchen en avondeten.\n\nReserveren kan niet, dus loop gewoon binnen. Het café is vanaf de middag open, behalve op maandag.",
+  "openingstijden": "ma gesloten, di-wo 15:00-00:00, do-vr 15:00-01:00, za 13:00-01:00, zo 14:00-22:00 (per 31-8-2026)",
+  "plaats": "Nijmegen",
+  "postcode": "6511 VW",
+  "site": "https://indeblaauwehand.nl",
+  "telefoon": "+31243232066",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/in-de-blaauwe-hand/"
+ },
  "in-de-kazerne": {
   "adres": "Molenveldlaan 146",
   "bedrijf": "In de Kazerne",
@@ -1441,6 +2169,20 @@
   "telefoon": "+31243239005",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/izzi/"
  },
+ "jan-nijmegen": {
+  "adres": "Grote Markt 32",
+  "bedrijf": "Jan Nijmegen",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om midden in de stad neer te strijken, of je nu wilt lunchen, borrelen of uitgebreid dineren? Op de Grote Markt vind je bij JAN een plek waar dat van 's ochtends tot laat allemaal kan.\n\nOverdag schuif je aan voor lunch of brunch, of gewoon voor een stuk taart. Later op de dag gaat het om borrelhapjes, cocktails en een goed glas wijn. 's Avonds bestel je shared dining-gerechten om met je tafel te delen, maar je kunt ook gewoon iets voor jezelf kiezen. Vegetarisch eten staat ook op de kaart. Bij mooi weer zit je op het terras, met de drukte van de markt om je heen.\n\nKom je met een groep vrienden? Reserveer dan je tafel via de website. JAN is elke dag vanaf tien uur open, en op vrijdag en zaterdag tot één uur 's nachts.",
+  "openingstijden": "ma-do 10:00-00:00, vr-za 10:00-01:00, zo 10:00-00:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 KB",
+  "site": "https://www.jannijmegen.nl",
+  "telefoon": "",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/jan-nijmegen/"
+ },
  "kala-food-atelier-yoga": {
   "adres": "Bloemerstraat 95",
   "bedrijf": "KALA | Food - Atelier - Yoga",
@@ -1454,6 +2196,20 @@
   "site": "http://www.kalacafe.nl/",
   "telefoon": "+31658825453",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/kala-food-atelier-yoga/"
+ },
+ "karaoke-cafe-van-deelen": {
+  "adres": "Bloemerstraat 2",
+  "bedrijf": "Karaoke Cafe van Deelen",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Heb je zin om eens flink uit volle borst mee te zingen? Dan moet je in de Bloemerstraat zijn. In dit knusse bruine café wordt elke vrijdag- en zaterdagavond de microfoon doorgegeven: vanaf een uur of tien kan iedereen het podium op, of je nu echt goed kunt zingen of vooral voor de lol meedoet.\n\nEen dj draait muziek uit alle tijden en neemt je verzoeknummer aan, ook via de BCM Request-app op je telefoon. Ondertussen haal je een drankje aan de bar en moedig je je vrienden aan. Ook op andere avonden kun je gewoon binnenlopen voor een biertje in een ontspannen sfeer.\n\nDonderdag tot en met zaterdag zijn de deuren 's avonds open, op woensdag en zondag alleen op aanvraag. Trommel je vrienden op, zoek alvast je favoriete nummer uit en kom een avondje zingen.",
+  "openingstijden": "ma-di gesloten, wo op aanvraag, do 20:00-00:00, vr-za 20:00-02:00, zo op aanvraag",
+  "plaats": "Nijmegen",
+  "postcode": "6511 EJ",
+  "site": "http://cafevandeelen.nl/",
+  "telefoon": "+31613834257",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/karaoke-cafe-van-deelen/"
  },
  "kattencafe-balthazar": {
   "adres": "van Welderenstraat 46",
@@ -1581,6 +2337,20 @@
   "telefoon": "+31 24 3221423",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/la-cubanita/"
  },
+ "le-cafe": {
+  "adres": "Grotestraat 6",
+  "bedrijf": "Le Café",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een goed getapt biertje net buiten de drukte van de Grote Markt? Bovenaan de Grotestraat vind je een eigentijdse bruine kroeg waar Annelieke en George met hun team je persoonlijk ontvangen. Met acht kranen en een flinke kaart vol flesbieren valt er genoeg te ontdekken, en wie liever iets anders drinkt, kiest uit cocktails of wijn met een borrelhap erbij.\n\nIn de zomer zit je op het groene terras, in de winter kruip je bij een van de open haardjes. Op de piano liggen spellen klaar, er wordt gekaart en er zijn muziekquizzen, bingomiddagen en af en toe live muziek. Tijdens carnaval is dit de thuisbasis van CV de Deurdrievers.\n\nLoop gewoon eens binnen vanaf de middag, maandag zijn ze dicht.",
+  "openingstijden": "ma gesloten, di-vr vanaf 15:00, za-zo vanaf 13:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 VD",
+  "site": "http://www.lecafenijmegen.nl/",
+  "telefoon": "+31242022820",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/le-cafe/"
+ },
  "le-figaro": {
   "adres": "Waalkade 19",
   "bedrijf": "Le Figaro",
@@ -1594,6 +2364,20 @@
   "site": "https://cafelefigaro.nl",
   "telefoon": "+31 24 3604731",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/le-figaro/"
+ },
+ "lebowski": {
+  "adres": "Bloemerstraat 84",
+  "bedrijf": "Lebowski",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een goed glas wijn zonder gedoe? Aan de Bloemerstraat, midden in het centrum, kun je bij Lebowski aan de bar schuiven of met je vrienden een tafel bezetten. Een huiswijn zul je hier niet vinden. Wel een flinke selectie open wijnen die per seizoen wisselt, vaak van kleinere wijnhuizen of minder bekende druiven. Twijfel je wat je moet kiezen? Dan denkt het personeel graag met je mee.\n\nOverdag is het er rustig, 's avonds wordt het een stuk levendiger. Het ruime terras is verwarmd en beschut, dus ook in de winter kun je buiten zitten. Geef je een feestje of afstudeerborrel? Dan kun je de kelder of een extra ruimte huren.\n\nReserveren voor een tafel kan niet, dus loop gewoon binnen. Met een grotere groep stuur je ze vooraf een mailtje.",
+  "openingstijden": "di-do 15:00-00:00, vr 15:00-01:00, za 14:00-01:00, zo 14:00-22:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 EM",
+  "site": "http://www.bar-lebowski.nl/",
+  "telefoon": "+31682815448",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/lebowski/"
  },
  "lent-plaza": {
   "adres": "Griftdijk Zuid 125",
@@ -1762,6 +2546,20 @@
   "site": "https://www.mamstreetfood.com/",
   "telefoon": "+31 24 206 4723",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/mam-vietnamese-street-food/"
+ },
+ "marcus-antonius": {
+  "adres": "Sint Anthoniusplaats 15",
+  "bedrijf": "Marcus Antonius",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om te dansen, nieuwe mensen te leren kennen en gewoon helemaal jezelf te zijn? Aan de Sint Anthoniusplaats, schuin tegenover het Roze Huis, vind je een gay danscafé waar iedereen uit de LHBTI+-gemeenschap welkom is, en hetero's net zo goed.\n\nHet café is licht en modern ingericht. Je kunt er rustig met een drankje en een hapje aan de bar blijven hangen, maar je kunt ook de dansvloer opgaan. Via de digitale jukebox zet je zelf je favoriete nummers in de rij, zodat de avond precies klinkt zoals jij wilt.\n\nOp donderdag, zaterdag en maandag gaan de deuren 's avonds open, op vrijdag en zondag al vanaf de middag. Kijk even in de agenda op de site voor de specials en loop gewoon binnen.",
+  "openingstijden": "ma 20:00-sluit, di-wo gesloten, do 20:00-sluit, vr 16:00-sluit, za 20:00-sluit, zo 16:00-sluit",
+  "plaats": "Nijmegen",
+  "postcode": "6511 TR",
+  "site": "https://marcus-antonius.nl/",
+  "telefoon": "+31612967695",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/marcus-antonius/"
  },
  "meneer-vos": {
   "adres": "Winkelsteegseweg 99",
@@ -2001,6 +2799,20 @@
   "telefoon": "+31627416080",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/novio-fit/"
  },
+ "olivier-wijnbar": {
+  "adres": "Hertogstraat 86",
+  "bedrijf": "Olivier wijnbar",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een goed glas wijn na een middagje winkelen in het centrum? In de Hertogstraat vind je Olivier, een sfeervolle wijnbar waar je zo aanschuift voor een borrel met vrienden of een avondje uit met z'n tweeën.\n\nOp de kaart staan wijnen en andere dranken, met daarbij barbites en borrelplanken, zoals een Italiaanse plank met vleeswaren, kaas, brood en olijven. Ze proberen zoveel mogelijk producten uit de buurt te halen. Wil je er echt de tijd voor nemen, dan boek je een High Wine met hapjes. Dat kan ook met een groep, voor een verjaardag of een bedrijfsuitje. Het hele jaar door zijn er ook wijnproeverijen, van een basisles tot themaproeverijen over bijvoorbeeld Spanje.\n\nJe kunt binnen of buiten zitten. Reserveren doe je via de site of telefonisch. Op maandag is Olivier dicht.",
+  "openingstijden": "ma gesloten, di-vr 14:00-00:00, za 12:00-01:00, zo 12:00-22:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 SE",
+  "site": "https://www.oliviernijmegen.nl/",
+  "telefoon": "+31651415059",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/olivier-wijnbar/"
+ },
  "orient-plaza": {
   "adres": "Kerkenbos 1017",
   "bedrijf": "Orient Plaza",
@@ -2028,6 +2840,20 @@
   "site": "https://osteriapomodoro.nl/",
   "telefoon": "+31 24 322 4506",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/osteria-pomodoro/"
+ },
+ "paak-vinylbar": {
+  "adres": "Bloemerstraat 23",
+  "bedrijf": "PAAK Vinylbar",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een avond waarop de muziek van echte platen komt? In deze vinylbar aan de Bloemerstraat, vlak bij het station, draaien dj's en selectors elke dag hun favoriete platen. Overdag kun je er rustig een potje pingpongen, een spelletje doen, op het knusse terras zitten of door de bakken van de eigen platenwinkel gaan.\n\n's Avonds draait alles om huisgemaakte cocktails, highballs, wijn en bier. Op donderdag wordt de platenwinkel een podium voor live muziek, en in het weekend dansen ze tot diep in de nacht op dj-avonden. Voor wat te eten kun je terecht bij de tijdelijke pop-up van Le Petit Prince, met sando's en curry.\n\nWil je met een groep komen, voor een cocktailworkshop of een verjaardag? Stuur ze dan even een berichtje. Kijk voor je gaat ook op de agenda wat er die week te doen is.",
+  "openingstijden": "ma-di gesloten, wo-do 17:00-00:00, vr 17:00-03:00, za 12:00-03:00, zo 13:00-00:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 EB",
+  "site": "https://paakvinylbar.com/menu",
+  "telefoon": "+31645431473",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/paak-vinylbar/"
  },
  "paradiso": {
   "adres": "van Welderenstraat 17",
@@ -2221,7 +3047,7 @@
   "openingstijden": "ma-do 07:00-21:00, vr 07:00-17:30, za-zo 09:00-13:00",
   "plaats": "Nijmegen",
   "postcode": "6541 BM",
-  "site": "https://www.provectas.nl/",
+  "site": "http://Www.provectas.nl/",
   "telefoon": "+31640772836",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/provectas/"
  },
@@ -2448,6 +3274,34 @@
   "site": "https://romagna-nijmegen.metro.rest/?lang=nl#times",
   "telefoon": "31243232394",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/romagna/"
+ },
+ "roxy-s-tiki-bar": {
+  "adres": "Grotestraat 12",
+  "bedrijf": "Roxy's Tiki Bar",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Even op vakantie zonder het vliegtuig in te hoeven? Op de Grotestraat in Nijmegen stap je zo een tropische tikibar binnen. Hier draait alles om exotische rumcocktails zoals de Mai Tai, de Zombie of de Jungle Bird, en die krijg je geserveerd in een echte tikimok. Heb je meer zin in een klassieker, dan maken ze ook gewoon een Mojito of Moscow Mule voor je.\n\nTrek gekregen? Bestel dan een burger, een wrap, een schaal nacho's uit de oven of een borrelplank om te delen. Er zijn ook vegetarische en vegane opties.\n\nWil je met een groep zelf leren shaken? Dan kun je een tiki-cocktailworkshop boeken, waarin je proeft en je eigen cocktail bedenkt. Kom gewoon langs van donderdag tot en met zondag, of mail om een workshop te plannen.",
+  "openingstijden": "ma-wo gesloten, do 19:00-01:00, vr 16:00-01:00, za 15:00-01:00, zo 17:00-00:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 VD",
+  "site": "http://www.roxystikibar.nl/",
+  "telefoon": "+31611395567",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/roxy-s-tiki-bar/"
+ },
+ "royal": {
+  "adres": "Hertogstraat 127",
+  "bedrijf": "Royal",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om de werkdag af te sluiten met een goed glas? Aan het Hertogplein, op de rand van het centrum, zit Café Royal in een mooi monumentaal pand. Het is een echt borrelcafé waar je na je werk zonder gedoe aanschuift voor een vers getapt biertje of een glas wijn.\n\nHou je van speciaalbier, dan zit je hier goed: op de kaart staan onder meer Duvel, Filou, Kasteel Rouge en abdijbieren als Leffe en Affligem. Tijdens de Vierdaagsefeesten is het plein extra druk met live optredens, de hele week lang.\n\nHeb je iets te vieren? Het café kun je ook afhuren voor een borrel, feestje of receptie. Loop gewoon eens binnen in de Hertogstraat en vraag wat er kan.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6511 RX",
+  "site": "http://www.royaletendrinken.nl/",
+  "telefoon": "+31243222690",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/royal/"
  },
  "saison": {
   "adres": "Wijchenseweg 174",
@@ -2757,6 +3611,20 @@
   "telefoon": "+31 24 322 2750",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/tante-koosje/"
  },
+ "tappers": {
+  "adres": "Van Welderenstraat 128",
+  "bedrijf": "Tappers",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin om met je vrienden of collega's de avond in te duiken? In de Van Welderenstraat vind je Tappers, een kroeg waar je terechtkunt voor een ontspannen borrel en waar het later op de avond ook een feestje kan worden. Er staat goede muziek op, het barpersoneel is gezellig en de week wordt opgevrolijkt met deals en activiteiten. Je kunt er zes dagen per week terecht.\n\nDoe je het liever met een groep? Dan kun je bij Tappers ook een teamuitje of feestje regelen, bijvoorbeeld een proeverij van de uitgebreide bierkaart of een cocktailworkshop.\n\nWil je zeker zijn van een plekje? Stuur dan even een appje om te reserveren en laat weten met hoeveel mensen je komt.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6511 MV",
+  "site": "http://www.tappersnijmegen.nl/",
+  "telefoon": "+31647860950",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/tappers/"
+ },
  "taqueria-clamato": {
   "adres": "Kelfkensbos 28",
   "bedrijf": "Taqueria Clamato",
@@ -2855,6 +3723,62 @@
   "telefoon": "+31242036259",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/the-lobby-nijmegen/"
  },
+ "the-shuffle": {
+  "adres": "",
+  "bedrijf": "The Shuffle",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Heb je zin in een avondje biljarten, darten of gewoon een biertje aan de bar? Dan kun je terecht in The Shuffle, een gezellig café in een authentiek pand aan de Berg en Dalseweg. Je schuift aan de bar of zoekt een tafeltje op. Biljartvereniging 't Losse Polsje speelt hier en soms zie je ook dartteams hun competitie spelen.\n\nHou je van muziek? Elke maand is er een blues-sessie en daarnaast spelen er regelmatig bands. Ben je iets aan het plannen? Je kunt de feestruimte gebruiken voor een verjaardag, een vergadering of een ander evenement, voor groepen van ongeveer 20 tot 180 personen.\n\nKijk op hun Facebookpagina wat er in de agenda staat, of bel even om je feest te bespreken. Dat doe je het liefst na vijf uur 's middags.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6522 CD",
+  "site": "https://www.cafetheshuffle.nl/",
+  "telefoon": "+31243220888",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/the-shuffle/"
+ },
+ "the-yard": {
+  "adres": "Heyendaalseweg 141",
+  "bedrijf": "Sportsbar The Yard",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Net klaar met sporten op de campus en zin in iets lekkers? Dan loop je zo door naar The Yard, de sportsbar in het Gymnasion aan de Heyendaalseweg. Vanaf half twaalf kun je er elke dag terecht voor koffie, een broodje, een eiwitshake of een snelle snack tussendoor.\n\nLater op de middag wordt het gezelliger: vanaf half vier gaan de taps open en staan er ook flessen bier klaar. Je kunt een potje poolen, live sport volgen op de schermen of vanaf het dakterras naar de wedstrijden op de sportvelden kijken.\n\nOp dinsdag, woensdag en donderdag blijft de bar tot middernacht open, in het weekend sluit hij vroeg. Spreek dus met je teamgenoten af voor een borrel na de training en kijk vooraf even naar de openingstijden.",
+  "openingstijden": "ma 11:30-22:00, di-do 11:30-00:00, vr 11:30-22:00, za-zo 11:30-17:30",
+  "plaats": "Nijmegen",
+  "postcode": "6525 AJ",
+  "site": "https://www.ru.nl/services/eten-en-drinken/the-yard",
+  "telefoon": "+31 24 361 1114",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/the-yard/"
+ },
+ "theatercafe-n23": {
+  "adres": "Ridderstraat 23",
+  "bedrijf": "Lindenberg Café",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Ga je naar een voorstelling of cursus in de Lindenberg aan de Ridderstraat? Dan kun je ervoor of erna even in het café van het cultuurhuis zitten. Je loopt er ook gewoon binnen voor koffie, een borrel of een hapje, ook als je verder niets op het programma hebt.\n\nDe keuken kookt vers en let op duurzaamheid. Veel gerechten zijn vegetarisch of vegan, en de ingrediënten komen van boeren en telers die goed zorgen voor hun dieren en land. De kaart verandert regelmatig. Je kunt er lunchen en vroeg dineren voor de voorstelling begint.\n\nOp maandag tot en met zaterdag is de bar open tot laat. Op zondag en in schoolvakanties ben je alleen welkom als er iets te doen is in het huis. Kijk dus eerst even in de agenda en reserveer online of telefonisch een tafel.",
+  "openingstijden": "ma-za bar 10:00-23:00, keuken 12:00-16:30 en 17:00-20:00; zo en schoolvakanties alleen open bij activiteiten",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "site": "http://www.delindenberg.com",
+  "telefoon": "024 327 3939",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/theatercafe-n23/"
+ },
+ "tierney-s": {
+  "adres": "Molenstraat 55",
+  "bedrijf": "Tierney's",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een goed getapte pint en een potje voetbal op het scherm? In de Molenstraat, midden in het uitgaanshart van Nijmegen, vind je de Nijmeegse vestiging van Tierney's, een Ierse pub die ook een zaak in Haarlem heeft. Je kunt er overdag rustig binnenlopen voor een drankje of een hapje. 's Avonds wordt het levendiger.\n\nDe drankkaart is ruim, en je kunt er het bier van hun eigen Stolen Bicycle Brewery proeven. Bij je bier bestel je stevige pubgerechten. Grote sportwedstrijden worden uitgezonden, en elke maandagavond om acht uur is er een internationale pubquiz waar je met je vrienden aan meedoet.\n\nOp vrijdag en zaterdag blijft de pub open tot diep in de nacht. Wil je zeker zijn van een tafel, reserveer dan via de website.",
+  "openingstijden": "ma-wo 15:00-02:00, do 14:00-02:00, vr-za 12:00-04:00, zo 12:00-02:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 HA",
+  "site": "https://www.tierneysirishpub.nl/irish-pub-nijmegen/",
+  "telefoon": "+31248489325",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/tierney-s/"
+ },
  "tiffin": {
   "adres": "",
   "bedrijf": "Tiffin",
@@ -2893,7 +3817,7 @@
   "openingstijden": "ma-do 17:00-00:00, vr 16:00-02:00, za 15:00-02:00, zo 15:00-00:00",
   "plaats": "Nijmegen",
   "postcode": "6511 PS",
-  "site": "https://lima-nijmegen.nl/",
+  "site": "http://www.lima-nijmegen.nl/",
   "telefoon": "024 845 3404",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/toon/"
  },
@@ -2966,6 +3890,20 @@
   "site": "https://www.valdin.nl",
   "telefoon": "+31 24 355 6902",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/valdin/"
+ },
+ "van-buren": {
+  "adres": "Molenstraat 89",
+  "bedrijf": "Van Buren",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een middag die vanzelf overgaat in een avond? In de Molenstraat kom je bij Café Van Buren binnen voor brunch of lunch, en daarna blijf je gewoon hangen voor de borrel aan de bar of op het terras. Bestel dan een van de speciaalbieren van de tap, een glas wijn of een kop koffie.\n\nHet pand voelt knus en bourgondisch. Aan de muren hangen oude portretten van Nijmeegse studentenverenigingen, professoren van de Radboud en leden van het Koningshuis. De naam verwijst naar de schuilnaam die Willem-Alexander gebruikte. 's Avonds kun je hier ook dineren, met vlees van de Big Green Egg en vegan gerechten op de kaart. Verder zijn er pubquizzen, muziekbingo's en grote clubavonden.\n\nKom je met een groep? Kijk dan naar de arrangementen, of reserveer online een tafel.",
+  "openingstijden": "ma-vr vanaf 12:00, za vanaf 11:00, zo vanaf 12:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 HC",
+  "site": "https://www.cafevanburen.nl/",
+  "telefoon": "",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/van-buren/"
  },
  "van-dam-bbq-ribs-more": {
   "adres": "Berg en Dalseweg 46-A",
@@ -3051,6 +3989,20 @@
   "telefoon": "+31 24 388 2434",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/vurrukkulluk/"
  },
+ "waalzicht": {
+  "adres": "Oosterhoutsedijk 21",
+  "bedrijf": "Waalzicht",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een drankje met de Stevenskerk recht tegenover je? Op het eiland Veur Lent aan de Oosterhoutsedijk zit dit oude bruine café, dat al sinds 1911 bekendstaat in Lent. Tegenwoordig heeft het een Caribische twist: je drinkt er een speciaalbiertje, je eet wat borrelhapjes en ondertussen klinkt er salsa uit de speakers. Op het verstopte terrasje tussen de palmbomen zie je de boten over de Waal varen, en in de serre zit je ook bij slechter weer lekker.\n\nOp vrijdagavond kun je vrij dansen op salsa, bachata en kizomba, en doordeweeks geeft een dansschool er les, met een gratis proefles om kennis te maken. In de zaal kun je ook een feest of vergadering houden, of een kinderfeestje vieren.\n\nKijk op de site of social media welke evenementen eraan komen en reserveer even voor je langskomt.",
+  "openingstijden": "",
+  "plaats": "Nijmegen",
+  "postcode": "6663 KS",
+  "site": "http://www.cafewaalzicht.nl/",
+  "telefoon": "+31657345580",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/waalzicht/"
+ },
  "wally": {
   "adres": "Hertogstraat 47",
   "bedrijf": "Wally",
@@ -3120,6 +4072,20 @@
   "site": "http://www.restaurantwitlof.nl/",
   "telefoon": "+31243224060",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/witlof/"
+ },
+ "yuca": {
+  "adres": "Plein 1944 141",
+  "bedrijf": "YUCA",
+  "bedrijfsmail": "",
+  "categorie": "Café",
+  "foto": "",
+  "omschrijving": "Zin in een avond die begint met tropische hapjes om te delen en eindigt met een cocktail op de beat van de muziek? Dan zit je goed aan Plein 1944, midden in het centrum van Nijmegen.\n\nBij YUCA bestel je kleine gerechten voor de hele tafel. Daarna schuif je door naar de bar voor een van hun eigen cocktails. De sfeer is stijlvol maar informeel, met een tropisch randje. In het weekend kun je er ook al lunchen. Op de eventkalender vind je verder live muziek en clubavonden, dus het kan zomaar laat worden.\n\nYUCA is open van woensdag tot en met zondag. Je kunt een tafel reserveren of gewoon binnenlopen. Neem wel je pinpas mee, want contant geld nemen ze niet aan.",
+  "openingstijden": "ma-di gesloten, wo-do 17:00-00:00, vr-zo 12:00-00:00",
+  "plaats": "Nijmegen",
+  "postcode": "6511 JH",
+  "site": "https://yucanijmegen.com",
+  "telefoon": "",
+  "url": "https://www.nijmegenonline.nl/bedrijvengids/yuca/"
  },
  "zappa-s": {
   "adres": "Plein 1944 155",
