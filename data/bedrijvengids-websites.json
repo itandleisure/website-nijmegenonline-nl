@@ -55,6 +55,13 @@
   "website": "http://www.ararat-nijmegen.nl/",
   "werkt": false
  },
+ "area-11-personal-fit": {
+  "eind_url": "http://www.evolvepersonaltraining.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.evolvepersonaltraining.nl/",
+  "werkt": false
+ },
  "arsenaal-1824": {
   "eind_url": "https://arsenaal1824.nl/",
   "gecontroleerd": "2026-10-23",
@@ -75,6 +82,13 @@
   "reden": "200",
   "website": "https://asiafoodcorner.nl/",
   "werkt": true
+ },
+ "avalon-fitcentre": {
+  "eind_url": "http://www.avalonfitcentre.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.avalonfitcentre.nl/",
+  "werkt": false
  },
  "aya": {
   "eind_url": "https://ayanijmegen.nl",
@@ -192,7 +206,7 @@
   "eind_url": "https://biggym.com/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://biggym.com/",
+  "website": "http://www.biggym.nl/",
   "werkt": true
  },
  "bij-babs": {
@@ -250,6 +264,13 @@
   "reden": "200",
   "website": "http://restaurantzarzuela.nl/",
   "werkt": true
+ },
+ "bodytecnijmegen": {
+  "eind_url": "http://www.bodytecnijmegen.nl/",
+  "gecontroleerd": "2026-10-23",
+  "reden": "domein bestaat niet",
+  "website": "http://www.bodytecnijmegen.nl/",
+  "werkt": false
  },
  "borboleta": {
   "eind_url": "http://www.borboleta-nijmegen.nl",
@@ -637,9 +658,9 @@
   "werkt": true
  },
  "don-pablo": {
-  "eind_url": "https://donpablo.nl/",
+  "eind_url": "https://www.donpablo.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "500 (weert mogelijk bots)",
+  "reden": "200",
   "website": "https://donpablo.nl/",
   "werkt": true
  },
@@ -815,7 +836,7 @@
   "eind_url": "https://www.fit20.com/nl/studios/nijmegen/contact",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://www.fit20.com/nl/studios/nijmegen/contact",
+  "website": "http://www.fit20nijmegen.nl/",
   "werkt": true
  },
  "fitsmart-personal-training": {
@@ -983,7 +1004,7 @@
   "eind_url": "https://www.roc-nijmegen.nl/organisatie/leerbedrijven/het-fitcentrum",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://www.roc-nijmegen.nl/organisatie/leerbedrijven/het-fitcentrum",
+  "website": "https://hetfitcentrum.roc-nijmegen.nl/",
   "werkt": true
  },
  "het-lemke": {
@@ -1484,9 +1505,9 @@
   "werkt": true
  },
  "mercure-hotel-ontbijtbuffet": {
-  "eind_url": "http://all.accor.com",
+  "eind_url": "https://all.accor.com/a/select-country.html",
   "gecontroleerd": "2026-10-23",
-  "reden": "403 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://all.accor.com",
   "werkt": true
  },
@@ -1613,7 +1634,7 @@
   "eind_url": "https://nimmabasketball.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://nimmabasketball.nl/",
+  "website": "https://www.nimma-gemina.nl/",
   "werkt": true
  },
  "nimma-moves": {
@@ -1676,7 +1697,7 @@
   "eind_url": "https://www.noviofit.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://www.noviofit.nl/",
+  "website": "http://Www.noviofit.nl/",
   "werkt": true
  },
  "ookini": {
@@ -1928,7 +1949,7 @@
   "eind_url": "https://www.provectas.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://www.provectas.nl/",
+  "website": "http://Www.provectas.nl/",
   "werkt": true
  },
  "pulse-flow": {
@@ -1939,7 +1960,7 @@
   "werkt": true
  },
  "radboud-university-food-beverage": {
-  "eind_url": "http://www.ru.nl/",
+  "eind_url": "https://www.ru.nl/",
   "gecontroleerd": "2026-10-23",
   "reden": "subpagina weg (404), homepage werkt",
   "website": "http://www.ru.nl/refter",
@@ -2411,7 +2432,7 @@
   "eind_url": "https://www.thegymsociety.com/nl",
   "gecontroleerd": "2026-10-23",
   "reden": "200",
-  "website": "https://www.thegymsociety.com/nl",
+  "website": "https://www.thegymsociety.nl/",
   "werkt": true
  },
  "the-kettlebell-club": {
@@ -2692,6 +2713,13 @@
   "gecontroleerd": "2026-10-23",
   "reden": "200",
   "website": "https://www.ziyafetrestaurant.nl/",
+  "werkt": true
+ },
+ "zlim-nijmegen": {
+  "eind_url": "https://zlimnijmegen.nl",
+  "gecontroleerd": "2026-10-23",
+  "reden": "twijfel: Tunnel connection failed: 502 Bad Gateway",
+  "website": "https://zlimnijmegen.nl",
   "werkt": true
  },
  "zorba": {

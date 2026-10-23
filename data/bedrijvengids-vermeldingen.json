@@ -97,20 +97,6 @@
   "telefoon": "+31651729734",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/apollo-gym/"
  },
- "area-11-personal-fit": {
-  "adres": "Weg door Jonkerbos 26",
-  "bedrijf": "Area 11 Personal Fit",
-  "bedrijfsmail": "",
-  "categorie": "Sportschool",
-  "foto": "",
-  "omschrijving": "",
-  "openingstijden": "",
-  "plaats": "Nijmegen",
-  "postcode": "6532 SZ",
-  "site": "http://www.evolvepersonaltraining.nl/",
-  "telefoon": "+31651070874",
-  "url": "https://www.nijmegenonline.nl/bedrijvengids/area-11-personal-fit/"
- },
  "arsenaal-1824": {
   "adres": "Arsenaalpoort 1",
   "bedrijf": "Arsenaal 1824",
@@ -138,20 +124,6 @@
   "site": "https://asiafoodcorner.nl/",
   "telefoon": "31242070131",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/asia-foodcorner/"
- },
- "avalon-fitcentre": {
-  "adres": "Sint Hubertusstraat 2",
-  "bedrijf": "Avalon Fitcentre",
-  "bedrijfsmail": "",
-  "categorie": "Sportschool",
-  "foto": "",
-  "omschrijving": "",
-  "openingstijden": "",
-  "plaats": "Nijmegen",
-  "postcode": "6531 LB",
-  "site": "http://www.avalonfitcentre.nl/",
-  "telefoon": "+31246635173",
-  "url": "https://www.nijmegenonline.nl/bedrijvengids/avalon-fitcentre/"
  },
  "aya": {
   "adres": "Dommer van Poldersveldtweg 71",
@@ -345,7 +317,7 @@
   "openingstijden": "",
   "plaats": "Nijmegen",
   "postcode": "6533 GL",
-  "site": "http://www.biggym.nl/",
+  "site": "https://biggym.com/",
   "telefoon": "+31888866100",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/biggym-nijmegen/"
  },
@@ -460,20 +432,6 @@
   "site": "http://restaurantzarzuela.nl/",
   "telefoon": "+31243232371",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/bodega-zarzuela/"
- },
- "bodytecnijmegen": {
-  "adres": "Daalseweg 37",
-  "bedrijf": "BodytecNijmegen",
-  "bedrijfsmail": "",
-  "categorie": "Sportschool",
-  "foto": "",
-  "omschrijving": "",
-  "openingstijden": "",
-  "plaats": "Nijmegen",
-  "postcode": "6521 GG",
-  "site": "http://www.bodytecnijmegen.nl/",
-  "telefoon": "+31246791528",
-  "url": "https://www.nijmegenonline.nl/bedrijvengids/bodytecnijmegen/"
  },
  "borboleta": {
   "adres": "Lange Hezelstraat 95",
@@ -1409,7 +1367,7 @@
   "openingstijden": "",
   "plaats": "Nijmegen",
   "postcode": "6511 NV",
-  "site": "http://www.fit20nijmegen.nl/",
+  "site": "https://www.fit20.com/nl/studios/nijmegen/contact",
   "telefoon": "+31640964944",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/fit20/"
  },
@@ -1689,7 +1647,7 @@
   "openingstijden": "",
   "plaats": "Nijmegen",
   "postcode": "6512 BT",
-  "site": "https://hetfitcentrum.roc-nijmegen.nl/",
+  "site": "https://www.roc-nijmegen.nl/organisatie/leerbedrijven/het-fitcentrum",
   "telefoon": "+31248904936",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/het-fitcentrum/"
  },
@@ -2921,7 +2879,7 @@
   "openingstijden": "ma-vr 07:00-21:00, za-zo 09:00-15:00",
   "plaats": "Nijmegen",
   "postcode": "6546 BA",
-  "site": "http://Www.noviofit.nl/",
+  "site": "https://www.noviofit.nl/",
   "telefoon": "+31627416080",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/novio-fit/"
  },
@@ -3383,7 +3341,7 @@
   "openingstijden": "ma-do 07:00-21:00, vr 07:00-17:30, za-zo 09:00-13:00",
   "plaats": "Nijmegen",
   "postcode": "6541 BM",
-  "site": "http://Www.provectas.nl/",
+  "site": "https://www.provectas.nl/",
   "telefoon": "+31640772836",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/provectas/"
  },
@@ -4251,7 +4209,7 @@
   "openingstijden": "ma, wo, vr 07:00-21:00; di, do 07:00-13:00 en 16:00-21:00; za-zo 08:00-15:00",
   "plaats": "Nijmegen",
   "postcode": "6511 SK",
-  "site": "https://www.thegymsociety.nl/",
+  "site": "https://www.thegymsociety.com/nl",
   "telefoon": "+31248200205",
   "url": "https://www.nijmegenonline.nl/bedrijvengids/the-gym-society/"
  },

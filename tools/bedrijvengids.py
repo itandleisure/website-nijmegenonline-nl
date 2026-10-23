@@ -764,9 +764,10 @@ def main(bron):
         if xml_.exists() and csv_.exists():
             gids = gids_uit_xml(xml_, cat["listdom"])
             gids, overig = samenvoegen(gids, osm_uit_csv(csv_, cat["soorten"], cat.get("plaatsen", ("Nijmegen",))), gebruikt)
-            opgeslagen[cat["slug"]] = {"gids": gids, "overig": overig}
+            # Opslaan zoals verzameld, vóór scan, correcties en websitecontrole (die passen de gegevens aan)
+            opgeslagen[cat["slug"]] = json.loads(json.dumps({"gids": gids, "overig": overig}))
         elif cat["slug"] in opgeslagen:
-            gids, overig = opgeslagen[cat["slug"]]["gids"], opgeslagen[cat["slug"]]["overig"]
+            gids, overig = json.loads(json.dumps((opgeslagen[cat["slug"]]["gids"], opgeslagen[cat["slug"]]["overig"])))
         else:
             continue
         # Een bedrijf uit de oude gids kan in meer categorieën staan; het krijgt één pagina (bij de eerste categorie)
