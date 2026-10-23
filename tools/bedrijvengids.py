@@ -403,7 +403,11 @@ def start_pagina(groepen, root="../"):
     return "\n".join(out)
 
 
-def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
+def categorie_pagina(cat, gids, overig, artikelen, root="../../", voorstel=False):
+    """voorstel: nieuwe indeling (oktober 2026) ter beoordeling op /voorstel/; alle gratis vermeldingen gelijk,
+    alleen Uitgelicht valt op, met lege plekken als advertentie en een vergelijking van de pakketten."""
+    if voorstel:
+        return categorie_voorstel(cat, gids, overig, artikelen, root)
     canonical = "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"])
     alle = gids + overig
     lijst = {"@context": "https://schema.org", "@type": "ItemList", "name": cat["naam"], "itemListElement": [
@@ -450,6 +454,101 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     out.append('        <section class="gids-sectie faq">\n          <h2>Veelgestelde vragen</h2>')
     out.extend("          <details><summary>%s</summary><p>%s</p></details>" % (esc(v), esc(a)) for v, a in cat["faq"])
     out.append("        </section>")
+    out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
+    out.append(VOET)
+    return "\n".join(out)
+
+
+VOORBEELD = {"slug": "", "naam": "Jouw sportschool", "adres": "Uitgelicht staat bovenaan, met foto en actieknop", "postcode": "", "plaats": "",
+             "foto": "assets/uploads/2022/11/sporten-in-nijmegen-533x400.webp", "kenmerken": ["proefles", "groepslessen"],
+             "actie": "Eerste maand gratis sporten", "openingstijden": [], "uitgelicht": True}
+
+
+def uitgelicht_kaart(b, root, voorbeeld=False):
+    """Grote kaart voor betalende bedrijven: foto, kenmerken, de actie en een knop."""
+    km = b.get("kenmerken") or []
+    chips = '<span class="bedrijfkaart__kenmerken">%s</span>' % "".join("<span>%s</span>" % esc(k) for k in km[:4]) if km else ""
+    actie = '<span class="bedrijfkaart__actie">%s</span>' % esc(b["actie"]) if b.get("actie") else ""
+    label = "Voorbeeld" if voorbeeld else "Uitgelicht"
+    href = "%sadverteren-bij-nijmegenonline/" % root if voorbeeld else "%sbedrijvengids/%s/" % (root, b["slug"])
+    foto = '<img src="%s" alt="" loading="lazy">' % esc(foto_url(b["foto"], root)) if b.get("foto") else ""
+    return ('<a class="bedrijfkaart bedrijfkaart--uitgelicht" href="%s" data-kenmerken="%s">%s<span class="bedrijfkaart__tekst">'
+            '<span class="bedrijfkaart__label">%s</span><strong>%s</strong><span>%s</span>%s%s<span class="bedrijfkaart__knop">Bekijk %s</span></span></a>'
+            % (href, esc("|".join(km)), foto, label, esc(b["naam"]), esc(adresregel(b) if not voorbeeld else b["adres"]),
+               actie, chips, "hoe het werkt" if voorbeeld else "aanbod"))
+
+
+def gewone_kaart(b, root):
+    """Gratis vermelding: voor iedereen gelijk, zonder foto (een foto hoort bij Uitgelicht)."""
+    km = b.get("kenmerken") or []
+    chips = '<span class="bedrijfkaart__kenmerken">%s</span>' % "".join("<span>%s</span>" % esc(k) for k in km[:4]) if km else ""
+    return ('<a class="bedrijfkaart" href="%sbedrijvengids/%s/" data-kenmerken="%s"><span class="bedrijfkaart__tekst"><strong>%s</strong><span>%s</span>%s</span></a>'
+            % (root, b["slug"], esc("|".join(km)), esc(b["naam"]), esc(adresregel(b)), chips))
+
+
+def categorie_voorstel(cat, gids, overig, artikelen, root):
+    canonical = "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"])
+    alle = sorted(gids + overig, key=lambda b: b["naam"].lower())
+    out = [kop(cat["naam"] + " (voorstel)", cat["beschrijving"], canonical, root, None, LEAFLET).replace(
+        "<head>", '<head>\n  <meta name="robots" content="noindex">', 1)]
+    out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel gids">')
+    out.append('        <div class="kruimelpad"><a href="%s">Home</a> › Bedrijvengids › %s</div>' % (root, esc(cat["naam"])))
+    out.append('        <p class="gidslabel">Bedrijvengids</p>')
+    out.append("        <h1>%s</h1>" % esc(cat["naam"]))
+    intro = re.sub(r"<p>Op deze pagina vind je.*?</p>", "<p>Op deze pagina vind je alle %d sportscholen in Nijmegen, met openingstijden, "
+                   "een eigen pagina en een kaart. Filter hieronder op wat jij belangrijk vindt, zoals groepslessen of een proefles.</p>" % len(alle),
+                   cat["intro"], flags=re.S)
+    out.append('        <div class="inhoud-tekst">%s</div>' % intro)
+    uitgelicht = [b for b in alle if b.get("uitgelicht")]
+    random.Random(datetime.date.today().isoformat() + cat["slug"]).shuffle(uitgelicht)
+    uitgelicht = uitgelicht[:MAX_UITGELICHT]
+    # Lege plekken: één voorbeeldkaart (zolang er niemand betaalt) en een uitnodiging om die plek te nemen
+    out.append('        <section class="gids-sectie">\n          <h2>Uitgelicht</h2>\n          <div class="bedrijflijst bedrijflijst--uitgelicht">')
+    out.extend("            " + uitgelicht_kaart(b, root) for b in uitgelicht)
+    if not uitgelicht:
+        out.append("            " + uitgelicht_kaart(VOORBEELD, root, voorbeeld=True))
+    if len(uitgelicht) < MAX_UITGELICHT:
+        out.append('            <a class="vrijeplek" href="%sbedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=%s"><strong>Nog %d %s vrij</strong>'
+                   '<span>Zet jouw sportschool hier bovenaan, boven %d andere sportscholen. Met foto\'s, je actie en een eigen knop.</span>'
+                   '<span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>'
+                   % (root, esc(cat["slug"]), MAX_UITGELICHT - len(uitgelicht), "plek" if MAX_UITGELICHT - len(uitgelicht) == 1 else "plekken", len(alle)))
+    out.append("          </div>\n        </section>")
+    out.append(filter_blok(alle))
+    out.append('        <section class="gids-sectie">\n          <h2>Alle sportscholen in Nijmegen</h2>\n          <div class="bedrijflijst">')
+    out.extend("            " + gewone_kaart(b, root) for b in alle if b not in uitgelicht)
+    out.append('          </div>\n        </section>')
+    out.append('        <section class="gids-sectie">\n          <h2>Op de kaart</h2>')
+    out.append(kaart_blok([(cat["groep"], b) for b in alle], root))
+    out.append('        </section>')
+    # Vergelijking voor ondernemers: wat levert betalen op
+    rijen = [("Vermelding met adres, kaart en openingstijden", "ja", "ja", "ja"),
+             ("Tekst door onze redactie", "kort", "uitgebreid", "uitgebreid"),
+             ("Bovenaan deze pagina, met label Uitgelicht", "nee", "ja", "ja"),
+             ("Logo en foto's (tot 10)", "nee", "ja", "ja"),
+             ("Actie en eigen knop (proefles, inschrijven, bellen)", "nee", "ja", "ja"),
+             ("Banner bij sport en gezondheid, artikel en nieuwsbrief", "nee", "nee", "ja"),
+             ("Overzicht van weergaven en kliks", "jaarlijks", "jaarlijks", "elk kwartaal")]
+    out.append('        <section class="gids-sectie pakketvergelijk">\n          <h2>Heb je een sportschool in Nijmegen?</h2>'
+               '\n          <p>Elke sportschool staat gratis in onze gids. Wil je opvallen tussen %d sportscholen? Kies dan voor Uitgelicht of Partner.</p>'
+               % len(alle))
+    out.append('          <div class="tabel-scroll"><table>\n            <thead><tr><th></th><th>Gratis</th><th>Uitgelicht<br><small>&euro; 149 per jaar,<br>eerste jaar &euro; 99</small></th>'
+               '<th>Partner<br><small>&euro; 449 per jaar</small></th></tr></thead>\n            <tbody>')
+    def cel(w):
+        return {"ja": '<td class="ja">&#10003;</td>', "nee": '<td class="nee">&ndash;</td>'}.get(w, "<td>%s</td>" % w)
+    out.extend("              <tr><th>%s</th>%s</tr>" % (esc(r[0]), "".join(cel(w) for w in r[1:])) for r in rijen)
+    out.append('            </tbody>\n          </table></div>')
+    out.append('          <p class="pakketvergelijk__knoppen"><a class="knop" href="%sbedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=%s">Kies Uitgelicht</a> '
+               '<a href="%sadverteren-bij-nijmegenonline/">Alle mogelijkheden</a> &middot; Staat je sportschool er al? Klik op je pagina op <em>Dit is mijn bedrijf</em>.</p>'
+               '\n        </section>' % (root, esc(cat["slug"]), root))
+    if artikelen:
+        out.append('        <section class="gids-sectie">\n          <h2>Lees ook</h2>\n          <ul>')
+        out.extend('            <li><a href="%s%s/">%s</a></li>' % (root, s, esc(t)) for s, t in artikelen)
+        out.append("          </ul>\n        </section>")
+    out.append('        <section class="gids-sectie faq">\n          <h2>Veelgestelde vragen</h2>')
+    out.extend("          <details><summary>%s</summary><p>%s</p></details>" % (esc(v), esc(a)) for v, a in cat["faq"])
+    out.append("        </section>")
+    out.append('        <p class="bron">Gegevens: onze eigen gids, aangevuld met © <a href="https://www.openstreetmap.org/copyright" target="_blank" '
+               'rel="noopener">OpenStreetMap-bijdragers</a> en Overture Maps.</p>')
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
@@ -611,6 +710,7 @@ def main(bron):
         json.dumps(vermeldingen(gids + overig, cat), ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     artikelen = [(s, titel_van(s)) for s in cat["artikelen"] if titel_van(s)]
     schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen))
+    schrijf("bedrijvengids-categorie/%s/voorstel" % cat["slug"], categorie_pagina(cat, gids, overig, artikelen, "../../../", voorstel=True))
     for b in gids + overig:
         anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
         schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen))

@@ -414,3 +414,22 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
   .openingstijden__dag > span:first-child { grid-column: 1 / -1; font-weight: 600; }
   .openingstijden__dag label { grid-column: 1 / -1; }
 }
+
+/* Categoriepagina, nieuwe indeling: Uitgelicht met knop, vrije plek als advertentie, vergelijking van pakketten */
+.bedrijfkaart__actie { font-weight: 700; color: var(--kop); margin-top: 4px; }
+.bedrijfkaart__knop { align-self: flex-start; margin-top: 10px; background: var(--groen); color: #fff; font-weight: 700; padding: 7px 14px; border-radius: 6px; font-size: 0.9rem; }
+.vrijeplek { display: flex; flex-direction: column; gap: 4px; padding: 16px 20px; border: 2px dashed var(--groen); border-radius: 10px; color: var(--tekst); text-decoration: none; background: var(--wit); }
+.vrijeplek strong { color: var(--kop); font-size: 1.05rem; }
+.vrijeplek__prijs { color: var(--groen); font-weight: 700; }
+.vrijeplek:hover { background: #eef6e8; }
+.pakketvergelijk { background: #f6f9f3; border-radius: 10px; padding: 4px 20px 16px; }
+.pakketvergelijk table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.pakketvergelijk th, .pakketvergelijk td { padding: 8px 6px; border-bottom: 1px solid var(--rand); text-align: center; vertical-align: top; }
+.pakketvergelijk tbody th { text-align: left; font-weight: 400; }
+.pakketvergelijk thead th:nth-child(3) { color: var(--groen); }
+.pakketvergelijk td.ja { color: var(--groen); font-weight: 700; }
+.pakketvergelijk td.nee { color: var(--grijs); }
+.pakketvergelijk small { font-weight: 400; color: var(--grijs); }
+.tabel-scroll { overflow-x: auto; }
+.pakketvergelijk__knoppen { margin-top: 14px; }
+.pakketvergelijk .knop { display: inline-block; background: var(--groen); color: #fff; font-weight: 700; padding: 9px 16px; border-radius: 6px; text-decoration: none; margin-right: 8px; }
