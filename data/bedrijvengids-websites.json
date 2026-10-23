@@ -44,9 +44,9 @@
  "basic-fit-weg-door-jonkerbos": {
   "eind_url": "http://www.basicfit.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "timed out",
+  "reden": "twijfel: timed out",
   "website": "http://www.basicfit.nl/",
-  "werkt": false
+  "werkt": true
  },
  "benefit-sports": {
   "eind_url": "https://www.benefitsports.nl/",
@@ -91,25 +91,25 @@
   "werkt": true
  },
  "easyactive-6534": {
-  "eind_url": "https://easyactive.nl/locatie/easy-active-nijmegen",
+  "eind_url": "https://easyactive.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "pagina bestaat niet (404)",
+  "reden": "subpagina weg (404), homepage werkt",
   "website": "https://easyactive.nl/locatie/easy-active-nijmegen",
-  "werkt": false
+  "werkt": true
  },
  "f4f-nijmegen": {
-  "eind_url": "http://www.fitforfree.nl/vestigingen/nijmegen/",
+  "eind_url": "https://www.sportcity.nl/?redirected=true",
   "gecontroleerd": "2026-10-23",
-  "reden": "pagina bestaat niet (404)",
+  "reden": "subpagina weg (404), homepage werkt",
   "website": "http://www.fitforfree.nl/vestigingen/nijmegen/",
-  "werkt": false
+  "werkt": true
  },
  "fit-for-free": {
-  "eind_url": "https://www.fitforfree.nl/sportschool/nijmegen",
+  "eind_url": "https://www.sportcity.nl/?redirected=true",
   "gecontroleerd": "2026-10-23",
-  "reden": "pagina bestaat niet (404)",
+  "reden": "subpagina weg (404), homepage werkt",
   "website": "https://www.fitforfree.nl/sportschool/nijmegen",
-  "werkt": false
+  "werkt": true
  },
  "fit20": {
   "eind_url": "https://www.fit20.com/nl/studios/nijmegen/contact",
@@ -135,9 +135,9 @@
  "freyheyt-sportlounge": {
   "eind_url": "https://www.freyheytnijmegen.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "Remote end closed connection without response",
+  "reden": "twijfel: Remote end closed connection without response",
   "website": "https://www.freyheytnijmegen.nl/",
-  "werkt": false
+  "werkt": true
  },
  "go4fit-nijmegen": {
   "eind_url": "https://www.go4fit.nl/",
@@ -245,9 +245,9 @@
   "werkt": true
  },
  "novio-fit": {
-  "eind_url": "http://Www.noviofit.nl/",
+  "eind_url": "https://www.noviofit.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "403 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://Www.noviofit.nl/",
   "werkt": true
  },
@@ -329,9 +329,9 @@
   "werkt": true
  },
  "trainingscentrum-michi": {
-  "eind_url": "http://www.trainingscentrum-michi.nl/",
+  "eind_url": "https://www.trainingscentrum-michi.nl/",
   "gecontroleerd": "2026-10-23",
-  "reden": "403 (weert mogelijk bots)",
+  "reden": "200",
   "website": "http://www.trainingscentrum-michi.nl/",
   "werkt": true
  },
