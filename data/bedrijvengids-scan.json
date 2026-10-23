@@ -218,7 +218,9 @@
  },
  "ararat-armeens-restaurant": {
   "adres_op_site": "",
-  "bronnen": [],
+  "bronnen": [
+   "http://www.ararat-nijmegen.nl/"
+  ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -227,12 +229,12 @@
   "keuken": "Armeens",
   "kosten_tokens": {
    "in": 15734,
-   "uit": 369
+   "uit": 393
   },
   "lijkt_actief": true,
   "naam": "Ararat Armeens Restaurant",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website http://www.ararat-nijmegen.nl/ niet ophalen: de fetch-tool gaf 'url_not_allowed' terug. Daardoor heb ik niets kunnen controleren en geen tekst geschreven. Hoofdcategorie en keuken komen alleen uit de bedrijfsnaam. Of de zaak nog actief is, weet ik niet. Graag handmatig nakijken.",
+  "opmerkingen": "De website http://www.ararat-nijmegen.nl/ kon niet worden opgehaald (de fetch-tool gaf de foutmelding 'url_not_allowed'). Daarom is er geen informatie gecontroleerd en geen tekst geschreven. De keuken 'Armeens' komt alleen uit de bedrijfsnaam. Of de zaak nog actief is, is niet gecontroleerd. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -372,7 +374,9 @@
  },
  "baan-isaan": {
   "adres_op_site": "",
-  "bronnen": [],
+  "bronnen": [
+   "http://www.baanisaan.nl"
+  ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -380,13 +384,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23851,
-   "uit": 578
+   "in": 15683,
+   "uit": 429
   },
   "lijkt_actief": true,
   "naam": "Baan Isaan",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden opgehaald: http://www.baanisaan.nl, https://www.baanisaan.nl en https://baanisaan.nl gaven allemaal de fout 'url_not_allowed'. Daardoor is er geen informatie van de site gelezen. Ook kon niet worden nagegaan of de zaak nog open is (lijkt_actief staat op true omdat niets het tegendeel laat zien) of welke keuken het is: de naam doet aan Thais (Isaan) denken, maar dat is niet bevestigd. Graag handmatig controleren, ook omdat het straatadres bij ons ontbreekt.",
+  "opmerkingen": "Ik kon de website http://www.baanisaan.nl niet openen, want het ophalen werd geweigerd (url_not_allowed). Daarom heb ik geen informatie kunnen controleren en geen tekst geschreven. De categorie restaurant is overgenomen uit de vermoedelijke categorie. Dat het om Thaise of Isaan-keuken gaat, leid ik alleen af uit de naam en heb ik niet ingevuld. Dat het bedrijf nog actief is, is niet gecontroleerd. In ons adres ontbreekt de straat. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -633,9 +637,44 @@
   "website_bereikbaar": false
  },
  "beij-ons": {
+  "adres_op_site": "Beijenstraat, hoek Daalsedwarsweg, Nijmegen-Oost",
+  "bronnen": [
+   "https://proeflokaalbeijons.nl/",
+   "https://proeflokaalbeijons.nl/over-ons/",
+   "https://proeflokaalbeijons.nl/menu/"
+  ],
+  "categorie_scan": "restaurant",
+  "extra_categorieen": [
+   {
+    "bewijs": "Bij Proeflokaal Beij Ons vind je de gezelligheid van een bruine kroeg en de kwaliteit van een goed eetcafé.",
+    "categorie": "cafe"
+   }
+  ],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "restaurant",
+  "kenmerken": [
+   "vegetarisch",
+   "groepen"
+  ],
+  "keuken": "Eetcafé",
+  "kosten_tokens": {
+   "in": 21071,
+   "uit": 1304
+  },
+  "lijkt_actief": true,
+  "naam": "Beij Ons",
+  "openingstijden": "ma-do vanaf 16:00, vr-zo vanaf 14:00; keuken dagelijks 17:00-21:00",
+  "opmerkingen": "Opgegeven website beijons.nl verwijst naar proeflokaalbeijons.nl. Volledig adres staat niet op de gelezen pagina's, alleen 'Beijenstraat, hoek Daalsedwarsweg'. Homepage noemt lunch, maar openingstijden (vanaf 16:00/14:00) en keukentijden (17-21) wijzen niet op lunch; daarom lunch niet als kenmerk opgenomen. Sluitingstijden niet vermeld. Kenmerk 'groepen' gebaseerd op het aanbod voor feestjes en borrels.",
+  "status": "voorstel",
+  "tekst": "Zin in een avond die voelt als thuiskomen? Op de hoek van de Beijenstraat en de Daalsedwarsweg, midden in Nijmegen-Oost, vind je een proeflokaal dat de sfeer van een bruine kroeg combineert met een volwaardige eetcafékaart. De naam is trouwens een knipoog naar die beruchte Beijenstraat.\n\n's Avonds eet je hier van een wisselende kaart met vlees, vis en vegetarische gerechten. De spareribs met frites, aioli en koolsla zijn al jaren een vaste klassieker, en van maandag tot en met donderdag kun je ze onbeperkt bestellen. Daarbij past een speciaalbiertje of een glas wijn. Elke dinsdagavond is er bovendien een pubquiz.\n\nWil je iets vieren of een borrel geven? Mail even voor de mogelijkheden, of reserveer gewoon een tafel en schuif aan.",
+  "website": "http://www.beijons.nl",
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
+ },
+ "bella-italia": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.beijons.nl"
+   "https://bluesurfergirl.com/"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -644,41 +683,19 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23834,
-   "uit": 552
+   "in": 26731,
+   "uit": 845
   },
-  "lijkt_actief": true,
-  "naam": "Beij Ons",
-  "openingstijden": "",
-  "opmerkingen": "De website http://www.beijons.nl kon niet worden opgehaald: de fetch gaf de foutmelding 'unavailable'. Ook de https-varianten (met en zonder www) werkten niet. Daarom is er geen tekst geschreven en zijn keuken, kenmerken, openingstijden en het adres op de site niet gecontroleerd. Of het bedrijf nog actief is en of 'restaurant' de juiste categorie is, staat dus niet vast: de categorie is alleen overgenomen van de opgegeven vermoedelijke categorie. Dit graag handmatig controleren.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
-  "status": "verwijderd",
-  "tekst": "",
-  "website": "http://www.beijons.nl",
-  "website_bereikbaar": false
- },
- "bella-italia": {
-  "adres_op_site": "",
-  "bronnen": [],
-  "categorie_scan": "restaurant",
-  "extra_categorieen": [],
-  "gescand": "2026-10-23",
-  "hoofdcategorie": "restaurant",
-  "kenmerken": [],
-  "keuken": "Italiaans",
-  "kosten_tokens": {
-   "in": 15726,
-   "uit": 380
-  },
-  "lijkt_actief": true,
+  "lijkt_actief": false,
   "naam": "Bella Italia",
   "openingstijden": "",
-  "opmerkingen": "De website https://www.bellaitalia-nijmegen.com/ kon niet worden opgehaald (foutmelding: url_not_allowed). Daardoor is er geen informatie van de site gelezen en is er geen tekst geschreven. De keuken 'Italiaans' is alleen afgeleid uit de naam en nog niet gecontroleerd. Of de zaak nog actief is, kon niet worden nagegaan. Graag handmatig controleren.",
+  "opmerkingen": "De opgehaalde pagina komt niet van Bella Italia: de tekst is afkomstig van https://bluesurfergirl.com/ en bevat Indonesische gokspam (slot-sites) gemengd met inhoud van een Singaporese Apple-winkelketen (iStudio). Er staat niets over een Italiaans restaurant aan de St. Annastraat in Nijmegen. Mogelijk is het domein bellaitalia-nijmegen.com verlopen en overgenomen of wordt er doorgestuurd naar een spamsite. Advies: de link niet publiceren en via een andere bron (telefoon, social media, langsgaan) nagaan of het restaurant nog bestaat en wat de actuele website is. 'lijkt_actief' staat op false omdat we vanaf de site niet kunnen bevestigen dat het bedrijf actief is, maar dat is niet zeker.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
   "website": "https://www.bellaitalia-nijmegen.com/",
-  "website_bereikbaar": false
+  "website_bereikbaar": false,
+  "zelf_gelezen": true
  },
  "bellissimo": {
   "adres_op_site": "",
@@ -690,15 +707,15 @@
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
   "kenmerken": [],
-  "keuken": "Italiaans",
+  "keuken": "",
   "kosten_tokens": {
    "in": 15728,
-   "uit": 439
+   "uit": 457
   },
   "lijkt_actief": true,
   "naam": "Bellissimo",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website http://www.pizzeria-bellissimo.nl/ niet ophalen (foutmelding: url_not_allowed). Daardoor heb ik niets kunnen controleren en geen tekst geschreven. De hoofdcategorie restaurant en de keuken Italiaans heb ik alleen afgeleid uit de domeinnaam 'pizzeria'. Of het om een restaurant of om een afhaal- en bezorgzaak gaat, moet de redactie nog nagaan. Ook of het bedrijf nog actief is, is niet bevestigd.",
+  "opmerkingen": "De website http://www.pizzeria-bellissimo.nl/ kon niet worden opgehaald (de fetch gaf de fout 'url_not_allowed'). Daarom heb ik geen tekst, kenmerken, openingstijden of keuken ingevuld. Uit de naam valt af te leiden dat het om een pizzeria gaat, dus Italiaans en mogelijk vooral afhalen/bezorgen. Dat is niet gecontroleerd, dus graag handmatig nakijken. Ook moet nog bekeken worden of de zaak echt actief is en of de hoofdcategorie restaurant of afhaal moet zijn.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -773,13 +790,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15715,
-   "uit": 408
+   "in": 15708,
+   "uit": 383
   },
   "lijkt_actief": true,
   "naam": "Bhalu Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website https://bhalu.nl/ niet openen (fout: url_not_accessible). Daarom heb ik geen tekst geschreven en geen kenmerken, openingstijden, keuken of adres ingevuld. De categorie restaurant is overgenomen van onze eigen vermoedelijke categorie en is niet gecontroleerd op de site. Of de zaak nog open is, heb ik ook niet kunnen nagaan. Probeer de site later opnieuw of controleer de gegevens op een andere manier.",
+  "opmerkingen": "Ik kon de website https://bhalu.nl/ niet openen (foutmelding: url_not_accessible). Daarom heb ik geen tekst, kenmerken, openingstijden, keuken of adres ingevuld. De categorie restaurant is overgenomen van de vermoedelijke categorie en is niet gecontroleerd. Of de zaak nog open is, kon ik ook niet nagaan. Probeer het later nog eens of controleer de gegevens met de hand.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -1196,11 +1213,7 @@
  },
  "brasserie-le-duc": {
   "adres_op_site": "",
-  "bronnen": [
-   "http://www.brasserieleduc.nl/",
-   "https://www.brasserieleduc.nl/",
-   "https://brasserieleduc.nl/"
-  ],
+  "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -1208,13 +1221,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 33050,
-   "uit": 662
+   "in": 32931,
+   "uit": 643
   },
   "lijkt_actief": true,
   "naam": "Brasserie Le Duc",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. http://www.brasserieleduc.nl/, https://www.brasserieleduc.nl/ en https://brasserieleduc.nl/ gaven alle drie de fout 'url_not_allowed'. Daardoor heb ik geen inhoud kunnen lezen en geen tekst, kenmerken, openingstijden, keuken of adres ingevuld. Of de zaak nog open is, kon ik niet nagaan. De hoofdcategorie 'restaurant' komt alleen uit jullie eigen indeling. Graag met de hand nakijken of later opnieuw proberen.",
+  "opmerkingen": "Ik kon de website niet lezen. Bij elke poging gaf de ophaaltool de fout 'url_not_allowed': op http://www.brasserieleduc.nl/, https://www.brasserieleduc.nl/ en https://brasserieleduc.nl/. Ik heb dus niets kunnen nakijken: geen tekst, keuken, kenmerken, openingstijden of adres. Ook of de zaak nog open is weet ik niet; 'lijkt_actief' staat alleen op true omdat ik niets heb gevonden dat op sluiting wijst. De categorie restaurant is overgenomen uit de opgegeven categorie en niet gecontroleerd. Kijk de site graag zelf na of probeer het later opnieuw.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -1311,13 +1324,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15736,
-   "uit": 458
+   "in": 15732,
+   "uit": 364
   },
   "lijkt_actief": true,
   "naam": "Brunswick Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website http://www.brunswicknijmegen.nl/ niet openen: de ophaaltool gaf de fout 'url_not_allowed'. Daardoor heb ik geen informatie kunnen controleren en geen tekst geschreven. Ook de categorie, de keuken, de openingstijden en de kenmerken zijn niet bevestigd. 'Restaurant' is alleen de vermoedelijke categorie. 'lijkt_actief' staat op true omdat ik niets heb gezien dat erop wijst dat de zaak gestopt is, maar ook dat is niet gecontroleerd. Graag handmatig nakijken.",
+  "opmerkingen": "De website http://www.brunswicknijmegen.nl/ kon niet worden opgehaald, want het ophalen gaf de fout 'url_not_allowed'. Daarom hebben we geen informatie kunnen controleren en is er geen tekst geschreven. De categorie restaurant is alleen een aanname op basis van de vermoedelijke categorie. Controleer dit met de hand.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -1589,9 +1602,7 @@
  },
  "chicken-nijmegen": {
   "adres_op_site": "",
-  "bronnen": [
-   "http://www.chickenkebabnijmegen.nl"
-  ],
+  "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -1599,13 +1610,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15738,
-   "uit": 450
+   "in": 15727,
+   "uit": 370
   },
   "lijkt_actief": true,
   "naam": "Chicken Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website http://www.chickenkebabnijmegen.nl niet ophalen (foutmelding url_not_allowed). Daardoor kon ik niets nalezen en heb ik geen tekst geschreven. De hoofdcategorie 'afhaal' heb ik alleen afgeleid uit de naam (chicken/kebab). Dat is niet nagekeken, dus de redactie moet het controleren. Of de zaak nog actief is, weet ik niet: ik heb lijkt_actief op true laten staan omdat er geen informatie is die op het tegendeel wijst.",
+  "opmerkingen": "De website http://www.chickenkebabnijmegen.nl kon niet worden opgehaald (de fetch-tool gaf 'url_not_allowed'). Daardoor zijn er geen gegevens gecontroleerd en is er geen tekst geschreven. De hoofdcategorie 'afhaal' is een voorlopige inschatting op basis van de naam (kebab/chicken). Dit moet handmatig worden gecontroleerd.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -1783,11 +1794,10 @@
   "website_bereikbaar": false
  },
  "commanderie-van-sint-jan": {
-  "adres_op_site": "",
+  "adres_op_site": "Franseplaats 1, 6511 VS Nijmegen",
   "bronnen": [
    "http://www.commanderie-nijmegen.nl",
-   "https://www.commanderie-nijmegen.nl",
-   "https://commanderie-nijmegen.nl"
+   "http://www.commanderie-nijmegen.nl/contact.html"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -1796,18 +1806,19 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 32856,
-   "uit": 830
+   "in": 27664,
+   "uit": 1122
   },
   "lijkt_actief": true,
   "naam": "Commanderie van Sint Jan",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden gelezen. http://www.commanderie-nijmegen.nl, https://www.commanderie-nijmegen.nl en https://commanderie-nijmegen.nl gaven allemaal de fout 'url_not_allowed'. Daardoor is er geen tekst geschreven en zijn keuken, kenmerken, openingstijden en adres niet ingevuld. 'Actief' staat op true omdat we dat niet konden controleren, niet omdat de site het bevestigt. De categorie restaurant is overgenomen van de vermoedelijke categorie en is niet gecontroleerd. Let op: de Commanderie van Sint Jan aan de Franseplaats is een historisch gebouw. Mogelijk is het vooral een plek voor zaalverhuur of evenementen en geen gewoon restaurant. Laat de redactie dit handmatig nakijken.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "opmerkingen": "De site is een overkoepelende pagina voor het historische gebouw De Commanderie van Sint Jan ('Het Genot van Nijmegen') met meerdere bedrijven (eten, drinken, workshops, koken, brouwen, overnachten, trouwen, feesten, vergaderen). Voor reserveringen wordt doorverwezen naar de websites van de afzonderlijke bedrijven. Er staat geen informatie over een specifiek restaurant, kaart, keuken of openingstijden, daarom geen tekst geschreven. Mogelijk is dit eerder een verzamellocatie dan één restaurant; redactie kan overwegen de afzonderlijke bedrijven in het gebouw apart op te nemen.",
+  "reden": "automatisch: te weinig informatie op de eigen website (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
   "website": "http://www.commanderie-nijmegen.nl",
-  "website_bereikbaar": false
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
  },
  "communal-by-marcus-antonius": {
   "adres_op_site": "Marikenstraat 42-43, Nijmegen",
@@ -1865,7 +1876,9 @@
  "corfu": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.corfunijmegen.nl/"
+   "http://www.corfunijmegen.nl/",
+   "https://www.corfunijmegen.nl/",
+   "https://corfunijmegen.nl/"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -1874,13 +1887,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 24361,
-   "uit": 531
+   "in": 32913,
+   "uit": 729
   },
   "lijkt_actief": true,
   "naam": "Corfu",
   "openingstijden": "",
-  "opmerkingen": "De website http://www.corfunijmegen.nl/ kon niet worden opgehaald, want de fetch-tool gaf de foutmelding 'url_not_allowed'. Daardoor zijn er geen gegevens gecontroleerd en is er geen tekst geschreven. Of de zaak nog open is, is onbekend; lijkt_actief staat alleen op true omdat dit veld verplicht is. Op basis van de naam is de keuken waarschijnlijk Grieks, maar dat is niet gecontroleerd. In ons eigen adres ontbreekt de straat, alleen de postcode 6511 XP staat erin. Controleer de site en het adres met de hand.",
+  "opmerkingen": "Ik kon de website niet openen. Bij http://www.corfunijmegen.nl/, https://www.corfunijmegen.nl/ en https://corfunijmegen.nl/ kwam steeds de foutmelding 'url_not_allowed' terug. Daarom heb ik geen tekst geschreven en de kenmerken, openingstijden, keuken en het adres leeg gelaten. 'Restaurant' als categorie is alleen een aanname op basis van de vermoedelijke categorie. Ik heb niet kunnen nagaan of de zaak nog open is. 'Lijkt actief' staat op 'ja' omdat ik niets heb gezien dat op sluiting wijst. Het adres bij ons heeft geen straatnaam en huisnummer, alleen de postcode 6511 XP. Graag handmatig controleren.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -2124,7 +2137,8 @@
   "adres_op_site": "",
   "bronnen": [
    "http://deborneo.com/",
-   "https://deborneo.com/"
+   "https://deborneo.com/",
+   "https://www.deborneo.com/"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -2133,13 +2147,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 32847,
-   "uit": 573
+   "in": 23882,
+   "uit": 639
   },
   "lijkt_actief": true,
   "naam": "De Borneo",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden gelezen. Zowel http://deborneo.com/ als https://deborneo.com/ gaven de fout 'url_not_allowed'. Daarom is er geen informatie over het aanbod, de keuken, de openingstijden of het adres, en is er geen tekst geschreven. Of het bedrijf nog actief is, valt hierdoor niet te controleren. De categorie restaurant is overgenomen van de opgegeven vermoedelijke categorie en is niet gecontroleerd. Controleer de website handmatig.",
+  "opmerkingen": "Ik kon de website niet lezen. Elke poging om http://deborneo.com/, https://deborneo.com/ en https://www.deborneo.com/ op te halen gaf de foutmelding 'url_not_allowed'. Daarom heb ik geen tekst geschreven en geen kenmerken, openingstijden, keuken of adres ingevuld. De hoofdcategorie 'restaurant' heb ik alleen overgenomen van de vermoedelijke categorie; die is niet gecontroleerd. 'Lijkt actief' staat op true omdat dat de standaardwaarde is, niet omdat de site dat bevestigt. Controleer de site handmatig.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -2183,27 +2197,31 @@
   "website_bereikbaar": true
  },
  "de-draaibar": {
-  "adres_op_site": "",
-  "bronnen": [],
+  "adres_op_site": "Molenstraat 79, 6511 HB Nijmegen",
+  "bronnen": [
+   "https://driegezustersnijmegen.nl/",
+   "https://driegezustersnijmegen.nl/contact/"
+  ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
-  "hoofdcategorie": "restaurant",
+  "hoofdcategorie": "cafe",
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 32943,
-   "uit": 738
+   "in": 19789,
+   "uit": 1016
   },
   "lijkt_actief": true,
   "naam": "De Draaibar",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden geopend. Bij elke poging (http://www.driegezusters.com/, https://www.driegezusters.com/ en https://driegezusters.com/) gaf de ophaaltool de fout 'url_not_allowed'. Daardoor is niets gecontroleerd: categorie, kenmerken, openingstijden, keuken en adres zijn onbekend. Er is geen tekst geschreven, omdat we alleen informatie van de eigen site gebruiken. Ook is 'lijkt_actief' op true gezet omdat er niets gecontroleerd kon worden, niet omdat de zaak bewezen open is. Let op: de domeinnaam (Drie Gezusters) past niet bij de bedrijfsnaam De Draaibar. Mogelijk hoort de link bij een ander bedrijf of een oude eigenaar. Controleer de juiste website en of de zaak aan de Molenstraat 79 nog bestaat, en kijk de site daarna zelf na of probeer het later opnieuw.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "opmerkingen": "De opgegeven website (driegezusters.com) leidt naar driegezustersnijmegen.nl, de site van Drie Gezusters Nijmegen: een uitgaansgelegenheid voor clubnights, feestjes en events op hetzelfde adres (Molenstraat 79). De naam 'De Draaibar' komt nergens op de site voor, en er staat geen menukaart, keuken of restaurantaanbod. Het lijkt geen restaurant te zijn. Mogelijk was De Draaibar een eerdere naam of een onderdeel van Drie Gezusters, of is de vermelding verouderd. De hoofdcategorie 'cafe' is gekozen als dichtstbijzijnde optie, omdat er geen categorie voor clubs of nachtleven is. Er is geen tekst geschreven, omdat er te weinig informatie is en de identiteit van het bedrijf onduidelijk is. Ook openingstijden ontbreken. Graag controleren of de vermelding hernoemd of verwijderd moet worden.",
+  "reden": "automatisch: te weinig informatie op de eigen website (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
   "website": "http://www.driegezusters.com/",
-  "website_bereikbaar": false
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
  },
  "de-dromaai": {
   "adres_op_site": "Plein 1944 nr. 25, 6511 JC Nijmegen",
@@ -2377,29 +2395,42 @@
   "website_bereikbaar": true
  },
  "de-mandarijn": {
-  "adres_op_site": "",
+  "adres_op_site": "Tooropstraat 47, 6521 NH Nijmegen",
   "bronnen": [
-   "https://chineesrestaurantdemandarijn.nl/"
+   "https://chineesrestaurantdemandarijn.nl/",
+   "https://chineesrestaurantdemandarijn.nl/contact",
+   "https://chineesrestaurantdemandarijn.nl/catering"
   ],
   "categorie_scan": "restaurant",
-  "extra_categorieen": [],
+  "extra_categorieen": [
+   {
+    "bewijs": "Wij verzorgen Chinese en Indische catering in Nijmegen met een ruime keuze aan warme gerechten, rijst, bami en bijgerechten.",
+    "categorie": "catering"
+   }
+  ],
   "gescand": "2026-10-23",
-  "hoofdcategorie": "restaurant",
-  "kenmerken": [],
-  "keuken": "Chinees",
+  "hoofdcategorie": "afhaal",
+  "kenmerken": [
+   "afhalen",
+   "parkeren",
+   "groepen"
+  ],
+  "keuken": "Chinees-Indisch",
   "kosten_tokens": {
-   "in": 32786,
-   "uit": 727
+   "in": 54091,
+   "uit": 1422
   },
   "lijkt_actief": true,
   "naam": "De Mandarijn",
-  "openingstijden": "",
-  "opmerkingen": "Ik kon de website https://chineesrestaurantdemandarijn.nl/ niet openen. De ophaaltool gaf de foutmelding 'url_not_allowed', ook bij de varianten met http en met www. Ik heb daarom niets van de site kunnen lezen en geen tekst geschreven. De keuken 'Chinees' en de categorie restaurant komen alleen uit de domeinnaam en zijn niet gecontroleerd. Of de zaak nog open is, weet ik niet. Ook het adres, de openingstijden en de kenmerken heb ik niet kunnen nagaan. In onze gegevens ontbreekt de straatnaam; alleen de postcode 6521 NH is bekend. Het is goed om de site met de hand te bekijken.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
-  "status": "verwijderd",
-  "tekst": "",
+  "niet_in": {
+   "restaurant": "automatisch: hoort bij Snackbars en afhaal (scan 23-10-2026)"
+  },
+  "openingstijden": "ma gesloten (op feestdagen 14:00-21:00), di-za 16:00-21:00, zo en feestdagen 14:00-21:00",
+  "opmerkingen": "De naam suggereert een restaurant, maar de site heeft het alleen over afhalen en catering. Er staat niets over aan tafel eten, dus de hoofdcategorie is afhaal geworden. Bezorging wordt alleen bij catering genoemd (vanaf 15 personen), dus het kenmerk bezorgen is weggelaten. Het kenmerk groepen is gekozen vanwege de catering vanaf 15 personen. Twijfel je daarover, dan kun je het weghalen. Online bestellen loopt via Bistroo.",
+  "status": "voorstel",
+  "tekst": "Heb je geen zin om te koken en wel trek in babi pangang, foe yong hai of een complete rijsttafel? Dan fiets je in Nijmegen-Oost zo naar de Tooropstraat. Daar zit De Mandarijn, herkenbaar aan de rode pui met een Chinees dakje boven de deur. Ze maken Chinees-Indische gerechten vers klaar om mee naar huis te nemen.\n\nDe afhaalkaart is flink, van soep tot rijsttafel, en er is ook een maandmenu. Geef je een verjaardag, familiefeest of bedrijfslunch? Dan kun je een warm buffet laten verzorgen, thuis of op kantoor, ook in Lent, Beek en Berg en Dal.\n\nBestel online of bel even, en haal je eten op het tijdstip dat jij hebt afgesproken. Parkeren kan in de buurt. Let op: op maandag zijn ze dicht, behalve op feestdagen.",
   "website": "https://chineesrestaurantdemandarijn.nl/",
-  "website_bereikbaar": false
+  "website_bereikbaar": true
  },
  "de-nieuwe-winkel": {
   "adres_op_site": "Gebroeders van Limburgplein 7, 6511 BW Nijmegen",
@@ -2780,26 +2811,39 @@
  },
  "don-pablo": {
   "adres_op_site": "",
-  "bronnen": [],
+  "bronnen": [
+   "https://www.donpablo.nl/"
+  ],
   "categorie_scan": "restaurant",
-  "extra_categorieen": [],
+  "extra_categorieen": [
+   {
+    "bewijs": "Onze sfeervolle Cuba Lounge biedt plaats aan groepen van minimaal 25 personen tot ongeveer 80 personen.",
+    "categorie": "zaalverhuur"
+   }
+  ],
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
-  "kenmerken": [],
-  "keuken": "",
+  "kenmerken": [
+   "kindvriendelijk",
+   "groepen",
+   "afhalen",
+   "vegetarisch",
+   "bedrijfsuitje"
+  ],
+  "keuken": "Mexicaans, Argentijns",
   "kosten_tokens": {
-   "in": 15700,
-   "uit": 371
+   "in": 28864,
+   "uit": 1160
   },
   "lijkt_actief": true,
   "naam": "Don Pablo",
-  "openingstijden": "",
-  "opmerkingen": "De website https://donpablo.nl/ kon niet worden opgehaald: de tool gaf de fout 'url_not_allowed'. Daardoor is geen informatie gecontroleerd en is de tekst leeg gelaten. De categorie restaurant is alleen overgenomen uit de vermoedelijke categorie. Of het bedrijf nog actief is, is niet gecontroleerd. Probeer de site later opnieuw of controleer hem handmatig.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
-  "status": "verwijderd",
-  "tekst": "",
+  "openingstijden": "ma gesloten, di-zo 16:00-22:00",
+  "opmerkingen": "Adres staat niet in de aangeleverde tekst. Site claimt 'leukste restaurant van de gemeente Nijmegen' (2018, 2019, 2023, 2024); niet overgenomen. Nacho's glutenvrij genoemd, maar geen breder glutenvrij aanbod, dus kenmerk niet toegekend. Kerstinformatie is seizoensgebonden.",
+  "status": "voorstel",
+  "tekst": "Zin in een avond vol salsamuziek, kleurrijke muurschilderingen en een sissend pannetje fajitas? In de Hertogstraat, midden in het centrum, waan je je bij Don Pablo even in Latijns-Amerika. De keuken is vooral Mexicaans, met spareribs in een zoet-pittige marinade, burrito's naar het recept van oma en fajitas bife die aan tafel met tequila geflambeerd wordt. Liever vlees van de grill? Dan kies je een Argentijnse steak, zoals ossenhaas of T-bone.\n\nBegin met een paar tapas om te delen en sluit af met churros of een van de zelfgemaakte cocktails, ook alcoholvrij. Kinderen hebben een eigen menu en een speelhoekje. Iets te vieren? Onder het restaurant zit de Cuba Lounge met bar en dansvloer voor groepen.\n\nReserveer telefonisch, per mail of via WhatsApp, of haal je favoriete gerechten op voor thuis.",
   "website": "https://donpablo.nl/",
-  "website_bereikbaar": false
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
  },
  "don-pedro": {
   "adres_op_site": "",
@@ -2813,13 +2857,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23872,
-   "uit": 548
+   "in": 15715,
+   "uit": 425
   },
   "lijkt_actief": true,
   "naam": "Don Pedro",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet ophalen: http://www.donpedronijmegen.nl/ en de https-varianten gaven allemaal 'url_not_allowed'. Daardoor kon ik niets controleren: niet of de zaak nog open is, niet de keuken, de kenmerken, de openingstijden of het adres. Daarom is er nog geen tekst. Restaurant als hoofdcategorie komt alleen van de vermoedelijke categorie die jullie hebben opgegeven. Graag even met de hand nakijken.",
+  "opmerkingen": "Ik kon de website http://www.donpedronijmegen.nl/ niet openen: het ophalen werd geweigerd (url_not_allowed). Daardoor heb ik niets kunnen controleren, ook niet of de zaak nog open is. De tekst, de keuken, de openingstijden en de kenmerken zijn daarom leeg gelaten. 'Lijkt actief' staat alleen op true omdat het verplicht is; de site heeft dat niet bevestigd. Wil de redactie dit zelf nakijken of het later opnieuw proberen?",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -2837,12 +2881,12 @@
   "keuken": "",
   "kosten_tokens": {
    "in": 15712,
-   "uit": 396
+   "uit": 462
   },
   "lijkt_actief": true,
   "naam": "Doppio Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website https://doppionijmegen.com/ niet ophalen (foutmelding: url_not_allowed). Daarom heb ik geen informatie kunnen controleren en geen tekst geschreven. Ook de categorie 'restaurant' kon ik niet nagaan. Het veld 'lijkt_actief' staat alleen standaard op 'ja' omdat ik niets heb kunnen nakijken. Of de zaak nog open is, is dus onbekend. De redactie moet de site met de hand bekijken.",
+  "opmerkingen": "Ik kon https://doppionijmegen.com/ niet ophalen: de fetch-tool gaf de fout 'url_not_allowed'. Daardoor heb ik geen gegevens kunnen controleren en geen tekst geschreven. Of het bedrijf nog actief is, is ook niet gecontroleerd; 'lijkt_actief' staat alleen op true omdat er geen aanwijzing is dat de zaak gestopt is. De hoofdcategorie restaurant komt uit de aanlevering en is niet gecontroleerd. De keuken is onbekend. De naam doet aan Italiaans denken, maar dat is niet bevestigd. Graag handmatig nakijken of opnieuw proberen.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -3111,32 +3155,41 @@
   "website_bereikbaar": true
  },
  "eetcafe-buur": {
-  "adres_op_site": "",
-  "bronnen": [],
+  "adres_op_site": "Deken Hensburchstraat 2, Nijmegen",
+  "bronnen": [
+   "https://buurnijmegen.nl/",
+   "https://buurnijmegen.nl/menu-brakkenstein/",
+   "https://buurnijmegen.nl/menu-waterkwartier-2/"
+  ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
-  "kenmerken": [],
+  "kenmerken": [
+   "lunch",
+   "groepen"
+  ],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15736,
-   "uit": 370
+   "in": 23923,
+   "uit": 1230
   },
   "lijkt_actief": true,
   "naam": "Eetcafé BUUR",
-  "openingstijden": "",
-  "opmerkingen": "Ik kon https://www.buurbrakkenstein.nl niet openen: het ophalen werd geweigerd (url_not_allowed). Daardoor heb ik geen informatie van de site kunnen controleren en ook geen tekst geschreven. De hoofdcategorie 'restaurant' heb ik alleen op de vermoedelijke categorie gebaseerd en niet op de site. Wil iemand de site met de hand bekijken?",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
-  "status": "verwijderd",
-  "tekst": "",
+  "openingstijden": "lunch 12:00-16:00, avondkaart vanaf 17:00",
+  "opmerkingen": "Opgegeven URL buurbrakkenstein.nl leidt naar buurnijmegen.nl. BUUR heeft ook een locatie in het Waterkwartier (Voorstadslaan 267); deze vermelding gaat over Brakkenstein. De inhoud van de menukaarten stond niet in de opgehaalde tekst, dus de keuken is onbekend en niet ingevuld. Volledige openingstijden staan niet op de gelezen pagina's. Groepen: de site vraagt om contact bij groepen boven acht personen, geen expliciet groepsmenu. Het is ook een buurthuis met welzijnsactiviteiten.",
+  "status": "voorstel",
+  "tekst": "Zin in een avondje uit eten zonder poespas, gewoon om de hoek in Brakkenstein? Aan de Deken Hensburchstraat vind je BUUR, een eetcafé dat zichzelf graag de huiskamer van de wijk noemt. Je loopt er vrij binnen voor een drankje, schuift tussen de middag aan voor de lunch en vanaf vijf uur kun je kiezen van de avondkaart.\n\nBUUR is meer dan een plek om te eten: hier komen buurtbewoners samen voor muziekmiddagen, spelletjesavonden, workshops en andere wijkactiviteiten. Het voelt daardoor echt als een ontmoetingsplek, waar je zomaar met je buren aan de praat raakt.\n\nKom je eten, reserveer dan even online of bel. Geef allergieën of dieetwensen gerust door, en met een groep van meer dan acht personen neem je vooraf contact op. Kijk ook eens in de agenda wat er deze week te doen is.",
   "website": "https://www.buurbrakkenstein.nl",
-  "website_bereikbaar": false
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
  },
  "eetcafe-de-serre": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.eetcafedeserre.nl"
+   "http://www.eetcafedeserre.nl",
+   "https://www.eetcafedeserre.nl",
+   "https://eetcafedeserre.nl"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -3145,13 +3198,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15730,
-   "uit": 447
+   "in": 32898,
+   "uit": 851
   },
   "lijkt_actief": true,
   "naam": "Eetcafe De Serre",
   "openingstijden": "",
-  "opmerkingen": "De website http://www.eetcafedeserre.nl kon niet worden opgehaald (fout: url_not_allowed). Daardoor is er geen informatie over aanbod, keuken, openingstijden of adres gecontroleerd, en is er geen tekst geschreven. Of de zaak nog actief is, valt zo niet na te gaan. 'Lijkt actief' staat op true omdat er geen aanwijzing is dat de zaak gestopt is. De hoofdcategorie 'restaurant' komt van de vermoedelijke categorie en is niet gecontroleerd. Graag handmatig nakijken of later opnieuw proberen.",
+  "opmerkingen": "De website kon ik niet ophalen. Ik heb http://www.eetcafedeserre.nl, https://www.eetcafedeserre.nl en https://eetcafedeserre.nl geprobeerd, en bij alle drie gaf de ophaaltool de fout 'url_not_allowed'. Daardoor weet ik niet of de site zelf in de lucht is. Er is geen tekst geschreven en er zijn geen openingstijden, keuken of kenmerken ingevuld. Of de zaak nog open is, heb ik niet kunnen nagaan; 'lijkt_actief' staat op true omdat er niets op een sluiting wijst, maar dat is niet gecontroleerd. De hoofdcategorie 'restaurant' is overgenomen uit de vermoedelijke categorie en niet gecontroleerd. Het is ook niet uitgesloten dat het meer een café met een kleine kaart is. Graag handmatig controleren of opnieuw proberen.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -3223,9 +3276,7 @@
  "eethuisje-moqui-lange-hezelstraat": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.Moqui.nl/",
-   "https://www.moqui.nl/",
-   "https://moqui.nl/"
+   "http://www.Moqui.nl/"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -3234,25 +3285,25 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23888,
-   "uit": 630
+   "in": 40631,
+   "uit": 1041
   },
-  "lijkt_actief": true,
+  "lijkt_actief": false,
   "naam": "Eethuisje Moqui",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden geladen. We hebben http://www.Moqui.nl/, https://www.moqui.nl/ en https://moqui.nl/ geprobeerd en kregen steeds 'url_not_accessible'. Daarom is er geen tekst geschreven en zijn de keuken, kenmerken, openingstijden en het adres niet gecontroleerd. De categorie restaurant is de vermoedelijke categorie en is niet gecontroleerd. Ook is niet na te gaan of de zaak nog open is. lijkt_actief staat op true omdat niets erop wijst dat de zaak gestopt is, niet omdat dat bevestigd is. Graag handmatig nakijken.",
+  "opmerkingen": "Het domein moqui.nl is een geparkeerde Sedo-pagina waarop het domein te koop wordt aangeboden. Er staat geen informatie over Eethuisje Moqui op. Mogelijk is het bedrijf gestopt of heeft het een andere website. Controleer of de zaak aan de Lange Hezelstraat 58 nog bestaat. lijkt_actief staat op false omdat er geen eigen site meer is, maar de site zegt niet expliciet dat het bedrijf gestopt is.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
   "website": "http://www.Moqui.nl/",
-  "website_bereikbaar": false
+  "website_bereikbaar": false,
+  "zelf_gelezen": true
  },
  "eethuisje-moqui-van-welderenstraat": {
   "adres_op_site": "",
   "bronnen": [
    "https://www.moqui.nl/",
-   "http://www.moqui.nl/",
-   "https://moqui.nl/"
+   "http://moqui.nl/"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -3261,13 +3312,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23841,
-   "uit": 570
+   "in": 23785,
+   "uit": 502
   },
   "lijkt_actief": true,
   "naam": "Eethuisje Moqui",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden geladen. https://www.moqui.nl/, http://www.moqui.nl/ en https://moqui.nl/ gaven allemaal de foutmelding 'url_not_accessible'. Daarom is er geen tekst geschreven en zijn keuken, kenmerken en openingstijden niet ingevuld. De categorie restaurant is overgenomen uit de vermoedelijke categorie en is niet gecontroleerd. Ook of de zaak nog open is, konden we niet nagaan. Graag handmatig controleren of de site nog bestaat en of de zaak nog actief is.",
+  "opmerkingen": "De website https://www.moqui.nl/ lukte niet, ook niet via http://moqui.nl/ (foutmelding: url_not_accessible). Daarom is er geen tekst geschreven en zijn kenmerken, openingstijden en keuken leeg gelaten. De categorie restaurant komt van de vermoedelijke categorie, maar is niet op de site gecontroleerd. Of de zaak nog open is, weten we niet. Graag later opnieuw proberen of op een andere manier nagaan.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -3908,13 +3959,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15727,
-   "uit": 402
+   "in": 23921,
+   "uit": 629
   },
   "lijkt_actief": true,
   "naam": "Goed Volk",
   "openingstijden": "",
-  "opmerkingen": "De website http://www.goedvolknijmegen.nl kon niet worden opgehaald, de fetch gaf de fout 'url_not_allowed'. Daardoor kon ik niets controleren: geen aanbod, openingstijden, adres, keuken of kenmerken, en ook niet of de zaak nog open is. Daarom is er geen tekst geschreven. De categorie restaurant komt alleen uit onze eigen gegevens. Bekijk de site graag zelf of probeer het later nog eens.",
+  "opmerkingen": "De website kon ik niet openen. Ik heb http://www.goedvolknijmegen.nl, https://www.goedvolknijmegen.nl en https://goedvolknijmegen.nl geprobeerd, maar bij alle drie gaf de ophaaltool 'url_not_allowed' terug. Daardoor weet ik niet of de site zelf werkt. Ik heb geen tekst geschreven en geen kenmerken, keuken of openingstijden ingevuld. De hoofdcategorie 'restaurant' is alleen de vermoedelijke categorie en is niet gecontroleerd. Of de zaak nog actief is, weet ik niet. Wil iemand de site met de hand bekijken?",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -4361,11 +4412,7 @@
  },
  "holy-roti": {
   "adres_op_site": "",
-  "bronnen": [
-   "https://holyroti.nl",
-   "https://www.holyroti.nl",
-   "http://holyroti.nl"
-  ],
+  "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -4373,13 +4420,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 32753,
-   "uit": 673
+   "in": 32748,
+   "uit": 708
   },
   "lijkt_actief": true,
   "naam": "Holy Roti",
   "openingstijden": "",
-  "opmerkingen": "We konden de website niet lezen. Bij elke poging gaf de ophaaltool de fout 'url_not_allowed'. We hebben https://holyroti.nl, https://www.holyroti.nl en http://holyroti.nl geprobeerd. Daarom is er geen tekst geschreven en zijn keuken, kenmerken, openingstijden en adres niet ingevuld. De categorie restaurant is alleen de vermoedelijke categorie en is niet gecontroleerd. Of het bedrijf nog actief is, weten we ook niet. Graag handmatig controleren.",
+  "opmerkingen": "Ik kon de website niet lezen. Bij https://holyroti.nl, https://www.holyroti.nl en http://holyroti.nl gaf de fetch-tool steeds de foutmelding 'url_not_allowed', zodat er geen pagina's te openen waren. Daardoor heb ik geen tekst geschreven en geen kenmerken, openingstijden, keuken of adres ingevuld. De hoofdcategorie 'restaurant' komt alleen uit de vermoedelijke categorie en is niet gecontroleerd: het kan ook een afhaalzaak zijn. 'lijkt_actief' staat op true omdat er niets bekend is dat op sluiting wijst, maar ook dat is niet gecontroleerd. Graag de site handmatig controleren.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -4565,15 +4612,15 @@
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
   "kenmerken": [],
-  "keuken": "",
+  "keuken": "Italiaans",
   "kosten_tokens": {
-   "in": 15738,
-   "uit": 505
+   "in": 15745,
+   "uit": 516
   },
   "lijkt_actief": true,
   "naam": "Il-pizzaiolo",
   "openingstijden": "",
-  "opmerkingen": "De opgegeven link gaat niet naar een eigen website van het bedrijf. Het is een gidspagina van indebuurt.nl, en die kon ook niet worden opgehaald (url_not_allowed). Er was dus niets te lezen en daarom is er geen tekst geschreven. Ook het adres is bij ons onbekend. Of het bedrijf nog actief is, konden we niet nagaan: 'lijkt_actief' staat op true omdat we geen aanwijzing hebben gevonden dat het gestopt is. De categorie restaurant is alleen een aanname op basis van de naam en de vermoedelijke categorie. Zoek graag de eigen website van Il-pizzaiolo en het adres op.",
+  "opmerkingen": "De opgegeven link is geen eigen website van het bedrijf, maar een gidspagina op indebuurt.nl. Die pagina konden we niet ophalen (toegang geweigerd: url_not_allowed). Daarom is er geen tekst geschreven en zijn er geen gegevens ingevuld. Het adres bij ons is ook leeg. De keuken 'Italiaans' en de categorie restaurant zijn alleen afgeleid uit de naam en de vermoedelijke categorie, dus niet gecontroleerd. Of het om een restaurant of een afhaalpizzeria gaat, is onbekend. Zoek graag de eigen website van Il-pizzaiolo op en controleer het adres.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -4713,13 +4760,13 @@
   "kenmerken": [],
   "keuken": "Indiaas, Nepalees",
   "kosten_tokens": {
-   "in": 33060,
-   "uit": 665
+   "in": 33097,
+   "uit": 684
   },
   "lijkt_actief": true,
   "naam": "Indiaas & Nepalees Restaurant Himalaya",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden geladen. https://restauranthimalaya.nl/, http://restauranthimalaya.nl/ en https://www.restauranthimalaya.nl/ gaven allemaal de foutmelding 'url_not_accessible'. Daarom is er geen tekst geschreven en zijn kenmerken, openingstijden en adres niet gecontroleerd. De hoofdcategorie en de keuken komen alleen uit de bedrijfsnaam. Of de zaak nog actief is, valt niet na te gaan. Graag later opnieuw proberen of handmatig controleren.",
+  "opmerkingen": "De website kon niet worden geopend. We hebben https://restauranthimalaya.nl/, http://restauranthimalaya.nl/ en https://www.restauranthimalaya.nl/ geprobeerd en kregen steeds de melding 'url_not_accessible'. Daarom is er geen tekst geschreven en zijn kenmerken, openingstijden en adres niet gecontroleerd. De categorie en de keuken komen alleen uit de bedrijfsnaam (Indiaas & Nepalees Restaurant). Of het bedrijf nog actief is, weten we niet. Probeer het later opnieuw of controleer het handmatig.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -4738,15 +4785,15 @@
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
   "kenmerken": [],
-  "keuken": "Indiaas",
+  "keuken": "",
   "kosten_tokens": {
    "in": 23872,
-   "uit": 581
+   "uit": 567
   },
   "lijkt_actief": true,
   "naam": "Indian Way",
   "openingstijden": "",
-  "opmerkingen": "De website https://www.restaurantindianway.nl/ kon niet worden geladen (url_not_accessible). Ook de varianten via http en zonder www werkten niet. Daarom is er geen tekst geschreven en zijn er geen kenmerken of openingstijden ingevuld. De keuken 'Indiaas' is alleen afgeleid uit de naam en niet op de site gecontroleerd. Of de zaak nog actief is, valt niet na te gaan. Kijk later opnieuw of controleer het handmatig.",
+  "opmerkingen": "De website https://www.restaurantindianway.nl/ kon niet worden geladen (url_not_accessible), ook niet via http:// of zonder www. Daarom is er geen tekst geschreven en zijn kenmerken, openingstijden en keuken niet ingevuld. Op grond van de naam gaat het waarschijnlijk om een Indiaas restaurant, maar dat is niet gecontroleerd. Controleer graag handmatig of de zaak nog bestaat en of de website klopt.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -4755,9 +4802,7 @@
  },
  "indiawalaa-sadras": {
   "adres_op_site": "",
-  "bronnen": [
-   "https://indiawalaa.nl/ (niet bereikbaar: url_not_allowed)"
-  ],
+  "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -4765,13 +4810,13 @@
   "kenmerken": [],
   "keuken": "Indiaas",
   "kosten_tokens": {
-   "in": 32863,
-   "uit": 759
+   "in": 15714,
+   "uit": 417
   },
   "lijkt_actief": true,
   "naam": "Indiawalaa Sadras",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. Bij elke poging gaf de ophaaltool de fout 'url_not_allowed', voor https://indiawalaa.nl/, https://www.indiawalaa.nl/ en http://indiawalaa.nl/. Daarom heb ik niets van de site kunnen controleren: niet het adres, niet de openingstijden, niet de kaart en niet of de zaak nog open is. Er is ook geen tekst geschreven. De categorie restaurant en de keuken Indiaas zijn alleen afgeleid uit de naam en de categorie die jullie al hadden. 'Sadras' in de naam wijst misschien op een keten of op meerdere vestigingen. Controleer de site graag met de hand.",
+  "opmerkingen": "Ik kon https://indiawalaa.nl/ niet openen: het ophalen werd geweigerd (url_not_allowed). Daardoor heb ik niets van de site kunnen controleren en heb ik geen tekst geschreven. Hoofdcategorie en keuken (Indiaas) heb ik alleen afgeleid uit de naam en de vermoedelijke categorie, niet bevestigd op de site. Ook adres, openingstijden en kenmerken zijn niet gecontroleerd. Graag handmatig nakijken of de site later opnieuw proberen.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -5105,13 +5150,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15886,
-   "uit": 625
+   "in": 15894,
+   "uit": 581
   },
   "lijkt_actief": true,
   "naam": "Kaniwa",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. De opgegeven link (https://kaniwa.foodticket.nl/foodticket/cgi/bestel.cgi) leidt naar een Foodticket-bestelpagina, en die werd geweigerd (url_not_allowed). Ook de hoofdpagina https://kaniwa.foodticket.nl/ kon ik niet bereiken. Daarom heb ik geen tekst geschreven en kon ik de keuken, de openingstijden, de kenmerken en het adres niet controleren. Dat het om een Foodticket-bestelsite gaat, wijst erop dat het misschien vooral een afhaal- of bezorgzaak is. Controleer de categorie dus even met de hand. 'Restaurant' is voorlopig overgenomen van de vermoedelijke categorie. Ook of de zaak nog actief is, kon ik niet nagaan; dat veld staat daarom op de standaardwaarde true.",
+  "opmerkingen": "Ik kon de website niet openen. De opgegeven link (https://kaniwa.foodticket.nl/foodticket/cgi/bestel.cgi) is een bestelpagina van Foodticket en werd door de fetch-tool geweigerd (url_not_allowed). De hoofdpagina van kaniwa.foodticket.nl kon ik ook niet ophalen. Daardoor heb ik geen tekst, keuken, openingstijden of kenmerken kunnen invullen. De bestelpagina via Foodticket wijst eerder op een afhaal- en bezorgzaak dan op een restaurant. Controleer daarom de hoofdcategorie en zoek of het bedrijf een eigen website heeft. Of de zaak nog actief is, heb ik niet kunnen nagaan.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -5235,27 +5280,41 @@
   "website_bereikbaar": true
  },
  "koken-aan-de-waal": {
-  "adres_op_site": "",
-  "bronnen": [],
+  "adres_op_site": "Oosterhoutsedijk 46, 6663 KV Lent",
+  "bronnen": [
+   "https://www.kokenaandewaal.nl/",
+   "https://www.kokenaandewaal.nl/contact/"
+  ],
   "categorie_scan": "restaurant",
-  "extra_categorieen": [],
+  "extra_categorieen": [
+   {
+    "bewijs": "Wendy is geaccrediteerd leefstijlcoach en vinoloog. Je kunt terecht voor individuele coaching en groepscursussen op het gebied van gezonde leefstijl.",
+    "categorie": "coach"
+   }
+  ],
   "gescand": "2026-10-23",
-  "hoofdcategorie": "restaurant",
-  "kenmerken": [],
+  "hoofdcategorie": "uitjes",
+  "kenmerken": [
+   "groepen",
+   "bedrijfsuitje"
+  ],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23885,
-   "uit": 624
+   "in": 20867,
+   "uit": 1170
   },
   "lijkt_actief": true,
   "naam": "Koken aan de Waal",
-  "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet ophalen: http://www.kokenaandewaal.nl/, https://www.kokenaandewaal.nl/ en https://kokenaandewaal.nl/ gaven allemaal de fout 'url_not_allowed'. Daardoor heb ik geen tekst geschreven en geen kenmerken, openingstijden, keuken of adres ingevuld. De categorie 'restaurant' is alleen jullie vermoeden en heb ik niet kunnen controleren. Uit de naam zou je ook een kookstudio of kookworkshops kunnen afleiden (dan past 'uitjes' misschien beter), maar dat is ook niet gecontroleerd. Of het bedrijf nog actief is, weet ik dus niet. Graag zelf nakijken.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
-  "status": "verwijderd",
-  "tekst": "",
+  "niet_in": {
+   "restaurant": "automatisch: hoort bij Uitjes en activiteiten (scan 23-10-2026)"
+  },
+  "openingstijden": "alleen op afspraak",
+  "opmerkingen": "Geen restaurant maar een kookschool met delicatessenwinkel (op afspraak) en leefstijlcoaching; daarom hoofdcategorie uitjes gekozen. De agenda toont een proeverij op 7 november zonder jaartal, mogelijk verouderd. KookClubs zijn volgens de site vol.",
+  "status": "voorstel",
+  "tekst": "Zin om samen met vrienden of collega's de keuken in te duiken in plaats van alleen aan tafel te schuiven? Aan de Oosterhoutsedijk in Lent, vlak bij de Waal, kook je onder leiding van chefkok Rob Beernink met mooie producten uit de omgeving en uit de eigen tuin. Je kunt hier met je eigen groep een kookavond boeken, een kaasworkshop doen of aansluiten bij een van de vaste KookClubs. Daarnaast zijn er af en toe wijnproeverijen met makers die hun wijn komen toelichten.\n\nWendy, leefstijlcoach en vinoloog, begeleidt je individueel of in een groep richting een gezondere leefstijl, en verzorgt ook workshops voor bedrijven. In de kleine delicatessenwinkel vind je kaas, wijn en lekkernijen.\n\nAlles gaat op afspraak, dus bel of mail even vooraf. Parkeren is er beperkt, kom dus liefst op de fiets.",
   "website": "http://www.kokenaandewaal.nl/",
-  "website_bereikbaar": false
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
  },
  "koks-ko": {
   "adres_op_site": "",
@@ -5295,12 +5354,12 @@
   "keuken": "",
   "kosten_tokens": {
    "in": 15724,
-   "uit": 394
+   "uit": 417
   },
   "lijkt_actief": true,
   "naam": "Komagene Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "De website http://www.komagenenijmegen.nl/ was niet bereikbaar (url_not_accessible), dus er is geen tekst geschreven. Komagene is een keten met Turkse wraps (dürüm) die vooral afhaal doet. Daarom staat de hoofdcategorie voorlopig op afhaal, maar de site heeft dat niet bevestigd. Zelf controleren of de vestiging nog open is: dat is niet nagegaan.",
+  "opmerkingen": "De website http://www.komagenenijmegen.nl/ kon niet worden geopend (url_not_accessible), dus er is geen tekst geschreven. Komagene is een keten van Turkse çiğ köfte- en wrapzaken die meestal draait op afhalen en bezorgen. Daarom staat de hoofdcategorie voorlopig op afhaal en niet op restaurant, maar dat hebben we niet op de site kunnen nagaan. Graag later opnieuw proberen of het adres op een andere manier controleren.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -5673,9 +5732,7 @@
  "little-india": {
   "adres_op_site": "",
   "bronnen": [
-   "https://www.restaurantlittleindia.nl/",
-   "http://www.restaurantlittleindia.nl/",
-   "https://restaurantlittleindia.nl/"
+   "https://www.restaurantlittleindia.nl/"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -5684,13 +5741,13 @@
   "kenmerken": [],
   "keuken": "Indiaas",
   "kosten_tokens": {
-   "in": 32714,
-   "uit": 734
+   "in": 15715,
+   "uit": 416
   },
   "lijkt_actief": true,
   "naam": "Little India",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden geladen. https://www.restaurantlittleindia.nl/, http://www.restaurantlittleindia.nl/ en https://restaurantlittleindia.nl/ gaven alle drie 'url_not_accessible'. Daarom is er geen tekst geschreven en zijn kenmerken, openingstijden en adres niet ingevuld. Of de zaak nog open is, kon niet worden nagegaan. Daarom staat 'lijkt_actief' op true, maar dat is aangenomen en niet bevestigd. De keuken 'Indiaas' en de categorie 'restaurant' komen alleen uit de naam en de vermoedelijke categorie, niet van de site. Graag later opnieuw proberen of het bedrijf zelf vragen.",
+  "opmerkingen": "De website https://www.restaurantlittleindia.nl/ kon niet worden geladen (url_not_accessible), dus ik heb geen informatie kunnen lezen en geen tekst geschreven. Een redacteur moet de site later nog eens proberen of het bedrijf benaderen. Restaurant als categorie en Indiaas als keuken komen alleen van de naam en de vermoedelijke categorie, niet van de website. Ik heb ook niet kunnen nagaan of de zaak nog open is.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -5707,13 +5764,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15683,
-   "uit": 358
+   "in": 15679,
+   "uit": 437
   },
   "lijkt_actief": true,
   "naam": "Little Yard",
   "openingstijden": "",
-  "opmerkingen": "De website https://www.littleyard.nl kon niet worden opgehaald (fout: url_not_allowed). Daarom is er geen informatie van de site gelezen en geen tekst geschreven. De categorie restaurant is overgenomen van onze eigen vermoedelijke categorie en is niet gecontroleerd. Of het bedrijf nog actief is, valt niet na te gaan. Graag handmatig controleren.",
+  "opmerkingen": "Ik kon de website https://www.littleyard.nl niet ophalen, want de fetch-tool gaf de foutmelding 'url_not_allowed'. Ik heb dus niets op de site gelezen. Daarom zijn de tekst, keuken, openingstijden, kenmerken en het adres niet ingevuld. De categorie 'restaurant' is alleen overgenomen uit de opgegeven vermoedelijke categorie en is niet gecontroleerd. 'lijkt_actief' staat op true omdat er niets anders bekend is, maar ook dat is niet gecontroleerd. Controleer de site met de hand of probeer het later opnieuw.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -5824,13 +5881,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 24379,
-   "uit": 477
+   "in": 15719,
+   "uit": 412
   },
   "lijkt_actief": true,
   "naam": "Lume",
   "openingstijden": "",
-  "opmerkingen": "De website https://fingerz.metro.rest kon ik niet openen (url_not_accessible), dus ik heb geen tekst geschreven. De domeinnaam 'fingerz' past ook niet bij de bedrijfsnaam Lume. Misschien klopt de link niet of hoort hij bij een ander bedrijf. Zoek de juiste website op en controleer of de zaak op Lange Hezelstraat 78 nog open is. De categorie restaurant hebben we zelf vermoed; de site bevestigt dat niet.",
+  "opmerkingen": "De website https://fingerz.metro.rest kon niet worden geladen (url_not_accessible). Daarom is er geen tekst geschreven en zijn geen kenmerken of openingstijden ingevuld. Het domein 'fingerz' komt niet overeen met de bedrijfsnaam Lume. Mogelijk hoort de link bij een ander bedrijf of is hij verouderd. Controleer de juiste website. Of het bedrijf nog actief is, kon niet worden nagegaan.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -6111,6 +6168,45 @@
  },
  "mama-zita-s": {
   "adres_op_site": "",
+  "bronnen": [
+   "https://mamazitasfood.nl/"
+  ],
+  "categorie_scan": "restaurant",
+  "extra_categorieen": [
+   {
+    "bewijs": "Kom langs bij onze foodtruck en laat je verwennen door een explosie van smaken",
+    "categorie": "afhaal"
+   }
+  ],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "catering",
+  "kenmerken": [
+   "vegan",
+   "vegetarisch",
+   "glutenvrij",
+   "groepen",
+   "bedrijfsuitje"
+  ],
+  "keuken": "Surinaams",
+  "kosten_tokens": {
+   "in": 20492,
+   "uit": 1051
+  },
+  "lijkt_actief": true,
+  "naam": "Mama Zita's",
+  "niet_in": {
+   "restaurant": "automatisch: hoort bij Catering (scan 23-10-2026)"
+  },
+  "openingstijden": "",
+  "opmerkingen": "Geen restaurant maar een foodtruck/cateraar die vooral te boeken is voor feesten en evenementen; daarom catering als hoofdcategorie. Geen vaste standplaats, adres of openingstijden op de site. Vegan/glutenvrij alleen 'op aanvraag' (dieetwensen).",
+  "status": "voorstel",
+  "tekst": "Zin in Surinaams eten op je feest, bedrijfsborrel of festival? Dan rijdt deze Nijmeegse foodtruck gewoon naar je toe. Uit de mobiele keuken komen Surinaamse streetfood en fusiongerechten, met als vaste favorieten de roti rol, Surinaams-Javaanse bami en nasi. Ook bara en kokosdrankjes staan op het lijstje.\n\nJe kunt de truck huren voor een eigen gelegenheid, maar ook catering op locatie regelen. Ze staan daarnaast op markten en festivals. Heb je gasten met dieetwensen, zoals vegetarisch, veganistisch of glutenvrij? Daar wordt rekening mee gehouden, en het menu kun je naar wens samenstellen.\n\nPlan je iets? Stuur een berichtje via de website of bel even om de mogelijkheden te bespreken.",
+  "website": "http://MamaZitasFood.nl/",
+  "website_bereikbaar": true,
+  "zelf_gelezen": true
+ },
+ "manna": {
+  "adres_op_site": "",
   "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -6119,39 +6215,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23849,
-   "uit": 661
-  },
-  "lijkt_actief": true,
-  "naam": "Mama Zita's",
-  "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. http://MamaZitasFood.nl/, https://mamazitasfood.nl/ en https://www.mamazitasfood.nl/ gaven allemaal de fout 'url_not_allowed'. Daardoor heb ik geen tekst geschreven en geen keuken, kenmerken, openingstijden of adres ingevuld. Ook weet ik niet of het bedrijf nog actief is. 'lijkt_actief' staat op true omdat ik niets heb gezien dat erop wijst dat het gestopt is. Het is niet bevestigd. De hoofdcategorie 'restaurant' is alleen de vermoedelijke categorie die jullie opgaven. Het adres bij ons is ook onvolledig: er staat alleen 'Nijmegen'. Controleer de site later handmatig of zoek een andere bron.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
-  "status": "verwijderd",
-  "tekst": "",
-  "website": "http://MamaZitasFood.nl/",
-  "website_bereikbaar": false
- },
- "manna": {
-  "adres_op_site": "",
-  "bronnen": [
-   "https://www.manna-nijmegen.nl/brasserie-manna/ (niet bereikbaar)",
-   "https://manna-nijmegen.nl/brasserie-manna/ (niet bereikbaar)"
-  ],
-  "categorie_scan": "restaurant",
-  "extra_categorieen": [],
-  "gescand": "2026-10-23",
-  "hoofdcategorie": "restaurant",
-  "kenmerken": [],
-  "keuken": "",
-  "kosten_tokens": {
-   "in": 33462,
-   "uit": 912
+   "in": 33441,
+   "uit": 879
   },
   "lijkt_actief": true,
   "naam": "Manna",
   "openingstijden": "",
-  "opmerkingen": "De website kon ik niet openen. Ik heb het meerdere keren geprobeerd en kreeg steeds de foutmelding 'url_not_accessible', ook zonder www. De homepage https://www.manna-nijmegen.nl/ kon ik niet apart ophalen. Er is daarom geen tekst geschreven en geen enkel gegeven gecontroleerd: keuken, kenmerken, openingstijden en adres zijn onbekend. Of het bedrijf nog actief is, kon ik niet nagaan. De hoofdcategorie restaurant is overgenomen uit de vermoedelijke categorie en is niet bevestigd. Graag later opnieuw proberen of het met de hand controleren.",
+  "opmerkingen": "De website https://www.manna-nijmegen.nl/brasserie-manna/ was niet bereikbaar: het ophalen gaf de fout 'url_not_accessible'. De homepage kon ik ook niet openen, omdat het systeem die URL niet toestond. Bij een tweede poging was het maximale aantal pogingen bereikt. Daarom staat er geen tekst, keuken, openingstijden of adres. Of de zaak nog actief is, kon ik niet controleren. 'Actief' is dus aangenomen, niet nagekeken. De categorie restaurant is overgenomen uit de vermoedelijke categorie ('brasserie' in de URL). Graag later opnieuw proberen of handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -6249,15 +6319,15 @@
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
   "kenmerken": [],
-  "keuken": "Grieks",
+  "keuken": "",
   "kosten_tokens": {
-   "in": 15711,
-   "uit": 372
+   "in": 15728,
+   "uit": 373
   },
   "lijkt_actief": true,
   "naam": "Meet De Griek",
   "openingstijden": "",
-  "opmerkingen": "De website https://www.meetdegriek.nl/ kon niet worden opgehaald (de fetch gaf de fout 'url_not_allowed'). Daarom is er geen tekst geschreven en zijn er geen gegevens gecontroleerd. De categorie restaurant en de keuken Grieks zijn alleen afgeleid uit de naam en de vermoedelijke categorie. Graag handmatig controleren.",
+  "opmerkingen": "De website https://www.meetdegriek.nl/ kon niet worden opgehaald (fout: url_not_allowed). Daarom is er geen tekst geschreven en zijn er geen kenmerken, openingstijden of keuken ingevuld. De naam doet een Griekse keuken vermoeden, maar dat is niet gecontroleerd. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -6392,13 +6462,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15724,
-   "uit": 382
+   "in": 23856,
+   "uit": 524
   },
   "lijkt_actief": true,
   "naam": "Mexita",
   "openingstijden": "",
-  "opmerkingen": "De website http://www.mexita.nl/ kon niet worden opgehaald (de tool gaf de fout 'url_not_allowed'). Daarom is er geen informatie gecontroleerd en geen tekst geschreven. Of de zaak nog actief is, is niet bekend. Op basis van de naam lijkt het om Mexicaans eten te gaan, maar dat is niet bevestigd. Graag handmatig controleren.",
+  "opmerkingen": "De website http://www.mexita.nl/ kon niet worden opgehaald (ook https://www.mexita.nl/ en https://mexita.nl/ niet; de toegang tot de URL werd geweigerd). Daarom heb ik geen tekst, kenmerken, openingstijden of keuken ingevuld. De naam doet aan Mexicaans eten denken, maar dat heb ik niet kunnen controleren. Of de zaak nog open is, is onbekend. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -6407,7 +6477,11 @@
  },
  "mi-barrio": {
   "adres_op_site": "",
-  "bronnen": [],
+  "bronnen": [
+   "https://mibarrio.nl (niet bereikbaar)",
+   "https://www.mibarrio.nl (niet bereikbaar)",
+   "http://mibarrio.nl (niet bereikbaar)"
+  ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -6415,13 +6489,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 32754,
-   "uit": 695
+   "in": 23820,
+   "uit": 565
   },
   "lijkt_actief": true,
   "naam": "Mi Barrio",
   "openingstijden": "",
-  "opmerkingen": "We konden de website niet lezen. Bij https://mibarrio.nl, https://www.mibarrio.nl en http://mibarrio.nl kwam steeds de foutmelding 'url_not_allowed' terug. Daardoor hebben we geen tekst geschreven en niets ingevuld over kenmerken, openingstijden, keuken of adres. Of de zaak nog actief is, hebben we niet kunnen nagaan. 'Actief' staat daarom op de standaardwaarde en is dus niet gecontroleerd. De hoofdcategorie 'restaurant' komt alleen van de categorie die we al hadden en is niet op de site bevestigd. Graag later opnieuw proberen of handmatig controleren.",
+  "opmerkingen": "De website https://mibarrio.nl kon niet worden opgehaald, ook niet via www.mibarrio.nl of via http (foutmelding: url_not_allowed). Daarom is er geen tekst geschreven en zijn keuken, kenmerken, openingstijden en adres niet gecontroleerd. De categorie restaurant is de vermoedelijke categorie, niet nagekeken. Of het bedrijf nog actief is, is ook niet nagekeken. Graag handmatig controleren.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -6587,11 +6661,7 @@
  },
  "mohabat": {
   "adres_op_site": "",
-  "bronnen": [
-   "http://www.mohabat.nl",
-   "https://www.mohabat.nl",
-   "https://mohabat.nl"
-  ],
+  "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -6599,13 +6669,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23847,
-   "uit": 616
+   "in": 32793,
+   "uit": 691
   },
   "lijkt_actief": true,
   "naam": "Mohabat",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. Bij http://www.mohabat.nl, https://www.mohabat.nl en https://mohabat.nl gaf de ophaaltool de foutmelding 'url_not_allowed'. Daardoor heb ik keuken, openingstijden, adres, kenmerken en of de zaak nog open is niet kunnen nagaan. Er is ook geen tekst geschreven. 'lijkt_actief' staat op true omdat ik nergens heb gelezen dat de zaak gestopt is. Dat is dus niet gecontroleerd. De categorie restaurant komt van jullie vermoeden en is ook niet nagekeken. Graag later opnieuw proberen of met de hand controleren.",
+  "opmerkingen": "Ik kon de website niet openen. Bij http://www.mohabat.nl, https://www.mohabat.nl en https://mohabat.nl gaf de ophaaltool steeds de foutmelding 'url_not_allowed'. Daardoor heb ik geen informatie over de keuken, openingstijden, het adres of het aanbod kunnen controleren, en is er geen tekst geschreven. Ook is niet nagegaan of de zaak nog open is: 'lijkt_actief' staat alleen op true omdat er geen bewijs is dat de zaak gestopt is. Restaurant als categorie is alleen overgenomen van onze eigen gegevens. Graag handmatig controleren.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -6999,13 +7069,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15736,
-   "uit": 545
+   "in": 15737,
+   "uit": 482
   },
   "lijkt_actief": true,
   "naam": "Nolita Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "De opgegeven website (http://www.nolita-nijmgen.nl/) kon niet worden opgehaald, want de fetch gaf de fout 'url_not_allowed'. In de domeinnaam lijkt ook een tikfout te zitten: 'nijmgen' in plaats van 'nijmegen'. Graag de juiste URL controleren, bijvoorbeeld nolita-nijmegen.nl, en daarna opnieuw aanbieden. Zonder de website is er geen tekst geschreven en zijn de keuken, kenmerken, openingstijden en het adres niet ingevuld. De hoofdcategorie 'restaurant' komt alleen uit de vermoedelijke categorie en is niet gecontroleerd. Ook 'lijkt_actief' is niet gecontroleerd en staat alleen op true omdat er geen bericht over sluiting is gevonden.",
+  "opmerkingen": "De website http://www.nolita-nijmgen.nl/ kon niet worden opgehaald (url_not_allowed). Daardoor is er geen tekst geschreven en zijn er geen gegevens ingevuld. Let op: in de domeinnaam lijkt een typfout te staan ('nijmgen' in plaats van 'nijmegen'). Controleer het juiste webadres, bijvoorbeeld nolita-nijmegen.nl, en probeer het daarna opnieuw. Of het bedrijf nog actief is, hebben we niet kunnen nagaan. De hoofdcategorie restaurant is overgenomen van de vermoedelijke categorie en is niet gecontroleerd.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -7087,13 +7157,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15717,
-   "uit": 421
+   "in": 15726,
+   "uit": 423
   },
   "lijkt_actief": true,
   "naam": "Notting Hill",
   "openingstijden": "",
-  "opmerkingen": "De website https://gaspar-nijmegen.nl was niet bereikbaar (url_not_accessible), dus er is geen tekst geschreven. De naam van de site (Gaspar) komt niet overeen met de bedrijfsnaam Notting Hill. Mogelijk gaat het om een andere zaak, of is de zaak van naam veranderd. Controleer de naam en de website, en of de zaak nog actief is. Hoofdcategorie restaurant is overgenomen van de vermoedelijke categorie en is niet gecontroleerd.",
+  "opmerkingen": "De website https://gaspar-nijmegen.nl kon niet worden geladen (url_not_accessible), dus er is geen informatie gecontroleerd. Let op: de domeinnaam (Gaspar) komt niet overeen met de bedrijfsnaam Notting Hill. Mogelijk heeft de zaak een andere naam gekregen of hoort de website bij een ander bedrijf. Controleer de naam, de website en of de zaak nog open is. Of het bedrijf actief is, valt niet vast te stellen.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -7446,21 +7516,23 @@
   "extra_categorieen": [],
   "gescand": "2026-10-23",
   "hoofdcategorie": "restaurant",
-  "kenmerken": [],
-  "keuken": "",
+  "kenmerken": [
+   "terras",
+   "groepen"
+  ],
+  "keuken": "Italiaans",
   "kosten_tokens": {
-   "in": 15727,
-   "uit": 422
+   "in": 44228,
+   "uit": 1016
   },
   "lijkt_actief": true,
   "naam": "Pasta e Fagioli",
-  "openingstijden": "",
-  "opmerkingen": "De website http://www.pastaefagioli.nl/ kon niet worden opgehaald (de ophaaltool gaf 'url_not_allowed'). Daardoor kon niets worden gecontroleerd en is er geen tekst geschreven. Of het bedrijf nog actief is, is ook niet gecontroleerd. De categorie restaurant is overgenomen van de vermoedelijke categorie. Een Italiaanse keuken ligt voor de hand gezien de naam, maar dat is niet bevestigd. Graag handmatig controleren.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
-  "status": "verwijderd",
-  "tekst": "",
+  "openingstijden": "di-za vanaf 18:00, zo-ma gesloten",
+  "opmerkingen": "Het adres stond niet in de tekst van de homepage en de contactpagina was niet te openen, dus het adres is niet gecontroleerd. Op de homepage staat 'Van 't Santstraat' zonder huisnummer. Volgens een Instagram-bericht op de site was de zaak tijdelijk dicht vanwege werkzaamheden, tot en met 21 oktober. De zaak is daarna weer open. Over groepen staat op de site alleen 'Grote gezelschappen in overleg'. Er wordt geen groepsmenu of aparte zaal genoemd, dus het kenmerk groepen is twijfelachtig. De menukaart is niet gelezen.",
+  "status": "voorstel",
+  "tekst": "Heb je zin in een avond uitgebreid Italiaans tafelen? In de Van 't Santstraat koken chef Nino Casella en gastvrouw Annamarie Casella al sinds 1996 voor Nijmegenaren. Ze begonnen destijds in de Van Welderenstraat. In hun keuken draait het om authentieke producten en klassieke recepten, die ze met een eigen twist bereiden.\n\nDenk aan vitello tonnato uit Piemonte, gevulde kwartel met eekhoorntjesbrood of in het wildseizoen een stoofpot van wildzwijn met Chianti, met daarbij een passende Italiaanse wijn. Op zomerse avonden zit je heerlijk op het terras aan de voorkant.\n\nHet restaurant is van dinsdag tot en met zaterdag 's avonds open. Reserveren kan via het contactformulier of WhatsApp. Kom je met een grote groep? Overleg dan even met ze wat er mogelijk is.",
   "website": "http://www.pastaefagioli.nl/",
-  "website_bereikbaar": false
+  "website_bereikbaar": true
  },
  "pasundan-traditional-indonesian-food": {
   "adres_op_site": "Sint Jorisstraat 34, 6511 TD Nijmegen",
@@ -7502,7 +7574,9 @@
  },
  "paul-van-zoelen": {
   "adres_op_site": "",
-  "bronnen": [],
+  "bronnen": [
+   "http://www.paulvanzoelen.nl/"
+  ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -7510,13 +7584,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15725,
-   "uit": 407
+   "in": 15728,
+   "uit": 392
   },
   "lijkt_actief": true,
   "naam": "Paul Van Zoelen",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website http://www.paulvanzoelen.nl/ niet ophalen (fout: url_not_allowed). Daardoor heb ik geen informatie over het aanbod, de keuken, de openingstijden of het adres, en heb ik geen tekst geschreven. De categorie 'restaurant' is alleen onze eigen inschatting en niet gecontroleerd. Of het bedrijf nog open is, weet ik ook niet: lijkt_actief staat op true omdat ik dat niet kon nakijken. Graag even zelf controleren.",
+  "opmerkingen": "De website http://www.paulvanzoelen.nl/ kon niet worden opgehaald (toegang geweigerd: url_not_allowed). Daardoor zijn er geen gegevens gecontroleerd en is er geen tekst geschreven. Of het bedrijf nog actief is, weten we niet. De categorie restaurant is overgenomen uit de vermoedelijke categorie en is niet gecontroleerd. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -7527,6 +7601,7 @@
   "adres_op_site": "",
   "bronnen": [
    "http://www.pekingnijmegen.nl/",
+   "https://www.pekingnijmegen.nl/",
    "https://pekingnijmegen.nl/"
   ],
   "categorie_scan": "restaurant",
@@ -7536,13 +7611,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23821,
-   "uit": 583
+   "in": 23872,
+   "uit": 684
   },
   "lijkt_actief": true,
   "naam": "Peking",
   "openingstijden": "",
-  "opmerkingen": "De website kon ik niet openen. Ik heb het zowel via http://www.pekingnijmegen.nl/ als via https://pekingnijmegen.nl/ geprobeerd, maar beide keren werd de pagina niet bereikt (url_not_accessible). Daarom staat er geen tekst, keuken, openingstijden of andere gegevens. De hoofdcategorie restaurant is alleen overgenomen uit onze vermoedelijke categorie en is niet gecontroleerd. Of het bedrijf nog actief is, valt niet na te gaan. Graag handmatig nakijken of de zaak nog open is en of de website nog bestaat.",
+  "opmerkingen": "Ik kon de website niet openen. http://www.pekingnijmegen.nl/, https://www.pekingnijmegen.nl/ en https://pekingnijmegen.nl/ gaven allemaal 'url_not_accessible'. Daarom heb ik geen tekst geschreven en geen kenmerken, openingstijden, keuken of adres ingevuld. Of het bedrijf nog open is, kon ik niet nagaan, dus lijkt_actief staat op true omdat er geen bewijs is dat het gestopt is. De hoofdcategorie restaurant komt uit jullie eigen gegevens en heb ik niet op de site kunnen controleren; de naam doet een Chinese keuken vermoeden, maar dat is niet bevestigd. Het is beter om later opnieuw te kijken of het bedrijf te bellen.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -7652,12 +7727,12 @@
   "keuken": "",
   "kosten_tokens": {
    "in": 15719,
-   "uit": 414
+   "uit": 425
   },
   "lijkt_actief": true,
   "naam": "Pinoccio Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "We konden https://www.pinoccio.nl/ niet ophalen: de ophaaltool gaf de fout 'url_not_allowed'. Daarom konden we geen informatie controleren en hebben we geen tekst geschreven. De hoofdcategorie restaurant is overgenomen uit de vermoedelijke categorie en niet gecontroleerd. Ook de keuken (vermoedelijk Italiaans, maar dat leiden we alleen af uit de naam) en het adres hebben we niet kunnen nagaan. Iemand moet de site met de hand bekijken.",
+  "opmerkingen": "Ik kon https://www.pinoccio.nl/ niet ophalen, want het ophalen gaf de foutmelding 'url_not_allowed'. Daardoor heb ik geen informatie kunnen controleren of schrijven: geen tekst, keuken, openingstijden, kenmerken of adres. Het adres Molenstraat 99 en de categorie restaurant zijn nog niet nagekeken; restaurant staat er alleen in omdat het veld verplicht is. Ook of de zaak nog open is, is niet nagekeken. Bekijk de site handmatig of probeer het later opnieuw.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -8082,9 +8157,7 @@
  "plesant": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.plesanteethuys.nl",
-   "https://www.plesanteethuys.nl",
-   "https://plesanteethuys.nl"
+   "http://www.plesanteethuys.nl"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -8093,13 +8166,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23852,
-   "uit": 621
+   "in": 15705,
+   "uit": 357
   },
   "lijkt_actief": true,
   "naam": "Plesant",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet ophalen: http://www.plesanteethuys.nl gaf de foutmelding 'url_not_allowed', en de https-varianten (met en zonder www) ook. Ik heb dus geen inhoud kunnen controleren. Daarom is er geen tekst geschreven en zijn keuken, openingstijden en kenmerken leeg gelaten. De hoofdcategorie restaurant is alleen de vermoedelijke categorie die jullie opgaven. Ik heb niet kunnen nagaan of de zaak nog actief is; lijkt_actief staat op true omdat de site niets zegt over stoppen of verhuizen. Controleer het graag zelf.",
+  "opmerkingen": "De website http://www.plesanteethuys.nl kon niet worden opgehaald (de fetch gaf de foutmelding 'url_not_allowed'). Daarom is er geen tekst geschreven en zijn er geen kenmerken, openingstijden of keuken ingevuld. Of het bedrijf nog actief is, valt niet te controleren. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -8435,13 +8508,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 33559,
-   "uit": 775
+   "in": 34085,
+   "uit": 1012
   },
   "lijkt_actief": true,
   "naam": "Restaurant De Vereeniging",
   "openingstijden": "",
-  "opmerkingen": "De opgegeven pagina (https://www.stadsschouwburgendevereeniging.nl/restaurant-de-vereeniging-65bp) gaf de foutmelding 'url_not_accessible'. De homepage kon ik niet apart laden. Daardoor heb ik niets van de site kunnen controleren: geen tekst, keuken, openingstijden, kenmerken of adres. Of de zaak nog open is, weet ik dus niet; 'actief' staat alleen op waar omdat de site niets anders aangaf. Graag later opnieuw proberen of met de hand nakijken.",
+  "opmerkingen": "De website kon ik niet openen. De opgegeven subpagina gaf bij elke poging de foutmelding 'url_not_accessible', ook via http. De homepage van stadsschouwburgendevereeniging.nl mocht de tool niet ophalen, omdat die link niet in de opdracht stond. Daardoor heb ik niets kunnen nakijken, dus ik heb geen tekst geschreven en geen keuken, kenmerken of openingstijden ingevuld. Het veld lijkt_actief staat op true omdat er niets is gevonden dat op een sluiting wijst, maar dat is dus niet gecontroleerd. De hoofdcategorie restaurant is overgenomen van de vermoedelijke categorie en ook niet nagekeken. Graag later opnieuw proberen of handmatig controleren.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -8516,9 +8589,7 @@
  "restaurant-het-savarijn": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.savarijn.nl",
-   "https://www.savarijn.nl",
-   "https://savarijn.nl"
+   "http://www.savarijn.nl/PbwUnderconstruction.aspx"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -8527,18 +8598,19 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 32983,
-   "uit": 626
+   "in": 36533,
+   "uit": 947
   },
   "lijkt_actief": true,
   "naam": "Restaurant Het Savarijn",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden opgehaald. Bij http://www.savarijn.nl, https://www.savarijn.nl en https://savarijn.nl gaf de fetch-tool steeds de fout 'url_not_allowed'. Daardoor is er geen tekst geschreven en zijn keuken, openingstijden, kenmerken en adres niet gecontroleerd. 'lijkt_actief' staat op true omdat we niet weten of de zaak gestopt is. Het restaurant blijft voorlopig in de categorie restaurant. Graag handmatig nakijken of later opnieuw proberen.",
+  "opmerkingen": "De website www.savarijn.nl stuurt door naar een 'under construction'-pagina van webbouwer SIENN; er staat geen informatie over het restaurant op. Daardoor geen tekst, keuken, openingstijden of adres kunnen invullen. Niet duidelijk of het restaurant nog actief is; graag via een andere bron controleren.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
   "website": "http://www.savarijn.nl",
-  "website_bereikbaar": false
+  "website_bereikbaar": false,
+  "zelf_gelezen": true
  },
  "restaurant-waud": {
   "adres_op_site": "",
@@ -8554,13 +8626,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23878,
-   "uit": 638
+   "in": 33244,
+   "uit": 699
   },
   "lijkt_actief": true,
   "naam": "Restaurant Waud",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. http://www.restaurantwaud.nl/, https://www.restaurantwaud.nl/ en https://restaurantwaud.nl/ gaven allemaal de fout 'url_not_allowed'. Daarom heb ik niets kunnen controleren: geen tekst, keuken, kenmerken, openingstijden of adres. Of de zaak nog open is, weet ik dus ook niet. 'Actief' staat alleen op ja omdat ik niets heb gezien dat erop wijst dat de zaak gestopt of verhuisd is. De categorie restaurant komt van jullie eigen gegevens. Graag handmatig nakijken of opnieuw proberen.",
+  "opmerkingen": "De website kon niet worden opgehaald. Elke poging om http://www.restaurantwaud.nl/ te openen, ook via https en zonder www, gaf de fout 'url_not_allowed'. Daarom is er geen tekst geschreven en zijn keuken, kenmerken, openingstijden en adres niet gecontroleerd. Of het restaurant nog open is, weten we dus niet; 'lijkt_actief' staat alleen standaard op true. De hoofdcategorie 'restaurant' komt uit onze eigen gegevens en is niet op de site gecontroleerd. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -8737,7 +8809,9 @@
  "rich-taste": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.rich-taste.nl/"
+   "http://www.rich-taste.nl/",
+   "https://www.rich-taste.nl/",
+   "https://rich-taste.nl/"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -8746,13 +8820,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23906,
-   "uit": 611
+   "in": 23897,
+   "uit": 715
   },
   "lijkt_actief": true,
   "naam": "Rich Taste",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. Zowel http://www.rich-taste.nl/ als https://www.rich-taste.nl/ en https://rich-taste.nl/ gaven de fout 'url_not_allowed'. Daardoor heb ik geen tekst geschreven en geen keuken, openingstijden, kenmerken of adres ingevuld. De hoofdcategorie restaurant is alleen overgenomen uit de vermoedelijke categorie en is niet gecontroleerd. Of het bedrijf nog actief is, weet ik ook niet. Advies: de site zelf nakijken of later opnieuw proberen.",
+  "opmerkingen": "Ik kon de website niet lezen. Bij elke poging kwam dezelfde fout terug: 'url_not_allowed', zowel bij http://www.rich-taste.nl/ als bij https://www.rich-taste.nl/ en https://rich-taste.nl/. Daardoor weet ik niet of de site echt werkt of offline is. Ook kon ik niet nagaan of het bedrijf nog actief is. 'Lijkt actief' staat daarom op de standaardwaarde en is niet gecontroleerd. Daarnaast zijn de categorie, de keuken, de openingstijden, de kenmerken en het adres niet gecontroleerd. De categorie restaurant is alleen overgenomen van de vermoedelijke categorie. Zonder informatie van de site heb ik geen tekst geschreven. Controleer de site en het bedrijf graag handmatig.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -9258,13 +9332,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15794,
-   "uit": 413
+   "in": 15842,
+   "uit": 458
   },
   "lijkt_actief": true,
   "naam": "Shisha Lounge Giga Bijt",
   "openingstijden": "",
-  "opmerkingen": "De website http://www.hou-je.nl/gigabijt kon niet worden opgehaald (toegang geweigerd: url_not_allowed). De homepage hou-je.nl lukte ook niet. Daarom is er geen tekst geschreven. Of het bedrijf nog actief is, is niet te controleren. De naam 'Shisha Lounge' doet eerder denken aan een lounge of café dan aan een restaurant. Controleer de categorie handmatig.",
+  "opmerkingen": "De website http://www.hou-je.nl/gigabijt kon ik niet openen: het ophalen werd geweigerd (url_not_allowed), en ook de homepage hou-je.nl lukte niet. Daardoor heb ik geen tekst, openingstijden, keuken of kenmerken kunnen vaststellen. Of de zaak nog open is, kon ik niet nagaan. De naam wijst op een shishalounge, dus mogelijk past 'cafe' beter dan 'restaurant'. Graag handmatig controleren.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -9552,11 +9626,7 @@
  },
  "st-jacobs": {
   "adres_op_site": "",
-  "bronnen": [
-   "http://www.stjacobs.nl/",
-   "https://www.stjacobs.nl/",
-   "https://stjacobs.nl/"
-  ],
+  "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -9564,13 +9634,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23885,
-   "uit": 618
+   "in": 24362,
+   "uit": 464
   },
   "lijkt_actief": true,
   "naam": "St.jacobs",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. Bij http://www.stjacobs.nl/, https://www.stjacobs.nl/ en https://stjacobs.nl/ gaf het ophaalprogramma steeds de foutmelding 'url_not_allowed'. Ik heb geen inhoud kunnen lezen. Daarom zijn er geen tekst, kenmerken, openingstijden, keuken en adres ingevuld. Of de zaak nog open is, heb ik niet kunnen nagaan. De hoofdcategorie 'restaurant' is alleen overgenomen uit de vermoedelijke categorie en niet gecontroleerd. Kijk de site graag zelf na.",
+  "opmerkingen": "Ik kon de website http://www.stjacobs.nl/ niet ophalen. Het verzoek werd geweigerd met de foutmelding 'url_not_allowed', dus er is geen pagina gelezen. Daarom staat er geen tekst, keuken, openingstijden of kenmerken in deze vermelding. De categorie restaurant komt alleen uit de aanlevering en is niet gecontroleerd. Of het bedrijf nog actief is, weten we ook niet. Kijk dit graag zelf na of probeer de site later opnieuw.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -9589,13 +9659,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15820,
-   "uit": 490
+   "in": 24581,
+   "uit": 676
   },
   "lijkt_actief": true,
   "naam": "STAMP. nijmegen",
   "openingstijden": "",
-  "opmerkingen": "De pagina https://www.barsocio.nl/stamp kon ik niet openen (url_not_accessible). De homepage https://www.barsocio.nl/ werd door de tool geweigerd, dus die heb ik ook niet kunnen lezen. Daarom heb ik geen tekst, openingstijden, keuken of kenmerken ingevuld. Of de zaak nog open is, kon ik niet nagaan. Ook is onduidelijk of STAMP bij Bar Socio hoort of een aparte zaak is. De categorie restaurant komt alleen van jullie eigen vermoeden en is niet gecontroleerd. Graag met de hand nakijken.",
+  "opmerkingen": "De opgegeven pagina https://www.barsocio.nl/stamp kon niet worden geladen (url_not_accessible). De homepage https://www.barsocio.nl/ kon ik ook niet openen, omdat die niet als link was aangeleverd. Daarom heb ik geen tekst, keuken, openingstijden of kenmerken ingevuld. Ik kon niet controleren of STAMP. bij Bar Socio hoort en of het een restaurant is. De hoofdcategorie restaurant komt dus alleen uit de vermoedelijke categorie en moet nog worden nagekeken. Ook is niet nagegaan of de zaak nog open is: lijkt_actief staat op true omdat ik niets heb gevonden dat op sluiting wijst. Advies: later opnieuw proberen of de homepage van Bar Socio rechtstreeks bekijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -9888,9 +9958,7 @@
  "sushipoint-nijmegen": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.sushipoint.nl/sushi-nijmegen (niet bereikbaar)",
-   "https://www.sushipoint.nl/sushi-nijmegen (niet bereikbaar)",
-   "https://sushipoint.nl/sushi-nijmegen (niet bereikbaar)"
+   "http://www.sushipoint.nl/sushi-nijmegen"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -9899,13 +9967,13 @@
   "kenmerken": [],
   "keuken": "Japans",
   "kosten_tokens": {
-   "in": 33500,
-   "uit": 946
+   "in": 24653,
+   "uit": 631
   },
   "lijkt_actief": true,
   "naam": "SushiPoint Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden geladen. Ik heb http://www.sushipoint.nl/sushi-nijmegen geprobeerd, ook de https-versies met en zonder www, en steeds kwam er 'url_not_accessible' terug. De homepage mocht ik niet ophalen, omdat de tool alleen de opgegeven link toestaat. Daarom is er geen tekst geschreven en zijn kenmerken, openingstijden en adres niet gecontroleerd. Of het bedrijf nog actief is, weten we dus niet. 'Actief' staat op ja omdat de site niet zegt dat de zaak gestopt is. Japans als keuken en restaurant als categorie zijn alleen een vermoeden op basis van de naam (sushi). Waarschijnlijk is het vooral afhalen en bezorgen; dan zou afhaal beter passen als hoofdcategorie. Graag later opnieuw proberen of handmatig nakijken.",
+  "opmerkingen": "De website http://www.sushipoint.nl/sushi-nijmegen kon niet worden geladen (url_not_accessible). De homepage http://www.sushipoint.nl/ mocht van de tool niet direct worden opgehaald. Daardoor hebben we geen informatie kunnen controleren: geen tekst, kenmerken, openingstijden of adres ingevuld. Of het om een restaurant of vooral om een afhaal- en bezorgzaak gaat, staat nog niet vast; graag handmatig controleren. De keuken is ingevuld als Japans omdat de naam op sushi wijst, maar ook dat is niet op de site gecontroleerd.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -10091,33 +10159,10 @@
  },
  "tafellen": {
   "adres_op_site": "",
-  "bronnen": [],
-  "categorie_scan": "restaurant",
-  "extra_categorieen": [],
-  "gescand": "2026-10-23",
-  "hoofdcategorie": "restaurant",
-  "kenmerken": [],
-  "keuken": "",
-  "kosten_tokens": {
-   "in": 23875,
-   "uit": 527
-  },
-  "lijkt_actief": true,
-  "naam": "TafEllen",
-  "openingstijden": "",
-  "opmerkingen": "De website http://www.tafellen.nl/ kon niet worden opgehaald. Ook de varianten via https, met en zonder www, gaven allemaal de foutmelding 'url_not_allowed'. Daardoor is er niets van de site gelezen en is er geen tekst geschreven. Of het bedrijf nog actief is, de categorie restaurant, de keuken, de openingstijden en het adres zijn allemaal niet gecontroleerd. Graag handmatig nakijken.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
-  "status": "verwijderd",
-  "tekst": "",
-  "website": "http://www.tafellen.nl/",
-  "website_bereikbaar": false
- },
- "taj-plaza": {
-  "adres_op_site": "",
   "bronnen": [
-   "http://www.tajplaza.nl/",
-   "https://www.tajplaza.nl/",
-   "https://tajplaza.nl/"
+   "http://www.tafellen.nl/",
+   "https://www.tafellen.nl/",
+   "https://tafellen.nl/"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -10126,13 +10171,36 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 32918,
-   "uit": 638
+   "in": 32754,
+   "uit": 710
+  },
+  "lijkt_actief": true,
+  "naam": "TafEllen",
+  "openingstijden": "",
+  "opmerkingen": "Ik kon de website niet lezen. Bij elke poging (http://www.tafellen.nl/, https://www.tafellen.nl/ en https://tafellen.nl/) kreeg ik de foutmelding 'url_not_allowed'. Daarom heb ik geen tekst geschreven en geen kenmerken, openingstijden, keuken of adres ingevuld. De hoofdcategorie 'restaurant' heb ik alleen overgenomen uit de vermoedelijke categorie, niet van de site gecontroleerd. Of het bedrijf nog actief is, weet ik dus ook niet. Graag zelf controleren of het later nog eens proberen.",
+  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
+  "status": "verwijderd",
+  "tekst": "",
+  "website": "http://www.tafellen.nl/",
+  "website_bereikbaar": false
+ },
+ "taj-plaza": {
+  "adres_op_site": "",
+  "bronnen": [],
+  "categorie_scan": "restaurant",
+  "extra_categorieen": [],
+  "gescand": "2026-10-23",
+  "hoofdcategorie": "restaurant",
+  "kenmerken": [],
+  "keuken": "",
+  "kosten_tokens": {
+   "in": 23882,
+   "uit": 582
   },
   "lijkt_actief": true,
   "naam": "Taj Plaza",
   "openingstijden": "",
-  "opmerkingen": "De website http://www.tajplaza.nl/ kon niet worden opgehaald. Ook de https-versie, met en zonder www, gaf de fout 'url_not_allowed'. Daardoor kon niets worden gecontroleerd: aanbod, keuken, openingstijden, adres en of de zaak nog open is. Er is geen tekst geschreven. Hoofdcategorie 'restaurant' is alleen overgenomen uit de vermoedelijke categorie. 'lijkt_actief' staat op true omdat er niets anders bekend is, maar dat is niet bevestigd. De redactie moet dit met de hand nakijken.",
+  "opmerkingen": "De website http://www.tajplaza.nl/ kon niet worden opgehaald. Ook de varianten https://www.tajplaza.nl/ en https://tajplaza.nl/ gaven de fout 'url_not_allowed'. Daardoor is er geen tekst geschreven en zijn keuken, kenmerken, openingstijden en adres niet gecontroleerd. De categorie restaurant is overgenomen uit de vermoedelijke categorie en niet nagekeken. Of het bedrijf nog actief is, valt niet vast te stellen; 'lijkt_actief' staat alleen op true omdat er geen bewijs is dat het gestopt is. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -10205,13 +10273,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15733,
-   "uit": 530
+   "in": 15718,
+   "uit": 443
   },
   "lijkt_actief": true,
   "naam": "Tasty On The Road",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website http://www.broodjesensnacks.nl niet ophalen (foutmelding: url_not_allowed). Ik heb dus niets op de site kunnen controleren en daarom geen tekst geschreven. Ik heb voorlopig 'afhaal' gekozen in plaats van 'restaurant', omdat de domeinnaam (broodjes en snacks), de bedrijfsnaam en de locatie op bedrijventerrein Bijsterhuizen op een foodtruck of afhaalzaak lijken te wijzen. Dat is een vermoeden, de site bevestigt het niet. Wil iemand dit handmatig nakijken? Of het bedrijf nog actief is, weet ik ook niet: 'lijkt_actief' staat alleen op true omdat ik geen bewijs van het tegendeel heb.",
+  "opmerkingen": "De website http://www.broodjesensnacks.nl kon niet worden opgehaald (de fetch gaf de fout 'url_not_allowed'). Daarom is er geen tekst geschreven en zijn er geen gegevens gecontroleerd. De hoofdcategorie 'afhaal' is voorlopig gekozen op basis van de domeinnaam (broodjes en snacks) en de naam 'On The Road', wat op een foodtruck of afhaalzaak lijkt. Dit is niet bevestigd. Het adres Bijsterhuizen ligt op een bedrijventerrein. Graag handmatig controleren.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -10322,13 +10390,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15729,
-   "uit": 379
+   "in": 15732,
+   "uit": 384
   },
   "lijkt_actief": true,
   "naam": "The foodfather nijmegen",
   "openingstijden": "",
-  "opmerkingen": "De website https://www.the-foodfather-nijmegen.nl/ kon niet worden opgehaald (de fetch gaf de fout 'url_not_allowed'). Daarom hebben we geen informatie kunnen controleren en geen tekst geschreven. Ook de categorie 'restaurant' is niet gecontroleerd, want het kan ook om een afhaalzaak gaan. Of de zaak nog actief is, weten we niet. Graag handmatig nakijken.",
+  "opmerkingen": "De website https://www.the-foodfather-nijmegen.nl/ kon niet worden opgehaald (foutmelding: url_not_allowed). Daarom hebben we geen informatie over het aanbod, de openingstijden of het adres kunnen controleren en is er geen tekst geschreven. Ook de categorie 'restaurant' is niet gecontroleerd: de naam doet eerder denken aan een afhaal- of bezorgzaak. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -10483,13 +10551,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15706,
-   "uit": 392
+   "in": 15713,
+   "uit": 433
   },
   "lijkt_actief": true,
   "naam": "Toko Oost",
   "openingstijden": "",
-  "opmerkingen": "De website https://toko-oost.nl/ kon niet worden opgehaald (de fetch gaf de fout 'url_not_allowed'). Daardoor konden we niets controleren: geen tekst, kenmerken, openingstijden, keuken of adres. De categorie restaurant is alleen de vermoedelijke categorie. Gezien de naam 'Toko' kan het ook een afhaalzaak of winkel met Indonesisch/Aziatisch eten zijn. Graag handmatig controleren.",
+  "opmerkingen": "Ik kon de website https://toko-oost.nl/ niet openen: het ophalen werd geweigerd (url_not_allowed). Daardoor heb ik geen tekst geschreven en niets ingevuld bij kenmerken, openingstijden, keuken en adres. De hoofdcategorie 'restaurant' komt alleen uit de vermoedelijke categorie en is niet gecontroleerd. De naam 'toko' kan ook wijzen op een afhaalzaak of winkel, dus dit moet de redactie zelf nakijken. Ook 'actief' is niet gecontroleerd.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -10753,7 +10821,8 @@
   "adres_op_site": "",
   "bronnen": [
    "https://www.underconstructionnijmegen.nl",
-   "http://underconstructionnijmegen.nl"
+   "http://underconstructionnijmegen.nl",
+   "https://underconstructionnijmegen.nl"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -10762,13 +10831,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23821,
-   "uit": 577
+   "in": 23877,
+   "uit": 626
   },
   "lijkt_actief": true,
   "naam": "Under Construction",
   "openingstijden": "",
-  "opmerkingen": "De website was niet bereikbaar. Ik heb zowel https://www.underconstructionnijmegen.nl als http://underconstructionnijmegen.nl geprobeerd, maar beide gaven 'url_not_accessible'. Daarom is er geen tekst geschreven en zijn categorie, keuken, kenmerken en openingstijden niet nagekeken. De hoofdcategorie 'restaurant' is alleen de vermoedelijke categorie die jullie zelf aangaven. Of de zaak nog open is, kon ik niet nagaan. Graag later opnieuw proberen of het met de hand nakijken.",
+  "opmerkingen": "De website kon niet worden geladen (url_not_accessible). Ik heb het geprobeerd via https://www., http:// en https:// zonder www, en alle drie werkten niet. Daarom staat er geen tekst en zijn categorie, keuken, kenmerken en openingstijden niet gecontroleerd. De hoofdcategorie restaurant is de vermoedelijke categorie, niet bevestigd door de site. lijkt_actief staat op true omdat er geen informatie is dat het bedrijf gestopt is. Graag later opnieuw proberen of handmatig controleren of de zaak aan de Ziekerstraat 9 nog bestaat.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -10847,9 +10916,7 @@
  },
  "van-dam-s-spare-rib-corner": {
   "adres_op_site": "",
-  "bronnen": [
-   "http://www.van-dam-sparerib-grill.nl"
-  ],
+  "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -10857,13 +10924,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 33035,
-   "uit": 727
+   "in": 15761,
+   "uit": 396
   },
   "lijkt_actief": true,
   "naam": "Van Dam's Spare-rib Corner",
   "openingstijden": "",
-  "opmerkingen": "De website kon niet worden opgehaald. Ik heb http://www.van-dam-sparerib-grill.nl, de https-versie en de versie zonder www geprobeerd, maar elke keer kwam de foutmelding 'url_not_allowed' terug. Daardoor weet ik niets over het aanbod, de openingstijden, de keuken of het adres, en heb ik geen tekst geschreven. Het veld 'lijkt actief' staat op true omdat er niets is gevonden waaruit blijkt dat de zaak gestopt is, maar dat is niet gecontroleerd. De hoofdcategorie restaurant is overgenomen van de vermoedelijke categorie en is ook niet gecontroleerd. Aan de naam te zien gaat het om spareribs en grill, maar dat moet nog worden nagekeken. Mogelijk is het eerder een afhaalzaak. Kijk dit graag handmatig na.",
+  "opmerkingen": "De website http://www.van-dam-sparerib-grill.nl kon niet worden opgehaald (de fetch-tool gaf de foutmelding url_not_allowed). Daardoor hebben we niets kunnen controleren: geen tekst, kenmerken, openingstijden of keuken. Of de zaak nog open is, weten we dus niet. De categorie restaurant is aangehouden zoals vermoed, maar is niet gecontroleerd. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -10974,11 +11041,7 @@
  },
  "vief": {
   "adres_op_site": "",
-  "bronnen": [
-   "http://www.viefnijmegen.nl/",
-   "https://www.viefnijmegen.nl/",
-   "https://viefnijmegen.nl/"
-  ],
+  "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -10986,13 +11049,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23915,
-   "uit": 637
+   "in": 33043,
+   "uit": 693
   },
   "lijkt_actief": true,
   "naam": "Vief",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. Het ophalen van http://www.viefnijmegen.nl/ lukte niet (foutmelding 'url_not_allowed'), en https://www.viefnijmegen.nl/ en https://viefnijmegen.nl/ gaven dezelfde fout. Daarom ontbreken de tekst, de keuken, de kenmerken, de openingstijden en het adres. De categorie 'restaurant' is overgenomen van de vermoedelijke categorie en niet gecontroleerd. Of de zaak nog open is, heb ik ook niet kunnen nagaan. Graag handmatig controleren.",
+  "opmerkingen": "Ik kon de website niet lezen: bij elke poging (http://www.viefnijmegen.nl/, https://www.viefnijmegen.nl/ en https://viefnijmegen.nl/) gaf de ophaaltool de fout 'url_not_allowed'. Daardoor is niets gecontroleerd: de tekst, de kenmerken, de openingstijden, de keuken en het adres (Waalkade 66) ontbreken. Ook is niet gecontroleerd of de zaak nog open is. 'lijkt_actief' staat op true alleen omdat niets op sluiting wijst. De categorie restaurant is overgenomen uit de vermoedelijke categorie en niet bevestigd. Kan de redactie de site met de hand bekijken?",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -11113,7 +11176,9 @@
  "waalzinnig": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.eetcafewaalzinnig.nl"
+   "http://www.eetcafewaalzinnig.nl",
+   "https://www.eetcafewaalzinnig.nl",
+   "https://eetcafewaalzinnig.nl"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -11122,13 +11187,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15715,
-   "uit": 395
+   "in": 32718,
+   "uit": 752
   },
   "lijkt_actief": true,
   "naam": "Waalzinnig",
   "openingstijden": "",
-  "opmerkingen": "De website http://www.eetcafewaalzinnig.nl was niet op te halen: we kregen de foutmelding 'url_not_allowed'. Daardoor hebben we geen informatie kunnen controleren en geen tekst geschreven. De categorie restaurant hebben we voorlopig overgenomen uit de vermoedelijke categorie, maar die moet nog nagekeken worden. Of de zaak nog open is, weten we niet. Graag handmatig controleren.",
+  "opmerkingen": "Ik kon de website niet openen. Bij http://www.eetcafewaalzinnig.nl, https://www.eetcafewaalzinnig.nl en https://eetcafewaalzinnig.nl kreeg ik steeds de fout 'url_not_allowed'. Daardoor heb ik niets van de site kunnen lezen. Ik heb geen tekst geschreven en geen kenmerken, openingstijden, keuken of adres ingevuld. Of de zaak nog open is, heb ik niet kunnen controleren. Ik heb 'actief' laten staan omdat er geen informatie is die op sluiting wijst. De categorie restaurant komt uit de aangeleverde gegevens en de naam 'eetcafé'. Die is nog niet nagekeken. Controleer het met de hand of probeer het later opnieuw.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -11190,7 +11255,8 @@
  "weerlicht": {
   "adres_op_site": "",
   "bronnen": [
-   "http://www.cafeweerlicht.nl"
+   "http://www.cafeweerlicht.nl",
+   "https://www.cafeweerlicht.nl"
   ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
@@ -11199,13 +11265,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23893,
-   "uit": 636
+   "in": 32726,
+   "uit": 720
   },
   "lijkt_actief": true,
   "naam": "Weerlicht",
   "openingstijden": "",
-  "opmerkingen": "We konden de website niet ophalen. http://www.cafeweerlicht.nl, https://www.cafeweerlicht.nl en https://cafeweerlicht.nl gaven alle drie de fout 'url_not_allowed', dus we hebben geen inhoud kunnen lezen. Daarom is er geen tekst geschreven en zijn kenmerken, openingstijden, keuken en adres niet ingevuld. Ook is niet te controleren of het bedrijf nog actief is; 'lijkt_actief' staat alleen op true omdat er geen tegenbewijs is. De naam 'café Weerlicht' doet vermoeden dat het een café is en niet vooral een restaurant. Controleer de categorie daarom met de hand.",
+  "opmerkingen": "We konden de website niet openen: zowel http://www.cafeweerlicht.nl als https://www.cafeweerlicht.nl gaf de fout 'url_not_allowed'. Daarom hebben we geen tekst geschreven en zijn de categorie, kenmerken, openingstijden en keuken niet gecontroleerd. De hoofdcategorie 'restaurant' is de vermoedelijke categorie die we kregen, maar is niet op de site nagegaan. Uit de naam 'café' zou je 'cafe' kunnen afleiden, maar ook dat is niet gecontroleerd. 'lijkt_actief' staat op true omdat we niet konden zien of het bedrijf gestopt is. Kijk het handmatig na.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -11367,7 +11433,10 @@
  },
  "wok-nijmegen": {
   "adres_op_site": "",
-  "bronnen": [],
+  "bronnen": [
+   "http://Www.woknijmegen.nl/",
+   "https://www.woknijmegen.nl/"
+  ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -11375,13 +11444,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 33035,
-   "uit": 693
+   "in": 23857,
+   "uit": 612
   },
   "lijkt_actief": true,
   "naam": "Wok Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. Bij http://Www.woknijmegen.nl/, http://www.woknijmegen.nl/ en https://www.woknijmegen.nl/ gaf de ophaaltool steeds de fout 'url_not_allowed'. Daardoor heb ik geen tekst geschreven en geen keuken, openingstijden, adres of kenmerken ingevuld. Ik heb niet kunnen nagaan of het bedrijf nog actief is. Daarom staat lijkt_actief op true, maar dat is niet gecontroleerd. De categorie restaurant is overgenomen uit de opgegeven vermoedelijke categorie en is ook niet gecontroleerd. Of het een wokrestaurant is of vooral een afhaalzaak, moet nog bekeken worden. Graag handmatig nakijken.",
+  "opmerkingen": "Ik kon de website niet lezen. Elke poging om http://Www.woknijmegen.nl/, http://www.woknijmegen.nl/ en https://www.woknijmegen.nl/ op te halen, gaf de fout 'url_not_allowed'. Daarom heb ik geen tekst geschreven en geen kenmerken, openingstijden, keuken of adres ingevuld. De naam doet aan een wokrestaurant denken, maar dat staat niet vast. Of het om een restaurant of een afhaalzaak gaat, moet nog worden nagekeken. 'Lijkt actief' staat op 'true', maar dat is niet gecontroleerd. Graag handmatig nakijken.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -11418,7 +11487,9 @@
  },
  "yoghurt-barn-nijmegen": {
   "adres_op_site": "",
-  "bronnen": [],
+  "bronnen": [
+   "https://www.yoghurtbarn.nl/"
+  ],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -11426,13 +11497,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 15799,
-   "uit": 487
+   "in": 15798,
+   "uit": 536
   },
   "lijkt_actief": true,
   "naam": "Yoghurt Barn Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "De website https://www.yoghurtbarn.nl/ kon niet worden opgehaald: de fetch-tool gaf de fout 'url_not_allowed'. Daarom is niets op de site gecontroleerd en is er geen tekst geschreven. De hoofdcategorie 'lunch' is een voorlopige inschatting en komt niet van de site: Yoghurt Barn is meestal een ontbijt- en lunchzaak met yoghurt-bowls, dus niet echt een restaurant. Controleer dit handmatig en kijk ook of de vestiging aan de Lange Hezelstraat 13 nog open is.",
+  "opmerkingen": "Ik kon de website https://www.yoghurtbarn.nl/ niet openen: de opvraag werd geweigerd (url_not_allowed). Daarom heb ik geen tekst, kenmerken of openingstijden ingevuld en is het adres niet gecontroleerd. Of de zaak nog open is, heb ik dus ook niet kunnen nagaan. De hoofdcategorie 'lunch' is een voorlopige inschatting: Yoghurt Barn is een keten met ontbijt- en lunchzaken, maar dat heb ik niet op de site kunnen bevestigen. De opgegeven categorie 'restaurant' is waarschijnlijk niet juist. Controleer dit graag met de hand.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
@@ -11593,10 +11664,7 @@
  },
  "zwaantje-nijmegen": {
   "adres_op_site": "",
-  "bronnen": [
-   "http://www.zwaantjenijmegen.nl/",
-   "https://www.zwaantjenijmegen.nl/"
-  ],
+  "bronnen": [],
   "categorie_scan": "restaurant",
   "extra_categorieen": [],
   "gescand": "2026-10-23",
@@ -11604,13 +11672,13 @@
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
-   "in": 23859,
-   "uit": 705
+   "in": 15742,
+   "uit": 416
   },
   "lijkt_actief": true,
   "naam": "Zwaantje Nijmegen",
   "openingstijden": "",
-  "opmerkingen": "Ik kon de website niet openen. Zowel http://www.zwaantjenijmegen.nl/ als https://www.zwaantjenijmegen.nl/ gaven de fout 'url_not_allowed'. Daarom heb ik geen tekst geschreven en geen kenmerken, openingstijden, keuken of adres ingevuld. Of het bedrijf nog actief is, kon ik niet controleren. Ik heb 'actief' laten staan omdat ik niets heb gevonden dat op het tegendeel wijst. De categorie 'afhaal' is een voorlopige keuze. Ik heb die niet op de site kunnen controleren. Ik ga er alleen van uit omdat 't Zwaantje meestal een cafetaria- of snackbarformule is, en dat past niet bij de vermoedelijke categorie 'Restaurants'. Controleer dit graag handmatig of probeer het later nog eens.",
+  "opmerkingen": "De website http://www.zwaantjenijmegen.nl/ kon niet worden opgehaald (fout: url_not_allowed), dus er is geen informatie gecontroleerd en er is geen tekst geschreven. 'Zwaantje' is in Nederland meestal de naam van een cafetaria of snackbar, dus de hoofdcategorie is voorlopig op 'afhaal' gezet in plaats van 'restaurant'. Dat is een aanname: controleer het handmatig. Of het bedrijf nog actief is, is ook niet gecontroleerd.",
   "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
   "status": "verwijderd",
   "tekst": "",
