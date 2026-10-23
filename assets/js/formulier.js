@@ -78,6 +78,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     });
   });
   landHint();
+  openingstijden(form);
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var ontbreekt = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (v) {
@@ -153,3 +154,81 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       .then(function () { knop.disabled = false; });
   });
 });
+
+// Openingstijden per dag, zoals bij Google. Het tekstveld zelf blijft (verborgen) bestaan en krijgt
+// één regel per dag ("ma 09:00-17:00" of "ma gesloten"); zo hoeft het Apps Script niets te weten van dit schema.
+// Een ingevulde waarde uit de url ("ma-vr 07:00-22:00, za 09:00-16:00") wordt over de dagen verdeeld.
+function openingstijden(form) {
+  var veld = form.querySelector('textarea[name="openingstijden"]');
+  if (!veld) return;
+  var DAGEN = ["ma", "di", "wo", "do", "vr", "za", "zo"];
+  var NAMEN = ["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"];
+  var schema = document.createElement("div");
+  schema.className = "openingstijden";
+  var rijen = DAGEN.map(function (dag, i) {
+    var rij = document.createElement("div");
+    rij.className = "openingstijden__dag";
+    rij.innerHTML = '<span>' + NAMEN[i] + '</span>' +
+      '<input type="time" aria-label="' + NAMEN[i] + ' open vanaf"><span aria-hidden="true">tot</span>' +
+      '<input type="time" aria-label="' + NAMEN[i] + ' open tot">' +
+      '<label><input type="checkbox"> gesloten</label>';
+    schema.appendChild(rij);
+    var t = rij.querySelectorAll('input[type="time"]');
+    return { dag: dag, open: t[0], dicht: t[1], dicht_: rij.querySelector('input[type="checkbox"]') };
+  });
+  var kopie = document.createElement("button");
+  kopie.type = "button";
+  kopie.className = "openingstijden__kopie";
+  kopie.textContent = "Maandag overnemen voor dinsdag t/m vrijdag";
+  schema.appendChild(kopie);
+  var noot = document.createElement("input");
+  noot.type = "text";
+  noot.className = "openingstijden__noot";
+  noot.setAttribute("aria-label", "Bijzonderheden over de openingstijden");
+  noot.placeholder = "Bijzonderheden, bijvoorbeeld: op feestdagen gesloten";
+  schema.appendChild(noot);
+  veld.hidden = true;
+  veld.parentNode.insertBefore(schema, veld);
+
+  function bijwerken() {
+    var regels = [];
+    rijen.forEach(function (r) {
+      r.open.disabled = r.dicht.disabled = r.dicht_.checked;
+      if (r.dicht_.checked) regels.push(r.dag + " gesloten");
+      else if (r.open.value && r.dicht.value) regels.push(r.dag + " " + r.open.value + "-" + r.dicht.value);
+    });
+    if (noot.value.trim()) regels.push(noot.value.trim());
+    veld.value = regels.join("\n");
+  }
+  function inlezen(tekst) {
+    var rest = [];
+    tekst.split(/[,;\n]+/).forEach(function (deel) {
+      var m = deel.trim().toLowerCase().match(/^(ma|di|wo|do|vr|za|zo)[a-z]*(?:\s*(?:-|t\/m|tot)\s*(ma|di|wo|do|vr|za|zo)[a-z]*)?:?\s+(.*)$/);
+      var tijd = m && m[3].match(/^(\d{1,2})[:.](\d{2})\s*(?:-|–|tot)\s*(\d{1,2})[:.](\d{2})/);
+      var dicht = m && /gesloten|dicht/.test(m[3]);
+      if (!m || !(tijd || dicht)) { if (deel.trim()) rest.push(deel.trim()); return; }
+      var van = DAGEN.indexOf(m[1]), tot = m[2] ? DAGEN.indexOf(m[2]) : van;
+      for (var i = van; i <= tot; i++) {
+        rijen[i].dicht_.checked = !!dicht && !tijd;
+        if (tijd) {
+          rijen[i].open.value = ("0" + tijd[1]).slice(-2) + ":" + tijd[2];
+          rijen[i].dicht.value = tijd[3] === "24" ? "23:59" : ("0" + tijd[3]).slice(-2) + ":" + tijd[4];
+        }
+      }
+    });
+    noot.value = rest.join(", ");
+  }
+  kopie.addEventListener("click", function () {
+    for (var i = 1; i < 5; i++) {
+      rijen[i].open.value = rijen[0].open.value;
+      rijen[i].dicht.value = rijen[0].dicht.value;
+      rijen[i].dicht_.checked = rijen[0].dicht_.checked;
+    }
+    bijwerken();
+  });
+  schema.addEventListener("input", bijwerken);
+  schema.addEventListener("change", bijwerken);
+  form.addEventListener("reset", function () { setTimeout(bijwerken, 0); });
+  if (veld.value.trim()) inlezen(veld.value);
+  bijwerken();
+}

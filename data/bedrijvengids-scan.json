@@ -56,7 +56,8 @@
   "naam": "Ashtanga Mysore Nijmegen",
   "openingstijden": "",
   "opmerkingen": "De website (http://www.imxprs.com/free/franki/website-ayn) kon niet worden geopend (url_not_accessible), dus er is geen tekst geschreven. Het is een gratis imxprs-site, dus mogelijk is die offline gehaald. Afgaande op de naam gaat het om een yogastudio (Ashtanga Mysore) en niet om een sportschool. Daarom staat de categorie voorlopig op yoga, maar dat is niet op de site gecontroleerd. Of het bedrijf nog actief is, kon niet worden nagegaan.",
-  "status": "voorstel",
+  "reden": "geen werkende of passende website (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "http://www.imxprs.com/free/franki/website-ayn",
   "website_bereikbaar": false
@@ -144,7 +145,8 @@
   "naam": "Basic-Fit",
   "openingstijden": "",
   "opmerkingen": "De website http://www.basicfit.nl/ kon niet worden opgehaald: de fetch-tool gaf de foutmelding 'url_not_allowed', ook bij de https-variant. Een alternatieve URL (basic-fit.com) mocht niet worden geopend omdat die niet in de context stond. Daardoor is er geen informatie over de vestiging aan de Weg door Jonkerbos 26 gecontroleerd, ook niet over het adres, de openingstijden en het aanbod. We gaan ervan uit dat de vestiging nog actief is, maar dat is niet gecontroleerd. De tekst is leeg gelaten. Advies: handmatig de vestigingspagina van Basic-Fit Nijmegen (Weg door Jonkerbos) controleren.",
-  "status": "voorstel",
+  "reden": "website niet uit te lezen, liever geen halve gegevens (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "http://www.basicfit.nl/",
   "website_bereikbaar": false
@@ -239,7 +241,8 @@
   "naam": "CompleetFit Nijmegen",
   "openingstijden": "",
   "opmerkingen": "De website laadt wel, maar ik kon alleen de meta-informatie uitlezen. De site is waarschijnlijk gebouwd met een JavaScript-tool (Lovable), waardoor de pagina-inhoud niet beschikbaar was. Ik kreeg geen toegang tot subpagina's zoals contact. In de meta-beschrijving staat: 'Unieke mix van personal training, fysiotherapie, voeding en coaching', en de titel is 'Personal Training & Fysiotherapie'. Daarom heb ik personal-training als hoofdcategorie gekozen, en niet sportschool. Fysiotherapie en coaching lijken een groot deel van het aanbod, maar zonder meer inhoud heb ik ze niet als extra categorie toegevoegd. Dat moet de redactie nog nagaan. Adres, openingstijden, lessen en een eventuele proefles kon ik niet controleren. Omdat er te weinig informatie was, heb ik geen tekst geschreven. Ik raad aan de site handmatig in een browser te bekijken.",
-  "status": "voorstel",
+  "reden": "website niet uit te lezen, liever geen halve gegevens (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "http://www.compleetfitnijmegen.nl/",
   "website_bereikbaar": true
@@ -356,7 +359,8 @@
   "naam": "EasyActive-6534",
   "openingstijden": "",
   "opmerkingen": "De locatiepagina https://easyactive.nl/locatie/easy-active-nijmegen kon niet worden geladen (url_not_accessible). De homepage https://easyactive.nl kon ik ook niet openen. Daarom is er geen informatie van de site gebruikt en is er geen tekst geschreven. Of de vestiging nog actief is, kon ik niet nagaan. De categorie sportschool is overgenomen uit onze eigen gegevens. Graag later opnieuw proberen of handmatig controleren.",
-  "status": "voorstel",
+  "reden": "website niet uit te lezen, liever geen halve gegevens (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "https://easyactive.nl/locatie/easy-active-nijmegen",
   "website_bereikbaar": false
@@ -491,7 +495,7 @@
   "naam": "Fitsmart Personal Training",
   "openingstijden": "",
   "opmerkingen": "De trainingen vinden plaats in sportschool Sportspalace op hetzelfde adres. Fitsmart heeft geen eigen sportschool, dus 'personal-training' past beter dan 'Sportscholen'. De extra categorie coach is twijfelachtig: coaching is onderdeel van de aanpak, maar het is geen aparte dienst. Op de site staan geen openingstijden. Je kunt een kennismakingsgesprek aanvragen, maar een proefles wordt niet genoemd.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Sta jij ook weleens in de sportschool voor een apparaat met de gedachte: en nu? Bij Fitsmart krijg je een personal trainer die met je meedenkt. Je traint in je eigen tempo bij Sportspalace aan de Nieuwe Dukenburgseweg, een rustige sportschool waar alles aanwezig is wat je nodig hebt.\n\nDe aanpak draait om meer dan alleen zweten. Training, voeding en coaching gaan hier samen, afgestemd op wat jij wilt bereiken en waar je tegenaan loopt. Of je nu als ondernemer tussen je afspraken door wilt trainen of sterker wilt worden zonder je sociale leven op te geven. Woon je verder weg? Dan kun je ook begeleiding op afstand krijgen.\n\nNieuwsgierig geworden? Plan een vrijblijvend kennismakingsgesprek met trainer Mart en ontdek of het bij je past.",
   "website": "http://www.fitsmart.nl/",
   "website_bereikbaar": true
@@ -657,7 +661,7 @@
   "naam": "Harbor Gym",
   "openingstijden": "",
   "opmerkingen": "Op de site staan twee vestigingen: Centrum (Mariënburg 90) en Waalhaven (Dokstraat 255). Misschien is een aparte vermelding voor Waalhaven nodig. Er staan geen openingstijden op de site. Het aanbod draait vooral om personal training en small group training, en daarom is personal-training als hoofdcategorie gekozen in plaats van sportschool. Bedrijfsfitness is wel een dienst, maar het is geen bedrijfsuitje en daarom niet als kenmerk opgenomen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Wil je trainen met een coach die echt naast je staat, zonder de drukte van een grote sportschool? Bij Harbor Gym aan de Mariënburg in het centrum train je één-op-één met een personal trainer of met een paar anderen in een kleine groep. Je trainer maakt een schema dat past bij jouw doelen, of je nu sterker wilt worden, blessures wilt voorkomen of beter in je vel wilt zitten.\n\nVeel is al voor je geregeld: je handdoek ligt klaar in je locker, en na afloop kun je douchen en nog even blijven zitten in de lounge. Er werkt vast een fysiotherapeut mee, en je kunt er ook terecht voor massage en yoga. Bedrijven kunnen hun team in kleine groepjes laten trainen.\n\nBenieuwd? Vraag een gratis proeftraining aan en ervaar het zelf.",
   "website": "https://www.harborgym.com",
   "website_bereikbaar": true
@@ -802,7 +806,8 @@
   "naam": "Impact",
   "openingstijden": "",
   "opmerkingen": "De website https://www.impact-nijmegen.nl/ kon niet geladen worden, ook niet zonder www (url_not_accessible). Daarom is er geen tekst geschreven. We weten niet of het bedrijf nog actief is. Controleer de site en het adres later opnieuw. De categorie sportschool is overgenomen uit de vermoedelijke categorie.",
-  "status": "voorstel",
+  "reden": "website niet uit te lezen, liever geen halve gegevens (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "https://www.impact-nijmegen.nl/",
   "website_bereikbaar": false
@@ -825,7 +830,8 @@
   "naam": "Kracht Coaching | Personal Trainer, Nijmegen",
   "openingstijden": "",
   "opmerkingen": "Op moves-you.nl staat geen website meer, alleen de standaardpagina van de webserver (Plesk): 'You see this page because there is no Web site at this address.' Ik kon daarom niets controleren over het bedrijf, het aanbod, de openingstijden of het adres. De domeinnaam moves-you.nl lijkt ook niet te passen bij de bedrijfsnaam Kracht Coaching. Misschien is de link verouderd of gebruikt het bedrijf een andere website. De categorie personal-training heb ik alleen afgeleid uit de bedrijfsnaam. 'Lijkt actief' staat op false, maar dat is onzeker: de site zegt niet dat het bedrijf gestopt is. Het beste is om de juiste website of het bedrijf zelf na te vragen.",
-  "status": "voorstel",
+  "reden": "geen werkende of passende website (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "http://www.moves-you.nl/",
   "website_bereikbaar": false
@@ -930,7 +936,8 @@
   "naam": "New Age 22",
   "openingstijden": "",
   "opmerkingen": "De website http://newage22.com was niet bereikbaar, ook niet via https://www.newage22.com. Daarom is er geen tekst geschreven. De categorie sportschool is overgenomen uit onze eigen gegevens en is niet gecontroleerd. Of het bedrijf nog actief is, kunnen we niet vaststellen; dat moet nog worden nagegaan.",
-  "status": "voorstel",
+  "reden": "website niet uit te lezen, liever geen halve gegevens (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "http://newage22.com",
   "website_bereikbaar": false
@@ -979,7 +986,8 @@
   "naam": "Nimma Gemina",
   "openingstijden": "",
   "opmerkingen": "Ik heb de tekst leeg gelaten omdat de site te weinig informatie geeft. Het domein nimma-gemina.nl stuurt door naar nimmabasketball.nl. De naam is dus kennelijk veranderd in Nimma Basketball. De site is een tijdelijke pagina ('We werken hard aan een nieuwe site'). Er staat alleen een korte slogan op ('Dé basketballcrew van Nijmegen'), plus een e-mailadres (contact@nimmabasketball.nl) en een link naar Instagram. Er staat geen adres, geen openingstijden en geen trainingsaanbod op de site. Het gaat om een basketbalvereniging en niet om een sportschool. Het schema heeft geen passende categorie voor basketbal of verenigingssport, dus 'sportschool' staat er alleen als tijdelijke keuze. Ook de naam en de categorie in de gids moeten daarom nagekeken worden. Het adres Cipresstraat 154 kon ik niet controleren.",
-  "status": "voorstel",
+  "reden": "geen werkende of passende website (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "https://www.nimma-gemina.nl/",
   "website_bereikbaar": true
@@ -1073,7 +1081,7 @@
   "naam": "Perry Ubeda Weerbaarheidscentrum",
   "openingstijden": "",
   "opmerkingen": "De site bestaat uit één pagina met alleen een persoonlijke introductie. Er staat niets over lesrooster, groepslessen, prijzen of openingstijden. Het woord 'weerbaarheid' komt alleen in de paginatitel voor. Ook staat er niet duidelijk dat er kickbokslessen worden gegeven: de site noemt alleen (privé)training en begeleiding. Telefoon: 06-53666644. Voorgestelde categorie Sportscholen past minder goed dan vechtsport of personal training.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Wil je trainen bij iemand die het kickboksen tot in de puntjes kent? Aan de Tweede Oude Heselaan geeft Perry Ubeda, geboren Nijmegenaar en meervoudig wereldkampioen in onder meer Thaiboksen en Muay Thai, (privé)trainingen aan mensen met heel verschillende achtergronden.\n\nHij wedstrijdvecht zelf niet meer, maar het vak laat hem niet los. Tegenwoordig richt hij zich vooral op mensen die wat extra aandacht goed kunnen gebruiken. Met training helpt hij ze meer structuur in hun dagelijks leven te vinden, en daarbij werkt hij samen met gespecialiseerde collega's. Hij kijkt per persoon welke aanpak en omgangsvorm het beste werkt, dus je krijgt geen standaardprogramma.\n\nBen je benieuwd wat zo'n persoonlijk traject jou kan opleveren? Bel Perry dan gewoon even op voor een kennismaking.",
   "website": "http://perryubeda.nl/",
   "website_bereikbaar": true
@@ -1219,7 +1227,7 @@
   "naam": "Riverland Healthcentre",
   "openingstijden": "ma, wo, vr 07:00-22:00, di, do 08:00-22:00, za-zo 08:00-15:00 (met Ultimate-lidmaatschap 24/7)",
   "opmerkingen": "Op de contactpagina staat 'elke doordeweekse dag van 8u tot 22u', maar in de tabel staat op ma/wo/vr 7u. De tabel is aangehouden. 24/7 open geldt alleen met een Ultimate-lidmaatschap. In de meta-omschrijving noemt de site zichzelf de 'Grootste industriële Gym'; die claim is niet overgenomen. De site noemt een fysio en een sportdiëtist in het 'Health Team', maar die pagina's zijn niet gelezen. Daarom zijn er geen extra categorieën fysiotherapeut en dietist toegevoegd.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Heb je genoeg van een saaie sportschool met hetzelfde schema elke week? Kom dan eens kijken in De Biezen, vlak bij het Waalfront. Daar train je in de grote hallen van een oude fabriek, met een stoere industriële sfeer, en de workouts veranderen steeds.\n\nJe kunt op eigen houtje fitnessen, maar er zijn ook veel groepslessen, van kickboksen voor jeugd en volwassenen tot zumba, yoga, Spartan workout, breakdance en Baby en Fit. Wil je liever naar buiten? Dan zijn er bootcamps in het Westerpark, bij de Lentse Warande en op de Waalkade. Je kunt ook kiezen voor personal training, alleen, met z'n tweeën of in een klein groepje. Er werken ook een fysio en een sportdiëtist.\n\nWil je eerst de sfeer proeven? Plan dan een gratis proefles in, dan weet je meteen of het bij je past.",
   "website": "https://riverlandhealthcentre.nl/",
   "website_bereikbaar": true
@@ -1256,7 +1264,7 @@
   "naam": "Sanasport Health Club",
   "openingstijden": "Fitness: ma-vr 07:00-22:00, za-zo 08:00-15:00 (365 dagen per jaar open, aangepaste tijden op feestdagen); Fysiotherapie: ma-do 08:30-22:00, vr 08:30-18:00",
   "opmerkingen": "Kenmerk 'senioren' is gekozen op basis van de specialisatie 'Valpreventie training' in het menu; die pagina is niet gelezen, dus graag controleren. De spa/thermen horen bij Sanadome en niet bij Sanasport zelf, daarom geen wellness/sauna opgenomen.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Zin om te trainen in een rustige zaal waar altijd iemand rondloopt die je verder helpt? Op de eerste verdieping van Sanadome Hotel & Spa aan de Weg door Jonkerbos vind je deze health club. Je traint er op moderne cardio- en krachttoestellen van Life Fitness, verdeeld over verschillende zones, met een persoonlijk schema dat past bij jouw doel.\n\nJe begint met een intake: basismetingen, een fietstest en een bewegingsscreening. Daarnaast zijn er groepslessen, personal training en voedingsbegeleiding. Heb je een blessure of klachten? Dan kun je in hetzelfde gebouw terecht bij de eigen fysiotherapeuten, ook zonder verwijzing van de huisarts.\n\nAls lid parkeer je gratis bij Sanadome, en de club is het hele jaar open. Wil je eerst eens kijken? Neem een dagpas of plan een intake in.",
   "website": "http://www.sanasport-fitness-nijmegen.nl/",
   "website_bereikbaar": true
@@ -1286,7 +1294,7 @@
   "naam": "SportCity Nijmegen",
   "openingstijden": "",
   "opmerkingen": "Op de pagina werden geen openingstijden getoond, waarschijnlijk worden ze dynamisch geladen. De dagpas staat in het algemene menu van de keten en niet specifiek bij deze vestiging. Fysiotherapie wordt geboden door de externe specialist Het Fysiolab. Daarom staat het niet als extra categorie vermeld.",
-  "status": "voorstel",
+  "status": "goedgekeurd",
   "tekst": "Wil je sporten zonder dat je hoeft te kiezen tussen een uurtje krachttraining en een groepsles? Bij de Nijmeegse vestiging van SportCity aan de Akkerlaan doe je allebei. Je kunt er terecht voor cardio- en krachtapparatuur en een functionele zone. Meedoen aan de live groepslessen kan ook, van circuittraining tot yoga en pilates. Liever op de fiets? Dan kun je instappen bij virtual spinning.\n\nWil je meer begeleiding, dan kun je met een personal trainer aan de slag. Fysiotherapeuten van Het Fysiolab zijn ook bij de club aangesloten. Er zijn kleedkamers met douches, kluisjes, een lounge en airconditioning. Parkeren is gratis en de club is ook met het ov goed te bereiken.\n\nEerst even proeven? Met een dagpas kun je de club eerst eens uitproberen. Bekijk het lesrooster en kom gewoon eens langs.",
   "website": "https://www.sportcity.nl/nijmegen",
   "website_bereikbaar": true
@@ -1545,7 +1553,8 @@
   "naam": "Wav-e Studios Nijmegen",
   "openingstijden": "",
   "opmerkingen": "We konden de website niet lezen. De opgegeven pagina https://wav-estudios.com/wav-e-studios-nijmegen/ gaf de fout 'url_not_accessible'. De homepage https://wav-estudios.com/ konden we niet apart openen. Daarom is er geen tekst geschreven en zijn er geen kenmerken, openingstijden of adres ingevuld. De categorie sportschool is overgenomen van de vermoedelijke categorie en is niet gecontroleerd. Ook 'lijkt_actief' is niet gecontroleerd: dat staat op true omdat de site niet zegt dat het bedrijf gestopt is. Probeer het later opnieuw of controleer het handmatig.",
-  "status": "voorstel",
+  "reden": "website niet uit te lezen, liever geen halve gegevens (Frans, 23-10-2026)",
+  "status": "verwijderd",
   "tekst": "",
   "website": "https://wav-estudios.com/wav-e-studios-nijmegen/",
   "website_bereikbaar": false
