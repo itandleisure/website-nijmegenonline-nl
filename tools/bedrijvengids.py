@@ -157,6 +157,77 @@ CATEGORIEEN = [{
     "voorbeeld": {"naam": "Jouw lunchroom", "foto": "assets/uploads/2023/04/de-bruijn-lunchen-op-de-markt-terras-768x384.webp",
                   "kenmerken": ["terras", "ontbijt"], "actie": "Gratis koffie bij elke lunch"},
     "knop_voorbeeld": "reserveren, menukaart, bellen",
+}, {
+    "slug": "cafe",
+    "listdom": {"cafe", "borrelen", "cocktailbar"},
+    "bron_csv": "cafe-aangevuld.csv",
+    "plaatsen": {"Nijmegen", "Lent", "Oosterhout"},
+    "naam": "Cafés en kroegen in Nijmegen",
+    "enkelvoud": "Café",
+    "de_woord": False,
+    "groep": "Eten en drinken",
+    "soorten": {"Café"},
+    "schema": "BarOrPub",
+    "beschrijving": "Alle cafés en kroegen in Nijmegen: bruine cafés, biercafés, wijnbars en cocktailbars, met adressen, "
+                    "openingstijden, terrassen en een kaart.",
+    "intro": "<p>Nijmegen is een echte kroegenstad. Op de Grote Markt en in de Lange Hezelstraat zitten cafés die al eeuwen "
+             "meegaan, aan de Waalkade drink je een biertje met uitzicht op de brug, en in Oost en het Benedenstad vind je "
+             "kleine buurtcafés met speciaalbier, live muziek of een goed glas wijn.</p>"
+             "<p>Op deze pagina vind je alle cafés in Nijmegen.</p>",
+    "faq": [
+        ("Wat is het oudste café van Nijmegen?",
+         "In de Lange Hezelstraat en rond de Grote Markt zitten cafés in panden van eeuwen oud. In ons artikel over de "
+         "cafés met de meeste historie lees je welke dat zijn."),
+        ("Waar drink je speciaalbier in Nijmegen?",
+         "Nijmegen heeft verschillende biercafés en brouwerijen. Filter op speciaalbier voor de cafés die zelf een uitgebreide "
+         "bierkaart noemen."),
+        ("Waar kun je in Nijmegen op een terras zitten?",
+         "Op de Grote Markt, de Waalkade en het Kelfkensbos zitten de grootste terrassen. Filter op terras voor de cafés die er een hebben."),
+    ],
+    "artikelen": ["de-7-cafes-met-de-meeste-historie-van-nijmegen", "de-7-gezelligste-cafes-buiten-het-centrum-van-nijmegen",
+                  "de-8-beste-biercafes-van-nijmegen", "lekker-uitgaan-in-nijmegen-hier-doe-je-dat"],
+    "blogs": ["de-7-cafes-met-de-meeste-historie-van-nijmegen", "de-7-gezelligste-cafes-buiten-het-centrum-van-nijmegen",
+              "de-8-beste-biercafes-van-nijmegen", "de-dit-zijn-de-6-leukste-eetcafes-van-nijmegen",
+              "lekker-uitgaan-in-nijmegen-hier-doe-je-dat", "happen-stappen-in-nijmegen-een-wereld-aan-mogelijkheden"],
+    "meervoud": "cafés",
+    "blogonderwerp": "cafés en uitgaan",
+    "filtervoorbeeld": "een terras, live muziek of speciaalbier",
+    "voorbeeld": {"naam": "Jouw café", "foto": "assets/uploads/2022/12/biercafe-in-nijmegen-533x400.webp",
+                  "kenmerken": ["terras", "speciaalbier"], "actie": "Elke donderdag het tweede biertje gratis"},
+    "knop_voorbeeld": "reserveren, agenda, bellen",
+}, {
+    "slug": "koffiezaak",
+    "listdom": {"koffiezaak"},
+    "bron_csv": "koffiezaak-aangevuld.csv",
+    "plaatsen": {"Nijmegen", "Lent", "Oosterhout"},
+    "naam": "Koffiebars in Nijmegen",
+    "enkelvoud": "Koffiebar",
+    "groep": "Eten en drinken",
+    "soorten": {"Koffiebar"},
+    "schema": "CafeOrCoffeeShop",
+    "beschrijving": "Alle koffiebars in Nijmegen op een rij: specialty coffee, eigen branderijen en plekken om te werken, "
+                    "met adressen, openingstijden en een kaart.",
+    "intro": "<p>Op zoek naar een goede flat white of een rustige plek om even te werken? Nijmegen heeft een groeiend aantal "
+             "koffiebars: van kleine specialty-zaken in de binnenstad tot branderijen waar je de bonen ter plekke ziet "
+             "branden.</p>"
+             "<p>Op deze pagina vind je alle koffiebars in Nijmegen.</p>",
+    "faq": [
+        ("Waar drink je de beste koffie in Nijmegen?",
+         "Dat is een kwestie van smaak, maar de specialty-koffiebars in de binnenstad en in Oost hebben een goede naam. "
+         "Filter op eigen branderij voor de zaken die zelf hun bonen branden."),
+        ("Waar kun je in Nijmegen werken met je laptop?",
+         "Verschillende koffiebars hebben wifi en plekken om te werken. Filter op werkplek om ze te vinden."),
+        ("Is een coffeeshop hetzelfde als een koffiebar?",
+         "Nee. In Nederland verkoopt een coffeeshop cannabis. In dit overzicht staan alleen koffiebars waar je voor koffie komt."),
+    ],
+    "artikelen": ["barista-training-in-nijmegen-word-koffie-expert-2", "het-belang-van-goede-koffie-op-het-werk"],
+    "blogs": ["barista-training-in-nijmegen-word-koffie-expert-2", "het-belang-van-goede-koffie-op-het-werk"],
+    "meervoud": "koffiebars",
+    "blogonderwerp": "koffie",
+    "filtervoorbeeld": "een werkplek of taart",
+    "voorbeeld": {"naam": "Jouw koffiebar", "foto": "assets/uploads/2023/11/barista-training-in-nijmegen-533x400.webp",
+                  "kenmerken": ["werkplek", "taart en gebak"], "actie": "Tweede cappuccino gratis"},
+    "knop_voorbeeld": "menukaart, route, bellen",
 }]
 
 

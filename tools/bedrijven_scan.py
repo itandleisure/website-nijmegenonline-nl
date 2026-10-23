@@ -59,7 +59,11 @@ KENMERKEN_SPORT = [
 KENMERKEN_ETEN = [
     "terras", "vegan", "vegetarisch", "glutenvrij", "kindvriendelijk", "groepen", "lunch", "ontbijt", "afhalen", "bezorgen",
     "aan het water", "hond welkom", "rolstoeltoegankelijk", "parkeren", "bedrijfsuitje", "kinderfeestje", "vrijgezellenfeest", "trouwen"]
-KENMERKEN = KENMERKEN_SPORT + [k for k in KENMERKEN_ETEN if k not in KENMERKEN_SPORT]
+KENMERKEN_DRINKEN = [
+    "terras", "aan het water", "live muziek", "speciaalbier", "sport kijken", "zaal of kelder", "werkplek", "eigen branderij",
+    "taart en gebak", "vegan", "lunch", "ontbijt", "afhalen", "hond welkom", "kindvriendelijk", "groepen", "rolstoeltoegankelijk",
+    "bedrijfsuitje", "vrijgezellenfeest"]
+KENMERKEN = list(dict.fromkeys(KENMERKEN_SPORT + KENMERKEN_ETEN + KENMERKEN_DRINKEN))
 
 # Per categorie: welke kenmerken, en wat Claude moet weten om te bepalen of een bedrijf erbij hoort
 PER_CATEGORIE = {
@@ -80,6 +84,18 @@ PER_CATEGORIE = {
         "Kenmerken: ontbijt alleen bij ontbijt of brunch op de kaart; terras alleen als de site een terras noemt; vegan alleen "
         "bij vegan gerechten (vegetarisch is iets anders); kindvriendelijk bij een kindermenu of speelhoek; groepen alleen bij een "
         "groepsmenu of aparte ruimte voor groepen, niet bij 'groepen in overleg'. Vul het veld keuken alleen in als de site een keuken noemt.")},
+    "cafe": {"kenmerken": KENMERKEN_DRINKEN, "uitleg": (
+        "Een café is een kroeg of bar waar je vooral iets drinkt: bruin café, biercafé, wijnbar, cocktailbar, studentenkroeg, "
+        "grand café. Kies dan cafe als hoofdcategorie (ook voor een cocktailbar of wijnbar). Een eetcafé met een volwaardige "
+        "dinerkaart: restaurant. Alleen overdag open met vooral lunch: lunch. Vooral koffie: koffiezaak. Een club of discotheek: "
+        "uitjes. Kenmerken: live muziek alleen bij optredens of een agenda met bands; speciaalbier bij een bierkaart met "
+        "speciaalbieren; sport kijken als ze wedstrijden uitzenden; zaal of kelder bij een ruimte die je kunt huren; terras alleen "
+        "als de site een terras noemt.")},
+    "koffiezaak": {"kenmerken": KENMERKEN_DRINKEN, "uitleg": (
+        "Een koffiezaak is een koffiebar of specialty-koffiezaak waar koffie het hoofdproduct is, eventueel met iets lekkers "
+        "erbij. Let op: een Nederlandse 'coffeeshop' die cannabis verkoopt is geen koffiezaak; zet dat in de opmerkingen en "
+        "laat de tekst leeg. Uitgebreide lunchkaart: lunch. Kenmerken: eigen branderij als ze zelf branden; werkplek bij wifi "
+        "en plekken om te werken; taart en gebak bij zelfgebakken taart of gebak; terras alleen als de site een terras noemt.")},
 }
 
 SCHEMA = {

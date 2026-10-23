@@ -290,6 +290,7 @@
 /bedrijvengids/avalon-fitcentre/ /bedrijvengids-categorie/sportschool/ 301
 /bedrijvengids/baan-isaan/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/bagels-beans-lange-hezelstraat/ /bedrijvengids-categorie/lunch/ 301
+/bedrijvengids/bar-nobel/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/basic-fit-weg-door-jonkerbos/ /bedrijvengids-categorie/sportschool/ 301
 /bedrijvengids/beau/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/bella-italia/ /bedrijvengids-categorie/restaurant/ 301
@@ -310,12 +311,16 @@
 /bedrijvengids/broodje-maxima/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/brunswick-nijmegen/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/bustro/ /bedrijvengids-categorie/lunch/ 301
+/bedrijvengids/cafe-de-fiets/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/cafe-de-kroon/ /bedrijvengids-categorie/lunch/ 301
+/bedrijvengids/cafe-de-muts/ /bedrijvengids-categorie/cafe/ 301
+/bedrijvengids/cafe-dollars/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/cafe-frowijn/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/cafe-hop-en-heivuur/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/cafe-restaurant-merkus/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/cafe-sjors-en-sjimmie/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/cafe-the-templar/ /bedrijvengids-categorie/lunch/ 301
+/bedrijvengids/cafe-west-end/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/cali-nijmegen/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/chicken-nijmegen/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/chinees-indisch-restaurant-lotus/ /bedrijvengids-categorie/restaurant/ 301
@@ -330,12 +335,14 @@
 /bedrijvengids/de-borneo/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/de-draaibar/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/de-dynamische-praktijk-bij-le-petit-chateau/ /bedrijvengids-categorie/sportschool/ 301
+/bedrijvengids/de-eeuwige-jeugd/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/de-firma/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/de-gelagkamer/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/de-klinker/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/de-pelgrim-foodbar/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/de-schat/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/de-sjalot/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids/de-tempelier/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/delimore/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/dionysos/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/don-pedro/ /bedrijvengids-categorie/restaurant/ 301
@@ -359,6 +366,7 @@
 /bedrijvengids/groepsgeluk/ /bedrijvengids-categorie/sportschool/ 301
 /bedrijvengids/grut/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/heavy-duty-outdoor-gym/ /bedrijvengids-categorie/sportschool/ 301
+/bedrijvengids/het-timmerhuis/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/hete-kip-op-locatie/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/holy-roti/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/il-pizzaiolo/ /bedrijvengids-categorie/restaurant/ 301
@@ -372,6 +380,7 @@
 /bedrijvengids/jp-vincken-zn/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/kaketoe-biljart/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/kaniwa/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids/keldercafe-nijmegen/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/koffie-van-kai-koffie-training-en-machines-op-de-zaak-en-bij-jouw-thuis/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/koks-ko/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/kollektief-kafee-bijstand/ /bedrijvengids-categorie/lunch/ 301
@@ -382,9 +391,11 @@
 /bedrijvengids/le-duc/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/little-india/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/little-yard/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids/live-pianobar/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/louis/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/lume/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/lunch-lovers/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids/mamboo/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/manetti-espresso/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/manna/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/marktzicht/ /bedrijvengids-categorie/restaurant/ 301
@@ -425,8 +436,10 @@
 /bedrijvengids/rini-s-surinaams-eten/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/robin-s-gluten-free-robin-s-bakery/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/roc-nijmegen-het-cafe/ /bedrijvengids-categorie/lunch/ 301
+/bedrijvengids/ruygh/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/seconda-orbit/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/shabu-shabu/ /bedrijvengids-categorie/restaurant/ 301
+/bedrijvengids/shamata-lounge/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/shisha-lounge-giga-bijt/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/sportcafe-the-yard/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/sportqube/ /bedrijvengids-categorie/sportschool/ 301
@@ -448,6 +461,7 @@
 /bedrijvengids/theehuis-de-goffert/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/theeschenkerij-de-goffert/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/thiemefoyer/ /bedrijvengids-categorie/lunch/ 301
+/bedrijvengids/thomtom/ /bedrijvengids-categorie/cafe/ 301
 /bedrijvengids/thuis-bij-inge/ /bedrijvengids-categorie/lunch/ 301
 /bedrijvengids/toko-oost/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids/trafo/ /bedrijvengids-categorie/restaurant/ 301
@@ -480,6 +494,8 @@
 /bedrijvengids-categorie/vegetarisch/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids-categorie/zuid-amerikaans-restaurant/ /bedrijvengids-categorie/restaurant/ 301
 /bedrijvengids-categorie/high-tea/ /bedrijvengids-categorie/lunch/ 301
+/bedrijvengids-categorie/borrelen/ /bedrijvengids-categorie/cafe/ 301
+/bedrijvengids-categorie/cocktailbar/ /bedrijvengids-categorie/cafe/ 301
 # agenda (tools/agenda.py)
 /agenda/ /nijmegen-evenementen-overzicht/ 301
 /events/10e-nijmeegse-cultuurquiz/ /nijmegen-evenementen-overzicht/ 301
