@@ -72,10 +72,26 @@ def sleutel(naam):
 
 
 def alineas(tekst):
-    """WordPress-tekst zonder <p> (losse regels) omzetten naar alinea's."""
-    blokken = [b.strip() for b in re.split(r"\n\s*\n", tekst.replace("\r", "")) if b.strip()]
-    return "\n".join(b if re.match(r"<(h\d|ul|ol|table|blockquote|figure)", b) else "<p>%s</p>" % b.replace("\n", "<br>")
-                     for b in blokken)
+    """WordPress-tekst zonder <p> omzetten naar HTML, zoals WordPress zelf doet (wpautop): elke regel een alinea,
+    koppen en lijsten als eigen blok, en regels die met "- " beginnen samen een opsomming."""
+    tekst = re.sub(r"(</h\d>|</ul>|</ol>)", r"\1\n", tekst.replace("\r", ""))
+    tekst = re.sub(r"(?<!\n)(<h\d)", r"\n\1", tekst)
+    tekst = re.sub(r"<(/?)h1\b", r"<\1h2", tekst)   # de h1 is de naam van het bedrijf
+    uit, lijst = [], []
+    for regel in (r.strip() for r in tekst.split("\n")):
+        punt = re.match(r"^(<strong>)?\s*[-•]\s+(.*)$", regel)
+        if punt:
+            lijst.append((punt.group(1) or "") + punt.group(2))
+            continue
+        if lijst:
+            uit.append("<ul>%s</ul>" % "".join("<li>%s</li>" % x for x in lijst))
+            lijst = []
+        if not regel:
+            continue
+        uit.append(regel if re.match(r"<(h\d|ul|ol|table|blockquote|figure|div|p)\b", regel) else "<p>%s</p>" % regel)
+    if lijst:
+        uit.append("<ul>%s</ul>" % "".join("<li>%s</li>" % x for x in lijst))
+    return "\n".join(uit)
 
 
 def openingstijden(ava):

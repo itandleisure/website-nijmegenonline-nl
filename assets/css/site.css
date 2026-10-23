@@ -399,3 +399,4 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .gidsactie strong { margin-right: 6px; }
 .gidsfotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; margin: 16px 0; }
 .gidsfotos img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; }
+.bedrijf h1 { hyphens: auto; overflow-wrap: break-word; }
