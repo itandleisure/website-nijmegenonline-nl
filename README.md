@@ -153,3 +153,14 @@ Alle beslissingen van de redactie staan in bestanden, zodat een nieuwe scan ze n
 
 Jaarlijkse herscan (bijvoorbeeld oktober 2027): Actions > *Bedrijven scannen* met categorie `sportschool` en `opnieuw` = `ja`. Goedgekeurde bedrijven krijgen dan een nieuw voorstel (de pagina toont het als concept tot de redactie het goedkeurt), verwijderde blijven weg, nieuwe bedrijven uit OpenStreetMap worden meegenomen. Daarna een datacheck zoals in `docs/datacheck-sportscholen-2026-10.md`: adres op de eigen site, geen sportschool, twijfel of open, twijfelachtige kenmerken.
 
+### Bedrijvengids: standaard voor elke nieuwe categorie (afgesproken met Frans, 23-10-2026)
+
+Zo is de categorie sportscholen opgezet; elke volgende categorie gaat op dezelfde manier, zodat Frans niet meerdere rondes hoeft te doen:
+
+1. **Verzamelen:** de bedrijven uit de oude gids plus OpenStreetMap/Overture voor die categorie.
+2. **Websitecontrole** (`tools/websites_controleren.py`): geen website of een dode website = automatisch uit de gids.
+3. **Scan** van de eigen website (`tools/bedrijven_scan.py`): tekst in de afgesproken stijl (warm, je/jij, tip van een lokale vriend, geen claims die niet te controleren zijn), kenmerken alleen als de site ze noemt, openingstijden alleen als ze leesbaar op de site staan.
+4. **Automatisch uitfilteren, met reden in de scan:** site niet uit te lezen (geen halve gegevens: liever weg, het bedrijf kan zichzelf aanmelden), lege of tijdelijke site, past niet in de categorie, twijfel of het bedrijf nog open is.
+5. **Datacheck** voor Frans, één lijst: adres op de eigen site wijkt af, twijfelachtige kenmerken, wat er is uitgefilterd en waarom. Frans beslist alles in één keer; de besluiten gaan in de databestanden en in `docs/`.
+6. **Daarna** de goedgekeurde teksten live, plus de indeling van de categoriepagina (alles gelijk, alleen Uitgelicht valt op) en het blok onder de blogs over dat onderwerp.
+
