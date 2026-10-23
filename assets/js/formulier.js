@@ -2,6 +2,7 @@
 // zie tools/google-formulier/Code.gs). Zonder url, of als Google niet reageert, opent het mailprogramma
 // van de bezoeker met het bericht al ingevuld. Een foto (input type=file) gaat als data-URL mee; het script
 // zet hem in Google Drive.
+var SCRIPT = document.currentScript;
 var MAX_FOTO = 10 * 1024 * 1024;   // het origineel; verkleind blijft er hooguit een paar honderd kB over
 var MAX_PX = 1600;
 // Leest de foto als data-URL en maakt hem eerst kleiner (max. 1600 px, jpg), zodat het versturen snel gaat.
@@ -78,7 +79,8 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     });
   });
   landHint();
-  openingstijden(form);
+  var tijden = openingstijden(form);
+  huidigeVermelding(form, tijden);
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var ontbreekt = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (v) {
@@ -231,4 +233,33 @@ function openingstijden(form) {
   form.addEventListener("reset", function () { setTimeout(bijwerken, 0); });
   if (veld.value.trim()) inlezen(veld.value);
   bijwerken();
+  return function (tekst) { inlezen(tekst); bijwerken(); };
+}
+
+// "Dit is mijn bedrijf": de huidige tekst, openingstijden en foto uit de gids alvast in het formulier zetten
+// (data/bedrijvengids-vermeldingen.json, gemaakt door tools/bedrijvengids.py). Wat al in de url stond, blijft staan.
+function huidigeVermelding(form, tijden) {
+  var slug = new URLSearchParams(location.search).get("vermelding");
+  if (!slug || !SCRIPT || !form.querySelector('[name="vermelding"]')) return;
+  fetch(new URL("../../data/bedrijvengids-vermeldingen.json", SCRIPT.src))
+    .then(function (r) { return r.json(); })
+    .then(function (alle) {
+      var v = alle[slug];
+      if (!v) return;
+      var oms = form.querySelector('[name="omschrijving"]');
+      if (oms && !oms.value.trim() && v.omschrijving) oms.value = v.omschrijving;
+      var mail = form.querySelector('[name="bedrijfsmail"]');
+      if (mail && !mail.value.trim() && v.bedrijfsmail) mail.value = v.bedrijfsmail;
+      var veld = form.querySelector('textarea[name="openingstijden"]');
+      if (veld && !veld.value.trim() && v.openingstijden && tijden) tijden(v.openingstijden);
+      var foto = form.querySelector('input[type="file"]');
+      if (foto && v.foto) {
+        var huidig = document.createElement("div");
+        huidig.className = "huidigefoto";
+        huidig.innerHTML = '<img alt="Huidige foto"><span>Dit is je huidige foto. Kies hieronder een andere als je hem wilt vervangen.</span>';
+        huidig.querySelector("img").src = v.foto;
+        foto.parentNode.insertBefore(huidig, foto);
+      }
+    })
+    .catch(function () {});
 }

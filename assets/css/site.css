@@ -438,3 +438,7 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .gidstip { margin-top: 40px; background: #f6f9f3; border-radius: 10px; padding: 4px 20px 16px; }
 .gidstip h2 { margin-top: 20px; }
 .gidstip__ondernemer { font-size: 0.9rem; color: var(--grijs); }
+
+/* Huidige foto bij "Dit is mijn bedrijf" (assets/js/formulier.js) */
+.huidigefoto { display: flex; gap: 12px; align-items: center; margin: 4px 0 8px; font-size: 0.9rem; color: var(--grijs); }
+.huidigefoto img { width: 120px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; flex: none; }
