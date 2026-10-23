@@ -1593,7 +1593,8 @@
   "lijkt_actief": true,
   "naam": "Bloem ice coffee & more",
   "niet_in": {
-   "lunch": "automatisch: hoort bij IJssalons (scan 23-10-2026)"
+   "lunch": "automatisch: hoort bij IJssalons (scan 23-10-2026)",
+   "koffiezaak": "hoort bij IJssalons (Frans, 23-10-2026)"
   },
   "openingstijden": "ma-vr 12:00-18:00, za 10:00-18:00, zo 12:00-18:00 (seizoensgebonden; sinds 1 oktober gesloten tot begin volgend jaar)",
   "opmerkingen": "Vermoedelijke categorie lunchroom klopt niet: het is vooral een ijssalon met koffie. De site meldt 'sinds 1 oktober gesloten, wij zien u graag begin volgend jaar weer' (seizoenssluiting, niet definitief). Openingstijden wisselen per seizoen en weer. Menu noemt 'franchise/derden', maar geen andere vestigingen genoemd. Vegan geldt voor ijs.",
@@ -1706,10 +1707,11 @@
   },
   "openingstijden": "Branderij (Het Loog 6): ma-vr 09:00-17:00. Café Centrum (Lange Hezelstraat 58): ma-do 09:00-16:00, vr-zo 09:00-17:00",
   "opmerkingen": "Ons adres (Energieweg 15) staat niet op de site. Volgens de site zit de branderij nu op Het Loog 6, 6541 AW Nijmegen. Het lijkt erop dat het bedrijf is verhuisd, dus het adres moet gecontroleerd worden. Blommers is vooral een koffiebranderij met een webshop en vier cafés. Er is geen lunch- of ontbijtkaart te vinden, alleen koffie en gebak uit de eigen bakkerij. Daarom heb ik koffiezaak gekozen en niet lunchroom. De openingstijden spreken elkaar tegen: de pagina 'Onze cafés' noemt 08:30-16:00 voor alle cafés, met het centrum dicht op dinsdag. De contactpagina noemt voor het centrum ma-do 09:00-16:00 en vr-zo 09:00-17:00. Overweeg om de cafés als aparte vermeldingen op te nemen. Het kenmerk 'afhalen' heb ik gekozen omdat je in de cafés bonen voor thuis kunt kopen. 'Bezorgen' slaat op het verzenden van bestellingen uit de webshop.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin in een kop koffie waarvan je precies weet waar de bonen vandaan komen? Blommers brandt sinds 2013 elke week vers specialty koffie in een eigen branderij aan Het Loog in Nijmegen. Ze kopen rechtstreeks in bij boeren en branden zo dat de eigen smaak van elke boon overeind blijft.\n\nDie koffie kun je drinken in hun cafés aan de Lange Hezelstraat in het centrum en op de campussen van de Radboud Universiteit en het Radboudumc. Bij je cappuccino of filterkoffie neem je iets uit de eigen bakkerij, zoals een croissant, cookie of plak cake. Je kunt er ook bonen kopen om thuis zelf te zetten.\n\nWil je er meer van weten? Kijk dan eens naar de workshops of de webshop met bonen en zetmateriaal. Of loop gewoon binnen bij het café aan de Hezelstraat.",
   "website": "http://www.blommers.coffee/",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "verhuisd, staat er al met Het Loog 6 (Frans, 23-10-2026)"
  },
  "blommers-coffee-het-loog": {
   "adres_op_site": "Het Loog 6, 6541 AW Nijmegen",
@@ -3672,10 +3674,11 @@
   "naam": "Café Waalzicht",
   "openingstijden": "",
   "opmerkingen": "Er staan geen openingstijden op de site; alleen 'We are closed' uit de widget. De danslessen worden gegeven door dansschool Aguanile, een aparte partij. Kenmerken hond welkom en rolstoeltoegankelijk komen alleen uit de standaard servicelijst ('Pets allowed', 'Accessible'). In de titel staat 'Dutch cuisine', maar de site noemt alleen borrelsnacks. Er staan twee e-mailadressen op de site (waalzicht2021@gmail.com en info@cafewaalzicht.nl). Het telefoonnummer in het colofon wijkt af van het contactnummer.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin in een borrel met de Waal en de Stevenskerk recht voor je neus? Aan de Oosterhoutsedijk op het eiland Veur Lent zit dit oude bruine café, dat al sinds 1911 bestaat en tegenwoordig een tropisch Latin-randje heeft. Je bestelt er een speciaalbiertje met wat borrelhapjes, terwijl er Caribische muziek uit de boxen komt.\n\nOp het verscholen terras aan de zijkant zit je tussen de palmbomen en zie je de boten voorbijvaren. Is het minder mooi weer, dan kun je terecht in de serre met veel groen. Op vrijdagavond wordt er in de zaal vrij gedanst op salsa, bachata en kizomba, en doordeweeks geeft een salsadansschool er les, met een gratis proefles om kennis te maken.\n\nDe zaal kun je ook huren voor een feest of een vergadering. Stuur gerust even een berichtje en loop een keer binnen!",
   "website": "https://cafewaalzicht.eatbu.com",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "dubbel met Waalzicht (Frans, 23-10-2026)"
  },
  "cafe-west-end": {
   "adres_op_site": "",
@@ -4113,7 +4116,8 @@
   "lijkt_actief": true,
   "naam": "Coffeeted",
   "niet_in": {
-   "lunch": "automatisch: hoort bij Koffiebars (scan 23-10-2026)"
+   "lunch": "automatisch: hoort bij Koffiebars (scan 23-10-2026)",
+   "koffiezaak": "hoort bij Winkels (Frans, 23-10-2026)"
   },
   "openingstijden": "ma 12:00-17:30, di-vr 09:30-17:30, za 09:30-17:00, zo 12:00-17:00 (alleen 1e en laatste zondag van de maand)",
   "opmerkingen": "Coffeeted is een speciaalzaak die koffie, thee, machines en servies verkoopt, met een webwinkel. Het is geen lunchroom: de site noemt geen zitplaatsen, geen menukaart en geen koffie om ter plekke te drinken. Daarom is 'koffiezaak' gekozen als dichtstbijzijnde categorie. Het huisnummer klopt niet met onze gegevens: de site noemt Moenenstraat 7 in de footer en op de contactpagina, terwijl wij Moenenstraat 20 hebben. Op de homepage staat in de lopende tekst wel 'Moenenstraat 20', dus de site spreekt zichzelf tegen. Graag controleren. Ook de telefoonnummers verschillen: in de tekst staat 024 6630889, maar de link verwijst naar 024 2065597. Op de pagina 'Onze winkel' staat nog placeholdertekst (lorem ipsum).",
@@ -6008,7 +6012,8 @@
   "lijkt_actief": true,
   "naam": "Drie Gezusters Nijmegen",
   "niet_in": {
-   "lunch": "automatisch: hoort bij Cafés en kroegen (scan 23-10-2026)"
+   "lunch": "automatisch: hoort bij Cafés en kroegen (scan 23-10-2026)",
+   "cafe": "hoort bij Uitjes en activiteiten (Frans, 23-10-2026)"
   },
   "openingstijden": "",
   "opmerkingen": "De vermoedelijke categorie 'Lunchrooms en ontbijt' klopt niet. Volgens de website is Drie Gezusters een club en evenementenlocatie ('Dé place to be voor clubnights, feestjes en events in het hart van Nijmegen'). Er wordt geen ontbijt, lunch of menukaart genoemd. Er bestaat geen categorie voor een club of nachtclub, dus ik heb 'cafe' gekozen. 'Podia' kan ook. Ik heb alleen de homepage gelezen. Daar staan geen vaste openingstijden, alleen de begintijden van de geplande feestavonden.",
@@ -8073,7 +8078,8 @@
   "lijkt_actief": true,
   "naam": "Het Theezaakje",
   "niet_in": {
-   "lunch": "automatisch: hoort bij Koffiebars (scan 23-10-2026)"
+   "lunch": "automatisch: hoort bij Koffiebars (scan 23-10-2026)",
+   "koffiezaak": "hoort bij Winkels (Frans, 23-10-2026)"
   },
   "openingstijden": "di-vr 10:00-13:00 en 14:00-17:00, za 10:00-12:30 en 13:00-17:00",
   "opmerkingen": "Dit is geen lunchroom maar een theewinkel met webshop. De site noemt geen zitplaatsen, geen ontbijt en geen lunch. 'Koffiezaak' is gekozen omdat dat de categorie is die er het dichtst bij komt; misschien past een winkelcategorie beter, maar die staat niet in de lijst. Graag nakijken. 'Afhalen' is gekozen omdat je in de winkel thee koopt, 'bezorgen' omdat de site schrijft dat de thee 'door fietskoeriers bezorgd' wordt. Op zondag en maandag is de winkel volgens de site dicht. Alleen de homepage is gelezen.",
@@ -9460,7 +9466,8 @@
   "lijkt_actief": true,
   "naam": "Koffiebarhuren",
   "niet_in": {
-   "lunch": "automatisch: hoort bij Catering (scan 23-10-2026)"
+   "lunch": "automatisch: hoort bij Catering (scan 23-10-2026)",
+   "koffiezaak": "hoort bij Catering (Frans, 23-10-2026)"
   },
   "openingstijden": "",
   "opmerkingen": "Dit is geen lunchroom. Het bedrijf verhuurt mobiele koffiebars met barista voor evenementen en werkt in heel Nederland. Er is geen zaak die je kunt bezoeken. Daarom staat de categorie op catering in plaats van lunch. Koffiebarhuren.nl hoort bij Bar Company, dat ook cocktailbars verhuurt. De kenmerken bedrijfsuitje en trouwen zijn gekozen op basis van de evenementen die de site noemt, zoals bruiloften en personeelsfeesten. Controleer of die kenmerken bij verhuur passen.",
@@ -10969,10 +10976,11 @@
   },
   "openingstijden": "",
   "opmerkingen": "Het is een matcha- en koffiebar zonder lunchkaart, daarom staat hij bij koffiezaak en niet bij lunchroom. De bar zit binnen tattoo- en piercingzaak TRB. Op de site staan geen openingstijden en geen eten. De site bestaat uit één pagina.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin in een kom matcha midden in de stad? Op Plein 1944, aan de kant van het busstation, vind je een kleine matcha- en koffiebar op een verrassende plek: binnen tattoo- en piercingzaak TRB. Een rustig moment tussen het winkelen of vlak voordat je de bus pakt.\n\nDe matcha is ceremonieel, en ze hebben er heel wat soorten voor geproefd voordat ze deze kozen. Je krijgt een volle, zachte umamismaak. Liever koffie? Dan drink je bonen van Kopi Melanesia, die van kleine plantages op de Molukken komen.\n\nLoop gewoon even binnen voor een kop koffie of matcha en kijk meteen rond in deze aparte combinatie van koffiebar en studio.",
   "website": "https://matchanijmegen.nl/",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "geen koffiebar (Frans, 23-10-2026)"
  },
  "mccafe": {
   "adres_op_site": "Wijchenseweg 202, 6538 SX Nijmegen",
@@ -11009,10 +11017,11 @@
   },
   "openingstijden": "Restaurant ma-zo 09:00-23:00; McDrive zo-wo 09:00-01:00, do 09:00-01:30, vr-za 09:00-02:30; McDelivery ma-zo 11:00-21:30",
   "opmerkingen": "De link gaat naar de vestigingspagina van McDonald's Nijmegen Novium. McCafé is daar een onderdeel van en geen zelfstandige zaak. Een fastfoodrestaurant past niet goed bij de categorie lunchroom, daarom heb ik voor koffiezaak gekozen (vanwege McCafé). De redactie kan ook overwegen om dit als 'restaurant' of 'afhaal' onder de naam McDonald's in te delen. Tijdens de Vierdaagse (juli) gelden afwijkende openingstijden. Ontbijt staat niet op de vestigingspagina en heb ik daarom niet als kenmerk opgenomen. De menukaart staat op mcdonalds.com en heb ik niet gelezen.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin in een kop koffie tussendoor of moet je even bijtanken tijdens het boodschappen doen? In het McDonald's-restaurant aan de Wijchenseweg, bij winkelcentrum Novium, zit een McCafé waar je de hele dag binnenloopt voor een koffie met iets lekkers erbij.\n\nDit is de Nijmeegse vestiging van de bekende keten, dus je kunt hier natuurlijk ook gewoon voor een burger terecht. Er is een terras, de kinderen kunnen zich vermaken in de speelhoek en er zijn glutenvrije producten. Het restaurant is toegankelijk voor rolstoelen, er is een babyruimte en je parkeert voor de deur, waar ook een laadpaal staat. Heb je haast? Dan pak je de McDrive of laat je je bestelling bezorgen.\n\nHet restaurant gaat elke dag om negen uur 's ochtends open, dus loop gerust eens binnen voor je volgende koffiepauze.",
   "website": "https://mcdonaldsrestaurant.nl/nijmegen-novium",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "keten (Frans, 23-10-2026)"
  },
  "meet-de-griek": {
   "adres_op_site": "",
@@ -11413,10 +11422,11 @@
   },
   "openingstijden": "",
   "opmerkingen": "Dit is een bubble tea-zaak en geen lunchroom; daarom heb ik 'koffiezaak' als dichtstbijzijnde categorie gekozen. De site is in het Engels en heeft maar één pagina: er staan geen openingstijden, geen menukaart en geen adres van de vestiging in Nijmegen op. Ik heb dus niet kunnen nagaan of het adres in de Augustijnenstraat klopt.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin in iets fris en anders dan een gewone kop thee? In de Augustijnenstraat, midden in het centrum, vind je de Nijmeegse vestiging van MÖGE TEE, een zaak met bubble tea en andere moderne theedranken.\n\nDe drankjes zijn geïnspireerd op de eeuwenoude Chinese theetraditie, maar krijgen een eigentijdse draai. Ze werken met natuurlijke ingrediënten en goede thee, dus je proeft verrassende, verfrissende smaken. De keten heeft ook vestigingen in Maastricht en Eindhoven.\n\nLoop je door de binnenstad en heb je zin in een pauze? Spring dan even binnen en probeer een smaak die je nog niet kent.",
   "website": "https://www.mogetee.nl",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "geen koffiebar (Frans, 23-10-2026)"
  },
  "mohabat": {
   "adres_op_site": "",
@@ -12049,10 +12059,11 @@
   "naam": "Nostra Lunch Winebar",
   "openingstijden": "ma-zo 10:00-19:30 (keuken tot 18:00)",
   "opmerkingen": "Op de site staat geen adres, dus de Van Broeckhuysenstraat 48 kon ik niet controleren. Ik heb 'lunch' als hoofdcategorie gekozen in plaats van 'cafe', omdat de zaak alleen overdag open is (tot 19:30) en vooral lunch serveert. De wijnbar staat er als extra categorie bij. Het kenmerk 'groepen' is twijfelachtig: de maximale groepsgrootte is 8 personen. De contactpagina kon ik niet ophalen, de informatie komt van de homepage. Gesloten op 25 en 26 december en 1 januari, op 24 en 31 december een uur eerder dicht.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin in een lange middag met een goed glas wijn? Midden in het centrum van Nijmegen kun je bij Nostra uitgebreid lunchen met verse, mediterraan getinte gerechten. Op de kaart staan ook seizoensgerechten die regelmatig wisselen.\n\nWijn speelt hier de hoofdrol. Je kunt de hele kaart per glas bestellen, dus je proeft makkelijk iets uit Frankrijk, Italië, Spanje of Portugal dat je nog niet kende. Vanaf drie uur 's middags kun je kiezen voor de High Wining: drie rondes mediterrane hapjes met twee glazen wijn. Leuk met z'n tweeën of met een groepje vrienden. Bij mooi weer zit je heerlijk op het terras.\n\nNostra is elke dag open tot in de vroege avond. Reserveer vooraf een tafel per mail of telefoon, zeker in het weekend. Voor de High Wining moet je minstens een dag van tevoren boeken.",
   "website": "http://www.nostra.nl/",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "dubbel met Nostra bij de lunchrooms (Frans, 23-10-2026)"
  },
  "notting-hill": {
   "adres_op_site": "",
@@ -12385,10 +12396,11 @@
   "naam": "Orthotic Shop US",
   "openingstijden": "ma-do vanaf 16:00, vr-zo vanaf 14:00",
   "opmerkingen": "De naam bij ons, 'Orthotic Shop US', klopt niet: de website hoort bij Proeflokaal Beij Ons, een eetcafé. Het adres komt wel overeen. Het eetcafé heeft een volwaardige avondkaart, daarom heb ik restaurant gekozen in plaats van café. De site noemt ook lunch, maar volgens de openingstijden ga je pas om 14:00 of 16:00 open. Daarom heb ik lunch niet in de tekst of bij de kenmerken gezet. Sluitingstijden staan niet op de site.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin in een avond met de sfeer van een bruine kroeg, maar wel met goed eten op tafel? In hartje Nijmegen-Oost, aan de Daalsedwarsweg, zit al zo'n vijftien jaar een vertrouwde ontmoetingsplek voor buurtbewoners en mensen van verder weg.\n\nJe komt hier voor een speciaalbiertje met vrienden, koffie met gebak of een uitgebreid diner. De spareribs met frites, aioli en koolsla zijn de klassieker van het huis, en van maandag tot en met donderdag kun je ze onbeperkt bestellen. Op dinsdagavond vanaf half negen is er een pubquiz, dus neem gerust je team mee.\n\nHeb je iets te vieren, zoals een verjaardag, afstudeerfeest of bedrijfsborrel? Dat kan hier ook. Reserveer online een tafel of mail even voor de mogelijkheden voor groepen.",
   "website": "http://www.beijons.nl/",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "dubbel met Beij Ons bij de restaurants (Frans, 23-10-2026)"
  },
  "oscillator": {
   "adres_op_site": "Stationsplein 11, Nijmegen (Doornroosje, direct naast Station Nijmegen)",
@@ -12583,10 +12595,11 @@
   },
   "openingstijden": "ma-do 08:00-16:30, vr 08:00-15:30, za-zo gesloten",
   "opmerkingen": "Panama is geen zelfstandige zaak maar de koffiecounter van De Refter, het foodcourt van de Radboud Universiteit. Volgens de site kun je bij Panama terecht voor koffie, gebak en tussendoortjes, dus ik heb gekozen voor 'koffiezaak' in plaats van de voorgestelde lunchroom. De lunch van de Refter (soep, salades, broodjes) wordt verkocht bij Sousa, een andere balie. Er gelden afwijkende openingstijden op 12, 13 en 14 november en een kerstsluiting van 21 december tot en met 3 januari. Er is geen aparte homepage: de link verwijst door naar www.ru.nl/diensten/eten-en-drinken/de-refter.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zit je op de campus van de Radboud Universiteit tussen twee colleges in en heb je zin in koffie? Loop dan even binnen bij Panama. Je vindt het in de Refter, het grote foodcourt in de Erasmus-laagbouw aan het Erasmusplein.\n\nPanama is de koffiecorner van de Refter. Je haalt er een kop koffie met iets lekkers erbij, zoals een gebakje of een klein tussendoortje. Daarna zoek je een plekje in de Refter om te studeren of om even bij te kletsen met vrienden. Voor een uitgebreidere lunch kun je bij de andere balies in hetzelfde foodcourt terecht.\n\nPanama is op werkdagen al vanaf acht uur 's ochtends open, dus je kunt er ook terecht voor een vroege bak koffie voor je eerste college. Kijk wel even naar de aangepaste tijden rond feestdagen en speciale dagen.",
   "website": "https://www.ru.nl/services/eten-en-drinken/de-refter",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "universiteitskantine (Frans, 23-10-2026)"
  },
  "papa-johns-pizza": {
   "adres_op_site": "",
@@ -12820,10 +12833,11 @@
   "naam": "Perplex",
   "openingstijden": "Lunch do 11:00-15:00; inloopmaaltijd om de week za 12:00-16:00; diner di en do vanaf 18:15",
   "opmerkingen": "Geen gewone horecazaak: dit is een christelijk ontmoetingscafé op vrijwilligersbasis (Stichting de Verwondering) dat alleen open is tijdens de activiteiten. Mogelijk past het beter bij een andere rubriek. Op de gelezen pagina's staat geen adres, alleen dat het pand in de Eilbrachtstraat ligt. Er staan geen vaste algemene openingstijden op de site; de tijden hierboven gelden alleen voor de activiteiten. Er is een gebedskelder, maar die wordt niet als huurruimte aangeboden.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin in een kop koffie, een goed gesprek of gewoon een rustige plek om te studeren? In de Eilbrachtstraat, midden in de stad, vind je Perplex: een christelijk ontmoetingscafé dat draait op vrijwilligers en waar iedereen welkom is, of je nu gelooft of niet.\n\nJe kunt hier op allerlei manieren aanhaken. Op donderdag is er een stevige lunch en om de week op zaterdag schuif je aan voor een driegangenmaaltijd van de eigen kok. Studenten en young professionals kunnen terecht in het wekelijkse studiecafé, en op dinsdag en donderdag is er een gezamenlijk diner met gerechten uit verschillende keukens en een gesprek bij het toetje. Ben je international? Dan is het Taalcafé een fijne manier om je Nederlands te oefenen.\n\nKijk eerst even in de agenda wanneer er iets te doen is, en meld je voor de diners van tevoren aan via de site.",
   "website": "http://www.perplexnijmegen.nl/",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "geen café (Frans, 23-10-2026)"
  },
  "perry-ubeda-weerbaarheidscentrum": {
   "adres_op_site": "Tweede Oude Heselaan 181C, Nijmegen",
@@ -14986,10 +15000,11 @@
   },
   "openingstijden": "ma-zo 14:00-03:00",
   "opmerkingen": "Het is een shishalounge met alleen snacks, geen restaurant. Daarom staat de hoofdcategorie op cafe in plaats van restaurant. Op de homepage staat 'Lekker ontbijten en drinken', maar op de menukaart staat geen ontbijt en de zaak gaat pas om 14:00 open. Ontbijt is daarom niet als kenmerk opgenomen. De actie op het menu is van mei 2023, dus de site wordt mogelijk niet meer bijgewerkt.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin om de avond rustig af te sluiten met vrienden en een waterpijp? Aan de Bloemerstraat, op loopafstand van het centrum, vind je een shishalounge waar je tot diep in de nacht kunt blijven hangen. Je kiest uit een flinke rij smaken, van klassieke appel-munt tot fruitige mixen met watermeloen, blauwe bes of pina colada.\n\nEen restaurant is het niet: eten is hier vooral een bijzaak. Je bestelt snacks zoals kipvingers, een crispy burger, een tosti met sucuk of Marokkaanse msemmen, met daarbij een glas Marokkaanse thee of iets fris. Is het mooi weer, dan zit je buiten op het terras.\n\nDe zaak is elke dag open vanaf twee uur 's middags tot laat in de nacht. Loop gewoon binnen, of bel even van tevoren als je met een grotere groep komt.",
   "website": "https://shishahousenijmegen.nl/",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "shishalounge (Frans, 23-10-2026)"
  },
  "shisha-lounge-giga-bijt": {
   "adres_op_site": "",
@@ -15209,10 +15224,11 @@
   "naam": "Sociëteit de Kroeg",
   "openingstijden": "",
   "opmerkingen": "Dit is een sociëteit van een studentenvereniging (N.S.V. Carolus Magnus) en geen openbaar café. Volgens de site is de sociëteit alleen 'een paar keer per maand op vrijdagavond' toegankelijk voor niet-leden. De site noemt geen vaste openingstijden. De vereniging heeft een aparte pagina over zalenverhuur, die ik niet heb gelezen. Het kenmerk 'zaal of kelder' heb ik daarom niet toegekend. Controleer die pagina als je het kenmerk wilt toevoegen. De homepage kon niet direct worden opgehaald, dus ik heb alleen de pagina over de sociëteit gelezen. Overweeg of deze vermelding in de gids past.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Ben je benieuwd hoe het studentenleven in Nijmegen er van binnen uitziet? Dan is de sociëteit van studentenvereniging Carolus Magnus aan de Hertogstraat een goede plek om te beginnen. Hier komen de leden samen voor een biertje, een feestje en de vaste jaarclub- en dispuutsavonden.\n\nNaast de gewone kroegavonden staan er ook allerlei activiteiten op het programma, zoals lezingen, filmavonden, themafeesten, cantussen en af en toe een wijnproeverij. De vereniging zit sinds 1996 in dit pand en is er sinds 2023 zelf eigenaar van.\n\nGoed om te weten: De Kroeg is in de eerste plaats van en voor de leden. Een paar keer per maand mogen op vrijdagavond ook niet-leden binnen. Kijk dus even op de site van Carolus Magnus wanneer de deur openstaat, en loop dan eens binnen.",
   "website": "https://www.carolusmagnus.nl/societeit",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "studentensociëteit (Frans, 23-10-2026)"
  },
  "song-da-street-food": {
   "adres_op_site": "Plein 1944 150, 6511 JH Nijmegen",
@@ -15564,10 +15580,11 @@
   },
   "openingstijden": "",
   "opmerkingen": "De landelijke website van de keten geeft geen informatie over de vestiging in Nijmegen. De winkelzoeker laadt zonder ingevoerde locatie geen winkels, dus het adres, de openingstijden en de zitplaatsen konden we niet controleren. Bij ons is alleen de postcode 6512 AB bekend, zonder straat. Op de site staat ook niets over ontbijt of lunch: de kaart draait om koffie, dus we kozen voor 'koffiezaak' en niet voor 'lunchroom'. Starbucks Delivers wordt landelijk aangeboden, maar het is niet bevestigd dat er in Nijmegen wordt bezorgd, dus we hebben 'bezorgen' niet als kenmerk opgenomen.",
-  "status": "voorstel",
+  "status": "verwijderd",
   "tekst": "Zin in een vertrouwde latte of een ijskoude Frappuccino terwijl je door de stad loopt? Dan kun je terecht bij de Nijmeegse vestiging van de internationale koffieketen Starbucks.\n\nDe kaart draait vooral om koffie: espresso's, lattes, ijskoffie en Frappuccino's, plus seizoensdrankjes. In de herfst is de bekende Pumpkin Spice Latte er weer. De keten zegt ook bezig te zijn met duurzaamheid en vraagt geld voor plastic wegwerpartikelen. Neem dus gerust je eigen beker mee.\n\nWil je weten waar de vestiging precies zit en wanneer hij open is? Kijk dan in de winkelzoeker op de website van Starbucks en loop even binnen voor je favoriete drankje.",
   "website": "https://www.starbucks.nl",
-  "website_bereikbaar": true
+  "website_bereikbaar": true,
+  "reden": "keten (Frans, 23-10-2026)"
  },
  "steven": {
   "adres_op_site": "Stikke Hezelstraat 54, 6511 JZ Nijmegen",
