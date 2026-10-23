@@ -2,6 +2,10 @@
 
 Na het verzamelen, de websitecheck en de scan staan er **71 cafés** en **15 koffiebars** als concept in de gids. Daaronder staat de volledige datacheck per categorie. Hieronder staan alleen de punten waar jij iets van moet vinden. Antwoord gewoon per letter, bijvoorbeeld "A goed, B goed, C1 weg".
 
+## Besluit van Frans (23-10-2026)
+
+A en C weg, B aangepast, D bij de volgende scan opnieuw. Resultaat: 63 cafés en 5 koffiebars.
+
 ## A. Haal ik weg (dubbel of geen café/koffiebar)
 
 | Bedrijf | Waarom |
