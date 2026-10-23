@@ -83,8 +83,7 @@
    "24 uur open",
    "groepslessen",
    "personal training",
-   "dagpas",
-   "boksen"
+   "dagpas"
   ],
   "kosten_tokens": {
    "in": 64364,
@@ -901,7 +900,6 @@
   "kenmerken": [
    "personal training",
    "kleine groepen",
-   "senioren",
    "parkeren",
    "proefles"
   ],
@@ -1040,8 +1038,7 @@
    "hyrox",
    "boksen",
    "revalidatie en fysio",
-   "proefles",
-   "bedrijfsuitje"
+   "proefles"
   ],
   "kosten_tokens": {
    "in": 25120,
@@ -1254,8 +1251,7 @@
    "personal training",
    "revalidatie en fysio",
    "parkeren",
-   "dagpas",
-   "senioren"
+   "dagpas"
   ],
   "kosten_tokens": {
    "in": 53282,
@@ -1520,8 +1516,7 @@
    "senioren",
    "kinderen en jeugd",
    "proefles",
-   "parkeren",
-   "bedrijfsuitje"
+   "parkeren"
   ],
   "kosten_tokens": {
    "in": 51548,
