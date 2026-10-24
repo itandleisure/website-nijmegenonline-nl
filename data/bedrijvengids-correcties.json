@@ -1,5 +1,5 @@
 {
- "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres).",
+ "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg).",
  "the-kettlebell-club": {
   "adres": "Groenestraat 215",
   "postcode": "6531 HH",
@@ -957,5 +957,222 @@
   "plaats": "Nijmegen",
   "lat": "51.829273",
   "lon": "5.799212"
+ },
+ "123bouwplan": {
+  "adres": "Molenweg 182",
+  "postcode": "6543 VJ",
+  "plaats": "Nijmegen",
+  "lat": "51.838116",
+  "lon": "5.834564"
+ },
+ "avs-bouw": {
+  "adres": "De Kluijskamp 11-15",
+  "postcode": "6545 JE",
+  "plaats": "Nijmegen",
+  "lat": "51.829468",
+  "lon": "5.804019"
+ },
+ "badkamer-renovatie-nijmegen": {
+  "adres": "Kwikstaartlaan 42",
+  "postcode": "3704 GS",
+  "plaats": "Zeist",
+  "lat": "52.087843",
+  "lon": "5.209037"
+ },
+ "duurzamer-nederland-b-v": {
+  "adres": "Romeplein 1",
+  "postcode": "6674 AR",
+  "plaats": "Herveld",
+  "lat": "51.909374",
+  "lon": "5.747111"
+ },
+ "gommers": {
+  "adres": "Dr. de Blécourtstraat 59",
+  "postcode": "6541 DG",
+  "plaats": "Nijmegen",
+  "lat": "51.839409",
+  "lon": "5.815472"
+ },
+ "sett-living": {
+  "adres": "Rietgraaf 2A",
+  "postcode": "6678 PJ",
+  "plaats": "Oosterhout",
+  "lat": "51.887238",
+  "lon": "5.811932"
+ },
+ "spara-energy": {
+  "adres": "Bijsterhuizen 1102-G04",
+  "postcode": "6546 AS",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "sultan-bouw": {
+  "adres": "Zwanenveld 3449",
+  "postcode": "6538 ZE",
+  "plaats": "Nijmegen",
+  "lat": "51.819487",
+  "lon": "5.806910"
+ },
+ "van-de-water-bouw-bv": {
+  "adres": "Edisonstraat 18",
+  "plaats": "Wijchen",
+  "postcode": "",
+  "lat": "51.816268",
+  "lon": "5.750507"
+ },
+ "bouma-totaalonderhoud": {
+  "adres": "Molenveldlaan 113",
+  "postcode": "6523 RK",
+  "plaats": "Nijmegen",
+  "lat": "51.832951",
+  "lon": "5.874878"
+ },
+ "de-waal-schilderwerken": {
+  "adres": "De Vlotkampweg 12, 34G",
+  "postcode": "6545 AG",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "kwast-meesters-bv": {
+  "adres": "Julianastraat 155",
+  "postcode": "6707 DD",
+  "plaats": "Wageningen",
+  "lat": "51.972208",
+  "lon": "5.661406"
+ },
+ "looijschilder-schilderwerken": {
+  "adres": "Gouvernante 18",
+  "postcode": "6603 MA",
+  "plaats": "Wijchen",
+  "lat": "51.797522",
+  "lon": "5.745124"
+ },
+ "mhv-schilderwerken": {
+  "adres": "Zuid Oostwal 2",
+  "postcode": "6591 DK",
+  "plaats": "Gennep",
+  "lat": "51.699747",
+  "lon": "5.971122"
+ },
+ "lekdetec": {
+  "adres": "Prof. Molkenboerstraat 22",
+  "postcode": "6524 RP",
+  "plaats": "Nijmegen",
+  "lat": "51.830076",
+  "lon": "5.867960"
+ },
+ "donker-groen": {
+  "adres": "Harste 5",
+  "postcode": "8602 JX",
+  "plaats": "Sneek",
+  "lat": "53.038965",
+  "lon": "5.643220"
+ },
+ "geknipt-voor-uw-tuin": {
+  "adres": "Laauwikstraat 3A",
+  "postcode": "6663 CD",
+  "plaats": "Lent",
+  "lat": "51.863584",
+  "lon": "5.863833"
+ },
+ "hoeneys-houtwerk": {
+  "adres": "Eerste Oude Heselaan 274",
+  "postcode": "6541 PG",
+  "plaats": "Nijmegen",
+  "lat": "51.843788",
+  "lon": "5.849904"
+ },
+ "koppich": {
+  "adres": "Doctor de Blécourtstraat 9",
+  "postcode": "6541 DD",
+  "plaats": "Nijmegen",
+  "lat": "51.838628",
+  "lon": "5.816768"
+ },
+ "koppich-van-welderenstraat": {
+  "adres": "Doctor de Blécourtstraat 9",
+  "postcode": "6541 DD",
+  "plaats": "Nijmegen",
+  "lat": "51.838628",
+  "lon": "5.816768"
+ },
+ "bob-witteveen-makelaardij-petuniastraat": {
+  "adres": "St. Jacobslaan 327",
+  "postcode": "6533 VD",
+  "plaats": "Nijmegen",
+  "lat": "51.816262",
+  "lon": "5.848948"
+ },
+ "driessen-makelaardij": {
+  "adres": "St. Annastraat 18",
+  "postcode": "6524 GC",
+  "plaats": "Nijmegen",
+  "lat": "51.840263",
+  "lon": "5.860067"
+ },
+ "houwen-makelaars": {
+  "adres": "Jan Anne Beijerinckstraat 34",
+  "postcode": "6663 BT",
+  "plaats": "Lent",
+  "lat": "51.859970",
+  "lon": "5.868485"
+ },
+ "luc-beumer-vastgoed": {
+  "adres": "Energieweg 53B, 6541CW",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "51.838635",
+  "lon": "5.818831"
+ },
+ "soeteman-makelaars-oranjesingel": {
+  "adres": "Berg en Dalseweg 71",
+  "postcode": "6522 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.841194",
+  "lon": "5.877219"
+ },
+ "bvd-trading": {
+  "adres": "Postbus 31242",
+  "postcode": "6503 CE",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "engelaar-engelaar-dakbedekking": {
+  "adres": "St. Teunismolenweg 48E",
+  "postcode": "6534 AG",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "uwdak-nederland": {
+  "adres": "Jonkersbosplein 52",
+  "postcode": "6534 AB",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "de-beveiligingswinkel": {
+  "adres": "Dr. de Blécourtstraat 47",
+  "postcode": "6541 DD",
+  "plaats": "Nijmegen",
+  "lat": "51.838918",
+  "lon": "5.816330"
+ },
+ "r-giesen-elektro": {
+  "adres": "Breeacker 1",
+  "postcode": "6678 DG",
+  "plaats": "Oosterhout",
+  "lat": "51.878493",
+  "lon": "5.822929"
+ },
+ "alsec-schoonmaakbedrijf": {
+  "adres": "Kerkenbos 10-18E",
+  "postcode": "6546 BA",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
  }
 }

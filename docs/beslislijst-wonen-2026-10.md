@@ -1,23 +1,25 @@
 # Wonen en klussen: beslissingen voor Frans (24-10-2026)
 
-Na het verzamelen, de websitecheck en de scan staan er **241 bedrijven** als concept in de gids. Bij zoveel bedrijven vraag ik niet per bedrijf, maar per soort geval. Antwoord per letter, bijvoorbeeld "A goed, B weg, C houden". De volledige lijst per categorie staat in `docs/datacheck-<categorie>-2026-10.md`.
+Na het verzamelen, de websitecheck en de scan staan er **208 bedrijven** als concept in de gids. Bij zoveel bedrijven vraag ik niet per bedrijf, maar per soort geval. Antwoord per letter, bijvoorbeeld "A goed, B weg, C houden". De volledige lijst per categorie staat in `docs/datacheck-<categorie>-2026-10.md`.
+
+**Besluit van Frans (24-10-2026):** C weg, de rest volgens het voorstel (A en B adres van de eigen site, D opnieuw proberen).
 
 ## Per categorie
 
 | Categorie | In de gids | Automatisch weg | Site werkt niet | Andere categorie | Nog niet gescand |
 |---|---|---|---|---|---|
-| aannemersbedrijf | 66 | 20 | 9 | 14 | 0 |
-| schilder | 27 | 7 | 2 | 1 | 0 |
-| loodgieter | 9 | 1 | 1 | 2 | 0 |
-| hovenier | 11 | 3 | 3 | 1 | 0 |
-| zonnepanelen | 4 | 1 | 0 | 0 | 0 |
-| meubelmaker | 27 | 6 | 1 | 3 | 0 |
-| makelaar | 52 | 19 | 3 | 10 | 0 |
-| dakdekker | 15 | 6 | 1 | 0 | 0 |
+| aannemersbedrijf | 52 | 34 | 9 | 14 | 0 |
+| schilder | 22 | 12 | 2 | 1 | 0 |
+| loodgieter | 8 | 2 | 1 | 2 | 0 |
+| hovenier | 10 | 4 | 3 | 1 | 0 |
+| zonnepanelen | 3 | 2 | 0 | 0 | 0 |
+| meubelmaker | 26 | 7 | 1 | 3 | 0 |
+| makelaar | 48 | 23 | 3 | 10 | 0 |
+| dakdekker | 13 | 8 | 1 | 0 | 0 |
 | slotenmaker | 5 | 1 | 0 | 0 | 0 |
-| elektricien | 8 | 2 | 1 | 0 | 0 |
+| elektricien | 6 | 4 | 1 | 0 | 0 |
 | verhuisbedrijf | 3 | 0 | 0 | 0 | 0 |
-| schoonmaakbedrijf | 14 | 6 | 1 | 0 | 0 |
+| schoonmaakbedrijf | 12 | 8 | 1 | 0 | 0 |
 
 ## A. Adres op hun eigen site is anders, maar wel in Nijmegen: neem ik over (26)
 
@@ -65,45 +67,11 @@ Verhuisd naar Wijchen, Beuningen of verder. Ze blijven staan voor de latere gids
 | Mhv Schilderwerken | schilder | Meijhorst 1420, 6537 JP | Zuid Oostwal 2, 6591 DK Gennep |
 | Donker Groen | hovenier | Roggeweg 10, 6534 AJ | Harste 5, 8602 JX Sneek |
 
-## C. Geen vaste plek in Nijmegen: houden of weghalen? (33)
+## C. Geen vaste plek in Nijmegen: houden of weghalen? (0)
 
 Vaak zzp'ers die vanuit huis of bij de klant werken. Mijn voorstel: **houden**, maar zonder adres op de kaart, alleen met de plaats. Of zeg "C weg".
 
-| Bedrijf | Categorie | Opmerking uit de scan |
-|---|---|---|
-| Aannemersbedrijf Peter Van Woezik | aannemersbedrijf | Geen adres op de site vermeld; Rembrandtstraat 15 kan een thuisadres zijn, daarom niet in de tekst genoemd. Subpagina's (nieuwbouw, meubelmakerij e.d.) niet aangeleverd; inhoud all |
-| Betaalbare Badkamers Bv / Nijmegen | aannemersbedrijf | Site noemt geen adres, alleen werkgebied Nijmegen-Arnhem. Adres Coldplaystraat 8 in Lent kan een thuisadres zijn; niet in de tekst genoemd. BTW-ID verschilt tussen pagina's (B01 vs |
-| Dennesenbouw B.v. | aannemersbedrijf | De site noemt geen straatadres, telefoonnummer of openingstijden; alleen 'Nijmegen'. Of Meijhorst 5022 een kantoor of thuisadres is, is niet te controleren. De testimonial ('Jan Ja |
-| Ek Afbouw En Montage | aannemersbedrijf | Site noemt geen straatadres, alleen 'Regio Nijmegen'; Fenikshof 53 lijkt een thuisadres, daarom niet in de tekst. Contactpagina heeft titel 'Vesting Bouw' (sjabloon?). Klantreviews |
-| Erkan Klussenbedrijf / Aannemer Nijmegen | aannemersbedrijf | De site noemt geen straatadres; Roggeweg 28q is niet te controleren. Dakwerk wordt genoemd in de intro en een review, maar staat niet bij de diensten, daarom weggelaten. De reviews |
-| Exklusief | aannemersbedrijf | De website is verouderd (er staat nog een faxnummer op) en noemt alleen een paar diensten. Op de homepage staat geen adres, dus het adres Hatertseweg 293 is niet gecontroleerd. Of  |
-| Klussenbedrijf Mint | aannemersbedrijf | Op de homepage staat geen straatadres, alleen 'gevestigd in Nijmegen'. Het adres Hatertseweg 315 kon ik dus niet controleren en het kan een thuisadres zijn, daarom staat het niet i |
-| Laurens Evers Timmerwerk | aannemersbedrijf | Geen adres op de site gevonden; het adres Dominicanenstraat 88 lijkt mogelijk een thuisadres en is daarom niet in de tekst genoemd. 'Gratis kennismaking' afgeleid van 'geheel vrijb |
-| Ms-stoffering | aannemersbedrijf | Vloerenlegger/stoffeerder; geen passende specifieke categorie, daarom aannemersbedrijf. Geen adres op de site; Horstacker 1756 lijkt mogelijk een thuisadres, daarom niet in de teks |
-| Project Uniek | aannemersbedrijf | Project Uniek voert zelf geen bouwwerk uit. Het is een bureau voor bouwmanagement, advies en directievoering dat opdrachtgevers begeleidt. Ik heb 'aannemersbedrijf' gekozen omdat h |
-| Psb Montage | aannemersbedrijf | Geen adres op de site vermeld; Jacques Tatistraat 3 lijkt een woonadres (eenmanszaak), daarom niet in de tekst genoemd. Site noemt zowel '18 jaar' als '40+ jaren ervaring als vakma |
-| Schmitt Bouw | aannemersbedrijf | Er staat geen adres op de site. Smaragdstraat 37 is mogelijk een thuisadres. De projectenpagina is leeg. De site noemt telefonische bereikbaarheid van 07:00 tot 18:00 uur, maar nie |
-| Tidahome | aannemersbedrijf | Op de site staat geen straatadres, alleen 'Nijmegen'. Ligusterstraat 27 lijkt een thuisadres, daarom niet in de tekst genoemd. De projectbeschrijvingen op de site bevatten placehol |
-| Wgd Bouw | aannemersbedrijf | De site vermeldt geen adres; het adres Nieuwe Mollenhutseweg 119 kon niet worden bevestigd. Of het een bedrijfspand of thuisadres is, is onduidelijk. 'Aanbouw en dakkapel' gekozen  |
-| Dijo Schilderwerken | schilder | Het adres Sint Jacobslaan 345 staat niet op de site; mogelijk een thuisadres, daarom niet in de tekst genoemd. Kenmerk 'monumenten' gebaseerd op 'een monumentaal pand' en molenproj |
-| Klusbedrijf Klasse | schilder | Naam in onze gids is 'Klusbedrijf Klasse', op de site 'Schildersbedrijf Klasse'. Geen adres op de site; Horstacker 1104 lijkt een woonadres (thuisadres), daarom niet in de tekst ge |
-| Neo Schilderwerken | schilder | Website stucvlies.nl is een onderdeel van Neo Schilderwerken; de site richt zich alleen op stucvlies/glasvezelbehang, overig schilderwerk wordt niet genoemd. Geen straatadres op de |
-| Schilder.eco | schilder | Geen adres op de site gevonden; Koninginnelaan 99 lijkt mogelijk een thuisadres (eenmanszaak van Arthur Wubben), daarom niet in de tekst genoemd. Alleen de homepage was beschikbaar |
-| Stukadoorsbedrijf Werts | schilder | De site vermeldt geen adres; Harpstraat 14 lijkt een thuisadres en is daarom niet in de tekst genoemd. Er staan ook geen openingstijden op de site. Het bedrijf wordt alleen telefon |
-| W.p. Bartels Installatiebedrijf | loodgieter | De website bestaat uit één pagina met weinig informatie. Er staan geen adres, contactgegevens of openingstijden op. In de metatags staan ook 'dakbedekking' en 'leasen', maar die di |
-| Invo Tuinontwerp En Advies | hovenier | Ontwerp- en adviesbureau, voert zelf geen aanleg uit (bemiddelt wel bij uitvoering en directievoering). Geen adres op de site; Veldstraat 4E kon niet worden gecontroleerd en is mog |
-| Ariens Solar | zonnepanelen | Op de site heet het bedrijf Ariens Energie, niet Ariens Solar. Geen adres op de gelezen homepage, dus het adres Keizer Karelplein 32Q kon niet worden bevestigd. Het bedrijf richt z |
-| Rene Lansink Meubels Op Maat | meubelmaker | Alleen de homepagina bevatte inhoud; geen adres, openingstijden of contactgegevens gevonden. Adres Van 't Santstraat 62 kon niet op de site worden bevestigd; mogelijk woonadres met |
-| Inter-france | makelaar | Site noemt geen adres in Nijmegen; onduidelijk of Hogelandseweg 88 een kantoor met balie of een (thuis)adres/postadres is. Werkgebied is uitsluitend Frankrijk. Site claimt 'belangr |
-| Makelaardien | makelaar | Ik heb alleen de homepage kunnen lezen, omdat de limiet voor het ophalen van pagina's bereikt was. De pagina's Over ons, Verkoop, Aankoop en Contact heb ik dus niet gezien. Daardoo |
-| Nimma Vastgoed & Beheer | makelaar | Geen adres op de site gevonden; adres Heyendaalseweg 207 niet te bevestigen. Site noemt zowel 'meer dan 15 jaar' als 'meer dan 10 jaar' ervaring. E-mailadres in de kop bevat een ty |
-| Novio Living | makelaar | Geen adres of contactgegevens op de gelezen pagina's; adres Kwakkenbergweg 94 niet bevestigd en mogelijk een thuisadres. Site toont copyright 2020 en bevat placeholdertekst (lorem- |
-| Ehbd | dakdekker | Site noemt geen straatadres, alleen 'Nijmegen'; ons adres (De Meeuwse Acker 2026A) staat niet op de site en kan een thuis- of bedrijfsverzamelpand-adres zijn, daarom niet in de tek |
-| Hendriks Dakbedekkingen En Onderhoud | dakdekker | Site noemt geen adres; De Kluijskamp 1412 lijkt een woonadres (zzp'er), dus thuisadres niet in de tekst genoemd. 'Gratis kennismaking' gekozen op basis van 'gratis dak-inspectie'.  |
-| Ariëns solartechniek | elektricien | De opgegeven URL arienssolar.nl leidt naar ariensenergie.nl (Ariens Energie); naam wijkt af van 'Ariëns solartechniek'. De site noemt geen adres in Nijmegen; Keizer Karelplein 32Q  |
-| J.s.a. Elektrotechniek | elektricien | Geen adres op de site vermeld; het adres de Voorstenkamp 1209 (Dukenburg) lijkt een woonadres, daarom niet in de tekst genoemd. Alleen een mobiel nummer als contact. |
-| Boschman Schoonmaakbedrijf | schoonmaakbedrijf | Geen adres op de site; Opaalstraat 41 lijkt een thuisadres van een eenmanszaak, daarom niet in de tekst genoemd. Zonnepanelenreiniging is een van de diensten, geen installatie. |
-| Honigh Glasbewassing En Schoonmaak | schoonmaakbedrijf | Geen adres op de site; het adres Zwanenveld 7380 kan een thuisadres zijn, daarom niet in de tekst genoemd. Werkzaamhedenpagina niet aangeleverd, dus details over kluswerk beperkt. |
+_Geen._
 
 ## D. Automatisch weggehaald na de scan
 
@@ -112,6 +80,7 @@ Ter info. Zet je een reden terug, dan komen die bedrijven weer in de gids.
 | Reden | Aantal |
 |---|---|
 | website niet uit te lezen, liever geen halve gegevens | 44 |
+| redactie: geen vaste plek in Nijmegen | 33 |
 | te weinig informatie op de eigen website | 13 |
 | geen bedrijf voor de gids | 12 |
 | gestopt of verhuisd volgens de eigen website | 3 |

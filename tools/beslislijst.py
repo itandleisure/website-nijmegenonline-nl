@@ -50,6 +50,7 @@ VRAGEN = {
 
 # Wat Frans besloot, komt bovenaan de lijst
 BESLUIT = {
+    "wonen": "**Besluit van Frans (24-10-2026):** C weg, de rest volgens het voorstel (A en B adres van de eigen site, D opnieuw proberen).",
     "zakelijk": "**Besluit van Frans (24-10-2026):** A en C volgens het voorstel. B blijft staan, met het adres van hun eigen site: "
                 "straks komen er ook gidsen voor Groesbeek, Wijchen, Beuningen en Malden. G volgens het voorstel.",
 }
