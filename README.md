@@ -108,9 +108,8 @@ komende 30 dagen, met foto), `/nieuwsbrief/nieuws.xml` (nieuwste berichten) en `
 evenementen van de komende 2 weken, met foto). De foto's staan als jpg in `assets/nieuwsbrief/`,
 omdat Outlook geen webp toont. Tot de livegang wijzen de feeds naar de testsite.
 
-Aanmelden: het ingesloten MailerLite-formulier `dWgHCy` staat in de footer (`partials/footer.html`, met het
-MailerLite-script, account 364874) en een knop in de zijbalk opent het pop-upformulier `qG49m3`. Tekst en kleuren
-van de formulieren pas je aan in MailerLite zelf.
+Aanmelden: een knop in de zijbalk opent het pop-upformulier `qG49m3` van MailerLite (het MailerLite-script,
+account 364874, staat in `partials/footer.html`). Tekst en kleuren van het formulier pas je aan in MailerLite zelf.
 
 ## Nieuws
 

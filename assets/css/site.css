@@ -113,8 +113,6 @@ section h2 { margin: 0 0 20px; font-size: 1.5rem; }
 
 footer { background: var(--donkerblauw); color: #cfe0f0; padding: 32px 0; font-size: 0.9rem; }
 footer a { color: var(--wit); }
-.nieuwsbrief-aanmelden { max-width: 560px; margin: 0 0 28px; padding-bottom: 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
-.nieuwsbrief-aanmelden .ml-form-embedWrapper { margin-left: 0 !important; }
 footer ul { list-style: none; padding: 0; margin: 0 0 12px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
 
 @media (max-width: 600px) {
