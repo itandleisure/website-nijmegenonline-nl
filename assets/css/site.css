@@ -380,6 +380,12 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .kaartpunt span { display: block; width: 22px; height: 22px; box-sizing: border-box; border-radius: 50%; background: var(--groen); border: 3px solid var(--wit); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35); transition: transform 0.15s ease; }
 .kaartpunt:hover span, .kaartpunt:focus span { transform: scale(1.2); }
 .kaartbol span { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border-radius: 50%; background: var(--donkerblauw); color: var(--wit); font-weight: 700; font-size: 0.9rem; border: 3px solid rgba(255, 255, 255, 0.85); box-shadow: 0 0 0 4px rgba(18, 73, 124, 0.25); box-sizing: border-box; }
+/* Partners op de kaart: groot, met foto, altijd zichtbaar (niet in een bolletje) */
+.kaartpartner { display: flex; flex-direction: column; align-items: center; }
+.kaartpartner__foto { display: block; width: 56px; height: 56px; box-sizing: border-box; border-radius: 50%; overflow: hidden; background: var(--rood); border: 4px solid var(--rood); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); transition: transform 0.15s ease; }
+.kaartpartner__foto img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid var(--wit); box-sizing: border-box; }
+.kaartpartner__label { margin-top: -8px; padding: 1px 7px; border-radius: 999px; background: var(--rood); color: var(--wit); font-size: 0.7rem; font-weight: 700; line-height: 1.4; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
+.kaartpartner:hover .kaartpartner__foto, .kaartpartner:focus .kaartpartner__foto { transform: scale(1.1); }
 .gidskaart .leaflet-popup-content { font-family: inherit; font-size: 0.95rem; }
 .gidskaart .leaflet-popup-content a { font-weight: 700; }
 
@@ -454,3 +460,15 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 /* Huidige foto bij "Dit is mijn bedrijf" (assets/js/formulier.js) */
 .huidigefoto { display: flex; gap: 12px; align-items: center; margin: 4px 0 8px; font-size: 0.9rem; color: var(--grijs); }
 .huidigefoto img { width: 120px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; flex: none; }
+
+/* Gidsen: carrousel met bedrijven uit de bedrijvengids */
+.gidscarrousel__rij { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 24px) / 3); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-top: 14px; padding-bottom: 4px; }
+.gidscarrousel__rij::-webkit-scrollbar { display: none; }
+.gidscarrousel__rij > .bedrijfkaart { scroll-snap-align: start; }
+.gidscarrousel .bedrijfkaart--uitgelicht { flex-direction: column; }
+.gidscarrousel .bedrijfkaart--uitgelicht img { width: 100%; aspect-ratio: 16 / 9; }
+.gidscarrousel__onder { display: flex; align-items: center; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.gidscarrousel__onder .knop { margin-left: auto; }
+.gidscarrousel__knop { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--rand); background: var(--wit); color: var(--donkerblauw); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.gidscarrousel__knop:hover, .gidscarrousel__knop:focus-visible { border-color: var(--groen); color: var(--groen); }
+@media (max-width: 720px) { .gidscarrousel__rij { grid-auto-columns: 85%; } }
