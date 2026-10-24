@@ -5024,6 +5024,26 @@
   "tekst": "<h2>Pubquiz bij Café ’t Haantje 🧠🍻</h2>\n        <p><strong>Zaterdag 14 november 2026 | Aanvang 20.30 uur</strong></p>\n        <p>Weet jij nét dat ene antwoord waar de rest van je team geen idee van heeft? Dan komt dat goed uit, want op zaterdag 10 oktober is het weer tijd voor de <strong>maandelijkse Pubquiz bij Café ’t Haantje</strong>!</p>\n        <p>Stel een team samen van maximaal vier deelnemers en maak je klaar voor een gezellige avond vol vragen, verrassende weetjes en natuurlijk de nodige gezonde competitie. Van algemene kennis tot vragen waarbij je diep in je geheugen moet graven: samen weet je altijd meer.</p>\n        <h3>Meedoen?</h3>\n        <p>Aanmelden kan aan de bar van Café ’t Haantje. Geef daarbij je <strong>teamnaam en het aantal deelnemers</strong> door. Het aantal gereserveerde tafels is beperkt, dus wacht niet te lang met inschrijven.</p>\n        <p>Heb je een tafel gereserveerd? Zorg dan dat je op tijd aanwezig bent. <strong>Om 20.15 uur worden niet-bezette gereserveerde tafels door de quizmaster vrijgegeven.</strong></p>\n        <p>Kun je onverwacht niet komen of verandert het aantal deelnemers? Geef dit dan zo snel mogelijk door, zodat iemand anders van de beschikbare plek gebruik kan maken.</p>\n        <p>📅 <strong>Zaterdag 14 november 2026</strong><br/>\n        🕣 <strong>Aanvang: 20.30 uur</strong><br/>\n        👥 <strong>Maximaal 4 deelnemers per team</strong><br/>\n        📍 <strong>Café ’t Haantje, Nijmegen</strong></p>\n        <p>Verzamel je slimste vrienden, bedenk alvast een ijzersterke teamnaam en ga voor de eeuwige roem tijdens de Pubquiz! 🍺🏆</p>\n        <p><em>Datum en programma onder voorbehoud van wijzigingen.</em></p>"
  },
  {
+  "slug": "de-wereld-is-klein",
+  "titel": "De wereld is klein",
+  "start": "2026-11-21T17:30",
+  "eind": "2026-11-21T20:00",
+  "locatie": "Brebl",
+  "adres": "Waalbandijk 14, 6541 AJ Nijmegen",
+  "afbeelding": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/de-wereld-is-klein.webp",
+  "alt": "De wereld is klein",
+  "uitgelicht": false,
+  "aanbieder": "brebl",
+  "link": "",
+  "terugkerend": false,
+  "gepubliceerd": "2026-10-24",
+  "tekst": "<p>De Mawteni Foundation organiseert opnieuw het multiculturele concert De wereld is klein, dit keer in Brebl in Nijmegen. Artiesten met wortels in verschillende landen staan samen op één podium en brengen een avond vol muziek, zang en dans.</p>\n<p>Op het programma staan onder anderen Mouhammed &amp; Mokhtar, Hanrui, Patricia, Zlata Pereverzeva, Emanuel Pessanha &amp; Manito, Judith Lammers, Layba Diawara, Ilaf Hassan en Forgotten Pieces Collaged. Ron Vervuurt presenteert de avond. Het concert wil laten horen en zien hoe muziek en ontmoeting mensen uit verschillende culturen met elkaar verbinden.</p>\n<p>De voorstelling wordt georganiseerd in samenwerking met cultuurhuis De Lindenberg en de Haella Stichting. De entree is 12,50 euro, inclusief een hapje. Kaartjes zijn te koop via de website van De Lindenberg.</p>",
+  "aanmelding": "e662f910",
+  "website": "https://www.delindenberg.com/agenda/de-wereld-is-klein",
+  "contactmail": "",
+  "telefoon": ""
+ },
+ {
   "slug": "tanz-durch-die-epochen-kamerconcert-met-viool-en-accordeon",
   "titel": "“Tanz durch die Epochen” – Kamerconcert met viool en accordeon",
   "start": "2026-11-21T18:00",
