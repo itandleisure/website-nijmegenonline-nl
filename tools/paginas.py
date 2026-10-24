@@ -490,6 +490,92 @@ def vacatures(meta):
     return pagina("Vacatures", meta.get("rank_math_description", ""), "vacatures", "Vacatures", inhoud)
 
 
+# Markten en openingstijden: oude pagina's met veel bezoekers, opnieuw geschreven (gecontroleerd 24-10-2026 bij
+# nijmegen.nl: weekmarkt op maandag en zaterdag, de vier wijkmarkten met hun tijden, geen markt in de Vierdaagseweek)
+GECONTROLEERD = "oktober 2026"
+MARKTEN_CENTRUM = [
+    ("Maandag", "Grote Markt, Burchtstraat en Augustijnenstraat", "9.00 tot 17.00 uur (oktober t/m maart tot 16.00 uur)", "warenmarkt met kleding, stoffen en meer"),
+    ("Maandag", "Kelfkensbos", "9.00 tot 14.00 uur", "groente, fruit, vis en kaas"),
+    ("Maandag", "rond de Stevenskerk", "9.00 tot 14.00 uur", "Lusemert: vlooienmarkt met curiosa"),
+    ("Zaterdag", "Grote Markt, Burchtstraat en Augustijnenstraat", "9.00 tot 17.00 uur (oktober t/m maart tot 16.00 uur)", "warenmarkt"),
+    ("Zaterdag", "Kelfkensbos", "8.30 tot 14.00 uur", "groente, fruit en biologische boerenmarkt"),
+    ("Zaterdag", "Mariënburgplein", "10.00 tot 17.00 uur", "boekenmarkt; de laatste zaterdag van de maand ook kunst en curiosa"),
+]
+MARKTEN_WIJKEN = [
+    ("Dinsdag", "Leuvensbroek", "winkelcentrum Leuvensbroek", "8.30 tot 14.00 uur"),
+    ("Woensdag", "Hatert", "bij winkelcentrum Hatert", "ochtend"),
+    ("Woensdag", "Lent", "Frankrijkstraat", "8.00 tot 13.00 uur"),
+    ("Donderdag", "Heseveld", "Daniëlsplein", "9.00 tot 13.00 uur"),
+    ("Vrijdag", "Meijhorst", "winkelcentrum Meijhorst", "9.00 tot 13.00 uur"),
+]
+MARKTEN_REGIO = [
+    ("Bemmel", "Marktplein", "donderdagmiddag"),
+    ("Beuningen", "Markt", "dinsdagochtend"),
+    ("Gendt", "Julianaplein", "vrijdagmiddag"),
+    ("Groesbeek", "Spoorlaan", "dinsdagochtend"),
+    ("Huissen", "De Markt", "vrijdagmiddag"),
+    ("Wijchen", "Marktplein", "donderdagochtend"),
+]
+WINKELTIJDEN = [
+    ("Maandag", "12.00 tot 18.00 uur"),
+    ("Dinsdag t/m vrijdag", "10.00 tot 18.00 uur (een deel van de winkels vanaf 9.30 uur)"),
+    ("Donderdag", "koopavond tot 21.00 uur"),
+    ("Zaterdag", "10.00 tot 17.00 uur (veel winkels tot 18.00 uur)"),
+    ("Zondag", "koopzondag, 12.00 tot 17.00 uur"),
+]
+
+
+def tabel(koppen, rijen):
+    regels = ['        <div class="tabel-scroll"><table class="tijdentabel">', "          <tr>%s</tr>" % "".join("<th>%s</th>" % esc(k) for k in koppen)]
+    regels += ["          <tr>%s</tr>" % "".join("<td>%s</td>" % esc(x) for x in r) for r in rijen]
+    return "\n".join(regels + ["        </table></div>"])
+
+
+def markten(meta):
+    inhoud = """        <h1>Markten in en om Nijmegen</h1>
+        <div class="inhoud-tekst">
+        <p class="pagina__intro">Verse groente, een praatje met de visboer of snuffelen tussen oude spullen: in Nijmegen is er bijna elke dag wel ergens een markt. Op maandag en zaterdag staat de grote weekmarkt in de binnenstad, en door de week zijn er kleinere markten in de wijken.</p>
+        <h2>Weekmarkt in het centrum: maandag en zaterdag</h2>
+        <p>De markt in de binnenstad loopt van de Grote Markt via de Burchtstraat tot aan de Augustijnenstraat. Op het Kelfkensbos staan de kramen met groente, fruit en andere verse producten.</p>
+{centrum}
+        <p>Tijdens de Vierdaagseweek in juli is er geen warenmarkt in de binnenstad. Door de herinrichting van het Kelfkensbos kan de markt daar af en toe tijdelijk ergens anders staan.</p>
+        <h2>Markten in de wijken</h2>
+        <p>Woon je niet in het centrum? Dan is er misschien een markt bij jou om de hoek. Dit zijn kleine markten met een paar kramen, vaak bij een winkelcentrum.</p>
+{wijken}
+        <h2>Markten in de buurt van Nijmegen</h2>
+        <p>Ook in de dorpen en steden rond Nijmegen is er elke week markt:</p>
+{regio}
+        <h2>Bijzondere markten</h2>
+        <p>Naast de weekmarkten zijn er het hele jaar door themamarkten, zoals brocantemarkten, boekenmarkten, makersmarkten en in december de kerstmarkten. Die vind je in onze <a href="../nijmegen-evenementen-overzicht/">agenda</a>. Kijk voor december ook bij de <a href="../kerstmarkten-in-nijmegen/">kerstmarkten in Nijmegen</a>.</p>
+        <p>Liever tweedehands winkelen buiten de markt om? Lees dan onze tips voor <a href="../parels-vinden-in-nijmeegse-kringloopwinkels/">kringloopwinkels in Nijmegen</a>.</p>
+        <p class="formulier__hint">Tijden en plaatsen gecontroleerd in {datum}. Ze kunnen veranderen, bijvoorbeeld rond feestdagen. Klopt er iets niet meer? <a href="../kom-in-contact/">Laat het ons weten</a>.</p>
+        </div>""".format(centrum=tabel(("Dag", "Waar", "Tijd", "Wat"), MARKTEN_CENTRUM),
+                         wijken=tabel(("Dag", "Wijk", "Waar", "Tijd"), MARKTEN_WIJKEN),
+                         regio=tabel(("Plaats", "Waar", "Wanneer"), MARKTEN_REGIO), datum=GECONTROLEERD)
+    return pagina("Markten in en om Nijmegen", meta.get("rank_math_description", ""), "markten-nijmegen", "Markten in en om Nijmegen", inhoud)
+
+
+def openingstijden(meta):
+    inhoud = """        <h1>Openingstijden centrum Nijmegen</h1>
+        <div class="inhoud-tekst">
+        <p class="pagina__intro">Wanneer zijn de winkels in de binnenstad van Nijmegen open? Hier lees je de gewone openingstijden, wanneer de koopavond is en hoe het zit met de koopzondag.</p>
+        <h2>Openingstijden winkels in de binnenstad</h2>
+{tijden}
+        <p>Dit zijn de tijden die de meeste winkels aanhouden. Elke winkel bepaalt zelf zijn tijden, dus kijk voor een bepaalde winkel even op de eigen website. Supermarkten, horeca en grote ketens zijn vaak langer open.</p>
+        <h2>Koopavond op donderdag</h2>
+        <p>Op donderdagavond is het koopavond. Veel winkels in het centrum zijn dan open tot 21.00 uur.</p>
+        <h2>Elke zondag koopzondag</h2>
+        <p>Wist je dat het in Nijmegen elke zondag koopzondag is? De winkels in de binnenstad zijn dan meestal open van 12.00 tot 17.00 uur. Lekker shoppen en daarna een terrasje pakken op de Grote Markt of het Plein 1944.</p>
+        <h2>Markt in het centrum</h2>
+        <p>Op maandag en zaterdag is er markt in de binnenstad, van de Grote Markt tot de Augustijnenstraat en op het Kelfkensbos. Alle dagen en tijden staan in het overzicht van de <a href="../markten-nijmegen/">markten in en om Nijmegen</a>.</p>
+        <h2>Handig voor je bezoek</h2>
+        <p>Kom je met de auto? Lees dan eerst onze tips over <a href="../parkeren-in-nijmegen-met-een-aantal-slimme-tips/">parkeren in Nijmegen</a>. Op zoek naar leuke winkels? Kijk bij <a href="../thema/winkelen-in-nijmegen/">winkelen in Nijmegen</a> of in de <a href="../bedrijvengids/">bedrijvengids</a>.</p>
+        <p class="formulier__hint">Gecontroleerd in {datum}. Rond feestdagen kunnen de tijden afwijken.</p>
+        </div>""".format(tijden=tabel(("Dag", "Openingstijden"), WINKELTIJDEN), datum=GECONTROLEERD)
+    return pagina("Openingstijden centrum Nijmegen", meta.get("rank_math_description", "").strip('"'), "openingstijden-centrum-nijmegen",
+                  "Openingstijden centrum Nijmegen", inhoud)
+
+
 def schrijf(pad, tekst):
     map_ = ROOT / pad
     map_.mkdir(parents=True, exist_ok=True)
@@ -520,6 +606,8 @@ def main(bron):
     schrijf("bedrijf-aanmelden", bedrijf_aanmelden(sorted({html.unescape(c) for c in re.findall(
         r'<category domain="listdom-category" nicename="[^"]*"><!\[CDATA\[([^\]]*)', lijst)})))
     schrijf("evenement-aanmelden", evenement_aanmelden())
+    schrijf("markten-nijmegen", markten(pag["markten-nijmegen"][2]))
+    schrijf("openingstijden-centrum-nijmegen", openingstijden(pag["openingstijden-centrum-nijmegen"][2]))
     print("Pagina's: kom-in-contact, adverteren, vergelijking, vacatures (%d)%s"
           % (len(VACATURES), "" if pdf.is_file() else "; mediakit nog niet lokaal"))
 
