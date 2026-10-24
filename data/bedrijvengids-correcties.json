@@ -1,5 +1,5 @@
 {
- "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg). Beauty en wellness: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Uitgaan: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Eten en drinken (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Sport (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Gezondheid en welzijn: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres).",
+ "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg). Beauty en wellness: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Uitgaan: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Eten en drinken (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Sport (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Gezondheid en welzijn: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Overnachten en Winkelen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres).",
  "the-kettlebell-club": {
   "adres": "Groenestraat 215",
   "postcode": "6531 HH",
@@ -2685,5 +2685,455 @@
   "plaats": "Nijmegen",
   "lat": "51.829614",
   "lon": "5.864575"
+ },
+ "mercure": {
+  "adres": "Stationsplein 29",
+  "postcode": "6512 AB",
+  "plaats": "Nijmegen",
+  "lat": "51.842152",
+  "lon": "5.852793"
+ },
+ "wake-and-walk": {
+  "geen_adres": true
+ },
+ "bed-breakfast-hunnerzijds-een-oase-van-rust-in-nijmegen-oost": {
+  "geen_adres": true
+ },
+ "de-smedery": {
+  "adres": "Ooysedijk 5–9",
+  "postcode": "6522 KT",
+  "plaats": "Nijmegen",
+  "lat": "51.847580",
+  "lon": "5.877526"
+ },
+ "het-laauwik": {
+  "geen_adres": true
+ },
+ "pipowagen-lent": {
+  "geen_adres": true
+ },
+ "waalcamping-vierdaagsecamping": {
+  "adres": "Winkelsteegseweg 209",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "51.815083",
+  "lon": "5.815799"
+ },
+ "art": {
+  "geen_adres": true
+ },
+ "ecco": {
+  "geen_adres": true
+ },
+ "errea-sport-nederland-groenewoudseweg": {
+  "adres": "Tarweweg 7-S",
+  "postcode": "6534 AM",
+  "plaats": "Nijmegen",
+  "lat": "51.818885",
+  "lon": "5.821635"
+ },
+ "festifit-festivaloutfit-nl": {
+  "geen_adres": true
+ },
+ "hunkemoller-zwanenveld": {
+  "geen_adres": true
+ },
+ "jd-sports": {
+  "geen_adres": true
+ },
+ "keizer-kicks": {
+  "adres": "Willemsweg 75",
+  "postcode": "6531 DD",
+  "plaats": "Nijmegen",
+  "lat": "51.836150",
+  "lon": "5.849610"
+ },
+ "lady-habits": {
+  "adres": "Zellersacker 1523",
+  "postcode": "6546 HL",
+  "plaats": "Nijmegen",
+  "lat": "51.832918",
+  "lon": "5.785951"
+ },
+ "merinoos": {
+  "geen_adres": true
+ },
+ "mooie-merken": {
+  "geen_adres": true
+ },
+ "ms-mode": {
+  "geen_adres": true
+ },
+ "name-it-nijmegen": {
+  "geen_adres": true
+ },
+ "nappato-leather": {
+  "adres": "Moenenstraat 20",
+  "postcode": "6511 LZ",
+  "plaats": "Nijmegen",
+  "lat": "51.844803",
+  "lon": "5.865384"
+ },
+ "neokleertjes": {
+  "geen_adres": true
+ },
+ "new-yorker": {
+  "geen_adres": true
+ },
+ "proforto-b-v": {
+  "adres": "Energieweg 9a",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "51.848499",
+  "lon": "5.830462"
+ },
+ "purdey": {
+  "geen_adres": true
+ },
+ "redfox-private-label": {
+  "geen_adres": true
+ },
+ "rt-brand-store": {
+  "geen_adres": true
+ },
+ "shoeandme-bv": {
+  "geen_adres": true
+ },
+ "short-supply": {
+  "geen_adres": true
+ },
+ "stuif-zo": {
+  "adres": "Lange Hezelstraat 97",
+  "postcode": "6511 CE",
+  "plaats": "Nijmegen",
+  "lat": "51.848229",
+  "lon": "5.857571"
+ },
+ "takko-fashion-zwanenveld": {
+  "geen_adres": true
+ },
+ "tenzin-tibet-huis-lange-hezelstraat": {
+  "geen_adres": true
+ },
+ "the-sting": {
+  "adres": "Molenstraat 48-52",
+  "postcode": "6511 HE",
+  "plaats": "Nijmegen",
+  "lat": "51.844425",
+  "lon": "5.862473"
+ },
+ "vanharen-zwanenveld": {
+  "geen_adres": true
+ },
+ "wonder-baby-and-kids-kindness": {
+  "adres": "Lange Hezelstraat 86",
+  "postcode": "6511 CM",
+  "plaats": "Nijmegen",
+  "lat": "51.848304",
+  "lon": "5.858106"
+ },
+ "zeeman-couwenbergstraat": {
+  "adres": "Couwenbergstraat 148",
+  "postcode": "6535 RX",
+  "plaats": "Nijmegen",
+  "lat": "51.807325",
+  "lon": "5.824011"
+ },
+ "zeeman-dommer-van-poldersveldtweg": {
+  "adres": "Dommer v. Poldersveldtweg 267",
+  "postcode": "6523 CW",
+  "plaats": "Nijmegen",
+  "lat": "51.833919",
+  "lon": "5.882002"
+ },
+ "bert-and-co-cargadoorweg": {
+  "adres": "Holtakkerweg 7",
+  "postcode": "6537 TN",
+  "plaats": "Nijmegen",
+  "lat": "51.821956",
+  "lon": "5.785461"
+ },
+ "woodstock-wonen": {
+  "adres": "Gerard Noodtstraat 4",
+  "postcode": "6511 SW",
+  "plaats": "Nijmegen",
+  "lat": "51.845434",
+  "lon": "5.871227"
+ },
+ "akkon-sleep": {
+  "adres": "Hogelandseweg 77",
+  "postcode": "6545 AB",
+  "plaats": "Nijmegen",
+  "lat": "51.844016",
+  "lon": "5.802905"
+ },
+ "d-eco": {
+  "adres": "Energieweg 2",
+  "postcode": "6658 AD",
+  "plaats": "Beneden-Leeuwen",
+  "lat": "51.886741",
+  "lon": "5.533327"
+ },
+ "gezelliginmijnhuis": {
+  "geen_adres": true
+ },
+ "kwantum": {
+  "adres": "Wychenseweg 182",
+  "postcode": "6538 SX",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "label33verlichting": {
+  "adres": "Molenstraat 20",
+  "postcode": "6661 ED",
+  "plaats": "Elst",
+  "lat": "51.920516",
+  "lon": "5.843892"
+ },
+ "leddirect-b-v": {
+  "geen_adres": true
+ },
+ "loomi-club": {
+  "geen_adres": true
+ },
+ "lundia-showroom": {
+  "adres": "Doctor de Blécourtstraat 9",
+  "postcode": "6541 DD",
+  "plaats": "Nijmegen",
+  "lat": "51.838628",
+  "lon": "5.816768"
+ },
+ "maan-matras": {
+  "adres": "Industriestraat 7",
+  "postcode": "6851 EM",
+  "plaats": "Huissen",
+  "lat": "51.914155",
+  "lon": "5.924798"
+ },
+ "marskramer": {
+  "geen_adres": true
+ },
+ "mauron": {
+  "adres": "Westkanaaldijk 445 A",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "51.846998",
+  "lon": "5.815105"
+ },
+ "montel": {
+  "adres": "Wychenseweg 164",
+  "postcode": "6538 SX",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "they-and-me": {
+  "adres": "Laagveld 10",
+  "postcode": "5431 NX",
+  "plaats": "Cuijk",
+  "lat": "51.720840",
+  "lon": "5.871247"
+ },
+ "velderhof-nijmegen-meubelwinkel-relaxstoelen-sta-op-stoelen-relaxbanken": {
+  "adres": "Wijchenseweg 180",
+  "postcode": "6538 SX",
+  "plaats": "Nijmegen",
+  "lat": "51.825132",
+  "lon": "5.801295"
+ },
+ "woonvloeren-nl": {
+  "adres": "Kerkenbos 10-111",
+  "postcode": "6546 BJ",
+  "plaats": "Nijmegen",
+  "lat": "51.826098",
+  "lon": "5.778728"
+ },
+ "goudsmid-in-nijmegen": {
+  "geen_adres": true
+ },
+ "goudsmid-ronald-reijnen": {
+  "geen_adres": true
+ },
+ "hayko-jewels": {
+  "geen_adres": true
+ },
+ "mieke-stikkelbroeck": {
+  "geen_adres": true
+ },
+ "bloembinderij-hatert": {
+  "adres": "Hatertseweg 831",
+  "postcode": "6535 RX",
+  "plaats": "Nijmegen",
+  "lat": "51.807987",
+  "lon": "5.823970"
+ },
+ "de-bloemstylist": {
+  "geen_adres": true
+ },
+ "flowers-insight-sint-jacobslaan": {
+  "adres": "Stationsplein 6-G",
+  "postcode": "6512 AB",
+  "plaats": "Nijmegen",
+  "lat": "51.843163",
+  "lon": "5.853089"
+ },
+ "het-molentje": {
+  "adres": "Berg & Dalseweg 340",
+  "postcode": "6522 CR",
+  "plaats": "Nijmegen",
+  "lat": "51.833678",
+  "lon": "5.892644"
+ },
+ "kleine-zwaan": {
+  "geen_adres": true
+ },
+ "tuincentrum-lindenholt": {
+  "geen_adres": true
+ },
+ "diny-s-wol-en-hobbymaterialen": {
+  "geen_adres": true
+ },
+ "guitarfx": {
+  "geen_adres": true
+ },
+ "inimini-dollhouse-store": {
+  "adres": "Mr. van Houtenstraat 33",
+  "postcode": "6535 XN",
+  "plaats": "Nijmegen",
+  "lat": "51.809234",
+  "lon": "5.831360"
+ },
+ "intertoys-zwanenveld": {
+  "geen_adres": true
+ },
+ "drogisterij-parfumerie-theil": {
+  "geen_adres": true
+ },
+ "parfumerie-douglas": {
+  "adres": "Marikenstraat 24",
+  "postcode": "6511 PX",
+  "plaats": "Nijmegen",
+  "lat": "51.845714",
+  "lon": "5.866041"
+ },
+ "best-phone": {
+  "adres": "Julianaplein 97",
+  "postcode": "6641 CS",
+  "plaats": "Beuningen",
+  "lat": "51.860458",
+  "lon": "5.771957"
+ },
+ "de-herstelbus": {
+  "geen_adres": true
+ },
+ "kpn-winkel-nijmegen-centrum": {
+  "geen_adres": true
+ },
+ "mobile-service-centre-haal-breng-service": {
+  "adres": "Kronenburgpassage 21",
+  "postcode": "6831 EM",
+  "plaats": "Arnhem",
+  "lat": "51.958070",
+  "lon": "5.897706"
+ },
+ "vodafone": {
+  "geen_adres": true
+ },
+ "t-keldertje-oost": {
+  "adres": "Van den Havestraat 1",
+  "postcode": "6521 JN",
+  "plaats": "Nijmegen",
+  "lat": "51.842639",
+  "lon": "5.872644"
+ },
+ "bikework-regulierstraat": {
+  "adres": "Ambachtsweg 41",
+  "postcode": "6541 DA",
+  "plaats": "Nijmegen",
+  "lat": "51.842323",
+  "lon": "5.820029"
+ },
+ "dutch-bicycle-centre-the-international-centre-for-bicycle-innovation": {
+  "adres": "Waalbandijk 8B",
+  "postcode": "6541 AJ",
+  "plaats": "Nijmegen",
+  "lat": "51.850362",
+  "lon": "5.850196"
+ },
+ "fietsambulance-nijmegen": {
+  "geen_adres": true
+ },
+ "fietscity-jan-kooij": {
+  "adres": "Nieuwe Dukenburgseweg 9, 6534 AD Nijmegen ; Regulierstraat 29, 6511 DN Nijmegen ; Pannenstraat 8",
+  "postcode": "6562 AD",
+  "plaats": "Groesbeek",
+  "lat": "",
+  "lon": ""
+ },
+ "fietshuis-nijmegen": {
+  "geen_adres": true
+ },
+ "jasperfietsen-voor-verhuur-en-onderhoud-nijmegen": {
+  "adres": "Jasper Fietsen , Weurtseweg 478",
+  "postcode": "6541 BE",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "mantel-servicepunt": {
+  "adres": "St. Annastraat 47a",
+  "postcode": "6524 EE",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "re-cycled-waalbandijk": {
+  "adres": "Zwanenveld 9022",
+  "postcode": "6538 SB",
+  "plaats": "Nijmegen",
+  "lat": "51.822744",
+  "lon": "5.795014"
+ },
+ "rik-s-fietsenmakerij": {
+  "adres": "v. Peltlaan 30a",
+  "postcode": "6533 ZM",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "stipbike-nl": {
+  "adres": "Stipbike bv, Afd. fissafiets, Hollandiaweg 3b",
+  "postcode": "6541 BL",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "wheels-tweewielers": {
+  "adres": "St. Annastraat 42",
+  "postcode": "6524 GE",
+  "plaats": "Nijmegen",
+  "lat": "51.839336",
+  "lon": "5.859952"
+ },
+ "wouter-fiets-service-nijmegen": {
+  "adres": "St. Agnetenweg 65a",
+  "postcode": "6545 AT",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "boekenvoordeel-burchtstraat": {
+  "geen_adres": true
+ },
+ "books4life": {
+  "adres": "Kanunnik van de Putstraat 39",
+  "postcode": "6525 WN",
+  "plaats": "Nijmegen",
+  "lat": "51.815445",
+  "lon": "5.861778"
+ },
+ "libris": {
+  "geen_adres": true
  }
 }
