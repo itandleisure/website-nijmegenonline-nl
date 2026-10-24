@@ -18,7 +18,8 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 - [x] Afbeeldingen van `wp-content/uploads` staan als webp in `assets/uploads/` (`tools/afbeeldingen.py`);
       `tools/build.py` laat de pagina's ernaar wijzen. Nieuwe pagina's: eerst afbeeldingen downloaden, dan dit script
 - [ ] Partnerslider, zijbalk en formulieren getest op desktop en mobiel
-- [ ] Alle URL's uit de huidige sitemap en paginalijst geven 200 of een bedoelde 301
+- [ ] Alle URL's uit de huidige sitemap en paginalijst geven 200 of een bedoelde 301 (paginalijst gecontroleerd op
+      24-10-2026; oude pagina's die niet terugkomen staan in `data/oude-paginas.csv`)
 - [ ] Google Analytics-code (zelfde property) in de header
 
 ## Op de dag zelf

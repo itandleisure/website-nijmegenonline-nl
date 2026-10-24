@@ -45,6 +45,8 @@ for _g in GIDSEN:
 SAMENVOEGEN = {r["oud"]: r["nieuw"] for r in csv.DictReader(
     open(ROOT / "data" / "samenvoegen.csv", encoding="utf-8"), delimiter=";")}
 SAMENGEVOEGD_OP = "2026-10-21T12:00:00"
+# Oude WordPress-pagina's die hier niet terugkomen: waar ze heen gaan (zie oude_paginas())
+OUDE_PAGINAS = list(csv.DictReader(open(ROOT / "data" / "oude-paginas.csv", encoding="utf-8"), delimiter=";"))
 # Kleine tekstcorrecties per artikel (verouderde jaartallen, gesloten zaken)
 CORRECTIES = json.load(open(ROOT / "data" / "correcties.json", encoding="utf-8"))
 HANDGEMAAKT = {"kerstmarkten-in-nijmegen"}  # deze pagina's niet overschrijven
@@ -316,6 +318,22 @@ DOORVERWIJZING = """<!doctype html>
 </body>
 </html>
 """
+
+
+def oude_paginas():
+    """301's voor oude pagina's uit data/oude-paginas.csv, plus een doorverwijspagina voor GitHub Pages (behalve bij
+    een * in het adres: dat kan alleen Cloudflare)."""
+    regels = []
+    for r in OUDE_PAGINAS:
+        regels.append("%s %s 301" % (r["oud"], r["nieuw"]))
+        if "*" in r["oud"]:
+            continue
+        d = ROOT / r["oud"].strip("/")
+        d.mkdir(parents=True, exist_ok=True)
+        pad = "../" * r["oud"].strip("/").count("/") + ".." + r["nieuw"]
+        (d / "index.html").write_text((DOORVERWIJZING % {"titel": "NijmegenOnline", "url": SITE + r["nieuw"], "pad": pad})
+                                      .replace("Dit artikel is samengevoegd met", "Deze pagina is verhuisd naar"), encoding="utf-8")
+    return regels
 
 
 def link_naar_gids(tekst, g, root):
@@ -900,6 +918,7 @@ def main(bron):
         regels.append("%s %s 301" % (oud, doel))
     # Dubbele kapperspagina gaat op in de gids
     regels.append("/kapper-nijmegen-top-kapsalons-voor-knippen-kleuren-en-styling/ /thema/kappers-in-nijmegen/ 301")
+    regels += oude_paginas()
     for oud, nieuw in SAMENVOEGEN.items():
         regels.append("/%s/ /%s/ 301" % (oud, nieuw))
         doel = per_slug[nieuw]

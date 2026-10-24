@@ -2783,12 +2783,22 @@ def vermeldingen(bedrijven, cat):
     return uit
 
 
+# Oude Listdom-categorieën zonder nieuwe categorie: waar hun bedrijven heen gaan (zie zwervers())
+OUDE_CATEGORIE_NAAR = {"kringloopcentra": "tweedehands-winkel", "vakantiepark": "camping",
+                       "keuken-en-sanitair-winkel": "aannemersbedrijf", "interieuradvies-ontwerp-styling": "woonwinkel"}
+# Voor bedrijven uit de oude gids zonder passende categorie: de startpagina van de gids
+GIDS = {"slug": None, "naam": "Bedrijvengids", "pad": "bedrijvengids"}
+
+
+def cat_pad(cat):
+    return cat.get("pad") or "bedrijvengids-categorie/%s" % cat["slug"]
+
+
 def doorverwijzen(b, cat):
     """De pagina van een verdwenen bedrijf stuurt door naar de categorie (ook in _redirects voor de echte server)."""
     map_ = ROOT / "bedrijvengids" / b["slug"]
     map_.mkdir(parents=True, exist_ok=True)
-    tekst = DOORVERWIJZING % {"titel": esc(cat["naam"]), "url": "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"]),
-                              "pad": "../../bedrijvengids-categorie/%s/" % cat["slug"]}
+    tekst = DOORVERWIJZING % {"titel": esc(cat["naam"]), "url": "%s/%s/" % (SITE, cat_pad(cat)), "pad": "../../%s/" % cat_pad(cat)}
     (map_ / "index.html").write_text(tekst.replace("Dit artikel is samengevoegd met", "Dit bedrijf staat niet meer in onze gids. Bekijk de"),
                                      encoding="utf-8")
 
@@ -2801,7 +2811,7 @@ def schrijf_redirects(weg, oude_categorieen):
     agenda = tekst[tekst.index("# agenda"):] if "# agenda" in tekst else ""
     kop_ = tekst.split("# bedrijvengids")[0].split("# agenda")[0].rstrip("\n")
     regels = ["# bedrijvengids (tools/bedrijvengids.py)"]
-    regels += ["/bedrijvengids/%s/ /bedrijvengids-categorie/%s/ 301" % (b["slug"], cat["slug"]) for b, cat in sorted(weg, key=lambda x: x[0]["slug"])]
+    regels += ["/bedrijvengids/%s/ /%s/ 301" % (b["slug"], cat_pad(cat)) for b, cat in sorted(weg, key=lambda x: x[0]["slug"])]
     regels += ["/bedrijvengids-categorie/%s/ /bedrijvengids-categorie/%s/ 301" % x for x in oude_categorieen]
     pad.write_text("\n".join(x for x in (kop_, "\n".join(regels), agenda.rstrip("\n")) if x) + "\n", encoding="utf-8")
 
@@ -2841,6 +2851,25 @@ def schrijf(pad, tekst):
     map_ = ROOT / pad
     map_.mkdir(parents=True, exist_ok=True)
     (map_ / "index.html").write_text(tekst, encoding="utf-8")
+
+
+def zwervers(xml_, bekend, scan):
+    """Bedrijven uit de oude gids die nergens terechtkomen (de scan stuurt ze naar een categorie die er niet is, of hun
+    oude categorie hoort bij geen nieuwe): hun oude pagina stuurt door, anders geven ze bij de livegang een 404.
+    Volgorde: de categorie uit de scan, een nieuwe categorie met dezelfde naam of met hun oude categorie, dan de gids."""
+    per_slug = {c["slug"]: c for c in CATEGORIEEN}
+    uit = []
+    for i in ET.parse(xml_).getroot().iter("item"):
+        slug = i.findtext("wp:post_name", namespaces=NS)
+        if i.findtext("wp:post_type", namespaces=NS) != "listdom-listing" or i.findtext("wp:status", namespaces=NS) != "publish" \
+                or slug in bekend:
+            continue
+        oud = [c.get("nicename") for c in i.findall("category") if c.get("domain") == "listdom-category"]
+        oud = [OUDE_CATEGORIE_NAAR.get(k, k) for k in oud]
+        cat = next((per_slug[k] for k in [scan.get(slug, {}).get("hoofdcategorie")] + oud if k in per_slug), None) \
+            or next((c for k in oud for c in CATEGORIEEN if k in c["listdom"]), None) or GIDS
+        uit.append(({"slug": slug, "naam": i.findtext("title")}, cat))
+    return uit
 
 
 def niet_in(b, cat, scan):
@@ -2908,6 +2937,9 @@ def main(bron):
         groepen.setdefault(cat["groep"], []).append((cat, gids, overig + extra))
     if xml_.exists():
         pad.write_text(json.dumps(opgeslagen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        for b, cat in zwervers(xml_, {b["slug"] for _, g, o in gebouwd for b in g + o} | {b["slug"] for b, _ in alle_weg}, scan):
+            doorverwijzen(b, cat)
+            alle_weg.append((b, cat))
     schrijf_redirects(alle_weg, [(oud, cat["slug"]) for cat in CATEGORIEEN for oud in sorted(cat["listdom"]) if oud != cat["slug"]])
     (ROOT / "data" / "bedrijvengids-vermeldingen.json").write_text(
         json.dumps(alle_vermeldingen, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
