@@ -14,6 +14,7 @@ bronbestanden (zoals op GitHub) bouwt het de pagina's opnieuw uit data/bedrijven
 import csv
 import datetime
 import html
+import hashlib
 import json
 import random
 import pathlib
@@ -2772,6 +2773,37 @@ def schrijf_redirects(weg, oude_categorieen):
     pad.write_text("\n".join(x for x in (kop_, "\n".join(regels), agenda.rstrip("\n")) if x) + "\n", encoding="utf-8")
 
 
+def homepage_bijwerken(groepen, aantal=8):
+    """De bedrijven op de homepage, tussen <!-- bedrijven --> en <!-- /bedrijven --> in index.html: de partners en
+    andere betalende bedrijven (besluit Frans, 24-10-2026). Elke dag een andere volgorde, zodat iedereen aan de beurt komt."""
+    rang = {"hoofdpartner": 0, "partner": 1, "uitgelicht": 2}
+    gezien, kandidaten = set(), []
+    for groep, cats in groepen:
+        for cat, gids, overig in cats:
+            for b in gids + overig:
+                if b.get("uitgelicht") and b["slug"] not in gezien:
+                    gezien.add(b["slug"])
+                    kandidaten.append((rang.get(b.get("pakket"), 3), groep, b))
+    dag = datetime.date.today().toordinal()
+    kandidaten.sort(key=lambda x: (x[0], hash_dag(x[2]["slug"], dag)))
+    kaarten = []
+    for _, groep, b in kandidaten[:aantal]:
+        foto = '<img src="%s" alt="" loading="lazy">' % esc(foto_url(b["foto"], "./")) if b.get("foto") else ""
+        kaarten.append('          <article class="kaart"><a href="./bedrijvengids/%s/">%s<div class="kaart__tekst"><div class="label">%s</div>'
+                       '<h3>%s</h3><p>%s</p></div></a></article>' % (b["slug"], foto, esc(groep), esc(b["naam"]), esc(adresregel(b))))
+    blok = '        <div class="raster">\n%s\n        </div>\n        <p class="gids-verder"><a href="./bedrijvengids/">Naar de bedrijvengids</a></p>' % "\n".join(kaarten)
+    pad = ROOT / "index.html"
+    t, n = re.subn(r"([ \t]*)<!-- bedrijven -->.*?<!-- /bedrijven -->",
+                   lambda m: "%s<!-- bedrijven -->\n%s\n%s<!-- /bedrijven -->" % (m.group(1), blok, m.group(1)), pad.read_text(encoding="utf-8"), flags=re.S)
+    if n and kaarten:
+        pad.write_text(t, encoding="utf-8")
+
+
+def hash_dag(slug_, dag):
+    """Vaste, maar elke dag andere volgorde (hash() van Python verschilt per run)."""
+    return hashlib.md5(("%s-%d" % (slug_, dag)).encode()).hexdigest()
+
+
 def schrijf(pad, tekst):
     map_ = ROOT / pad
     map_.mkdir(parents=True, exist_ok=True)
@@ -2816,7 +2848,9 @@ def main(bron):
         # Zonder werkende website geen vermelding (afgesproken met Frans, 23-10-2026): het bedrijf bestaat dan
         # waarschijnlijk niet meer. Behalve als het betaalt of zelf zijn gegevens heeft aangevuld.
         # Door de redactie of automatisch verwijderd (gestopt, site niet te lezen): status "verwijderd" in de scan.
+        # Een partner of betalend bedrijf valt nooit automatisch weg, alleen als de redactie dat besluit.
         weg = [b for b in gids + overig if scan.get(b["slug"], {}).get("status") == "verwijderd"
+               and not (b.get("uitgelicht") and scan[b["slug"]].get("reden", "").startswith("automatisch"))
                or not (b.get("website") or b.get("uitgelicht") or b.get("geclaimd"))]
         gids = [b for b in gids if b not in weg]
         overig = [b for b in overig if b not in weg]
@@ -2843,6 +2877,7 @@ def main(bron):
     (ROOT / "data" / "bedrijvengids-vermeldingen.json").write_text(
         json.dumps(alle_vermeldingen, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     schrijf("bedrijvengids", start_pagina(list(groepen.items())))
+    homepage_bijwerken(list(groepen.items()))
     # Pagina's die bij geen enkele categorie meer horen en geen doorverwijzing hebben (bijvoorbeeld een dubbel, of een
     # cafetaria die volgens de scan bij afhaal hoort) haal ik weg; ze zijn nooit als echte vermelding online geweest
     bewaren = {b["slug"] for _, gids, overig in (x for cats in groepen.values() for x in cats) for b in gids + overig}
