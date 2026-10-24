@@ -1,0 +1,45 @@
+# Haalt elke 15 minuten de doorgestuurde nieuwsmails op uit nieuws@nijmegenonline.nl en stuurt ze naar het
+# Google Apps Script, dat Claude er een nieuwsbericht van laat schrijven en de redactie een mail stuurt.
+# Er verandert niets aan de site: dat gebeurt pas na goedkeuring (Aanmeldingen publiceren).
+# Zie tools/nieuws_ophalen.py. Vraagt de secrets NIEUWS_MAIL_SERVER, NIEUWS_MAIL_GEBRUIKER, NIEUWS_MAIL_WACHTWOORD
+# en NIEUWS_SLEUTEL.
+name: Nieuwsmails ophalen
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Alleen testen of inloggen lukt (ja/nee)"
+        default: "nee"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nieuws-ophalen
+  cancel-in-progress: false
+
+jobs:
+  ophalen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install beautifulsoup4 pillow pypdf python-docx
+      - name: Ophalen
+        env:
+          NIEUWS_MAIL_SERVER: ${{ secrets.NIEUWS_MAIL_SERVER }}
+          NIEUWS_MAIL_GEBRUIKER: ${{ secrets.NIEUWS_MAIL_GEBRUIKER }}
+          NIEUWS_MAIL_WACHTWOORD: ${{ secrets.NIEUWS_MAIL_WACHTWOORD }}
+          NIEUWS_SLEUTEL: ${{ secrets.NIEUWS_SLEUTEL }}
+          TEST: ${{ inputs.test }}
+        run: |
+          if [ -z "$NIEUWS_MAIL_SERVER" ]; then echo "Nog geen mailbox ingesteld, niets te doen"; exit 0; fi
+          if [ "$TEST" = "ja" ]; then python tools/nieuws_ophalen.py --test; exit 0; fi
+          if [ -z "$NIEUWS_SLEUTEL" ]; then echo "::warning::Het secret NIEUWS_SLEUTEL ontbreekt nog (zie maakNieuwsSleutel in tools/google-formulier/Code.gs)"; exit 0; fi
+          python tools/nieuws_ophalen.py
