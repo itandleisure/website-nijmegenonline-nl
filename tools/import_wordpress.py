@@ -47,6 +47,7 @@ SAMENVOEGEN = {r["oud"]: r["nieuw"] for r in csv.DictReader(
 SAMENGEVOEGD_OP = "2026-10-21T12:00:00"
 # Oude WordPress-pagina's die hier niet terugkomen: waar ze heen gaan (zie oude_paginas())
 OUDE_PAGINAS = list(csv.DictReader(open(ROOT / "data" / "oude-paginas.csv", encoding="utf-8"), delimiter=";"))
+VERHUISD = {r["oud"] for r in OUDE_PAGINAS}  # artikelen die vervangen zijn door een nieuwe pagina komen niet terug
 # Kleine tekstcorrecties per artikel (verouderde jaartallen, gesloten zaken)
 CORRECTIES = json.load(open(ROOT / "data" / "correcties.json", encoding="utf-8"))
 HANDGEMAAKT = {"kerstmarkten-in-nijmegen"}  # deze pagina's niet overschrijven
@@ -767,7 +768,7 @@ def main(bron):
 
     artikelen = []
     for p in posts:
-        if p["slug"] in SAMENVOEGEN:
+        if p["slug"] in SAMENVOEGEN or "/%s/" % p["slug"] in VERHUISD:
             continue
         r = indeling.get(p["slug"])
         rub = RUBRIEK_SLUG[r["nieuwe_rubriek"]] if r else "wonen-werken-en-studeren"
