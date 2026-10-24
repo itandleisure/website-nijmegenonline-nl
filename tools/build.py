@@ -11,7 +11,9 @@
    assets/uploads/ als tools/afbeeldingen.py die heeft gemaakt (src relatief, og:image absoluut).
 4. sitemap.xml met alle pagina's die geïndexeerd mogen worden (geen doorverwijzingen), met de
    echte URL's en de datum van de laatste wijziging.
-5. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
+5. Zet data-pagefind-body en een soort-filter op <main>, zodat Pagefind (zoeken/) alleen echte pagina's
+   indexeert en niet de doorverwijzingen. De index zelf bouwt tools/zoekindex.py.
+6. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
 
 Gebruik: python tools/build.py [--live]
 """
@@ -24,6 +26,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PARTIALS = ROOT / "partials"
 SITE = "https://www.nijmegenonline.nl"
 UPLOAD = re.compile(r'(src="|srcset=")?https?://(?:www\.)?nijmegenonline\.nl/wp-content/uploads/([^"\'\s)]+?)\.(?:png|jpe?g|gif|webp)', re.I)
+MAIN = re.compile(r"<main\b(?![^>]*data-pagefind-body)([^>]*)>")
+# soort per eerste deel van het pad, voor het filter op de zoekpagina; de rest is "Artikelen"
+SOORTEN = {
+    "bedrijvengids": "Bedrijvengids", "bedrijvengids-categorie": "Bedrijvengids", "overzicht": "Bedrijvengids",
+    "events": "Agenda", "event-location": "Agenda", "jaarlijkse-evenementen": "Agenda", "agenda": "Agenda",
+    "nijmegen-evenementen-overzicht": "Agenda", "nieuwsoverzicht": "Nieuws", "vacatures": "Vacatures",
+    "thema": "Gidsen",
+}
 LINK = re.compile(r'(<a\b[^>]*?\bhref=")https?://(?:www\.)?nijmegenonline\.nl(/[^"#?]*)([^"]*")')
 
 
@@ -84,6 +94,8 @@ def main(live=False):
 
         nieuw = UPLOAD.sub(afbeelding, nieuw)
 
+        nieuw = zoekbaar(page, nieuw)
+
         if live:
             nieuw = re.sub(r'\n[ \t]*<div class="testbalk">.*?</div>\n', "\n", nieuw)
             nieuw = re.sub(r'\n[ \t]*<meta name="robots" content="noindex, nofollow">', "", nieuw)
@@ -103,11 +115,23 @@ def main(live=False):
             print("  %4dx %s" % (n, pad))
 
 
+def zoekbaar(page, html):
+    """Markeert <main> voor Pagefind; doorverwijzingen en de zoekpagina zelf blijven erbuiten.
+    Bedrijven die nog niet in Google mogen (noindex, nog geen eigen tekst) zijn wel vindbaar op de site."""
+    delen = page.parent.relative_to(ROOT).parts
+    if 'http-equiv="refresh"' in html or delen[:1] == ("zoeken",):
+        return html
+    soort = SOORTEN.get(delen[0], "Artikelen") if delen else "Artikelen"
+    return MAIN.sub(r'<main\1 data-pagefind-body data-pagefind-filter="soort:%s">' % soort, html, count=1)
+
+
 def sitemap(live):
     regels = []
     for page in pages():
         html = page.read_text(encoding="utf-8")
         if '<meta name="robots" content="noindex">' in html:  # doorverwijzing
+            continue
+        if page.parent.name == "zoeken":
             continue
         m = re.search(r'<link rel="canonical" href="([^"]+)"', html)
         pad = page.parent.relative_to(ROOT).as_posix()

@@ -1,5 +1,5 @@
 # Bouwt de agenda elke nacht opnieuw, zodat afgelopen evenementen vanzelf uit de agenda verdwijnen
-# en na 3 maanden een doorverwijzing krijgen (zie tools/agenda.py).
+# en na 3 maanden een doorverwijzing krijgen (zie tools/agenda.py). Bouwt ook de zoekindex voor zoeken/ opnieuw.
 name: Agenda bijwerken
 
 on:
@@ -22,9 +22,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install beautifulsoup4 pillow
+      - run: pip install beautifulsoup4 pillow "pagefind[bin]"
       # bedrijvengids: verlopen pakketten terug naar gratis, uitgelichte volgorde wisselt per dag
-      - run: python tools/agenda.py && python tools/bedrijvengids.py && python tools/nieuwsbrief.py && python tools/build.py
+      - run: python tools/agenda.py && python tools/bedrijvengids.py && python tools/nieuwsbrief.py && python tools/build.py && python tools/zoekindex.py
       - name: Wijzigingen opslaan
         run: |
           git config user.name "agenda-bot"

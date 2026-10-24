@@ -54,7 +54,7 @@
   </header>
   <!-- /header -->
 
-  <main class="artikel-wrap">
+  <main class="artikel-wrap" data-pagefind-body data-pagefind-filter="soort:Artikelen">
     <div class="container">
       <div class="artikel-layout">
       <article class="artikel">
@@ -98,12 +98,12 @@
       </article>
 
       <!-- zijbalk -->
-      <aside class="zijbalk" aria-label="Zijbalk">
+      <aside class="zijbalk" aria-label="Zijbalk" data-pagefind-ignore="all">
         <div class="zijbalk__blok zijbalk__zoeken">
-          <form role="search" method="get" action="https://www.nijmegenonline.nl/">
+          <form role="search" method="get" action="../zoeken/">
             <label for="zoek" class="zijbalk__titel">Zoeken</label>
             <div class="zoekveld">
-              <input id="zoek" type="search" name="swps" placeholder="Zoek op NijmegenOnline">
+              <input id="zoek" type="search" name="q" placeholder="Zoek op NijmegenOnline">
               <button type="submit" aria-label="Zoeken">Zoek</button>
             </div>
           </form>

@@ -1,0 +1,15 @@
+# Instellingen voor de zoekindex (tools/zoekindex.py). Alleen <main data-pagefind-body> telt mee,
+# dat zet tools/build.py erop. Deze onderdelen staan op veel pagina's en zouden elke zoekopdracht vervuilen:
+site: .
+output_subdir: pagefind
+exclude_selectors:
+  - ".zijbalk"
+  - ".kruimelpad"
+  - ".gerelateerd"
+  - ".mijnbedrijf"
+  - ".partner-slider"
+  - ".bron"
+  - ".gids-verder"
+  - ".bedrijf .bedrijflijst"
+  - "script"
+  - "iframe"
