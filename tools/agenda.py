@@ -9,6 +9,8 @@ Afgesproken met Frans (22-10-2026):
 - Een evenement verdwijnt de dag na afloop uit de agenda, de homepage en de zijbalk.
 - De pagina blijft nog BEWAAR_DAGEN staan met "Dit evenement is afgelopen" en daarna verwijst hij met
   een 301 naar de agenda (_redirects, blok "# agenda", plus een noindex-pagina voor GitHub Pages).
+  Hoort een afgelopen evenement bij een vaste pagina (bijv. de kerstmarkt in Kleve), zet het dan in
+  data/evenementen-doorverwijzingen.json ({"slug": "/pad/"}); dan verwijst het daarheen in plaats van naar de agenda.
 - Terugkerende evenementen ("terugkerend": true) houden altijd hun pagina; zet daar elk jaar de nieuwe
   datum in.
 
@@ -353,6 +355,7 @@ def main(vandaag):
     evenementen = json.load(open(ROOT / "data" / "evenementen.json", encoding="utf-8"))
     aanbieders = json.load(open(ROOT / "data" / "aanbieders.json", encoding="utf-8"))
     verwijderd = [r for r in (ROOT / "data" / "evenementen-verwijderd.txt").read_text(encoding="utf-8").split() if r]
+    doel = json.load(open(ROOT / "data" / "evenementen-doorverwijzingen.json", encoding="utf-8"))
     grens = vandaag - datetime.timedelta(days=BEWAAR_DAGEN)
     komend = sorted((e for e in evenementen if dag(e, "eind") >= vandaag),
                     key=lambda e: (max(dag(e, "start"), vandaag), not e["uitgelicht"], e["start"], e["slug"]))
@@ -377,7 +380,12 @@ def main(vandaag):
         d.mkdir(parents=True)
         (d / "index.html").write_text(event_pagina(e, vandaag, komend, aanbieders), encoding="utf-8")
     for slug in weg:
-        doorverwijzing(events / slug, "../../%s/" % OVERZICHT, "Agenda Nijmegen", agenda_url)
+        if slug in doel:
+            pad = doel[slug].strip("/")
+            titel = re.search(r"<h1>(.*?)</h1>", (ROOT / pad / "index.html").read_text(encoding="utf-8")).group(1)
+            doorverwijzing(events / slug, "../../%s/" % pad, html.unescape(titel), "%s/%s/" % (SITE, pad))
+        else:
+            doorverwijzing(events / slug, "../../%s/" % OVERZICHT, "Agenda Nijmegen", agenda_url)
 
     # Per aanbieder een overzicht; aanbieders zonder evenementpagina's meer verwijzen naar de agenda
     locaties = ROOT / AANBIEDERS
@@ -419,7 +427,7 @@ def main(vandaag):
     redirects = ROOT / "_redirects"
     oud = redirects.read_text(encoding="utf-8").split("# agenda")[0].rstrip("\n") if redirects.exists() else ""
     regels = ["# agenda (tools/agenda.py)", "/agenda/ /%s/ 301" % OVERZICHT]
-    regels += ["/events/%s/ /%s/ 301" % (slug, OVERZICHT) for slug in sorted(weg)]
+    regels += ["/events/%s/ /%s/ 301" % (slug, doel.get(slug, "/%s/" % OVERZICHT).strip("/")) for slug in sorted(weg)]
     regels += ["/%s/%s/ /%s/ 301" % (AANBIEDERS, slug, OVERZICHT) for slug in sorted(weg_aanbieder)]
     redirects.write_text((oud + "\n" if oud else "") + "\n".join(regels) + "\n", encoding="utf-8")
 
