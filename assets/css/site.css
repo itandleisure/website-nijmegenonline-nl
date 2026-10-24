@@ -119,7 +119,7 @@ footer ul { list-style: none; padding: 0; margin: 0 0 12px; display: flex; flex-
   /* compacte vaste balk: klein logo en kleiner menu */
   html { scroll-padding-top: 100px; }
   .kop { justify-content: center; padding: 6px 16px; gap: 4px; }
-  .logo img { height: 36px; }
+  .logo img { height: 44px; }
   .hoofdmenu ul { justify-content: center; gap: 0 16px; line-height: 1.6; }
   .hoofdmenu a { font-size: 0.8rem; }
   .bovenbalk ul { justify-content: center; }
