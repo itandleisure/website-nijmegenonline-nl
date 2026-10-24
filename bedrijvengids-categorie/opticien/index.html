@@ -28,6 +28,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" defer></script>
+  <!-- analytics -->
+  <!-- Google Analytics (GA4-property 337370292, dezelfde Google-tag als de WordPress-site). Laadt alleen op www.nijmegenonline.nl, niet op de testsite of lokaal. -->
+  <script>
+    if (location.hostname === "www.nijmegenonline.nl") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "GT-5R43F82");
+      var ga = document.createElement("script");
+      ga.async = true;
+      ga.src = "https://www.googletagmanager.com/gtag/js?id=GT-5R43F82";
+      document.head.appendChild(ga);
+    }
+  </script>
+  <!-- /analytics -->
 </head>
 <body>
   <div class="testbalk">Dit is een testomgeving. De echte pagina staat op <a href="https://www.nijmegenonline.nl/bedrijvengids-categorie/opticien/">www.nijmegenonline.nl</a>.</div>

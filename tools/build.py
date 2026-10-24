@@ -13,7 +13,9 @@
    echte URL's en de datum van de laatste wijziging.
 5. Zet data-pagefind-body en een soort-filter op <main>, zodat Pagefind (zoeken/) alleen echte pagina's
    indexeert en niet de doorverwijzingen. De index zelf bouwt tools/zoekindex.py.
-6. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
+6. Zet partials/analytics.html (Google Analytics) vlak voor </head> in elke pagina; de code zelf laadt
+   alleen op www.nijmegenonline.nl, dus de testsite telt niet mee.
+7. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
 
 Gebruik: python tools/build.py [--live]
 """
@@ -61,6 +63,8 @@ def main(live=False):
         html = page.read_text(encoding="utf-8")
         nieuw = html
         root = root_prefix(page)
+        if "<!-- analytics -->" not in nieuw:
+            nieuw = re.sub(r"\n([ \t]*)</head>", r"\n\1  <!-- analytics --><!-- /analytics -->\n\1</head>", nieuw, count=1)
         for naam, inhoud in partials.items():
             blok = inhoud.replace("{{root}}", root)
             patroon = re.compile(r"([ \t]*)<!-- %s -->.*?<!-- /%s -->" % (naam, naam), re.S)

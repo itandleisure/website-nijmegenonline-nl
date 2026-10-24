@@ -8,6 +8,21 @@
   <link rel="stylesheet" href="/website-nijmegenonline-nl/assets/css/site.css?v=28">
   <link rel="icon" href="/website-nijmegenonline-nl/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/website-nijmegenonline-nl/assets/img/apple-touch-icon.png">
+  <!-- analytics -->
+  <!-- Google Analytics (GA4-property 337370292, dezelfde Google-tag als de WordPress-site). Laadt alleen op www.nijmegenonline.nl, niet op de testsite of lokaal. -->
+  <script>
+    if (location.hostname === "www.nijmegenonline.nl") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "GT-5R43F82");
+      var ga = document.createElement("script");
+      ga.async = true;
+      ga.src = "https://www.googletagmanager.com/gtag/js?id=GT-5R43F82";
+      document.head.appendChild(ga);
+    }
+  </script>
+  <!-- /analytics -->
 </head>
 <body>
   <main class="container" style="padding:64px 16px">

@@ -28,6 +28,21 @@
     }
     #zoeken .pagefind-ui__result-link { color: var(--blauw); }
   </style>
+  <!-- analytics -->
+  <!-- Google Analytics (GA4-property 337370292, dezelfde Google-tag als de WordPress-site). Laadt alleen op www.nijmegenonline.nl, niet op de testsite of lokaal. -->
+  <script>
+    if (location.hostname === "www.nijmegenonline.nl") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "GT-5R43F82");
+      var ga = document.createElement("script");
+      ga.async = true;
+      ga.src = "https://www.googletagmanager.com/gtag/js?id=GT-5R43F82";
+      document.head.appendChild(ga);
+    }
+  </script>
+  <!-- /analytics -->
 </head>
 <body>
   <div class="testbalk">Dit is een testomgeving. De echte site staat op <a href="https://www.nijmegenonline.nl/">www.nijmegenonline.nl</a>.</div>
