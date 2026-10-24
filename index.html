@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="assets/css/site.css?v=28">
+  <link rel="stylesheet" href="assets/css/site.css?v=29">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 </head>
@@ -30,63 +30,73 @@
     <div class="hoofdbalk">
       <div class="container kop">
         <a class="logo" href="./"><img src="./assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104"></a>
-        <nav class="hoofdmenu" aria-label="Hoofdmenu">
+        <nav class="hoofdmenu" id="hoofdmenu" aria-label="Hoofdmenu">
           <ul>
             <li><a href="./">Home</a></li>
-            <li><a href="./blog/">Inspiratie opdoen</a></li>
-            <li><a href="./thema/">Gidsen</a></li>
-            <li><a href="./bedrijvengids/">Bedrijvengids</a></li>
-            <li><a href="./nijmegen-evenementen-overzicht/">Agenda</a></li>
+            <li><a href="./nijmegen-evenementen-overzicht/" data-paden="nijmegen-evenementen-overzicht/ events/ event-location/ event-directory/ agenda/ jaarlijkse-evenementen/">Agenda</a></li>
+            <li><a href="./nieuwsberichten/" data-paden="nieuwsberichten/ nieuwsoverzicht/">Nieuws</a></li>
+            <li><a href="./blog/" data-paden="blog/ category/">Inspiratie opdoen</a></li>
+            <li><a href="./thema/" data-paden="thema/ bestemmingen/">Gidsen</a></li>
+            <li><a href="./bedrijvengids/" data-paden="bedrijvengids/ bedrijvengids-categorie/ overzicht/ bedrijf-aanmelden/">Bedrijvengids</a></li>
+            <li class="hoofdmenu__extra"><a href="./kom-in-contact/">Kom in contact</a></li>
+            <li class="hoofdmenu__extra"><a href="./adverteren-bij-nijmegenonline/">Adverteren</a></li>
+            <li class="hoofdmenu__extra"><a href="./vacatures/">Vacatures</a></li>
           </ul>
         </nav>
+        <a class="kop__knop" href="./zoeken/" aria-label="Zoeken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></a>
+        <button class="kop__knop kop__menuknop" type="button" aria-expanded="false" aria-controls="hoofdmenu" aria-label="Menu"><svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="dicht" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
       </div>
     </div>
   </header>
+  <script>
+    /* Hoofdmenu: knop op mobiel, en het onderdeel waar je bent krijgt aria-current */
+    (function () {
+      var knop = document.querySelector(".kop__menuknop"), menu = document.getElementById("hoofdmenu");
+      knop.addEventListener("click", function () {
+        var open = knop.getAttribute("aria-expanded") !== "true";
+        knop.setAttribute("aria-expanded", open);
+        menu.classList.toggle("open", open);
+      });
+      var basis = new URL(document.querySelector(".logo").href).pathname;
+      var pad = location.pathname.indexOf(basis) === 0 ? location.pathname.slice(basis.length) : "";
+      menu.querySelectorAll("a").forEach(function (a) {
+        var paden = (a.getAttribute("data-paden") || "").split(" ").filter(Boolean);
+        var hier = a.href.replace(/[?#].*$/, "") === location.href.replace(/[?#].*$/, "").replace(/index\.html$/, "");
+        if (hier || paden.some(function (p) { return pad.indexOf(p) === 0; })) a.setAttribute("aria-current", "page");
+      });
+    })();
+  </script>
   <!-- /header -->
 
-  <main data-pagefind-body data-pagefind-filter="soort:Artikelen">
+  <main class="home" data-pagefind-body data-pagefind-filter="soort:Artikelen">
     <div class="hero">
-      <div class="container">
+      <svg class="hero__skyline" viewBox="0 0 175 82" aria-hidden="true" focusable="false">
+        <g fill="#ffffff">
+          <path d="M4 64V46l8-8 8 8v18z"/><path d="M23 64V42l9-9 9 9v22z"/>
+          <path d="M45 64V36h6V25h4V15l3-11 3 11v10h4v11h6v28z"/><path d="M74 64V44l8-8 8 8v20z"/>
+        </g>
+        <path d="M96 64q36-42 72 0" fill="none" stroke="#ffffff" stroke-width="4.5"/>
+        <g stroke="#ffffff" stroke-width="2"><path d="M114 64V44M132 64V38M150 64V44"/></g>
+        <rect x="93" y="61" width="78" height="4.5" rx="1" fill="#ffffff"/>
+        <path d="M3 77q14-7 28 0t28 0 28 0 28 0 28 0 28 0" fill="none" stroke="#b9e58f" stroke-width="4.5" stroke-linecap="round"/>
+      </svg>
+      <div class="container hero__inhoud">
+        <p class="hero__boven">De stadsgids van Nijmegen</p>
         <h1>Alles over Nijmegen</h1>
-        <p>Evenementen, nieuws, uitgaan en lokale bedrijven in de oudste stad van Nederland.</p>
+        <p class="hero__intro">Evenementen, nieuws, uitgaan en lokale bedrijven in de oudste stad van Nederland.</p>
+        <form class="hero__zoek" role="search" method="get" action="./zoeken/">
+          <label for="hero-zoek" class="verborgen">Zoek op NijmegenOnline</label>
+          <input id="hero-zoek" type="search" name="q" placeholder="Waar ben je naar op zoek?">
+          <button type="submit">Zoeken</button>
+        </form>
+        <ul class="hero__snel">
+          <li><a href="./nijmegen-evenementen-overzicht/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Agenda</a></li>
+          <li><a href="./nieuwsberichten/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5"/></svg>Nieuws</a></li>
+          <li><a href="./bedrijvengids/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bedrijvengids</a></li>
+          <li><a href="./thema/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5"/></svg>Gidsen</a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- gidsen -->
-    <section id="gidsen">
-      <div class="container">
-        <h2>Populaire gidsen</h2>
-        <div class="raster">
-          <article class="kaart"><a href="thema/restaurants-in-nijmegen-restaurant/"><img src="./assets/uploads/2023/02/frans-restaurant-in-nijmegen-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Restaurants in Nijmegen</h3><p>De beste adressen per keuken en per gelegenheid, van lunch tot diner.</p></div></a></article>
-          <article class="kaart"><a href="thema/trouwen-in-nijmegen/"><img src="./assets/uploads/2023/03/bruiloft-fotograaf-nijmegen-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Trouwen in Nijmegen</h3><p>Trouwlocaties, fotograaf, jurk, ringen, muziek en een handige checklist.</p></div></a></article>
-          <article class="kaart"><a href="thema/overnachten-in-nijmegen/"><img src="./assets/uploads/2022/12/overnachten-in-nijmegen-1-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Overnachten in Nijmegen</h3><p>Hotels, Airbnb&#x27;s, vakantieparken en campings.</p></div></a></article>
-          <article class="kaart"><a href="thema/bb-nijmegen/"><img src="./assets/uploads/2023/01/huis-kopen-in-nijmegen-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>B&amp;B in Nijmegen</h3><p>Bed and breakfasts in Nijmegen, Groesbeek en Wijchen.</p></div></a></article>
-          <article class="kaart"><a href="jaarlijkse-evenementen/nijmeegse-vierdaagse/"><img src="./assets/uploads/2023/01/finish-bij-de-nijmeegse-vierdaagse-601x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Nijmeegse Vierdaagse</h3><p>Afstanden, voorbereiding, blessures voorkomen en overnachten.</p></div></a></article>
-          <article class="kaart"><a href="thema/studeren-in-nijmegen/"><img src="./assets/uploads/2023/01/studentenkamer-in-nijmegen-601x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Studeren in Nijmegen</h3><p>Een kamer vinden en wegwijs worden in de stad.</p></div></a></article>
-          <article class="kaart"><a href="thema/zaal-huren-in-nijmegen/"><img src="./assets/uploads/2022/12/trouwlocatie-huren-in-nijmegen.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Zaal huren in Nijmegen</h3><p>Locaties voor feesten, vergaderingen en teamuitjes.</p></div></a></article>
-          <article class="kaart"><a href="thema/cafes-in-nijmegen/"><img src="./assets/uploads/2022/12/cafes-in-nijmegen-1-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Cafés in Nijmegen</h3><p>Historische kroegen, biercafés, eetcafés en uitgaan.</p></div></a></article>
-        </div>
-        <p class="gids-verder"><a href="thema/">Bekijk alle gidsen</a></p>
-      </div>
-    </section>
-    <!-- /gidsen -->
-
-    <!-- bestemmingen -->
-    <section id="bestemmingen">
-      <div class="container">
-        <h2>Bestemmingen net buiten Nijmegen</h2>
-        <div class="bestemmingen-raster">
-          <a class="bestemmingkaart" href="bestemmingen/kranenburg/"><img src="./assets/uploads/2022/12/toren-kranenburg.webp" alt="" loading="lazy"><span>Kranenburg</span></a>
-          <a class="bestemmingkaart" href="bestemmingen/kleve/"><img src="./assets/uploads/2023/08/kleve-gerechtshof-kleef.webp" alt="" loading="lazy"><span>Kleef</span></a>
-          <a class="bestemmingkaart" href="bestemmingen/groesbeek/"><img src="./assets/uploads/2022/12/groesbeek-winkelcentrum.webp" alt="" loading="lazy"><span>Groesbeek</span></a>
-          <a class="bestemmingkaart" href="bestemmingen/wijchen/"><img src="./assets/uploads/2022/12/wijchen-heumen-natuurgebied.webp" alt="" loading="lazy"><span>Wijchen</span></a>
-          <a class="bestemmingkaart" href="bestemmingen/berg-en-dal/"><img src="./assets/uploads/2023/08/berg-en-dal-kerk-nabij-nijmegen.webp" alt="" loading="lazy"><span>Berg en Dal</span></a>
-          <a class="bestemmingkaart" href="bestemmingen/beuningen/"><img src="./assets/uploads/2023/08/beuningen-nabij-nijmegen.webp" alt="" loading="lazy"><span>Beuningen</span></a>
-        </div>
-        <p class="gids-verder"><a href="bestemmingen/">Bekijk alle bestemmingen</a></p>
-      </div>
-    </section>
-    <!-- /bestemmingen -->
 
     <section id="agenda">
       <div class="container">
@@ -131,6 +141,25 @@
       </div>
     </section>
 
+    <!-- gidsen -->
+    <section id="gidsen">
+      <div class="container">
+        <h2>Populaire gidsen</h2>
+        <div class="raster">
+          <article class="kaart"><a href="thema/restaurants-in-nijmegen-restaurant/"><img src="./assets/uploads/2023/02/frans-restaurant-in-nijmegen-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Restaurants in Nijmegen</h3><p>De beste adressen per keuken en per gelegenheid, van lunch tot diner.</p></div></a></article>
+          <article class="kaart"><a href="thema/trouwen-in-nijmegen/"><img src="./assets/uploads/2023/03/bruiloft-fotograaf-nijmegen-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Trouwen in Nijmegen</h3><p>Trouwlocaties, fotograaf, jurk, ringen, muziek en een handige checklist.</p></div></a></article>
+          <article class="kaart"><a href="thema/overnachten-in-nijmegen/"><img src="./assets/uploads/2022/12/overnachten-in-nijmegen-1-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Overnachten in Nijmegen</h3><p>Hotels, Airbnb&#x27;s, vakantieparken en campings.</p></div></a></article>
+          <article class="kaart"><a href="thema/bb-nijmegen/"><img src="./assets/uploads/2023/01/huis-kopen-in-nijmegen-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>B&amp;B in Nijmegen</h3><p>Bed and breakfasts in Nijmegen, Groesbeek en Wijchen.</p></div></a></article>
+          <article class="kaart"><a href="jaarlijkse-evenementen/nijmeegse-vierdaagse/"><img src="./assets/uploads/2023/01/finish-bij-de-nijmeegse-vierdaagse-601x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Nijmeegse Vierdaagse</h3><p>Afstanden, voorbereiding, blessures voorkomen en overnachten.</p></div></a></article>
+          <article class="kaart"><a href="thema/studeren-in-nijmegen/"><img src="./assets/uploads/2023/01/studentenkamer-in-nijmegen-601x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Studeren in Nijmegen</h3><p>Een kamer vinden en wegwijs worden in de stad.</p></div></a></article>
+          <article class="kaart"><a href="thema/zaal-huren-in-nijmegen/"><img src="./assets/uploads/2022/12/trouwlocatie-huren-in-nijmegen.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Zaal huren in Nijmegen</h3><p>Locaties voor feesten, vergaderingen en teamuitjes.</p></div></a></article>
+          <article class="kaart"><a href="thema/cafes-in-nijmegen/"><img src="./assets/uploads/2022/12/cafes-in-nijmegen-1-533x400.webp" alt="" loading="lazy"><div class="kaart__tekst"><h3>Cafés in Nijmegen</h3><p>Historische kroegen, biercafés, eetcafés en uitgaan.</p></div></a></article>
+        </div>
+        <p class="gids-verder"><a href="thema/">Bekijk alle gidsen</a></p>
+      </div>
+    </section>
+    <!-- /gidsen -->
+
     <section id="bedrijvengids">
       <div class="container">
         <h2>Bedrijvengids</h2>
@@ -149,26 +178,70 @@
         <!-- /bedrijven -->
       </div>
     </section>
+
+    <!-- bestemmingen -->
+    <section id="bestemmingen">
+      <div class="container">
+        <h2>Bestemmingen net buiten Nijmegen</h2>
+        <div class="bestemmingen-raster">
+          <a class="bestemmingkaart" href="bestemmingen/kranenburg/"><img src="./assets/uploads/2022/12/toren-kranenburg.webp" alt="" loading="lazy"><span>Kranenburg</span></a>
+          <a class="bestemmingkaart" href="bestemmingen/kleve/"><img src="./assets/uploads/2023/08/kleve-gerechtshof-kleef.webp" alt="" loading="lazy"><span>Kleef</span></a>
+          <a class="bestemmingkaart" href="bestemmingen/groesbeek/"><img src="./assets/uploads/2022/12/groesbeek-winkelcentrum.webp" alt="" loading="lazy"><span>Groesbeek</span></a>
+          <a class="bestemmingkaart" href="bestemmingen/wijchen/"><img src="./assets/uploads/2022/12/wijchen-heumen-natuurgebied.webp" alt="" loading="lazy"><span>Wijchen</span></a>
+          <a class="bestemmingkaart" href="bestemmingen/berg-en-dal/"><img src="./assets/uploads/2023/08/berg-en-dal-kerk-nabij-nijmegen.webp" alt="" loading="lazy"><span>Berg en Dal</span></a>
+          <a class="bestemmingkaart" href="bestemmingen/beuningen/"><img src="./assets/uploads/2023/08/beuningen-nabij-nijmegen.webp" alt="" loading="lazy"><span>Beuningen</span></a>
+        </div>
+        <p class="gids-verder"><a href="bestemmingen/">Bekijk alle bestemmingen</a></p>
+      </div>
+    </section>
+    <!-- /bestemmingen -->
+
   </main>
 
   <!-- footer -->
   <footer>
-    <div class="container">
-      <ul>
-        <li><a href="./">Home</a></li>
-        <li><a href="./blog/">Inspiratie opdoen</a></li>
-        <li><a href="./thema/">Gidsen</a></li>
-        <li><a href="./bestemmingen/">Bestemmingen</a></li>
-        <li><a href="./bedrijvengids/">Bedrijvengids</a></li>
-        <li><a href="./nijmegen-evenementen-overzicht/">Agenda</a></li>
-        <li><a href="./adverteren-bij-nijmegenonline/">Adverteren</a></li>
-        <li><a href="./kom-in-contact/">Kom in contact</a></li>
-        <li><a href="./algemene-voorwaarden/">Algemene voorwaarden</a></li>
-      </ul>
+    <div class="container voet">
+      <div class="voet__merk">
+        <img src="./assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104" loading="lazy">
+        <p>Alles over uitgaan, evenementen, nieuws en lokale bedrijven in Nijmegen en omgeving.</p>
+        <!-- opent het pop-upformulier qG49m3 van MailerLite (script hieronder) -->
+        <button type="button" class="knop ml-onclick-form" onclick="ml('show', 'qG49m3', true)">Aanmelden voor de nieuwsbrief</button>
+      </div>
+      <nav aria-label="Ontdekken">
+        <h2>Ontdekken</h2>
+        <ul>
+          <li><a href="./nijmegen-evenementen-overzicht/">Agenda</a></li>
+          <li><a href="./nieuwsberichten/">Nieuws</a></li>
+          <li><a href="./blog/">Inspiratie opdoen</a></li>
+          <li><a href="./thema/">Gidsen</a></li>
+          <li><a href="./bestemmingen/">Bestemmingen</a></li>
+          <li><a href="./zoeken/">Zoeken</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Voor ondernemers">
+        <h2>Voor ondernemers</h2>
+        <ul>
+          <li><a href="./bedrijvengids/">Bedrijvengids</a></li>
+          <li><a href="./bedrijf-aanmelden/">Bedrijf aanmelden</a></li>
+          <li><a href="./evenement-aanmelden/">Evenement aanmelden</a></li>
+          <li><a href="./adverteren-bij-nijmegenonline/">Adverteren</a></li>
+          <li><a href="./vacatures/">Vacatures</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Over NijmegenOnline">
+        <h2>Over NijmegenOnline</h2>
+        <ul>
+          <li><a href="./kom-in-contact/">Kom in contact</a></li>
+          <li><a href="./algemene-voorwaarden/">Algemene voorwaarden</a></li>
+          <li><a href="./privacy-policy/">Privacybeleid</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container voet__onder">
       <p>&copy; NijmegenOnline. Testversie, gebouwd vanuit GitHub.</p>
     </div>
   </footer>
-  <!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknop in de zijbalk (pop-upformulier qG49m3) -->
+  <!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknoppen in de zijbalk en de footer (pop-upformulier qG49m3) -->
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
