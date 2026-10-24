@@ -2346,8 +2346,6 @@ def bedrijf_pagina(b, cat, anderen, root="../../", berichten=()):
     if knop.get("tekst") and knop.get("link"):
         out.append('        <p><a class="knop" href="%s" target="_blank" rel="sponsored noopener" data-klik="knop">%s</a></p>'
                    % (esc(knop["link"]), esc(knop["tekst"])))
-    if b.get("concept"):
-        out.append('        <p class="bron">Concepttekst op basis van de eigen website, nog niet door de redactie gecontroleerd.</p>')
     if b["tekst"]:
         out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % schoon(b["tekst"], set(), root, False, b["naam"]))
     else:
