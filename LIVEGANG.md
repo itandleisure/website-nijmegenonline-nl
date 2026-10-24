@@ -22,8 +22,7 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
       24-10-2026; oude pagina's die niet terugkomen staan in `data/oude-paginas.csv`)
 - [x] Google Analytics-code (zelfde Google-tag `GT-5R43F82` als WordPress, GA4-property 337370292) in elke pagina via
       `partials/analytics.html`; laadt alleen op www.nijmegenonline.nl, dus de testsite telt niet mee
-- [ ] Search Console: in Instellingen → Eigendomsverificatie nagaan hoe de property geverifieerd is. Via Google
-      Analytics of DNS: niets te doen. Via een HTML-tag of HTML-bestand: dat moet ook op de nieuwe site komen
+- [x] Search Console: de verificatie-tag (HTML-tag) staat in `partials/analytics.html`, dus de property blijft geverifieerd
 
 ## Op de dag zelf
 
