@@ -26,9 +26,12 @@
     lagen[g] = L.layerGroup([bollen[g], partners[g]]);
   });
   function partnerpunt(p) {
-    var foto = p[7] ? '<img src="' + p[7].replace(/"/g, "&quot;") + '" alt="">' : "";
-    return L.divIcon({ className: "kaartpartner", html: '<span class="kaartpartner__foto">' + foto + '</span><span class="kaartpartner__label">Partner</span>',
-                       iconSize: [56, 70], iconAnchor: [28, 28], popupAnchor: [0, -26] });
+    // Een kaartspeld met de foto van de partner (of een ster als er geen foto is) en een label eronder
+    var foto = p[7] ? '<img src="' + p[7].replace(/"/g, "&quot;") + '" alt="" onerror="this.remove()">' : "";
+    return L.divIcon({ className: "kaartpartner",
+                       html: '<span class="kaartpartner__speld"><span class="kaartpartner__foto">' + foto + '</span></span>' +
+                             '<span class="kaartpartner__label">Partner</span>',
+                       iconSize: [60, 102], iconAnchor: [30, 68], popupAnchor: [0, -64] });
   }
   data.punten.forEach(function (p) {
     var pop = document.createElement("div");

@@ -384,12 +384,13 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .kaartpunt span { display: block; width: 22px; height: 22px; box-sizing: border-box; border-radius: 50%; background: var(--groen); border: 3px solid var(--wit); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35); transition: transform 0.15s ease; }
 .kaartpunt:hover span, .kaartpunt:focus span { transform: scale(1.2); }
 .kaartbol span { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; border-radius: 50%; background: var(--donkerblauw); color: var(--wit); font-weight: 700; font-size: 0.9rem; border: 3px solid rgba(255, 255, 255, 0.85); box-shadow: 0 0 0 4px rgba(18, 73, 124, 0.25); box-sizing: border-box; }
-/* Partners op de kaart: groot, met foto, altijd zichtbaar (niet in een bolletje) */
-.kaartpartner { display: flex; flex-direction: column; align-items: center; }
-.kaartpartner__foto { display: block; width: 56px; height: 56px; box-sizing: border-box; border-radius: 50%; overflow: hidden; background: var(--rood); border: 4px solid var(--rood); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); transition: transform 0.15s ease; }
-.kaartpartner__foto img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 2px solid var(--wit); box-sizing: border-box; }
-.kaartpartner__label { margin-top: -8px; padding: 1px 7px; border-radius: 999px; background: var(--rood); color: var(--wit); font-size: 0.7rem; font-weight: 700; line-height: 1.4; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
-.kaartpartner:hover .kaartpartner__foto, .kaartpartner:focus .kaartpartner__foto { transform: scale(1.1); }
+/* Partners op de kaart: een kaartspeld met hun foto, groter dan de rest en nooit in een bolletje */
+.kaartpartner { display: flex !important; flex-direction: column; align-items: center; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.35)); }
+.kaartpartner__speld { position: relative; display: block; width: 56px; height: 56px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--donkerblauw); transition: transform 0.15s ease; }
+.kaartpartner__foto { position: absolute; inset: 5px; border-radius: 50%; overflow: hidden; transform: rotate(45deg); background: var(--wit) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23539c20' d='M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z'/%3E%3C/svg%3E") center / 60% no-repeat; }
+.kaartpartner__foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kaartpartner__label { display: block; width: max-content; margin: 22px auto 0; padding: 2px 9px; border-radius: 999px; background: var(--groen); color: var(--wit); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3px; line-height: 1.4; white-space: nowrap; }
+.kaartpartner:hover .kaartpartner__speld, .kaartpartner:focus .kaartpartner__speld { transform: rotate(-45deg) scale(1.08); }
 .gidskaart .leaflet-popup-content { font-family: inherit; font-size: 0.95rem; }
 .gidskaart .leaflet-popup-content a { font-weight: 700; }
 
