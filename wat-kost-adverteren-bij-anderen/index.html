@@ -116,6 +116,13 @@
         </div>
 
         <div class="zijbalk__blok zijbalk__cta">
+          <h2 class="zijbalk__titel">Elke week de agenda in je mail</h2>
+          <p>Uitgelichte evenementen, het laatste nieuws en wat er de komende twee weken te doen is.</p>
+          <!-- opent het pop-upformulier qG49m3 van MailerLite (script staat in partials/footer.html) -->
+          <button type="button" class="knop ml-onclick-form" onclick="ml('show', 'qG49m3', true)">Aanmelden voor de nieuwsbrief</button>
+        </div>
+
+        <div class="zijbalk__blok zijbalk__cta">
           <h2 class="zijbalk__titel">Jouw bedrijf in de bedrijvengids?</h2>
           <p>Laat Nijmegen zien wat je doet. Aanmelden is eenvoudig.</p>
           <a class="knop" href="../bedrijvengids/">Naar de bedrijvengids</a>
@@ -135,6 +142,10 @@
   <!-- footer -->
   <footer>
     <div class="container">
+      <div class="nieuwsbrief-aanmelden">
+        <!-- titel, tekst en kleuren van het formulier pas je aan in MailerLite -->
+        <div class="ml-embedded" data-form="dWgHCy"></div>
+      </div>
       <ul>
         <li><a href="../">Home</a></li>
         <li><a href="../blog/">Inspiratie opdoen</a></li>
@@ -149,6 +160,14 @@
       <p>&copy; NijmegenOnline. Testversie, gebouwd vanuit GitHub.</p>
     </div>
   </footer>
+  <!-- MailerLite Universal: aanmeldformulier nieuwsbrief (account 364874, formulier dWgHCy van de oude agendapagina) -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '364874');
+  </script>
   <!-- /footer -->
 </body>
 </html>
