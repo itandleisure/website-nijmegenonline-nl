@@ -22,10 +22,10 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
       24-10-2026; oude pagina's die niet terugkomen staan in `data/oude-paginas.csv`)
 - [x] Google Analytics-code (zelfde Google-tag `GT-5R43F82` als WordPress, GA4-property 337370292) in elke pagina via
       `partials/analytics.html`; laadt alleen op www.nijmegenonline.nl, dus de testsite telt niet mee
-- [ ] Google Analytics privacyvriendelijk (zie /privacy-policy/), in Analytics → Beheer:
+- [x] Google Analytics privacyvriendelijk (zie /privacy-policy/), ingesteld op 24-10-2026 in Analytics → Beheer:
       verwerkersovereenkomst (Accountinstellingen → Wijzigingsvoorwaarden voor gegevensverwerking) geaccepteerd;
       Accountinstellingen → gegevens delen: alles uit; Gegevensverzameling → Google Signals uit;
-      Gegevensbewaring op 14 maanden; geen koppeling met Google Ads. Zonder deze instellingen is een cookiemelding nodig
+      Gegevensbewaring op 14 maanden; advertentiepersonalisatie uit. Zonder deze instellingen is een cookiemelding nodig
 - [x] Search Console: de verificatie-tag (HTML-tag) staat in `partials/analytics.html`, dus de property blijft geverifieerd
 
 ## Op de dag zelf
