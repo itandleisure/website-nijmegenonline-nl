@@ -1,5 +1,5 @@
 {
- "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg). Beauty en wellness: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Uitgaan: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Eten en drinken (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Sport (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres).",
+ "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg). Beauty en wellness: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Uitgaan: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Eten en drinken (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Sport (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Gezondheid en welzijn: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres).",
  "the-kettlebell-club": {
   "adres": "Groenestraat 215",
   "postcode": "6531 HH",
@@ -2130,5 +2130,560 @@
  },
  "watersportcentrum-het-bastion": {
   "geen_adres": true
+ },
+ "climbers-care": {
+  "geen_adres": true
+ },
+ "de-ademfysio": {
+  "geen_adres": true
+ },
+ "de-fysioo-fysiotherapie-nijmegen-tooropstraat": {
+  "geen_adres": true
+ },
+ "fitness-zwanenveld": {
+  "adres": "Zwanenveld 90-80 H",
+  "postcode": "6538 SC",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "fysiokracht": {
+  "adres": "Vasim, De Kolk 3",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "fysiotherapie-dukenburg-aldenhof": {
+  "adres": "Aldenhof 70-03",
+  "postcode": "6537 DZ",
+  "plaats": "Nijmegen",
+  "lat": "51.809223",
+  "lon": "5.801049"
+ },
+ "fysiotherapie-dukenburg": {
+  "adres": "Weezenhof 55-16",
+  "postcode": "6536 EE",
+  "plaats": "Nijmegen",
+  "lat": "51.802049",
+  "lon": "5.807407"
+ },
+ "fysiotherapie-neerbosch-oost": {
+  "adres": "O.C. Huismanstraat 27",
+  "postcode": "6544 ZS",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "het-lijfwiel": {
+  "adres": "Laan van Oost-Indië 324",
+  "postcode": "6541 GZ",
+  "plaats": "Nijmegen",
+  "lat": "51.854918",
+  "lon": "5.841358"
+ },
+ "kinderfysiotherapie-thom": {
+  "adres": "Prof. Molkenboerstraat 26A",
+  "postcode": "6524 RP",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "kniecare-heidebloemstraat": {
+  "geen_adres": true
+ },
+ "kniecare-nieuwe-dukenburgseweg": {
+  "adres": "Heidebloemstraat 3",
+  "postcode": "6533 GL",
+  "plaats": "Nijmegen",
+  "lat": "51.814998",
+  "lon": "5.851523"
+ },
+ "kniecare-tarweweg": {
+  "adres": "Heidebloemstraat 3",
+  "postcode": "6533 GL",
+  "plaats": "Nijmegen",
+  "lat": "51.814998",
+  "lon": "5.851523"
+ },
+ "proo-fysio-nijmegen": {
+  "adres": "Kerkenbos 10-97A",
+  "postcode": "6546 BB",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "wim-meijerink-goed-in-je-lijf": {
+  "geen_adres": true
+ },
+ "beyond-food-coaching": {
+  "geen_adres": true
+ },
+ "dietistenpraktijk-noer-danielsplein": {
+  "adres": "Huisartsenpraktijk Daniëlsplein, Daniëlsplein 3A",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "ijzersterkegewoontes": {
+  "geen_adres": true
+ },
+ "ambra-psychologiepraktijk": {
+  "adres": "Heesweg 4",
+  "postcode": "6942 NG",
+  "plaats": "Didam",
+  "lat": "51.923836",
+  "lon": "6.125400"
+ },
+ "breinvitaal-psychologenpraktijk": {
+  "adres": "Groenestraat 294",
+  "postcode": "6531 JC",
+  "plaats": "Nijmegen",
+  "lat": "51.831847",
+  "lon": "5.844297"
+ },
+ "de-singel-psychotherapie": {
+  "adres": "Bijleveldsingel 32",
+  "postcode": "6524 AD",
+  "plaats": "Nijmegen",
+  "lat": "51.841716",
+  "lon": "5.866050"
+ },
+ "eeuwige-lente": {
+  "geen_adres": true
+ },
+ "ggmd": {
+  "geen_adres": true
+ },
+ "gz-psycholoog-buursema-grave": {
+  "adres": "Berg en Dalseweg 122a",
+  "postcode": "6522 BW",
+  "plaats": "Nijmegen",
+  "lat": "51.839430",
+  "lon": "5.878654"
+ },
+ "hapsys-psychologie-haptotherapie-praktijk": {
+  "geen_adres": true
+ },
+ "hopman-p-t-b-v": {
+  "adres": "Prof. Korsstraat 4",
+  "postcode": "6525 AL",
+  "plaats": "Nijmegen",
+  "lat": "51.828341",
+  "lon": "5.870421"
+ },
+ "lifeflow-ggz": {
+  "geen_adres": true
+ },
+ "lijf-psyche": {
+  "geen_adres": true
+ },
+ "medendorp-psychologen": {
+  "geen_adres": true
+ },
+ "opm-nijmegen": {
+  "adres": "Prof. Molkenboerstraat 9",
+  "postcode": "6524 RN",
+  "plaats": "Nijmegen",
+  "lat": "51.829765",
+  "lon": "5.868488"
+ },
+ "performwise-sportpsycholoog": {
+  "geen_adres": true
+ },
+ "peters-psychotherapie-praktijk-v-cognitieve-gedragstherapie": {
+  "adres": "Kerkenbos 1002",
+  "postcode": "6546 BA",
+  "plaats": "Nijmegen",
+  "lat": "51.827931",
+  "lon": "5.787795"
+ },
+ "praktijk-in-thuis-psychologische-behandeling-supervisie-en-interim-meebewegen-in-de-zorg": {
+  "geen_adres": true
+ },
+ "praktijk-nicole-legters": {
+  "adres": "Thermionpark 14",
+  "plaats": "Lent",
+  "postcode": "",
+  "lat": "51.872092",
+  "lon": "5.860115"
+ },
+ "praktijk-noord-haptotherapeut-psycholoog-coaching-beeldbellen": {
+  "geen_adres": true
+ },
+ "praktijk-voor-psychologie-en-beweging-lean-in": {
+  "adres": "Van Boetzelaerstraat 8",
+  "postcode": "6515 JD",
+  "plaats": "Nijmegen",
+  "lat": "51.874879",
+  "lon": "5.839238"
+ },
+ "preventie-psycholoog-geerling-psycholoog-nijmegen-lingewaard": {
+  "adres": "Sandershof 2a, 6681BT Bemmel ; Prins Hendriksstraat 16",
+  "postcode": "6521 AW",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "psycho-trauma-consultancy-van-lieverloo": {
+  "geen_adres": true
+ },
+ "psychologen-verkaart-bekkers": {
+  "geen_adres": true
+ },
+ "psychologenpraktijk-de-lindeboom-horstacker": {
+  "geen_adres": true
+ },
+ "psychologie-praktijk-de-linde": {
+  "geen_adres": true
+ },
+ "psychotherapie-brugger-supervisie-en-leertherapie": {
+  "adres": "Prof. Cornelissenstraat 2",
+  "postcode": "6524 PJ",
+  "plaats": "Nijmegen",
+  "lat": "51.833653",
+  "lon": "5.865963"
+ },
+ "psychotherapiepraktijk-van-huygevoort": {
+  "geen_adres": true
+ },
+ "relatiedynamiek-relatietherapie-familietherapie-en-mediator-in-nijmegen": {
+  "adres": "Laan van Oost-Indië 305",
+  "postcode": "6541 AJ",
+  "plaats": "Nijmegen",
+  "lat": "51.854262",
+  "lon": "5.842517"
+ },
+ "speltherapie-de-veer": {
+  "adres": "Lankforst 14-12",
+  "postcode": "6538 JB",
+  "plaats": "Nijmegen",
+  "lat": "51.815431",
+  "lon": "5.808593"
+ },
+ "therapiepraktijk-labyrint-burghardt-van-den-berghstraat": {
+  "adres": "Sint Annamolen - Eerste etage, Hatertseweg 14",
+  "postcode": "6533 AL",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "trubendorffer": {
+  "adres": "Sint Annastraat 6",
+  "postcode": "6524 GA",
+  "plaats": "Nijmegen",
+  "lat": "51.840911",
+  "lon": "5.859835"
+ },
+ "ulrich-psychotherapie": {
+  "adres": "Waldeck Pyrmontsingel 77",
+  "postcode": "6524 BA",
+  "plaats": "Nijmegen",
+  "lat": "51.840225",
+  "lon": "5.865596"
+ },
+ "viviq-st-annastraat": {
+  "adres": "St. Annastraat 8",
+  "postcode": "6524 GA",
+  "plaats": "Nijmegen",
+  "lat": "51.840847",
+  "lon": "5.859887"
+ },
+ "wijzer-psychotherapie-en-opleiding": {
+  "adres": "Oranjesingel 60",
+  "postcode": "6511 NX",
+  "plaats": "Nijmegen",
+  "lat": "51.843122",
+  "lon": "5.866598"
+ },
+ "vianova-coaching": {
+  "geen_adres": true
+ },
+ "babyconsulent-nijmegen": {
+  "adres": "Gelind 16b",
+  "postcode": "5421 BN",
+  "plaats": "Gemert",
+  "lat": "",
+  "lon": ""
+ },
+ "bart-wandel": {
+  "geen_adres": true
+ },
+ "beleef-jezelf-in-de-natuur": {
+  "geen_adres": true
+ },
+ "borstvoeding-love-care": {
+  "adres": "Diepvoorde 31-21",
+  "plaats": "Wijchen",
+  "postcode": "",
+  "lat": "51.801576",
+  "lon": "5.720665"
+ },
+ "bureau-herstel-ribw-nijmegen-en-rivierenland": {
+  "adres": "Kerkenbos 1103A",
+  "postcode": "6546 BC",
+  "plaats": "Nijmegen",
+  "lat": "51.826904",
+  "lon": "5.790210"
+ },
+ "de-gouden-verbinding-psychologische-begeleiding-en-coaching": {
+  "geen_adres": true
+ },
+ "de-innerlijke-weg-systemisch-coach-nijmegen-familieopstellingen-1-op-1-en-in-groepen-1-op-1trajecten-themaworkhops": {
+  "geen_adres": true
+ },
+ "de-inspiloog-therapie-sjamanisme-psychologie": {
+  "geen_adres": true
+ },
+ "elodie-communicatie": {
+  "geen_adres": true
+ },
+ "fitkracht": {
+  "adres": "Lentse Schoolstraat 25",
+  "postcode": "6663 CP",
+  "plaats": "Lent",
+  "lat": "51.862253",
+  "lon": "5.865429"
+ },
+ "groeiwerk-coaching-procesbegeleiding": {
+  "geen_adres": true
+ },
+ "harriet-reker-loopbaancoach": {
+  "geen_adres": true
+ },
+ "hypnotherapie-nijmegen-juliette-verweij": {
+  "geen_adres": true
+ },
+ "jacinth-van-zijl-weg-naar-je-hart": {
+  "geen_adres": true
+ },
+ "jeroen-walters-coaching": {
+  "geen_adres": true
+ },
+ "julija-coaching-en-training": {
+  "adres": "Landgoed De Drie Huizen, Driehuizerweg 327",
+  "postcode": "6525 PM",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "kenniscentrum-ad-h-d-en-ass": {
+  "adres": "Kerkenbos 1037",
+  "postcode": "6546 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.824949",
+  "lon": "5.780894"
+ },
+ "kernzaken-intuitief-leiderschap-boardroomcoaching-inspiratielezingen": {
+  "geen_adres": true
+ },
+ "kim-noij-ervaringscoach": {
+  "geen_adres": true
+ },
+ "kindercoaching-waalsprong": {
+  "geen_adres": true
+ },
+ "lucas-prigge": {
+  "geen_adres": true
+ },
+ "marije-bloeit": {
+  "geen_adres": true
+ },
+ "minds-for-science": {
+  "geen_adres": true
+ },
+ "move-from-within": {
+  "geen_adres": true
+ },
+ "nujijleefstijl-nl": {
+  "geen_adres": true
+ },
+ "petra-derks-systemisch-coach-voor-teams-en-individuen": {
+  "adres": "St. Augustinus, Graafseweg 274",
+  "postcode": "6532 ZV",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "praktijk-voor-haptotherapie-en-voor-ervaringsgerichte-supervisie-en-coaching-marleen-van-leeuwe": {
+  "geen_adres": true
+ },
+ "propria-bv": {
+  "adres": "Meander 251",
+  "postcode": "6825 MC",
+  "plaats": "Arnhem",
+  "lat": "51.977056",
+  "lon": "5.967244"
+ },
+ "revita": {
+  "geen_adres": true
+ },
+ "ruimbaan-coaching": {
+  "geen_adres": true
+ },
+ "staatvandienst": {
+  "adres": "Kerkenbos 1020-C",
+  "postcode": "6546 BA",
+  "plaats": "Nijmegen",
+  "lat": "51.825904",
+  "lon": "5.784014"
+ },
+ "therese-tijd-voor-verandering": {
+  "geen_adres": true
+ },
+ "twistcoaching": {
+  "geen_adres": true
+ },
+ "verstandvanlopen": {
+  "geen_adres": true
+ },
+ "wijwei": {
+  "geen_adres": true
+ },
+ "areyouveda": {
+  "geen_adres": true
+ },
+ "awaken-cuppingtherapie": {
+  "geen_adres": true
+ },
+ "esprit-homeopathie": {
+  "geen_adres": true
+ },
+ "hondenosteopaat-nijmegen": {
+  "adres": "Jacobus van het Hoffstraat 20",
+  "postcode": "6533 MX",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "leonie-evers": {
+  "geen_adres": true
+ },
+ "master-your-nature": {
+  "adres": "Stationssingel 120 F, Ruimte Goddes 7",
+  "postcode": "5371 BB",
+  "plaats": "Ravenstein",
+  "lat": "",
+  "lon": ""
+ },
+ "merel-kolderie": {
+  "geen_adres": true
+ },
+ "praktijk-oost-en-west": {
+  "geen_adres": true
+ },
+ "praktijk-vivir": {
+  "geen_adres": true
+ },
+ "prostop-stoppen-met-roken": {
+  "adres": "Weijbroekweg 68",
+  "postcode": "6546 VB",
+  "plaats": "Nijmegen",
+  "lat": "51.828540",
+  "lon": "5.785556"
+ },
+ "sanasi-jovia-praktijk": {
+  "adres": "Leuvensbroek 1013A",
+  "postcode": "6546 XA",
+  "plaats": "Nijmegen",
+  "lat": "51.831902",
+  "lon": "5.779244"
+ },
+ "serene-praktijken": {
+  "geen_adres": true
+ },
+ "shiatsu-therapie-en-massage": {
+  "adres": "Staringstraat 2",
+  "postcode": "6511 PD",
+  "plaats": "Nijmegen",
+  "lat": "51.843681",
+  "lon": "5.867197"
+ },
+ "ton-de-bruin": {
+  "adres": "Andantestraat 9",
+  "postcode": "6544 PH",
+  "plaats": "Nijmegen",
+  "lat": "51.832091",
+  "lon": "5.815994"
+ },
+ "van-hulst-praktijk-voor-chinese-geneeskunde": {
+  "adres": "Guido Gezellestraat 48",
+  "postcode": "6531 CX",
+  "plaats": "Nijmegen",
+  "lat": "51.831437",
+  "lon": "5.853737"
+ },
+ "bril-aan-huis": {
+  "geen_adres": true
+ },
+ "visser-contactlenzen-nijmegen-st-annastraat": {
+  "geen_adres": true
+ },
+ "danielsplein": {
+  "geen_adres": true
+ },
+ "huisartsenmaatschap-b-g-w-m-arts-m-w-m-van-loenen": {
+  "adres": "Berg en Dalseweg 63",
+  "postcode": "6522 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.841272",
+  "lon": "5.876943"
+ },
+ "huisartsenpraktijk-bertholet": {
+  "adres": "Sint Annastraat 63",
+  "postcode": "6524 EH",
+  "plaats": "Nijmegen",
+  "lat": "51.837844",
+  "lon": "5.860283"
+ },
+ "medisch-centrum-onder-de-linde": {
+  "adres": "St. Agnetenweg 75",
+  "postcode": "6545 AT",
+  "plaats": "Nijmegen",
+  "lat": "51.829909",
+  "lon": "5.801447"
+ },
+ "dierencrematorium-nijmegen-arnhem": {
+  "adres": "Dr. de Blécourtstraat 76",
+  "postcode": "6541 DK",
+  "plaats": "Nijmegen",
+  "lat": "51.840096",
+  "lon": "5.816112"
+ },
+ "dierenkliniek-lindenholt": {
+  "adres": "Horstacker 14-21",
+  "postcode": "6546 EK",
+  "plaats": "Nijmegen",
+  "lat": "51.833905",
+  "lon": "5.792970"
+ },
+ "dierenkliniek-st-anna-404": {
+  "adres": "Sint Annastraat 404",
+  "postcode": "6525 ZM",
+  "plaats": "Nijmegen",
+  "lat": "51.820465",
+  "lon": "5.855374"
+ },
+ "dierenpark-lent": {
+  "adres": "Laauwikstraat 20",
+  "postcode": "6663 CK",
+  "plaats": "Lent",
+  "lat": "51.863397",
+  "lon": "5.865715"
+ },
+ "pijnappel-dierenkliniek": {
+  "adres": "Sint Annastraat 35",
+  "postcode": "6524 EE",
+  "plaats": "Nijmegen",
+  "lat": "51.839074",
+  "lon": "5.860511"
+ },
+ "samenwerkende-tandartsen": {
+  "adres": "Groenewoudseweg 315",
+  "postcode": "6524 TX",
+  "plaats": "Nijmegen",
+  "lat": "51.829614",
+  "lon": "5.864575"
  }
 }

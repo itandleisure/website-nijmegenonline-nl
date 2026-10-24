@@ -1,14 +1,16 @@
 # Gezondheid en welzijn: beslissingen voor Frans (24-10-2026)
 
-Na het verzamelen, de websitecheck en de scan staan er **543 bedrijven** als concept in de gids. Bij zoveel bedrijven vraag ik niet per bedrijf, maar per soort geval. Antwoord per letter, bijvoorbeeld "A goed, B weg, C houden". De volledige lijst per categorie staat in `docs/datacheck-<categorie>-2026-10.md`.
+Na het verzamelen, de websitecheck en de scan staan er **541 bedrijven** als concept in de gids. Bij zoveel bedrijven vraag ik niet per bedrijf, maar per soort geval. Antwoord per letter, bijvoorbeeld "A goed, B weg, C houden". De volledige lijst per categorie staat in `docs/datacheck-<categorie>-2026-10.md`.
+
+**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres, D opnieuw proberen).
 
 ## Per categorie
 
 | Categorie | In de gids | Automatisch weg | Site werkt niet | Andere categorie | Nog niet gescand |
 |---|---|---|---|---|---|
 | fysiotherapeut | 82 | 20 | 7 | 2 | 0 |
-| dietist | 14 | 3 | 1 | 2 | 0 |
-| psycholoog | 142 | 29 | 10 | 38 | 0 |
+| dietist | 13 | 3 | 1 | 2 | 0 |
+| psycholoog | 141 | 29 | 10 | 38 | 0 |
 | coach | 130 | 30 | 10 | 19 | 1 |
 | alternatief | 78 | 14 | 8 | 2 | 0 |
 | opticien | 23 | 3 | 0 | 1 | 0 |
