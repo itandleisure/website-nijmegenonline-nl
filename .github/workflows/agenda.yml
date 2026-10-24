@@ -24,7 +24,7 @@ jobs:
           python-version: "3.12"
       - run: pip install beautifulsoup4 pillow
       # bedrijvengids: verlopen pakketten terug naar gratis, uitgelichte volgorde wisselt per dag
-      - run: python tools/agenda.py && python tools/bedrijvengids.py && python tools/build.py
+      - run: python tools/agenda.py && python tools/bedrijvengids.py && python tools/nieuwsbrief.py && python tools/build.py
       - name: Wijzigingen opslaan
         run: |
           git config user.name "agenda-bot"
