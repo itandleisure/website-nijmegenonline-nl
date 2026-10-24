@@ -27,7 +27,8 @@ import xml.etree.ElementTree as ET
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from import_wordpress import DOORVERWIJZING, SITE, VOET, esc, kop, samenvatting, schoon  # noqa: E402
+from import_wordpress import DOORVERWIJZING, SITE, VOET, datum_nl as datum_tijd_nl, esc, kop, samenvatting, schoon  # noqa: E402
+import nieuws  # noqa: E402
 
 NS = {"wp": "http://wordpress.org/export/1.2/", "content": "http://purl.org/rss/1.0/modules/content/"}
 BETAALD = ("uitgelicht", "partner", "hoofdpartner")
@@ -2265,7 +2266,7 @@ def adresregel(b):
     return ", ".join(x for x in (b["adres"], " ".join(x for x in (pc, b["plaats"]) if x)) if x)
 
 
-def bedrijf_pagina(b, cat, anderen, root="../../"):
+def bedrijf_pagina(b, cat, anderen, root="../../", berichten=()):
     canonical = "%s/bedrijvengids/%s/" % (SITE, b["slug"])
     soort = (b.get("soort") or cat["enkelvoud"]).lower()
     kort = "<p>%s is een %s aan de %s in %s.</p>" % (esc(b["naam"]), esc(soort), esc(b["adres"]), esc(b["plaats"])) if b["adres"] else ""
@@ -2371,6 +2372,11 @@ def bedrijf_pagina(b, cat, anderen, root="../../"):
                    'src="https://www.openstreetmap.org/export/embed.html?bbox=%s&amp;layer=mapnik&amp;marker=%s,%s"></iframe>'
                    % (esc(b["naam"]), bbox, b["lat"], b["lon"]))
         out.append('          <p class="bron">Kaart: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-bijdragers</a></p>\n        </section>')
+    if berichten:
+        out.append('        <section class="gids-sectie">\n          <h2>In het nieuws</h2>\n          <ul class="archieflijst">')
+        out.extend('            <li><time datetime="%s">%s</time> <a href="%snieuwsoverzicht/%s/">%s</a></li>'
+                   % (x["datum"][:10], esc(datum_tijd_nl(x["datum"])), root, x["slug"], esc(x["titel"])) for x in berichten[:5])
+        out.append("          </ul>\n        </section>")
     if anderen:
         out.append('        <section class="gids-sectie">\n          <h2>Meer %s in Nijmegen</h2>\n          <div class="bedrijflijst">' % esc(cat["meervoud"]))
         out.extend("            " + (uitgelicht_kaart(x, root) if x.get("uitgelicht") else gewone_kaart(x, root)) for x in anderen[:4])
@@ -2838,13 +2844,15 @@ def main(bron):
         print("%s: %d uit de gids, %d aangevuld, %d niet (meer) in de gids" % (cat["slug"], len(gids), len(overig), len(weg)))
     # Betalende bedrijven kunnen ook bij andere categorieën staan ("ook_in" in data/bedrijvengids-pakketten.json): daar
     # alleen met hun kaart, de pagina blijft bij de eigen categorie
+    # Nieuwsberichten over een bedrijf komen op zijn pagina (tools/nieuws.py bepaalt welke)
+    per_bedrijf = nieuws.koppelingen(nieuws.laad(), [(b["slug"], b.get("website")) for _, g, o in gebouwd for b in g + o])
     for cat, gids, overig in gebouwd:
         extra = [b for c, g, o in gebouwd if c is not cat for b in g + o if cat["slug"] in b.get("ook_in", [])]
         artikelen = [(s_, titel_van(s_)) for s_ in cat["artikelen"] if titel_van(s_)]
         schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig + extra, artikelen))
         for b in gids + overig:
             anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
-            schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen))
+            schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen, berichten=per_bedrijf.get(b["slug"], ())))
         blog_blokken(cat, gids + overig + extra)
         groepen.setdefault(cat["groep"], []).append((cat, gids, overig + extra))
     if xml_.exists():

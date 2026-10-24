@@ -272,6 +272,11 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .bericht-nav span { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--groen); margin-bottom: 4px; }
 .bericht-nav .volgende { text-align: right; grid-column: 2; }
 @media (max-width: 600px) { .bericht-nav { grid-template-columns: 1fr; } .bericht-nav .volgende { grid-column: 1; text-align: left; } }
+.archieflijst { list-style: none; padding: 0; margin: 0; }
+.archieflijst li { padding: 10px 0; border-bottom: 1px solid var(--rand); }
+.archieflijst time { display: block; font-size: 0.8rem; color: var(--grijs); }
+.archieflijst a { color: var(--kop); font-weight: 600; text-decoration: none; }
+.archieflijst a:hover { color: var(--groen); }
 
 /* Uitgelichte evenementen (klanten) */
 .eventkaart--uitgelicht { border-color: var(--groen); background: #f2f9ec; }

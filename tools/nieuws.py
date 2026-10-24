@@ -3,6 +3,12 @@
 - /nieuwsoverzicht/<slug>/   een pagina per bericht (zelfde URL als op WordPress)
 - /nieuwsberichten/          overzicht, nieuwste eerst (/nieuwsoverzicht/ verwijst hierheen)
 - homepage                   de drie nieuwste berichten tussen <!-- nieuws --> en <!-- /nieuws -->
+- verwijderde berichten      (data/nieuws-verwijderd.json) een doorverwijzing naar het bedrijf in de gids of naar het
+                             overzicht, ook als 301 in _redirects (blok "# nieuws")
+
+Een bericht hoort bij een bedrijf uit de gids als het in "bedrijven" staat, of (bij berichten die via de mail binnenkomen)
+als de tekst naar de website van het bedrijf linkt. tools/bedrijvengids.py zet die berichten op de bedrijfspagina
+("In het nieuws"), deze pagina's linken terug naar het bedrijf.
 
 data/nieuws.json komt uit tools/import_nieuws.py (de berichten van WordPress) en groeit met de berichten die de
 redactie via nieuws@nijmegenonline.nl en de Google Sheet goedkeurt (tools/aanmeldingen.py). Daarna nog
@@ -10,10 +16,12 @@ python tools/build.py voor header, footer, zijbalk en de webp-afbeeldingen.
 
 Gebruik: python tools/nieuws.py
 """
+import datetime
 import json
 import pathlib
 import re
 import sys
+import urllib.parse
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from import_wordpress import (DOORVERWIJZING, ROOT, SITE, VOET, datum_nl, esc, goede_alt, kop,  # noqa: E402
@@ -21,6 +29,13 @@ from import_wordpress import (DOORVERWIJZING, ROOT, SITE, VOET, datum_nl, esc, g
 
 OVERZICHT = "nieuwsberichten"
 DATA = ROOT / "data" / "nieuws.json"
+VERWIJDERD = ROOT / "data" / "nieuws-verwijderd.json"
+VERMELDINGEN = ROOT / "data" / "bedrijvengids-vermeldingen.json"
+RECENT = 365  # dagen; ouder nieuws staat in het overzicht onder "Archief"
+# Websites van platforms: een link daarheen zegt niets over welk bedrijf het bericht gaat
+PLATFORMS = {"facebook.com", "instagram.com", "linkedin.com", "youtube.com", "twitter.com", "x.com", "tiktok.com", "linktr.ee",
+             "google.com", "sites.google.com", "maps.google.com", "goo.gl", "nijmegenonline.nl", "nijmegen.nl", "eventbrite.nl",
+             "eventbrite.com", "ticketmaster.nl", "wa.me", "bit.ly"}
 
 
 def laad():
@@ -30,6 +45,34 @@ def laad():
 def bewaar(berichten):
     berichten.sort(key=lambda b: (b["datum"], b["slug"]), reverse=True)
     DATA.write_text(json.dumps(berichten, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
+def laad_verwijderd():
+    return json.load(open(VERWIJDERD, encoding="utf-8")) if VERWIJDERD.exists() else {}
+
+
+def domein(url):
+    d = urllib.parse.urlparse(url if "//" in url else "https://" + url).netloc.lower().split(":")[0]
+    return d[4:] if d.startswith("www.") else d
+
+
+def koppelingen(berichten, bedrijven):
+    """{bedrijf-slug: [berichten, nieuwste eerst]}. bedrijven: (slug, website) van alle bedrijven in de gids."""
+    per_domein = {}
+    for slug_, site in bedrijven:
+        d = domein(site) if site else ""
+        if d and d not in PLATFORMS:
+            per_domein.setdefault(d, set()).add(slug_)
+    bekend = {s for s, _ in bedrijven}
+    uit = {}
+    for b in sorted(berichten, key=lambda b: (b["datum"], b["slug"]), reverse=True):
+        slugs = [s for s in b.get("bedrijven", []) if s in bekend]
+        if b.get("aanmelding"):
+            for href in re.findall(r'href="(https?://[^"]+)"', b["tekst"]):
+                slugs += sorted(per_domein.get(domein(href), ()))
+        for s in dict.fromkeys(slugs):
+            uit.setdefault(s, []).append(b)
+    return uit
 
 
 def foto_src(b, root):
@@ -55,7 +98,7 @@ def nieuwskaart(b, root):
             "<h3>%s</h3></div></a></article>" % (root, b["slug"], img, esc(datum_nl(b["datum"])), esc(b["titel"])))
 
 
-def bericht_pagina(b, nieuwer, ouder):
+def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
     root = "../../"
     canonical = "%s/nieuwsoverzicht/%s/" % (SITE, b["slug"])
     tekst = zonder_dubbele_foto(b)
@@ -83,6 +126,9 @@ def bericht_pagina(b, nieuwer, ouder):
                       bijschrift))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
+    if bedrijven:
+        out.append('        <p class="gids-verder">In de bedrijvengids: %s</p>' % ", ".join(
+            '<a href="%sbedrijvengids/%s/">%s</a>' % (root, s, esc(naam)) for s, naam in bedrijven))
     nav = []
     if ouder:
         nav.append('<a class="vorige" href="../%s/"><span>Vorig bericht</span>%s</a>' % (ouder["slug"], esc(ouder["titel"])))
@@ -107,30 +153,60 @@ def overzicht(berichten):
     out.append('      <header class="rubriek-kop">\n        <h1>Nieuws uit Nijmegen</h1>\n'
                '        <p>Nieuws over evenementen, cultuur en wat er speelt in Nijmegen en de regio. '
                'Zoek je iets om te doen? Kijk dan in de <a href="%s/nijmegen-evenementen-overzicht/">agenda</a>.</p>\n      </header>' % SITE)
-    jaar = None
-    for b in berichten:
-        if b["datum"][:4] != jaar:
-            if jaar:
-                out.append("        </div>\n      </section>")
-            jaar = b["datum"][:4]
-            out.append('      <section class="gids-sectie">\n        <h2>%s</h2>\n        <div class="raster">' % jaar)
-        out.append("          " + nieuwskaart(b, root))
-    if jaar:
+    grens = (datetime.date.today() - datetime.timedelta(days=RECENT)).isoformat()
+    recent = [b for b in berichten if b["datum"][:10] >= grens]
+    archief = [b for b in berichten if b["datum"][:10] < grens]
+    if recent:
+        out.append('      <section class="gids-sectie">\n        <h2>Laatste nieuws</h2>\n        <div class="raster">')
+        out.extend("          " + nieuwskaart(b, root) for b in recent)
         out.append("        </div>\n      </section>")
+    if archief:
+        out.append('      <section class="gids-sectie">\n        <h2>Archief</h2>\n        <ul class="archieflijst">')
+        out.extend('          <li><time datetime="%s">%s</time> <a href="%snieuwsoverzicht/%s/">%s</a></li>'
+                   % (b["datum"][:10], esc(datum_nl(b["datum"])), root, b["slug"], esc(b["titel"])) for b in archief)
+        out.append("        </ul>\n      </section>")
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
 
 
+def doorverwijzingen(verwijderd, vermeldingen):
+    """Pagina's van verwijderde berichten sturen door; in _redirects vóór de blokken van de gids en de agenda
+    (die alles vóór hun eigen blok laten staan)."""
+    for slug_, w in verwijderd.items():
+        m = re.match(r"/bedrijvengids/([^/]+)/$", w["naar"])
+        naam = vermeldingen[m.group(1)]["bedrijf"] if m and m.group(1) in vermeldingen else (
+            "Nieuws uit Nijmegen" if w["naar"] == "/%s/" % OVERZICHT else "NijmegenOnline")
+        pagina = DOORVERWIJZING % {"titel": esc(naam), "url": SITE + w["naar"], "pad": "../.." + w["naar"]}
+        map_ = ROOT / "nieuwsoverzicht" / slug_
+        map_.mkdir(parents=True, exist_ok=True)
+        (map_ / "index.html").write_text(pagina.replace("Dit artikel is samengevoegd met", "Dit bericht staat niet meer online. Ga verder naar"),
+                                         encoding="utf-8")
+    pad = ROOT / "_redirects"
+    tekst = pad.read_text(encoding="utf-8") if pad.exists() else ""
+    rest = min([i for i in (tekst.find("# bedrijvengids"), tekst.find("# agenda")) if i >= 0] or [len(tekst)])
+    kop_ = tekst[:rest].split("# nieuws")[0].rstrip("\n")
+    regels = ["# nieuws (tools/nieuws.py)"] + ["/nieuwsoverzicht/%s/ %s 301" % (s, w["naar"]) for s, w in sorted(verwijderd.items())]
+    pad.write_text("\n".join(x for x in (kop_, "\n".join(regels), tekst[rest:].rstrip("\n")) if x) + "\n", encoding="utf-8")
+
+
 def main():
     berichten = sorted(laad(), key=lambda b: (b["datum"], b["slug"]), reverse=True)
+    vermeldingen = json.load(open(VERMELDINGEN, encoding="utf-8")) if VERMELDINGEN.exists() else {}
+    per_bedrijf = koppelingen(berichten, [(s, v.get("site")) for s, v in vermeldingen.items()])
+    bij = {}
+    for s, lijst in sorted(per_bedrijf.items()):
+        for b in lijst:
+            bij.setdefault(b["slug"], []).append((s, vermeldingen[s]["bedrijf"]))
     for n, b in enumerate(berichten):
         d = ROOT / "nieuwsoverzicht" / b["slug"]
         d.mkdir(parents=True, exist_ok=True)
         nieuwer = berichten[n - 1] if n > 0 else None
         ouder = berichten[n + 1] if n + 1 < len(berichten) else None
-        (d / "index.html").write_text(bericht_pagina(b, nieuwer, ouder), encoding="utf-8")
+        (d / "index.html").write_text(bericht_pagina(b, nieuwer, ouder, bij.get(b["slug"], ())), encoding="utf-8")
+    verwijderd = laad_verwijderd()
+    doorverwijzingen(verwijderd, vermeldingen)
     (ROOT / OVERZICHT).mkdir(exist_ok=True)
     (ROOT / OVERZICHT / "index.html").write_text(overzicht(berichten), encoding="utf-8")
     stub = DOORVERWIJZING % {"titel": "Nieuws uit Nijmegen", "url": "%s/%s/" % (SITE, OVERZICHT), "pad": "../%s/" % OVERZICHT}
@@ -145,7 +221,8 @@ def main():
     if not n:
         raise SystemExit("Markering <!-- nieuws --> ontbreekt in index.html")
     home.write_text(t, encoding="utf-8")
-    print("%d nieuwsberichten, %s t/m %s" % (len(berichten), berichten[-1]["datum"][:10], berichten[0]["datum"][:10]))
+    print("%d nieuwsberichten, %s t/m %s, %d doorverwijzingen, %d bij een bedrijf"
+          % (len(berichten), berichten[-1]["datum"][:10], berichten[0]["datum"][:10], len(verwijderd), len(bij)))
 
 
 if __name__ == "__main__":
