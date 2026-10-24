@@ -2690,10 +2690,14 @@ def foto_url(foto, root):
 
 
 def correcties_toepassen(bedrijven, pad):
-    """Correcties van de redactie (data/bedrijvengids-correcties.json): naam, adres, postcode, ligging, extra vestiging."""
+    """Correcties van de redactie (data/bedrijvengids-correcties.json): naam, adres, postcode, ligging, extra vestiging,
+    geen_adres (zonder adres en niet op de kaart)."""
     corr = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
     for b in bedrijven:
         b.update({k: v for k, v in corr.get(b["slug"], {}).items() if k in ("naam", "adres", "postcode", "plaats", "lat", "lon", "extra_vestiging")})
+        if corr.get(b["slug"], {}).get("geen_adres"):
+            # Werkt vanuit huis of bij de klant: alleen de plaats, niet op de kaart
+            b.update({"adres": "", "postcode": "", "lat": "", "lon": ""})
 
 
 def websites_toepassen(bedrijven, pad):

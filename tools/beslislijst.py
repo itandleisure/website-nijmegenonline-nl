@@ -44,6 +44,12 @@ VRAGEN = {
     ],
 }
 
+# Wat Frans besloot, komt bovenaan de lijst
+BESLUIT = {
+    "zakelijk": "**Besluit van Frans (24-10-2026):** A en C volgens het voorstel. B blijft staan, met het adres van hun eigen site: "
+                "straks komen er ook gidsen voor Groesbeek, Wijchen, Beuningen en Malden. G volgens het voorstel.",
+}
+
 IN_GEMEENTE = r"\b65[0-4]\d\s?[a-z]{2}\b|nijmegen|\blent\b|oosterhout"
 GEEN_LOCATIE = r"thuisadres|postadres|geen (straat)?adres|geen fysieke|geen (vaste |eigen )?(locatie|vestiging|praktijk|winkel)|alleen online|aan huis werk|op locatie bij de klant|niet op de site bevestigd"
 
@@ -92,6 +98,7 @@ def main(groep):
            "Na het verzamelen, de websitecheck en de scan staan er **%d bedrijven** als concept in de gids. "
            "Bij zoveel bedrijven vraag ik niet per bedrijf, maar per soort geval. Antwoord per letter, bijvoorbeeld "
            "\"A goed, B weg, C houden\". De volledige lijst per categorie staat in `docs/datacheck-<categorie>-%s.md`.\n" % (totaal, time.strftime("%Y-%m")),
+           *([BESLUIT[groep] + "\n"] if groep in BESLUIT else []),
            *(["## Eerst een vraag\n"] + VRAGEN[groep] + [""] if groep in VRAGEN else []),
            "## Per categorie\n",
            tabel(["Categorie", "In de gids", "Automatisch weg", "Site werkt niet", "Andere categorie", "Nog niet gescand"], telling),

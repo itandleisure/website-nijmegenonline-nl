@@ -2,6 +2,8 @@
 
 Na het verzamelen, de websitecheck en de scan staan er **605 bedrijven** als concept in de gids. Bij zoveel bedrijven vraag ik niet per bedrijf, maar per soort geval. Antwoord per letter, bijvoorbeeld "A goed, B weg, C houden". De volledige lijst per categorie staat in `docs/datacheck-<categorie>-2026-10.md`.
 
+**Besluit van Frans (24-10-2026):** A en C volgens het voorstel. B blijft staan, met het adres van hun eigen site: straks komen er ook gidsen voor Groesbeek, Wijchen, Beuningen en Malden. G volgens het voorstel.
+
 ## Eerst een vraag
 
 **G. Grafisch ontwerpers en IT-bedrijven.** Die heb ik niet als eigen categorie opgenomen. De scan vond er een paar tussen de marketingbureaus (zie E). Mijn voorstel: grafisch ontwerpers bij de marketingbureaus laten, IT-bedrijven voorlopig niet. Of wil je er een eigen pagina voor?
