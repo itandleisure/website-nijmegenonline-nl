@@ -2456,12 +2456,12 @@ def kaart_blok(bedrijven, root, knoppen=False):
     groepen = list(dict.fromkeys(g for g, _ in bedrijven))
     # Betalende bedrijven (partner, uitgelicht) krijgen een grote marker met hun foto, buiten de bolletjes
     punten = [[b["naam"], round(float(b["lat"]), 6), round(float(b["lon"]), 6), "%sbedrijvengids/%s/" % (root, b["slug"]), adresregel(b), g]
-              + ([1, foto_url(b.get("foto") or "", root)] if b.get("uitgelicht") else [])
+              + ([1, kaartfoto(b.get("foto") or "", root)] if b.get("uitgelicht") else [])
               for g, b in bedrijven if b["lat"]]
     data = json.dumps({"groepen": groepen, "punten": punten}, ensure_ascii=False).replace("</", "<\\/")
     return ('%s          <div id="gidskaart" class="gidskaart" role="region" aria-label="Kaart met bedrijven"></div>\n'
             '          <script type="application/json" id="kaartdata">%s</script>\n'
-            '          <script src="%sassets/js/kaart.js?v=6" defer></script>'
+            '          <script src="%sassets/js/kaart.js?v=9" defer></script>'
             % ('          <div id="kaartgroepen" class="kaartgroepen"></div>\n' if knoppen else "", data, root))
 
 
@@ -2716,6 +2716,15 @@ def scan_toepassen(bedrijven, pad, eigen_tekst=False):
         b["tijden_site"] = s.get("openingstijden", "")
         b["kenmerken"] = s.get("kenmerken", [])
         b["keuken"] = s.get("keuken") or b.get("keuken", "")
+
+
+def kaartfoto(foto, root):
+    """Foto voor de kaart. Die staat in JSON, dus build.py zet hem niet om naar de eigen webp-versie: dat doen we hier,
+    met een relatief pad (anders wijst hij naar de oude site, waar de webp niet bestaat)."""
+    m = re.match(r"https?://(?:www\.)?nijmegenonline\.nl/wp-content/uploads/(.+?)\.(?:png|jpe?g|gif|webp)$", foto or "", re.I)
+    if m and (ROOT / "assets" / "uploads" / (m.group(1) + ".webp")).is_file():
+        return "%sassets/uploads/%s.webp" % (root, m.group(1))
+    return foto_url(foto, root)
 
 
 def foto_url(foto, root):
