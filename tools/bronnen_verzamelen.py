@@ -266,18 +266,14 @@ BRONNEN = {
         "soort": "Kapper",
         "andere_soort": r"haartransplant|kliniek|clinic",
     },
+    # Massage en wellness samen op één pagina (besluit Frans, 24-10-2026)
     "massagesalon": {
-        "osm": {"Massage, sauna en wellness"},
-        "osm_sub": r"massage",
-        "overture": lambda basis, soort: soort in ("massage_therapy", "massage", "thai_massage", "sports_massage"),
+        "osm": {"Massage, sauna en wellness", "Zwembaden"},
+        "osm_sub": r"massage|sauna|spa|wellness",
+        "overture": lambda basis, soort: soort in ("massage_therapy", "massage", "thai_massage", "sports_massage",
+                                                   "spa", "day_spa", "sauna", "health_spa", "medical_spa", "hammam"),
         "soort": "Massage",
         "andere_soort": r"erotic|erotisch|tantra|happy end|privehuis|privéhuis",
-    },
-    "wellness": {
-        "osm": {"Massage, sauna en wellness", "Zwembaden"},
-        "osm_sub": r"sauna|spa|wellness",
-        "overture": lambda basis, soort: soort in ("spa", "day_spa", "sauna", "health_spa", "medical_spa", "hammam"),
-        "soort": "Wellness",
     },
     "schoonheidssalon": {
         "osm": {"Beauty en nagels"},

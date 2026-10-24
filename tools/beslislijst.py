@@ -23,7 +23,7 @@ GROEPEN = {
                                           "kinderopvang", "taxi", "begrafenis", "hondentraining"]),
     "wonen": ("Wonen en klussen", ["aannemersbedrijf", "schilder", "loodgieter", "hovenier", "zonnepanelen", "meubelmaker", "makelaar",
                                    "dakdekker", "slotenmaker", "elektricien", "verhuisbedrijf", "schoonmaakbedrijf"]),
-    "beauty": ("Beauty en wellness", ["kapper", "massagesalon", "wellness", "permanente-make-up", "schoonheidssalon", "nagelsalon",
+    "beauty": ("Beauty en wellness", ["kapper", "massagesalon", "permanente-make-up", "schoonheidssalon", "nagelsalon",
                                       "pedicure", "tattoo"]),
     "uitgaan": ("Uitgaan", ["uitjes", "musea", "podia", "bioscoop", "galerie", "zaalverhuur"]),
     "eten": ("Eten en drinken (rest)", ["bakkerij", "bierbrouwerij", "afhaal", "catering", "ijssalon"]),
@@ -37,7 +37,7 @@ GROEPEN = {
 
 # Vragen die niet uit de data volgen, per groep bovenaan de lijst
 VRAGEN = {
-    "beauty": [
+    "_beauty": [
         "**G. Wellness.** Daar blijft maar 1 bedrijf over: de meeste bleken massagesalons of schoonheidssalons. Mijn voorstel: "
         "wellness samenvoegen met de massagesalons tot één pagina \"Massage en wellness\".",
     ],
@@ -50,6 +50,13 @@ VRAGEN = {
 
 # Wat Frans besloot, komt bovenaan de lijst
 BESLUIT = {
+    "overnachten-winkelen": "**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres).",
+    "gezondheid": "**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres, D opnieuw proberen).",
+    "sport": "**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres, D opnieuw proberen).",
+    "uitgaan": "**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres, D opnieuw proberen).",
+    "eten": "**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres, D opnieuw proberen).",
+    "beauty": "**Besluit van Frans (24-10-2026):** A, B, C en E volgens het voorstel, behalve AMI Kappers (franchisevestiging, weg). "
+              "D laten. Wellness en massage samen op één pagina (G).",
     "wonen": "**Besluit van Frans (24-10-2026):** C weg, de rest volgens het voorstel (A en B adres van de eigen site, D opnieuw proberen).",
     "zakelijk": "**Besluit van Frans (24-10-2026):** A en C volgens het voorstel. B blijft staan, met het adres van hun eigen site: "
                 "straks komen er ook gidsen voor Groesbeek, Wijchen, Beuningen en Malden. G volgens het voorstel.",

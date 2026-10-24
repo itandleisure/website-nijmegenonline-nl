@@ -2,6 +2,8 @@
 
 Na het verzamelen, de websitecheck en de scan staan er **412 bedrijven** als concept in de gids. Bij zoveel bedrijven vraag ik niet per bedrijf, maar per soort geval. Antwoord per letter, bijvoorbeeld "A goed, B weg, C houden". De volledige lijst per categorie staat in `docs/datacheck-<categorie>-2026-10.md`.
 
+**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres).
+
 ## Per categorie
 
 | Categorie | In de gids | Automatisch weg | Site werkt niet | Andere categorie | Nog niet gescand |

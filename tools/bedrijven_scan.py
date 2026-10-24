@@ -47,7 +47,7 @@ CATEGORIEEN = {
     "pilates": "Pilates", "klimmen": "Klimmen en boulderen", "atletiek": "Atletiek en hardlopen", "yoga": "Yoga", "hockey": "Hockey",
     "dansschool": "Dansscholen", "personal-training": "Personal training en bootcamp", "tennis": "Tennis en squash", "golf": "Golf",
     "vechtsport": "Vechtsport", "zwemles": "Zwemles", "sportvereniging": "Sportverenigingen en -accommodaties",
-    "kapper": "Kappers en barbers", "massagesalon": "Massage", "wellness": "Sauna en wellness", "schoonheidssalon": "Schoonheidssalons",
+    "kapper": "Kappers en barbers", "massagesalon": "Massage en wellness", "schoonheidssalon": "Schoonheidssalons",
     "nagelsalon": "Nagelsalons", "pedicure": "Pedicure", "permanente-make-up": "Permanente make-up", "tattoo": "Tattoo en piercing",
     "fysiotherapeut": "Fysiotherapie", "dietist": "Diëtisten en voedingsadvies", "coach": "Coaches en therapeuten",
     "alternatief": "Alternatieve geneeswijzen", "opticien": "Opticiens", "huisarts": "Huisartsen", "dierenarts": "Dierenartsen",
@@ -156,12 +156,10 @@ KENMERKEN_BEAUTY = ["online boeken", "zonder afspraak", "avond of weekend", "her
 for _slug, (_spec, _uitleg) in {
     "kapper": (["knippen", "kleuren", "barber", "krullen", "bruidskapsel", "extensions", "afro en textuur"],
                "Kappers, kapsalons en barbershops. Een haarkliniek of haartransplantatie: zakelijk-overig."),
-    "massagesalon": (["ontspanningsmassage", "sportmassage", "hot stone", "thaise massage", "zwangerschapsmassage", "duo-massage", "aan huis"],
-                     "Massagesalons en masseurs. Erotische massage of een privéhuis hoort niet in de gids: geen-bedrijf. "
+    "massagesalon": (["ontspanningsmassage", "sportmassage", "hot stone", "thaise massage", "zwangerschapsmassage", "duo-massage", "aan huis",
+                      "sauna", "hammam", "arrangementen", "dagentree", "privé-sauna"],
+                     "Massagesalons, masseurs, sauna's, wellnessresorts en dayspa's. Erotische massage of een privéhuis hoort niet in de gids: geen-bedrijf. "
                      "Een fysiotherapeut met massage als bijzaak: fysiotherapeut."),
-    "wellness": (["sauna", "hammam", "zwembad", "beautybehandelingen", "arrangementen", "dagentree", "privé-sauna"],
-                 "Sauna's, wellnessresorts en dayspa's. Een schoonheidssalon die 'spa' in de naam heeft maar geen sauna of "
-                 "wellnessfaciliteiten: schoonheidssalon."),
     "schoonheidssalon": (["gezichtsbehandeling", "huidverbetering", "wimpers en wenkbrauwen", "harsen", "make-up", "laserontharing", "zonnebank"],
                          "Schoonheidssalons, huidtherapeuten, wimper- en wenkbrauwstudio's en visagisten. Vooral nagels: nagelsalon. "
                          "Vooral permanente make-up: permanente-make-up. Een zonnestudio hoort er ook bij."),
@@ -429,9 +427,21 @@ def platte_tekst(ruw):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", ruw))).strip()
 
 
-def zelf_lezen(website):
+def varianten(url):
+    """De site zoals opgegeven, en anders met https/http en met of zonder www (veel oude links kloppen half)."""
+    m = re.match(r"(?i)^(?:https?://)?(?:www\.)?([^/]+)(.*)$", url.strip())
+    if not m:
+        return [url]
+    host, rest = m.groups()
+    return list(dict.fromkeys([url] + ["%s://%s%s%s" % (p, w, host, rest or "/") for p in ("https", "http") for w in ("www.", "")]))
+
+
+def zelf_lezen(website, varianten_proberen=False):
     """Homepage plus hooguit twee pagina's over menu, openingstijden of contact, samen max. 40.000 tekens."""
-    eind, ruw = ophalen(homepage(website))
+    for url in (varianten(homepage(website)) if varianten_proberen else [homepage(website)]):
+        eind, ruw = ophalen(url)
+        if len(platte_tekst(ruw)) >= 200:
+            break
     if len(platte_tekst(ruw)) < 200:
         return "", []
     stukken, bronnen = [platte_tekst(ruw)[:20000]], [eind]
@@ -448,7 +458,7 @@ def zelf_lezen(website):
     return "\n\n---\n\n".join("Pagina %s:\n%s" % (u, t) for u, t in zip(bronnen, stukken)), bronnen
 
 
-def verzoek(b, categorie, pagina_tekst=""):
+def verzoek(b, categorie, pagina_tekst="", tweede_poging=False):
     """De parameters voor één bedrijf, voor messages.create en voor een batch."""
     bericht = ("Bedrijf: %s\nAdres bij ons: %s, %s %s\nWebsite: %s\nVermoedelijke categorie: %s\n%s\n\n"
                "Lees de website en vul de gegevens in." % (b["naam"], b["adres"], b["postcode"], b["plaats"], homepage(b["website"]),
@@ -458,11 +468,19 @@ def verzoek(b, categorie, pagina_tekst=""):
         # De site is door ons zelf opgehaald: de tekst gaat mee in het bericht, zonder web_fetch
         bericht += ("\n\nDe website kon je niet zelf openen; hieronder staat de tekst van de pagina's, door ons opgehaald. "
                     "Gebruik alleen deze tekst.\n\n<website>\n%s\n</website>" % pagina_tekst)
-    params = {"model": MODEL, "max_tokens": 8000, "system": SYSTEEM, "messages": [{"role": "user", "content": bericht}],
+    if tweede_poging and not pagina_tekst:
+        bericht += ("\n\nDe eerste keer lukte het niet om deze site te lezen. Probeer ook de varianten met en zonder www en "
+                    "https. Lukt dat niet, zoek dan met web_search naar het bedrijf in Nijmegen en gebruik alleen resultaten van "
+                    "de eigen website. Vind je niets betrouwbaars, zet website_bereikbaar dan op false.")
+    # Vaste instructies in de cache: scheelt een beetje bij elke volgende vraag
+    params = {"model": MODEL, "max_tokens": 8000, "system": [{"type": "text", "text": SYSTEEM, "cache_control": {"type": "ephemeral"}}],
+              "messages": [{"role": "user", "content": bericht}],
               "output_config": {"effort": "low", "format": {"type": "json_schema", "schema": schema(categorie)}}}
     if not pagina_tekst:
         # Geen allowed_domains: veel sites sturen door naar een ander domein, en dan zou het ophalen mislukken
         params["tools"] = [{"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": 5}]
+        if tweede_poging:
+            params["tools"].append({"type": "web_search_20260209", "name": "web_search", "max_uses": 3})
     return params
 
 
@@ -522,6 +540,11 @@ def te_scannen(categorie, scan, opnieuw, alleen):
             continue
         if eerder.get("status") == "goedgekeurd" and not alleen and not opnieuw:
             continue
+        if alleen == {"onleesbaar"}:
+            # Tweede poging voor sites die we de eerste keer niet konden lezen (besluit Frans, 24-10-2026)
+            if "niet uit te lezen" in eerder.get("reden", ""):
+                uit.append(b)
+            continue
         if alleen and b["slug"] not in alleen:
             continue
         if b.get("website") and (alleen or not (klaar and not opnieuw)):
@@ -537,6 +560,7 @@ def main(argv):
     opnieuw = "--opnieuw" in argv
     maximum = int(argv[argv.index("--max") + 1]) if "--max" in argv else 999
     alleen = set(argv[argv.index("--alleen") + 1].replace(",", " ").split()) if "--alleen" in argv and argv[argv.index("--alleen") + 1] else set()
+    tweede = alleen == {"onleesbaar"}   # --alleen onleesbaar: tweede poging voor sites die niet te lezen waren
     scan = json.loads(UIT.read_text(encoding="utf-8")) if UIT.exists() else {}
     pakketten = json.loads((ROOT / "data" / "bedrijvengids-pakketten.json").read_text(encoding="utf-8"))
     client = anthropic.Anthropic()
@@ -630,10 +654,10 @@ def main(argv):
         # Zelf lezen scheelt veel tokens, omdat alleen de platte tekst meegaat. Sites die we niet kunnen lezen
         # krijgen in de batch de web_fetch-tool; wat in de batch mislukt, doen we daarna nog los.
         with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
-            gelezen = list(pool.map(lambda paar: zelf_lezen(paar[0]["website"]), te_doen))
+            gelezen = list(pool.map(lambda paar: zelf_lezen(paar[0]["website"], tweede), te_doen))
         # Weinig tekst (een site die alles met JavaScript laadt): dan mag Claude zelf rondkijken met web_fetch
         gelezen = [(t, br) if len(t) >= 1500 else ("", []) for t, br in gelezen]
-        verzoeken = [{"custom_id": "b%d" % i, "params": verzoek(b, categorie, tekst)}
+        verzoeken = [{"custom_id": "b%d" % i, "params": verzoek(b, categorie, tekst, tweede)}
                      for i, ((b, categorie), (tekst, _)) in enumerate(zip(te_doen, gelezen))]
         print("%d bedrijven, %d zelf gelezen" % (len(te_doen), sum(1 for t, _ in gelezen if t)), flush=True)
         if verzoeken:
