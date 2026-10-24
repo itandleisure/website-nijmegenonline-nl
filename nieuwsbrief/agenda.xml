@@ -3,46 +3,10 @@
   <channel>
     <title>Agenda NijmegenOnline</title>
     <link>https://itandleisure.github.io/website-nijmegenonline-nl/nijmegen-evenementen-overzicht/</link>
-    <description>Wat er de komende week te doen is in Nijmegen</description>
+    <description>Wat er de komende twee weken nog meer te doen is in Nijmegen</description>
     <language>nl-nl</language>
     <lastBuildDate>Sat, 24 Oct 2026 06:00:00 +0200</lastBuildDate>
     <atom:link href="https://itandleisure.github.io/website-nijmegenonline-nl/nieuwsbrief/agenda.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>Wojtek! De beer die soldaat werd</title>
-      <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/wojtek-de-beer-die-soldaat-werd/</link>
-      <guid isPermaLink="false">wojtek-de-beer-die-soldaat-werd#2026-W43</guid>
-      <pubDate>Sat, 24 Oct 2026 06:00:00 +0200</pubDate>
-      <description>Zondag 16 augustus 2026 t/m zondag 4 april 2027, Vrijheidsmuseum. Vanaf 16 augustus 2026 tot 4 april 2027 is de familietentoonstelling ‘Wojtek! De beer die soldaat werd’ te zien. In deze tentoonstelling ontdek je het unieke en waargebeurde verhaal van een…</description>
-      <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-wojtek-de-beer-die-soldaat-werd.jpg" length="24172" type="image/jpeg"/>
-      <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-wojtek-de-beer-die-soldaat-werd.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Sean Taylor</title>
-      <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/sean-taylor/</link>
-      <guid isPermaLink="false">sean-taylor#2026-W43</guid>
-      <pubDate>Sat, 24 Oct 2026 06:00:00 +0200</pubDate>
-      <description>Zaterdag 24 oktober 2026, 20.00 tot 22.00 uur, De Brauerij. Sean Taylor (UK) kan van alles een lied maken en is een echte internationale troubadour. Bovendien ook vier jaar op rij genomineerd als Britse akoestische blues artiest van het jaar. Zijn…</description>
-      <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-sean-taylor.jpg" length="29646" type="image/jpeg"/>
-      <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-sean-taylor.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Highlight Tours in het Vrijheidsmuseum</title>
-      <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/highlight-tours-in-het-vrijheidsmuseum-4/</link>
-      <guid isPermaLink="false">highlight-tours-in-het-vrijheidsmuseum-4#2026-W43</guid>
-      <pubDate>Sat, 24 Oct 2026 06:00:00 +0200</pubDate>
-      <description>Zondag 25 oktober 2026, 14.00 tot 15.30 uur, Vrijheidsmuseum. Iedere laatste zondag van de maand zijn er Highlight Tours door het museum. Deze 1,5 uur durende rondleiding brengt u langs de hoogtepunten van het Vrijheidsmuseum onder leiding van een deskundige…</description>
-      <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-highlight-tours-in-het-vrijheidsmuseum-4.jpg" length="34326" type="image/jpeg"/>
-      <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-highlight-tours-in-het-vrijheidsmuseum-4.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Filosofisch Cafe bij Café ’t Haantje</title>
-      <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/filosofisch-cafe-bij-cafe-t-haantje-2-november/</link>
-      <guid isPermaLink="false">filosofisch-cafe-bij-cafe-t-haantje-2-november#2026-W43</guid>
-      <pubDate>Sat, 24 Oct 2026 06:00:00 +0200</pubDate>
-      <description>Maandag 2 november 2026, 20.00 tot 21.30 uur, Cafe 't Haantje. Maandag 2 november 2026 | Aanvang 20.00 uur Zin in een avond die je aan het denken zet? Op maandag 5 oktober strijkt het Filosofisch Café Nijmegen weer neer in de zaal van Café ’t Haantje aan de…</description>
-      <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-filosofisch-cafe-bij-cafe-t-haantje-2-november.jpg" length="6822" type="image/jpeg"/>
-      <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-filosofisch-cafe-bij-cafe-t-haantje-2-november.jpg" medium="image" type="image/jpeg"/>
-    </item>
     <item>
       <title>Uitwisselingsconcert Harmonie Hatert met DOV Wijchen</title>
       <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/uitwisselingsconcert-harmonie-hatert-met-dov-wijchen/</link>
@@ -130,6 +94,51 @@
       <description>Zondag 1 november 2026, 16.00 tot 17.30 uur, Lutherse kerk. Ensemble Sequenza geeft dit najaar twee concerten onder de titel Van Schaduw naar Licht: op zondag 25 oktober in Bergharen en op zondag 1 november in de Lutherse Kerk in Nijmegen. Naast de…</description>
       <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-najaarsconcert-ensemble-sequenza-van-schaduw-naar-licht-met-valentijn-jeukendrup.jpg" length="110833" type="image/jpeg"/>
       <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-najaarsconcert-ensemble-sequenza-van-schaduw-naar-licht-met-valentijn-jeukendrup.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Krachtige collectieven</title>
+      <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/krachtige-collectieven/</link>
+      <guid isPermaLink="false">krachtige-collectieven#2026-W43</guid>
+      <pubDate>Sat, 24 Oct 2026 06:00:00 +0200</pubDate>
+      <description>Dinsdag 3 november 2026, 19.30 tot 21.30 uur, Thiemeloods. Van gemeenschapstuin tot eigen warmtenet: Nijmegen barst van mooie voorbeelden van mensen die samen het initiatief nemen. Steeds meer Nijmegenaren ontdekken wat er mogelijk is wanneer je de krachten…</description>
+      <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-krachtige-collectieven.jpg" length="62071" type="image/jpeg"/>
+      <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-krachtige-collectieven.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>“We the People” – 250 USA in koormuziek</title>
+      <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/we-the-people-250-usa-in-koormuziek/</link>
+      <guid isPermaLink="false">we-the-people-250-usa-in-koormuziek#2026-W43</guid>
+      <pubDate>Sat, 24 Oct 2026 06:00:00 +0200</pubDate>
+      <description>Donderdag 5 november 2026, 20.15 tot 22.00 uur, Titus Brandsma Gedachteniskerk. Het 250-jarig bestaan van de VS wordt dit jaar grootscheeps herdacht. Maken de politieke en sociale ontwikkelingen in de VS dit een moment van viering of van verzet? Audite Nova doet in het concert…</description>
+      <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-we-the-people-250-usa-in-koormuziek.jpg" length="13688" type="image/jpeg"/>
+      <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-we-the-people-250-usa-in-koormuziek.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>“Spurensuche” – Kamerconcert met strijkkwartet</title>
+      <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/spurensuche-kamerconcert-met-strijkkwartet/</link>
+      <guid isPermaLink="false">spurensuche-kamerconcert-met-strijkkwartet#2026-W43</guid>
+      <pubDate>Sat, 24 Oct 2026 06:00:00 +0200</pubDate>
+      <description>Vrijdag 6 november 2026, 20.00 tot 22.00 uur, Stadthalle Kleve. Minguet Quartett Ulrich Isfort, Annette reisinger – viool Aida-Carmen Soanea – altviool Matthias Diener – violoncel Programma: Johann Sebastian Bach (1685–1750) Die Kunst der Fuge – Contrapuncti 1 &amp;…</description>
+      <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-spurensuche-kamerconcert-met-strijkkwartet.jpg" length="32009" type="image/jpeg"/>
+      <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-spurensuche-kamerconcert-met-strijkkwartet.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Theatervoorstelling Buiten Bereik</title>
+      <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/theatervoorstelling-buiten-bereik/</link>
+      <guid isPermaLink="false">theatervoorstelling-buiten-bereik#2026-W43</guid>
+      <pubDate>Sat, 24 Oct 2026 06:00:00 +0200</pubDate>
+      <description>Vrijdag 6 november 2026, 20.00 tot 22.30 uur, Theater het Badhuis Nijmegen. Om het nieuwe seizoen af te trappen gaat Buiten Bereik weer een fantastische voorstelling spelen! Het merendeel van de spelers gaat shinen in het mooie Badhuis. Kom kijken hoe onze spelers op elkaar…</description>
+      <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-theatervoorstelling-buiten-bereik.jpg" length="54952" type="image/jpeg"/>
+      <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-theatervoorstelling-buiten-bereik.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Doe Maar Lekker Disco w/ Mia’s House Of Disco – The Ultimate Disco &amp; House Experience</title>
+      <link>https://itandleisure.github.io/website-nijmegenonline-nl/events/doe-maar-lekker-disco-w-mias-house-of-disco-the-ultimate-disco-house-experience/</link>
+      <guid isPermaLink="false">doe-maar-lekker-disco-w-mias-house-of-disco-the-ultimate-disco-house-experience#2026-W43</guid>
+      <pubDate>Sat, 24 Oct 2026 06:00:00 +0200</pubDate>
+      <description>Zaterdag 7 november 2026, 20.00 tot 23.55 uur, De Waagh. Dit keer pakken we groots uit: niet één, maar twee zalen in De Waagh staan klaar voor een avond vol glitter, groove, Disco- en House-energie! Zaal 1 – Doe Maar Lekker Disco Classics &amp; Hits In de…</description>
+      <enclosure url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-doe-maar-lekker-disco-w-mias-house-of-disco-the-ultimate-disco-house-experience.jpg" length="105539" type="image/jpeg"/>
+      <media:content url="https://itandleisure.github.io/website-nijmegenonline-nl/assets/nieuwsbrief/event-doe-maar-lekker-disco-w-mias-house-of-disco-the-ultimate-disco-house-experience.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
