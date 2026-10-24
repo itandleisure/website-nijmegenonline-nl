@@ -1,5 +1,5 @@
 {
- "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg). Beauty en wellness: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Uitgaan: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Eten en drinken (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres).",
+ "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg). Beauty en wellness: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Uitgaan: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Eten en drinken (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Sport (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres).",
  "the-kettlebell-club": {
   "adres": "Groenestraat 215",
   "postcode": "6531 HH",
@@ -1899,6 +1899,236 @@
   "geen_adres": true
  },
  "clevers-ijsbar": {
+  "geen_adres": true
+ },
+ "maxstudios": {
+  "adres": "Griftdijk 107",
+  "postcode": "6515 AE",
+  "plaats": "Nijmegen",
+  "lat": "51.884773",
+  "lon": "5.842628"
+ },
+ "balletstudio-danielle": {
+  "adres": "Molenveldlaan 80",
+  "postcode": "6523 RM",
+  "plaats": "Nijmegen",
+  "lat": "51.833618",
+  "lon": "5.872767"
+ },
+ "dansschool-salsa-tipica": {
+  "adres": "De Vasim, De Kolk 16",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "danszinnig-openingsdans": {
+  "geen_adres": true
+ },
+ "ecstatic-dance-nijmegen": {
+  "geen_adres": true
+ },
+ "lindy-what-lindy-hop-nijmegen": {
+  "geen_adres": true
+ },
+ "sdvn-dance-fever": {
+  "adres": "Heyendaalseweg 141",
+  "postcode": "6525 AJ",
+  "plaats": "Nijmegen",
+  "lat": "51.818832",
+  "lon": "5.867495"
+ },
+ "atmosfeer": {
+  "geen_adres": true
+ },
+ "dutch-yoga-academy": {
+  "adres": "Prins Hendrikstraat 16",
+  "postcode": "6521 AW",
+  "plaats": "Nijmegen",
+  "lat": "51.841789",
+  "lon": "5.869742"
+ },
+ "hartje-yin-co": {
+  "geen_adres": true
+ },
+ "kernyoga": {
+  "geen_adres": true
+ },
+ "yogahart-nijmegen": {
+  "adres": "van Trieststraat 14",
+  "postcode": "6512 CX",
+  "plaats": "Nijmegen",
+  "lat": "51.840499",
+  "lon": "5.859060"
+ },
+ "yogalicht": {
+  "adres": "De Ruyterstraat 65",
+  "postcode": "6512 GB",
+  "plaats": "Nijmegen",
+  "lat": "51.838106",
+  "lon": "5.856306"
+ },
+ "dojo-sefi": {
+  "geen_adres": true
+ },
+ "dojo-top-judo-nijmegen": {
+  "adres": "Rosa de Limastraat 23",
+  "postcode": "6543 JG",
+  "plaats": "Nijmegen",
+  "lat": "51.831983",
+  "lon": "5.820745"
+ },
+ "institute-krav-maga-netherlands": {
+  "geen_adres": true
+ },
+ "karateweb": {
+  "adres": "Wijkcentrum 't Hert, Thijmstraat 40",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "naba-boxing-nijmegen": {
+  "adres": "Ploegstraat 16",
+  "postcode": "6532 TV",
+  "plaats": "Nijmegen",
+  "lat": "51.829822",
+  "lon": "5.839809"
+ },
+ "shaolin-kung-fu-school-kung-tao": {
+  "geen_adres": true
+ },
+ "tao-wing-chun-kung-fu": {
+  "geen_adres": true
+ },
+ "de-goffert": {
+  "adres": "Planetenstraat 65",
+  "postcode": "6543 VW",
+  "plaats": "Nijmegen",
+  "lat": "51.838045",
+  "lon": "5.828024"
+ },
+ "erica-terpstra-sportfondsenbad": {
+  "geen_adres": true
+ },
+ "basketball-vereniging-wildcats": {
+  "adres": "Tolhuis 3353",
+  "postcode": "6537 NJ",
+  "plaats": "Nijmegen",
+  "lat": "51.814659",
+  "lon": "5.789591"
+ },
+ "bfrisbee2-s": {
+  "geen_adres": true
+ },
+ "botenhuis": {
+  "adres": "Oosterhoutsedijk 48",
+  "plaats": "Lent",
+  "postcode": "",
+  "lat": "51.863459",
+  "lon": "5.848754"
+ },
+ "bridgeles-nijmegen-grote-markt": {
+  "geen_adres": true
+ },
+ "cgv-oranje-blauw-nijmegen": {
+  "geen_adres": true
+ },
+ "duikteam-de-kaaiman": {
+  "geen_adres": true
+ },
+ "keepersschool-midden-nederland": {
+  "adres": "Sportcentrum Papendal, Papendallaan 3",
+  "postcode": "6816 VD",
+  "plaats": "Arnhem",
+  "lat": "",
+  "lon": ""
+ },
+ "n-s-ij-v-radboud-saints": {
+  "adres": "Triavium IJsbaan, Van Rosenburgweg 2",
+  "postcode": "6537 TM",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "n-s-r-v-phocas": {
+  "adres": "Oudedijk 3",
+  "postcode": "6663 KT",
+  "plaats": "Nijmegen",
+  "lat": "51.854415",
+  "lon": "5.869912"
+ },
+ "nijmeegse-bowling-vereniging": {
+  "geen_adres": true
+ },
+ "nijmeegse-funrunners": {
+  "geen_adres": true
+ },
+ "nksv-de-batavier": {
+  "adres": "Watersportcentrum het Bastion, Oudedijk 3",
+  "postcode": "6663 KT",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "nsrv-phocas": {
+  "adres": "Oudedijk 3",
+  "postcode": "6663 KT",
+  "plaats": "Nijmegen",
+  "lat": "51.854415",
+  "lon": "5.869912"
+ },
+ "running-skills-nijmegen": {
+  "adres": "parkeerplaats tegenover Hotel Restaurant Rozenhof, Nijmeegsebaan 114",
+  "plaats": "Heilig Landstichting",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "sch-jeugd": {
+  "geen_adres": true
+ },
+ "scouting-karel-de-stoute": {
+  "geen_adres": true
+ },
+ "sportclub-excelsior": {
+  "geen_adres": true
+ },
+ "supportersvereniging-nec-sv-nec": {
+  "adres": "Postbus 8",
+  "postcode": "6500 AA",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "team-zevenheuvelen": {
+  "geen_adres": true
+ },
+ "tennis-tachys": {
+  "adres": "Sportpark De Schoonhorst, Kerkstraat 54",
+  "postcode": "6543 KK",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "tennisvereniging-lentseveld": {
+  "adres": "Dijkstraat 1B",
+  "postcode": "6663 AD",
+  "plaats": "Lent",
+  "lat": "51.870747",
+  "lon": "5.858452"
+ },
+ "trainingslocatie-team-zevenheuvelen-en-running-team-simba": {
+  "adres": "parkeerplaats tegenover Hotel Restaurant Rozenhof, Nijmeegsebaan 114",
+  "plaats": "Heilig Landstichting",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "vv-osc": {
+  "geen_adres": true
+ },
+ "watersportcentrum-het-bastion": {
   "geen_adres": true
  }
 }

@@ -50,6 +50,7 @@ VRAGEN = {
 
 # Wat Frans besloot, komt bovenaan de lijst
 BESLUIT = {
+    "sport": "**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres, D opnieuw proberen).",
     "uitgaan": "**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres, D opnieuw proberen).",
     "eten": "**Besluit van Frans (24-10-2026):** alles volgens het voorstel (A en B adres van de eigen site, C zonder adres, D opnieuw proberen).",
     "beauty": "**Besluit van Frans (24-10-2026):** A, B, C en E volgens het voorstel, behalve AMI Kappers (franchisevestiging, weg). "
