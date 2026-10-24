@@ -20,7 +20,9 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 - [ ] Partnerslider, zijbalk en formulieren getest op desktop en mobiel
 - [ ] Alle URL's uit de huidige sitemap en paginalijst geven 200 of een bedoelde 301 (paginalijst gecontroleerd op
       24-10-2026; oude pagina's die niet terugkomen staan in `data/oude-paginas.csv`)
-- [ ] Google Analytics-code (zelfde property) in de header
+- [x] Google Analytics-code (zelfde Google-tag `GT-5R43F82` als WordPress, GA4-property 337370292) in elke pagina via
+      `partials/analytics.html`; laadt alleen op www.nijmegenonline.nl, dus de testsite telt niet mee
+- [x] Search Console: de verificatie-tag (HTML-tag) staat in `partials/analytics.html`, dus de property blijft geverifieerd
 
 ## Op de dag zelf
 
@@ -32,4 +34,5 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 5. DNS van nijmegenonline.nl naar de nieuwe hosting; WordPress als back-up laten staan
 6. MailerLite: in de RSS-campagne de feed-adressen veranderen in
    `https://www.nijmegenonline.nl/nieuwsbrief/uitgelicht.xml`, `.../nieuwsbrief/nieuws.xml` en `.../nieuwsbrief/agenda.xml`
-7. Search Console: nieuwe sitemap indienen, daarna een paar weken 404's in de gaten houden
+7. Google Analytics → Realtime: controleren of bezoekers binnenkomen
+8. Search Console: nieuwe sitemap indienen, daarna een paar weken 404's in de gaten houden
