@@ -21,6 +21,23 @@
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="../partners/slider.css?v=5">
   <script src="../partners/slider.js?v=6" defer></script>
+  <!-- analytics -->
+  <!-- Search Console: verificatiecode van de property https://www.nijmegenonline.nl/ (HTML-tag). -->
+  <meta name="google-site-verification" content="DvTKwDdZ4RPX1t_mRT4x6b5YhA5R_AMz0w_hEi2foeQ">
+  <!-- Google Analytics (GA4-property 337370292, dezelfde Google-tag als de WordPress-site). Laadt alleen op www.nijmegenonline.nl, niet op de testsite of lokaal. -->
+  <script>
+    if (location.hostname === "www.nijmegenonline.nl") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "GT-5R43F82");
+      var ga = document.createElement("script");
+      ga.async = true;
+      ga.src = "https://www.googletagmanager.com/gtag/js?id=GT-5R43F82";
+      document.head.appendChild(ga);
+    }
+  </script>
+  <!-- /analytics -->
 </head>
 <body>
   <div class="testbalk">Dit is een testomgeving. De echte pagina staat op <a href="https://www.nijmegenonline.nl/vacatures/">www.nijmegenonline.nl</a>.</div>
@@ -86,7 +103,7 @@
         <p class="pagina__intro">Werken bij NijmegenOnline? Reageer op een van de vacatures hieronder en wie weet ben jij binnenkort onze nieuwe collega.</p>
         <div class="vacaturelijst">
           <a class="vacaturekaart" href="vacature-redacteur/"><span class="vacaturekaart__status">Open</span><strong>Redacteur (stage)</strong><span>Voor NijmegenOnline zoeken we toppers die hun schrijfervaring willen uitbreiden. Als redacteur ga je veel op pad in Nijmegen en ben je het visitekaartje van onze organisatie.</span></a>
-          <a class="vacaturekaart" href="vacature-sales-tijger/"><span class="vacaturekaart__status">Open</span><strong>Account manager</strong><span>We zoeken iemand die niet bang is om de telefoon te pakken en bij klanten langs te gaan, en die samen met de collega&#x27;s het aantal klanten laat groeien.</span></a>
+          <a class="vacaturekaart" href="vacature-accountmanager/"><span class="vacaturekaart__status">Open</span><strong>Accountmanager</strong><span>We zoeken een verbinder die onze partners helpt krijgen wat ze nodig hebben: meer zichtbaarheid, een ingevulde vacature of een goed bezocht evenement.</span></a>
           <a class="vacaturekaart vacaturekaart--dicht" href="vacature-fotograaf/"><span class="vacaturekaart__status">Ingevuld</span><strong>Fotograaf</strong><span>Ben jij dag en nacht op pad met je camera en vind je het leuk om Nijmegen en omgeving vast te leggen?</span></a>
           <a class="vacaturekaart vacaturekaart--dicht" href="vacature-social-media-strateeg/"><span class="vacaturekaart__status">Ingevuld</span><strong>Social media strateeg</strong><span>We zochten iemand die alle ins en outs van social media kent en onze kanalen laat groeien.</span></a>
         </div>

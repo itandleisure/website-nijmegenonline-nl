@@ -30,14 +30,18 @@ VACATURES = [
     ("vacature-redacteur", "Redacteur (stage)", True,
      "Voor NijmegenOnline zoeken we toppers die hun schrijfervaring willen uitbreiden. Als redacteur ga je veel op pad in "
      "Nijmegen en ben je het visitekaartje van onze organisatie."),
-    ("vacature-sales-tijger", "Account manager", True,
-     "We zoeken iemand die niet bang is om de telefoon te pakken en bij klanten langs te gaan, en die samen met de "
-     "collega's het aantal klanten laat groeien."),
+    ("vacature-accountmanager", "Accountmanager", True,
+     "We zoeken een verbinder die onze partners helpt krijgen wat ze nodig hebben: meer zichtbaarheid, een ingevulde "
+     "vacature of een goed bezocht evenement."),
     ("vacature-fotograaf", "Fotograaf", False,
      "Ben jij dag en nacht op pad met je camera en vind je het leuk om Nijmegen en omgeving vast te leggen?"),
     ("vacature-social-media-strateeg", "Social media strateeg", False,
      "We zochten iemand die alle ins en outs van social media kent en onze kanalen laat groeien."),
 ]
+# Vacatures met een eigen tekst (niet uit WordPress): de pagina staat met de hand in vacatures/<slug>/index.html en
+# wordt hier niet overschreven. De accountmanager was op WordPress vacature-sales-tijger (doorverwijzing in
+# data/oude-paginas.csv).
+EIGEN_TEKST = {"vacature-accountmanager"}
 
 # Pakketten uit het advies Verdienmodel NijmegenOnline (okt 2026): naam, prijs per jaar excl. btw, toelichting
 PAKKETTEN = [("Gratis", "0", "voor elk bedrijf"), ("Uitgelicht", "149", "eerste jaar &euro; 99*"),
@@ -598,6 +602,8 @@ def main(bron):
     schrijf("wat-kost-adverteren-bij-anderen", wat_kost(titel, tekst, meta, fotos))
     schrijf("vacatures", vacatures(pag["vacatures"][2]))
     for slug, functie, open_, _ in VACATURES:
+        if slug in EIGEN_TEKST:
+            continue
         _, tekst, meta = pag[slug]
         schrijf("vacatures/" + slug, vacature(slug, functie, open_, tekst, meta, fotos))
     titel, tekst, meta = pag["algemene-voorwaarden"]
