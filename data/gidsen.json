@@ -713,10 +713,8 @@
   "secties": [
    {
     "kop": "Praktisch",
-    "tekst": "<p>Waar parkeer je en hoe kom je er?</p>",
-    "artikelen": [
-     "parkeren-in-nijmegen-met-een-aantal-slimme-tips"
-    ]
+    "tekst": "<p>Waar parkeer je en hoe kom je er? Alle parkeergarages, tarieven en de goedkope en gratis plekken staan in onze gids <a href=\"../../parkeren-in-nijmegen/\">Parkeren in Nijmegen</a>.</p>",
+    "artikelen": []
    },
    {
     "kop": "Speciaalzaken",
