@@ -7,6 +7,8 @@ Zo werkt de flow (zie ook tools/google-formulier/Code.gs, nieuwsOntvangen):
    eruit, de grootste liggende eerst), en stuurt dat naar het script.
 3. Het script zet het in het tabblad Nieuws, laat Claude er een nieuwsbericht van schrijven en mailt de redactie de
    knop "Bekijken en beoordelen". Na goedkeuring zet tools/aanmeldingen.py het bericht op de site.
+   Begint het onderwerp met "Agenda" (of "Evenement"), dan wordt het een evenement: Claude haalt datum, tijden,
+   locatie en tekst eruit en het komt in het tabblad Evenementen, verder net als een aangemeld evenement.
 4. De mail gaat naar de map Verwerkt. Mails van een afzender buiten NIEUWS_AFZENDERS gaan naar de map Genegeerd.
    Lukt het versturen niet, dan blijft de mail in de inbox en komt hij de volgende keer opnieuw aan de beurt.
 
@@ -107,10 +109,15 @@ def foto(data):
 
 
 def lees_mail(ruw):
-    """Geeft (afzender, onderwerp, berichtid, tekst, fotos) van een doorgestuurde mail."""
+    """Geeft (afzender, doel, onderwerp, berichtid, tekst, fotos) van een doorgestuurde mail. Doel is "evenement"
+    als de redactie het onderwerp met Agenda of Evenement begon, anders "nieuws"."""
     bericht = email.message_from_bytes(ruw, policy=email.policy.default)
     afzender = parseaddr(str(bericht["From"] or ""))[1].lower()
-    onderwerp = re.sub(r"^\s*((fwd?|fw|doorst|tr|wg)\s*:\s*)+", "", str(bericht["Subject"] or ""), flags=re.I).strip()
+    onderwerp = str(bericht["Subject"] or "").strip()
+    doel = "evenement" if re.match(r"(agenda|evenement)\b", onderwerp, re.I) else "nieuws"
+    if doel == "evenement":
+        onderwerp = re.sub(r"^(agenda|evenement)\b\s*[:\-]?\s*", "", onderwerp, flags=re.I)
+    onderwerp = re.sub(r"^\s*((fwd?|fw|doorst|tr|wg)\s*:\s*)+", "", onderwerp, flags=re.I).strip()
     berichtid = str(bericht["Message-ID"] or "").strip() or hashlib.sha1(ruw).hexdigest()
 
     delen = [lichaam(bericht)]
@@ -143,7 +150,7 @@ def lees_mail(ruw):
             print("  Bijlage %s overgeslagen: %s" % (naam, fout))
     fotos.sort(key=lambda f: f["score"], reverse=True)
     tekst = "\n\n".join(d.strip() for d in delen if d and d.strip())[:MAX_TEKST]
-    return afzender, onderwerp, berichtid, tekst, fotos[:MAX_FOTOS]
+    return afzender, doel, onderwerp, berichtid, tekst, fotos[:MAX_FOTOS]
 
 
 def toegestaan(afzender):
@@ -184,11 +191,12 @@ def verplaats(m, uid, naar):
         m.expunge()
 
 
-def versturen(onderwerp, berichtid, tekst, fotos):
+def versturen(soort, onderwerp, berichtid, tekst, fotos):
     import base64
     from paginas import GOOGLE_FORM_URL
     gegevens = urllib.parse.urlencode({
         "actie": "nieuws",
+        "soort": soort,
         "sleutel": os.environ["NIEUWS_SLEUTEL"],
         "berichtid": berichtid,
         "onderwerp": onderwerp,
@@ -206,9 +214,9 @@ def versturen(onderwerp, berichtid, tekst, fotos):
 
 def main():
     if "--bestand" in sys.argv:
-        afzender, onderwerp, berichtid, tekst, fotos = lees_mail(open(sys.argv[sys.argv.index("--bestand") + 1], "rb").read())
-        print("Van: %s (%s)\nOnderwerp: %s\nID: %s\nFoto's: %s\n\n%s" % (
-            afzender, "toegestaan" if toegestaan(afzender) else "niet toegestaan", onderwerp, berichtid,
+        afzender, soort, onderwerp, berichtid, tekst, fotos = lees_mail(open(sys.argv[sys.argv.index("--bestand") + 1], "rb").read())
+        print("Van: %s (%s)\nSoort: %s\nOnderwerp: %s\nID: %s\nFoto's: %s\n\n%s" % (
+            afzender, "toegestaan" if toegestaan(afzender) else "niet toegestaan", soort, onderwerp, berichtid,
             ", ".join("%s (%d kB)" % (f["naam"], len(f["data"]) // 1024) for f in fotos) or "geen", tekst))
         return
     m = verbind()
@@ -227,18 +235,18 @@ def main():
     for uid in uids:
         _, inhoud = m.uid("FETCH", uid, "(BODY.PEEK[])")
         ruw = next((x[1] for x in inhoud if isinstance(x, tuple)), b"")
-        afzender, onderwerp, berichtid, tekst, fotos = lees_mail(ruw)
+        afzender, soort, onderwerp, berichtid, tekst, fotos = lees_mail(ruw)
         if not toegestaan(afzender):
             print("Genegeerd (afzender %s): %s" % (afzender, onderwerp))
             verplaats(m, uid, genegeerd)
             continue
         try:
-            antwoord = versturen(onderwerp, berichtid, tekst, fotos)
+            antwoord = versturen(soort, onderwerp, berichtid, tekst, fotos)
         except Exception as fout:  # deze mail blijft in de inbox en komt de volgende keer opnieuw
             print("::warning::Niet verstuurd, volgende keer opnieuw: %s (%s)" % (onderwerp, fout))
             fouten += 1
             continue
-        print("Verstuurd: %s (%d foto's)%s" % (onderwerp, len(fotos), " (was er al)" if antwoord.get("dubbel") else ""))
+        print("Verstuurd (%s): %s (%d foto's)%s" % (soort, onderwerp, len(fotos), " (was er al)" if antwoord.get("dubbel") else ""))
         verplaats(m, uid, verwerkt)
     m.logout()
     print("Nieuwsmails: %d in de inbox, %d niet gelukt" % (len(uids), fouten))
