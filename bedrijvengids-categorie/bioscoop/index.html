@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../../assets/css/site.css?v=23">
   <link rel="stylesheet" href="../../partners/slider.css?v=5">
   <script src="../../partners/slider.js?v=6" defer></script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Bioscopen in Nijmegen", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Dobbelmannklooster", "url": "https://www.nijmegenonline.nl/bedrijvengids/dobbelmannklooster/"}, {"@type": "ListItem", "position": 2, "name": "FilmhuisO42", "url": "https://www.nijmegenonline.nl/bedrijvengids/filmhuiso42/"}, {"@type": "ListItem", "position": 3, "name": "Filmkenniscentrum", "url": "https://www.nijmegenonline.nl/bedrijvengids/filmkenniscentrum/"}, {"@type": "ListItem", "position": 4, "name": "Lux", "url": "https://www.nijmegenonline.nl/bedrijvengids/lux/"}, {"@type": "ListItem", "position": 5, "name": "Pathé Nijmegen", "url": "https://www.nijmegenonline.nl/bedrijvengids/pathe-nijmegen/"}, {"@type": "ListItem", "position": 6, "name": "Vue", "url": "https://www.nijmegenonline.nl/bedrijvengids/vue/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Bioscopen in Nijmegen", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Lux", "url": "https://www.nijmegenonline.nl/bedrijvengids/lux/"}, {"@type": "ListItem", "position": 2, "name": "Pathé Nijmegen", "url": "https://www.nijmegenonline.nl/bedrijvengids/pathe-nijmegen/"}, {"@type": "ListItem", "position": 3, "name": "Vue", "url": "https://www.nijmegenonline.nl/bedrijvengids/vue/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is er een filmhuis in Nijmegen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, filter op arthouse."}}]}</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
@@ -65,36 +65,38 @@
         <div class="kruimelpad"><a href="../../">Home</a> › Bedrijvengids › Bioscopen in Nijmegen</div>
         <p class="gidslabel">Bedrijvengids</p>
         <h1>Bioscopen in Nijmegen</h1>
-        <div class="inhoud-tekst"><p>De nieuwste blockbuster op een groot doek, of een kleine film in een filmhuis met een goed glas wijn erbij: in Nijmegen kies je zelf.</p><p>Op deze pagina vind je alle 6 bioscopen in Nijmegen, met openingstijden, een eigen pagina en een kaart. Filter hieronder op wat jij belangrijk vindt, zoals arthouse of kinderfilms.</p></div>
+        <div class="inhoud-tekst"><p>De nieuwste blockbuster op een groot doek, of een kleine film in een filmhuis met een goed glas wijn erbij: in Nijmegen kies je zelf.</p><p>Op deze pagina vind je alle 3 bioscopen in Nijmegen, met openingstijden, een eigen pagina en een kaart. Filter hieronder op wat jij belangrijk vindt, zoals arthouse of kinderfilms.</p></div>
         <section class="gids-sectie" id="uitgelicht">
           <h2>Uitgelicht</h2>
           <div class="bedrijflijst bedrijflijst--uitgelicht">
             <a class="bedrijfkaart bedrijfkaart--uitgelicht" href="../../adverteren-bij-nijmegenonline/" data-kenmerken="arthouse|café of foyer"><img src="../../assets/uploads/2022/12/bioscoop-nijmegen-533x400.webp" alt="" loading="lazy"><span class="bedrijfkaart__tekst"><span class="bedrijfkaart__label">Voorbeeld</span><strong>Jouw bioscoop</strong><span>Uitgelicht staat bovenaan, met foto en actieknop</span><span class="bedrijfkaart__actie">Dinsdag filmdag</span><span class="bedrijfkaart__kenmerken"><span>arthouse</span><span>café of foyer</span></span><span class="bedrijfkaart__knop">Bekijk hoe het werkt</span></span></a>
-            <a class="vrijeplek" href="../../bedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=bioscoop"><strong>Nog 3 plekken vrij</strong><span>Zet jouw bioscoop hier bovenaan, boven 6 andere bioscopen. Met foto's, je actie, een eigen knop en je banner bij onze blogs over film.</span><span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>
+            <a class="vrijeplek" href="../../bedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=bioscoop"><strong>Nog 3 plekken vrij</strong><span>Zet jouw bioscoop hier bovenaan, boven 3 andere bioscopen. Met foto's, je actie, een eigen knop en je banner bij onze blogs over film.</span><span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>
           </div>
         </section>
-
+        <div class="gidsfilter" id="gidsfilter" data-enkelvoud="bioscoop" data-meervoud="bioscopen">
+          <p class="gidsfilter__kop">Waar zoek je naar?</p>
+          <div class="gidsfilter__knoppen"><button type="button" data-kenmerk="blockbusters" aria-pressed="false">Blockbusters <span>2</span></button><button type="button" data-kenmerk="café of foyer" aria-pressed="false">Café of foyer <span>2</span></button><button type="button" data-kenmerk="eten en drinken" aria-pressed="false">Eten en drinken <span>2</span></button><button type="button" data-kenmerk="online tickets" aria-pressed="false">Online tickets <span>2</span></button><button type="button" data-kenmerk="rolstoeltoegankelijk" aria-pressed="false">Rolstoeltoegankelijk <span>2</span></button></div>
+          <p class="gidsfilter__uitkomst" aria-live="polite" hidden></p>
+        </div>
+        <script src="../../assets/js/filter.js?v=2" defer></script>
         <section class="gids-sectie">
           <h2>Alle bioscopen in Nijmegen</h2>
           <div class="bedrijflijst">
-            <a class="bedrijfkaart" href="../../bedrijvengids/dobbelmannklooster/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Dobbelmannklooster</strong><span>Dobbelmannweg 1, 6531 KT Nijmegen</span></span></a>
-            <a class="bedrijfkaart" href="../../bedrijvengids/filmhuiso42/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>FilmhuisO42</strong><span>Oranjesingel 42, 6511 NW Nijmegen</span></span></a>
-            <a class="bedrijfkaart" href="../../bedrijvengids/filmkenniscentrum/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Filmkenniscentrum</strong><span>Dommer Van Poldersveldtweg 283, 6523 CW Nijmegen</span></span></a>
-            <a class="bedrijfkaart" href="../../bedrijvengids/lux/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Lux</strong><span>Mariënburg 38, 6511 PS Nijmegen</span></span></a>
-            <a class="bedrijfkaart" href="../../bedrijvengids/pathe-nijmegen/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Pathé Nijmegen</strong><span>Willem van Arenbergstraat 4, 6515 AT Nijmegen</span></span></a>
-            <a class="bedrijfkaart" href="../../bedrijvengids/vue/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Vue</strong><span>Tweede Walstraat 16, 6511 LV Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/lux/" data-kenmerken="arthouse|kinderfilms|café of foyer|eten en drinken|online tickets"><span class="bedrijfkaart__tekst"><strong>Lux</strong><span>Mariënburg 38, 6511 PS Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>arthouse</span><span>kinderfilms</span><span>café of foyer</span><span>eten en drinken</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/pathe-nijmegen/" data-kenmerken="parkeren|rolstoeltoegankelijk|blockbusters"><span class="bedrijfkaart__tekst"><strong>Pathé Nijmegen</strong><span>Willem van Arenbergstraat 4, 6515 AT Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>parkeren</span><span>rolstoeltoegankelijk</span><span>blockbusters</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/vue/" data-kenmerken="blockbusters|café of foyer|eten en drinken|online tickets|rolstoeltoegankelijk|bedrijfsuitje"><span class="bedrijfkaart__tekst"><strong>Vue</strong><span>Tweede Walstraat 16, 6511 LV Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>blockbusters</span><span>café of foyer</span><span>eten en drinken</span><span>online tickets</span></span></span></a>
           </div>
         </section>
         <div class="partner-slider" data-plaatsing="blog" data-onderwerp="bioscoop"></div>
         <section class="gids-sectie">
           <h2>Op de kaart</h2>
           <div id="gidskaart" class="gidskaart" role="region" aria-label="Kaart met bedrijven"></div>
-          <script type="application/json" id="kaartdata">{"groepen": ["Uitgaan en vrije tijd"], "punten": [["Dobbelmannklooster", 51.83041, 5.84749, "../../bedrijvengids/dobbelmannklooster/", "Dobbelmannweg 1, 6531 KT Nijmegen", "Uitgaan en vrije tijd"], ["FilmhuisO42", 51.842598, 5.864772, "../../bedrijvengids/filmhuiso42/", "Oranjesingel 42, 6511 NW Nijmegen", "Uitgaan en vrije tijd"], ["Filmkenniscentrum", 51.833359, 5.881886, "../../bedrijvengids/filmkenniscentrum/", "Dommer Van Poldersveldtweg 283, 6523 CW Nijmegen", "Uitgaan en vrije tijd"], ["Lux", 51.845018, 5.867139, "../../bedrijvengids/lux/", "Mariënburg 38, 6511 PS Nijmegen", "Uitgaan en vrije tijd"], ["Pathé Nijmegen", 51.879841, 5.861508, "../../bedrijvengids/pathe-nijmegen/", "Willem van Arenbergstraat 4, 6515 AT Nijmegen", "Uitgaan en vrije tijd"], ["Vue", 51.844281, 5.866112, "../../bedrijvengids/vue/", "Tweede Walstraat 16, 6511 LV Nijmegen", "Uitgaan en vrije tijd"]]}</script>
+          <script type="application/json" id="kaartdata">{"groepen": ["Uitgaan en vrije tijd"], "punten": [["Lux", 51.845018, 5.867139, "../../bedrijvengids/lux/", "Mariënburg 38, 6511 PS Nijmegen", "Uitgaan en vrije tijd"], ["Pathé Nijmegen", 51.879841, 5.861508, "../../bedrijvengids/pathe-nijmegen/", "Willem van Arenbergstraat 4, 6515 AT Nijmegen", "Uitgaan en vrije tijd"], ["Vue", 51.844281, 5.866112, "../../bedrijvengids/vue/", "Tweede Walstraat 16, 6511 LV Nijmegen", "Uitgaan en vrije tijd"]]}</script>
           <script src="../../assets/js/kaart.js?v=2" defer></script>
         </section>
         <section class="gids-sectie pakketvergelijk">
           <h2>Heb je een bioscoop in Nijmegen?</h2>
-          <p>Elke bioscoop staat gratis in onze gids. Wil je opvallen tussen 6 bioscopen? Kies dan voor Uitgelicht of Partner.</p>
+          <p>Elke bioscoop staat gratis in onze gids. Wil je opvallen tussen 3 bioscopen? Kies dan voor Uitgelicht of Partner.</p>
           <div class="tabel-scroll"><table>
             <thead><tr><th></th><th>Gratis</th><th>Uitgelicht<br><small>&euro; 149 per jaar,<br>eerste jaar &euro; 99</small></th><th>Partner<br><small>&euro; 449 per jaar</small></th></tr></thead>
             <tbody>

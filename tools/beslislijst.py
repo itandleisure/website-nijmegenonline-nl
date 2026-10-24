@@ -37,6 +37,10 @@ GROEPEN = {
 
 # Vragen die niet uit de data volgen, per groep bovenaan de lijst
 VRAGEN = {
+    "beauty": [
+        "**G. Wellness.** Daar blijft maar 1 bedrijf over: de meeste bleken massagesalons of schoonheidssalons. Mijn voorstel: "
+        "wellness samenvoegen met de massagesalons tot één pagina \"Massage en wellness\".",
+    ],
     "zakelijk": [
         "**G. Grafisch ontwerpers en IT-bedrijven.** Die heb ik niet als eigen categorie opgenomen. De scan vond er een paar "
         "tussen de marketingbureaus (zie E). Mijn voorstel: grafisch ontwerpers bij de marketingbureaus laten, IT-bedrijven "
@@ -105,8 +109,8 @@ def main(groep):
            "## A. Adres op hun eigen site is anders, maar wel in Nijmegen: neem ik over (%d)\n" % len(overnemen),
            "Meestal verhuisd binnen de stad of een ander huisnummer. Ik zet het adres van hun eigen site in de gids.\n",
            tabel(["Bedrijf", "Categorie", "Bij ons", "Op hun site"], [r[:4] for r in overnemen]),
-           "## B. Adres op hun eigen site ligt buiten de gemeente: haal ik weg (%d)\n" % len(buiten),
-           "Verhuisd naar Wijchen, Beuningen of verder. Wil je er een paar houden, noem ze dan.\n",
+           "## B. Adres op hun eigen site ligt buiten de gemeente: houd ik, met dat adres (%d)\n" % len(buiten),
+           "Verhuisd naar Wijchen, Beuningen of verder. Ze blijven staan voor de latere gidsen van de regio (besluit Frans, 24-10-2026).\n",
            tabel(["Bedrijf", "Categorie", "Bij ons", "Op hun site"], [r[:4] for r in buiten]),
            "## C. Geen vaste plek in Nijmegen: houden of weghalen? (%d)\n" % len(geen_plek),
            "Vaak zzp'ers die vanuit huis of bij de klant werken. Mijn voorstel: **houden**, maar zonder adres op de kaart, "
@@ -115,6 +119,9 @@ def main(groep):
            "## D. Automatisch weggehaald na de scan\n",
            "Ter info. Zet je een reden terug, dan komen die bedrijven weer in de gids.\n",
            tabel(["Reden", "Aantal"], redenen.most_common()),
+           "**Vraag bij D:** %d sites konden we niet lezen (de site weert bots of laadt alles met JavaScript). Mijn voorstel: "
+           "die nog één keer proberen op een andere manier, voor ongeveer $0,03 per bedrijf. Lukt het dan nog niet, dan "
+           "blijven ze weg. Zeg \"D opnieuw\" of \"D laten\".\n" % redenen["website niet uit te lezen, liever geen halve gegevens"],
            "## E. Hoort bij een andere categorie (%d)\n" % len(ander),
            "Ter info: deze komen in de categorie die bij ze past, of vallen af als die er niet is.\n",
            tabel(["Bedrijf", "Stond bij", "Volgens de scan"], ander),

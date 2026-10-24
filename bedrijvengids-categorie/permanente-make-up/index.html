@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="../../assets/css/site.css?v=23">
   <link rel="stylesheet" href="../../partners/slider.css?v=5">
   <script src="../../partners/slider.js?v=6" defer></script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Permanente make-up in Nijmegen", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Brows To Be", "url": "https://www.nijmegenonline.nl/bedrijvengids/brows-to-be-andalusiestraat-2/"}, {"@type": "ListItem", "position": 2, "name": "Inkontour Permanente Make-up", "url": "https://www.nijmegenonline.nl/bedrijvengids/inkontour-permanente-make-up-vlietstraat/"}, {"@type": "ListItem", "position": 3, "name": "Miya Brows", "url": "https://www.nijmegenonline.nl/bedrijvengids/miya-brows-gerard-noodtstraat/"}, {"@type": "ListItem", "position": 4, "name": "The I-Brow Factory", "url": "https://www.nijmegenonline.nl/bedrijvengids/the-i-brow-factory-stikke-hezelstraat/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Permanente make-up in Nijmegen", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Brows To Be", "url": "https://www.nijmegenonline.nl/bedrijvengids/brows-to-be-andalusiestraat-2/"}, {"@type": "ListItem", "position": 2, "name": "Brows To Be", "url": "https://www.nijmegenonline.nl/bedrijvengids/brows-to-be/"}, {"@type": "ListItem", "position": 3, "name": "Inkontour Permanente Make-up", "url": "https://www.nijmegenonline.nl/bedrijvengids/inkontour-permanente-make-up-vlietstraat/"}, {"@type": "ListItem", "position": 4, "name": "The I-Brow Factory", "url": "https://www.nijmegenonline.nl/bedrijvengids/the-i-brow-factory-stikke-hezelstraat/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoe lang blijft permanente make-up zitten?", "acceptedAnswer": {"@type": "Answer", "text": "Meestal één tot drie jaar, afhankelijk van je huid en de techniek. Een nabehandeling hoort er vaak bij."}}]}</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
@@ -73,21 +73,26 @@
             <a class="vrijeplek" href="../../bedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=permanente-make-up"><strong>Nog 3 plekken vrij</strong><span>Zet jouw studio hier bovenaan, boven 4 andere studio&#x27;s. Met foto's, je actie, een eigen knop en je banner bij onze blogs over permanente make-up.</span><span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>
           </div>
         </section>
-
+        <div class="gidsfilter" id="gidsfilter" data-enkelvoud="studio" data-meervoud="studio&#x27;s">
+          <p class="gidsfilter__kop">Waar zoek je naar?</p>
+          <div class="gidsfilter__knoppen"><button type="button" data-kenmerk="online boeken" aria-pressed="false">Online boeken <span>4</span></button><button type="button" data-kenmerk="wenkbrauwen" aria-pressed="false">Wenkbrauwen <span>3</span></button><button type="button" data-kenmerk="eyeliner" aria-pressed="false">Eyeliner <span>2</span></button><button type="button" data-kenmerk="microblading" aria-pressed="false">Microblading <span>2</span></button></div>
+          <p class="gidsfilter__uitkomst" aria-live="polite" hidden></p>
+        </div>
+        <script src="../../assets/js/filter.js?v=2" defer></script>
         <section class="gids-sectie">
           <h2>Alle studio&#x27;s in Nijmegen</h2>
           <div class="bedrijflijst">
-            <a class="bedrijfkaart" href="../../bedrijvengids/brows-to-be-andalusiestraat-2/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Brows To Be</strong><span>Andalusiëstraat 6, 6663 NA Nijmegen</span></span></a>
-            <a class="bedrijfkaart" href="../../bedrijvengids/inkontour-permanente-make-up-vlietstraat/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Inkontour Permanente Make-up</strong><span>Vlietstraat 20E, 6542 SL Nijmegen</span></span></a>
-            <a class="bedrijfkaart" href="../../bedrijvengids/miya-brows-gerard-noodtstraat/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>Miya Brows</strong><span>Gerard Noodtstraat 119, 6511 ST Nijmegen</span></span></a>
-            <a class="bedrijfkaart" href="../../bedrijvengids/the-i-brow-factory-stikke-hezelstraat/" data-kenmerken=""><span class="bedrijfkaart__tekst"><strong>The I-Brow Factory</strong><span>Stikke Hezelstraat 28, 6511 JX Nijmegen</span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/brows-to-be-andalusiestraat-2/" data-kenmerken="wenkbrauwen|lippen|microblading|online boeken"><span class="bedrijfkaart__tekst"><strong>Brows To Be</strong><span>Andalusiëstraat 6, 6663 NA Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>wenkbrauwen</span><span>lippen</span><span>microblading</span><span>online boeken</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/brows-to-be/" data-kenmerken="online boeken"><span class="bedrijfkaart__tekst"><strong>Brows To Be</strong><span>Gerard Noodtstraat 119, 6511 ST Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>online boeken</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/inkontour-permanente-make-up-vlietstraat/" data-kenmerken="wenkbrauwen|eyeliner|microblading|online boeken|avond of weekend"><span class="bedrijfkaart__tekst"><strong>Inkontour Permanente Make-up</strong><span>Vlietstraat 20E, 6542 SL Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>wenkbrauwen</span><span>eyeliner</span><span>microblading</span><span>online boeken</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/the-i-brow-factory-stikke-hezelstraat/" data-kenmerken="wenkbrauwen|eyeliner|online boeken|heren"><span class="bedrijfkaart__tekst"><strong>The I-Brow Factory</strong><span>Stikke Hezelstraat 28, 6511 JX Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>wenkbrauwen</span><span>eyeliner</span><span>online boeken</span><span>heren</span></span></span></a>
           </div>
         </section>
         <div class="partner-slider" data-plaatsing="blog" data-onderwerp="permanente-make-up"></div>
         <section class="gids-sectie">
           <h2>Op de kaart</h2>
           <div id="gidskaart" class="gidskaart" role="region" aria-label="Kaart met bedrijven"></div>
-          <script type="application/json" id="kaartdata">{"groepen": ["Beauty en wellness"], "punten": [["Brows To Be", 51.864475, 5.861403, "../../bedrijvengids/brows-to-be-andalusiestraat-2/", "Andalusiëstraat 6, 6663 NA Nijmegen", "Beauty en wellness"], ["Inkontour Permanente Make-up", 51.844643, 5.838232, "../../bedrijvengids/inkontour-permanente-make-up-vlietstraat/", "Vlietstraat 20E, 6542 SL Nijmegen", "Beauty en wellness"], ["Miya Brows", 51.844746, 5.870687, "../../bedrijvengids/miya-brows-gerard-noodtstraat/", "Gerard Noodtstraat 119, 6511 ST Nijmegen", "Beauty en wellness"], ["The I-Brow Factory", 51.847584, 5.862233, "../../bedrijvengids/the-i-brow-factory-stikke-hezelstraat/", "Stikke Hezelstraat 28, 6511 JX Nijmegen", "Beauty en wellness"]]}</script>
+          <script type="application/json" id="kaartdata">{"groepen": ["Beauty en wellness"], "punten": [["Brows To Be", 51.864475, 5.861403, "../../bedrijvengids/brows-to-be-andalusiestraat-2/", "Andalusiëstraat 6, 6663 NA Nijmegen", "Beauty en wellness"], ["Brows To Be", 51.844746, 5.870687, "../../bedrijvengids/brows-to-be/", "Gerard Noodtstraat 119, 6511 ST Nijmegen", "Beauty en wellness"], ["Inkontour Permanente Make-up", 51.844643, 5.838232, "../../bedrijvengids/inkontour-permanente-make-up-vlietstraat/", "Vlietstraat 20E, 6542 SL Nijmegen", "Beauty en wellness"], ["The I-Brow Factory", 51.847584, 5.862233, "../../bedrijvengids/the-i-brow-factory-stikke-hezelstraat/", "Stikke Hezelstraat 28, 6511 JX Nijmegen", "Beauty en wellness"]]}</script>
           <script src="../../assets/js/kaart.js?v=2" defer></script>
         </section>
         <section class="gids-sectie pakketvergelijk">
