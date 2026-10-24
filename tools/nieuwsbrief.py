@@ -3,7 +3,7 @@
 In de nieuwsbrief in deze volgorde (afgesproken met Frans, 24-10-2026):
 - /nieuwsbrief/uitgelicht.xml  uitgelichte evenementen (klanten) van de komende DAGEN_UITGELICHT dagen, met foto
 - /nieuwsbrief/nieuws.xml      de nieuwste nieuwsberichten, met foto
-- /nieuwsbrief/agenda.xml      de overige (gratis) evenementen van vandaag t/m DAGEN_VOORUIT dagen verder, zonder
+- /nieuwsbrief/agenda.xml      de overige (gratis) evenementen van vandaag t/m DAGEN_VOORUIT dagen verder, met
                                foto; lang lopende alleen in de week dat ze beginnen
 
 MailerLite neemt bij elke verzending alleen de items die nieuw zijn sinds de vorige. Bij nieuws is dat
@@ -38,10 +38,10 @@ from import_wordpress import ROOT, SITE, samenvatting  # noqa: E402
 import nieuws  # noqa: E402
 
 TESTSITE = "https://itandleisure.github.io/website-nijmegenonline-nl"
-DAGEN_VOORUIT = 9   # verzending op donderdag: t/m het weekend van de week erna
+DAGEN_VOORUIT = 14
 DAGEN_UITGELICHT = 30   # klanten mogen al eerder in de nieuwsbrief
-MAX_UITGELICHT = 6
-MAX_EVENEMENTEN = 20
+MAX_UITGELICHT = 20   # Frans kiest er in MailerLite zelf uit
+MAX_EVENEMENTEN = 40
 MAX_NIEUWS = 20
 MAP = ROOT / "nieuwsbrief"
 FOTOS = ROOT / "assets" / "nieuwsbrief"
@@ -126,9 +126,9 @@ def main(vandaag):
     n_uitgelicht = evenementen_feed("uitgelicht.xml", "Uitgelicht in Nijmegen", "Uitgelichte evenementen van onze partners",
                                     vandaag + datetime.timedelta(days=DAGEN_UITGELICHT), lambda e: e["uitgelicht"],
                                     MAX_UITGELICHT, True)
-    n_overig = evenementen_feed("agenda.xml", "Agenda NijmegenOnline", "Wat er de komende week nog meer te doen is in Nijmegen",
+    n_overig = evenementen_feed("agenda.xml", "Agenda NijmegenOnline", "Wat er de komende twee weken nog meer te doen is in Nijmegen",
                                 vandaag + datetime.timedelta(days=DAGEN_VOORUIT),
-                                lambda e: not e["uitgelicht"] and nieuw_genoeg(e, vandaag), MAX_EVENEMENTEN, False)
+                                lambda e: not e["uitgelicht"] and nieuw_genoeg(e, vandaag), MAX_EVENEMENTEN, True)
 
     berichten = sorted(nieuws.laad(), key=lambda b: (b["datum"], b["slug"]), reverse=True)[:MAX_NIEUWS]
     items = []

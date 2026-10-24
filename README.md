@@ -105,7 +105,7 @@ De eenmalige import uit WordPress staat in `tools/import_evenementen.py`.
 `python tools/nieuwsbrief.py` maakt elke nacht drie RSS-feeds waar MailerLite met een RSS-campagne zelf de
 wekelijkse nieuwsbrief van vult, in deze volgorde: `/nieuwsbrief/uitgelicht.xml` (uitgelichte evenementen van de
 komende 30 dagen, met foto), `/nieuwsbrief/nieuws.xml` (nieuwste berichten) en `/nieuwsbrief/agenda.xml` (overige
-evenementen van de komende 9 dagen, zonder foto). De foto's staan als jpg in `assets/nieuwsbrief/`,
+evenementen van de komende 2 weken, met foto). De foto's staan als jpg in `assets/nieuwsbrief/`,
 omdat Outlook geen webp toont. Tot de livegang wijzen de feeds naar de testsite.
 
 ## Nieuws
