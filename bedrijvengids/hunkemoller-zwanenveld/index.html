@@ -13,9 +13,6 @@
   <meta property="og:url" content="https://www.nijmegenonline.nl/bedrijvengids/hunkemoller-zwanenveld/">
   <meta property="og:site_name" content="NijmegenOnline">
   <meta property="og:image" content="https://www.nijmegenonline.nl/assets/img/logo-nijmegenonline.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="../../assets/css/site.css?v=29">
   <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
@@ -27,13 +24,14 @@
   <!-- analytics -->
   <!-- Search Console: verificatiecode van de property https://www.nijmegenonline.nl/ (HTML-tag). -->
   <meta name="google-site-verification" content="DvTKwDdZ4RPX1t_mRT4x6b5YhA5R_AMz0w_hEi2foeQ">
-  <!-- Google Analytics (GA4-property 337370292, dezelfde Google-tag als de WordPress-site). Laadt alleen op www.nijmegenonline.nl, niet op de testsite of lokaal. -->
+  <!-- Google Analytics (GA4-property 337370292, dezelfde Google-tag als de WordPress-site). Laadt alleen op www.nijmegenonline.nl, niet op de testsite of lokaal.
+       Privacyvriendelijk: geen Google Signals en geen advertentiekoppeling (zie /privacy-policy/). -->
   <script>
     if (location.hostname === "www.nijmegenonline.nl") {
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-      gtag("config", "GT-5R43F82");
+      gtag("config", "GT-5R43F82", { allow_google_signals: false, allow_ad_personalization_signals: false });
       var ga = document.createElement("script");
       ga.async = true;
       ga.src = "https://www.googletagmanager.com/gtag/js?id=GT-5R43F82";
@@ -218,7 +216,7 @@
         <ul>
           <li><a href="../../kom-in-contact/">Kom in contact</a></li>
           <li><a href="../../algemene-voorwaarden/">Algemene voorwaarden</a></li>
-          <li><a href="../../privacy-policy/">Privacybeleid</a></li>
+          <li><a href="../../privacy-policy/">Privacyverklaring</a></li>
         </ul>
       </nav>
     </div>

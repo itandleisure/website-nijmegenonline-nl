@@ -22,7 +22,7 @@
      Begint het onderwerp met "Agenda", dan wordt het een evenement (evenementUitMail): Claude vult datum, tijden en
      locatie in en schrijft de tekst; het komt in het tabblad Evenementen met de gewone goedkeuringsmail.
    - Er gaat een e-mail naar ONTVANGER (antwoorden gaat rechtstreeks naar de invuller).
-   - Regels ouder dan de bewaartermijn (3 maanden) worden elke nacht verwijderd, met hun foto in Drive (privacy, zie artikel 11 van de algemene voorwaarden).
+   - Regels ouder dan de bewaartermijn (3 maanden) worden elke nacht verwijderd, met hun foto in Drive (privacy, zie de privacyverklaring op /privacy-policy/).
 
    Eenmalig: kies bovenin de functie "installeer" en klik op Uitvoeren (geeft toestemming
    en zet de nachtelijke opruimtaak aan). Daarna: Implementeren → Nieuwe implementatie → Web-app,
