@@ -14,7 +14,7 @@
   --max: 1140px;
 }
 * { box-sizing: border-box; }
-html { background: #2b2f33; }
+html { background: #2b2f33; scroll-padding-top: 110px; }
 body {
   margin: 0;
   font-family: Raleway, system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -38,10 +38,11 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 6px 16px;
 }
 
-/* Header: bovenbalk, hoofdbalk met logo en menu */
+/* Header: bovenbalk scrolt mee weg, hoofdbalk met logo en menu blijft bovenin staan */
 .bovenbalk { background: var(--donkerblauw); font-size: 0.85rem; }
 .bovenbalk ul { list-style: none; margin: 0; padding: 8px 0; display: flex; gap: 20px; justify-content: flex-end; flex-wrap: wrap; }
 .bovenbalk a { color: var(--wit); text-decoration: none; font-weight: 600; }
+.sitekop { position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); }
 .hoofdbalk { background: var(--blauw); }
 .kop { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 16px; flex-wrap: wrap; }
 .logo img { height: 64px; width: auto; }
@@ -115,10 +116,13 @@ footer a { color: var(--wit); }
 footer ul { list-style: none; padding: 0; margin: 0 0 12px; display: flex; flex-wrap: wrap; gap: 8px 20px; }
 
 @media (max-width: 600px) {
-  .kop { justify-content: center; }
-  .hoofdmenu ul { justify-content: center; gap: 16px; }
+  /* compacte vaste balk: klein logo en kleiner menu */
+  html { scroll-padding-top: 100px; }
+  .kop { justify-content: center; padding: 6px 16px; gap: 4px; }
+  .logo img { height: 36px; }
+  .hoofdmenu ul { justify-content: center; gap: 0 16px; line-height: 1.6; }
+  .hoofdmenu a { font-size: 0.8rem; }
   .bovenbalk ul { justify-content: center; }
-  .logo img { height: 52px; }
 }
 
 /* Artikel met zijbalk: zijbalk alleen naast de tekst op desktop */
