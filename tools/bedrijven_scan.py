@@ -47,7 +47,7 @@ CATEGORIEEN = {
     "pilates": "Pilates", "klimmen": "Klimmen en boulderen", "atletiek": "Atletiek en hardlopen", "yoga": "Yoga", "hockey": "Hockey",
     "dansschool": "Dansscholen", "personal-training": "Personal training en bootcamp", "tennis": "Tennis en squash", "golf": "Golf",
     "vechtsport": "Vechtsport", "zwemles": "Zwemles", "sportvereniging": "Sportverenigingen en -accommodaties",
-    "kapper": "Kappers en barbers", "massagesalon": "Massage", "wellness": "Sauna en wellness", "schoonheidssalon": "Schoonheidssalons",
+    "kapper": "Kappers en barbers", "massagesalon": "Massage en wellness", "schoonheidssalon": "Schoonheidssalons",
     "nagelsalon": "Nagelsalons", "pedicure": "Pedicure", "permanente-make-up": "Permanente make-up", "tattoo": "Tattoo en piercing",
     "fysiotherapeut": "Fysiotherapie", "dietist": "Diëtisten en voedingsadvies", "coach": "Coaches en therapeuten",
     "alternatief": "Alternatieve geneeswijzen", "opticien": "Opticiens", "huisarts": "Huisartsen", "dierenarts": "Dierenartsen",
@@ -156,12 +156,10 @@ KENMERKEN_BEAUTY = ["online boeken", "zonder afspraak", "avond of weekend", "her
 for _slug, (_spec, _uitleg) in {
     "kapper": (["knippen", "kleuren", "barber", "krullen", "bruidskapsel", "extensions", "afro en textuur"],
                "Kappers, kapsalons en barbershops. Een haarkliniek of haartransplantatie: zakelijk-overig."),
-    "massagesalon": (["ontspanningsmassage", "sportmassage", "hot stone", "thaise massage", "zwangerschapsmassage", "duo-massage", "aan huis"],
-                     "Massagesalons en masseurs. Erotische massage of een privéhuis hoort niet in de gids: geen-bedrijf. "
+    "massagesalon": (["ontspanningsmassage", "sportmassage", "hot stone", "thaise massage", "zwangerschapsmassage", "duo-massage", "aan huis",
+                      "sauna", "hammam", "arrangementen", "dagentree", "privé-sauna"],
+                     "Massagesalons, masseurs, sauna's, wellnessresorts en dayspa's. Erotische massage of een privéhuis hoort niet in de gids: geen-bedrijf. "
                      "Een fysiotherapeut met massage als bijzaak: fysiotherapeut."),
-    "wellness": (["sauna", "hammam", "zwembad", "beautybehandelingen", "arrangementen", "dagentree", "privé-sauna"],
-                 "Sauna's, wellnessresorts en dayspa's. Een schoonheidssalon die 'spa' in de naam heeft maar geen sauna of "
-                 "wellnessfaciliteiten: schoonheidssalon."),
     "schoonheidssalon": (["gezichtsbehandeling", "huidverbetering", "wimpers en wenkbrauwen", "harsen", "make-up", "laserontharing", "zonnebank"],
                          "Schoonheidssalons, huidtherapeuten, wimper- en wenkbrauwstudio's en visagisten. Vooral nagels: nagelsalon. "
                          "Vooral permanente make-up: permanente-make-up. Een zonnestudio hoort er ook bij."),

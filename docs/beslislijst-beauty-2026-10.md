@@ -1,25 +1,22 @@
 # Beauty en wellness: beslissingen voor Frans (24-10-2026)
 
-Na het verzamelen, de websitecheck en de scan staan er **314 bedrijven** als concept in de gids. Bij zoveel bedrijven vraag ik niet per bedrijf, maar per soort geval. Antwoord per letter, bijvoorbeeld "A goed, B weg, C houden". De volledige lijst per categorie staat in `docs/datacheck-<categorie>-2026-10.md`.
+Na het verzamelen, de websitecheck en de scan staan er **332 bedrijven** als concept in de gids. Bij zoveel bedrijven vraag ik niet per bedrijf, maar per soort geval. Antwoord per letter, bijvoorbeeld "A goed, B weg, C houden". De volledige lijst per categorie staat in `docs/datacheck-<categorie>-2026-10.md`.
 
-## Eerst een vraag
-
-**G. Wellness.** Daar blijft maar 1 bedrijf over: de meeste bleken massagesalons of schoonheidssalons. Mijn voorstel: wellness samenvoegen met de massagesalons tot één pagina "Massage en wellness".
+**Besluit van Frans (24-10-2026):** A, B, C en E volgens het voorstel, behalve AMI Kappers (franchisevestiging, weg). D laten. Wellness en massage samen op één pagina (G).
 
 ## Per categorie
 
 | Categorie | In de gids | Automatisch weg | Site werkt niet | Andere categorie | Nog niet gescand |
 |---|---|---|---|---|---|
-| kapper | 107 | 19 | 8 | 2 | 0 |
-| massagesalon | 80 | 14 | 6 | 4 | 0 |
-| wellness | 1 | 22 | 6 | 20 | 0 |
+| kapper | 106 | 20 | 8 | 2 | 0 |
+| massagesalon | 100 | 36 | 12 | 4 | 0 |
 | permanente-make-up | 3 | 0 | 0 | 1 | 0 |
 | schoonheidssalon | 88 | 36 | 14 | 8 | 0 |
 | nagelsalon | 9 | 8 | 6 | 5 | 0 |
 | pedicure | 15 | 3 | 0 | 0 | 0 |
 | tattoo | 11 | 3 | 3 | 0 | 0 |
 
-## A. Adres op hun eigen site is anders, maar wel in Nijmegen: neem ik over (39)
+## A. Adres op hun eigen site is anders, maar wel in Nijmegen: neem ik over (43)
 
 Meestal verhuisd binnen de stad of een ander huisnummer. Ik zet het adres van hun eigen site in de gids.
 
@@ -41,13 +38,17 @@ Meestal verhuisd binnen de stad of een ander huisnummer. Ik zet het adres van hu
 | Très-bon Salon ✂ | kapper | Italiëstraat 106, 6663 | Italiëstraat 93 (ingang achterom), 6663 PG Lent |
 | Wave | massagesalon | Groothandelsweg 3, 6515 AJ | Van der Valk Hotel Nijmegen-Lent, Hertog Eduardplein 4, 6663 AN Nijmegen |
 | Blijf Vitaal Massage, Training & Advies | massagesalon | Oude Groenestraat 42, 6515 ED | Augustinusklooster, Graafseweg 274, 6532 ZV Nijmegen, Kamer 3.03 |
+| Boost Clinic | massagesalon | Sint Annastraat 282, 6525 HC | Berg en Dalseweg 172, 6522 CC Nijmegen |
+| Brows To Be | massagesalon | Gerard Noodtstraat 119, 6511 ST | Andalusiëstraat 6, 6663 NA Lent |
 | Corpuvita | massagesalon | Meijhorst 6002, 6537 KT | Meijhorst 60 02, 6537 KT Nijmegen |
 | Het Stroomt In Jou | massagesalon | Groenestraat 294, 6531 JC | Tweede Oude Heselaan 179A, 6542 VE Nijmegen |
-| Japanese Head Spa Japandi | massagesalon | Van Peltlaan 144, 6533 ZR | Heidebloemstraat 53, 6533 SL Nijmegen |
+| Japandi | massagesalon | van Peltlaan 144, 6533 ZR | Heidebloemstraat 53, 6533 SL Nijmegen |
 | Massagepraktijk Panta Rhei | massagesalon | John Lennonstraat 51, 6663 GR | John Lennonstraat 13, 6663 GR Nijmegen |
 | Mohara | massagesalon | Verlengde Groenestraat 33, 6525 EG | Ruimte voor Massage, Radboudumc, Geert Grooteplein Zuid 10, 6525 GA Nijmegen (begane grond, route 675) |
+| PEMM Beautician | massagesalon | Oranjesingel 66l, 6511 NZ | Spoorstraat 272, Nijmegen |
+| Praktijk voor Injectables Nijmegen | massagesalon | Kerkenbos 1033, 6546 BB | Max Tahalelepad 27, 6541 GD Nijmegen |
+| Sev Skin & Hair Aesthetic | massagesalon | Malvert 7003, 6538 DP | Binnenhof 9, 6535 TM Nijmegen (Hatert) |
 | Voetreflex Tilia | massagesalon | Graafseweg 274, 6532 ZV | De Ruyterstraat 65, 6512 GB Nijmegen (in Cordium, centrum voor groei en ontwikkeling) |
-| Japandi | wellness | van Peltlaan 144, 6533 ZR | Heidebloemstraat 53, 6533 SL Nijmegen |
 | Huid Atelier | schoonheidssalon | Berg en Dalseweg 52, 6522 BM | Hertogplein 1, 6511 SK Nijmegen |
 | Anetjes Haar Studio | schoonheidssalon | Tooropstraat 194, 6521 NX | Fransestraat 45a, 6524 HT Nijmegen |
 | Beautysalon La Perla | schoonheidssalon | Dennenstraat 106, 6543 JW | Wintersoord 12, 6511 RR Nijmegen |
@@ -73,13 +74,12 @@ Verhuisd naar Wijchen, Beuningen of verder. Ze blijven staan voor de latere gids
 |---|---|---|---|
 | Beautysalon Ren | schoonheidssalon | Zwanenveld 3042, 6538 ZZ | Holenbergseweg 16, 6604 AK Wijchen |
 
-## C. Geen vaste plek in Nijmegen: houden of weghalen? (22)
+## C. Geen vaste plek in Nijmegen: houden of weghalen? (21)
 
 Vaak zzp'ers die vanuit huis of bij de klant werken. Mijn voorstel: **houden**, maar zonder adres op de kaart, alleen met de plaats. Of zeg "C weg".
 
 | Bedrijf | Categorie | Opmerking uit de scan |
 |---|---|---|
-| AMI Kappers | kapper | Op de salonpagina staat geen adres; Bisschop Hamerstraat 8 niet kunnen controleren. Opgegeven link (/nijmegen) leidde naar /salons/nijmegen/ (Nijmegen Centrum). Franchisevestiging  |
 | Issavia Natural Hair Care ✂ | kapper | Geen adres of openingstijden op de site; adres Heidebloemstraat niet geverifieerd. Webshop met e-books en producten als nevenactiviteit. Vegan producten alleen genoemd in reviews,  |
 | Kapsalon Haarbalans | kapper | Vermoedelijke categorie 'sauna en wellness' klopt niet: het is een kapsalon met 'haarspa'-behandelingen, geen sauna of wellnessfaciliteiten. Volledig adres en openingstijden staan  |
 | Kapsalon Sandra Obstfeld | kapper | Afspraken alleen telefonisch (024-3605856), niet via WhatsApp. Huisnummer staat niet op de gelezen pagina's. Kenmerk 'avond of weekend' gebaseerd op zaterdagopening. |
@@ -111,11 +111,12 @@ Ter info. Zet je een reden terug, dan komen die bedrijven weer in de gids.
 | website niet uit te lezen, liever geen halve gegevens | 74 |
 | te weinig informatie op de eigen website | 22 |
 | gestopt of verhuisd volgens de eigen website | 8 |
+| redactie: franchisevestiging | 1 |
 | geen bedrijf voor de gids | 1 |
 
 **Vraag bij D:** 74 sites konden we niet lezen (de site weert bots of laadt alles met JavaScript). Mijn voorstel: die nog één keer proberen op een andere manier, voor ongeveer $0,03 per bedrijf. Lukt het dan nog niet, dan blijven ze weg. Zeg "D opnieuw" of "D laten".
 
-## E. Hoort bij een andere categorie (40)
+## E. Hoort bij een andere categorie (20)
 
 Ter info: deze komen in de categorie die bij ze past, of vallen af als die er niet is.
 
@@ -127,26 +128,6 @@ Ter info: deze komen in de categorie die bij ze past, of vallen af als die er ni
 | Inner Transformation / Massage & Essentie Coaching | massagesalon | hoort bij Coaches en therapeuten (scan 24-10-2026) |
 | Je Lijf Leven | massagesalon | hoort bij Alternatieve geneeswijzen (scan 24-10-2026) |
 | Leonie Evers | massagesalon | hoort bij Alternatieve geneeswijzen (scan 24-10-2026) |
-| Studio Huidbalans | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Aan Den Lijve | wellness | hoort bij Psychologen en psychotherapeuten (scan 24-10-2026) |
-| Beauty Center Suzana | wellness | hoort bij Nagelsalons (scan 24-10-2026) |
-| Boost Clinic | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Boost Clinic | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Brows To Be | wellness | hoort bij Permanente make-up (scan 24-10-2026) |
-| Ceder Baars Holistic Beauty Therapy | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Clinic Amiri | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| De Schoonheidssalon - ROC Nijmegen | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Hair&Fashion Magazine | wellness | hoort bij Overige zakelijke diensten (scan 24-10-2026) |
-| Kensbeautyclinic | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Mm Visagie | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| PEMM Beautician | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Praktijk voor Injectables Nijmegen | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Schoonheids en Pedicuresalon Jolanda | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Sev Skin & Hair Aesthetic | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| Skin Ruhles | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
-| The Nail Art Club Nijmegen | wellness | hoort bij Nagelsalons (scan 24-10-2026) |
-| Wow Nails | wellness | hoort bij Nagelsalons (scan 24-10-2026) |
-| Your Beauty Clinic | wellness | hoort bij Schoonheidssalons (scan 24-10-2026) |
 | Miya Brows | permanente-make-up | hoort bij Schoonheidssalons (scan 24-10-2026) |
 | Aphrodite Skin Products | schoonheidssalon | hoort bij Overige winkels (scan 24-10-2026) |
 | De Voetsalon | schoonheidssalon | hoort bij Pedicure (scan 24-10-2026) |

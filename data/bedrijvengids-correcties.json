@@ -1,5 +1,5 @@
 {
- "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg).",
+ "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg). Beauty en wellness: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Uitgaan: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Eten en drinken (rest): datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres).",
  "the-kettlebell-club": {
   "adres": "Groenestraat 215",
   "postcode": "6531 HH",
@@ -1174,5 +1174,731 @@
   "plaats": "Nijmegen",
   "lat": "",
   "lon": ""
+ },
+ "kapsalon-williams-grey": {
+  "adres": "Van 't Santstraat 1",
+  "postcode": "6523 BA",
+  "plaats": "Nijmegen",
+  "lat": "51.835447",
+  "lon": "5.874743"
+ },
+ "anita-hair-beauty-fashion": {
+  "adres": "St. Agnetenweg 62",
+  "postcode": "6545 AW",
+  "plaats": "Nijmegen",
+  "lat": "51.831191",
+  "lon": "5.803074"
+ },
+ "blend": {
+  "adres": "Stikke Hezelstraat 6",
+  "postcode": "6511 JX",
+  "plaats": "Nijmegen",
+  "lat": "51.847538",
+  "lon": "5.862917"
+ },
+ "elfi-kapsalon-pruikenboetiek": {
+  "adres": "Nina Simonestraat 12",
+  "postcode": "6541 EA",
+  "plaats": "Nijmegen",
+  "lat": "51.848955",
+  "lon": "5.851609"
+ },
+ "flowra-hairstudio": {
+  "adres": "Winselingseweg 67",
+  "postcode": "6541 AH",
+  "plaats": "Nijmegen",
+  "lat": "51.855908",
+  "lon": "5.838556"
+ },
+ "friendly-hairdesign-schependomlaan": {
+  "adres": "Daalseweg 238",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "51.837719",
+  "lon": "5.875826"
+ },
+ "hair-looks-nijmegen": {
+  "adres": "van Welderenstraat 71",
+  "postcode": "6511 MD",
+  "plaats": "Nijmegen",
+  "lat": "51.843063",
+  "lon": "5.863641"
+ },
+ "issavia-natural-hair-care": {
+  "geen_adres": true
+ },
+ "kapsalon-haarbalans": {
+  "geen_adres": true
+ },
+ "kapsalon-sandra-obstfeld": {
+  "geen_adres": true
+ },
+ "kapstokprodukties": {
+  "adres": "Groenestraat 170",
+  "postcode": "6531 HW",
+  "plaats": "Nijmegen",
+  "lat": "51.831012",
+  "lon": "5.852540"
+ },
+ "koopman-kappers-oude-molenweg": {
+  "adres": "Molenweg 179",
+  "postcode": "6543 VB",
+  "plaats": "Nijmegen",
+  "lat": "51.835609",
+  "lon": "5.830692"
+ },
+ "korte-mette-kapper": {
+  "adres": "Groenestraat 170",
+  "postcode": "6531 HW",
+  "plaats": "Nijmegen",
+  "lat": "51.831012",
+  "lon": "5.852540"
+ },
+ "noah-kappers-willemsweg": {
+  "adres": "Theo Dobbestraat 189",
+  "postcode": "6663 RJ",
+  "plaats": "Lent",
+  "lat": "51.865194",
+  "lon": "5.855484"
+ },
+ "ronny-s-hair": {
+  "adres": "Bloemerstraat 64",
+  "postcode": "6511 EL",
+  "plaats": "Nijmegen",
+  "lat": "51.845145",
+  "lon": "5.860875"
+ },
+ "sjiek-de-freak": {
+  "adres": "Dominicanenstraat 6",
+  "postcode": "6521 KD",
+  "plaats": "Nijmegen",
+  "lat": "51.841824",
+  "lon": "5.873382"
+ },
+ "tres-bon-salon": {
+  "adres": "Italiëstraat 93",
+  "postcode": "6663 PG",
+  "plaats": "Lent",
+  "lat": "51.870530",
+  "lon": "5.850530"
+ },
+ "wave": {
+  "adres": "Van der Valk Hotel Nijmegen-Lent, Hertog Eduardplein 4",
+  "postcode": "6663 AN",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "boost-clinic-sint-annastraat": {
+  "adres": "Berg en Dalseweg 172",
+  "postcode": "6522 CC",
+  "plaats": "Nijmegen",
+  "lat": "51.837719",
+  "lon": "5.882812"
+ },
+ "brows-to-be": {
+  "adres": "Andalusiëstraat 6",
+  "postcode": "6663 NA",
+  "plaats": "Lent",
+  "lat": "51.864481",
+  "lon": "5.861402"
+ },
+ "corpuvita": {
+  "adres": "Meijhorst 60 02",
+  "postcode": "6537 KT",
+  "plaats": "Nijmegen",
+  "lat": "51.814088",
+  "lon": "5.800251"
+ },
+ "het-stroomt-in-jou-groenestraat": {
+  "adres": "Tweede Oude Heselaan 179A",
+  "postcode": "6542 VE",
+  "plaats": "Nijmegen",
+  "lat": "51.842096",
+  "lon": "5.843695"
+ },
+ "iris-van-sleeuwen-intuitieve-massage-en-coaching": {
+  "geen_adres": true
+ },
+ "japandi": {
+  "adres": "Heidebloemstraat 53",
+  "postcode": "6533 SL",
+  "plaats": "Nijmegen",
+  "lat": "51.815290",
+  "lon": "5.850616"
+ },
+ "kiaora-hands-moves-zit-fit-nijmegen-sport-en-massagetherapie": {
+  "geen_adres": true
+ },
+ "laat-het-los-massage": {
+  "geen_adres": true
+ },
+ "massage-nijmegen": {
+  "geen_adres": true
+ },
+ "massage-on-wheels": {
+  "geen_adres": true
+ },
+ "massagepraktijk-innerlijf": {
+  "geen_adres": true
+ },
+ "massagepraktijk-panta-rhei": {
+  "adres": "John Lennonstraat 13",
+  "postcode": "6663 GR",
+  "plaats": "Nijmegen",
+  "lat": "51.870626",
+  "lon": "5.866726"
+ },
+ "massagepraktijk-sten-pieters": {
+  "geen_adres": true
+ },
+ "mohara": {
+  "adres": "Ruimte voor Massage, Radboudumc, Geert Grooteplein Zuid 10",
+  "postcode": "6525 GA",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "ontspannen-door-klank": {
+  "geen_adres": true
+ },
+ "pemm-beautician": {
+  "adres": "Spoorstraat 272",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "51.844166",
+  "lon": "5.855804"
+ },
+ "praktijk-voor-injectables-nijmegen": {
+  "adres": "Max Tahalelepad 27",
+  "postcode": "6541 GD",
+  "plaats": "Nijmegen",
+  "lat": "51.856086",
+  "lon": "5.841018"
+ },
+ "sev-skin-hair-aesthetic-malvert": {
+  "adres": "Binnenhof 9",
+  "postcode": "6535 TM",
+  "plaats": "Nijmegen",
+  "lat": "51.808397",
+  "lon": "5.829772"
+ },
+ "voetreflex-tilia": {
+  "adres": "De Ruyterstraat 65",
+  "postcode": "6512 GB",
+  "plaats": "Nijmegen",
+  "lat": "51.838106",
+  "lon": "5.856306"
+ },
+ "huid-atelier": {
+  "adres": "Hertogplein 1",
+  "postcode": "6511 SK",
+  "plaats": "Nijmegen",
+  "lat": "51.844256",
+  "lon": "5.868786"
+ },
+ "anetjes-haar-studio": {
+  "adres": "Fransestraat 45a",
+  "postcode": "6524 HT",
+  "plaats": "Nijmegen",
+  "lat": "51.837891",
+  "lon": "5.862682"
+ },
+ "beautysalon-la-perla-dennenstraat": {
+  "adres": "Wintersoord 12",
+  "postcode": "6511 RR",
+  "plaats": "Nijmegen",
+  "lat": "51.845953",
+  "lon": "5.868196"
+ },
+ "beautysalon-la-perla-kerkstraat": {
+  "adres": "Wintersoord 12",
+  "postcode": "6511 RR",
+  "plaats": "Nijmegen",
+  "lat": "51.845953",
+  "lon": "5.868196"
+ },
+ "beautysalon-ren": {
+  "adres": "Holenbergseweg 16",
+  "postcode": "6604 AK",
+  "plaats": "Wijchen",
+  "lat": "51.820838",
+  "lon": "5.731137"
+ },
+ "best-skin-solutions": {
+  "adres": "Marikenstraat 52",
+  "postcode": "6511 PX",
+  "plaats": "Nijmegen",
+  "lat": "51.845861",
+  "lon": "5.866396"
+ },
+ "care-line": {
+  "geen_adres": true
+ },
+ "cosmetique-totale-nijmegen": {
+  "geen_adres": true
+ },
+ "de-haarsmit": {
+  "adres": "Winselingseweg 16, Unit-23",
+  "postcode": "6541 AK",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "dutchess-of-skincare-angerensteinstraat": {
+  "adres": "Zijpendaalstraat 66",
+  "postcode": "6535 PW",
+  "plaats": "Nijmegen",
+  "lat": "51.803504",
+  "lon": "5.824320"
+ },
+ "huidinstituut-feliz-nijmegen": {
+  "adres": "Notenlaantje 106",
+  "postcode": "6663 MG",
+  "plaats": "Lent",
+  "lat": "51.875441",
+  "lon": "5.863889"
+ },
+ "huidprofs-berg-en-dalseweg": {
+  "geen_adres": true
+ },
+ "marilena": {
+  "adres": "Malvert 70-07",
+  "postcode": "6538 DP",
+  "plaats": "Nijmegen",
+  "lat": "51.809033",
+  "lon": "5.807373"
+ },
+ "maudy-vossen-huidinstituut": {
+  "geen_adres": true
+ },
+ "maudy-vossen-huidverjongingsinstituut": {
+  "adres": "Hazenkampseweg 269",
+  "postcode": "6531 NG",
+  "plaats": "Nijmegen",
+  "lat": "51.826188",
+  "lon": "5.844424"
+ },
+ "peters": {
+  "geen_adres": true
+ },
+ "pure-clinics": {
+  "adres": "Sint Annastraat 1",
+  "postcode": "6524 EA",
+  "plaats": "Nijmegen",
+  "lat": "51.840466",
+  "lon": "5.860668"
+ },
+ "sint-nijmegen": {
+  "geen_adres": true
+ },
+ "studio-aj": {
+  "adres": "Lange Hezelstraat 89",
+  "postcode": "6511 CE",
+  "plaats": "Nijmegen",
+  "lat": "51.848195",
+  "lon": "5.857923"
+ },
+ "sure-beauty": {
+  "geen_adres": true
+ },
+ "toet-schoonheidsboetiek": {
+  "geen_adres": true
+ },
+ "beauty-nailz": {
+  "geen_adres": true
+ },
+ "black-dahlia-nagelsalon": {
+  "geen_adres": true
+ },
+ "pedicure-carine": {
+  "adres": "Groenestraat 294",
+  "postcode": "6531 JC",
+  "plaats": "Nijmegen",
+  "lat": "51.831847",
+  "lon": "5.844297"
+ },
+ "liquid-sky-tattoos": {
+  "adres": "Van Oldenbarneveldstraat 63A",
+  "postcode": "6512 AT",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "tabula-rasa-tattoo": {
+  "adres": "NYMA Makersplaats, Winselingseweg 16",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "william-smulders": {
+  "geen_adres": true
+ },
+ "belevenissen-nl": {
+  "geen_adres": true
+ },
+ "bubbelworx-ballonart": {
+  "geen_adres": true
+ },
+ "de-swing": {
+  "geen_adres": true
+ },
+ "ellen-meijer-creatieve-producties": {
+  "geen_adres": true
+ },
+ "faberplein-b-v": {
+  "geen_adres": true
+ },
+ "matrixx-b-v": {
+  "geen_adres": true
+ },
+ "nijmeegs-hofbal": {
+  "adres": "Stichting Club van 111 Hofraad, Dalidastraat 45",
+  "postcode": "6663 MJ",
+  "plaats": "Lent",
+  "lat": "",
+  "lon": ""
+ },
+ "nyma-makersmarkt-nyma-terrein": {
+  "geen_adres": true
+ },
+ "nyma-makersmarkt-weurtseweg": {
+  "geen_adres": true
+ },
+ "paintball-nijmegen": {
+  "adres": "Meeuwseacker 2030",
+  "postcode": "6546 DZ",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "panna-sterrenteam": {
+  "adres": "Kerkenbos 1075H",
+  "postcode": "6546 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.825147",
+  "lon": "5.778548"
+ },
+ "roots-bushcraft-natuureducatie": {
+  "geen_adres": true
+ },
+ "sport-en-spel-lent": {
+  "geen_adres": true
+ },
+ "strongman-battles": {
+  "adres": "Cargadoorweg 14C",
+  "postcode": "6541 BT",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "under-events": {
+  "geen_adres": true
+ },
+ "versfabriek": {
+  "adres": "De Biezen 1",
+  "postcode": "6541 BN",
+  "plaats": "Nijmegen",
+  "lat": "51.849142",
+  "lon": "5.838578"
+ },
+ "anatomisch-en-pathologisch-museum": {
+  "adres": "Studiecentrum, Geert Grooteplein 21",
+  "postcode": "6525 EZ",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "museum-of-anatomy-and-pathology": {
+  "adres": "Studiecentrum, Geert Grooteplein 21",
+  "postcode": "6525 EZ",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "phion-orkest-van-gelderland-overijssel": {
+  "adres": "Jansbuitensingel 5",
+  "postcode": "6811 AA",
+  "plaats": "Arnhem",
+  "lat": "51.984607",
+  "lon": "5.906277"
+ },
+ "comedy-corner": {
+  "geen_adres": true
+ },
+ "g-n-theatercafe": {
+  "geen_adres": true
+ },
+ "het-nest-festival": {
+  "adres": "Goffertpark Nijmegen; correspondentieadres Doornroosje, Stationsplein 11",
+  "postcode": "6512 AB",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "kanteltheater": {
+  "geen_adres": true
+ },
+ "meneer-otis": {
+  "geen_adres": true
+ },
+ "muzikaal-verteltheater-de-rode-maan": {
+  "geen_adres": true
+ },
+ "popop": {
+  "adres": "Geen vaste locatie ; eerstvolgende workshop bij Expo Bart, Waalplein 6",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "poppodium-merleyn": {
+  "geen_adres": true
+ },
+ "roos-van-nijmegen": {
+  "geen_adres": true
+ },
+ "science-cafe-nijmegen": {
+  "adres": "The Shamrock, Smetiusstr. 17",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "speelplaats-van-de-intuitie": {
+  "geen_adres": true
+ },
+ "the-outdoor-club": {
+  "geen_adres": true
+ },
+ "theatergroep-gras": {
+  "geen_adres": true
+ },
+ "atelier-de-verbinding": {
+  "geen_adres": true
+ },
+ "atelier-rohde": {
+  "geen_adres": true
+ },
+ "corinne-roes-modeontwerp-en-styling": {
+  "geen_adres": true
+ },
+ "dorien-van-voorden": {
+  "geen_adres": true
+ },
+ "expo-bart": {
+  "adres": "NYMA-terrein, Waalplein 6",
+  "postcode": "6541 AX",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "extrapool": {
+  "adres": "Tweede Walstraat 23",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "51.844150",
+  "lon": "5.863808"
+ },
+ "huisaltaartje": {
+  "adres": "Weezenhof 25-11",
+  "postcode": "6536 JG",
+  "plaats": "Nijmegen",
+  "lat": "51.800184",
+  "lon": "5.803924"
+ },
+ "mappaart": {
+  "geen_adres": true
+ },
+ "paraplufabrieken-van-oldenbarneveltstraat": {
+  "geen_adres": true
+ },
+ "post-nijmegen": {
+  "adres": "Waalplein 1",
+  "postcode": "6541 AX",
+  "plaats": "Nijmegen",
+  "lat": "51.856843",
+  "lon": "5.838080"
+ },
+ "somethingelsart-com": {
+  "geen_adres": true
+ },
+ "stone-art-mozaiek": {
+  "geen_adres": true
+ },
+ "ampire-vastgoedgroep": {
+  "adres": "Oranjesingel 13A",
+  "postcode": "6511 NL",
+  "plaats": "Nijmegen",
+  "lat": "51.841696",
+  "lon": "5.863388"
+ },
+ "gas-19": {
+  "geen_adres": true
+ },
+ "old-cave-nijmegen": {
+  "adres": "St.Anthoniusplaats 13",
+  "postcode": "6511 TR",
+  "plaats": "Nijmegen",
+  "lat": "51.847891",
+  "lon": "5.867521"
+ },
+ "stichting-fabrikaat": {
+  "adres": "Zaligestraat 10",
+  "postcode": "6663 KR",
+  "plaats": "Nijmegen",
+  "lat": "51.860884",
+  "lon": "5.852336"
+ },
+ "bakker-bart-zwanenveld": {
+  "adres": "Zwanenveld 90",
+  "postcode": "6538 SE",
+  "plaats": "Nijmegen",
+  "lat": "51.823719",
+  "lon": "5.797749"
+ },
+ "strik-patisserie-ziekerstraat": {
+  "adres": "Ziekerstraat 124",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "51.844072",
+  "lon": "5.865008"
+ },
+ "oersoep": {
+  "adres": "Waalplein 7",
+  "postcode": "6541 AX",
+  "plaats": "Nijmegen",
+  "lat": "51.857206",
+  "lon": "5.838399"
+ },
+ "curasauce": {
+  "geen_adres": true
+ },
+ "de-wit-kaashandel": {
+  "geen_adres": true
+ },
+ "eetpaleis-marhaba": {
+  "adres": "Sint Annastraat 58",
+  "postcode": "6524 GG",
+  "plaats": "Nijmegen",
+  "lat": "51.838381",
+  "lon": "5.859750"
+ },
+ "johnny-s-burger-co": {
+  "adres": "Smetiusstraat 12",
+  "postcode": "6511 ES",
+  "plaats": "Nijmegen",
+  "lat": "51.843981",
+  "lon": "5.859112"
+ },
+ "mangiafoco": {
+  "geen_adres": true
+ },
+ "nijmegen-st-jacobslaan": {
+  "adres": "St. Jacobslaan 61",
+  "postcode": "6533 BP",
+  "plaats": "Nijmegen",
+  "lat": "51.821445",
+  "lon": "5.851391"
+ },
+ "papa-johns-pizza": {
+  "geen_adres": true
+ },
+ "shanghai": {
+  "geen_adres": true
+ },
+ "sterre-s-delicious-food": {
+  "adres": "Kerkenbos 10-117",
+  "postcode": "6546 BJ",
+  "plaats": "Nijmegen",
+  "lat": "51.826098",
+  "lon": "5.778728"
+ },
+ "sushi-vega-nijmegen": {
+  "geen_adres": true
+ },
+ "ugala-iii": {
+  "adres": "O.c. Huismanstraat 268",
+  "postcode": "6544 ZR",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "yasemin-maaltijdservice": {
+  "geen_adres": true
+ },
+ "zorba-foodbar-nijmegen": {
+  "adres": "Tweede Walstraat 165",
+  "postcode": "6511 HC",
+  "plaats": "Nijmegen",
+  "lat": "51.843287",
+  "lon": "5.861690"
+ },
+ "cocktailbar": {
+  "geen_adres": true
+ },
+ "d-afrigian": {
+  "adres": "Binderskampweg 29u15",
+  "postcode": "6545 CA",
+  "plaats": "Nijmegen",
+  "lat": "51.845144",
+  "lon": "5.802891"
+ },
+ "de-bbq-brandtweer": {
+  "adres": "Pascalweg 16a",
+  "postcode": "6662 NE",
+  "plaats": "Elst",
+  "lat": "51.912259",
+  "lon": "5.865351"
+ },
+ "de-rode-comcommer": {
+  "geen_adres": true
+ },
+ "de-nijmeegse-ontbijtservice": {
+  "adres": "Kerkenbos 10-117",
+  "postcode": "6546 BJ",
+  "plaats": "Nijmegen",
+  "lat": "51.826098",
+  "lon": "5.778728"
+ },
+ "foodservice-royale": {
+  "adres": "Kerkenbos 1056",
+  "postcode": "6546 BA",
+  "plaats": "Nijmegen",
+  "lat": "51.825766",
+  "lon": "5.779778"
+ },
+ "luchtig-lunchwinkel": {
+  "adres": "Prof. Molkenboerstraat 18",
+  "postcode": "6524 RP",
+  "plaats": "Nijmegen",
+  "lat": "51.830195",
+  "lon": "5.867965"
+ },
+ "one-for-the-road-catering-events": {
+  "adres": "Koopvaardijweg 5a",
+  "postcode": "6541 BR",
+  "plaats": "Nijmegen",
+  "lat": "51.852214",
+  "lon": "5.833225"
+ },
+ "paella-live-cooking": {
+  "geen_adres": true
+ },
+ "piazzani": {
+  "geen_adres": true
+ },
+ "private-dining-by-pepijn-oostervink": {
+  "geen_adres": true
+ },
+ "qasioun-catering": {
+  "geen_adres": true
+ },
+ "smokehouse-de-kronenburger": {
+  "geen_adres": true
+ },
+ "clevers-ijsbar": {
+  "geen_adres": true
  }
 }

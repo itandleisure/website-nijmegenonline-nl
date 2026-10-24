@@ -696,9 +696,7 @@
   },
   "lijkt_actief": true,
   "naam": "Aan Den Lijve",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Psychologen en psychotherapeuten (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-di 09:00-14:30, wo-do 09:00-17:00, vr 09:00-12:30/17:00",
   "opmerkingen": "Geen sauna of wellness: het gaat om een praktijk voor lichaamsgerichte therapie (NARM/NARM Touch). Categorie aangepast naar psycholoog met alternatief als extra; redactie kan eventueel 'coach' of 'alternatief' als hoofdcategorie kiezen. Sessies deels vergoed via aanvullende verzekering.",
   "status": "voorstel",
@@ -3595,7 +3593,8 @@
   "naam": "AMI Kappers",
   "openingstijden": "ma-wo 09:00-18:00, do 09:00-20:00, vr 09:00-18:00, za 08:30-16:00",
   "opmerkingen": "Op de salonpagina staat geen adres; Bisschop Hamerstraat 8 niet kunnen controleren. Opgegeven link (/nijmegen) leidde naar /salons/nijmegen/ (Nijmegen Centrum). Franchisevestiging (franchise-onderneemster Charissa).",
-  "status": "voorstel",
+  "reden": "redactie: franchisevestiging (besluit Frans 24-10-2026)",
+  "status": "verwijderd",
   "tekst": "Even snel je haar laten doen tussen het winkelen door? Bij de Nijmeegse vestiging van AMI Kappers, de salon Nijmegen Centrum van deze landelijke keten, kun je gewoon binnenlopen zonder afspraak. Liever zeker van je plek? Dan plan je online of telefonisch een moment in.\n\nJe kunt er terecht als man, vrouw of kind, en jongeren en studenten krijgen een lagere prijs voor knippen. Naast een frisse coupe doen de stylisten ook kleuringen, van uitgroei bijwerken tot balayage, highlights en permanent. Ze verkopen er ook de eigen vegan verzorgingslijn IVY Hair Care, en lege flesjes kun je terugbrengen voor statiegeld.\n\nOp donderdag ben je er tot 's avonds welkom en op zaterdag al vroeg in de ochtend. Loop eens binnen of boek je afspraak online.",
   "website": "https://www.amikappers.nl/nijmegen",
   "website_bereikbaar": true
@@ -3695,9 +3694,7 @@
   },
   "lijkt_actief": true,
   "naam": "AMIKappers",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 09:00-20:00, di-wo 09:00-18:00, vr 09:00-18:00, za 08:30-15:00",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: dit is een kapsalon (filiaal van keten AMI Kappers). Donderdag en zondag staan niet bij de openingstijden (vermoedelijk gesloten). Adres staat niet in de opgehaalde tekst; telefoon 024-2020995.",
   "status": "voorstel",
@@ -8071,9 +8068,7 @@
   },
   "lijkt_actief": true,
   "naam": "Ava massage Nijmegen💆",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten: eenmanspraktijk aan huis voor massages, dus massagesalon i.p.v. sauna/wellness. Over-ons-pagina noemt ook gezichtsbehandeling en 'knipbeurt', lijkt template-tekst (bevat ook lorem ipsum); weggelaten. Geen openingstijden op de site; afspraak op tijdstip in overleg.",
   "status": "voorstel",
@@ -11287,9 +11282,7 @@
   },
   "lijkt_actief": true,
   "naam": "Beauty Center Suzana",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Nagelsalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-di 08:00-21:30, wo 09:00-22:00, do 09:00-21:30, vr 08:00-21:00, za 08:30-18:00, zo 09:00-21:00",
   "opmerkingen": "De naam op de site is MÉIA ('Yasm Nails is now MÉIA'), niet Beauty Center Suzana. Misschien is het een ander bedrijf of is de naam veranderd, dus controleer dit. Het is een nagelsalon zonder sauna of wellness, dus de categorie 'Sauna en wellness' klopt niet.",
   "status": "voorstel",
@@ -13163,7 +13156,7 @@
   "categorie_scan": "wellness",
   "extra_categorieen": [],
   "gescand": "2026-10-24",
-  "hoofdcategorie": "wellness",
+  "hoofdcategorie": "massagesalon",
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
@@ -13648,9 +13641,7 @@
   },
   "lijkt_actief": true,
   "naam": "Bij Bjorn",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 09:00-17:30, di 09:00-20:00, wo-do 09:00-19:00, vr 09:00-20:00, za 08:30-17:00",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: dit is een kapsalon (extensions, balayage, haarwerken). Geen sauna- of wellnessfaciliteiten genoemd. Site heeft ook een webshop.",
   "status": "voorstel",
@@ -14687,9 +14678,7 @@
   },
   "lijkt_actief": true,
   "naam": "BLEND",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 09:00-17:30, di 09:00-14:30, do 09:00-14:30 (alleen op afspraak)",
   "opmerkingen": "Geen sauna of wellness: het is een kapsalon, categorie aangepast naar kapper. Adres op site (Stikke Hezelstraat 6, 6511 JX) wijkt af van ons adres (Lange Hezelstraat 17); mogelijk verhuisd. Binnen Blend zit ook collega 'dyvinestudio' (eigen boekingslink). Copyright 2018 op de site, actualiteit niet zeker.",
   "status": "voorstel",
@@ -16532,9 +16521,7 @@
   },
   "lijkt_actief": true,
   "naam": "Bon Ton Kappers",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma gesloten, di-wo 09:00-17:30, do 09:00-18:00, vr 09:00-17:30, za 09:00-17:00, zo gesloten",
   "opmerkingen": "Geen sauna/wellness: dit is een kapsalon, categorie aangepast naar kapper. De site meldt een verhuizing 'om de hoek naar de Ziekerstraat/hoek 2e Walstraat rond 10 december'; exact nieuw adres onbekend, adres in de gids binnenkort controleren. Op 8-9 december gesloten. Kenmerk 'avond of weekend' op basis van zaterdagopening. Geen kinderen onder 7 jaar.",
   "status": "voorstel",
@@ -16720,9 +16707,7 @@
   },
   "lijkt_actief": true,
   "naam": "Boost Clinic",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellness: het is een cosmetische artsenkliniek (botox, fillers, huidverbetering). Categorie schoonheidssalon gekozen omdat er geen passender optie is. Homepage bevat nog placeholder-reviews (lorem ipsum). Mailadres gebruikt domein boost-clinic.nl, afwijkend van de website. Openingstijden niet vermeld. 'Online boeken' afgeleid uit de pagina 'Afspraak maken'; die is niet gelezen, dus controleren.",
   "status": "voorstel",
@@ -16750,9 +16735,7 @@
   },
   "lijkt_actief": true,
   "naam": "Boost Clinic",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Adres op de site (Berg en Dalseweg 172) wijkt af van ons adres (Sint Annastraat 282). Geen sauna of wellness: het is een cosmetische kliniek met artsen (botox, fillers), dus de categorie wellness klopt niet. Schoonheidssalon is de dichtstbijzijnde categorie; mogelijk past een medische categorie beter. Op de homepage staan nog placeholder-reviews (lorem ipsum). E-mailadres gebruikt het domein boost-clinic.nl, de website boostclinic.nl. Er staan geen openingstijden op de site.",
   "status": "voorstel",
@@ -18798,9 +18781,7 @@
   },
   "lijkt_actief": true,
   "naam": "Brows To Be",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Permanente make-up (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-vr 10:00-18:00, za-zo gesloten (alleen op afspraak)",
   "opmerkingen": "Adres op de contactpagina (Andalusiëstraat 6, Lent) wijkt af van ons adres (Gerard Noodtstraat 119). De site noemt de studio nog wel 'in het centrum van Nijmegen'; mogelijk verhuisd naar Lent, graag controleren. Geen sauna of wellnessfaciliteiten: categorie is permanente make-up, niet sauna/wellness. Wijk daarom niet in de tekst genoemd.",
   "status": "voorstel",
@@ -23418,9 +23399,7 @@
   },
   "lijkt_actief": true,
   "naam": "Ceder Baars Holistic Beauty Therapy",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 09:00-17:30, di 08:30-17:30, wo 09:00-17:30, do 08:30-17:30, vr 09:00-17:30, za-zo gesloten; alleen op afspraak",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten: schoonheidssalon i.p.v. wellness. Let op: de praktijk verhuist vanaf januari 2027 naar Leegstraat 12, 6645 BC Winssen (buiten Nijmegen); t/m december 2026 nog aan de Berg en Dalseweg. Er is ook een webshop. Parkeren is betaald voor de deur. Telefoonnummers op site: 06-57883964 en 024-2342898.",
   "status": "voorstel",
@@ -25140,9 +25119,7 @@
   },
   "lijkt_actief": true,
   "naam": "Clinic Amiri",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-vr 10:15-20:00, za-zo 09:00-20:00 (alleen op afspraak)",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten; het is een schoonheidssalon, dus categorie aangepast. Laser ontharen en tatoeage verwijderen staan in het menu, maar de inhoud van die pagina's is niet gelezen. Afspraken maken gaat via telefoon/WhatsApp, niet online.",
   "status": "voorstel",
@@ -26321,9 +26298,7 @@
   },
   "lijkt_actief": true,
   "naam": "Conny Hair ✂",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "di-vr 09:00-18:00",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: het is een dameskapsalon en haarwerkspecialist. De aangeleverde tekst lijkt afkomstig van een herstelde Wayback-kopie ('website recovered by the free version of the Wayback Downloader'); controleer of de site en het bedrijf nog actueel zijn. Twee telefoonnummers op de site: 06 20606078 en 024 377 7050. Contactpagina bevatte geen inhoud.",
   "status": "voorstel",
@@ -26877,9 +26852,7 @@
   },
   "lijkt_actief": true,
   "naam": "Cosmo Hairstyling Nijmegen",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellness: dit is een kapsalonketen, categorie aangepast naar kapper. De opgehaalde pagina's noemen de Nijmeegse vestiging, het adres en de openingstijden niet; adres Lange Hezelstraat 52 graag controleren via de salonpagina. Site noemt '7 dagen per week' voor de keten, niet specifiek voor Nijmegen.",
   "status": "voorstel",
@@ -28200,9 +28173,7 @@
   },
   "lijkt_actief": true,
   "naam": "Dalal Hairstyling Nijmegen",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 10:00-18:00, di-za 09:00-18:00, zo gesloten",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: dit is een kapsalon/barbier zonder wellnessfaciliteiten. Kenmerk 'kinderen' gebaseerd op 'heren van jong tot oud'; 'avond of weekend' op zaterdagopening. Online boeken alleen genoemd voor afspraken bij Shikar ('Book your barber'). Website toont copyright 2017; actualiteit niet zeker.",
   "status": "voorstel",
@@ -32541,9 +32512,7 @@
   },
   "lijkt_actief": true,
   "naam": "De Schoonheidssalon - ROC Nijmegen",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten genoemd; daarom schoonheidssalon i.p.v. wellness. Het is een leerwerkbedrijf van ROC Nijmegen, gerund door studenten. De specifieke pagina van de salon zat niet bij de aangeleverde tekst; alleen de overzichtspagina met leerwerkbedrijven. Openingstijden, behandelingen in detail en de manier van afspraak maken zijn onbekend; algemeen telefoonnummer ROC: 024 - 89 04 500. Mogelijk gelden de openingstijden alleen tijdens het schooljaar.",
   "status": "voorstel",
@@ -38058,9 +38027,7 @@
   },
   "lijkt_actief": true,
   "naam": "Dyvine Studio ✂",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellness: dit is een kapsalon met browbar; categorie aangepast naar kapper. Titel van de site noemt 'Lange Hezelstraat', adres is Stikke Hezelstraat 6. 'Kom langs met of zonder afspraak' staat op de Over-pagina. Openingstijden niet op de site.",
   "status": "voorstel",
@@ -39624,9 +39591,7 @@
   },
   "lijkt_actief": true,
   "naam": "Elfi Kapsalon & Pruikenboetiek",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "di 09:00-13:00 en 13:30-17:00, wo 09:00-13:00 en 13:30-18:00, do 09:00-13:00 en 13:30-17:00, vr 09:00-13:00 (di en vr niet elke week open)",
   "opmerkingen": "Adres op de site (Nina Simonestraat 12, 6541 EA) wijkt af van ons adres (Van Welderenstraat 30); waarschijnlijk verhuisd. Naam op de site is 'Kapsalon Elfi'; een pruikenboetiek wordt nergens genoemd. Categorie 'Sauna en wellness' klopt niet: het is een kapper. Werkt alleen op afspraak.",
   "status": "voorstel",
@@ -39747,9 +39712,7 @@
   },
   "lijkt_actief": true,
   "naam": "Elle Hair Love",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Vermoedelijke categorie (sauna en wellness) klopt niet: het is een kapper. Site is in het Engels. Er worden ook stylingworkshops genoemd (inschrijfformulier), maar zonder details; niet in de tekst opgenomen. Openingstijden staan niet op de site.",
   "status": "voorstel",
@@ -43025,9 +42988,7 @@
   },
   "lijkt_actief": true,
   "naam": "Fijn",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Cursussen en opleidingen (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Fijn! is geen sauna of wellnesszaak. Het bedrijf geeft online cursussen baby- en kindermassage en verkoopt massageolie en kadobonnen. Daarom staat het bij opleiding-en-training en niet bij sauna/wellness. Op de site staat geen adres en ook niets over een fysieke locatie in Nijmegen (alleen een e-mailadres en een contactformulier). Het adres Ruisdaelstraat 8 kon ik dus niet controleren. Ook openingstijden staan er niet op. De homepage is voor het laatst bijgewerkt in januari 2024.",
   "status": "voorstel",
@@ -49730,9 +49691,7 @@
   },
   "lijkt_actief": true,
   "naam": "Golden Spa",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-za 10:30-21:30, zo 11:00-21:30",
   "opmerkingen": "Vermoedelijke categorie was sauna en wellness, maar de site noemt geen sauna of wellnessfaciliteiten; alleen massages (plus scrub en gezichtsbehandeling). Daarom ingedeeld als massagesalon. Site richt zich expliciet op vrouwen. Afspraak lijkt via telefoon (0618433609); geen online boeken genoemd. Pagina's Over, Services, Prijzen niet aangeleverd.",
   "status": "voorstel",
@@ -51529,9 +51488,7 @@
   },
   "lijkt_actief": true,
   "naam": "Haar bij Mij",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "wo 09:00-17:00, do 09:00-14:00, vr 09:00-17:00, ma-di en za-zo gesloten; alleen op afspraak",
   "opmerkingen": "Vermoedelijke categorie sauna/wellness klopt niet: dit is een dameskapsalon aan huis. Geen sauna- of wellnessfaciliteiten. Reacties op de site bevatten persoonsgegevens van een klant (telefoonnummer); niet overgenomen.",
   "status": "voorstel",
@@ -51622,9 +51579,7 @@
   },
   "lijkt_actief": true,
   "naam": "Haar & Zo",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 09:00-20:00, di 09:00-17:30, wo 09:00-20:00, do 09:00-17:30, vr 08:00-17:30, za 08:00-14:00, zo gesloten",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: dit is een kapsalon zonder wellnessfaciliteiten. Paginatitel noemt 'centrum Nijmegen', maar het adres ligt aan de Tweede Oude Heselaan (Hees). Homepage noemt 6 kappers, maar er worden 5 teamleden voorgesteld.",
   "status": "voorstel",
@@ -51655,9 +51610,7 @@
   },
   "lijkt_actief": true,
   "naam": "Haarshop Amalia",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma gesloten, di-za 09:00-17:30, zo gesloten",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: dit is een kapsalon zonder wellnessfaciliteiten. Kenmerk 'avond of weekend' gebaseerd op openstelling op zaterdag.",
   "status": "voorstel",
@@ -51901,9 +51854,7 @@
   },
   "lijkt_actief": true,
   "naam": "Hair&Fashion Magazine",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Overige zakelijke diensten (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellness: dit is een B2B-uitgeverij van vakbladen (LR Media & Communicatie) voor de kappers- en beautybranche. Categorie aangepast naar zakelijk-overig. Geen publiek toegankelijke locatie; overweeg of opname in de gids zinvol is.",
   "status": "voorstel",
@@ -52102,9 +52053,7 @@
   },
   "lijkt_actief": true,
   "naam": "Hairbycill",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 09:00-17:00, do-vr 09:00-17:00, di, wo, za, zo gesloten",
   "opmerkingen": "Vermoedelijke categorie (sauna en wellness) klopt niet: dit is een kapsalon. Site meldt sluiting wegens vakantie van 18 juli t/m 9 augustus. Kenmerk 'heren' afgeleid van 'Barberlooks'.",
   "status": "voorstel",
@@ -53366,9 +53315,7 @@
   },
   "lijkt_actief": true,
   "naam": "Haven-Nijmegen",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-di gesloten, wo-za 09:15-17:30, zo gesloten",
   "opmerkingen": "Vermoedelijke categorie (sauna en wellness) klopt niet: het is een barbershop (herenkapper met baardverzorging). Kenmerk 'avond of weekend' gekozen vanwege openstelling op zaterdag. 'Online boeken' is afgeleid van de knop 'Maak een afspraak'; niet duidelijk of dat een boekingssysteem is.",
   "status": "voorstel",
@@ -55353,9 +55300,7 @@
   },
   "lijkt_actief": true,
   "naam": "Het Stroomt In Jou",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Adres op site (Tweede Oude Heselaan 179A, praktijkruimte De Vuurvlieg) wijkt af van ons adres (Groenestraat 294). Geen sauna of wellnessfaciliteiten: het is een massagepraktijk, dus categorie massagesalon i.p.v. wellness. Openingstijden alleen via online agenda. 'Cadeaubon' afgeleid uit 'Geef dan een massage cadeau'; niet expliciet een bon genoemd.",
   "status": "voorstel",
@@ -55530,9 +55475,7 @@
   },
   "lijkt_actief": true,
   "naam": "Hezel Hair",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 10:00-18:00, do 10:00-18:00, zo 10:00-18:00",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: dit is een kapsalon zonder sauna- of wellnessfaciliteiten. Kenmerk 'avond of weekend' gekozen vanwege opening op zondag; geen avondopenstelling. Online boeken afgeleid uit 'Boek nu je afspraak'/'Afspraak maken' op de site.",
   "status": "voorstel",
@@ -57291,9 +57234,7 @@
   },
   "lijkt_actief": true,
   "naam": "House Of Billiton Massage And Reiki",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-za 10:00-18:00, alleen op afspraak",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten; het is een massagestudio aan huis, dus als massagesalon ingedeeld in plaats van sauna/wellness. De studio is alleen voor vrouwen. Op de contactpagina staat ook zondag 10:00-18:00, terwijl elders ma t/m za staat. Op Instagram werd melding gemaakt van tijdelijke sluitingen door reizen; de huidige status is niet zeker.",
   "status": "voorstel",
@@ -62930,7 +62871,7 @@
    }
   ],
   "gescand": "2026-10-24",
-  "hoofdcategorie": "wellness",
+  "hoofdcategorie": "massagesalon",
   "kenmerken": [
    "online boeken",
    "cadeaubon",
@@ -62979,9 +62920,7 @@
   },
   "lijkt_actief": true,
   "naam": "Japanese Head Spa Japandi",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-di 10:00-18:00, wo 10:00-21:00, do-vr 10:00-18:00, za 10:00-15:00, zo gesloten (op afspraak)",
   "opmerkingen": "Adres wijkt af: bij ons staat Van Peltlaan 144, de site noemt Heidebloemstraat 53 en meldt 'Per 1 februari zijn wij verhuisd'. Het is onduidelijk of Heidebloemstraat het nieuwe of oude adres is; graag controleren. Geen sauna of wellnessfaciliteiten genoemd, dus gekozen voor massagesalon in plaats van sauna/wellness.",
   "status": "voorstel",
@@ -65452,9 +65391,7 @@
   },
   "lijkt_actief": true,
   "naam": "Kapsalon Double You Lent",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma gesloten, di-vr 08:30-17:00, za 08:00-15:00",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: dit is een kapsalon zonder wellnessfaciliteiten. Hoofdcategorie aangepast naar kapper.",
   "status": "voorstel",
@@ -65551,9 +65488,7 @@
   },
   "lijkt_actief": true,
   "naam": "Kapsalon Haarbalans",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Vermoedelijke categorie 'sauna en wellness' klopt niet: het is een kapsalon met 'haarspa'-behandelingen, geen sauna of wellnessfaciliteiten. Volledig adres en openingstijden staan niet op de gelezen pagina's. Salon ligt in Oosterhout (gld), niet in Nijmegen. Site biedt daarnaast interieurstyling en een webshop (Kérastase); niet als extra categorie opgenomen. Tegenstrijdige ervaringsjaren op de site (36 vs. 38 jaar).",
   "status": "voorstel",
@@ -65760,9 +65695,7 @@
   },
   "lijkt_actief": true,
   "naam": "Kapsalon Sina",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma gesloten, di-wo 09:00-19:00, do-vr 09:00-20:00, za 09:00-19:00, zo gesloten",
   "opmerkingen": "De vermoedelijke categorie 'Sauna en wellness' klopt niet. Dit is een kapsalon zonder sauna of andere wellnessfaciliteiten. Op de site worden de diensten voor dames, heren en kinderen alleen als kopjes genoemd, zonder verdere uitleg. 'Zonder afspraak' heb ik afgeleid uit de zin 'Of kom gezellig langs'.",
   "status": "voorstel",
@@ -66740,9 +66673,7 @@
   },
   "lijkt_actief": true,
   "naam": "Kensbeautyclinic",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "De site is een JavaScript-app (Lovable). Alleen de metabeschrijving kon worden gelezen: 'Laserontharing, Pico Laser en huidbehandelingen in Nijmegen, Arnhem en Den Bosch.' Er staan geen sauna- of wellnessfaciliteiten op, dus de categorie is schoonheidssalon in plaats van sauna/wellness. Adres, openingstijden en het volledige aanbod konden niet worden gecontroleerd. 'Online boeken' is afgeleid van 'Boek een gratis huidanalyse', dus nog nakijken.",
   "status": "voorstel",
@@ -71517,9 +71448,7 @@
   },
   "lijkt_actief": true,
   "naam": "Laai Thai Thailandese Massages",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-za 10:30-21:00, zo 12:00-20:00",
   "opmerkingen": "Openingstijden verschillen per pagina: homepage ma-za 10.30-21.00, contactpagina elke dag 10.30-20.00 (zo 12-20). Homepage aangehouden; graag nagaan. Geen sauna of wellnessfaciliteiten, daarom massagesalon i.p.v. wellness. Site vermeldt 'Collega's gezocht'.",
   "status": "voorstel",
@@ -72971,9 +72900,7 @@
   },
   "lijkt_actief": true,
   "naam": "Lenio",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten; het gaat om een praktijk voor leefstijlcoaching, massage en natuurgeneeskunde. Daarom is de hoofdcategorie massagesalon in plaats van wellness. De site meldt 'een nieuwe vestiging in Nijmegen', dus er is mogelijk ook een andere locatie. Openingstijden staan niet op de site.",
   "status": "voorstel",
@@ -78451,9 +78378,7 @@
   },
   "lijkt_actief": true,
   "naam": "Massage Nijmegen",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma, di, do, vr 18:00-22:00; wo, za, zo 10:00-22:00",
   "opmerkingen": "Geen sauna- of wellnessfaciliteiten genoemd; het gaat om een massagesalon, dus categorie aangepast. Site noemt geen exact adres, alleen Dukenburg nabij het winkelcentrum. Of online reserveren mogelijk is, is onduidelijk (pagina Reserveren niet gelezen). Telefoon: 06-15531434.",
   "status": "voorstel",
@@ -78488,9 +78413,7 @@
   },
   "lijkt_actief": true,
   "naam": "Massage On Wheels",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "di-wo 10:00-18:00, do 10:00-21:00, vr 10:00-18:00",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten: het gaat om massage aan huis (mobiel), alleen voor vrouwen. Er staat geen bezoekadres op de site; Sneeuwbalstraat 19 is vermoedelijk alleen het vestigingsadres, geen locatie om naartoe te gaan. De site biedt Germaanse Geneeskunde (GNM) aan met uitspraken over genezing van klachten; dit is een omstreden alternatieve benadering, daarom in de tekst geen gezondheidsclaims opgenomen. Werkgebied staat op een niet-gelezen pagina.",
   "status": "voorstel",
@@ -78585,9 +78508,7 @@
   },
   "lijkt_actief": true,
   "naam": "Massagepraktijk Hees",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: het is een (sport)massagepraktijk zonder sauna- of wellnessfaciliteiten, daarom massagesalon gekozen. Behandeling aan huis mogelijk. Geen openingstijden op de site. Tarieven met prijspeil 2023.",
   "status": "voorstel",
@@ -78735,9 +78656,7 @@
   },
   "lijkt_actief": true,
   "naam": "Massagepraktijk Panta Rhei",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Naam op de site is 'Praktijk Uit Handen', niet 'Massagepraktijk Panta Rhei'. Huisnummer op site is 13, bij ons 51. Geen sauna of wellnessfaciliteiten: categorie massagesalon i.p.v. wellness. Openingstijden staan op een aparte pagina die niet is aangeleverd. Betaling in de praktijk contant. Ook locatie in Den Haag genoemd.",
   "status": "voorstel",
@@ -82443,9 +82362,7 @@
   },
   "lijkt_actief": true,
   "naam": "Mm Visagie",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellness: dit is een freelance visagist en hairstylist (bruidsstyling, visagie op locatie). Categorie 'Sauna en wellness' klopt niet; gekozen voor schoonheidssalon. Geen openingstijden op de site; werkt op afspraak, studio aan huis.",
   "status": "voorstel",
@@ -82781,9 +82698,7 @@
   },
   "lijkt_actief": true,
   "naam": "Mohara",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellness: massagepraktijk. Adres wijkt af van ons adres (Verlengde Groenestraat 33); praktijk is in juli 2022 verhuisd naar het Radboudumc. Postcode op site wisselend 6525 GA / 6525 AG. Ze geeft ook massagecursussen en workshops voor teamuitjes, maar dat lijkt bijzaak. Openingstijden niet vermeld.",
   "status": "voorstel",
@@ -89384,9 +89299,7 @@
   },
   "lijkt_actief": true,
   "naam": "Oasis Headspa",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "wo en vr op afspraak",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten; het is een headspa (haarverzorging en hoofdmassage), daarom ingedeeld als massagesalon i.p.v. wellness. Alleen voor dames. Tarievenpagina niet aangeleverd.",
   "status": "voorstel",
@@ -94113,9 +94026,7 @@
   },
   "lijkt_actief": true,
   "naam": "PEMM Beautician",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "Op afspraak",
   "opmerkingen": "Adres op de site (Spoorstraat 272) wijkt af van ons adres (Oranjesingel 66l); mogelijk verhuisd. Geen sauna of wellnessfaciliteiten, dus schoonheidssalon in plaats van sauna/wellness. Annuleringsbeleid: binnen 24 uur 50% kosten.",
   "status": "voorstel",
@@ -98464,9 +98375,7 @@
   },
   "lijkt_actief": true,
   "naam": "Praktijk Puur Jorieke",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "Op afspraak; werkdagen vooral ma, wo, do en vr",
   "opmerkingen": "Massagepraktijk zonder sauna of wellnessfaciliteiten; categorie aangepast van wellness naar massagesalon. Praktijk op 2e verdieping (niet rolstoeltoegankelijk vermeld). Workshops en bedrijfsmassage in menu, niet nader beschreven.",
   "status": "voorstel",
@@ -99050,9 +98959,7 @@
   },
   "lijkt_actief": true,
   "naam": "Praktijk voor Injectables Nijmegen",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "Behandelingen op afspraak; telefonisch een medewerker op werkdagen 08:30-17:30",
   "opmerkingen": "Adres op site (Max Tahalelepad 27, 6541 GD) wijkt af van ons adres (Kerkenbos 1033, 6546 BB). Geen sauna of wellness: het is een medische cosmetische praktijk (injectables door BIG-geregistreerd arts); categorie 'schoonheidssalon' is de best passende, mogelijk is een medische categorie beter. Keten met drie vestigingen. Telefonische tijden wisselen op de site (ook ma-za 9:00-18:00 genoemd). Claims als 'grootste kennisbank' en Consumentenbond-vermelding niet overgenomen.",
   "status": "voorstel",
@@ -108344,7 +108251,7 @@
   "categorie_scan": "wellness",
   "extra_categorieen": [],
   "gescand": "2026-10-24",
-  "hoofdcategorie": "wellness",
+  "hoofdcategorie": "massagesalon",
   "kenmerken": [],
   "keuken": "",
   "kosten_tokens": {
@@ -108446,7 +108353,7 @@
    }
   ],
   "gescand": "2026-10-24",
-  "hoofdcategorie": "wellness",
+  "hoofdcategorie": "massagesalon",
   "kenmerken": [
    "buitenbad",
    "parkeren"
@@ -109860,9 +109767,7 @@
   },
   "lijkt_actief": true,
   "naam": "Schoonheids en Pedicuresalon Jolanda",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten; categorie gewijzigd van wellness naar schoonheidssalon. Site toont twee verschillende prijslijsten (mogelijk een verouderde). Geen openingstijden vermeld. 'Book now'-knop aanwezig, maar onduidelijk of online boeken werkt. Wijk Dukenburg afgeleid uit adres Zwanenveld.",
   "status": "voorstel",
@@ -110977,9 +110882,7 @@
   },
   "lijkt_actief": true,
   "naam": "Seda's Hairdesign",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma gesloten, di-wo 09:00-17:30, do 11:00-20:00, vr 09:00-17:30, za 09:00-15:00, zo gesloten",
   "opmerkingen": "Vermoedelijke categorie (sauna en wellness) klopt niet: het is een kapsalon. Tegenstrijdig: site zegt 'Ik werk alleen op afspraak' maar ook 'Met & zonder afspraak'; daarom 'zonder afspraak' niet opgenomen.",
   "status": "voorstel",
@@ -111451,9 +111354,7 @@
   },
   "lijkt_actief": true,
   "naam": "Sev Skin & Hair Aesthetic",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "di, do, vr 09:30-17:00; wo, za 09:00-15:00; zo-ma gesloten (op afspraak)",
   "opmerkingen": "Adres op site (Binnenhof 9, 6535 TM) wijkt af van ons adres (Malvert 7003, 6538 DP). Geen sauna of wellnessfaciliteiten: schoonheidssalon i.p.v. wellness. Openingstijden zijn tegenstrijdig op de site (onderaan di-vr 9:30-17:00, za 10:00-15:00; bij contact wo 09:00-15:00). Uitsluitend voor dames. E-mail in menu bevat tikfout (sevaestetic.nl).",
   "status": "voorstel",
@@ -112798,9 +112699,7 @@
   },
   "lijkt_actief": true,
   "naam": "Skin Ruhles",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 12:00-21:00, di-wo 09:00-18:00, do 12:00-21:00, vr 09:00-17:00",
   "opmerkingen": "Dit is een huidverbeteringssalon zonder sauna of wellnessfaciliteiten, dus ik heb hem ingedeeld als schoonheidssalon en niet als sauna/wellness. Volgens de site kan de acnebehandeling vergoed worden door de zorgverzekeraar. Op de site staan geen online boekingsmogelijkheden.",
   "status": "voorstel",
@@ -115205,9 +115104,7 @@
   },
   "lijkt_actief": true,
   "naam": "Sportmassagepraktijk2108",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten; het is een massagepraktijk, daarom categorie massagesalon in plaats van wellness. Openingstijden staan niet op de gelezen pagina's. Wijk Dukenburg afgeleid uit adres Tolhuis; graag controleren.",
   "status": "voorstel",
@@ -115520,9 +115417,7 @@
   },
   "lijkt_actief": true,
   "naam": "Srinam Thai Massage",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Massage (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 08:00-21:00, di-vr 10:00-21:00, za-zo 11:00-20:00",
   "opmerkingen": "Naam op de site is 'Srisiam Massage Wellness Spa' / 'Srisiam Thaise massage & Wellness', niet 'Srinam Thai Massage' (Srinam Summart lijkt de naam van de eigenaar volgens een review). Geen echte sauna/wellnessfaciliteiten, wel een kruidenstoomsauna als behandeling; daarom massagesalon in plaats van wellness. Er is een aparte website genoemd: https://srisiam-wellness-spa.nl/. Ook manicure & pedicure in het aanbod.",
   "status": "voorstel",
@@ -118414,9 +118309,7 @@
   },
   "lijkt_actief": true,
   "naam": "Studio Huidbalans",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma 12:00-22:00, di telefonisch bereikbaar, wo 09:00-17:00, do 09:00-14:00, vr 09:00-14:00",
   "opmerkingen": "Geen sauna of wellness: het is een huidtherapeut (acnespecialist), aangesloten bij NVH en Kwaliteitsregister Paramedici. Mogelijk past een paramedische categorie beter dan schoonheidssalon. Openingstijden wijken af: footer zegt ma-vr 09:00-17:00, contactpagina geeft gedetailleerde tijden (die hier zijn overgenomen). Kenmerk 'avond' gebaseerd op maandag tot 22:00.",
   "status": "voorstel",
@@ -122653,9 +122546,7 @@
   },
   "lijkt_actief": true,
   "naam": "Team Kapsalon",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Kappers en barbers (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "teamkapsalon.nl stuurt door naar de landelijke site teamkappers.nl (keten). Het is een kapsalon en geen sauna of wellness, dus de categorie is aangepast. Op de salonpagina vond ik de vestiging in Nijmegen niet terug, dus het adres (Zwanenveld 9045) en de openingstijden zijn niet bevestigd. De naam Dukenburg komt van het adres en staat niet op de site; graag controleren of de vestiging nog bestaat.",
   "status": "voorstel",
@@ -124242,9 +124133,7 @@
   },
   "lijkt_actief": true,
   "naam": "The Nail Art Club Nijmegen",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Nagelsalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: dit is een nagelstudio zonder sauna- of wellnessfaciliteiten. Openingstijden staan niet op de gelezen pagina's. Telefoonnummer is alleen voor WhatsApp.",
   "status": "voorstel",
@@ -137851,9 +137740,7 @@
   },
   "lijkt_actief": true,
   "naam": "Wow Nails",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Nagelsalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "",
   "opmerkingen": "Vermoedelijke categorie 'Sauna en wellness' klopt niet: dit is een nagelstudio zonder wellnessfaciliteiten. Openingstijden van de salon staan niet op de site; alleen telefonische bereikbaarheid voor vragen ma-do 09:30-17:00. Copyright 2019, site lijkt verder actief. Het nummer 06-57657922 is volgens de site alleen voor WhatsApp, daarnaast 024 7370007. De Fahrenheitstraat ligt mogelijk niet in Nijmegen-Oost; wijk graag controleren.",
   "status": "voorstel",
@@ -138991,9 +138878,7 @@
   },
   "lijkt_actief": true,
   "naam": "Your Beauty Clinic",
-  "niet_in": {
-   "wellness": "automatisch: hoort bij Schoonheidssalons (scan 24-10-2026)"
-  },
+  "niet_in": {},
   "openingstijden": "ma-vr 10:00-21:00, za gesloten, zo 11:00-18:00",
   "opmerkingen": "Geen sauna of wellnessfaciliteiten; het is een schoonheidssalon/laserkliniek, dus categorie aangepast. De site noemt de ligging 'in het hart van Nijmegen', maar Lankforst ligt in Dukenburg. Een recensie zegt dat de eigenaar vanuit huis werkt.",
   "status": "voorstel",
