@@ -116,6 +116,10 @@ Nieuw nieuws komt per mail binnen:
 4. Na "Opslaan en publiceren" zet de uurlijkse taak (`tools/aanmeldingen.py`) het op de site en krijgt de inzender
    een mail met de link.
 
+Is het eigenlijk een evenement, zet dan bij het doorsturen **Agenda** vooraan in het onderwerp ("Agenda: Fwd: …"). Claude
+haalt dan datum, tijden, locatie en adres uit de mail en schrijft de agendatekst; het komt in het tabblad Evenementen
+en gaat verder als een aangemeld evenement.
+
 Instellen (eenmalig): secrets `NIEUWS_MAIL_SERVER`, `NIEUWS_MAIL_GEBRUIKER`, `NIEUWS_MAIL_WACHTWOORD` en
 `NIEUWS_SLEUTEL` in GitHub. De sleutel maakt de functie `maakNieuwsSleutel` in het Apps Script. Alleen mails van
 `nijmegenonline.nl`-adressen worden verwerkt; andere gaan naar de map Genegeerd. Een extra afzender kan erbij via de
