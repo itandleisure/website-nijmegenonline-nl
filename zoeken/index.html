@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="noindex, follow">
+  <title>Zoeken | NijmegenOnline</title>
+  <meta name="description" content="Zoek in alle artikelen, gidsen, bedrijven, evenementen en nieuwsberichten van NijmegenOnline.">
+  <link rel="canonical" href="https://www.nijmegenonline.nl/zoeken/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/site.css?v=28">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="../pagefind/pagefind-ui.css">
+  <script src="../pagefind/pagefind-ui.js"></script>
+  <style>
+    #zoeken {
+      --pagefind-ui-primary: var(--donkerblauw);
+      --pagefind-ui-text: var(--tekst);
+      --pagefind-ui-border: var(--rand);
+      --pagefind-ui-tag: var(--licht);
+      --pagefind-ui-border-radius: 6px;
+      --pagefind-ui-font: Raleway, system-ui, -apple-system, "Segoe UI", sans-serif;
+      margin-top: 24px;
+    }
+    #zoeken .pagefind-ui__result-link { color: var(--blauw); }
+  </style>
+</head>
+<body>
+  <div class="testbalk">Dit is een testomgeving. De echte site staat op <a href="https://www.nijmegenonline.nl/">www.nijmegenonline.nl</a>.</div>
+
+  <!-- header -->
+  <div class="bovenbalk">
+    <div class="container">
+      <ul>
+        <li><a href="../kom-in-contact/">Kom in contact</a></li>
+        <li><a href="../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+        <li><a href="../vacatures/">Vacatures</a></li>
+      </ul>
+    </div>
+  </div>
+  <header class="sitekop">
+    <div class="hoofdbalk">
+      <div class="container kop">
+        <a class="logo" href="../"><img src="../assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104"></a>
+        <nav class="hoofdmenu" aria-label="Hoofdmenu">
+          <ul>
+            <li><a href="../">Home</a></li>
+            <li><a href="../blog/">Inspiratie opdoen</a></li>
+            <li><a href="../thema/">Gidsen</a></li>
+            <li><a href="../bedrijvengids/">Bedrijvengids</a></li>
+            <li><a href="../nijmegen-evenementen-overzicht/">Agenda</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- /header -->
+
+  <main class="artikel-wrap">
+    <div class="container">
+      <article class="artikel zoekpagina">
+        <h1>Zoeken op NijmegenOnline</h1>
+        <p>Zoek in alle artikelen, gidsen, bedrijven, evenementen en nieuwsberichten.</p>
+        <div id="zoeken"></div>
+        <noscript><p>Zoeken werkt alleen met JavaScript aan.</p></noscript>
+      </article>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <ul>
+        <li><a href="../">Home</a></li>
+        <li><a href="../blog/">Inspiratie opdoen</a></li>
+        <li><a href="../thema/">Gidsen</a></li>
+        <li><a href="../bestemmingen/">Bestemmingen</a></li>
+        <li><a href="../bedrijvengids/">Bedrijvengids</a></li>
+        <li><a href="../nijmegen-evenementen-overzicht/">Agenda</a></li>
+        <li><a href="../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+        <li><a href="../kom-in-contact/">Kom in contact</a></li>
+        <li><a href="../algemene-voorwaarden/">Algemene voorwaarden</a></li>
+      </ul>
+      <p>&copy; NijmegenOnline. Testversie, gebouwd vanuit GitHub.</p>
+    </div>
+  </footer>
+  <!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknop in de zijbalk (pop-upformulier qG49m3) -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '364874');
+  </script>
+  <!-- /footer -->
+  <script>
+    // De index (pagefind/) bouwt tools/zoekindex.py. Resultaten hebben paden vanaf de hoofdmap;
+    // baseUrl maakt ze goed, ook als de site in een submap staat (GitHub Pages).
+    window.addEventListener("DOMContentLoaded", function () {
+      var ui = new PagefindUI({
+        element: "#zoeken",
+        baseUrl: new URL("../", location.href).pathname,
+        showSubResults: true,
+        translations: { placeholder: "Zoek op NijmegenOnline", zero_results: "Niets gevonden voor [SEARCH_TERM]", clear_search: "Wissen" }
+      });
+      var params = new URLSearchParams(location.search);
+      var q = params.get("q");
+      if (q) ui.triggerSearch(q);
+      // zoekterm in de adresbalk bijhouden, zodat terug en delen werken
+      document.querySelector("#zoeken").addEventListener("input", function (e) {
+        if (!e.target.matches("input[type=text], input[type=search]")) return;
+        var term = e.target.value.trim();
+        if (term) params.set("q", term); else params.delete("q");
+        history.replaceState(null, "", location.pathname + (params.toString() ? "?" + params : ""));
+      });
+    });
+  </script>
+</body>
+</html>

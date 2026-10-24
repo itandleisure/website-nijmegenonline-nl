@@ -20,6 +20,8 @@ _redirects            301's van oude WordPress-categoriepagina's (voor Cloudflar
 partials/             gedeelde header, footer en zijbalk
 tools/import_wordpress.py     zet de WordPress-export om naar pagina's
 tools/build.py        zet de onderdelen uit partials/ in alle pagina's
+zoeken/               zoekpagina (Pagefind), het zoekveld in de zijbalk stuurt hierheen
+pagefind/             zoekindex, gebouwd door tools/zoekindex.py (niet met de hand aanpassen)
 robots.txt            blokkeert zoekmachines zolang dit een test is
 .nojekyll             zorgt dat GitHub Pages de bestanden ongewijzigd serveert
 ```
@@ -49,6 +51,19 @@ blijven de partners onderaan in beeld tijdens het scrollen; op mobiel komt hij o
 zonder partners (die staan daar al in de tekst).
 
 Zie [LIVEGANG.md](LIVEGANG.md) voor de stappen naar www.nijmegenonline.nl.
+
+## Zoeken
+
+De zoekpagina `zoeken/` gebruikt [Pagefind](https://pagefind.app): een zoekindex van losse bestanden in `pagefind/`,
+zonder server of database. `tools/build.py` zet `data-pagefind-body` en een filter "soort" (Artikelen, Bedrijvengids,
+Agenda, Nieuws, Gidsen, Vacatures) op elke pagina behalve doorverwijzingen. Zijbalk, kruimelpad, "meer lezen" en
+dergelijke tellen niet mee (zie `pagefind.yml`). De index wordt elke nacht opnieuw gebouwd (Agenda bijwerken) en
+na elke nieuwe aanmelding. Zelf bouwen:
+
+```bash
+pip install "pagefind[bin]"
+python tools/build.py && python tools/zoekindex.py
+```
 
 ## Belangrijk zolang dit een test is
 
