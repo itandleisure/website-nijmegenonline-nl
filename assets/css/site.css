@@ -460,3 +460,15 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 /* Huidige foto bij "Dit is mijn bedrijf" (assets/js/formulier.js) */
 .huidigefoto { display: flex; gap: 12px; align-items: center; margin: 4px 0 8px; font-size: 0.9rem; color: var(--grijs); }
 .huidigefoto img { width: 120px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; flex: none; }
+
+/* Gidsen: carrousel met bedrijven uit de bedrijvengids */
+.gidscarrousel__rij { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 24px) / 3); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-top: 14px; padding-bottom: 4px; }
+.gidscarrousel__rij::-webkit-scrollbar { display: none; }
+.gidscarrousel__rij > .bedrijfkaart { scroll-snap-align: start; }
+.gidscarrousel .bedrijfkaart--uitgelicht { flex-direction: column; }
+.gidscarrousel .bedrijfkaart--uitgelicht img { width: 100%; aspect-ratio: 16 / 9; }
+.gidscarrousel__onder { display: flex; align-items: center; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+.gidscarrousel__onder .knop { margin-left: auto; }
+.gidscarrousel__knop { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--rand); background: var(--wit); color: var(--donkerblauw); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+.gidscarrousel__knop:hover, .gidscarrousel__knop:focus-visible { border-color: var(--groen); color: var(--groen); }
+@media (max-width: 720px) { .gidscarrousel__rij { grid-auto-columns: 85%; } }

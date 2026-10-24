@@ -2625,6 +2625,55 @@ def blog_blokken(cat, alle):
         pad.write_text(tekst, encoding="utf-8")
 
 
+# Gidsen (/thema/...) met een bijbehorende categorie: daar komt een carrousel met bedrijven (besluit Frans, 24-10-2026)
+THEMA = {"massage-nijmegen": "massagesalon", "kappers-in-nijmegen": "kapper", "nagelsalon-in-nijmegen": "nagelsalon",
+         "pedicures-in-nijmegen": "pedicure", "permanente-make-up-in-nijmegen": "permanente-make-up", "museums-nijmegen": "musea",
+         "cafes-in-nijmegen": "cafe", "restaurants-in-nijmegen-restaurant": "restaurant", "bb-nijmegen": "bed-and-breakfast",
+         "campings-in-nijmegen": "camping", "overnachten-in-nijmegen": "hotel", "zaal-huren-in-nijmegen": "zaalverhuur",
+         "fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen": "fotograaf", "cursus-nijmegen": "opleiding-en-training",
+         "winkelen-in-nijmegen": "kledingwinkel"}
+
+
+def thema_blokken(gebouwd, aantal=9):
+    """Een carrousel met bedrijven uit de categorie, in de gids op /thema/<slug>/, tussen <!-- gidsbedrijven --> en
+    <!-- /gidsbedrijven -->. Zijn er partners of betalende bedrijven, dan alleen die; anders elke dag 9 andere
+    bedrijven met een tekst (bij minder dan drie partners: die voorop, aangevuld). Nooit een lange lijst: de rest staat in de bedrijvengids."""
+    per_cat = {cat["slug"]: (cat, gids + overig) for cat, gids, overig in gebouwd}
+    root = "../../"
+    for thema, slug_ in THEMA.items():
+        pad = ROOT / "thema" / thema / "index.html"
+        if not pad.exists() or slug_ not in per_cat:
+            continue
+        cat, alle = per_cat[slug_]
+        betaald = [b for b in alle if b.get("uitgelicht")]
+        kaarten = [uitgelicht_kaart(b, root) for b in betaald[:aantal]]
+        if len(betaald) < 3:
+            # Nog geen drie partners: aanvullen met gratis vermeldingen, de partners blijven vooraan
+            kandidaten = [b for b in alle if not b.get("uitgelicht") and b.get("tekst") and b.get("kenmerken")]
+            random.Random(datetime.date.today().isoformat() + thema).shuffle(kandidaten)
+            kaarten += [gewone_kaart(b, root) for b in kandidaten[:aantal - len(kaarten)]]
+        if not kaarten:
+            continue
+        knoppen = ('<button type="button" class="gidscarrousel__knop" data-richting="-1" aria-label="Vorige">&#8249;</button>'
+                   '<button type="button" class="gidscarrousel__knop" data-richting="1" aria-label="Volgende">&#8250;</button>') if len(kaarten) > 3 else ""
+        blok = ('<section class="gids-sectie gidscarrousel" aria-label="%s in de bedrijvengids"><h2>%s in Nijmegen</h2>'
+                '<div class="gidscarrousel__rij">%s</div><div class="gidscarrousel__onder">%s'
+                '<a class="knop" href="%sbedrijvengids-categorie/%s/">Bekijk alle %d %s</a></div>'
+                '<p class="gidstip__ondernemer">Heb je zelf een %s? <a href="%sadverteren-bij-nijmegenonline/">Kom hier als partner te staan</a>.</p>'
+                '</section><script src="%sassets/js/gidscarrousel.js?v=1" defer></script>'
+                % (esc(cat["naam"]), esc(cat["meervoud"][0].upper() + cat["meervoud"][1:]), "".join(kaarten), knoppen, root,
+                   cat["slug"], len(alle), cat["meervoud"], esc(cat["enkelvoud"].lower()), root, root))
+        tekst = pad.read_text(encoding="utf-8")
+        tekst = re.sub(r"\n?[ \t]*<!-- gidsbedrijven -->.*?<!-- /gidsbedrijven -->", "", tekst, flags=re.S)
+        tekst = re.sub(r'\n?[ \t]*<p class="gids-cta">.*?</p>', "", tekst)   # de oude knop: zit nu in het blok
+        nieuw = "        <!-- gidsbedrijven -->%s<!-- /gidsbedrijven -->\n" % blok
+        if '<section class="gids-sectie faq"' in tekst:
+            tekst = tekst.replace('        <section class="gids-sectie faq"', nieuw + '        <section class="gids-sectie faq"', 1)
+        else:
+            tekst = tekst.replace("      </article>", nieuw + "      </article>", 1)
+        pad.write_text(tekst, encoding="utf-8")
+
+
 def filter_blok(bedrijven, cat):
     """Knoppen om op kenmerk te filteren (assets/js/filter.js); alleen kenmerken die bij minstens twee bedrijven voorkomen."""
     tel = {}
@@ -2864,6 +2913,7 @@ def main(bron):
         json.dumps(alle_vermeldingen, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     schrijf("bedrijvengids", start_pagina(list(groepen.items())))
     homepage_bijwerken(list(groepen.items()))
+    thema_blokken(gebouwd)
     # Pagina's die bij geen enkele categorie meer horen en geen doorverwijzing hebben (bijvoorbeeld een dubbel, of een
     # cafetaria die volgens de scan bij afhaal hoort) haal ik weg; ze zijn nooit als echte vermelding online geweest
     bewaren = {b["slug"] for _, gids, overig in (x for cats in groepen.values() for x in cats) for b in gids + overig}
