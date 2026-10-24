@@ -1,20 +1,46 @@
 <footer>
-  <div class="container">
-    <ul>
-      <li><a href="{{root}}">Home</a></li>
-      <li><a href="{{root}}blog/">Inspiratie opdoen</a></li>
-      <li><a href="{{root}}thema/">Gidsen</a></li>
-      <li><a href="{{root}}bestemmingen/">Bestemmingen</a></li>
-      <li><a href="https://www.nijmegenonline.nl/bedrijvengids/">Bedrijvengids</a></li>
-      <li><a href="https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/">Agenda</a></li>
-      <li><a href="https://www.nijmegenonline.nl/adverteren-bij-nijmegenonline/">Adverteren</a></li>
-      <li><a href="https://www.nijmegenonline.nl/kom-in-contact/">Kom in contact</a></li>
-      <li><a href="https://www.nijmegenonline.nl/algemene-voorwaarden/">Algemene voorwaarden</a></li>
-    </ul>
+  <div class="container voet">
+    <div class="voet__merk">
+      <img src="{{root}}assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104" loading="lazy">
+      <p>Alles over uitgaan, evenementen, nieuws en lokale bedrijven in Nijmegen en omgeving.</p>
+      <!-- opent het pop-upformulier qG49m3 van MailerLite (script hieronder) -->
+      <button type="button" class="knop ml-onclick-form" onclick="ml('show', 'qG49m3', true)">Aanmelden voor de nieuwsbrief</button>
+    </div>
+    <nav aria-label="Ontdekken">
+      <h2>Ontdekken</h2>
+      <ul>
+        <li><a href="https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/">Agenda</a></li>
+        <li><a href="https://www.nijmegenonline.nl/nieuwsberichten/">Nieuws</a></li>
+        <li><a href="{{root}}blog/">Inspiratie opdoen</a></li>
+        <li><a href="{{root}}thema/">Gidsen</a></li>
+        <li><a href="{{root}}bestemmingen/">Bestemmingen</a></li>
+        <li><a href="{{root}}zoeken/">Zoeken</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Voor ondernemers">
+      <h2>Voor ondernemers</h2>
+      <ul>
+        <li><a href="https://www.nijmegenonline.nl/bedrijvengids/">Bedrijvengids</a></li>
+        <li><a href="https://www.nijmegenonline.nl/bedrijf-aanmelden/">Bedrijf aanmelden</a></li>
+        <li><a href="https://www.nijmegenonline.nl/evenement-aanmelden/">Evenement aanmelden</a></li>
+        <li><a href="https://www.nijmegenonline.nl/adverteren-bij-nijmegenonline/">Adverteren</a></li>
+        <li><a href="https://www.nijmegenonline.nl/vacatures/">Vacatures</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Over NijmegenOnline">
+      <h2>Over NijmegenOnline</h2>
+      <ul>
+        <li><a href="https://www.nijmegenonline.nl/kom-in-contact/">Kom in contact</a></li>
+        <li><a href="https://www.nijmegenonline.nl/algemene-voorwaarden/">Algemene voorwaarden</a></li>
+        <li><a href="https://www.nijmegenonline.nl/privacy-policy/">Privacybeleid</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container voet__onder">
     <p>&copy; NijmegenOnline. Testversie, gebouwd vanuit GitHub.</p>
   </div>
 </footer>
-<!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknop in de zijbalk (pop-upformulier qG49m3) -->
+<!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknoppen in de zijbalk en de footer (pop-upformulier qG49m3) -->
 <script>
   (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
   .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,

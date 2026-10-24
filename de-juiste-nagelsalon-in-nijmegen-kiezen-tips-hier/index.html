@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="../assets/css/site.css?v=28">
+  <link rel="stylesheet" href="../assets/css/site.css?v=29">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="../partners/slider.css?v=5">
@@ -40,18 +40,42 @@
     <div class="hoofdbalk">
       <div class="container kop">
         <a class="logo" href="../"><img src="../assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104"></a>
-        <nav class="hoofdmenu" aria-label="Hoofdmenu">
+        <nav class="hoofdmenu" id="hoofdmenu" aria-label="Hoofdmenu">
           <ul>
             <li><a href="../">Home</a></li>
-            <li><a href="../blog/">Inspiratie opdoen</a></li>
-            <li><a href="../thema/">Gidsen</a></li>
-            <li><a href="../bedrijvengids/">Bedrijvengids</a></li>
-            <li><a href="../nijmegen-evenementen-overzicht/">Agenda</a></li>
+            <li><a href="../nijmegen-evenementen-overzicht/" data-paden="nijmegen-evenementen-overzicht/ events/ event-location/ event-directory/ agenda/ jaarlijkse-evenementen/">Agenda</a></li>
+            <li><a href="../nieuwsberichten/" data-paden="nieuwsberichten/ nieuwsoverzicht/">Nieuws</a></li>
+            <li><a href="../blog/" data-paden="blog/ category/">Inspiratie opdoen</a></li>
+            <li><a href="../thema/" data-paden="thema/ bestemmingen/">Gidsen</a></li>
+            <li><a href="../bedrijvengids/" data-paden="bedrijvengids/ bedrijvengids-categorie/ overzicht/ bedrijf-aanmelden/">Bedrijvengids</a></li>
+            <li class="hoofdmenu__extra"><a href="../kom-in-contact/">Kom in contact</a></li>
+            <li class="hoofdmenu__extra"><a href="../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+            <li class="hoofdmenu__extra"><a href="../vacatures/">Vacatures</a></li>
           </ul>
         </nav>
+        <a class="kop__knop" href="../zoeken/" aria-label="Zoeken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></a>
+        <button class="kop__knop kop__menuknop" type="button" aria-expanded="false" aria-controls="hoofdmenu" aria-label="Menu"><svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="dicht" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
       </div>
     </div>
   </header>
+  <script>
+    /* Hoofdmenu: knop op mobiel, en het onderdeel waar je bent krijgt aria-current */
+    (function () {
+      var knop = document.querySelector(".kop__menuknop"), menu = document.getElementById("hoofdmenu");
+      knop.addEventListener("click", function () {
+        var open = knop.getAttribute("aria-expanded") !== "true";
+        knop.setAttribute("aria-expanded", open);
+        menu.classList.toggle("open", open);
+      });
+      var basis = new URL(document.querySelector(".logo").href).pathname;
+      var pad = location.pathname.indexOf(basis) === 0 ? location.pathname.slice(basis.length) : "";
+      menu.querySelectorAll("a").forEach(function (a) {
+        var paden = (a.getAttribute("data-paden") || "").split(" ").filter(Boolean);
+        var hier = a.href.replace(/[?#].*$/, "") === location.href.replace(/[?#].*$/, "").replace(/index\.html$/, "");
+        if (hier || paden.some(function (p) { return pad.indexOf(p) === 0; })) a.setAttribute("aria-current", "page");
+      });
+    })();
+  </script>
   <!-- /header -->
 
   <main class="artikel-wrap" data-pagefind-body data-pagefind-filter="soort:Artikelen">
@@ -196,22 +220,48 @@
 
   <!-- footer -->
   <footer>
-    <div class="container">
-      <ul>
-        <li><a href="../">Home</a></li>
-        <li><a href="../blog/">Inspiratie opdoen</a></li>
-        <li><a href="../thema/">Gidsen</a></li>
-        <li><a href="../bestemmingen/">Bestemmingen</a></li>
-        <li><a href="../bedrijvengids/">Bedrijvengids</a></li>
-        <li><a href="../nijmegen-evenementen-overzicht/">Agenda</a></li>
-        <li><a href="../adverteren-bij-nijmegenonline/">Adverteren</a></li>
-        <li><a href="../kom-in-contact/">Kom in contact</a></li>
-        <li><a href="../algemene-voorwaarden/">Algemene voorwaarden</a></li>
-      </ul>
+    <div class="container voet">
+      <div class="voet__merk">
+        <img src="../assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104" loading="lazy">
+        <p>Alles over uitgaan, evenementen, nieuws en lokale bedrijven in Nijmegen en omgeving.</p>
+        <!-- opent het pop-upformulier qG49m3 van MailerLite (script hieronder) -->
+        <button type="button" class="knop ml-onclick-form" onclick="ml('show', 'qG49m3', true)">Aanmelden voor de nieuwsbrief</button>
+      </div>
+      <nav aria-label="Ontdekken">
+        <h2>Ontdekken</h2>
+        <ul>
+          <li><a href="../nijmegen-evenementen-overzicht/">Agenda</a></li>
+          <li><a href="../nieuwsberichten/">Nieuws</a></li>
+          <li><a href="../blog/">Inspiratie opdoen</a></li>
+          <li><a href="../thema/">Gidsen</a></li>
+          <li><a href="../bestemmingen/">Bestemmingen</a></li>
+          <li><a href="../zoeken/">Zoeken</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Voor ondernemers">
+        <h2>Voor ondernemers</h2>
+        <ul>
+          <li><a href="../bedrijvengids/">Bedrijvengids</a></li>
+          <li><a href="../bedrijf-aanmelden/">Bedrijf aanmelden</a></li>
+          <li><a href="../evenement-aanmelden/">Evenement aanmelden</a></li>
+          <li><a href="../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+          <li><a href="../vacatures/">Vacatures</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Over NijmegenOnline">
+        <h2>Over NijmegenOnline</h2>
+        <ul>
+          <li><a href="../kom-in-contact/">Kom in contact</a></li>
+          <li><a href="../algemene-voorwaarden/">Algemene voorwaarden</a></li>
+          <li><a href="../privacy-policy/">Privacybeleid</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container voet__onder">
       <p>&copy; NijmegenOnline. Testversie, gebouwd vanuit GitHub.</p>
     </div>
   </footer>
-  <!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknop in de zijbalk (pop-upformulier qG49m3) -->
+  <!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknoppen in de zijbalk en de footer (pop-upformulier qG49m3) -->
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,

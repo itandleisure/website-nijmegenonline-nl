@@ -11,15 +11,39 @@
   <div class="hoofdbalk">
     <div class="container kop">
       <a class="logo" href="{{root}}"><img src="{{root}}assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104"></a>
-      <nav class="hoofdmenu" aria-label="Hoofdmenu">
+      <nav class="hoofdmenu" id="hoofdmenu" aria-label="Hoofdmenu">
         <ul>
           <li><a href="{{root}}">Home</a></li>
-          <li><a href="{{root}}blog/">Inspiratie opdoen</a></li>
-          <li><a href="{{root}}thema/">Gidsen</a></li>
-          <li><a href="https://www.nijmegenonline.nl/bedrijvengids/">Bedrijvengids</a></li>
-          <li><a href="https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/">Agenda</a></li>
+          <li><a href="https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/" data-paden="nijmegen-evenementen-overzicht/ events/ event-location/ event-directory/ agenda/ jaarlijkse-evenementen/">Agenda</a></li>
+          <li><a href="https://www.nijmegenonline.nl/nieuwsberichten/" data-paden="nieuwsberichten/ nieuwsoverzicht/">Nieuws</a></li>
+          <li><a href="{{root}}blog/" data-paden="blog/ category/">Inspiratie opdoen</a></li>
+          <li><a href="{{root}}thema/" data-paden="thema/ bestemmingen/">Gidsen</a></li>
+          <li><a href="https://www.nijmegenonline.nl/bedrijvengids/" data-paden="bedrijvengids/ bedrijvengids-categorie/ overzicht/ bedrijf-aanmelden/">Bedrijvengids</a></li>
+          <li class="hoofdmenu__extra"><a href="https://www.nijmegenonline.nl/kom-in-contact/">Kom in contact</a></li>
+          <li class="hoofdmenu__extra"><a href="https://www.nijmegenonline.nl/adverteren-bij-nijmegenonline/">Adverteren</a></li>
+          <li class="hoofdmenu__extra"><a href="https://www.nijmegenonline.nl/vacatures/">Vacatures</a></li>
         </ul>
       </nav>
+      <a class="kop__knop" href="{{root}}zoeken/" aria-label="Zoeken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></a>
+      <button class="kop__knop kop__menuknop" type="button" aria-expanded="false" aria-controls="hoofdmenu" aria-label="Menu"><svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="dicht" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
     </div>
   </div>
 </header>
+<script>
+  /* Hoofdmenu: knop op mobiel, en het onderdeel waar je bent krijgt aria-current */
+  (function () {
+    var knop = document.querySelector(".kop__menuknop"), menu = document.getElementById("hoofdmenu");
+    knop.addEventListener("click", function () {
+      var open = knop.getAttribute("aria-expanded") !== "true";
+      knop.setAttribute("aria-expanded", open);
+      menu.classList.toggle("open", open);
+    });
+    var basis = new URL(document.querySelector(".logo").href).pathname;
+    var pad = location.pathname.indexOf(basis) === 0 ? location.pathname.slice(basis.length) : "";
+    menu.querySelectorAll("a").forEach(function (a) {
+      var paden = (a.getAttribute("data-paden") || "").split(" ").filter(Boolean);
+      var hier = a.href.replace(/[?#].*$/, "") === location.href.replace(/[?#].*$/, "").replace(/index\.html$/, "");
+      if (hier || paden.some(function (p) { return pad.indexOf(p) === 0; })) a.setAttribute("aria-current", "page");
+    });
+  })();
+</script>
