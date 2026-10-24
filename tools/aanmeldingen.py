@@ -88,7 +88,7 @@ def nieuwsbericht(a, berichten):
     tekst = nieuws_html(a.get("omschrijving") or "")
     if not titel or not tekst:
         raise ValueError("titel of tekst ontbreekt")
-    bestaand = {b["slug"] for b in berichten}
+    bestaand = {b["slug"] for b in berichten} | set(nieuws.laad_verwijderd())
     basis = slug(titel)
     s, n = basis, 2
     while s in bestaand:
