@@ -29,4 +29,6 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 4. Hosting naar Cloudflare Pages (die leest `_redirects` voor de 301's van oude categoriepagina's;
    GitHub Pages kan dat niet)
 5. DNS van nijmegenonline.nl naar de nieuwe hosting; WordPress als back-up laten staan
-6. Search Console: nieuwe sitemap indienen, daarna een paar weken 404's in de gaten houden
+6. MailerLite: in de RSS-campagne de feed-adressen veranderen in
+   `https://www.nijmegenonline.nl/nieuwsbrief/agenda.xml` en `.../nieuwsbrief/nieuws.xml`
+7. Search Console: nieuwe sitemap indienen, daarna een paar weken 404's in de gaten houden

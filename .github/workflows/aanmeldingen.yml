@@ -28,7 +28,7 @@ jobs:
       - name: Site bouwen en opslaan
         run: |
           if [ -n "$(git status --porcelain data assets)" ]; then
-            python tools/agenda.py && python tools/bedrijvengids.py && python tools/nieuws.py && python tools/build.py
+            python tools/agenda.py && python tools/bedrijvengids.py && python tools/nieuws.py && python tools/nieuwsbrief.py && python tools/build.py
             git config user.name "agenda-bot"
             git config user.email "agenda-bot@users.noreply.github.com"
             git add -A

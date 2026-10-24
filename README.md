@@ -100,6 +100,13 @@ Volgorde bij een volledige herbouw:
 `python tools/import_wordpress.py && python tools/agenda.py && python tools/afbeeldingen.py && python tools/build.py`.
 De eenmalige import uit WordPress staat in `tools/import_evenementen.py`.
 
+## Nieuwsbrief (MailerLite)
+
+`python tools/nieuwsbrief.py` maakt elke nacht twee RSS-feeds waar MailerLite met een RSS-campagne zelf de
+wekelijkse nieuwsbrief van vult: `/nieuwsbrief/agenda.xml` (evenementen van de komende 9 dagen, uitgelichte
+eerst) en `/nieuwsbrief/nieuws.xml` (nieuwste berichten). De foto's staan als jpg in `assets/nieuwsbrief/`,
+omdat Outlook geen webp toont. Tot de livegang wijzen de feeds naar de testsite.
+
 ## Nieuws
 
 De nieuwsberichten staan in `data/nieuws.json`; `python tools/nieuws.py` bouwt daaruit `/nieuwsoverzicht/<slug>/`,
