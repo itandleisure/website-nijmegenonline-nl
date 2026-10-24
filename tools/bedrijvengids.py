@@ -2454,12 +2454,14 @@ LEAFLET = ('\n  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/l
 def kaart_blok(bedrijven, root, knoppen=False):
     """Kaart met alle bedrijven; bedrijven is een lijst (groep, bedrijf). Met knoppen kun je groepen aan- en uitzetten."""
     groepen = list(dict.fromkeys(g for g, _ in bedrijven))
+    # Betalende bedrijven (partner, uitgelicht) krijgen een grote marker met hun foto, buiten de bolletjes
     punten = [[b["naam"], round(float(b["lat"]), 6), round(float(b["lon"]), 6), "%sbedrijvengids/%s/" % (root, b["slug"]), adresregel(b), g]
+              + ([1, foto_url(b.get("foto") or "", root)] if b.get("uitgelicht") else [])
               for g, b in bedrijven if b["lat"]]
     data = json.dumps({"groepen": groepen, "punten": punten}, ensure_ascii=False).replace("</", "<\\/")
     return ('%s          <div id="gidskaart" class="gidskaart" role="region" aria-label="Kaart met bedrijven"></div>\n'
             '          <script type="application/json" id="kaartdata">%s</script>\n'
-            '          <script src="%sassets/js/kaart.js?v=2" defer></script>'
+            '          <script src="%sassets/js/kaart.js?v=6" defer></script>'
             % ('          <div id="kaartgroepen" class="kaartgroepen"></div>\n' if knoppen else "", data, root))
 
 

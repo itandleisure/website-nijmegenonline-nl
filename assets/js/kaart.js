@@ -18,9 +18,18 @@
     var maat = n < 10 ? 34 : n < 50 ? 42 : 50;
     return L.divIcon({ className: "kaartbol", html: "<span>" + n + "</span>", iconSize: [maat, maat] });
   }
+  // Per groep: de bolletjes met gratis vermeldingen, en daarboven de partners los en groter
+  var bollen = {}, partners = {};
   data.groepen.forEach(function (g) {
-    lagen[g] = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 45, iconCreateFunction: bolletje });
+    bollen[g] = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 45, iconCreateFunction: bolletje });
+    partners[g] = L.layerGroup();
+    lagen[g] = L.layerGroup([bollen[g], partners[g]]);
   });
+  function partnerpunt(p) {
+    var foto = p[7] ? '<img src="' + p[7].replace(/"/g, "&quot;") + '" alt="">' : "";
+    return L.divIcon({ className: "kaartpartner", html: '<span class="kaartpartner__foto">' + foto + '</span><span class="kaartpartner__label">Partner</span>',
+                       iconSize: [56, 70], iconAnchor: [28, 28], popupAnchor: [0, -26] });
+  }
   data.punten.forEach(function (p) {
     var pop = document.createElement("div");
     var a = document.createElement("a");
@@ -28,7 +37,11 @@
     var adres = document.createElement("div");
     adres.textContent = p[4];
     pop.appendChild(a); pop.appendChild(adres);
-    L.marker([p[1], p[2]], { icon: punt, title: p[0] }).bindPopup(pop).addTo(lagen[p[5]]);
+    if (p[6]) {
+      L.marker([p[1], p[2]], { icon: partnerpunt(p), title: p[0], zIndexOffset: 1000 }).bindPopup(pop).addTo(partners[p[5]]);
+    } else {
+      L.marker([p[1], p[2]], { icon: punt, title: p[0] }).bindPopup(pop).addTo(bollen[p[5]]);
+    }
   });
   var knoppen = document.getElementById("kaartgroepen");
   function zet(g, aan) {
@@ -46,7 +59,14 @@
     };
     knoppen.appendChild(b);
   });
-  if (data.punten.length) {
-    kaart.fitBounds(data.punten.map(function (p) { return [p[1], p[2]]; }), { padding: [20, 20], maxZoom: 15 });
+  // Inzoomen op de gemeente Nijmegen: een paar bedrijven ver weg (verhuisd, hoofdkantoor) zouden de kaart anders tot
+  // heel Nederland uitzoomen. Ligt er niets in de gemeente, dan alle punten.
+  var alle = data.punten.map(function (p) { return [p[1], p[2]]; });
+  var dichtbij = alle.filter(function (p) { return p[0] > 51.78 && p[0] < 51.885 && p[1] > 5.74 && p[1] < 5.94; });
+  if (alle.length) {
+    var grenzen = L.latLngBounds(dichtbij.length ? dichtbij : alle);
+    var zoom = Math.min(15, kaart.getBoundsZoom(grenzen, false, L.point(40, 40)));
+    // In de gemeente minstens zoom 12, zodat je de stad ziet en niet de hele regio
+    kaart.setView(grenzen.getCenter(), dichtbij.length ? Math.max(zoom, 12) : zoom);
   }
 })();
