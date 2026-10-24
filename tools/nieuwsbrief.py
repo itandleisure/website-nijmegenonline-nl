@@ -1,8 +1,10 @@
 """Maakt de RSS-feeds waar MailerLite elke week zelf de nieuwsbrief van vult (RSS-campagne).
 
-- /nieuwsbrief/agenda.xml   evenementen van vandaag t/m DAGEN_VOORUIT dagen verder, uitgelichte eerst
-                            (lang lopende alleen in de week dat ze beginnen, behalve uitgelichte)
-- /nieuwsbrief/nieuws.xml   de nieuwste nieuwsberichten
+In de nieuwsbrief in deze volgorde (afgesproken met Frans, 24-10-2026):
+- /nieuwsbrief/uitgelicht.xml  uitgelichte evenementen (klanten) van de komende DAGEN_UITGELICHT dagen, met foto
+- /nieuwsbrief/nieuws.xml      de nieuwste nieuwsberichten, met foto
+- /nieuwsbrief/agenda.xml      de overige (gratis) evenementen van vandaag t/m DAGEN_VOORUIT dagen verder, zonder
+                               foto; lang lopende alleen in de week dat ze beginnen
 
 MailerLite neemt bij elke verzending alleen de items die nieuw zijn sinds de vorige. Bij nieuws is dat
 precies goed (echte publicatiedatum). Een evenement staat vaak meerdere weken in de agenda; daarom krijgt
@@ -37,7 +39,9 @@ import nieuws  # noqa: E402
 
 TESTSITE = "https://itandleisure.github.io/website-nijmegenonline-nl"
 DAGEN_VOORUIT = 9   # verzending op donderdag: t/m het weekend van de week erna
-MAX_EVENEMENTEN = 15
+DAGEN_UITGELICHT = 30   # klanten mogen al eerder in de nieuwsbrief
+MAX_UITGELICHT = 6
+MAX_EVENEMENTEN = 20
 MAX_NIEUWS = 20
 MAP = ROOT / "nieuwsbrief"
 FOTOS = ROOT / "assets" / "nieuwsbrief"
@@ -106,17 +110,25 @@ def main(vandaag):
     gemaakt = set()
 
     evenementen = json.load(open(ROOT / "data" / "evenementen.json", encoding="utf-8"))
-    tot = vandaag + datetime.timedelta(days=DAGEN_VOORUIT)
-    komend = sorted((e for e in evenementen if dag(e, "eind") >= vandaag and dag(e, "start") <= tot and nieuw_genoeg(e, vandaag)),
-                    key=lambda e: (not e["uitgelicht"], max(dag(e, "start"), vandaag), e["start"], e["slug"]))
-    items = []
-    for e in komend[:MAX_EVENEMENTEN]:
-        w = wanneer(e)
-        tekst = "%s, %s. %s" % (w[0].upper() + w[1:], e["locatie"], samenvatting(e["tekst"], 200))
-        foto = jpg(lokaal(e["afbeelding"]), "event-" + e["slug"], url, gemaakt)
-        items.append(item(e["titel"], "%s/events/%s/" % (url, e["slug"]), "%s#%s" % (e["slug"], week), nu, tekst, foto))
-    feed(url, "agenda.xml", "Agenda NijmegenOnline", "Wat er de komende week te doen is in Nijmegen",
-         "%s/nijmegen-evenementen-overzicht/" % url, items, nu)
+
+    def evenementen_feed(naam, titel, beschrijving, tot, selectie, maximum, met_foto):
+        gekozen = sorted((e for e in evenementen if dag(e, "eind") >= vandaag and dag(e, "start") <= tot and selectie(e)),
+                         key=lambda e: (max(dag(e, "start"), vandaag), e["start"], e["slug"]))[:maximum]
+        items = []
+        for e in gekozen:
+            w = wanneer(e)
+            tekst = "%s, %s. %s" % (w[0].upper() + w[1:], e["locatie"], samenvatting(e["tekst"], 200))
+            foto = jpg(lokaal(e["afbeelding"]), "event-" + e["slug"], url, gemaakt) if met_foto else None
+            items.append(item(e["titel"], "%s/events/%s/" % (url, e["slug"]), "%s#%s" % (e["slug"], week), nu, tekst, foto))
+        feed(url, naam, titel, beschrijving, "%s/nijmegen-evenementen-overzicht/" % url, items, nu)
+        return len(gekozen)
+
+    n_uitgelicht = evenementen_feed("uitgelicht.xml", "Uitgelicht in Nijmegen", "Uitgelichte evenementen van onze partners",
+                                    vandaag + datetime.timedelta(days=DAGEN_UITGELICHT), lambda e: e["uitgelicht"],
+                                    MAX_UITGELICHT, True)
+    n_overig = evenementen_feed("agenda.xml", "Agenda NijmegenOnline", "Wat er de komende week nog meer te doen is in Nijmegen",
+                                vandaag + datetime.timedelta(days=DAGEN_VOORUIT),
+                                lambda e: not e["uitgelicht"] and nieuw_genoeg(e, vandaag), MAX_EVENEMENTEN, False)
 
     berichten = sorted(nieuws.laad(), key=lambda b: (b["datum"], b["slug"]), reverse=True)[:MAX_NIEUWS]
     items = []
@@ -131,8 +143,8 @@ def main(vandaag):
     for oud in FOTOS.glob("*.jpg"):
         if oud.name not in gemaakt:
             oud.unlink()
-    print("nieuwsbrief: %d evenementen, %d nieuwsberichten, %d foto's" % (min(len(komend), MAX_EVENEMENTEN),
-                                                                         len(berichten), len(gemaakt)))
+    print("nieuwsbrief: %d uitgelicht, %d overige evenementen, %d nieuwsberichten, %d foto's"
+          % (n_uitgelicht, n_overig, len(berichten), len(gemaakt)))
 
 
 if __name__ == "__main__":
