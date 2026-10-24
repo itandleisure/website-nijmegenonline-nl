@@ -7,5 +7,40 @@
    "restaurant"
   ],
   "_notitie": "partner van NijmegenOnline (partners/partners.json, zonder einddatum); besluit Frans 23-10-2026"
+ },
+ "cafe-t-haantje": {
+  "pakket": "partner",
+  "betaald_tot": "2099-12-31",
+  "_notitie": "partner van NijmegenOnline (partners/partners.json, zonder einddatum); besluit Frans 24-10-2026"
+ },
+ "de-brauerij": {
+  "pakket": "partner",
+  "betaald_tot": "2099-12-31",
+  "_notitie": "partner van NijmegenOnline (partners/partners.json, zonder einddatum); besluit Frans 24-10-2026"
+ },
+ "de-opstap-het-cursuscentrum-in-nijmegen": {
+  "pakket": "partner",
+  "betaald_tot": "2099-12-31",
+  "_notitie": "partner van NijmegenOnline (partners/partners.json, zonder einddatum); besluit Frans 24-10-2026"
+ },
+ "fietsen-op-het-spoor": {
+  "pakket": "partner",
+  "betaald_tot": "2099-12-31",
+  "_notitie": "partner van NijmegenOnline (partners/partners.json, zonder einddatum); besluit Frans 24-10-2026"
+ },
+ "phion-orkest-van-gelderland-overijssel": {
+  "pakket": "partner",
+  "betaald_tot": "2099-12-31",
+  "_notitie": "partner van NijmegenOnline (partners/partners.json, zonder einddatum); besluit Frans 24-10-2026"
+ },
+ "tcn-taxicentrale-nijmegen": {
+  "pakket": "partner",
+  "betaald_tot": "2099-12-31",
+  "_notitie": "partner van NijmegenOnline (partners/partners.json, zonder einddatum); besluit Frans 24-10-2026"
+ },
+ "vrijheidsmuseum": {
+  "pakket": "partner",
+  "betaald_tot": "2099-12-31",
+  "_notitie": "partner van NijmegenOnline (partners/partners.json, zonder einddatum); besluit Frans 24-10-2026"
  }
 }

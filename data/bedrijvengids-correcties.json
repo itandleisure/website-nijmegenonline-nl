@@ -1,5 +1,5 @@
 {
- "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans.",
+ "_uitleg": "Correcties van de redactie op naam, adres en ligging (datacheck 23-10-2026). Overschrijft de gegevens uit de oude gids en OpenStreetMap. extra_vestiging komt als extra regel op de bedrijfspagina. Restaurants: datacheck 23-10-2026, besluit Frans. Zakelijk en diensten: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C zonder adres). Wonen en klussen: datacheck 24-10-2026, besluit Frans (A en B adres van de eigen site, C weg).",
  "the-kettlebell-club": {
   "adres": "Groenestraat 215",
   "postcode": "6531 HH",
@@ -67,5 +67,1112 @@
  "jan-nijmegen": {
   "adres": "Grote Markt 32",
   "postcode": "6511 KB"
+ },
+ "aanpoters-full-service-online-marketingbureau": {
+  "adres": "Groenewoudseweg 322",
+  "plaats": "Nijmegen",
+  "lat": "51.830785",
+  "lon": "5.860246",
+  "postcode": ""
+ },
+ "avs-fieldmarketing": {
+  "geen_adres": true
+ },
+ "bigbridge-b-v": {
+  "adres": "Kerkenbos 1103B",
+  "postcode": "6546 BC",
+  "plaats": "Nijmegen",
+  "lat": "51.826684",
+  "lon": "5.790530"
+ },
+ "bt-communicatie": {
+  "geen_adres": true
+ },
+ "buniq-digital-solutions": {
+  "geen_adres": true
+ },
+ "byte-me-internet-strategie": {
+  "geen_adres": true
+ },
+ "coo-digital-online-marketing-bureau-nijmegen": {
+  "adres": "Oranjesingel 51",
+  "postcode": "6511 PN",
+  "plaats": "Nijmegen",
+  "lat": "51.842446",
+  "lon": "5.866806"
+ },
+ "created": {
+  "geen_adres": true
+ },
+ "dashed-kerkenbos": {
+  "adres": "Bijsterhuizen 4019-022",
+  "postcode": "6604 LW",
+  "plaats": "Wijchen",
+  "lat": "51.823620",
+  "lon": "5.750221"
+ },
+ "dashed-kerkenbos-2": {
+  "adres": "Bijsterhuizen 4019-022",
+  "postcode": "6604 LW",
+  "plaats": "Wijchen",
+  "lat": "51.823620",
+  "lon": "5.750221"
+ },
+ "de-schrijfzolder": {
+  "geen_adres": true
+ },
+ "de-seo-held": {
+  "geen_adres": true
+ },
+ "developers-network": {
+  "geen_adres": true
+ },
+ "dete-communicatie": {
+  "geen_adres": true
+ },
+ "elevel": {
+  "adres": "Berg en Dalseweg 77B",
+  "postcode": "6522 BC",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "firmm-communicatie-ontwerp-onderzoek-training": {
+  "geen_adres": true
+ },
+ "fuel-marketing": {
+  "geen_adres": true
+ },
+ "goeie-zin": {
+  "geen_adres": true
+ },
+ "goodsy-communicatie": {
+  "geen_adres": true
+ },
+ "illuster": {
+  "geen_adres": true
+ },
+ "jemlix": {
+  "geen_adres": true
+ },
+ "joep-communicatie": {
+  "adres": "Kaaisjouwerskade 228",
+  "postcode": "6541 EW",
+  "plaats": "Nijmegen",
+  "lat": "51.850288",
+  "lon": "5.854594"
+ },
+ "joyomedia": {
+  "geen_adres": true
+ },
+ "klik-klaar": {
+  "geen_adres": true
+ },
+ "linku-digital-agency": {
+  "adres": "Sint Canisiussingel 19-G2",
+  "postcode": "6511 TE",
+  "plaats": "Nijmegen",
+  "lat": "51.843547",
+  "lon": "5.870936"
+ },
+ "loop-online": {
+  "geen_adres": true
+ },
+ "magenta-communicatie": {
+  "adres": "Schoolstraat 61",
+  "postcode": "6512 JC",
+  "plaats": "Nijmegen",
+  "lat": "51.837063",
+  "lon": "5.858112"
+ },
+ "marketingkenners": {
+  "adres": "Simon Stevinweg 27",
+  "postcode": "6827 BS",
+  "plaats": "Arnhem",
+  "lat": "51.973312",
+  "lon": "5.943664"
+ },
+ "martijn-vet-teksten-over-mensen-en-techniek": {
+  "adres": "Groesbeekseweg 34b",
+  "postcode": "6524 DC",
+  "plaats": "Nijmegen",
+  "lat": "51.839731",
+  "lon": "5.862691"
+ },
+ "meesters-in-communicatie": {
+  "geen_adres": true
+ },
+ "met-marijn": {
+  "geen_adres": true
+ },
+ "mono-marketing": {
+  "adres": "Staringstraat 1",
+  "postcode": "6511 PC",
+  "plaats": "Nijmegen",
+  "lat": "51.843893",
+  "lon": "5.867592"
+ },
+ "mooi-bekeken-webdesign-en-fotografie": {
+  "geen_adres": true
+ },
+ "ndavr-digital": {
+  "adres": "Huizermaatweg 25-6",
+  "postcode": "1273 NA",
+  "plaats": "Huizen",
+  "lat": "52.298140",
+  "lon": "5.248581"
+ },
+ "nextmessage": {
+  "geen_adres": true
+ },
+ "niro-design-freelance-conversie-specialist": {
+  "geen_adres": true
+ },
+ "onestep-media": {
+  "adres": "Zwanenveld 8403 D",
+  "postcode": "6538 TL",
+  "plaats": "Nijmegen",
+  "lat": "51.823392",
+  "lon": "5.793816"
+ },
+ "ophirah-e-commerce-projecten": {
+  "adres": "Kerkenbos 1063 F",
+  "postcode": "6546 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.824873",
+  "lon": "5.779153"
+ },
+ "plus-one-fieldmarketing": {
+  "geen_adres": true
+ },
+ "poerk-productions": {
+  "geen_adres": true
+ },
+ "prode": {
+  "adres": "Hollandiaweg 1a",
+  "postcode": "6541 BL",
+  "plaats": "Nijmegen",
+  "lat": "51.855087",
+  "lon": "5.835125"
+ },
+ "reclamebureau-vormgave-nijmegen": {
+  "geen_adres": true
+ },
+ "schreursteksten": {
+  "geen_adres": true
+ },
+ "solarsociaal": {
+  "geen_adres": true
+ },
+ "stempl": {
+  "adres": "Weverstraat 16",
+  "postcode": "6663 AX",
+  "plaats": "Lent",
+  "lat": "51.858972",
+  "lon": "5.863749"
+ },
+ "stichting-administratiekantoor-ubachs-full-contact": {
+  "geen_adres": true
+ },
+ "studio-brul": {
+  "adres": "Notenlaantje 16",
+  "postcode": "6663 MG",
+  "plaats": "Lent",
+  "lat": "51.870160",
+  "lon": "5.865390"
+ },
+ "studio-gin": {
+  "adres": "Winselingeseweg 125",
+  "postcode": "6541 AH",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "studiomik": {
+  "adres": "NYMA Makersplaats Unit 59, Winselingseweg 16",
+  "postcode": "6541 AK",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "swipe-media": {
+  "adres": "Kerkenbos 10-37",
+  "postcode": "6546 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.825120",
+  "lon": "5.780018"
+ },
+ "uw-gratis-magazine": {
+  "adres": "D.v. Poldersveldtweg 152",
+  "postcode": "6523 DD",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "van-munster-media-groep": {
+  "geen_adres": true
+ },
+ "waal-webdesign": {
+  "geen_adres": true
+ },
+ "we-are-konzept": {
+  "geen_adres": true
+ },
+ "web-wingmen": {
+  "geen_adres": true
+ },
+ "webbouwers": {
+  "adres": "Jonkerbos 52",
+  "postcode": "6534 AB",
+  "plaats": "Nijmegen",
+  "lat": "51.824542",
+  "lon": "5.825279"
+ },
+ "weejoo": {
+  "adres": "Postbus 1408",
+  "postcode": "6501 BK",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "you-need-somebody": {
+  "geen_adres": true
+ },
+ "zero-creative-the-perfect-presentation": {
+  "adres": "Stationsplein 26",
+  "postcode": "6512 AB",
+  "plaats": "Nijmegen",
+  "lat": "51.842218",
+  "lon": "5.854147"
+ },
+ "de-penningmeestersch-b-v": {
+  "adres": "Kerkenbos 13-30",
+  "postcode": "6546 BG",
+  "plaats": "Nijmegen",
+  "lat": "51.826655",
+  "lon": "5.784657"
+ },
+ "den-heijer-administratie-advies": {
+  "adres": "Kerkenbos 10-21",
+  "postcode": "6546 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.825120",
+  "lon": "5.780018"
+ },
+ "hoefs-belastingadviseur-marie-jose": {
+  "adres": "Elzenstraat 4-A10",
+  "postcode": "6523 EV",
+  "plaats": "Nijmegen",
+  "lat": "51.833455",
+  "lon": "5.883019"
+ },
+ "hofs-fma": {
+  "adres": "Weurtseweg 470a",
+  "postcode": "6541 BE",
+  "plaats": "Nijmegen",
+  "lat": "51.854446",
+  "lon": "5.835724"
+ },
+ "adalet-turk-hukuku-turks-recht-turkse-advocaten": {
+  "adres": "Kerkenbos 1015-F",
+  "postcode": "6546 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.825120",
+  "lon": "5.780018"
+ },
+ "dx-legal": {
+  "adres": "Van Broeckhuysenstraat 50",
+  "postcode": "6511 PK",
+  "plaats": "Nijmegen",
+  "lat": "51.843792",
+  "lon": "5.865828"
+ },
+ "evius-arbeidsrecht-advocaten": {
+  "adres": "Estel Residence, Barbarossastraat 83",
+  "postcode": "6522 DK",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "hekkelman": {
+  "geen_adres": true
+ },
+ "poelmann-van-den-broek-advocaten": {
+  "adres": "Wijchenseweg 10",
+  "postcode": "6537 TL",
+  "plaats": "Nijmegen",
+  "lat": "51.823686",
+  "lon": "5.786415"
+ },
+ "sahin-en-stoetzer-advocaten-laauwikstraat": {
+  "adres": "Theo Dobbestraat 191-193",
+  "postcode": "6663 RJ",
+  "plaats": "Lent",
+  "lat": "51.864897",
+  "lon": "5.855626"
+ },
+ "schade-24": {
+  "adres": "Lange Dreef 11",
+  "postcode": "4131 NJ",
+  "plaats": "Vianen",
+  "lat": "51.983567",
+  "lon": "5.105754"
+ },
+ "scheidingspraktijk-apart-verder": {
+  "adres": "Kerkenbos 1037",
+  "postcode": "6546 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.824949",
+  "lon": "5.780894"
+ },
+ "schroder-law": {
+  "adres": "Postbus 31043",
+  "postcode": "6503 CA",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "stichting-wetswinkel-nijmegen": {
+  "geen_adres": true
+ },
+ "tummers-advocatuur": {
+  "adres": "Kerkenbos 10-33",
+  "postcode": "6546 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.825120",
+  "lon": "5.780018"
+ },
+ "waterdicht-sint-annastraat": {
+  "adres": "Hollandiaweg 1-5",
+  "postcode": "6541 BL",
+  "plaats": "Nijmegen",
+  "lat": "51.856379",
+  "lon": "5.834100"
+ },
+ "dirkzwager-advocaten-notarissen": {
+  "adres": "Velperweg 1",
+  "postcode": "6824 BZ",
+  "plaats": "Arnhem",
+  "lat": "51.985304",
+  "lon": "5.921305"
+ },
+ "damava-financiele-diensten": {
+  "geen_adres": true
+ },
+ "de-hypotheekshop": {
+  "adres": "Staringstraat 11",
+  "plaats": "Nijmegen",
+  "lat": "51.842766",
+  "lon": "5.868305",
+  "postcode": ""
+ },
+ "de-hypotheekshop-nijmegen-annastraat": {
+  "adres": "Sint Annastraat 18",
+  "plaats": "Nijmegen",
+  "lat": "51.840263",
+  "lon": "5.860067",
+  "postcode": ""
+ },
+ "snoeijs-consultants": {
+  "adres": "De Bouwkamp 1C",
+  "postcode": "6576 JX",
+  "plaats": "Ooij",
+  "lat": "51.856854",
+  "lon": "5.948731"
+ },
+ "van-woezik-financieel-advies": {
+  "geen_adres": true
+ },
+ "viisi-nijmegen-hypotheekadvies": {
+  "geen_adres": true
+ },
+ "yvvy-hypotheken": {
+  "geen_adres": true
+ },
+ "arend-verzekeringen-en-hypotheken": {
+  "adres": "Kerkenbos 1002",
+  "postcode": "6546 BA",
+  "plaats": "Nijmegen",
+  "lat": "51.827931",
+  "lon": "5.787795"
+ },
+ "buitenlanddesk": {
+  "adres": "Berg en Dalseweg 101",
+  "postcode": "6522 BC",
+  "plaats": "Nijmegen",
+  "lat": "51.839504",
+  "lon": "5.880187"
+ },
+ "gana-verzekeringsadvies": {
+  "adres": "Berg en Dalseweg 122",
+  "postcode": "6522 BW",
+  "plaats": "Nijmegen",
+  "lat": "51.839746",
+  "lon": "5.878710"
+ },
+ "uwgoedkopeautoverzekering": {
+  "geen_adres": true
+ },
+ "cekaflex-b-v": {
+  "geen_adres": true
+ },
+ "dentalprofs": {
+  "adres": "Weezenhof 6760",
+  "postcode": "6536 BK",
+  "plaats": "Nijmegen",
+  "lat": "51.801488",
+  "lon": "5.816313"
+ },
+ "eventure": {
+  "geen_adres": true
+ },
+ "flexdirect": {
+  "adres": "Nassausingel 4",
+  "postcode": "6511 EV",
+  "plaats": "Nijmegen",
+  "lat": "51.843576",
+  "lon": "5.858931"
+ },
+ "flexis": {
+  "adres": "St. Annastraat 15",
+  "postcode": "6524 EC",
+  "plaats": "Nijmegen",
+  "lat": "51.840017",
+  "lon": "5.860691"
+ },
+ "move-on-recruitment": {
+  "geen_adres": true
+ },
+ "naswerkt-service-kantoor": {
+  "geen_adres": true
+ },
+ "randstad-nijmegen": {
+  "geen_adres": true
+ },
+ "talentvoordocent": {
+  "adres": "Sint Annastraat 198",
+  "postcode": "6525 GX",
+  "plaats": "Nijmegen",
+  "lat": "51.831358",
+  "lon": "5.857955"
+ },
+ "wil-bouwbanen": {
+  "adres": "Streekweg 22",
+  "postcode": "6537 TP",
+  "plaats": "Nijmegen",
+  "lat": "51.814029",
+  "lon": "5.784169"
+ },
+ "zomerwerk": {
+  "geen_adres": true
+ },
+ "jungiaans-instituut": {
+  "adres": "Conferentieoord de Poort, Biesseltsebaan 34",
+  "postcode": "6561 KC",
+  "plaats": "Groesbeek",
+  "lat": "",
+  "lon": ""
+ },
+ "atelier-l-d": {
+  "geen_adres": true
+ },
+ "bijlesnetwerk-archipelstraat": {
+  "geen_adres": true
+ },
+ "bijlesnetwerk-hertogstraat": {
+  "geen_adres": true
+ },
+ "draaikunde": {
+  "geen_adres": true
+ },
+ "hesters-vocals": {
+  "geen_adres": true
+ },
+ "lsa-lingua": {
+  "geen_adres": true
+ },
+ "major7-music-teachers": {
+  "adres": "Noordweg 68",
+  "postcode": "4333 GJ",
+  "plaats": "Middelburg",
+  "lat": "51.507292",
+  "lon": "3.608629"
+ },
+ "mind-eye-power-mep": {
+  "geen_adres": true
+ },
+ "phoc": {
+  "adres": "Splendorfabriek, Gorterplaats 20",
+  "postcode": "6531 HZ",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "pianofluitpraktijk": {
+  "geen_adres": true
+ },
+ "rekenen-remedial-teaching": {
+  "adres": "Groesbeeksedwarsweg 81",
+  "plaats": "Nijmegen",
+  "lat": "51.839351",
+  "lon": "5.871123",
+  "postcode": ""
+ },
+ "stunnenberg-scandinavische-taallessen": {
+  "geen_adres": true
+ },
+ "van-bommel-art-photography": {
+  "geen_adres": true
+ },
+ "volya-ukraine-school": {
+  "adres": "Tarweweg 1F",
+  "plaats": "Nijmegen",
+  "lat": "51.816039",
+  "lon": "5.824231",
+  "postcode": ""
+ },
+ "vrije-academie-nijmegen": {
+  "adres": "Atelier Lent, Vrouwe Udasingel 234",
+  "plaats": "Lent",
+  "postcode": "",
+  "lat": "",
+  "lon": ""
+ },
+ "wp-wolf-wordpress-cursus": {
+  "adres": "Nyma Makersplaats, Winselingseweg 16, Unit 63-65",
+  "postcode": "6541 AK",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "zangstudio-marjolein-kobes": {
+  "adres": "Galloway Recording Studio, De Kolk 1",
+  "postcode": "6541 AV",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "anwb-rijopleiding-nijmegen": {
+  "adres": "Pieter Zeemanstraat 43",
+  "postcode": "6603 AV",
+  "plaats": "Wijchen",
+  "lat": "51.809847",
+  "lon": "5.745496"
+ },
+ "autorijschool-bravo": {
+  "geen_adres": true
+ },
+ "autorijschool-irene": {
+  "geen_adres": true
+ },
+ "rijschool-creatief": {
+  "geen_adres": true
+ },
+ "rijschool-laura-kersten": {
+  "geen_adres": true
+ },
+ "snelgeslaagd": {
+  "adres": "Ambachtsweg 13 G50",
+  "postcode": "6541 DA",
+  "plaats": "Nijmegen",
+  "lat": "51.842643",
+  "lon": "5.820067"
+ },
+ "architectuurfotograaf-merijn-koelink-i-interieurfotograaf-bedrijfsfotografie": {
+  "geen_adres": true
+ },
+ "beata-stawiarska-photography": {
+  "geen_adres": true
+ },
+ "chantal-rieswijk-fotografie": {
+  "geen_adres": true
+ },
+ "filmdok": {
+  "geen_adres": true
+ },
+ "fotografie-benno-neeleman": {
+  "geen_adres": true
+ },
+ "fotografie-eduard-ernst": {
+  "geen_adres": true
+ },
+ "hb-productions": {
+  "geen_adres": true
+ },
+ "henk-braam-fotografie": {
+  "geen_adres": true
+ },
+ "henny-van-roomen-fotografie": {
+  "geen_adres": true
+ },
+ "highvisual-foto-en-video": {
+  "geen_adres": true
+ },
+ "jurriaan-huting": {
+  "geen_adres": true
+ },
+ "karsten-russ-fotografie": {
+  "geen_adres": true
+ },
+ "kip-media": {
+  "geen_adres": true
+ },
+ "kuijpers-fotografie": {
+  "geen_adres": true
+ },
+ "leafsum-fotografie": {
+  "geen_adres": true
+ },
+ "maren-van-der-burght-fotografie": {
+  "geen_adres": true
+ },
+ "noralaine-fotografie-nijmegen": {
+  "geen_adres": true
+ },
+ "paul-breuker-fotografie": {
+  "geen_adres": true
+ },
+ "paul-grefkens-fotografie": {
+  "geen_adres": true
+ },
+ "paulien-varkevisser-fotografie-vormgeving": {
+  "geen_adres": true
+ },
+ "photo-wubben": {
+  "geen_adres": true
+ },
+ "photomarie": {
+  "geen_adres": true
+ },
+ "pics-booths": {
+  "geen_adres": true
+ },
+ "sabrina-wennekes-fotografie": {
+  "geen_adres": true
+ },
+ "sanne-mylene-fotografie": {
+  "geen_adres": true
+ },
+ "studio-puck": {
+  "geen_adres": true
+ },
+ "theo-hafmans-fotografie": {
+  "geen_adres": true
+ },
+ "tubioplan": {
+  "geen_adres": true
+ },
+ "vannagraphs": {
+  "geen_adres": true
+ },
+ "william-moore-fotografie": {
+  "geen_adres": true
+ },
+ "anac-carwash-nijmegen-dukenburg-energieweg": {
+  "geen_adres": true
+ },
+ "apk-station-nijmegen-b-v": {
+  "geen_adres": true
+ },
+ "auto-service-portaal": {
+  "adres": "O.C. Huismanstraat 149",
+  "postcode": "6544 ZT",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "autobedrijf-de-baaij": {
+  "adres": "Aldenhof 11-01",
+  "postcode": "6537 AC",
+  "plaats": "Nijmegen",
+  "lat": "51.807025",
+  "lon": "5.802738"
+ },
+ "autobedrijf-emile-wooninck": {
+  "adres": "Tooropstraat 9",
+  "postcode": "6521 NH",
+  "plaats": "Nijmegen",
+  "lat": "51.837743",
+  "lon": "5.877440"
+ },
+ "autoservice-de-betuwe": {
+  "geen_adres": true
+ },
+ "bert-story-nijmegen": {
+  "adres": "Neerbosscheweg 2",
+  "postcode": "6534 AA",
+  "plaats": "Nijmegen",
+  "lat": "51.826276",
+  "lon": "5.826865"
+ },
+ "bochane": {
+  "geen_adres": true
+ },
+ "car-cleaning-nijmegen": {
+  "adres": "Dr. de Blécourtstraat 98A",
+  "postcode": "6541 DL",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "car2like-rouwenboschweg": {
+  "adres": "Drieskensacker 1119",
+  "postcode": "6546 ME",
+  "plaats": "Nijmegen",
+  "lat": "51.838432",
+  "lon": "5.783745"
+ },
+ "classic-car-detailing": {
+  "geen_adres": true
+ },
+ "clubsport-griftdijk-zuid": {
+  "geen_adres": true
+ },
+ "clubsport-waterstraat": {
+  "geen_adres": true
+ },
+ "dp-engineering": {
+  "geen_adres": true
+ },
+ "gogo-carcleaning": {
+  "geen_adres": true
+ },
+ "hoogsteder-b-v": {
+  "adres": "Dorpstraat 31",
+  "postcode": "6678 BE",
+  "plaats": "Oosterhout",
+  "lat": "",
+  "lon": ""
+ },
+ "jacobs-auto-s": {
+  "adres": "Hogelandseweg 49",
+  "postcode": "6545 AC",
+  "plaats": "Nijmegen",
+  "lat": "51.846414",
+  "lon": "5.799724"
+ },
+ "kwikfit-nijmegen": {
+  "adres": "G. Noodtstraat 2B",
+  "postcode": "6511 SW",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "startenladen-nl": {
+  "geen_adres": true
+ },
+ "theo-zegers-trading": {
+  "adres": "Binderskampweg 29U55",
+  "postcode": "6545 CA",
+  "plaats": "Nijmegen",
+  "lat": "51.845581",
+  "lon": "5.803659"
+ },
+ "t-krumeltje": {
+  "geen_adres": true
+ },
+ "bedrijfsbureau-stichting-soos": {
+  "adres": "Molenveldlaan 128",
+  "postcode": "6523 RN",
+  "plaats": "Nijmegen",
+  "lat": "51.834476",
+  "lon": "5.872251"
+ },
+ "kinderopvang-de-eerste-stap-bij-ons": {
+  "geen_adres": true
+ },
+ "nannies-joulestraat": {
+  "adres": "Postbus 6633",
+  "postcode": "6503 GC",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "nannies-pater-eijmardweg": {
+  "adres": "Postbus 6633",
+  "postcode": "6503 GC",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "nannies-weg-door-jonkerbos": {
+  "adres": "Postbus 6633",
+  "postcode": "6503 GC",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "nannies-nijmegen-goffert": {
+  "adres": "Postbus 6633",
+  "postcode": "6503 GC",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "nannies-oost": {
+  "adres": "Postbus 6633",
+  "postcode": "6503 GC",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "nido-kindvolgende-opvang": {
+  "adres": "Molenveldlaan 128",
+  "postcode": "6523 RN",
+  "plaats": "Nijmegen",
+  "lat": "51.834476",
+  "lon": "5.872251"
+ },
+ "taxi-nijmegen-24": {
+  "adres": "De Steekste acker 1227",
+  "postcode": "6546 DD",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "taxibedrijf-horizon": {
+  "geen_adres": true
+ },
+ "yeller-taxi-nijmegen": {
+  "geen_adres": true
+ },
+ "uitgeleide-afscheid-en-uitvaart": {
+  "geen_adres": true
+ },
+ "limes-uitvaartzorg": {
+  "geen_adres": true
+ },
+ "dream-team-hondentraining": {
+  "geen_adres": true
+ },
+ "happy-feet-hondenuitlaatservice": {
+  "geen_adres": true
+ },
+ "kwiek-kalm": {
+  "geen_adres": true
+ },
+ "pom-trimsalon-nijmegen": {
+  "adres": "st. Agnetenweg 106",
+  "postcode": "6545 AW",
+  "plaats": "Nijmegen",
+  "lat": "51.829273",
+  "lon": "5.799212"
+ },
+ "123bouwplan": {
+  "adres": "Molenweg 182",
+  "postcode": "6543 VJ",
+  "plaats": "Nijmegen",
+  "lat": "51.838116",
+  "lon": "5.834564"
+ },
+ "avs-bouw": {
+  "adres": "De Kluijskamp 11-15",
+  "postcode": "6545 JE",
+  "plaats": "Nijmegen",
+  "lat": "51.829468",
+  "lon": "5.804019"
+ },
+ "badkamer-renovatie-nijmegen": {
+  "adres": "Kwikstaartlaan 42",
+  "postcode": "3704 GS",
+  "plaats": "Zeist",
+  "lat": "52.087843",
+  "lon": "5.209037"
+ },
+ "duurzamer-nederland-b-v": {
+  "adres": "Romeplein 1",
+  "postcode": "6674 AR",
+  "plaats": "Herveld",
+  "lat": "51.909374",
+  "lon": "5.747111"
+ },
+ "gommers": {
+  "adres": "Dr. de Blécourtstraat 59",
+  "postcode": "6541 DG",
+  "plaats": "Nijmegen",
+  "lat": "51.839409",
+  "lon": "5.815472"
+ },
+ "sett-living": {
+  "adres": "Rietgraaf 2A",
+  "postcode": "6678 PJ",
+  "plaats": "Oosterhout",
+  "lat": "51.887238",
+  "lon": "5.811932"
+ },
+ "spara-energy": {
+  "adres": "Bijsterhuizen 1102-G04",
+  "postcode": "6546 AS",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "sultan-bouw": {
+  "adres": "Zwanenveld 3449",
+  "postcode": "6538 ZE",
+  "plaats": "Nijmegen",
+  "lat": "51.819487",
+  "lon": "5.806910"
+ },
+ "van-de-water-bouw-bv": {
+  "adres": "Edisonstraat 18",
+  "plaats": "Wijchen",
+  "postcode": "",
+  "lat": "51.816268",
+  "lon": "5.750507"
+ },
+ "bouma-totaalonderhoud": {
+  "adres": "Molenveldlaan 113",
+  "postcode": "6523 RK",
+  "plaats": "Nijmegen",
+  "lat": "51.832951",
+  "lon": "5.874878"
+ },
+ "de-waal-schilderwerken": {
+  "adres": "De Vlotkampweg 12, 34G",
+  "postcode": "6545 AG",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "kwast-meesters-bv": {
+  "adres": "Julianastraat 155",
+  "postcode": "6707 DD",
+  "plaats": "Wageningen",
+  "lat": "51.972208",
+  "lon": "5.661406"
+ },
+ "looijschilder-schilderwerken": {
+  "adres": "Gouvernante 18",
+  "postcode": "6603 MA",
+  "plaats": "Wijchen",
+  "lat": "51.797522",
+  "lon": "5.745124"
+ },
+ "mhv-schilderwerken": {
+  "adres": "Zuid Oostwal 2",
+  "postcode": "6591 DK",
+  "plaats": "Gennep",
+  "lat": "51.699747",
+  "lon": "5.971122"
+ },
+ "lekdetec": {
+  "adres": "Prof. Molkenboerstraat 22",
+  "postcode": "6524 RP",
+  "plaats": "Nijmegen",
+  "lat": "51.830076",
+  "lon": "5.867960"
+ },
+ "donker-groen": {
+  "adres": "Harste 5",
+  "postcode": "8602 JX",
+  "plaats": "Sneek",
+  "lat": "53.038965",
+  "lon": "5.643220"
+ },
+ "geknipt-voor-uw-tuin": {
+  "adres": "Laauwikstraat 3A",
+  "postcode": "6663 CD",
+  "plaats": "Lent",
+  "lat": "51.863584",
+  "lon": "5.863833"
+ },
+ "hoeneys-houtwerk": {
+  "adres": "Eerste Oude Heselaan 274",
+  "postcode": "6541 PG",
+  "plaats": "Nijmegen",
+  "lat": "51.843788",
+  "lon": "5.849904"
+ },
+ "koppich": {
+  "adres": "Doctor de Blécourtstraat 9",
+  "postcode": "6541 DD",
+  "plaats": "Nijmegen",
+  "lat": "51.838628",
+  "lon": "5.816768"
+ },
+ "koppich-van-welderenstraat": {
+  "adres": "Doctor de Blécourtstraat 9",
+  "postcode": "6541 DD",
+  "plaats": "Nijmegen",
+  "lat": "51.838628",
+  "lon": "5.816768"
+ },
+ "bob-witteveen-makelaardij-petuniastraat": {
+  "adres": "St. Jacobslaan 327",
+  "postcode": "6533 VD",
+  "plaats": "Nijmegen",
+  "lat": "51.816262",
+  "lon": "5.848948"
+ },
+ "driessen-makelaardij": {
+  "adres": "St. Annastraat 18",
+  "postcode": "6524 GC",
+  "plaats": "Nijmegen",
+  "lat": "51.840263",
+  "lon": "5.860067"
+ },
+ "houwen-makelaars": {
+  "adres": "Jan Anne Beijerinckstraat 34",
+  "postcode": "6663 BT",
+  "plaats": "Lent",
+  "lat": "51.859970",
+  "lon": "5.868485"
+ },
+ "luc-beumer-vastgoed": {
+  "adres": "Energieweg 53B, 6541CW",
+  "plaats": "Nijmegen",
+  "postcode": "",
+  "lat": "51.838635",
+  "lon": "5.818831"
+ },
+ "soeteman-makelaars-oranjesingel": {
+  "adres": "Berg en Dalseweg 71",
+  "postcode": "6522 BB",
+  "plaats": "Nijmegen",
+  "lat": "51.841194",
+  "lon": "5.877219"
+ },
+ "bvd-trading": {
+  "adres": "Postbus 31242",
+  "postcode": "6503 CE",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "engelaar-engelaar-dakbedekking": {
+  "adres": "St. Teunismolenweg 48E",
+  "postcode": "6534 AG",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "uwdak-nederland": {
+  "adres": "Jonkersbosplein 52",
+  "postcode": "6534 AB",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
+ },
+ "de-beveiligingswinkel": {
+  "adres": "Dr. de Blécourtstraat 47",
+  "postcode": "6541 DD",
+  "plaats": "Nijmegen",
+  "lat": "51.838918",
+  "lon": "5.816330"
+ },
+ "r-giesen-elektro": {
+  "adres": "Breeacker 1",
+  "postcode": "6678 DG",
+  "plaats": "Oosterhout",
+  "lat": "51.878493",
+  "lon": "5.822929"
+ },
+ "alsec-schoonmaakbedrijf": {
+  "adres": "Kerkenbos 10-18E",
+  "postcode": "6546 BA",
+  "plaats": "Nijmegen",
+  "lat": "",
+  "lon": ""
  }
 }

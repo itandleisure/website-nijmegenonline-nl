@@ -64,12 +64,508 @@ BRONNEN = {
         # In Nederland is een coffeeshop iets anders dan een koffiebar
         "andere_soort": r"coffeeshop|coffee shop|grow|smart ?shop|bakker|bakery|snack|cafetaria|vending|automaat",
     },
+    # Zakelijk en diensten: OpenStreetMap heeft er weinig, Overture is hier de hoofdbron
+    "marketingbureau": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"advertising_agency",
+        "overture": lambda basis, soort: soort in (
+            "marketing_agency", "advertising_agency", "internet_marketing_service", "b2b_marketing_consultant",
+            "b2b_advertising_and_marketing_service", "web_designer"),
+        "soort": "Marketingbureau",
+        "andere_soort": r"drukkerij|print|reclameborden|signing|belettering",
+    },
+    "accountant-boekhouder": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"accountant|tax_advisor",
+        "overture": lambda basis, soort: soort in ("accountant", "bookkeeper", "tax_service"),
+        "soort": "Accountant",
+        "andere_soort": r"hypothe|verzeker|advoca|notari",
+    },
+    "advocatenkantoor": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"lawyer",
+        "overture": lambda basis, soort: soort in ("attorney_or_law_firm", "legal_service", "employment_law", "tax_law", "paralegal_service"),
+        "soort": "Advocaat",
+        "andere_soort": r"notari|deurwaarder|incasso|mediat|vertaal|translat",
+    },
+    "notaris": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"notary",
+        "overture": lambda basis, soort: soort in ("notary_public", "legal_service", "attorney_or_law_firm"),
+        # Overture zet notarissen vaak onder juridische diensten: alleen wie notaris in de naam heeft
+        "naam": r"notari",
+        "soort": "Notaris",
+    },
+    "hypotheekadviseur": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"mortgage|financial_advisor",
+        "overture": lambda basis, soort: soort in ("mortgage_broker", "mortgage_lender", "financial_advising"),
+        "soort": "Hypotheekadviseur",
+        "andere_soort": r"\bbank\b|rabobank|abn ?amro|\bing\b|sns|volksbank|accountant|administratie",
+    },
+    "verzekeraar": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"insurance",
+        "overture": lambda basis, soort: soort in ("insurance_agency", "health_insurance_office", "auto_insurance"),
+        "soort": "Verzekeringen",
+    },
+    "uitzendbureau": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"employment_agency",
+        "overture": lambda basis, soort: soort in ("employment_agency", "b2b_executive_search_consultants"),
+        "soort": "Uitzendbureau",
+        "andere_soort": r"uwv|gemeente|werkplein",
+    },
+    "opleiding-en-training": {
+        "osm": {"Onderwijs en kinderopvang", "Overig"},
+        "osm_sub": r"music_school|language_school|training",
+        "overture": lambda basis, soort: soort in (
+            "tutoring_service", "language_school", "music_school", "photography_class", "art_school", "cooking_school",
+            "computer_school", "business_school", "vocational_school"),
+        "soort": "Opleiding",
+        "andere_soort": r"rijschool|driving|dansschool|basisschool|kinderopvang",
+    },
+    "rijschool": {
+        "osm": {"Onderwijs en kinderopvang"},
+        "osm_sub": r"driving_school",
+        "overture": lambda basis, soort: soort == "driving_school",
+        "soort": "Rijschool",
+    },
+    "fotograaf": {
+        "osm": {"Winkels", "Zakelijke diensten"},
+        "osm_sub": r"^photo",
+        "overture": lambda basis, soort: soort in (
+            "photography_service", "event_photography_service", "video_film_production", "photographer",
+            "wedding_photography", "portrait_studio"),
+        "soort": "Fotograaf",
+        "andere_soort": r"pasfoto|fotowinkel|kodak|hema",
+    },
+    "autobedrijf": {
+        "osm": {"Winkels"},
+        "osm_sub": r"^car(_repair)?$",
+        "overture": lambda basis, soort: soort in (
+            "automotive_repair", "auto_dealer", "used_auto_dealer", "car_dealer", "auto_body_shop", "auto_detailing",
+            "automotive_service", "auto_glass_service", "auto_electrical_repair", "auto_restoration_service", "tire_dealer_and_repair",
+            "tire_shop", "oil_change_station", "car_wash"),
+        "soort": "Autobedrijf",
+        "andere_soort": r"fiets|bike|scooter|motor|camper|caravan|verhuur|rental|lease|taxi",
+    },
+    "kinderopvang": {
+        "osm": {"Onderwijs en kinderopvang"},
+        "osm_sub": r"childcare|kindergarten",
+        "overture": lambda basis, soort: soort in ("child_care_and_day_care", "day_care_preschool", "preschool"),
+        "soort": "Kinderopvang",
+        "andere_soort": r"basisschool|school\b",
+    },
+    "taxi": {
+        "osm": {"Overig"},
+        "osm_sub": r"taxi",
+        "overture": lambda basis, soort: soort in ("taxi_service", "taxi_or_ride_share_service", "limo_service", "airport_shuttle"),
+        "soort": "Taxi",
+    },
+    "begrafenis": {
+        "osm": {"Overig", "Winkels"},
+        "osm_sub": r"funeral",
+        "overture": lambda basis, soort: soort in ("funeral_service", "funeral_home", "cremation_service", "funeral_services_and_cemeteries"),
+        "soort": "Uitvaart",
+    },
+    "hondentraining": {
+        "osm": {"Winkels"},
+        "osm_sub": r"pet_grooming|dog",
+        "overture": lambda basis, soort: soort in (
+            "dog_trainer", "pet_training", "pet_groomer", "pet_boarding", "pet_sitting", "dog_walker", "pet_care_service",
+            "animal_or_pet_service"),
+        "soort": "Hondentraining",
+        "andere_soort": r"dierenarts|dierenkliniek|vet\b|dierenspeciaal|dierenwinkel|pets place|jumper",
+    },
+    # Wonen en klussen
+    "aannemersbedrijf": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"builder|carpenter|construction|handyman",
+        "overture": lambda basis, soort: soort in (
+            "contractor", "building_or_construction_service", "building_contractor", "bathroom_remodeling", "kitchen_remodeling",
+            "flooring_contractor", "carpenter", "handyman", "masonry_concrete", "paving_contractor", "home_service"),
+        "soort": "Aannemer",
+        "andere_soort": r"schilder|stukad|loodgiet|installat|dakdek|elektr|hovenier|tuin|verhuis|schoonma|makelaar",
+    },
+    "schilder": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"painter|plasterer",
+        "overture": lambda basis, soort: soort in ("painting", "plasterer"),
+        "soort": "Schilder",
+        "andere_soort": r"kunst|atelier|art\b|galerie|portret",
+    },
+    "loodgieter": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"plumber|hvac|heating",
+        "overture": lambda basis, soort: soort in ("plumbing", "hvac_service"),
+        "soort": "Loodgieter",
+    },
+    "hovenier": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"gardener|landscap",
+        "overture": lambda basis, soort: soort in ("landscaping", "landscape_architect", "gardener"),
+        "soort": "Hovenier",
+        "andere_soort": r"tuincentrum|kwekerij|intratuin",
+    },
+    "zonnepanelen": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"solar",
+        "overture": lambda basis, soort: soort in ("solar_installation", "solar_energy_equipment_supplier"),
+        "soort": "Zonnepanelen",
+    },
+    "meubelmaker": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"cabinet_maker|joiner|upholster",
+        "overture": lambda basis, soort: soort in ("furniture_manufacturer", "furniture_reupholstery", "furniture_repair", "cabinet_sales_service"),
+        "soort": "Meubelmaker",
+        "andere_soort": r"ikea|leen bakker|kwantum|jysk|xenos|outlet|woonwinkel",
+    },
+    "makelaar": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"estate_agent",
+        "overture": lambda basis, soort: soort in ("real_estate_agent", "real_estate_service", "commercial_real_estate"),
+        "soort": "Makelaar",
+        "andere_soort": r"woningcorporatie|portaal|talis|woonwaarts|standvast|vastgoedbeheer|beleggingen|holding",
+    },
+    "dakdekker": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"roofer",
+        "overture": lambda basis, soort: soort == "roofing",
+        "soort": "Dakdekker",
+    },
+    "slotenmaker": {
+        "osm": {"Zakelijke diensten", "Winkels", "Overig"},
+        "osm_sub": r"locksmith",
+        "overture": lambda basis, soort: soort in ("key_and_locksmith", "home_security"),
+        "soort": "Slotenmaker",
+    },
+    "elektricien": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"electrician",
+        "overture": lambda basis, soort: soort == "electrician",
+        "soort": "Elektricien",
+    },
+    "verhuisbedrijf": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"removal|mover",
+        "overture": lambda basis, soort: soort in ("mover", "moving_company", "furniture_assembly"),
+        "soort": "Verhuisbedrijf",
+    },
+    "schoonmaakbedrijf": {
+        "osm": {"Zakelijke diensten", "Overig"},
+        "osm_sub": r"cleaning|window_clean",
+        "overture": lambda basis, soort: soort in ("cleaning_service", "home_cleaning", "window_washing", "carpet_cleaning", "pest_control_service"),
+        "soort": "Schoonmaak",
+        "andere_soort": r"stomerij|wasserette|dry clean|autowas|car wash",
+    },
+    # Beauty en wellness
+    "kapper": {
+        "osm": {"Kappers en barbers"},
+        "overture": lambda basis, soort: soort in ("hair_salon", "barber", "hair_stylist", "hair_extensions", "hair_replacement"),
+        "soort": "Kapper",
+        "andere_soort": r"haartransplant|kliniek|clinic",
+    },
+    "massagesalon": {
+        "osm": {"Massage, sauna en wellness"},
+        "osm_sub": r"massage",
+        "overture": lambda basis, soort: soort in ("massage_therapy", "massage", "thai_massage", "sports_massage"),
+        "soort": "Massage",
+        "andere_soort": r"erotic|erotisch|tantra|happy end|privehuis|privéhuis",
+    },
+    "wellness": {
+        "osm": {"Massage, sauna en wellness", "Zwembaden"},
+        "osm_sub": r"sauna|spa|wellness",
+        "overture": lambda basis, soort: soort in ("spa", "day_spa", "sauna", "health_spa", "medical_spa", "hammam"),
+        "soort": "Wellness",
+    },
+    "schoonheidssalon": {
+        "osm": {"Beauty en nagels"},
+        "osm_sub": r"beauty|skin_care|cosmetics|tanning",
+        "overture": lambda basis, soort: soort in (
+            "beauty_salon", "skin_care_and_makeup", "skin_care", "eyelash_service", "waxing", "makeup_artist", "tanning_salon",
+            "eyebrow_service", "hair_removal", "laser_hair_removal"),
+        "soort": "Schoonheidssalon",
+    },
+    "nagelsalon": {
+        "osm": {"Beauty en nagels"},
+        "osm_sub": r"nail",
+        "overture": lambda basis, soort: soort == "nail_salon",
+        "soort": "Nagelsalon",
+    },
+    "pedicure": {
+        "osm": {"Zorg", "Beauty en nagels"},
+        "osm_sub": r"podiatrist|pedicure",
+        "overture": lambda basis, soort: soort in ("foot_care", "podiatry", "pedicure"),
+        "soort": "Pedicure",
+    },
+    "tattoo": {
+        "osm": {"Winkels", "Beauty en nagels"},
+        "osm_sub": r"tattoo|piercing",
+        "overture": lambda basis, soort: soort in ("tattoo_and_piercing", "tattoo", "piercing"),
+        "soort": "Tattoo",
+    },
+    "permanente-make-up": {
+        "osm": {"Beauty en nagels"},
+        "osm_sub": r"permanent",
+        "overture": lambda basis, soort: soort in ("permanent_makeup", "microblading", "beauty_salon", "skin_care_and_makeup", "eyebrow_service"),
+        # Overture zet permanente make-up meestal onder beautysalons: dan op de naam
+        "naam": r"permanent|pmu|microblad|brow",
+        "soort": "Permanente make-up",
+    },
+    # Uitgaan en vrije tijd. Bowlen, escape rooms, lasergamen en dergelijke hebben in Nijmegen te weinig bedrijven
+    # voor een eigen pagina; die staan onder Uitjes, met een kenmerk
+    "uitjes": {
+        "osm": {"Uitjes en activiteiten", "Overig"},
+        "osm_sub": r"escape|bowling|amusement|trampoline|track|sports_centre|karaoke|casino|nightclub",
+        "overture": lambda basis, soort: soort in (
+            "escape_room", "bowling_alley", "go_kart_track", "laser_tag", "paintball", "mini_golf", "trampoline_park",
+            "amusement_park", "boat_tour", "tour_operator", "karaoke_venue", "dance_club", "arcade", "axe_throwing",
+            "casino", "bike_tour", "walking_tour", "food_tour", "adventure_sports_center", "indoor_playcenter"),
+        "soort": "Uitje",
+    },
+    "musea": {
+        "osm": {"Musea en cultuur"},
+        "osm_sub": r"museum",
+        "overture": lambda basis, soort: soort in ("museum", "history_museum", "art_museum", "science_museum", "childrens_museum"),
+        "soort": "Museum",
+    },
+    "podia": {
+        "osm": {"Musea en cultuur", "Overig"},
+        "osm_sub": r"theatre|arts_centre|music_venue",
+        "overture": lambda basis, soort: soort in ("theatre_venue", "music_venue", "performing_arts_venue", "cultural_center", "concert_hall", "comedy_club"),
+        "soort": "Podium",
+    },
+    "bioscoop": {
+        "osm": {"Uitjes en activiteiten"},
+        "osm_sub": r"cinema",
+        "overture": lambda basis, soort: soort in ("movie_theater", "cinema", "drive_in_theater"),
+        "soort": "Bioscoop",
+    },
+    "galerie": {
+        "osm": {"Musea en cultuur", "Zakelijke diensten"},
+        "osm_sub": r"gallery|atelier",
+        "overture": lambda basis, soort: soort in ("art_gallery", "artist_studio", "artist", "art_studio"),
+        "soort": "Galerie",
+    },
+    "zaalverhuur": {
+        "osm": {"Overig"},
+        "osm_sub": r"events_venue|conference",
+        "overture": lambda basis, soort: soort in ("event_venue", "wedding_venue", "banquet_hall", "conference_center", "meeting_room"),
+        "soort": "Zaal",
+        "andere_soort": r"kerk|parochie|moskee",
+    },
+    # De rest van Eten en drinken (cocktailbars staan bij de cafés)
+    "bakkerij": {
+        "osm": {"Winkels", "Lunch, koffie en ontbijt"},
+        "osm_sub": r"bakery|pastry|confectionery",
+        "overture": lambda basis, soort: soort in ("bakery", "patisserie_cake_shop", "cupcake_shop", "donut_shop", "chocolatier", "candy_store", "bagel_shop"),
+        "soort": "Bakkerij",
+    },
+    "bierbrouwerij": {
+        "osm": {"Winkels", "Zakelijke diensten"},
+        "osm_sub": r"alcohol|wine|brewery|beverages",
+        "overture": lambda basis, soort: soort in ("brewery", "liquor_store", "beer_wine_spirits_store", "wine_store", "distillery", "winery", "brewpub"),
+        "soort": "Brouwerij",
+        "andere_soort": r"gall ?& ?gall|mitra|supermarkt|albert heijn|jumbo",
+    },
+    "afhaal": {
+        "osm": {"Snelle hap"},
+        "overture": lambda basis, soort: soort in ("fast_food_restaurant", "cafeteria", "food_delivery_service", "food_truck", "fish_and_chips"),
+        "soort": "Snackbar",
+        "andere_soort": r"mcdonald|burger king|kfc|subway|febo|domino|new york pizza|dunkin|starbucks",
+    },
+    "catering": {
+        "osm": {"Zakelijke diensten"},
+        "osm_sub": r"caterer",
+        "overture": lambda basis, soort: soort in ("caterer", "catering", "personal_chef", "food_stand"),
+        "soort": "Catering",
+    },
+    "ijssalon": {
+        "osm": {"IJs"},
+        "overture": lambda basis, soort: soort in ("ice_cream_shop", "frozen_yoghurt_shop", "gelato"),
+        "soort": "IJssalon",
+    },
+    # De rest van Sport. Dansscholen, yoga, pilates en vechtsport staan al in sportscholen-aangevuld.csv (zie tools/bedrijvengids.py)
+    "zwembad": {
+        "osm": {"Zwembaden"},
+        "overture": lambda basis, soort: soort in ("swimming_pool", "swimming_instructor", "water_park", "public_swimming_pool"),
+        "soort": "Zwembad",
+        "andere_soort": r"zwembadshop|poolshop|zwembadbouw|jacuzzi",
+    },
+    "padel": {
+        "osm": {"Padel", "Sportclubs en -accommodaties"},
+        "osm_sub": r"padel|^$|multi|tennis",
+        "overture": lambda basis, soort: soort in ("sport_or_recreation_club", "sports_and_recreation", "sport_or_fitness_facility",
+                                                   "tennis_court", "sports_complex", "padel_court", "racquetball_court"),
+        "naam": r"padel",
+        "soort": "Padel",
+    },
+    "sportvereniging": {
+        "osm": {"Sportclubs en -accommodaties"},
+        "overture": lambda basis, soort: soort in (
+            "sport_league", "sport_or_recreation_club", "sports_and_recreation", "sport_or_fitness_facility", "soccer_club",
+            "tennis_court", "golf_course", "sports_complex", "skate_park", "stadium_arena", "ice_skating_rink", "climbing_gym",
+            "rowing_club", "hockey_club", "athletics_club", "bowling_club", "equestrian_facility", "horse_riding"),
+        "soort": "Sportvereniging",
+        "andere_soort": r"padel|fitness|gym\b|sportschool|yoga|pilates|dans|boks|vechtsport|judo|karate",
+    },
+    # Gezondheid en welzijn
+    "fysiotherapeut": {
+        "osm": {"Zorg"},
+        "osm_sub": r"physiotherap",
+        "overture": lambda basis, soort: soort in ("physical_therapy", "osteopathic_medicine", "chiropractic", "manual_therapy", "sports_medicine"),
+        "soort": "Fysiotherapie",
+    },
+    "dietist": {
+        "osm": {"Zorg"},
+        "osm_sub": r"dietitian|nutrition",
+        "overture": lambda basis, soort: soort in ("nutrition_service", "dietitian", "nutritionist", "weight_loss_center"),
+        "soort": "Diëtist",
+    },
+    "psycholoog": {
+        "osm": {"Zorg"},
+        "osm_sub": r"psychotherapist|psychologist",
+        "overture": lambda basis, soort: soort in ("psychology", "psychotherapy", "behavioral_or_mental_health_clinic", "psychiatrist", "child_psychiatry"),
+        "soort": "Psycholoog",
+    },
+    "coach": {
+        "osm": {"Zorg", "Zakelijke diensten"},
+        "osm_sub": r"counselling|therapist",
+        "overture": lambda basis, soort: soort in ("counseling", "life_coach", "health_coaching", "career_counseling", "hypnotherapy",
+                                                   "meditation_center", "family_counselor", "marriage_or_relationship_counselor"),
+        "soort": "Coach",
+    },
+    "alternatief": {
+        "osm": {"Zorg"},
+        "osm_sub": r"alternative",
+        "overture": lambda basis, soort: soort in ("naturopathic_medicine", "acupuncture", "complementary_and_alternative_medicine",
+                                                   "reiki", "homeopathy", "traditional_chinese_medicine", "ayurveda"),
+        "soort": "Alternatief",
+    },
+    "opticien": {
+        "osm": {"Winkels"},
+        "osm_sub": r"optician",
+        "overture": lambda basis, soort: soort in ("eyewear_store", "optometry", "optician", "contact_lens_store", "hearing_aid_provider"),
+        "soort": "Opticien",
+    },
+    "huisarts": {
+        "osm": {"Zorg"},
+        "osm_sub": r"doctors?$",
+        "overture": lambda basis, soort: soort in ("doctors_office", "family_practice", "general_practitioner", "internal_medicine"),
+        "soort": "Huisarts",
+        "andere_soort": r"ziekenhuis|radboud|cwz|kliniek|clinic|tandarts|dental",
+    },
+    "dierenarts": {
+        "osm": {"Zorg"},
+        "osm_sub": r"veterinary",
+        "overture": lambda basis, soort: soort in ("veterinarian", "animal_hospital", "emergency_pet_hospital"),
+        "soort": "Dierenarts",
+    },
+    "tandarts": {
+        "osm": {"Zorg"},
+        "osm_sub": r"dentist",
+        "overture": lambda basis, soort: soort in ("dental_clinic", "dentist", "orthodontics", "dental_hygienist", "endodontist", "periodontist"),
+        "soort": "Tandarts",
+    },
+    # Overnachten
+    "hotel": {
+        "osm": {"Hotels en overnachten"},
+        "osm_sub": r"hotel|hostel|apartment",
+        "overture": lambda basis, soort: soort in ("hotel", "hostel", "motel", "inn", "lodging", "resort", "serviced_apartment"),
+        "soort": "Hotel",
+        "andere_soort": r"\bb&b\b|bed (and|&) breakfast|bnb|camping",
+    },
+    "bed-and-breakfast": {
+        "osm": {"Hotels en overnachten"},
+        "osm_sub": r"guest_house|chalet",
+        "overture": lambda basis, soort: soort in ("bed_and_breakfast", "guest_house", "holiday_rental_home", "cottage", "vacation_rental_agency"),
+        "soort": "B&B",
+        "andere_soort": r"camping",
+    },
+    "camping": {
+        "osm": {"Campings"},
+        "overture": lambda basis, soort: soort in ("campground", "rv_park", "holiday_park", "glamping_service"),
+        "soort": "Camping",
+    },
+    # Winkelen
+    "kledingwinkel": {
+        "osm": {"Winkels"},
+        "osm_sub": r"clothes|shoes|bag|leather|boutique|fashion",
+        "overture": lambda basis, soort: soort in (
+            "clothing_store", "womens_clothing_store", "mens_clothing_store", "childrens_clothing_store", "shoe_store",
+            "fashion_accessories_store", "fashion_and_apparel_store", "lingerie_store", "designer_clothing", "bridal_shop",
+            "clothing_company", "outdoor_store", "leather_goods_store", "hat_shop"),
+        "soort": "Kledingwinkel",
+        "andere_soort": r"kringloop|vintage|tweedehands|second ?hand",
+    },
+    "tweedehands-winkel": {
+        "osm": {"Winkels"},
+        "osm_sub": r"second_hand|charity|antiques",
+        "overture": lambda basis, soort: soort in ("second_hand_store", "second_hand_clothing_store", "thrift_store", "antique_store", "vintage_store", "consignment_store"),
+        "soort": "Kringloop en vintage",
+    },
+    "woonwinkel": {
+        "osm": {"Winkels"},
+        "osm_sub": r"furniture|interior_decoration|houseware|bed|carpet|curtain|lighting|kitchen|bathroom_furnishing|flooring",
+        "overture": lambda basis, soort: soort in (
+            "furniture_store", "home_goods_store", "carpet_store", "lighting_store", "kitchen_supply_store", "mattress_store",
+            "home_decor", "flooring_store", "bathroom_store", "kitchen_and_bath_store"),
+        "soort": "Woonwinkel",
+    },
+    "juwelier": {
+        "osm": {"Winkels"},
+        "osm_sub": r"jewelry|watches",
+        "overture": lambda basis, soort: soort in ("jewelry_store", "watch_store", "jewelry_manufacturer", "goldsmith"),
+        "soort": "Juwelier",
+    },
+    "bloemist": {
+        "osm": {"Winkels"},
+        "osm_sub": r"florist|garden_centre",
+        "overture": lambda basis, soort: soort in ("florist", "flowers_and_gifts_store", "nursery_and_gardening_store", "garden_center"),
+        "soort": "Bloemist",
+    },
+    "hobbywinkel": {
+        "osm": {"Winkels"},
+        "osm_sub": r"craft|hobby|fabric|sewing|toys|games|music|musical_instrument|art\b|frame|model|video_games|party",
+        "overture": lambda basis, soort: soort in (
+            "arts_crafts_and_hobby_store", "hobby_shop", "fabric_store", "toy_store", "musical_instrument_store",
+            "music_and_dvd_store", "vinyl_record_store", "video_game_store", "comic_books_store", "board_game_store", "knitting_supply_store"),
+        "soort": "Hobbywinkel",
+    },
+    "parfumerie": {
+        "osm": {"Winkels"},
+        "osm_sub": r"perfumery|cosmetics",
+        "overture": lambda basis, soort: soort in ("cosmetics_and_fragrance_store", "perfume_store", "beauty_product_supplier"),
+        "soort": "Parfumerie",
+    },
+    "elektronica": {
+        "osm": {"Winkels"},
+        "osm_sub": r"electronics|computer|mobile_phone|hifi|camera|appliance|telecommunication|repair",
+        "overture": lambda basis, soort: soort in (
+            "electronics_store", "computer_store", "mobile_phone_store", "mobile_phone_repair", "mobile_phone_accessory_store",
+            "appliance_store", "electronics_repair_shop", "camera_store", "audio_visual_equipment_store"),
+        "soort": "Elektronica",
+    },
+    "fietsenwinkel": {
+        "osm": {"Winkels"},
+        "osm_sub": r"bicycle",
+        "overture": lambda basis, soort: soort in ("bike_store", "bike_repair_maintenance", "bicycle_shop", "electric_bike_store"),
+        "soort": "Fietsenwinkel",
+    },
+    "boekhandel": {
+        "osm": {"Winkels"},
+        "osm_sub": r"books|stationery",
+        "overture": lambda basis, soort: soort in ("bookstore", "used_bookstore", "comic_books_store_x"),
+        "soort": "Boekhandel",
+    },
 }
 
 # Een link naar zo'n site is geen eigen website: dan valt het bedrijf af (standaard: geen eigen site = niet in de gids)
 GEEN_EIGEN_SITE = ("facebook.com", "instagram.com", "thuisbezorgd.nl", "tripadvisor", "detelefoongids.nl", "google.com",
                    "goo.gl", "linktr.ee", "ubereats.com", "deliveroo", "iens.nl", "thefork", "eet.nu", "yelp.",
-                   "booking.com", "wix.com/", "telefoonboek.nl", "openingstijden.", "foursquare.com", "zomato.com", "linkedin.com")
+                   "booking.com", "wix.com/", "telefoonboek.nl", "openingstijden.", "foursquare.com", "zomato.com", "linkedin.com",
+                   "twitter.com", "//x.com", "youtube.com", "tiktok.com", "werkzoeken.nl", "indeed.")
 
 KEUKEN = {
     "italian": "Italiaans", "pizza": "Italiaans", "sushi": "Japans", "japanese": "Japans", "chinese": "Chinees",
@@ -181,6 +677,8 @@ def main(categorie, bron):
             continue
         if regels.get("osm_sub") and not re.search(regels["osm_sub"], x["subcategorie"]):
             continue
+        if regels.get("naam") and not re.search(regels["naam"], x["naam"].lower()):
+            continue
         kandidaten.append({"soort": regels["soort"], "naam": x["naam"], "adres": adres(x["adres"]), "postcode": postcode(x["postcode"]),
                            "plaats": x["plaats"] or "Nijmegen", "gemeente": "Nijmegen", "website": x["website"], "telefoon": x["telefoon"],
                            "bron": "OpenStreetMap", "betrouwbaarheid": "", "ook_in_openstreetmap": "ja", "lat": x["lat"], "lon": x["lon"],
@@ -189,6 +687,8 @@ def main(categorie, bron):
     for naam, zeker, sites, tels, adressen, status, basis, soort, lon, lat, dataset in overture_laden(bron):
         a = (adressen or [{}])[0] or {}
         if not naam or (a.get("locality") or "").lower() not in PLAATSEN or not regels["overture"](basis, soort or ""):
+            continue
+        if regels.get("naam") and not re.search(regels["naam"], naam.lower()):
             continue
         kandidaten.append({"soort": regels["soort"], "naam": naam, "adres": adres(a.get("freeform")), "postcode": postcode(a.get("postcode")),
                            "plaats": (a.get("locality") or "").title(), "gemeente": "Nijmegen",

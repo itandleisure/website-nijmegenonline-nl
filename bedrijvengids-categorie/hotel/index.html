@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Hotels in Nijmegen | NijmegenOnline</title>
+  <meta name="description" content="Alle hotels in Nijmegen op de kaart: in het centrum, aan de Waal en net buiten de stad.">
+  <link rel="canonical" href="https://www.nijmegenonline.nl/bedrijvengids-categorie/hotel/">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="Hotels in Nijmegen">
+  <meta property="og:description" content="Alle hotels in Nijmegen op de kaart: in het centrum, aan de Waal en net buiten de stad.">
+  <meta property="og:url" content="https://www.nijmegenonline.nl/bedrijvengids-categorie/hotel/">
+  <meta property="og:site_name" content="NijmegenOnline">
+  <meta property="og:image" content="https://www.nijmegenonline.nl/assets/img/logo-nijmegenonline.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=23">
+  <link rel="stylesheet" href="../../partners/slider.css?v=5">
+  <script src="../../partners/slider.js?v=6" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Hotels in Nijmegen", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Apollo", "url": "https://www.nijmegenonline.nl/bedrijvengids/apollo/"}, {"@type": "ListItem", "position": 2, "name": "Barbarossa Hostel", "url": "https://www.nijmegenonline.nl/bedrijvengids/barbarossa-hostel/"}, {"@type": "ListItem", "position": 3, "name": "Bastion Hotel Nijmegen", "url": "https://www.nijmegenonline.nl/bedrijvengids/bastion-hotel-nijmegen/"}, {"@type": "ListItem", "position": 4, "name": "Boutique Café Hotel Box5", "url": "https://www.nijmegenonline.nl/bedrijvengids/boutique-cafe-hotel-box5/"}, {"@type": "ListItem", "position": 5, "name": "Boutique Hotel Straelman", "url": "https://www.nijmegenonline.nl/bedrijvengids/boutique-hotel-straelman/"}, {"@type": "ListItem", "position": 6, "name": "De Bronzen Koets", "url": "https://www.nijmegenonline.nl/bedrijvengids/de-bronzen-koets-lange-hezelstraat/"}, {"@type": "ListItem", "position": 7, "name": "Guest House Vertoef", "url": "https://www.nijmegenonline.nl/bedrijvengids/guest-house-vertoef/"}, {"@type": "ListItem", "position": 8, "name": "Hotel Blue", "url": "https://www.nijmegenonline.nl/bedrijvengids/hotel-blue/"}, {"@type": "ListItem", "position": 9, "name": "Hotel Courage", "url": "https://www.nijmegenonline.nl/bedrijvengids/hotel-courage/"}, {"@type": "ListItem", "position": 10, "name": "Hotel de Prince", "url": "https://www.nijmegenonline.nl/bedrijvengids/hotel-de-prince-lange-hezelstraat/"}, {"@type": "ListItem", "position": 11, "name": "Hotel La Boutique", "url": "https://www.nijmegenonline.nl/bedrijvengids/hotel-la-boutique/"}, {"@type": "ListItem", "position": 12, "name": "Lino City Hotel", "url": "https://www.nijmegenonline.nl/bedrijvengids/lino-city-hotel/"}, {"@type": "ListItem", "position": 13, "name": "Mercure", "url": "https://www.nijmegenonline.nl/bedrijvengids/mercure/"}, {"@type": "ListItem", "position": 14, "name": "Oranjestaete", "url": "https://www.nijmegenonline.nl/bedrijvengids/oranjestaete/"}, {"@type": "ListItem", "position": 15, "name": "Pauw", "url": "https://www.nijmegenonline.nl/bedrijvengids/pauw/"}, {"@type": "ListItem", "position": 16, "name": "Sanadome Hotel en Spa", "url": "https://www.nijmegenonline.nl/bedrijvengids/sanadome-hotel-en-spa/"}, {"@type": "ListItem", "position": 17, "name": "Van der Valk Hotel", "url": "https://www.nijmegenonline.nl/bedrijvengids/van-der-valk-hotel/"}, {"@type": "ListItem", "position": 18, "name": "Wake And Walk", "url": "https://www.nijmegenonline.nl/bedrijvengids/wake-and-walk/"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Waar overnacht je tijdens de Vierdaagse?", "acceptedAnswer": {"@type": "Answer", "text": "Boek ruim op tijd: in de Vierdaagseweek zitten de meeste hotels maanden vooraf vol."}}, {"@type": "Question", "name": "Is er een hotel met parkeren in het centrum?", "acceptedAnswer": {"@type": "Answer", "text": "Filter op parkeren."}}]}</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" defer></script>
+</head>
+<body>
+  <div class="testbalk">Dit is een testomgeving. De echte pagina staat op <a href="https://www.nijmegenonline.nl/bedrijvengids-categorie/hotel/">www.nijmegenonline.nl</a>.</div>
+
+  <!-- header -->
+  <header>
+    <div class="bovenbalk">
+      <div class="container">
+        <ul>
+          <li><a href="../../kom-in-contact/">Kom in contact</a></li>
+          <li><a href="../../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+          <li><a href="../../vacatures/">Vacatures</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="hoofdbalk">
+      <div class="container kop">
+        <a class="logo" href="../../"><img src="../../assets/img/logo-nijmegenonline.png" alt="NijmegenOnline" width="603" height="120"></a>
+        <nav class="hoofdmenu" aria-label="Hoofdmenu">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../blog/">Inspiratie opdoen</a></li>
+            <li><a href="../../thema/">Gidsen</a></li>
+            <li><a href="../../bedrijvengids/">Bedrijvengids</a></li>
+            <li><a href="../../nijmegen-evenementen-overzicht/">Agenda</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- /header -->
+
+  <main class="artikel-wrap">
+    <div class="container">
+      <div class="artikel-layout">
+      <article class="artikel gids">
+        <div class="kruimelpad"><a href="../../">Home</a> › Bedrijvengids › Hotels in Nijmegen</div>
+        <p class="gidslabel">Bedrijvengids</p>
+        <h1>Hotels in Nijmegen</h1>
+        <div class="inhoud-tekst"><p>Een weekendje weg, een zakenreis of de Vierdaagse lopen: in Nijmegen kun je in het centrum slapen, met uitzicht op de Waal, of net buiten de stad in het groen.</p><p>Op deze pagina vind je alle 18 hotels in Nijmegen, met openingstijden, een eigen pagina en een kaart. Filter hieronder op wat jij belangrijk vindt, zoals centrum, ontbijt of vergaderzaal.</p></div>
+        <section class="gids-sectie" id="uitgelicht">
+          <h2>Uitgelicht</h2>
+          <div class="bedrijflijst bedrijflijst--uitgelicht">
+            <a class="bedrijfkaart bedrijfkaart--uitgelicht" href="../../adverteren-bij-nijmegenonline/" data-kenmerken="ontbijt|centrum"><img src="../../assets/uploads/2022/12/overnachten-in-nijmegen-1-533x400.webp" alt="" loading="lazy"><span class="bedrijfkaart__tekst"><span class="bedrijfkaart__label">Voorbeeld</span><strong>Jouw hotel</strong><span>Uitgelicht staat bovenaan, met foto en actieknop</span><span class="bedrijfkaart__actie">10% korting bij direct boeken</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>centrum</span></span><span class="bedrijfkaart__knop">Bekijk hoe het werkt</span></span></a>
+            <a class="vrijeplek" href="../../bedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=hotel"><strong>Nog 3 plekken vrij</strong><span>Zet jouw hotel hier bovenaan, boven 18 andere hotels. Met foto's, je actie, een eigen knop en je banner bij onze blogs over overnachten.</span><span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>
+          </div>
+        </section>
+        <div class="gidsfilter" id="gidsfilter" data-enkelvoud="hotel" data-meervoud="hotels">
+          <p class="gidsfilter__kop">Waar zoek je naar?</p>
+          <div class="gidsfilter__knoppen"><button type="button" data-kenmerk="centrum" aria-pressed="false">Centrum <span>12</span></button><button type="button" data-kenmerk="ontbijt" aria-pressed="false">Ontbijt <span>11</span></button><button type="button" data-kenmerk="parkeren" aria-pressed="false">Parkeren <span>9</span></button><button type="button" data-kenmerk="groepen" aria-pressed="false">Groepen <span>7</span></button><button type="button" data-kenmerk="restaurant" aria-pressed="false">Restaurant <span>7</span></button><button type="button" data-kenmerk="vergaderzaal" aria-pressed="false">Vergaderzaal <span>5</span></button><button type="button" data-kenmerk="fietsverhuur" aria-pressed="false">Fietsverhuur <span>4</span></button><button type="button" data-kenmerk="laadpaal" aria-pressed="false">Laadpaal <span>3</span></button><button type="button" data-kenmerk="sauna of wellness" aria-pressed="false">Sauna of wellness <span>3</span></button><button type="button" data-kenmerk="rolstoeltoegankelijk" aria-pressed="false">Rolstoeltoegankelijk <span>2</span></button></div>
+          <p class="gidsfilter__uitkomst" aria-live="polite" hidden></p>
+        </div>
+        <script src="../../assets/js/filter.js?v=2" defer></script>
+        <section class="gids-sectie">
+          <h2>Alle hotels in Nijmegen</h2>
+          <div class="bedrijflijst">
+            <a class="bedrijfkaart" href="../../bedrijvengids/apollo/" data-kenmerken="ontbijt|parkeren|centrum"><span class="bedrijfkaart__tekst"><strong>Apollo</strong><span>6511 NA Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>parkeren</span><span>centrum</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/barbarossa-hostel/" data-kenmerken="centrum|groepen"><span class="bedrijfkaart__tekst"><strong>Barbarossa Hostel</strong><span>Sint Anthoniusplaats 14, 6511 TR Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>centrum</span><span>groepen</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/bastion-hotel-nijmegen/" data-kenmerken="ontbijt|restaurant|laadpaal|parkeren"><span class="bedrijfkaart__tekst"><strong>Bastion Hotel Nijmegen</strong><span>Neerbosscheweg 614, 6544 LL Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>restaurant</span><span>laadpaal</span><span>parkeren</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/boutique-cafe-hotel-box5/" data-kenmerken="centrum|groepen"><span class="bedrijfkaart__tekst"><strong>Boutique Café Hotel Box5</strong><span>Van Welderenstraat 120, 6511 MT Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>centrum</span><span>groepen</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/boutique-hotel-straelman/" data-kenmerken="fietsverhuur|parkeren|centrum"><span class="bedrijfkaart__tekst"><strong>Boutique Hotel Straelman</strong><span>Straalmanstraat 28, 6521 JM Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>fietsverhuur</span><span>parkeren</span><span>centrum</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/de-bronzen-koets-lange-hezelstraat/" data-kenmerken="centrum"><span class="bedrijfkaart__tekst"><strong>De Bronzen Koets</strong><span>Lange Hezelstraat 55, 6511 CC Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>centrum</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/guest-house-vertoef/" data-kenmerken="vergaderzaal|rolstoeltoegankelijk|groepen"><span class="bedrijfkaart__tekst"><strong>Guest House Vertoef</strong><span>Nassausingel 3, 6511 EV Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>vergaderzaal</span><span>rolstoeltoegankelijk</span><span>groepen</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/hotel-blue/" data-kenmerken="ontbijt|restaurant|centrum"><span class="bedrijfkaart__tekst"><strong>Hotel Blue</strong><span>Oranjesingel 14-20, 6511 NT Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>restaurant</span><span>centrum</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/hotel-courage/" data-kenmerken="ontbijt|centrum"><span class="bedrijfkaart__tekst"><strong>Hotel Courage</strong><span>Waalkade 108, 6511 XR Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>centrum</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/hotel-de-prince-lange-hezelstraat/" data-kenmerken="ontbijt|centrum"><span class="bedrijfkaart__tekst"><strong>Hotel de Prince</strong><span>Lange Hezelstraat 44, 6511 WT Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>centrum</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/hotel-la-boutique/" data-kenmerken="restaurant|fietsverhuur|parkeren"><span class="bedrijfkaart__tekst"><strong>Hotel La Boutique</strong><span>Van Peltlaan 4, 6533 ZM Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>restaurant</span><span>fietsverhuur</span><span>parkeren</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/lino-city-hotel/" data-kenmerken="restaurant|centrum|parkeren"><span class="bedrijfkaart__tekst"><strong>Lino City Hotel</strong><span>Lange Hezelstraat 78, 6511 CM Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>restaurant</span><span>centrum</span><span>parkeren</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/mercure/" data-kenmerken="ontbijt|sauna of wellness|laadpaal|parkeren|centrum"><span class="bedrijfkaart__tekst"><strong>Mercure</strong><span>van Diemerbroeckstraat 2, 6512 BA Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>sauna of wellness</span><span>laadpaal</span><span>parkeren</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/oranjestaete/" data-kenmerken="ontbijt|fietsverhuur|parkeren|vergaderzaal|centrum|groepen"><span class="bedrijfkaart__tekst"><strong>Oranjestaete</strong><span>Oranjesingel 66, 6511 NZ Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>fietsverhuur</span><span>parkeren</span><span>vergaderzaal</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/pauw/" data-kenmerken="ontbijt|restaurant|vergaderzaal|centrum|groepen"><span class="bedrijfkaart__tekst"><strong>Pauw</strong><span>Grote Markt 38, 6511 KB Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>restaurant</span><span>vergaderzaal</span><span>centrum</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/sanadome-hotel-en-spa/" data-kenmerken="ontbijt|restaurant|vergaderzaal|sauna of wellness|laadpaal|parkeren"><span class="bedrijfkaart__tekst"><strong>Sanadome Hotel en Spa</strong><span>Weg door Jonkerbos 90, 6532 SZ Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>restaurant</span><span>vergaderzaal</span><span>sauna of wellness</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/van-der-valk-hotel/" data-kenmerken="ontbijt|restaurant|vergaderzaal|fietsverhuur|sauna of wellness|parkeren|rolstoeltoegankelijk|groepen"><span class="bedrijfkaart__tekst"><strong>Van der Valk Hotel</strong><span>Hertog Eduardplein 4, 6663 AN Lent</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>restaurant</span><span>vergaderzaal</span><span>fietsverhuur</span></span></span></a>
+            <a class="bedrijfkaart" href="../../bedrijvengids/wake-and-walk/" data-kenmerken="ontbijt|groepen"><span class="bedrijfkaart__tekst"><strong>Wake And Walk</strong><span>Wilhelminasingel 13, 6524 AJ Nijmegen</span><span class="bedrijfkaart__kenmerken"><span>ontbijt</span><span>groepen</span></span></span></a>
+          </div>
+        </section>
+        <div class="partner-slider" data-plaatsing="blog" data-onderwerp="hotel"></div>
+        <section class="gids-sectie">
+          <h2>Op de kaart</h2>
+          <div id="gidskaart" class="gidskaart" role="region" aria-label="Kaart met bedrijven"></div>
+          <script type="application/json" id="kaartdata">{"groepen": ["Overnachten"], "punten": [["Apollo", 51.843072, 5.860188, "../../bedrijvengids/apollo/", "6511 NA Nijmegen", "Overnachten"], ["Barbarossa Hostel", 51.847842, 5.867471, "../../bedrijvengids/barbarossa-hostel/", "Sint Anthoniusplaats 14, 6511 TR Nijmegen", "Overnachten"], ["Bastion Hotel Nijmegen", 51.830738, 5.820951, "../../bedrijvengids/bastion-hotel-nijmegen/", "Neerbosscheweg 614, 6544 LL Nijmegen", "Overnachten"], ["Boutique Café Hotel Box5", 51.843021, 5.861892, "../../bedrijvengids/boutique-cafe-hotel-box5/", "Van Welderenstraat 120, 6511 MT Nijmegen", "Overnachten"], ["Boutique Hotel Straelman", 51.843582, 5.872496, "../../bedrijvengids/boutique-hotel-straelman/", "Straalmanstraat 28, 6521 JM Nijmegen", "Overnachten"], ["De Bronzen Koets", 51.847982, 5.859384, "../../bedrijvengids/de-bronzen-koets-lange-hezelstraat/", "Lange Hezelstraat 55, 6511 CC Nijmegen", "Overnachten"], ["Guest House Vertoef", 51.843539, 5.85753, "../../bedrijvengids/guest-house-vertoef/", "Nassausingel 3, 6511 EV Nijmegen", "Overnachten"], ["Hotel Blue", 51.842323, 5.863478, "../../bedrijvengids/hotel-blue/", "Oranjesingel 14-20, 6511 NT Nijmegen", "Overnachten"], ["Hotel Courage", 51.848553, 5.870146, "../../bedrijvengids/hotel-courage/", "Waalkade 108, 6511 XR Nijmegen", "Overnachten"], ["Hotel de Prince", 51.848145, 5.859655, "../../bedrijvengids/hotel-de-prince-lange-hezelstraat/", "Lange Hezelstraat 44, 6511 WT Nijmegen", "Overnachten"], ["Hotel La Boutique", 51.823212, 5.856035, "../../bedrijvengids/hotel-la-boutique/", "Van Peltlaan 4, 6533 ZM Nijmegen", "Overnachten"], ["Lino City Hotel", 51.848236, 5.858527, "../../bedrijvengids/lino-city-hotel/", "Lange Hezelstraat 78, 6511 CM Nijmegen", "Overnachten"], ["Mercure", 51.842009, 5.852934, "../../bedrijvengids/mercure/", "van Diemerbroeckstraat 2, 6512 BA Nijmegen", "Overnachten"], ["Oranjestaete", 51.84323, 5.867048, "../../bedrijvengids/oranjestaete/", "Oranjesingel 66, 6511 NZ Nijmegen", "Overnachten"], ["Pauw", 51.847464, 5.864582, "../../bedrijvengids/pauw/", "Grote Markt 38, 6511 KB Nijmegen", "Overnachten"], ["Sanadome Hotel en Spa", 51.820496, 5.831972, "../../bedrijvengids/sanadome-hotel-en-spa/", "Weg door Jonkerbos 90, 6532 SZ Nijmegen", "Overnachten"], ["Van der Valk Hotel", 51.862916, 5.860849, "../../bedrijvengids/van-der-valk-hotel/", "Hertog Eduardplein 4, 6663 AN Lent", "Overnachten"], ["Wake And Walk", 51.840805, 5.864231, "../../bedrijvengids/wake-and-walk/", "Wilhelminasingel 13, 6524 AJ Nijmegen", "Overnachten"]]}</script>
+          <script src="../../assets/js/kaart.js?v=2" defer></script>
+        </section>
+        <section class="gids-sectie pakketvergelijk">
+          <h2>Heb je een hotel in Nijmegen?</h2>
+          <p>Elk hotel staat gratis in onze gids. Wil je opvallen tussen 18 hotels? Kies dan voor Uitgelicht of Partner.</p>
+          <div class="tabel-scroll"><table>
+            <thead><tr><th></th><th>Gratis</th><th>Uitgelicht<br><small>&euro; 149 per jaar,<br>eerste jaar &euro; 99</small></th><th>Partner<br><small>&euro; 449 per jaar</small></th></tr></thead>
+            <tbody>
+              <tr><th>Eigen pagina met adres, kaart en openingstijden</th><td class="ja">&#10003;</td><td class="ja">&#10003;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Tekst door onze redactie</th><td>kort</td><td>uitgebreid</td><td>uitgebreid</td></tr>
+              <tr><th>Foto&#x27;s op je eigen pagina</th><td>1</td><td>tot 10</td><td>tot 10</td></tr>
+              <tr><th>Bovenaan deze pagina, met foto en label Uitgelicht</th><td class="nee">&ndash;</td><td class="ja">&#10003;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Actie en eigen knop (kamer boeken, route, bellen)</th><td class="nee">&ndash;</td><td class="ja">&#10003;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Uitgelicht onder onze blogs over overnachten</th><td class="nee">&ndash;</td><td class="ja">&#10003;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Banner in de partnerbalk</th><td class="nee">&ndash;</td><td>bij blogs over overnachten</td><td>op de hele site</td></tr>
+              <tr><th>Artikel over je bedrijf en een plek in de nieuwsbrief</th><td class="nee">&ndash;</td><td class="nee">&ndash;</td><td class="ja">&#10003;</td></tr>
+              <tr><th>Overzicht van weergaven en kliks</th><td>jaarlijks</td><td>jaarlijks</td><td>elk kwartaal</td></tr>
+            </tbody>
+          </table></div>
+          <p class="pakketvergelijk__knoppen"><a class="knop" href="../../bedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=hotel">Kies Uitgelicht</a> <a href="../../adverteren-bij-nijmegenonline/">Alle mogelijkheden</a> &middot; Staat je hotel er al? Klik op je pagina op <em>Dit is mijn bedrijf</em>.</p>
+        </section>
+        <section class="gids-sectie">
+          <h2>Lees ook</h2>
+          <ul>
+            <li><a href="../../wat-zijn-de-mooiste-hotels-in-nijmegen-onze-top-5/">Wat Zijn de Mooiste Hotels in Nijmegen? Onze Top 5</a></li>
+            <li><a href="../../weekendje-nijmegen-hier-kun-je-leuk-overnachten/">Weekendje Nijmegen? Hier Kun je Leuk Overnachten</a></li>
+          </ul>
+        </section>
+        <section class="gids-sectie faq">
+          <h2>Veelgestelde vragen</h2>
+          <details><summary>Waar overnacht je tijdens de Vierdaagse?</summary><p>Boek ruim op tijd: in de Vierdaagseweek zitten de meeste hotels maanden vooraf vol.</p></details>
+          <details><summary>Is er een hotel met parkeren in het centrum?</summary><p>Filter op parkeren.</p></details>
+        </section>
+        <p class="bron">Gegevens: onze eigen gids, aangevuld met © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-bijdragers</a> en Overture Maps.</p>
+      </article>
+
+      <!-- zijbalk -->
+      <aside class="zijbalk" aria-label="Zijbalk">
+        <div class="zijbalk__blok zijbalk__zoeken">
+          <form role="search" method="get" action="https://www.nijmegenonline.nl/">
+            <label for="zoek" class="zijbalk__titel">Zoeken</label>
+            <div class="zoekveld">
+              <input id="zoek" type="search" name="swps" placeholder="Zoek op NijmegenOnline">
+              <button type="submit" aria-label="Zoeken">Zoek</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="zijbalk__blok zijbalk__partners">
+          <div class="partner-slider" data-plaatsing="zijbalk" data-weergave="verticaal" data-per-keer="2"></div>
+        </div>
+
+        <div class="zijbalk__blok">
+          <h2 class="zijbalk__titel">Binnenkort in Nijmegen</h2>
+          <ul class="zijbalk__agenda">
+            <!-- binnenkort -->
+            <li><span class="zijbalk__datum">24 okt, 20.00 uur</span><a href="../../events/sean-taylor/">Sean Taylor</a></li>
+            <li><span class="zijbalk__datum">25 okt, 14.00 uur</span><a href="../../events/highlight-tours-in-het-vrijheidsmuseum-4/">Highlight Tours in het Vrijheidsmuseum</a></li>
+            <li><span class="zijbalk__datum">25 okt, 13.00 uur</span><a href="../../events/uitwisselingsconcert-harmonie-hatert-met-dov-wijchen/">Uitwisselingsconcert Harmonie Hatert met DOV Wijchen</a></li>
+            <!-- /binnenkort -->
+          </ul>
+          <a class="zijbalk__link" href="../../nijmegen-evenementen-overzicht/">Bekijk de hele agenda</a>
+        </div>
+
+        <div class="zijbalk__blok zijbalk__cta">
+          <h2 class="zijbalk__titel">Jouw bedrijf in de bedrijvengids?</h2>
+          <p>Laat Nijmegen zien wat je doet. Aanmelden is eenvoudig.</p>
+          <a class="knop" href="../../bedrijvengids/">Naar de bedrijvengids</a>
+        </div>
+
+        <div class="zijbalk__blok">
+          <h2 class="zijbalk__titel">Partner worden?</h2>
+          <p>Bereik inwoners en bezoekers van Nijmegen met een plek in de partnerslider.</p>
+          <a class="zijbalk__link" href="../../adverteren-bij-nijmegenonline/">Adverteren bij NijmegenOnline</a>
+        </div>
+      </aside>
+      <!-- /zijbalk -->
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <ul>
+        <li><a href="../../">Home</a></li>
+        <li><a href="../../blog/">Inspiratie opdoen</a></li>
+        <li><a href="../../thema/">Gidsen</a></li>
+        <li><a href="../../bestemmingen/">Bestemmingen</a></li>
+        <li><a href="../../bedrijvengids/">Bedrijvengids</a></li>
+        <li><a href="../../nijmegen-evenementen-overzicht/">Agenda</a></li>
+        <li><a href="../../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+        <li><a href="../../kom-in-contact/">Kom in contact</a></li>
+        <li><a href="../../algemene-voorwaarden/">Algemene voorwaarden</a></li>
+      </ul>
+      <p>&copy; NijmegenOnline. Testversie, gebouwd vanuit GitHub.</p>
+    </div>
+  </footer>
+  <!-- /footer -->
+</body>
+</html>
