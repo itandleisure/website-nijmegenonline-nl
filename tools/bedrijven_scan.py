@@ -32,6 +32,7 @@ import anthropic
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 UIT = ROOT / "data" / "bedrijvengids-scan.json"
+BATCH = ROOT / "data" / "bedrijvengids-batch.json"   # een batch die nog loopt
 MODEL = "claude-opus-5-5"
 
 # Vaste lijst (zie advies/bedrijvengids-categorieen.md); Claude kiest alleen hieruit
@@ -531,6 +532,8 @@ def te_scannen(categorie, scan, opnieuw, alleen):
 def main(argv):
     # Eén of meer categorieën, met komma's: "advocatenkantoor,notaris"
     categorieen = next((a for a in argv if not a.startswith("--")), "sportschool").replace(" ", "").split(",")
+    if categorieen == ["ophalen"]:  # alleen een batch afmaken die nog openstaat
+        argv, categorieen = argv + ["--ophalen"], []
     opnieuw = "--opnieuw" in argv
     maximum = int(argv[argv.index("--max") + 1]) if "--max" in argv else 999
     alleen = set(argv[argv.index("--alleen") + 1].replace(",", " ").split()) if "--alleen" in argv and argv[argv.index("--alleen") + 1] else set()
@@ -572,6 +575,56 @@ def main(argv):
             uit = {"status": "fout", "fout": str(fout)[:300]}
         opslaan(b, categorie, uit)
 
+    def batch_verwerken(batch_id, lijst):
+        """Haalt de uitkomst van een batch op. Een batch duurt soms langer dan de 6 uur van een GitHub-run: dan blijft
+        hij in data/bedrijvengids-batch.json staan en haalt de volgende run (--ophalen) hem op."""
+        einde = time.time() + 60 * int(argv[argv.index("--wachten") + 1] if "--wachten" in argv else 300)
+        batch = client.messages.batches.retrieve(batch_id)
+        while batch.processing_status != "ended":
+            if time.time() > einde:
+                print("batch %s is nog bezig; later ophalen met --ophalen" % batch_id, flush=True)
+                return False
+            time.sleep(60)
+            batch = client.messages.batches.retrieve(batch_id)
+            print("batch %s: %d bezig, %d klaar" % (batch.id, batch.request_counts.processing, batch.request_counts.succeeded), flush=True)
+        per_id = {x["custom_id"]: x for x in lijst}
+        opnieuw_los = []
+        for r in client.messages.batches.results(batch_id):
+            x = per_id.get(r.custom_id)
+            if not x:
+                continue
+            gids = alle_bedrijven.get(x["slug"])
+            if not gids:
+                continue
+            try:
+                if r.result.type != "succeeded":
+                    raise RuntimeError(r.result.type)
+                uit = uitlezen(r.result.message)
+                uit["batch"] = True
+                if x.get("zelf_gelezen"):
+                    uit["bronnen"], uit["zelf_gelezen"] = x.get("bronnen") or [], True
+            except Exception:
+                opnieuw_los.append((gids, x["categorie"]))
+                continue
+            opslaan(gids, x["categorie"], uit)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+            list(pool.map(scan_een, opnieuw_los))
+        print("Klaar: %d in de batch, %d daarna los" % (len(lijst), len(opnieuw_los)))
+        return True
+
+    gids_alle = json.loads((ROOT / "data" / "bedrijvengids.json").read_text(encoding="utf-8"))
+    alle_bedrijven = {b["slug"]: b for c in gids_alle.values() for b in c["gids"] + c["overig"]}
+    if BATCH.exists():
+        # Eerst een batch die nog openstaat afmaken; die bedrijven niet nog een keer scannen
+        open_batch = json.loads(BATCH.read_text(encoding="utf-8"))
+        if not batch_verwerken(open_batch["id"], open_batch["verzoeken"]):
+            return
+        BATCH.unlink()
+        al = {x["slug"] for x in open_batch["verzoeken"]}
+        te_doen = [(b, c) for b, c in te_doen if b["slug"] not in al]
+    if "--ophalen" in argv:
+        return
+
     if "--batch" in argv:
         # Goedkoper (zie de README): eerst lezen we de sites zelf, dan gaat alles in één batch (50% korting).
         # Zelf lezen scheelt veel tokens, omdat alleen de platte tekst meegaat. Sites die we niet kunnen lezen
@@ -583,31 +636,13 @@ def main(argv):
         verzoeken = [{"custom_id": "b%d" % i, "params": verzoek(b, categorie, tekst)}
                      for i, ((b, categorie), (tekst, _)) in enumerate(zip(te_doen, gelezen))]
         print("%d bedrijven, %d zelf gelezen" % (len(te_doen), sum(1 for t, _ in gelezen if t)), flush=True)
-        opnieuw_los = []
         if verzoeken:
             batch = client.messages.batches.create(requests=verzoeken)
-            while batch.processing_status != "ended":
-                time.sleep(60)
-                batch = client.messages.batches.retrieve(batch.id)
-                print("batch %s: %d bezig, %d klaar" % (batch.id, batch.request_counts.processing, batch.request_counts.succeeded), flush=True)
-            for r in client.messages.batches.results(batch.id):
-                i = int(r.custom_id[1:])
-                b, categorie = te_doen[i]
-                tekst, bronnen = gelezen[i]
-                try:
-                    if r.result.type != "succeeded":
-                        raise RuntimeError(r.result.type)
-                    uit = uitlezen(r.result.message)
-                    uit["batch"] = True
-                    if tekst:
-                        uit["bronnen"], uit["zelf_gelezen"] = bronnen, True
-                except Exception:
-                    opnieuw_los.append((b, categorie))
-                    continue
-                opslaan(b, categorie, uit)
-        with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-            list(pool.map(scan_een, opnieuw_los))
-        print("Klaar: %d in de batch, %d daarna los" % (len(verzoeken), len(opnieuw_los)))
+            lijst = [{"custom_id": "b%d" % i, "slug": b["slug"], "categorie": categorie, "zelf_gelezen": bool(tekst), "bronnen": bronnen}
+                     for i, ((b, categorie), (tekst, bronnen)) in enumerate(zip(te_doen, gelezen))]
+            BATCH.write_text(json.dumps({"id": batch.id, "verzoeken": lijst}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            if batch_verwerken(batch.id, lijst):
+                BATCH.unlink()
         return
 
     # Een paar sites tegelijk: één site lezen duurt al snel een halve minuut
