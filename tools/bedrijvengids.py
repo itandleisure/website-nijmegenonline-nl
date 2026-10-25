@@ -2795,6 +2795,13 @@ OUDE_CATEGORIE_NAAR = {"kringloopcentra": "tweedehands-winkel", "vakantiepark": 
                        "keuken-en-sanitair-winkel": "aannemersbedrijf", "interieuradvies-ontwerp-styling": "woonwinkel"}
 # Voor bedrijven uit de oude gids zonder passende categorie: de startpagina van de gids
 GIDS = {"slug": None, "naam": "Bedrijvengids", "pad": "bedrijvengids"}
+# Zwervers met een beter doel dan hun categorie: hetzelfde bedrijf onder een nieuwe slug, of een bestemmingspagina
+ZWERVER_DOEL = {
+    "betaalbare-badkamers-nl": {"naam": "Betaalbare Badkamers", "pad": "bedrijvengids/betaalbare-badkamers-bv-nijmegen"},
+    "toeristeninformatie-kleve": {"naam": "Kleef", "pad": "bestemmingen/kleve"},
+}
+# Gevonden zwervers, zodat de nachtelijke herbouw (zonder de WordPress-export) hun doorverwijzingen niet kwijtraakt
+ZWERVERS_JSON = ROOT / "data" / "bedrijvengids-zwervers.json"
 
 
 def cat_pad(cat):
@@ -2820,6 +2827,11 @@ def schrijf_redirects(weg, oude_categorieen):
     regels = ["# bedrijvengids (tools/bedrijvengids.py)"]
     regels += ["/bedrijvengids/%s/ /%s/ 301" % (b["slug"], cat_pad(cat)) for b, cat in sorted(weg, key=lambda x: x[0]["slug"])]
     regels += ["/bedrijvengids-categorie/%s/ /bedrijvengids-categorie/%s/ 301" % x for x in oude_categorieen]
+    # Listdom had ook /listdom-category/<oud>/; wat geen nieuwe categorie heeft, gaat naar de startpagina van de gids
+    listdom = {oud: cat_pad(cat) for cat in CATEGORIEEN for oud in cat["listdom"] | {cat["slug"]}}
+    listdom.update((oud, "bedrijvengids-categorie/%s" % nieuw) for oud, nieuw in OUDE_CATEGORIE_NAAR.items() if oud not in listdom)
+    regels += ["/listdom-category/%s/ /%s/ 301" % x for x in sorted(listdom.items())]
+    regels.append("/listdom-category/* /bedrijvengids/ 301")
     pad.write_text("\n".join(x for x in (kop_, "\n".join(regels), agenda.rstrip("\n")) if x) + "\n", encoding="utf-8")
 
 
@@ -2944,7 +2956,13 @@ def main(bron):
         groepen.setdefault(cat["groep"], []).append((cat, gids, overig + extra))
     if xml_.exists():
         pad.write_text(json.dumps(opgeslagen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-        for b, cat in zwervers(xml_, {b["slug"] for _, g, o in gebouwd for b in g + o} | {b["slug"] for b, _ in alle_weg}, scan):
+        ZWERVERS_JSON.write_text(json.dumps([{"slug": b["slug"], "naam": b["naam"], "doel": {"naam": cat["naam"], "pad": cat_pad(cat)}}
+                                             for b, cat in zwervers(xml_, set(), scan)], ensure_ascii=False, indent=1) + "\n",
+                                 encoding="utf-8")
+    bekend = {b["slug"] for _, g, o in gebouwd for b in g + o} | {b["slug"] for b, _ in alle_weg}
+    for z in json.loads(ZWERVERS_JSON.read_text(encoding="utf-8")) if ZWERVERS_JSON.exists() else []:
+        if z["slug"] not in bekend:
+            b, cat = {"slug": z["slug"], "naam": z["naam"]}, ZWERVER_DOEL.get(z["slug"], z["doel"])
             doorverwijzen(b, cat)
             alle_weg.append((b, cat))
     schrijf_redirects(alle_weg, [(oud, cat["slug"]) for cat in CATEGORIEEN for oud in sorted(cat["listdom"]) if oud != cat["slug"]])

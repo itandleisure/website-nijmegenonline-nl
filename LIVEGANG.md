@@ -18,6 +18,10 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 - [x] Afbeeldingen van `wp-content/uploads` staan als webp in `assets/uploads/` (`tools/afbeeldingen.py`);
       `tools/build.py` laat de pagina's ernaar wijzen. Nieuwe pagina's: eerst afbeeldingen downloaden, dan dit script
 - [ ] Partnerslider, zijbalk en formulieren getest op desktop en mobiel
+- [ ] `_redirects` telt ruim 3.100 regels; Cloudflare Pages leest er maximaal 2.100 (2.000 vaste en 100 met `*`).
+      De grootste blokken zijn `# bedrijvengids` (ruim 1.550; de meeste zijn bedrijven die nooit op de live site stonden en dus geen doorverwijzing nodig hebben) en
+      `# agenda` (ruim 750, afgelopen evenementen). Oplossing kiezen vóór de livegang: een deel in Cloudflare Bulk
+      Redirects zetten, of de doorverwijzingen van pagina's zonder bezoekers of backlinks laten vallen
 - [ ] Alle URL's uit de huidige sitemap en paginalijst geven 200 of een bedoelde 301 (paginalijst gecontroleerd op
       24-10-2026; oude pagina's die niet terugkomen staan in `data/oude-paginas.csv`)
 - [x] Google Analytics-code (zelfde Google-tag `GT-5R43F82` als WordPress, GA4-property 337370292) in elke pagina via
@@ -33,7 +37,7 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 1. `python tools/build.py --live`: haalt de testbalk en `noindex` weg en zet robots.txt open
 2. In `404.html` de verwijzingen `/website-nijmegenonline-nl/` vervangen door `/`
 3. Sitemap controleren: `sitemap.xml` wordt door `tools/build.py` gemaakt. Pagina's die nog op WordPress staan (bedrijvengids, agenda, nieuws) komen erin zodra ze hier gebouwd zijn
-4. Hosting naar Cloudflare Pages (die leest `_redirects` voor de 301's van oude categoriepagina's;
+4. Hosting naar Cloudflare Pages (die leest `_redirects` voor de 301's van oude pagina's, ook die uit Rank Math;
    GitHub Pages kan dat niet)
 5. DNS van nijmegenonline.nl naar de nieuwe hosting; WordPress als back-up laten staan
 6. MailerLite: in de RSS-campagne de feed-adressen veranderen in

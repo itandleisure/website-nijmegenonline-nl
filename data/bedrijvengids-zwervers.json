@@ -1,0 +1,674 @@
+[
+ {
+  "slug": "t-lichteraan-open-atelier",
+  "naam": "’t Lichteraan Open Atelier",
+  "doel": {
+   "naam": "Kunstgaleries en ateliers in Nijmegen",
+   "pad": "bedrijvengids-categorie/galerie"
+  }
+ },
+ {
+  "slug": "vrijheidsmuseum",
+  "naam": "Vrijheidsmuseum",
+  "doel": {
+   "naam": "Musea in Nijmegen",
+   "pad": "bedrijvengids-categorie/musea"
+  }
+ },
+ {
+  "slug": "de-bastei",
+  "naam": "De Bastei",
+  "doel": {
+   "naam": "Musea in Nijmegen",
+   "pad": "bedrijvengids-categorie/musea"
+  }
+ },
+ {
+  "slug": "eetbar-mikmak",
+  "naam": "Eetbar MikMak",
+  "doel": {
+   "naam": "Restaurants in Nijmegen",
+   "pad": "bedrijvengids-categorie/restaurant"
+  }
+ },
+ {
+  "slug": "tcn-taxicentrale-nijmegen",
+  "naam": "TCN Taxicentrale Nijmegen",
+  "doel": {
+   "naam": "Taxi in Nijmegen",
+   "pad": "bedrijvengids-categorie/taxi"
+  }
+ },
+ {
+  "slug": "cafe-t-haantje",
+  "naam": "Café ’t Haantje",
+  "doel": {
+   "naam": "Cafés en kroegen in Nijmegen",
+   "pad": "bedrijvengids-categorie/cafe"
+  }
+ },
+ {
+  "slug": "de-bruijn-lunchen-op-de-markt",
+  "naam": "De Bruijn Lunchen op de Markt",
+  "doel": {
+   "naam": "Lunchrooms en ontbijt in Nijmegen",
+   "pad": "bedrijvengids-categorie/lunch"
+  }
+ },
+ {
+  "slug": "danscentrum-vermeulen",
+  "naam": "Danscentrum Vermeulen",
+  "doel": {
+   "naam": "Dansscholen in Nijmegen",
+   "pad": "bedrijvengids-categorie/dansschool"
+  }
+ },
+ {
+  "slug": "chipclean",
+  "naam": "Chipclean",
+  "doel": {
+   "naam": "Fotografen en videografen in Nijmegen",
+   "pad": "bedrijvengids-categorie/fotograaf"
+  }
+ },
+ {
+  "slug": "lindenberg-cultuurhuis",
+  "naam": "Lindenberg Cultuurhuis",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "de-opstap-het-cursuscentrum-in-nijmegen",
+  "naam": "De Opstap - Het cursuscentrum in Nijmegen",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "fietsen-op-het-spoor",
+  "naam": "Fietsen op het Spoor",
+  "doel": {
+   "naam": "Uitjes en activiteiten in Nijmegen",
+   "pad": "bedrijvengids-categorie/uitjes"
+  }
+ },
+ {
+  "slug": "toeristeninformatie-kleve",
+  "naam": "Toeristeninformatie Kleve",
+  "doel": {
+   "naam": "Bedrijvengids",
+   "pad": "bedrijvengids"
+  }
+ },
+ {
+  "slug": "phion-orkest-van-gelderland-overijssel",
+  "naam": "Phion - Orkest van Gelderland & Overijssel",
+  "doel": {
+   "naam": "Theaters en poppodia in Nijmegen",
+   "pad": "bedrijvengids-categorie/podia"
+  }
+ },
+ {
+  "slug": "jungiaans-instituut",
+  "naam": "Jungiaans Instituut",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "strandpaviljoen-dushi",
+  "naam": "Strandpaviljoen Dushi",
+  "doel": {
+   "naam": "Restaurants in Nijmegen",
+   "pad": "bedrijvengids-categorie/restaurant"
+  }
+ },
+ {
+  "slug": "spirototaal",
+  "naam": "Spirototaal",
+  "doel": {
+   "naam": "Loodgieters en installateurs in Nijmegen",
+   "pad": "bedrijvengids-categorie/loodgieter"
+  }
+ },
+ {
+  "slug": "de-pannenkoekenboot",
+  "naam": "De Pannenkoekenboot",
+  "doel": {
+   "naam": "Restaurants in Nijmegen",
+   "pad": "bedrijvengids-categorie/restaurant"
+  }
+ },
+ {
+  "slug": "grand-cafe-de-waterwolf",
+  "naam": "Grand café de Waterwolf",
+  "doel": {
+   "naam": "Restaurants in Nijmegen",
+   "pad": "bedrijvengids-categorie/restaurant"
+  }
+ },
+ {
+  "slug": "harbor-gym",
+  "naam": "Harbor Gym",
+  "doel": {
+   "naam": "Sportscholen in Nijmegen",
+   "pad": "bedrijvengids-categorie/sportschool"
+  }
+ },
+ {
+  "slug": "modelspoorwebshop-nl",
+  "naam": "ModelSpoorWebshop.nl",
+  "doel": {
+   "naam": "Hobby- en speelgoedwinkels in Nijmegen",
+   "pad": "bedrijvengids-categorie/hobbywinkel"
+  }
+ },
+ {
+  "slug": "bhalu-nijmegen",
+  "naam": "Bhalu Nijmegen",
+  "doel": {
+   "naam": "Restaurants in Nijmegen",
+   "pad": "bedrijvengids-categorie/restaurant"
+  }
+ },
+ {
+  "slug": "cultuur-academy",
+  "naam": "Cultuur Academy",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "voor-positiviteit",
+  "naam": "Voor Positiviteit",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "pizzeria-cafetaria-emmis",
+  "naam": "Pizzeria Cafetaria Emmis",
+  "doel": {
+   "naam": "Snackbars en afhaal in Nijmegen",
+   "pad": "bedrijvengids-categorie/afhaal"
+  }
+ },
+ {
+  "slug": "praktijk-voor-acupunctuur-en-tuina-massage",
+  "naam": "Praktijk voor Acupunctuur en Tuina massage",
+  "doel": {
+   "naam": "Alternatieve geneeswijzen in Nijmegen",
+   "pad": "bedrijvengids-categorie/alternatief"
+  }
+ },
+ {
+  "slug": "moment",
+  "naam": "Moment",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "rox-escape-experience",
+  "naam": "ROX Escape Experience",
+  "doel": {
+   "naam": "Uitjes en activiteiten in Nijmegen",
+   "pad": "bedrijvengids-categorie/uitjes"
+  }
+ },
+ {
+  "slug": "adhd-coaching-nijmegen",
+  "naam": "ADHD Coaching Nijmegen",
+  "doel": {
+   "naam": "Coaches en therapeuten in Nijmegen",
+   "pad": "bedrijvengids-categorie/coach"
+  }
+ },
+ {
+  "slug": "computerkruis",
+  "naam": "Computerkruis",
+  "doel": {
+   "naam": "Autobedrijven en garages in Nijmegen",
+   "pad": "bedrijvengids-categorie/autobedrijf"
+  }
+ },
+ {
+  "slug": "de-4-heeren",
+  "naam": "De 4 Heeren",
+  "doel": {
+   "naam": "Restaurants in Nijmegen",
+   "pad": "bedrijvengids-categorie/restaurant"
+  }
+ },
+ {
+  "slug": "restaurant-groenewoud",
+  "naam": "Restaurant Groenewoud",
+  "doel": {
+   "naam": "Restaurants in Nijmegen",
+   "pad": "bedrijvengids-categorie/restaurant"
+  }
+ },
+ {
+  "slug": "helios-red-light-therapy",
+  "naam": "Helios Red Light Therapy",
+  "doel": {
+   "naam": "Bedrijvengids",
+   "pad": "bedrijvengids"
+  }
+ },
+ {
+  "slug": "gunpowder-communicatie-en-mediastrategie",
+  "naam": "Gunpowder communicatie- en mediastrategie",
+  "doel": {
+   "naam": "Marketing-, reclame- en webbureaus in Nijmegen",
+   "pad": "bedrijvengids-categorie/marketingbureau"
+  }
+ },
+ {
+  "slug": "wave",
+  "naam": "Wave",
+  "doel": {
+   "naam": "Massage en wellness in Nijmegen",
+   "pad": "bedrijvengids-categorie/massagesalon"
+  }
+ },
+ {
+  "slug": "praktijk-stille-kracht",
+  "naam": "Praktijk Stille Kracht",
+  "doel": {
+   "naam": "Massage en wellness in Nijmegen",
+   "pad": "bedrijvengids-categorie/massagesalon"
+  }
+ },
+ {
+  "slug": "vakantiepark-de-oude-molen",
+  "naam": "Vakantiepark de Oude Molen",
+  "doel": {
+   "naam": "Campings in Nijmegen",
+   "pad": "bedrijvengids-categorie/camping"
+  }
+ },
+ {
+  "slug": "aula-taleninstituut-nijmegen",
+  "naam": "Aula Taleninstituut Nijmegen",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "uitgeleide-afscheid-en-uitvaart",
+  "naam": "Uitgeleide | Afscheid en Uitvaart",
+  "doel": {
+   "naam": "Uitvaart in Nijmegen",
+   "pad": "bedrijvengids-categorie/begrafenis"
+  }
+ },
+ {
+  "slug": "my-dear-beer-bv",
+  "naam": "My Dear Beer BV",
+  "doel": {
+   "naam": "Brouwerijen en slijterijen in Nijmegen",
+   "pad": "bedrijvengids-categorie/bierbrouwerij"
+  }
+ },
+ {
+  "slug": "william-smulders",
+  "naam": "William Smulders - Zanger & Gitarist",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "kapsalon-williams-grey",
+  "naam": "Kapsalon Williams & Grey",
+  "doel": {
+   "naam": "Kappers en barbers in Nijmegen",
+   "pad": "bedrijvengids-categorie/kapper"
+  }
+ },
+ {
+  "slug": "weerlekkeraanhetwerk",
+  "naam": "weerlekkeraanhetwerk",
+  "doel": {
+   "naam": "Coaches en therapeuten in Nijmegen",
+   "pad": "bedrijvengids-categorie/coach"
+  }
+ },
+ {
+  "slug": "on-radar",
+  "naam": "On Radar",
+  "doel": {
+   "naam": "Marketing-, reclame- en webbureaus in Nijmegen",
+   "pad": "bedrijvengids-categorie/marketingbureau"
+  }
+ },
+ {
+  "slug": "t-biermenneke",
+  "naam": "'t Biermenneke",
+  "doel": {
+   "naam": "Brouwerijen en slijterijen in Nijmegen",
+   "pad": "bedrijvengids-categorie/bierbrouwerij"
+  }
+ },
+ {
+  "slug": "cafe-samson-vof",
+  "naam": "Cafe Samson VOF",
+  "doel": {
+   "naam": "Cafés en kroegen in Nijmegen",
+   "pad": "bedrijvengids-categorie/cafe"
+  }
+ },
+ {
+  "slug": "betaalbare-badkamers-nl",
+  "naam": "Betaalbare-badkamers.nl",
+  "doel": {
+   "naam": "Aannemers en verbouw in Nijmegen",
+   "pad": "bedrijvengids-categorie/aannemersbedrijf"
+  }
+ },
+ {
+  "slug": "the-nail-art-club",
+  "naam": "The Nail Art Club",
+  "doel": {
+   "naam": "Nagelsalons in Nijmegen",
+   "pad": "bedrijvengids-categorie/nagelsalon"
+  }
+ },
+ {
+  "slug": "stichting-overal",
+  "naam": "Stichting Overal",
+  "doel": {
+   "naam": "Kringloop- en vintagewinkels in Nijmegen",
+   "pad": "bedrijvengids-categorie/tweedehands-winkel"
+  }
+ },
+ {
+  "slug": "kapper-kuif-zegt-u-het-maar",
+  "naam": "Kapper Kuif \"zegt u het maar!",
+  "doel": {
+   "naam": "Kappers en barbers in Nijmegen",
+   "pad": "bedrijvengids-categorie/kapper"
+  }
+ },
+ {
+  "slug": "maxstudios",
+  "naam": "MaxStudios",
+  "doel": {
+   "naam": "Dansscholen in Nijmegen",
+   "pad": "bedrijvengids-categorie/dansschool"
+  }
+ },
+ {
+  "slug": "verhip-vintage",
+  "naam": "Verhip-vintage",
+  "doel": {
+   "naam": "Kringloop- en vintagewinkels in Nijmegen",
+   "pad": "bedrijvengids-categorie/tweedehands-winkel"
+  }
+ },
+ {
+  "slug": "salon-flor",
+  "naam": "Salon Flor",
+  "doel": {
+   "naam": "Kappers en barbers in Nijmegen",
+   "pad": "bedrijvengids-categorie/kapper"
+  }
+ },
+ {
+  "slug": "used-products-nijmegen",
+  "naam": "Used Products Nijmegen",
+  "doel": {
+   "naam": "Kringloop- en vintagewinkels in Nijmegen",
+   "pad": "bedrijvengids-categorie/tweedehands-winkel"
+  }
+ },
+ {
+  "slug": "colora-wijchen",
+  "naam": "Colora Wijchen",
+  "doel": {
+   "naam": "Woonwinkels in Nijmegen",
+   "pad": "bedrijvengids-categorie/woonwinkel"
+  }
+ },
+ {
+  "slug": "wennekers-wonen",
+  "naam": "Wennekers Wonen",
+  "doel": {
+   "naam": "Woonwinkels in Nijmegen",
+   "pad": "bedrijvengids-categorie/woonwinkel"
+  }
+ },
+ {
+  "slug": "pittig-bakkie",
+  "naam": "Pittig Bakkie",
+  "doel": {
+   "naam": "Marketing-, reclame- en webbureaus in Nijmegen",
+   "pad": "bedrijvengids-categorie/marketingbureau"
+  }
+ },
+ {
+  "slug": "cafe-waalzicht",
+  "naam": "Café Waalzicht",
+  "doel": {
+   "naam": "Cafés en kroegen in Nijmegen",
+   "pad": "bedrijvengids-categorie/cafe"
+  }
+ },
+ {
+  "slug": "vianova-coaching",
+  "naam": "ViaNova coaching",
+  "doel": {
+   "naam": "Coaches en therapeuten in Nijmegen",
+   "pad": "bedrijvengids-categorie/coach"
+  }
+ },
+ {
+  "slug": "zaadel-makerij",
+  "naam": "ZaadeL Makerij",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "de-gezonde-studente",
+  "naam": "De Gezonde Studente",
+  "doel": {
+   "naam": "Marketing-, reclame- en webbureaus in Nijmegen",
+   "pad": "bedrijvengids-categorie/marketingbureau"
+  }
+ },
+ {
+  "slug": "huid-atelier",
+  "naam": "Huid Atelier",
+  "doel": {
+   "naam": "Schoonheidssalons in Nijmegen",
+   "pad": "bedrijvengids-categorie/schoonheidssalon"
+  }
+ },
+ {
+  "slug": "van-eigen-deeg",
+  "naam": "Van Eigen Deeg",
+  "doel": {
+   "naam": "Bakkerijen en patisserie in Nijmegen",
+   "pad": "bedrijvengids-categorie/bakkerij"
+  }
+ },
+ {
+  "slug": "sussies-vintage",
+  "naam": "Sussies Vintage",
+  "doel": {
+   "naam": "Kledingwinkels in Nijmegen",
+   "pad": "bedrijvengids-categorie/kledingwinkel"
+  }
+ },
+ {
+  "slug": "doppio-nijmegen",
+  "naam": "Doppio Nijmegen",
+  "doel": {
+   "naam": "Restaurants in Nijmegen",
+   "pad": "bedrijvengids-categorie/restaurant"
+  }
+ },
+ {
+  "slug": "perry-ubeda-weerbaarheidscentrum",
+  "naam": "Perry Ubeda Weerbaarheidscentrum",
+  "doel": {
+   "naam": "Vechtsport in Nijmegen",
+   "pad": "bedrijvengids-categorie/vechtsport"
+  }
+ },
+ {
+  "slug": "restaurant-de-hemel",
+  "naam": "Restaurant de Hemel",
+  "doel": {
+   "naam": "Restaurants in Nijmegen",
+   "pad": "bedrijvengids-categorie/restaurant"
+  }
+ },
+ {
+  "slug": "bloemings-atelier",
+  "naam": "Bloemings Atelier",
+  "doel": {
+   "naam": "Bloemisten in Nijmegen",
+   "pad": "bedrijvengids-categorie/bloemist"
+  }
+ },
+ {
+  "slug": "lunch-cafe-wijck",
+  "naam": "Lunch Café Wijck",
+  "doel": {
+   "naam": "Lunchrooms en ontbijt in Nijmegen",
+   "pad": "bedrijvengids-categorie/lunch"
+  }
+ },
+ {
+  "slug": "maxflex-uitzendbureau",
+  "naam": "Maxflex Uitzendbureau",
+  "doel": {
+   "naam": "Uitzendbureaus in Nijmegen",
+   "pad": "bedrijvengids-categorie/uitzendbureau"
+  }
+ },
+ {
+  "slug": "van-benthum-ontwerp",
+  "naam": "Van Benthum ontwerp",
+  "doel": {
+   "naam": "Woonwinkels in Nijmegen",
+   "pad": "bedrijvengids-categorie/woonwinkel"
+  }
+ },
+ {
+  "slug": "ampire-vastgoedgroep",
+  "naam": "Ampire Vastgoedgroep",
+  "doel": {
+   "naam": "Makelaars in Nijmegen",
+   "pad": "bedrijvengids-categorie/makelaar"
+  }
+ },
+ {
+  "slug": "zlim-nijmegen",
+  "naam": "Zlim Nijmegen",
+  "doel": {
+   "naam": "Diëtisten en voedingsadvies in Nijmegen",
+   "pad": "bedrijvengids-categorie/dietist"
+  }
+ },
+ {
+  "slug": "kolmeijer-nijmegen",
+  "naam": "Kolmeijer Nijmegen",
+  "doel": {
+   "naam": "Makelaars in Nijmegen",
+   "pad": "bedrijvengids-categorie/makelaar"
+  }
+ },
+ {
+  "slug": "de-brauerij",
+  "naam": "De Brauerij",
+  "doel": {
+   "naam": "Zalen en locaties in Nijmegen",
+   "pad": "bedrijvengids-categorie/zaalverhuur"
+  }
+ },
+ {
+  "slug": "stadsetrots",
+  "naam": "Stadsetrots",
+  "doel": {
+   "naam": "Marketing-, reclame- en webbureaus in Nijmegen",
+   "pad": "bedrijvengids-categorie/marketingbureau"
+  }
+ },
+ {
+  "slug": "studio-huidbalans",
+  "naam": "Studio Huidbalans",
+  "doel": {
+   "naam": "Schoonheidssalons in Nijmegen",
+   "pad": "bedrijvengids-categorie/schoonheidssalon"
+  }
+ },
+ {
+  "slug": "gravestein-stoffering",
+  "naam": "Gravestein Stoffering",
+  "doel": {
+   "naam": "Meubelmakers in Nijmegen",
+   "pad": "bedrijvengids-categorie/meubelmaker"
+  }
+ },
+ {
+  "slug": "maison-nijmegen",
+  "naam": "Maison Nijmegen",
+  "doel": {
+   "naam": "Meubelmakers in Nijmegen",
+   "pad": "bedrijvengids-categorie/meubelmaker"
+  }
+ },
+ {
+  "slug": "wijs-coaching",
+  "naam": "Wijs Coaching",
+  "doel": {
+   "naam": "Coaches en therapeuten in Nijmegen",
+   "pad": "bedrijvengids-categorie/coach"
+  }
+ },
+ {
+  "slug": "nicks-relaxmassages",
+  "naam": "Nick's Relaxmassages",
+  "doel": {
+   "naam": "Massage en wellness in Nijmegen",
+   "pad": "bedrijvengids-categorie/massagesalon"
+  }
+ },
+ {
+  "slug": "vanetie-fotografie",
+  "naam": "Vanetie Fotografie",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "fotowandeling-nijmegen",
+  "naam": "Fotowandeling Nijmegen",
+  "doel": {
+   "naam": "Cursussen en opleidingen in Nijmegen",
+   "pad": "bedrijvengids-categorie/opleiding-en-training"
+  }
+ },
+ {
+  "slug": "sanacount-accountants-advisers-bv",
+  "naam": "Sanacount Accountants & Advisers BV",
+  "doel": {
+   "naam": "Accountants en boekhouders in Nijmegen",
+   "pad": "bedrijvengids-categorie/accountant-boekhouder"
+  }
+ }
+]
