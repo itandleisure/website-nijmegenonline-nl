@@ -692,22 +692,32 @@ def bestemming_pagina(b, content, per_slug):
     return "\n".join(out)
 
 
+# Eigen pagina's die ook op het bestemmingenoverzicht horen (geen WordPress-bestemming): groep -> (pad, naam, foto)
+EXTRA_BESTEMMINGEN = {
+    "Wijken in Nijmegen": [("lent-nijmegen", "Lent", "assets/uploads/2026/06/Oversteek-brug-1200x800.webp")],
+    "Natuur rond Nijmegen": [("ooijpolder", "Ooijpolder", "assets/uploads/2022/09/Ooijpolder-in-nijmegen.webp"),
+                             ("mookerheide", "Mookerheide", "assets/uploads/2023/07/mookerheide-groesbeek.webp")],
+}
+
+
 def bestemmingen_overzicht(fotos):
     root = "../"
     canonical = SITE + "/bestemmingen/"
     out = [kop("Bestemmingen rond Nijmegen: dorpen, steden en wijken",
-               "Op pad rond Nijmegen? Ontdek Groesbeek, Wijchen, Berg en Dal, Kleef, Kranenburg, Goch en meer plaatsen in de regio, plus de wijk Dukenburg.",
+               "Op pad rond Nijmegen? Ontdek Groesbeek, Wijchen, Berg en Dal, Kleef, Kranenburg, Goch en meer plaatsen in de regio, de wijken Dukenburg en Lent en natuur zoals de Ooijpolder.",
                canonical, root, next(iter(fotos.values()), None))]
     out.append('  <main class="artikel-wrap">\n    <div class="container">')
     out.append('      <div class="kruimelpad"><a href="../">Home</a> › Bestemmingen</div>')
-    out.append('      <header class="rubriek-kop">\n        <h1>Bestemmingen rond Nijmegen</h1>\n        <p>Net buiten de stad liggen mooie dorpen en stadjes, in Nederland en net over de grens in Duitsland. Tips voor een dagje uit, plus alles over de wijken van Nijmegen.</p>\n      </header>')
-    for groep in ("Plaatsen rond Nijmegen", "Wijken in Nijmegen"):
+    out.append('      <header class="rubriek-kop">\n        <h1>Bestemmingen rond Nijmegen</h1>\n        <p>Net buiten de stad liggen mooie dorpen en stadjes, in Nederland en net over de grens in Duitsland. Tips voor een dagje uit, plus alles over de wijken van Nijmegen en de natuur in de regio.</p>\n      </header>')
+    for groep in ("Plaatsen rond Nijmegen", "Wijken in Nijmegen", "Natuur rond Nijmegen"):
         out.append('      <section class="bestemmingen">\n        <h2>%s</h2>\n        <div class="bestemmingen-raster">' % groep)
         for b in BESTEMMINGEN:
             if b["groep"] != groep:
                 continue
             img = '<img src="%s" alt="" loading="lazy">' % esc(fotos[b["slug"]]) if fotos.get(b["slug"]) else ""
             out.append('          <a class="bestemmingkaart" href="%s/">%s<span>%s</span></a>' % (b["slug"], img, esc(b["naam"])))
+        for pad, naam, foto in EXTRA_BESTEMMINGEN.get(groep, []):
+            out.append('          <a class="bestemmingkaart" href="%s%s/"><img src="%s%s" alt="" loading="lazy"><span>%s</span></a>' % (root, pad, root, foto, esc(naam)))
         out.append("        </div>\n      </section>")
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append("    </div>\n  </main>")
