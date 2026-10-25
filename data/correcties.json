@@ -130,5 +130,11 @@
   "reden": "Link naar de Ooijpolder-gids",
   "oud": "natuurfoto’s in de Ooijpolder.",
   "nieuw": "natuurfoto’s in de <a href=\"../ooijpolder/\">Ooijpolder</a>."
+ },
+ {
+  "artikel": "nijmegen-de-oudste-stad-met-de-jongste-energie",
+  "reden": "Link naar de Bevrijdingsfestival-gids",
+  "oud": "het Bevrijdingsfestival in mei",
+  "nieuw": "het <a href=\"../bevrijdingsfestival-nijmegen/\">Bevrijdingsfestival</a> in mei"
  }
 ]
