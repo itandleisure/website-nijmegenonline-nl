@@ -219,3 +219,5 @@ Zo is de categorie sportscholen opgezet; elke volgende categorie gaat op dezelfd
 
 6. **Daarna** de goedgekeurde teksten live, plus de indeling van de categoriepagina (alles gelijk, alleen Uitgelicht valt op) en het blok onder de blogs over dat onderwerp.
 
+**Subpagina's (besluit Frans, 25-10-2026):** veelgezochte onderwerpen binnen een categorie (binnenuitjes, sushi, pizza, Chinees, ontbijt en brunch, high tea, tapas, all-you-can-eat, sauna en spa, barbershops) krijgen een eigen pagina onder `/bedrijvengids-categorie/<onderwerp>/`. Ze staan in `SUBCATEGORIEEN` in `tools/bedrijvengids.py` en tonen de bedrijven van de oudercategorieën die op naam, keuken of kenmerk passen; er is geen eigen verzameling of scan voor nodig. Een nieuw onderwerp toevoegen = een regel in die lijst. Bowlen, escape rooms, lasergamen en trampolineparken blijven bij Uitjes, ook als de scan ze een eigen soort geeft.
+
