@@ -118,5 +118,17 @@
   "reden": "Koopzondag gecontroleerd (oktober 2026)",
   "regex": "(Iedere eerste zondag van de maand)",
   "nieuw": "\\1. Een aantal supermarkten is elke zondag open."
+ },
+ {
+  "artikel": "bestemmingen/berg-en-dal",
+  "reden": "Link naar de Ooijpolder-gids",
+  "oud": "uitkijkpunten over de Ooijpolder en",
+  "nieuw": "uitkijkpunten over de <a href=\"../../ooijpolder/\">Ooijpolder</a> en"
+ },
+ {
+  "artikel": "de-beste-fotospots-in-nijmegen",
+  "reden": "Link naar de Ooijpolder-gids",
+  "oud": "natuurfoto’s in de Ooijpolder.",
+  "nieuw": "natuurfoto’s in de <a href=\"../ooijpolder/\">Ooijpolder</a>."
  }
 ]
