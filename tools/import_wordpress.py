@@ -694,7 +694,11 @@ def bestemming_pagina(b, content, per_slug):
 
 # Eigen pagina's die ook op het bestemmingenoverzicht horen (geen WordPress-bestemming): groep -> (pad, naam, foto)
 EXTRA_BESTEMMINGEN = {
-    "Wijken in Nijmegen": [("lent-nijmegen", "Lent", "assets/uploads/2026/06/Oversteek-brug-1200x800.webp")],
+    "Wijken in Nijmegen": [("lent-nijmegen", "Lent", "assets/uploads/2026/06/Oversteek-brug-1200x800.webp"),
+                           ("hatert-nijmegen", "Hatert", "assets/uploads/2024/03/Harmonie-Hatert-2023-Concert.webp"),
+                           ("lindenholt-nijmegen", "Lindenholt", "assets/uploads/2025/01/nieuwbouw-in-een-van-de-wijken-in-nijmegen.webp"),
+                           ("brakkenstein-nijmegen", "Brakkenstein", "assets/uploads/2025/01/nieuwbouw-in-een-van-de-wijken-in-nijmegen.webp"),
+                           ("nijmegen-oost", "Nijmegen-Oost", "assets/uploads/2022/12/koningshof-nijmegen-oost.webp")],
     "Natuur rond Nijmegen": [("ooijpolder", "Ooijpolder", "assets/uploads/2022/09/Ooijpolder-in-nijmegen.webp"),
                              ("mookerheide", "Mookerheide", "assets/uploads/2023/07/mookerheide-groesbeek.webp")],
 }
