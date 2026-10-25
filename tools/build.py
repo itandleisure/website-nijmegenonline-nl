@@ -56,8 +56,29 @@ def bestaat(pad):
     return (ROOT / pad / "index.html").is_file() if pad else True
 
 
+def doorverwijzingen():
+    """Vaste 301's uit _redirects (zonder * of :), zodat een link naar een oud adres meteen naar het eindadres gaat."""
+    kaart = {}
+    pad = ROOT / "_redirects"
+    for regel in pad.read_text(encoding="utf-8").splitlines() if pad.exists() else []:
+        delen = regel.split()
+        if len(delen) >= 2 and delen[0].startswith("/") and not any(t in delen[0] for t in "*:") and delen[1].startswith("/"):
+            kaart.setdefault(delen[0], delen[1])
+    return kaart
+
+
+def eindadres(pad, kaart):
+    for _ in range(10):
+        volgende = kaart.get(pad.rstrip("/") + "/")
+        if not volgende or not bestaat(volgende):
+            break
+        pad = volgende
+    return pad
+
+
 def main(live=False):
     partials = {p.stem: p.read_text(encoding="utf-8").rstrip("\n") for p in PARTIALS.glob("*.html")}
+    kaart = doorverwijzingen()
     extern = collections.Counter()
     for page in pages():
         html = page.read_text(encoding="utf-8")
@@ -77,7 +98,7 @@ def main(live=False):
             nieuw = patroon.sub(vervang, nieuw)
 
         def intern(m):
-            pad = m.group(2)
+            pad = eindadres(m.group(2), kaart)
             if bestaat(pad):
                 doel = root + pad.strip("/") + ("/" if pad.strip("/") else "")
                 return m.group(1) + (doel or "./") + m.group(3)
