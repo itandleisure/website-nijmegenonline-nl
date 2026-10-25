@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Statistiek | NijmegenOnline</title>
+  <link rel="stylesheet" href="../assets/css/site.css?v=29">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <!-- Interne pagina: niet in menu, sitemap of zoekfunctie. De cijfers in data.json zijn versleuteld
+       (tools/statistiek.py) en worden hier pas met het wachtwoord in de browser ontsleuteld. -->
+  <style>
+    body { background: var(--licht); }
+    .st { max-width: var(--max); margin: 0 auto; padding: 24px 16px 64px; }
+    .st h1 { font-size: 1.8rem; margin: 8px 0 4px; color: var(--donkerblauw); }
+    .st h2 { font-size: 1.35rem; margin: 40px 0 6px; color: var(--donkerblauw); }
+    .st h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+    .st .uitleg { color: var(--grijs); margin: 0 0 16px; max-width: 760px; font-size: .97rem; }
+    .st .st-kop { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: space-between; }
+    .st .st-kop img { height: 40px; width: auto; }
+    .slot { max-width: 380px; margin: 12vh 16px; margin-inline: max(16px, calc(50% - 190px)); background: var(--wit); border-radius: var(--radius); box-shadow: var(--schaduw); padding: 28px; }
+    .slot h1 { margin-top: 0; font-size: 1.4rem; }
+    .slot input { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid var(--rand); border-radius: 6px; margin: 8px 0 12px; }
+    .knop { font: inherit; font-weight: 700; background: var(--donkerblauw); color: #fff; border: 0; border-radius: 6px; padding: 10px 18px; cursor: pointer; }
+    .fout { color: var(--rood); font-size: .95rem; min-height: 1.4em; margin: 0; }
+    .tegels { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 20px; }
+    .tegel { background: var(--wit); border-radius: var(--radius); box-shadow: var(--schaduw); padding: 16px 18px; }
+    .tegel .label { font-size: .85rem; color: var(--grijs); font-weight: 600; }
+    .tegel .getal { font-size: 2rem; font-weight: 700; color: var(--kop); line-height: 1.2; margin: 4px 0; font-variant-numeric: tabular-nums; }
+    .tegel .verschil { font-size: .88rem; color: var(--grijs); }
+    .beter { color: #2f7d10; font-weight: 700; }
+    .slechter { color: var(--rood); font-weight: 700; }
+    .kaart { background: var(--wit); border-radius: var(--radius); box-shadow: var(--schaduw); padding: 16px 18px; margin-top: 12px; }
+    .rij2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+    .grafiek { position: relative; }
+    .grafiek svg { display: block; width: 100%; height: 220px; overflow: visible; }
+    .grafiek .as { font-size: 11px; fill: var(--grijs); font-family: inherit; }
+    .grafiek .lijn { fill: none; stroke: var(--blauw); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+    .grafiek .vlak { fill: var(--blauw); opacity: .08; }
+    .grafiek .punt { fill: var(--blauw); stroke: var(--wit); stroke-width: 2; }
+    .grafiek .raster { stroke: var(--rand); stroke-width: 1; }
+    .grafiek .hoverpunt { visibility: hidden; }
+    .grafiek.actief .hoverpunt, .grafiek.actief .kruis { visibility: visible; }
+    .grafiek .kruis { stroke: var(--grijs); stroke-width: 1; stroke-dasharray: 3 3; }
+    .tip { position: absolute; pointer-events: none; background: var(--kop); color: #fff; font-size: .82rem; line-height: 1.35;
+           padding: 6px 9px; border-radius: 6px; white-space: nowrap; transform: translate(-50%, -110%); display: none; }
+    .grafiek .leeg { font-size: .9rem; color: var(--grijs); margin: 4px 0 0; }
+    .tabelvak { overflow-x: auto; }
+    table.st-tabel { width: 100%; border-collapse: collapse; font-size: .92rem; font-variant-numeric: tabular-nums; }
+    .st-tabel th, .st-tabel td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--rand); vertical-align: top; }
+    .st-tabel th { font-size: .8rem; color: var(--grijs); font-weight: 700; cursor: pointer; white-space: nowrap; user-select: none; }
+    .st-tabel td.n, .st-tabel th.n { text-align: right; }
+    .st-tabel .klein { color: var(--grijs); font-size: .82rem; }
+    .st-tabel a { color: var(--blauw); }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 8px; }
+    .filters select, .filters input { font: inherit; font-size: .92rem; padding: 6px 10px; border: 1px solid var(--rand); border-radius: 6px; background: var(--wit); }
+    .ja { color: #2f7d10; font-weight: 700; }
+    .nee { color: #b9bec5; }
+    .balk { display: flex; align-items: center; gap: 8px; font-size: .9rem; margin: 5px 0; }
+    .balk .naam { width: 190px; flex: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .balk .spoor { flex: 1; height: 10px; }
+    .balk .vul { height: 10px; background: var(--blauw); border-radius: 0 4px 4px 0; }
+    .balk.eigen .vul { background: var(--groen); }
+    .balk .aantal { width: 36px; text-align: right; color: var(--grijs); font-variant-numeric: tabular-nums; }
+    .fragment { font-size: .85rem; color: var(--grijs); font-style: italic; }
+    details.kaart summary { cursor: pointer; font-weight: 700; }
+    .melding { background: #fff8e1; border-radius: var(--radius); padding: 12px 16px; margin-top: 12px; font-size: .95rem; }
+    @media (max-width: 600px) { .balk .naam { width: 120px; } .tegel .getal { font-size: 1.6rem; } }
+  </style>
+</head>
+<body>
+  <form class="slot" id="slot">
+    <h1>Statistiek NijmegenOnline</h1>
+    <label for="ww">Wachtwoord</label>
+    <input id="ww" type="password" autocomplete="current-password" autofocus>
+    <p class="fout" id="fout"></p>
+    <button class="knop" type="submit">Openen</button>
+  </form>
+
+  <main class="st" id="st" hidden>
+    <div class="st-kop">
+      <div>
+        <h1>Hoe staat NijmegenOnline ervoor?</h1>
+        <p class="uitleg" id="bijgewerkt"></p>
+      </div>
+      <img src="../assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104">
+    </div>
+    <div class="tegels" id="tegels"></div>
+
+    <h2>Bezoekers uit Google</h2>
+    <p class="uitleg">Uit Google Search Console: hoe vaak de site in Google getoond werd (vertoningen) en hoe vaak mensen erop klikten, per week.</p>
+    <div id="gsc"></div>
+
+    <h2>Posities op belangrijke zoekwoorden</h2>
+    <p class="uitleg">Elke week zoeken we de vaste lijst zoekwoorden op in Google (Nederland, desktop) en kijken we op welke plek NijmegenOnline staat in de eerste 50 resultaten. "AI-overzicht" betekent dat Google bovenaan een AI-samenvatting toont; een vinkje bij "bron" betekent dat NijmegenOnline daarin als bron genoemd wordt.</p>
+    <div id="zoekwoorden"></div>
+
+    <h2>Zichtbaarheid in AI-antwoorden</h2>
+    <p class="uitleg">Elke vier weken stellen we dezelfde vragen over Nijmegen aan ChatGPT, Gemini, Perplexity en Claude, met zoeken op internet aan. We tellen hoe vaak NijmegenOnline in het antwoord genoemd wordt of als bron gelinkt is.</p>
+    <div id="ai"></div>
+  </main>
+
+  <script>
+  (function () {
+    "use strict";
+    var D = null;
+    var fmt = new Intl.NumberFormat("nl-NL");
+    var datumFmt = new Intl.DateTimeFormat("nl-NL", { day: "numeric", month: "short", year: "numeric" });
+    var kortFmt = new Intl.DateTimeFormat("nl-NL", { day: "numeric", month: "short" });
+    function $(id) { return document.getElementById(id); }
+    function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+    function d(s) { return new Date(s + "T12:00:00"); }
+
+    // ---------- ontsleutelen (zelfde formaat als tools/statistiek.py) ----------
+    function b64(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+    async function ontsleutel(pakket, ww) {
+      var basis = await crypto.subtle.importKey("raw", new TextEncoder().encode(ww), "PBKDF2", false, ["deriveKey"]);
+      var sleutel = await crypto.subtle.deriveKey({ name: "PBKDF2", salt: b64(pakket.salt), iterations: pakket.iter, hash: "SHA-256" },
+        basis, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+      var platte = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(pakket.iv) }, sleutel, b64(pakket.data));
+      return JSON.parse(new TextDecoder().decode(platte));
+    }
+    async function openen(ww, stil) {
+      $("fout").textContent = stil ? "" : "Even geduld…";
+      try {
+        var r = await fetch("data.json?" + Date.now());
+        if (!r.ok) throw new Error("geen data");
+        D = await ontsleutel(await r.json(), ww);
+      } catch (e) {
+        $("fout").textContent = stil ? "" : (e.name === "OperationError" ? "Dat wachtwoord klopt niet." : "De cijfers konden niet geladen worden.");
+        return;
+      }
+      try { sessionStorage.setItem("st-ww", ww); } catch (e) {}
+      $("slot").hidden = true;
+      $("st").hidden = false;
+      tekenAlles();
+    }
+    $("slot").addEventListener("submit", function (e) { e.preventDefault(); openen($("ww").value); });
+    try { var bewaard = sessionStorage.getItem("st-ww"); if (bewaard) openen(bewaard, true); } catch (e) {}
+
+    // ---------- grafiek: één reeks, met kruisdraad en tooltip ----------
+    function grafiek(el, punten, opties) {
+      opties = opties || {};
+      if (!punten.length) { el.innerHTML = '<p class="leeg">Nog geen metingen.</p>'; return; }
+      var B = Math.max(280, el.clientWidth || 640), H = 220, L = 44, R = 12, T = 12, O = 26;
+      var ys = punten.map(function (p) { return p.y; }).filter(function (y) { return y != null; });
+      var min = opties.min != null ? opties.min : Math.min.apply(null, ys), max = Math.max.apply(null, ys);
+      if (opties.omgekeerd) { min = Math.max(1, Math.floor(Math.min.apply(null, ys))); }
+      if (max === min) { max = max + (opties.omgekeerd ? 5 : Math.max(1, max * 0.2)); if (!opties.omgekeerd && opties.min == null) min = Math.max(0, min - 1); }
+      var stap = mooieStap((max - min) / 4);
+      if (!opties.omgekeerd) { min = Math.floor(min / stap) * stap; max = Math.ceil(max / stap) * stap; }
+      function X(i) { return punten.length === 1 ? (L + B - R) / 2 : L + i * (B - L - R) / (punten.length - 1); }
+      function Y(v) { var t = (v - min) / (max - min || 1); return opties.omgekeerd ? T + t * (H - T - O) : H - O - t * (H - T - O); }
+      var s = '<svg viewBox="0 0 ' + B + " " + H + '" role="img" aria-label="' + esc(opties.titel || "") + '">';
+      for (var v = min; v <= max + 1e-9; v += stap) {
+        s += '<line class="raster" x1="' + L + '" x2="' + (B - R) + '" y1="' + Y(v) + '" y2="' + Y(v) + '"/>';
+        s += '<text class="as" x="' + (L - 6) + '" y="' + (Y(v) + 4) + '" text-anchor="end">' + fmt.format(Math.round(v * 10) / 10) + "</text>";
+      }
+      var elk = Math.max(1, Math.ceil(punten.length / 6));
+      punten.forEach(function (p, i) {
+        if (i % elk === 0 || i === punten.length - 1 && punten.length < 8)
+          s += '<text class="as" x="' + X(i) + '" y="' + (H - 6) + '" text-anchor="middle">' + kortFmt.format(d(p.x)) + "</text>";
+      });
+      var pad = punten.map(function (p, i) { return p.y == null ? null : X(i) + "," + Y(p.y); }).filter(Boolean);
+      if (pad.length > 1) {
+        if (!opties.omgekeerd) s += '<path class="vlak" d="M' + pad[0].split(",")[0] + "," + (H - O) + " L" + pad.join(" L") + " L" + pad[pad.length - 1].split(",")[0] + "," + (H - O) + 'Z"/>';
+        s += '<path class="lijn" d="M' + pad.join(" L") + '"/>';
+      }
+      if (punten.length <= 30) punten.forEach(function (p, i) { if (p.y != null) s += '<circle class="punt" cx="' + X(i) + '" cy="' + Y(p.y) + '" r="4"/>'; });
+      s += '<line class="kruis" visibility="hidden" y1="' + T + '" y2="' + (H - O) + '" x1="-9" x2="-9"/><circle class="punt hoverpunt" r="5" cx="-9" cy="-9"/></svg><div class="tip"></div>';
+      if (punten.length === 1) s += '<p class="leeg">Eerste meting. Vanaf volgende week verschijnt hier een lijn.</p>';
+      el.innerHTML = s;
+      var svg = el.querySelector("svg"), tip = el.querySelector(".tip"), kruis = svg.querySelector(".kruis"), stip = svg.querySelectorAll("circle");
+      stip = stip[stip.length - 1];
+      svg.addEventListener("pointermove", function (e) {
+        var r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * B, beste = 0;
+        punten.forEach(function (p, i) { if (Math.abs(X(i) - x) < Math.abs(X(beste) - x)) beste = i; });
+        var p = punten[beste];
+        if (p.y == null) return;
+        el.classList.add("actief");
+        kruis.setAttribute("x1", X(beste)); kruis.setAttribute("x2", X(beste));
+        stip.setAttribute("cx", X(beste)); stip.setAttribute("cy", Y(p.y));
+        tip.style.display = "block";
+        tip.style.left = (X(beste) / B * r.width) + "px";
+        tip.style.top = (Y(p.y) / H * r.height) + "px";
+        tip.innerHTML = esc(opties.label ? opties.label(p) : kortFmt.format(d(p.x))) + "<br><b>" + esc(opties.waarde ? opties.waarde(p.y) : fmt.format(p.y)) + "</b>";
+      });
+      svg.addEventListener("pointerleave", function () { tip.style.display = "none"; el.classList.remove("actief"); kruis.setAttribute("x1", -9); kruis.setAttribute("x2", -9); });
+    }
+    function mooieStap(ruw) {
+      if (ruw <= 0) return 1;
+      var m = Math.pow(10, Math.floor(Math.log10(ruw))), f = ruw / m;
+      return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10) * m;
+    }
+
+    // ---------- sorteerbare tabel ----------
+    function tabel(el, kolommen, rijen) {
+      var sort = { i: -1, op: true };
+      function teken() {
+        var r = rijen.slice();
+        if (sort.i >= 0) {
+          var k = kolommen[sort.i];
+          r.sort(function (a, b) {
+            var x = k.sort ? k.sort(a) : a[k.veld], y = k.sort ? k.sort(b) : b[k.veld];
+            if (x == null) return 1; if (y == null) return -1;
+            return (x < y ? -1 : x > y ? 1 : 0) * (sort.op ? 1 : -1);
+          });
+        }
+        var h = '<div class="tabelvak"><table class="st-tabel"><thead><tr>';
+        kolommen.forEach(function (k, i) { h += '<th class="' + (k.n ? "n" : "") + '" data-i="' + i + '">' + esc(k.kop) + (sort.i === i ? (sort.op ? " ▲" : " ▼") : "") + "</th>"; });
+        h += "</tr></thead><tbody>";
+        r.forEach(function (rij) {
+          h += "<tr>" + kolommen.map(function (k) { return '<td class="' + (k.n ? "n" : "") + '">' + (k.html ? k.html(rij) : esc(rij[k.veld])) + "</td>"; }).join("") + "</tr>";
+        });
+        if (!r.length) h += '<tr><td colspan="' + kolommen.length + '" class="klein">Niets gevonden.</td></tr>';
+        el.innerHTML = h + "</tbody></table></div>";
+        el.querySelectorAll("th").forEach(function (th) {
+          th.addEventListener("click", function () { var i = +th.dataset.i; sort = { i: i, op: sort.i === i ? !sort.op : true }; teken(); });
+        });
+      }
+      teken();
+    }
+
+    function verschil(nu, eerder, lagerIsBeter, eenheid) {
+      if (nu == null || eerder == null) return "";
+      var v = Math.round((nu - eerder) * 10) / 10;
+      if (!v) return '<span>gelijk</span>';
+      var goed = lagerIsBeter ? v < 0 : v > 0;
+      return '<span class="' + (goed ? "beter" : "slechter") + '">' + (v > 0 ? "+" : "−") + fmt.format(Math.abs(v)) + (eenheid || "") + "</span>";
+    }
+    function tegel(label, getal, toelichting) {
+      return '<div class="tegel"><div class="label">' + esc(label) + '</div><div class="getal">' + getal + '</div><div class="verschil">' + (toelichting || "") + "</div></div>";
+    }
+
+    // ---------- afgeleide cijfers ----------
+    function zwSamenvatting(m) {
+      var p = Object.values(m.posities), pos = p.map(function (u) { return u.pos; }).filter(Boolean);
+      return {
+        datum: m.datum, totaal: p.length,
+        top3: pos.filter(function (x) { return x <= 3; }).length,
+        top10: pos.filter(function (x) { return x <= 10; }).length,
+        top50: pos.length,
+        aioBron: p.filter(function (u) { return u.aio_bron; }).length,
+        aio: p.filter(function (u) { return u.aio; }).length,
+      };
+    }
+    function aiSamenvatting(m) {
+      var n = 0, zichtbaar = 0, genoemd = 0, gelinkt = 0, perModel = {};
+      Object.values(m.antwoorden).forEach(function (modellen) {
+        Object.keys(modellen).forEach(function (mod) {
+          var u = modellen[mod], pm = perModel[mod] = perModel[mod] || { n: 0, zichtbaar: 0, genoemd: 0, gelinkt: 0 };
+          n++; pm.n++;
+          if (u.genoemd) { genoemd++; pm.genoemd++; }
+          if (u.gelinkt) { gelinkt++; pm.gelinkt++; }
+          if (u.genoemd || u.gelinkt) { zichtbaar++; pm.zichtbaar++; }
+        });
+      });
+      return { datum: m.datum, n: n, zichtbaar: zichtbaar, genoemd: genoemd, gelinkt: gelinkt, pct: n ? Math.round(zichtbaar / n * 1000) / 10 : 0, perModel: perModel };
+    }
+
+    function tekenAlles() {
+      $("bijgewerkt").textContent = "Bijgewerkt op " + datumFmt.format(new Date(D.bijgewerkt)) + ". Wekelijks bijgewerkt in de nacht van zondag op maandag.";
+      var zw = (D.zoekwoorden || []).map(zwSamenvatting), ai = (D.ai || []).map(aiSamenvatting);
+      var t = "";
+      var weken = D.gsc ? D.gsc.weken.filter(function (w) { return w.dagen === 7; }) : [];
+      if (weken.length >= 8) {
+        var som = function (a, k) { return a.reduce(function (s, w) { return s + w[k]; }, 0); };
+        var nu = weken.slice(-4), eerder = weken.slice(-8, -4);
+        var kn = som(nu, "klikken"), ke = som(eerder, "klikken");
+        t += tegel("Klikken uit Google, laatste 4 weken", fmt.format(kn), verschil(kn, ke) + " t.o.v. de 4 weken ervoor");
+        var vj = weken.slice(-56, -48);
+        if (vj.length === 8) { var kj = som(vj.slice(-4), "klikken"); t += tegel("Zelfde 4 weken vorig jaar", fmt.format(kj), kj ? Math.round((kn / kj - 1) * 100) + "% verschil" : ""); }
+      }
+      if (zw.length) {
+        var a = zw[zw.length - 1], b = zw[zw.length - 2];
+        t += tegel("Zoekwoorden in de top 10", a.top10 + '<span class="klein" style="font-size:1rem;color:var(--grijs)"> / ' + a.totaal + "</span>", b ? verschil(a.top10, b.top10) + " sinds " + kortFmt.format(d(b.datum)) : "eerste meting");
+        t += tegel("Zoekwoorden in de top 3", a.top3, b ? verschil(a.top3, b.top3) + " sinds " + kortFmt.format(d(b.datum)) : "eerste meting");
+        t += tegel("Bron in Google AI-overzicht", a.aioBron + '<span style="font-size:1rem;color:var(--grijs)"> / ' + a.aio + "</span>", "van de zoekwoorden met een AI-overzicht");
+      }
+      if (ai.length) {
+        var x = ai[ai.length - 1], y = ai[ai.length - 2];
+        t += tegel("Genoemd in AI-antwoorden", fmt.format(x.pct) + "%", x.zichtbaar + " van " + x.n + " antwoorden" + (y ? " · " + verschil(x.pct, y.pct, false, "%") : ""));
+      }
+      $("tegels").innerHTML = t;
+      tekenGsc(weken);
+      tekenZoekwoorden(zw);
+      tekenAi(ai);
+    }
+
+    function tekenGsc(weken) {
+      var el = $("gsc");
+      if (!D.gsc) { el.innerHTML = '<div class="melding">Search Console is nog niet gekoppeld aan de wekelijkse meting. Zodra de sleutel in GitHub staat, verschijnen hier de cijfers (16 maanden terug).</div>'; return; }
+      var tot = D.gsc.tot, laatste = weken.length ? weken[weken.length - 1].week : null;
+      var h = "";
+      if (laatste && (d(tot) - d(laatste)) / 864e5 > 21) h += '<div class="melding">Let op: Search Console geeft geen cijfers na ' + datumFmt.format(d(laatste)) + ". Controleer de property in Search Console.</div>";
+      h += '<div class="rij2"><div class="kaart"><h3>Klikken per week</h3><div class="grafiek" id="g-klik"></div></div>' +
+           '<div class="kaart"><h3>Vertoningen per week</h3><div class="grafiek" id="g-vert"></div></div></div>' +
+           '<div class="rij2"><div class="kaart"><h3>Beste zoekwoorden, laatste 28 dagen</h3><div id="t-gq"></div></div>' +
+           '<div class="kaart"><h3>Beste pagina\'s, laatste 28 dagen</h3><div id="t-gp"></div></div></div>';
+      el.innerHTML = h;
+      var lab = function (p) { return "week van " + kortFmt.format(d(p.x)); };
+      grafiek($("g-klik"), weken.map(function (w) { return { x: w.week, y: w.klikken }; }), { min: 0, label: lab, titel: "Klikken per week" });
+      grafiek($("g-vert"), weken.map(function (w) { return { x: w.week, y: w.vertoningen }; }), { min: 0, label: lab, titel: "Vertoningen per week" });
+      var kol = function (kop, link) {
+        return [
+          { kop: kop, veld: "naam", html: link ? function (r) { return '<a href="https://www.nijmegenonline.nl' + esc(r.naam) + '" target="_blank" rel="noopener">' + esc(r.naam) + "</a>"; } : null },
+          { kop: "Klikken", veld: "klikken", n: true, html: function (r) { return fmt.format(r.klikken) + ' <span class="klein">' + verschil(r.klikken, r.klikken_eerder) + "</span>"; } },
+          { kop: "Vertoningen", veld: "vertoningen", n: true, html: function (r) { return fmt.format(r.vertoningen); } },
+          { kop: "Positie", veld: "positie", n: true, html: function (r) { return fmt.format(r.positie); } },
+        ];
+      };
+      tabel($("t-gq"), kol("Zoekwoord"), D.gsc.zoekwoorden);
+      tabel($("t-gp"), kol("Pagina", true), D.gsc.paginas);
+    }
+
+    function tekenZoekwoorden(zw) {
+      var el = $("zoekwoorden");
+      if (!zw.length) { el.innerHTML = '<p class="leeg">Nog geen metingen.</p>'; return; }
+      el.innerHTML = '<div class="rij2"><div class="kaart"><h3>Aantal zoekwoorden in de top 10</h3><div class="grafiek" id="g-top10"></div></div>' +
+        '<div class="kaart"><h3>Aantal zoekwoorden in de top 50</h3><div class="grafiek" id="g-top50"></div></div></div>' +
+        '<div class="kaart"><h3>Alle zoekwoorden</h3><div class="filters"><select id="f-groep"><option value="">Alle onderwerpen</option></select>' +
+        '<select id="f-stand"><option value="">Alle posities</option><option value="10">In de top 10</option><option value="50">Plek 11 tot 50</option><option value="0">Niet in de top 50</option></select>' +
+        '<input id="f-zoek" type="search" placeholder="Zoek een zoekwoord"></div><div id="t-zw"></div></div>';
+      var opt = { min: 0, label: function (p) { return datumFmt.format(d(p.x)); }, waarde: function (v) { return v + " zoekwoorden"; } };
+      grafiek($("g-top10"), zw.map(function (s) { return { x: s.datum, y: s.top10 }; }), Object.assign({ titel: "Zoekwoorden in de top 10" }, opt));
+      grafiek($("g-top50"), zw.map(function (s) { return { x: s.datum, y: s.top50 }; }), Object.assign({ titel: "Zoekwoorden in de top 50" }, opt));
+
+      var metingen = D.zoekwoorden, laatst = metingen[metingen.length - 1], vorig = metingen[metingen.length - 2];
+      var rijen = Object.keys(laatst.posities).map(function (z) {
+        var u = laatst.posities[z], v = vorig && vorig.posities[z], beste = null;
+        metingen.forEach(function (m) { var p = m.posities[z] && m.posities[z].pos; if (p && (beste == null || p < beste)) beste = p; });
+        return { zoekwoord: z, groep: u.groep, pos: u.pos, vorige: v ? v.pos : undefined, beste: beste, url: u.url, top: u.top, aio: u.aio, aio_bron: u.aio_bron };
+      });
+      var groepen = []; rijen.forEach(function (r) { if (groepen.indexOf(r.groep) < 0) groepen.push(r.groep); });
+      $("f-groep").innerHTML += groepen.map(function (g) { return "<option>" + esc(g) + "</option>"; }).join("");
+      var kolommen = [
+        { kop: "Zoekwoord", veld: "zoekwoord", html: function (r) { return esc(r.zoekwoord) + '<br><span class="klein">' + esc(r.groep) + "</span>"; } },
+        { kop: "Positie", veld: "pos", n: true, html: function (r) { return r.pos ? "<b>" + r.pos + "</b>" : '<span class="nee">&gt; 50</span>'; } },
+        { kop: "Verschil", n: true, sort: function (r) { return r.vorige === undefined ? null : (r.vorige || 60) - (r.pos || 60); }, html: function (r) {
+          if (r.vorige === undefined) return '<span class="klein">nieuw</span>';
+          return verschil(r.pos || 60, r.vorige || 60, true).replace("+", "↓ ").replace("−", "↑ ");
+        } },
+        { kop: "Beste ooit", veld: "beste", n: true, html: function (r) { return r.beste || "–"; } },
+        { kop: "Pagina", veld: "url", html: function (r) { return r.url ? '<a class="klein" href="https://www.nijmegenonline.nl' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.url.length > 42 ? r.url.slice(0, 40) + "…" : r.url) + "</a>" : ""; } },
+        { kop: "Top 3 in Google", html: function (r) { return '<span class="klein">' + r.top.map(esc).join("<br>") + "</span>"; } },
+        { kop: "AI-overzicht / bron", sort: function (r) { return (r.aio ? 1 : 0) + (r.aio_bron ? 2 : 0); }, html: function (r) {
+          return r.aio ? (r.aio_bron ? '<span class="ja">✓ bron</span>' : '<span class="klein">ja, niet als bron</span>') : '<span class="nee">geen</span>';
+        } },
+      ];
+      function filter() {
+        var g = $("f-groep").value, s = $("f-stand").value, q = $("f-zoek").value.trim().toLowerCase();
+        tabel($("t-zw"), kolommen, rijen.filter(function (r) {
+          if (g && r.groep !== g) return false;
+          if (s === "10" && !(r.pos && r.pos <= 10)) return false;
+          if (s === "50" && !(r.pos && r.pos > 10)) return false;
+          if (s === "0" && r.pos) return false;
+          return !q || r.zoekwoord.indexOf(q) >= 0;
+        }).sort(function (a, b) { return (a.pos || 99) - (b.pos || 99); }));
+      }
+      ["f-groep", "f-stand", "f-zoek"].forEach(function (id) { $(id).addEventListener("input", filter); });
+      filter();
+    }
+
+    function tekenAi(ai) {
+      var el = $("ai");
+      if (!ai.length) { el.innerHTML = '<p class="leeg">Nog geen metingen.</p>'; return; }
+      var laatst = D.ai[D.ai.length - 1], s = ai[ai.length - 1], vorige = ai[ai.length - 2];
+      var modellen = Object.keys(s.perModel);
+      var h = '<div class="rij2"><div class="kaart"><h3>Percentage antwoorden met NijmegenOnline</h3><div class="grafiek" id="g-ai"></div></div>' +
+        '<div class="kaart"><h3>Per AI-dienst</h3><div id="t-mod"></div></div></div>' +
+        '<div class="kaart"><h3>Welke sites noemen de AI-diensten wel?</h3><p class="uitleg">Hoe vaak een site als bron werd gebruikt in de ' + s.n + ' antwoorden van ' + datumFmt.format(d(s.datum)) + '. Dit zijn je concurrenten in AI-antwoorden.</p><div id="bronnen"></div></div>' +
+        '<details class="kaart"><summary>Alle vragen en antwoorden</summary><div id="t-vragen" style="margin-top:12px"></div></details>';
+      el.innerHTML = h;
+      grafiek($("g-ai"), ai.map(function (m) { return { x: m.datum, y: m.pct }; }), { min: 0, titel: "Percentage AI-antwoorden met NijmegenOnline",
+        label: function (p) { return datumFmt.format(d(p.x)); }, waarde: function (v) { return fmt.format(v) + "%"; } });
+      tabel($("t-mod"), [
+        { kop: "Dienst", veld: "m" },
+        { kop: "Genoemd of gelinkt", veld: "z", n: true, html: function (r) { return "<b>" + r.z + "</b> / " + r.n + (r.zv != null ? ' <span class="klein">' + verschil(r.z, r.zv) + "</span>" : ""); } },
+        { kop: "Bij naam genoemd", veld: "g", n: true },
+        { kop: "Als bron gelinkt", veld: "l", n: true },
+      ], modellen.map(function (m) {
+        var p = s.perModel[m], v = vorige && vorige.perModel[m];
+        return { m: m, n: p.n, z: p.zichtbaar, g: p.genoemd, l: p.gelinkt, zv: v ? v.zichtbaar : null };
+      }));
+
+      var tel = {};
+      Object.values(laatst.antwoorden).forEach(function (mm) { Object.values(mm).forEach(function (u) {
+        u.bronnen.forEach(function (b) { b = b.replace(/^en\./, ""); tel[b] = (tel[b] || 0) + 1; });
+      }); });
+      var lijst = Object.keys(tel).sort(function (a, b) { return tel[b] - tel[a]; });
+      var top = lijst.slice(0, 15);
+      if (top.indexOf("nijmegenonline.nl") < 0 && tel["nijmegenonline.nl"]) top.push("nijmegenonline.nl");
+      var max = tel[top[0]] || 1;
+      $("bronnen").innerHTML = top.map(function (b) {
+        return '<div class="balk' + (b === "nijmegenonline.nl" ? " eigen" : "") + '"><span class="naam" title="' + esc(b) + '">' + esc(b) + '</span><span class="spoor"><div class="vul" style="width:' + (tel[b] / max * 100) + '%"></div></span><span class="aantal">' + tel[b] + "</span></div>";
+      }).join("");
+
+      var rijen = Object.keys(laatst.antwoorden).map(function (v) { return { vraag: v, a: laatst.antwoorden[v] }; });
+      tabel($("t-vragen"), [{ kop: "Vraag", veld: "vraag", html: function (r) {
+        var frag = modellen.map(function (m) { return r.a[m] && r.a[m].fragment ? '<div class="fragment">' + esc(m) + ": “…" + esc(r.a[m].fragment) + "…”</div>" : ""; }).join("");
+        return esc(r.vraag) + frag;
+      } }].concat(modellen.map(function (m) {
+        return { kop: m, sort: function (r) { var u = r.a[m]; return u ? (u.genoemd ? 2 : 0) + (u.gelinkt ? 1 : 0) : -1; }, html: function (r) {
+          var u = r.a[m];
+          if (!u) return '<span class="nee">–</span>';
+          if (u.genoemd && u.gelinkt) return '<span class="ja">✓ genoemd + bron</span>';
+          if (u.genoemd) return '<span class="ja">✓ genoemd</span>';
+          if (u.gelinkt) return '<span class="ja">✓ bron</span>';
+          return '<span class="nee">nee</span>';
+        } };
+      })), rijen);
+    }
+  })();
+  </script>
+</body>
+</html>

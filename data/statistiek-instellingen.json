@@ -1,0 +1,66 @@
+{
+  "domein": "nijmegenonline.nl",
+  "search_console_property": "https://www.nijmegenonline.nl/",
+  "zoekwoorden": {
+    "Algemeen": [
+      "nijmegen", "nijmegen centrum", "wat te doen in nijmegen", "uitgaan nijmegen", "evenementen nijmegen",
+      "agenda nijmegen", "nieuws nijmegen", "bedrijvengids nijmegen", "activiteiten nijmegen", "weekendje nijmegen",
+      "webcam waalkade", "openingstijden centrum nijmegen", "koopzondag nijmegen", "parkeren nijmegen"
+    ],
+    "Eten en drinken": [
+      "restaurants nijmegen", "restaurant nijmegen", "restaurants nijmegen centrum", "uit eten nijmegen",
+      "goedkoop uit eten nijmegen", "lunchen nijmegen", "cafés nijmegen", "high tea nijmegen", "high wine nijmegen",
+      "pizza nijmegen", "sushi nijmegen", "tapas nijmegen", "italiaans restaurant nijmegen", "turks restaurant nijmegen",
+      "thais restaurant nijmegen", "biercafé nijmegen", "vegan restaurant nijmegen", "uit eten met kinderen nijmegen"
+    ],
+    "Evenementen en seizoen": [
+      "kerstmarkt nijmegen", "kerstmarkten nijmegen 2026", "vierdaagse nijmegen", "vierdaagsefeesten",
+      "vierdaagse 2027", "kermis nijmegen", "koningsdag nijmegen", "bevrijdingsfestival nijmegen", "kerstmarkt kleve"
+    ],
+    "Gidsen en uitjes": [
+      "trouwen nijmegen", "trouwlocaties nijmegen", "zaal huren nijmegen", "overnachten nijmegen", "hotels nijmegen",
+      "b&b nijmegen", "camping nijmegen", "musea nijmegen", "winkelen nijmegen", "bioscoop nijmegen",
+      "kinderfeestje nijmegen", "bedrijfsuitje nijmegen", "kleve", "kringloopwinkel nijmegen", "studeren in nijmegen"
+    ],
+    "Bedrijven en diensten": [
+      "kapper nijmegen", "massage nijmegen", "nagelsalon nijmegen", "pedicure nijmegen", "permanente make-up nijmegen",
+      "fotograaf nijmegen", "fysiotherapeut nijmegen", "tandarts nijmegen", "huisarts nijmegen", "apotheek nijmegen",
+      "makelaar nijmegen", "advocaat nijmegen", "bloemist nijmegen", "sportschool nijmegen", "rijschool nijmegen",
+      "dansschool nijmegen", "cursus nijmegen", "ondernemen nijmegen"
+    ]
+  },
+  "ai_vragen": [
+    "Wat is er dit weekend te doen in Nijmegen?",
+    "Welke evenementen zijn er binnenkort in Nijmegen?",
+    "Wat zijn de leukste kerstmarkten in Nijmegen dit jaar?",
+    "Wat moet ik weten over de Nijmeegse Vierdaagse?",
+    "Wat zijn goede restaurants in het centrum van Nijmegen?",
+    "Waar kun je goed lunchen in Nijmegen?",
+    "Wat zijn gezellige cafés in Nijmegen?",
+    "Waar kun je in Nijmegen goedkoop uit eten?",
+    "Wat zijn leuke uitjes in en rond Nijmegen?",
+    "Wat kun je in Nijmegen doen met kinderen?",
+    "Waar kun je overnachten in Nijmegen?",
+    "Waar kun je in Nijmegen een zaal huren voor een feest?",
+    "Wat zijn mooie trouwlocaties in Nijmegen?",
+    "Waar parkeer je het beste in Nijmegen centrum?",
+    "Wat zijn de openingstijden van de winkels in Nijmegen centrum?",
+    "Welke musea zijn er in Nijmegen?",
+    "Is Kleve leuk voor een dagje uit vanuit Nijmegen?",
+    "Wat is een goede kapper in Nijmegen?",
+    "Waar vind ik een goede massagesalon in Nijmegen?",
+    "Welke website geeft een goed overzicht van bedrijven in Nijmegen?",
+    "Wat is de beste website voor nieuws en evenementen in Nijmegen?",
+    "Ik ga een weekend naar Nijmegen, wat raad je aan?",
+    "Waar kan ik in Nijmegen mijn bedrijf laten zien aan lokale klanten?",
+    "Welke lokale websites over Nijmegen zijn betrouwbaar?",
+    "Wat zijn leuke wijken en straten om te winkelen in Nijmegen?"
+  ],
+  "ai_modellen": {
+    "ChatGPT": ["chat_gpt", "gpt-5.4-mini"],
+    "Gemini": ["gemini", "gemini-3.5-flash"],
+    "Perplexity": ["perplexity", "sonar"],
+    "Claude": ["claude", "claude-haiku-4-5"]
+  },
+  "ai_elke_dagen": 28
+}
