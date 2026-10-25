@@ -2800,7 +2800,8 @@ ZWERVER_DOEL = {
     "betaalbare-badkamers-nl": {"naam": "Betaalbare Badkamers", "pad": "bedrijvengids/betaalbare-badkamers-bv-nijmegen"},
     "toeristeninformatie-kleve": {"naam": "Kleef", "pad": "bestemmingen/kleve"},
 }
-# Gevonden zwervers, zodat de nachtelijke herbouw (zonder de WordPress-export) hun doorverwijzingen niet kwijtraakt
+# Alle bedrijven uit de oude gids met het doel als ze nergens terechtkomen ("zwervers"), zodat de nachtelijke herbouw
+# (zonder de WordPress-export) hun doorverwijzingen niet kwijtraakt; ook de lijst van adressen die op de oude site stonden
 ZWERVERS_JSON = ROOT / "data" / "bedrijvengids-zwervers.json"
 
 
@@ -2825,7 +2826,11 @@ def schrijf_redirects(weg, oude_categorieen):
     agenda = tekst[tekst.index("# agenda"):] if "# agenda" in tekst else ""
     kop_ = tekst.split("# bedrijvengids")[0].split("# agenda")[0].rstrip("\n")
     regels = ["# bedrijvengids (tools/bedrijvengids.py)"]
-    regels += ["/bedrijvengids/%s/ /%s/ 301" % (b["slug"], cat_pad(cat)) for b, cat in sorted(weg, key=lambda x: x[0]["slug"])]
+    # Alleen bedrijven die op de oude site stonden: de rest had nooit een adres dat een doorverwijzing nodig heeft
+    # (Cloudflare Pages leest maximaal 2.100 regels)
+    oud = {z["slug"] for z in json.loads(ZWERVERS_JSON.read_text(encoding="utf-8"))} if ZWERVERS_JSON.exists() else None
+    regels += ["/bedrijvengids/%s/ /%s/ 301" % (b["slug"], cat_pad(cat)) for b, cat in sorted(weg, key=lambda x: x[0]["slug"])
+               if oud is None or b["slug"] in oud]
     regels += ["/bedrijvengids-categorie/%s/ /bedrijvengids-categorie/%s/ 301" % x for x in oude_categorieen]
     # Listdom had ook /listdom-category/<oud>/; wat geen nieuwe categorie heeft, gaat naar de startpagina van de gids
     listdom = {oud: cat_pad(cat) for cat in CATEGORIEEN for oud in cat["listdom"] | {cat["slug"]}}

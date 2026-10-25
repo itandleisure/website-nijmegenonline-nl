@@ -18,10 +18,9 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 - [x] Afbeeldingen van `wp-content/uploads` staan als webp in `assets/uploads/` (`tools/afbeeldingen.py`);
       `tools/build.py` laat de pagina's ernaar wijzen. Nieuwe pagina's: eerst afbeeldingen downloaden, dan dit script
 - [ ] Partnerslider, zijbalk en formulieren getest op desktop en mobiel
-- [ ] `_redirects` telt ruim 3.100 regels; Cloudflare Pages leest er maximaal 2.100 (2.000 vaste en 100 met `*`).
-      De grootste blokken zijn `# bedrijvengids` (ruim 1.550; de meeste zijn bedrijven die nooit op de live site stonden en dus geen doorverwijzing nodig hebben) en
-      `# agenda` (ruim 750, afgelopen evenementen). Oplossing kiezen vóór de livegang: een deel in Cloudflare Bulk
-      Redirects zetten, of de doorverwijzingen van pagina's zonder bezoekers of backlinks laten vallen
+- [ ] `_redirects` onder de limiet van Cloudflare Pages houden: maximaal 2.000 vaste regels en 100 met `*`
+      (op 25-10-2026: ruim 1.750 en 5). Het blok `# agenda` groeit met elk afgelopen evenement; komt het totaal
+      boven de 2.000, dan de oudste evenementen in Cloudflare Bulk Redirects zetten of laten vallen
 - [ ] Alle URL's uit de huidige sitemap en paginalijst geven 200 of een bedoelde 301 (paginalijst gecontroleerd op
       24-10-2026; oude pagina's die niet terugkomen staan in `data/oude-paginas.csv`)
 - [x] Google Analytics-code (zelfde Google-tag `GT-5R43F82` als WordPress, GA4-property 337370292) in elke pagina via
