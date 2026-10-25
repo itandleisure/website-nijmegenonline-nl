@@ -2114,6 +2114,128 @@ CATEGORIEEN = [{
     "knop_voorbeeld": "boek bestellen, route, agenda",
 }]
 
+# Subpagina's (besluit Frans, 25-10-2026): veelgezochte onderwerpen binnen een bestaande categorie, zoals sushi of
+# barbers. Geen eigen verzameling of scan: ze tonen de bedrijven uit de ouders waarvan naam, keuken, kenmerken of
+# (bij "tekst") de scantekst bij het onderwerp past. De bedrijfspagina blijft bij de eigen categorie.
+# Minder dan MIN_SUB bedrijven: geen pagina.
+MIN_SUB = 3
+SUBCATEGORIEEN = [{
+    "slug": "binnenuitjes", "ouders": ["uitjes"],
+    "zoek": r"escape|bowl|laser|trampolin|jump|prison island|kart|midget|planet awesome|enjoyvr",
+    "naam": "Binnenuitjes in Nijmegen", "enkelvoud": "Binnenuitje", "meervoud": "binnenuitjes", "de_woord": False,
+    "beschrijving": "Binnenuitjes in Nijmegen: escape rooms, bowlen, lasergamen, Prison Island en trampolinespringen. Voor vrienden, familie, kinderfeestjes en bedrijfsuitjes.",
+    "intro": "<p>Regen, kou of gewoon zin in een avond vol actie: in Nijmegen kun je binnen terecht voor een escape room, een potje bowlen, "
+             "lasergamen, Prison Island of een middag trampolinespringen. Ideaal voor een kinderfeestje, een vrijgezellenfeest of een teamuitje.</p>"
+             "<p>Op deze pagina vind je alle binnenuitjes in Nijmegen.</p>",
+    "faq": [("Wat kun je in Nijmegen doen bij slecht weer?",
+             "Op deze pagina staan de uitjes die binnen zijn: escape rooms, bowlen, lasergamen, Prison Island en trampolinespringen."),
+            ("Waar kun je in Nijmegen bowlen?", "Kijk hieronder: de bowlingcentra staan tussen de andere binnenuitjes, met adres en kaart."),
+            ("Waar vier je een kinderfeestje in Nijmegen?", "Veel binnenuitjes hebben arrangementen voor kinderfeestjes. Filter op kinderfeestje.")],
+    "filtervoorbeeld": "bedrijfsuitje, kinderfeestje of vrijgezellenfeest",
+    "blogs": [],
+}, {
+    "slug": "sushi", "ouders": ["restaurant", "afhaal", "lunch"],
+    "zoek": r"sushi|japan|ramen",
+    "naam": "Sushi en Japans eten in Nijmegen", "enkelvoud": "Sushirestaurant", "meervoud": "sushi- en Japanse restaurants", "de_woord": False,
+    "beschrijving": "Sushi in Nijmegen: Japanse restaurants, sushibars, ramen en sushi afhalen of laten bezorgen, met adressen en een kaart.",
+    "intro": "<p>Zin in sushi? In Nijmegen ga je aan tafel bij een Japans restaurant, schuif je aan bij all-you-can-eat sushi of "
+             "haal je een box op voor thuis. Ook voor een kom ramen hoef je de stad niet uit.</p>"
+             "<p>Op deze pagina vind je alle sushi- en Japanse restaurants in Nijmegen.</p>",
+    "faq": [("Waar eet je sushi in Nijmegen?", "Hieronder staan alle sushirestaurants en Japanse zaken, van een sushibar tot afhalen, met adres en kaart."),
+            ("Kun je in Nijmegen sushi laten bezorgen?", "Ja, een groot deel van de sushizaken bezorgt of heeft afhalen. Filter op bezorgen of afhalen.")],
+    "filtervoorbeeld": "afhalen, bezorgen of terras",
+    "blogs": ["sushi-liefhebbers-dit-zijn-de-beste-japanse-restaurants-in-nijmegen"],
+}, {
+    "slug": "pizza", "ouders": ["restaurant", "afhaal", "lunch"],
+    "zoek": r"pizz|italia",
+    "naam": "Pizza en Italiaans eten in Nijmegen", "enkelvoud": "Pizzeria", "meervoud": "pizzeria's en Italiaanse restaurants",
+    "beschrijving": "Pizza in Nijmegen: pizzeria's, Italiaanse restaurants en pizza afhalen of bezorgen, met adressen en een kaart.",
+    "intro": "<p>Een pizza uit de houtoven, verse pasta of gewoon een snelle pizza voor op de bank: Nijmegen heeft pizzeria's en "
+             "Italiaanse restaurants in het centrum en in de wijken.</p>"
+             "<p>Op deze pagina vind je alle pizzeria's en Italiaanse restaurants in Nijmegen.</p>",
+    "faq": [("Waar eet je de lekkerste pizza in Nijmegen?", "Hieronder staan alle pizzeria's en Italiaanse restaurants van Nijmegen, met adres, kaart en een eigen pagina."),
+            ("Kun je in Nijmegen pizza laten bezorgen?", "Ja, filter op bezorgen of afhalen.")],
+    "filtervoorbeeld": "afhalen, bezorgen of terras",
+    "blogs": ["pizza-liefhebbers-dit-zijn-de-beste-pizzerias-in-nijmegen", "culinair-genieten-in-italiaanse-sfeer-probeer-deze-restaurants-in-nijmegen"],
+}, {
+    "slug": "chinees", "ouders": ["restaurant", "afhaal"],
+    "zoek": r"chin|kanton|dim sum",
+    "naam": "Chinees eten in Nijmegen", "enkelvoud": "Chinees restaurant", "meervoud": "Chinese restaurants", "de_woord": False,
+    "beschrijving": "Chinees eten in Nijmegen: Chinese en Chinees-Indische restaurants, afhalen en bezorgen, met adressen en een kaart.",
+    "intro": "<p>Babi pangang van de Chinees om de hoek, dim sum of een uitgebreide rijsttafel: in Nijmegen vind je Chinese en "
+             "Chinees-Indische restaurants voor uit eten en voor afhalen.</p>"
+             "<p>Op deze pagina vind je alle Chinese restaurants in Nijmegen.</p>",
+    "faq": [("Waar haal je Chinees in Nijmegen?", "Hieronder staan alle Chinese en Chinees-Indische restaurants, met adres en kaart. Filter op afhalen of bezorgen.")],
+    "filtervoorbeeld": "afhalen of bezorgen",
+    "blogs": ["laat-je-culinair-verrassen-in-chinese-sfeer-de-beste-restaurants-in-nijmegen"],
+}, {
+    "slug": "ontbijt-en-brunch", "ouders": ["lunch", "koffiezaak", "restaurant"],
+    "zoek": r"ontbijt|brunch",
+    "naam": "Ontbijten en brunchen in Nijmegen", "enkelvoud": "Ontbijtzaak", "meervoud": "zaken voor ontbijt en brunch",
+    "beschrijving": "Ontbijten en brunchen in Nijmegen: lunchrooms, koffiebars en restaurants met ontbijt of brunch, met adressen en openingstijden.",
+    "intro": "<p>Rustig beginnen met een uitgebreid ontbijt, of op zondag lang brunchen met vrienden: in Nijmegen zijn genoeg plekken "
+             "die al vroeg open zijn, van een koffiebar met verse croissants tot een lunchroom met een brunchplank.</p>"
+             "<p>Op deze pagina vind je alle zaken voor ontbijt en brunch in Nijmegen.</p>",
+    "faq": [("Waar kun je ontbijten in Nijmegen?", "Hieronder staan de lunchrooms, koffiebars en restaurants die zelf ontbijt of brunch noemen, met openingstijden."),
+            ("Waar kun je brunchen in Nijmegen?", "Filter op brunch, of kijk bij de openingstijden welke zaken in het weekend vroeg open zijn.")],
+    "filtervoorbeeld": "terras, vegan of high tea",
+    "blogs": ["ontbijt"],
+}, {
+    "slug": "high-tea", "ouders": ["lunch", "koffiezaak", "restaurant"], "tekst": True,
+    "zoek": r"high[- ]?tea",
+    "naam": "High tea in Nijmegen", "enkelvoud": "Plek voor high tea", "meervoud": "plekken voor high tea",
+    "beschrijving": "High tea in Nijmegen: lunchrooms, tearooms en restaurants met een high tea, met adressen en openingstijden.",
+    "intro": "<p>Etagères vol scones, sandwiches en zoetigheid, met een pot thee erbij: een high tea is perfect voor een verjaardag, "
+             "Moederdag of gewoon een middag bijpraten. In Nijmegen kan dat bij lunchrooms, tearooms en restaurants.</p>"
+             "<p>Op deze pagina vind je alle plekken voor high tea in Nijmegen.</p>",
+    "faq": [("Waar kun je high tea drinken in Nijmegen?", "Hieronder staan de zaken die op hun eigen site een high tea noemen. Reserveren is meestal nodig.")],
+    "filtervoorbeeld": "terras of vegan",
+    "blogs": ["op-zoek-naar-de-beste-high-tea-locaties-in-nijmegen-5-tips-waar-je-meteen-enthousiast-van-wordt"],
+}, {
+    "slug": "tapas", "ouders": ["restaurant", "lunch", "cafe"], "tekst": True,
+    "zoek": r"tapas",
+    "naam": "Tapas in Nijmegen", "enkelvoud": "Tapasrestaurant", "meervoud": "tapasrestaurants", "de_woord": False,
+    "beschrijving": "Tapas eten in Nijmegen: Spaanse restaurants, tapasbars en shared dining, met adressen en een kaart.",
+    "intro": "<p>Kleine gerechtjes om te delen, een glas wijn erbij en de hele avond doorschuiven: tapas eten kan in Nijmegen bij "
+             "Spaanse restaurants, tapasbars en zaken met shared dining.</p>"
+             "<p>Op deze pagina vind je alle tapasrestaurants in Nijmegen.</p>",
+    "faq": [("Waar eet je tapas in Nijmegen?", "Hieronder staan de restaurants en cafés die zelf tapas of shared dining op de kaart hebben.")],
+    "filtervoorbeeld": "terras of vegan",
+    "blogs": ["tapas-eten-in-nijmegen-hier-kan-je-dat-doen", "op-zoek-naar-iets-nieuws-probeer-deze-spaanse-restaurants-in-nijmegen"],
+}, {
+    "slug": "all-you-can-eat", "ouders": ["restaurant", "afhaal"], "tekst": True,
+    "zoek": r"all[- ]you[- ]can[- ]eat",
+    "naam": "All-you-can-eat in Nijmegen", "enkelvoud": "All-you-can-eat-restaurant", "meervoud": "all-you-can-eat-restaurants", "de_woord": False,
+    "beschrijving": "All-you-can-eat in Nijmegen: sushi, wok en grill onbeperkt, met adressen en een kaart.",
+    "intro": "<p>Onbeperkt sushi, wokken of grillen voor een vaste prijs: all-you-can-eat is in Nijmegen populair voor een verjaardag "
+             "of een avond met een groep.</p><p>Op deze pagina vind je alle all-you-can-eat-restaurants in Nijmegen.</p>",
+    "faq": [("Waar kun je all-you-can-eat eten in Nijmegen?", "Hieronder staan de restaurants die zelf all-you-can-eat aanbieden, met adres en kaart.")],
+    "filtervoorbeeld": "kinderen of groepen",
+    "blogs": ["waarom-is-een-all-you-can-eat-restaurant-in-nijmegen-een-goede-keuze"],
+}, {
+    "slug": "sauna", "ouders": ["massagesalon", "zwembad"],
+    "zoek": r"sauna|\bspa\b|thermen|wellness|hammam|sanadome",
+    "naam": "Sauna en spa in Nijmegen", "enkelvoud": "Sauna", "meervoud": "sauna's en spa's",
+    "beschrijving": "Sauna en spa in Nijmegen: wellness, sauna's, hammam en spa-arrangementen, met adressen en een kaart.",
+    "intro": "<p>Een dagje sauna, een spa-arrangement met massage of een avond in de hammam: in Nijmegen kun je helemaal tot rust "
+             "komen, van een grote wellness tot een kleine spa in de stad.</p><p>Op deze pagina vind je alle sauna's en spa's in Nijmegen.</p>",
+    "faq": [("Is er een sauna in Nijmegen?", "Ja, hieronder staan de sauna's, spa's en wellness in Nijmegen, met adres en kaart."),
+            ("Kun je in Nijmegen een spa-arrangement boeken?", "Bij de meeste spa's wel, vaak met massage of een lunch erbij. Filter op cadeaubon voor een spa-cadeau.")],
+    "filtervoorbeeld": "cadeaubon, duo-massage of avond of weekend",
+    "blogs": [],
+}, {
+    "slug": "barbershop", "ouders": ["kapper"],
+    "zoek": r"barber",
+    "naam": "Barbershops in Nijmegen", "enkelvoud": "Barbershop", "meervoud": "barbershops",
+    "beschrijving": "Barbershops in Nijmegen: fades, baard trimmen en heren knippen, met en zonder afspraak, met adressen en een kaart.",
+    "intro": "<p>Een strakke fade, je baard bijwerken of gewoon even snel knippen: Nijmegen heeft barbershops in het centrum en in "
+             "elke wijk, met en zonder afspraak.</p><p>Op deze pagina vind je alle barbershops in Nijmegen.</p>",
+    "faq": [("Waar vind je een barber in Nijmegen?", "Hieronder staan alle barbershops van Nijmegen, met adres, openingstijden en kaart."),
+            ("Kun je bij een barber zonder afspraak terecht?", "Bij een aantal wel. Filter op zonder afspraak.")],
+    "filtervoorbeeld": "zonder afspraak, online boeken of avond of weekend",
+    "blogs": [],
+}]
+
 
 def slug(tekst):
     tekst = unicodedata.normalize("NFKD", tekst).encode("ascii", "ignore").decode().lower()
@@ -2480,7 +2602,9 @@ def start_pagina(groepen, root="../"):
     out.append('        <section class="gids-sectie">\n          <h2>Categorieën</h2>\n          <div class="gidsgroepen">')
     for g, cats in groepen:
         out.append('            <div><h3>%s</h3><ul>%s</ul></div>' % (esc(g), "".join(
-            '<li><a href="%sbedrijvengids-categorie/%s/">%s</a> (%d)</li>' % (root, cat["slug"], esc(cat["naam"]), len(gids) + len(overig))
+            '<li><a href="%sbedrijvengids-categorie/%s/">%s</a> (%d)%s</li>' % (root, cat["slug"], esc(cat["naam"]), len(gids) + len(overig),
+                '<ul>%s</ul>' % "".join('<li><a href="%sbedrijvengids-categorie/%s/">%s</a></li>' % (root, x["slug"], esc(x["naam"].replace(" in Nijmegen", "")))
+                                       for x in cat["subs"]) if cat.get("subs") else "")
             for cat, gids, overig in cats)))
     out.append('          </div>\n          <p>Staat jouw bedrijf er niet bij? <a href="%sbedrijf-aanmelden/">Meld je bedrijf aan</a>.</p>\n        </section>' % root)
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
@@ -2530,13 +2654,17 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in (lijst, faq))
     out = [kop(cat["naam"], cat["beschrijving"], canonical, root, None, extra + LEAFLET)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel gids">')
-    out.append('        <div class="kruimelpad"><a href="%s">Home</a> › Bedrijvengids › %s</div>' % (root, esc(cat["naam"])))
+    ouder = ('<a href="%sbedrijvengids-categorie/%s/">%s</a> › ' % (root, cat["ouder"], esc(cat["ouder_naam"]))) if cat.get("ouder") else ""
+    out.append('        <div class="kruimelpad"><a href="%s">Home</a> › Bedrijvengids › %s%s</div>' % (root, ouder, esc(cat["naam"])))
     out.append('        <p class="gidslabel">Bedrijvengids</p>')
     out.append("        <h1>%s</h1>" % esc(cat["naam"]))
     intro = re.sub(r"<p>Op deze pagina vind je.*?</p>", "<p>Op deze pagina vind je alle %d %s in Nijmegen, met openingstijden, "
                    "een eigen pagina en een kaart. Filter hieronder op wat jij belangrijk vindt, zoals %s.</p>"
                    % (len(alle), cat["meervoud"], cat["filtervoorbeeld"]), cat["intro"], flags=re.S)
     out.append('        <div class="inhoud-tekst">%s</div>' % intro)
+    if cat.get("subs"):
+        out.append('        <p class="gidssubs">Specifiek op zoek naar: %s</p>' % " &middot; ".join(
+            '<a href="%sbedrijvengids-categorie/%s/">%s</a>' % (root, x["slug"], esc(x["naam"].replace(" in Nijmegen", ""))) for x in cat["subs"]))
     uitgelicht = [b for b in alle if b.get("uitgelicht")]
     random.Random(datetime.date.today().isoformat() + cat["slug"]).shuffle(uitgelicht)
     uitgelicht = uitgelicht[:MAX_UITGELICHT]
@@ -2549,14 +2677,14 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
         out.append('            <a class="vrijeplek" href="%sbedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=%s"><strong>Nog %d %s vrij</strong>'
                    '<span>Zet jouw %s hier bovenaan, boven %d andere %s. Met foto\'s, je actie, een eigen knop en je banner bij onze blogs over %s.</span>'
                    '<span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>'
-                   % (root, esc(cat["slug"]), MAX_UITGELICHT - len(uitgelicht), "plek" if MAX_UITGELICHT - len(uitgelicht) == 1 else "plekken",
+                   % (root, esc(cat.get("ouder", cat["slug"])), MAX_UITGELICHT - len(uitgelicht), "plek" if MAX_UITGELICHT - len(uitgelicht) == 1 else "plekken",
                       esc(cat["enkelvoud"].lower()), len(alle), esc(cat["meervoud"]), esc(cat["blogonderwerp"])))
     out.append("          </div>\n        </section>")
     out.append(filter_blok(alle, cat))
     out.append('        <section class="gids-sectie">\n          <h2>Alle %s in Nijmegen</h2>\n          <div class="bedrijflijst">' % esc(cat["meervoud"]))
     out.extend("            " + gewone_kaart(b, root) for b in alle if b not in uitgelicht)
     out.append('          </div>\n        </section>')
-    out.append('        <div class="partner-slider" data-plaatsing="blog" data-onderwerp="%s"></div>' % cat["slug"])
+    out.append('        <div class="partner-slider" data-plaatsing="blog" data-onderwerp="%s"></div>' % cat.get("ouder", cat["slug"]))
     out.append('        <section class="gids-sectie">\n          <h2>Op de kaart</h2>')
     out.append(kaart_blok([(cat["groep"], b) for b in alle], root))
     out.append('        </section>')
@@ -2582,7 +2710,7 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     out.append('            </tbody>\n          </table></div>')
     out.append('          <p class="pakketvergelijk__knoppen"><a class="knop" href="%sbedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=%s">Kies Uitgelicht</a> '
                '<a href="%sadverteren-bij-nijmegenonline/">Alle mogelijkheden</a> &middot; Staat je %s er al? Klik op je pagina op <em>Dit is mijn bedrijf</em>.</p>'
-               '\n        </section>' % (root, esc(cat["slug"]), root, enk))
+               '\n        </section>' % (root, esc(cat.get("ouder", cat["slug"])), root, enk))
     if artikelen:
         out.append('        <section class="gids-sectie">\n          <h2>Lees ook</h2>\n          <ul>')
         out.extend('            <li><a href="%s%s/">%s</a></li>' % (root, s, esc(t)) for s, t in artikelen)
@@ -2896,9 +3024,39 @@ def zwervers(xml_, bekend, scan):
     return uit
 
 
+# Soorten uitjes die de scan apart noemt, maar die geen eigen categorie hebben: die blijven bij Uitjes
+UITJE_SOORTEN = ("Bowlen", "Escape rooms", "Karten", "Lasergamen", "Midgetgolf", "Trampolineparken")
+
+
 def niet_in(b, cat, scan):
     """Volgens de scan hoort het bedrijf niet in deze categorie (bijvoorbeeld een cafetaria tussen de restaurants)."""
-    return cat["slug"] in (scan.get(b["slug"], {}).get("niet_in") or {})
+    reden = (scan.get(b["slug"], {}).get("niet_in") or {}).get(cat["slug"])
+    if reden is not None and cat["slug"] == "uitjes" and any("hoort bij %s " % x in reden for x in UITJE_SOORTEN):
+        return False
+    return reden is not None
+
+
+def sub_bedrijven(sub, gebouwd, scan):
+    """De bedrijven van een subpagina: uit de ouders, op naam, keuken, kenmerken en de soort volgens de scan."""
+    uit, gezien = [], set()
+    for cat, gids, overig in gebouwd:
+        if cat["slug"] not in sub["ouders"]:
+            continue
+        for b in gids + overig:
+            s_ = scan.get(b["slug"], {})
+            tekst = " ".join([b["naam"], b.get("keuken") or "", " ".join(b.get("kenmerken") or []), " ".join(r for r in (s_.get("niet_in") or {}).values() if any("hoort bij %s " % x in r for x in UITJE_SOORTEN)),
+                              s_.get("tekst", "") if sub.get("tekst") else ""])
+            if b["slug"] not in gezien and re.search(sub["zoek"], tekst, re.I):
+                gezien.add(b["slug"])
+                uit.append(b)
+    return uit
+
+
+def sub_cat(sub, ouder):
+    """Een subpagina als categorie: wat niet bij de subpagina staat, komt van de eerste ouder."""
+    cat = dict(ouder, artikelen=[], subs=[], ouder=ouder["slug"])
+    cat.update({k: v for k, v in sub.items() if k not in ("ouders", "zoek", "tekst")})
+    return cat
 
 
 def main(bron):
@@ -2949,6 +3107,19 @@ def main(bron):
     # Betalende bedrijven kunnen ook bij andere categorieën staan ("ook_in" in data/bedrijvengids-pakketten.json): daar
     # alleen met hun kaart, de pagina blijft bij de eigen categorie
     # Nieuwsberichten over een bedrijf komen op zijn pagina (tools/nieuws.py bepaalt welke)
+    subs = []
+    for sub in SUBCATEGORIEEN:
+        ouders = [c for c, _, _ in gebouwd if c["slug"] in sub["ouders"]]
+        lijst = sub_bedrijven(sub, gebouwd, scan)
+        if not ouders or len(lijst) < MIN_SUB:
+            print("subpagina %s: %d bedrijven, te weinig" % (sub["slug"], len(lijst)))
+            continue
+        c = sub_cat(sub, ouders[0])
+        c["ouder_naam"] = ouders[0]["naam"]
+        subs.append((c, lijst))
+        for o in ouders:
+            o.setdefault("subs", []).append(c)
+        print("subpagina %s: %d bedrijven" % (sub["slug"], len(lijst)))
     per_bedrijf = nieuws.koppelingen(nieuws.laad(), [(b["slug"], b.get("website")) for _, g, o in gebouwd for b in g + o])
     for cat, gids, overig in gebouwd:
         extra = [b for c, g, o in gebouwd if c is not cat for b in g + o if cat["slug"] in b.get("ook_in", [])]
@@ -2959,6 +3130,9 @@ def main(bron):
             schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen, berichten=per_bedrijf.get(b["slug"], ())))
         blog_blokken(cat, gids + overig + extra)
         groepen.setdefault(cat["groep"], []).append((cat, gids, overig + extra))
+    for c, lijst in subs:
+        schrijf("bedrijvengids-categorie/%s" % c["slug"], categorie_pagina(c, [], lijst, []))
+        blog_blokken(c, lijst)
     if xml_.exists():
         pad.write_text(json.dumps(opgeslagen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         ZWERVERS_JSON.write_text(json.dumps([{"slug": b["slug"], "naam": b["naam"], "doel": {"naam": cat["naam"], "pad": cat_pad(cat)}}
