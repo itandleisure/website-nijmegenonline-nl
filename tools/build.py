@@ -15,6 +15,7 @@
    indexeert en niet de doorverwijzingen. De index zelf bouwt tools/zoekindex.py.
 6. Zet partials/analytics.html (Google Analytics) vlak voor </head> in elke pagina; de code zelf laadt
    alleen op www.nijmegenonline.nl, dus de testsite telt niet mee.
+   statistiek/ (interne, afgeschermde pagina) blijft helemaal buiten stap 1-6.
 7. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
 
 Gebruik: python tools/build.py [--live]
@@ -81,6 +82,8 @@ def main(live=False):
     kaart = doorverwijzingen()
     extern = collections.Counter()
     for page in pages():
+        if page.parent.name == "statistiek":  # interne pagina: geen menu, analytics of zoekindex
+            continue
         html = page.read_text(encoding="utf-8")
         nieuw = html
         root = root_prefix(page)
@@ -131,7 +134,7 @@ def main(live=False):
     sitemap(live)
 
     if live:
-        (ROOT / "robots.txt").write_text("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE, encoding="utf-8")
+        (ROOT / "robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /statistiek/\n\nSitemap: %s/sitemap.xml\n" % SITE, encoding="utf-8")
         print("Live-versie gemaakt: testbalk en noindex verwijderd, robots.txt open.")
 
     if extern:

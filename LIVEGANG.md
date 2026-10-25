@@ -30,6 +30,9 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
       Accountinstellingen → gegevens delen: alles uit; Gegevensverzameling → Google Signals uit;
       Gegevensbewaring op 14 maanden; advertentiepersonalisatie uit. Zonder deze instellingen is een cookiemelding nodig
 - [x] Search Console: de verificatie-tag (HTML-tag) staat in `partials/analytics.html`, dus de property blijft geverifieerd
+- [ ] Statistiekpagina `/statistiek/` (intern, met wachtwoord): in GitHub → Settings → Secrets and variables → Actions de
+      geheimen `STATISTIEK_WACHTWOORD`, `DATAFORSEO_LOGIN`, `DATAFORSEO_PASSWORD` en `GSC_SERVICE_ACCOUNT_JSON` zetten,
+      dan meet `.github/workflows/statistiek.yml` elke maandag. De cijfers staan versleuteld in `statistiek/data.json`
 
 ## Op de dag zelf
 
