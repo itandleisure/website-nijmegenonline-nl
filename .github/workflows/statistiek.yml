@@ -12,6 +12,10 @@ on:
         description: "AI-meting nu ook draaien (anders elke 4 weken)"
         type: boolean
         default: false
+      alleen:
+        description: "Alleen deze onderdelen meten, bijv. gsc (leeg = alles)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -35,7 +39,7 @@ jobs:
           DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
-        run: python tools/statistiek.py ${{ inputs.ai_forceren && '--ai-forceren' || '' }}
+        run: python tools/statistiek.py ${{ inputs.ai_forceren && '--ai-forceren' || '' }} ${{ inputs.alleen && format('--alleen {0}', inputs.alleen) || '' }}
       - name: Opslaan
         run: |
           git config user.name "agenda-bot"
