@@ -576,7 +576,7 @@ def openingstijden(meta):
         <p>Kom je met de auto? Lees dan eerst onze tips over <a href="../parkeren-in-nijmegen-met-een-aantal-slimme-tips/">parkeren in Nijmegen</a>. Op zoek naar leuke winkels? Kijk bij <a href="../thema/winkelen-in-nijmegen/">winkelen in Nijmegen</a> of in de <a href="../bedrijvengids/">bedrijvengids</a>.</p>
         <p class="formulier__hint">Gecontroleerd in {datum}. Rond feestdagen kunnen de tijden afwijken.</p>
         </div>""".format(tijden=tabel(("Dag", "Openingstijden"), WINKELTIJDEN), datum=GECONTROLEERD)
-    return pagina("Openingstijden centrum Nijmegen", meta.get("rank_math_description", "").strip('"'), "openingstijden-centrum-nijmegen",
+    return pagina("Openingstijden centrum Nijmegen en koopzondag", meta.get("rank_math_description", "").strip('"'), "openingstijden-centrum-nijmegen",
                   "Openingstijden centrum Nijmegen", inhoud)
 
 
