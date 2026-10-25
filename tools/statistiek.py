@@ -27,6 +27,7 @@ import sys
 import urllib.parse
 
 import requests
+from cryptography.exceptions import InvalidTag
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
@@ -52,7 +53,11 @@ def openen(wachtwoord):
         return {"zoekwoorden": [], "ai": [], "gsc": None}
     pakket = json.loads(BESTAND.read_text(encoding="utf-8"))
     zout, iv, data = (base64.b64decode(pakket[k]) for k in ("salt", "iv", "data"))
-    return json.loads(AESGCM(sleutel(wachtwoord, zout, pakket["iter"])).decrypt(iv, data, None))
+    try:
+        return json.loads(AESGCM(sleutel(wachtwoord, zout, pakket["iter"])).decrypt(iv, data, None))
+    except InvalidTag:
+        sys.exit("statistiek/data.json is met een ander wachtwoord versleuteld dan STATISTIEK_WACHTWOORD. "
+                 "Zet het oude wachtwoord terug, of verwijder data.json om opnieuw te beginnen.")
 
 
 def opslaan(gegevens, wachtwoord):
