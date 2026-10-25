@@ -142,5 +142,17 @@
   "reden": "Link naar de Kronenburgerpark-gids",
   "oud": "Het Kronenburgerpark is een park in het centrum",
   "nieuw": "Het <a href=\"../kronenburgerpark-nijmegen/\">Kronenburgerpark</a> is een park in het centrum"
+ },
+ {
+  "artikel": "bestemmingen/groesbeek",
+  "reden": "Link naar de Mookerheide-gids",
+  "oud": "ligt de betoverende Mookerheide.",
+  "nieuw": "ligt de betoverende <a href=\"../../mookerheide/\">Mookerheide</a>."
+ },
+ {
+  "artikel": "bestemmingen/mook",
+  "reden": "Link naar de Mookerheide-gids",
+  "oud": "De Mookerheide is een glooiend heidegebied",
+  "nieuw": "De <a href=\"../../mookerheide/\">Mookerheide</a> is een glooiend heidegebied"
  }
 ]
