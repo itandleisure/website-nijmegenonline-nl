@@ -77,6 +77,20 @@ def eindadres(pad, kaart):
     return pad
 
 
+def ongebruikte_doorverwijzingen_weg():
+    """Haalt de regels van oude adressen zonder backlinks of bezoekers uit _redirects (data/doorverwijzingen-ongebruikt.txt),
+    zodat het aantal onder de limiet van Cloudflare Pages blijft. Hun doorstuurpagina in de repo blijft bestaan."""
+    lijst, pad = ROOT / "data" / "doorverwijzingen-ongebruikt.txt", ROOT / "_redirects"
+    if not (lijst.exists() and pad.exists()):
+        return
+    weg = {r.strip() for r in lijst.read_text(encoding="utf-8").splitlines() if r.startswith("/")}
+    regels = pad.read_text(encoding="utf-8").splitlines()
+    over = [r for r in regels if not (r.startswith("/") and r.split()[0] in weg)]
+    if len(over) != len(regels):
+        pad.write_text("\n".join(over) + "\n", encoding="utf-8")
+    print("_redirects: %d doorverwijzingen" % sum(r.startswith("/") for r in over))
+
+
 def main(live=False):
     partials = {p.stem: p.read_text(encoding="utf-8").rstrip("\n") for p in PARTIALS.glob("*.html")}
     kaart = doorverwijzingen()
@@ -132,6 +146,7 @@ def main(live=False):
             page.write_text(nieuw, encoding="utf-8")
 
     sitemap(live)
+    ongebruikte_doorverwijzingen_weg()
 
     if live:
         (ROOT / "robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /statistiek/\n\nSitemap: %s/sitemap.xml\n" % SITE, encoding="utf-8")

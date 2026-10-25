@@ -18,9 +18,10 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 - [x] Afbeeldingen van `wp-content/uploads` staan als webp in `assets/uploads/` (`tools/afbeeldingen.py`);
       `tools/build.py` laat de pagina's ernaar wijzen. Nieuwe pagina's: eerst afbeeldingen downloaden, dan dit script
 - [ ] Partnerslider, zijbalk en formulieren getest op desktop en mobiel
-- [ ] `_redirects` onder de limiet van Cloudflare Pages houden: maximaal 2.000 vaste regels en 100 met `*`
-      (op 25-10-2026: ruim 1.750 en 5). Het blok `# agenda` groeit met elk afgelopen evenement; komt het totaal
-      boven de 2.000, dan de oudste evenementen in Cloudflare Bulk Redirects zetten of laten vallen
+- [x] `_redirects` onder de limiet van Cloudflare Pages (2.000 vaste regels en 100 met `*`): op 25-10-2026 276.
+      `tools/build.py` laat de oude adressen zonder backlinks, zoekverkeer of plek in de oude sitemap weg
+      (`data/doorverwijzingen-ongebruikt.txt`, analyse in `advies/doorverwijzingen/` in de projectmap); hun
+      doorstuurpagina blijft bestaan. Nieuwe doorverwijzingen, zoals afgelopen evenementen, komen er gewoon bij
 - [ ] Alle URL's uit de huidige sitemap en paginalijst geven 200 of een bedoelde 301 (paginalijst gecontroleerd op
       24-10-2026; oude pagina's die niet terugkomen staan in `data/oude-paginas.csv`)
 - [x] Google Analytics-code (zelfde Google-tag `GT-5R43F82` als WordPress, GA4-property 337370292) in elke pagina via
