@@ -181,8 +181,19 @@ def gsc_meten():
         return None
     from google.auth.transport.requests import Request
     from google.oauth2 import service_account
+    # tolerant voor wat er bij het plakken mee kan komen (naam=, aanhalingstekens, base64)
+    if "{" not in info:
+        try:
+            info = base64.b64decode(info.strip()).decode()
+        except ValueError:
+            pass
+    try:
+        sleutelinfo = json.loads(info[info.find("{"):info.rfind("}") + 1])
+    except ValueError:
+        raise RuntimeError("GSC_SERVICE_ACCOUNT_JSON is geen geldige JSON-sleutel (%d tekens, begint met %r)"
+                           % (len(info), info.strip()[:1]))
     cred = service_account.Credentials.from_service_account_info(
-        json.loads(info), scopes=["https://www.googleapis.com/auth/webmasters.readonly"])
+        sleutelinfo, scopes=["https://www.googleapis.com/auth/webmasters.readonly"])
     cred.refresh(Request())
     url = "https://www.googleapis.com/webmasters/v3/sites/%s/searchAnalytics/query" % urllib.parse.quote(
         INSTELLINGEN["search_console_property"], safe="")
