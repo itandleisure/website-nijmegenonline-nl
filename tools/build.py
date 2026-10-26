@@ -13,10 +13,13 @@
    echte URL's en de datum van de laatste wijziging.
 5. Zet data-pagefind-body en een soort-filter op <main>, zodat Pagefind (zoeken/) alleen echte pagina's
    indexeert en niet de doorverwijzingen. De index zelf bouwt tools/zoekindex.py.
-6. Zet partials/analytics.html (Google Analytics) vlak voor </head> in elke pagina; de code zelf laadt
+6. Geeft kaartfoto's zonder alt-tekst (<img alt=""> in een link) de titel van die kaart als alt-tekst.
+7. Zet partials/analytics.html (Google Analytics) vlak voor </head> in elke pagina; de code zelf laadt
    alleen op www.nijmegenonline.nl, dus de testsite telt niet mee.
-   statistiek/ (interne, afgeschermde pagina) blijft helemaal buiten stap 1-6.
-7. Met --live: testbalk en noindex eruit en robots.txt open voor zoekmachines (zie LIVEGANG.md).
+   statistiek/ (interne, afgeschermde pagina) blijft helemaal buiten stap 1-7.
+8. Live (met --live, of vanzelf zodra het bestand CNAME bestaat): testbalk en noindex eruit, robots.txt open voor
+   zoekmachines en 404.html zonder het pad van de testsite (zie LIVEGANG.md). Door de CNAME-controle blijft de site
+   live als de nachtelijke scripts pagina's opnieuw maken.
 
 Gebruik: python tools/build.py [--live]
 """
@@ -37,6 +40,8 @@ SOORTEN = {
     "nijmegen-evenementen-overzicht": "Agenda", "nieuwsoverzicht": "Nieuws", "vacatures": "Vacatures",
     "thema": "Gidsen",
 }
+KAART = re.compile(r'(<a\b[^>]*>)(.*?)</a>')
+TITEL = re.compile(r"<(?:strong|h[2-4])\b[^>]*>(.*?)</(?:strong|h[2-4])>", re.S)
 LINK = re.compile(r'(<a\b[^>]*?\bhref=")https?://(?:www\.)?nijmegenonline\.nl(/[^"#?]*)([^"]*")')
 
 
@@ -136,6 +141,7 @@ def main(live=False):
 
         nieuw = UPLOAD.sub(afbeelding, nieuw)
 
+        nieuw = KAART.sub(alt_tekst, nieuw)
         nieuw = zoekbaar(page, nieuw)
 
         if live:
@@ -149,6 +155,9 @@ def main(live=False):
     ongebruikte_doorverwijzingen_weg()
 
     if live:
+        pagina = ROOT / "404.html"
+        pagina.write_text(pagina.read_text(encoding="utf-8").replace("/website-nijmegenonline-nl/", "/")
+                          .replace(" in de testomgeving", ""), encoding="utf-8")
         (ROOT / "robots.txt").write_text("User-agent: *\nAllow: /\nDisallow: /statistiek/\n\nSitemap: %s/sitemap.xml\n" % SITE, encoding="utf-8")
         print("Live-versie gemaakt: testbalk en noindex verwijderd, robots.txt open.")
 
@@ -156,6 +165,16 @@ def main(live=False):
         print("Nog naar de huidige site (%d pagina's nog niet gebouwd):" % len(extern))
         for pad, n in extern.most_common():
             print("  %4dx %s" % (n, pad))
+
+
+def alt_tekst(m):
+    """Lege alt in een kaartlink wordt de titel van de kaart (<strong> of kop, anders de linktekst)."""
+    if 'alt=""' not in m.group(2):
+        return m.group(0)
+    t = TITEL.search(m.group(2))
+    tekst = re.sub(r"<[^>]+>", " ", t.group(1) if t else m.group(2))
+    tekst = re.sub(r"\s+", " ", tekst).strip().replace('"', "&quot;")
+    return m.group(1) + m.group(2).replace('alt=""', 'alt="%s"' % tekst) + "</a>" if tekst else m.group(0)
 
 
 def zoekbaar(page, html):
@@ -190,4 +209,4 @@ def sitemap(live):
 
 
 if __name__ == "__main__":
-    main(live="--live" in sys.argv)
+    main(live="--live" in sys.argv or (ROOT / "CNAME").exists())
