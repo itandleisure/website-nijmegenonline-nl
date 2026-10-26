@@ -176,7 +176,6 @@ section h2 { margin: 0 0 20px; font-size: 1.5rem; }
 .kaart p { margin: 0; color: var(--grijs); font-size: 0.95rem; }
 .kaart a { color: inherit; text-decoration: none; display: block; height: 100%; }
 .kaart a:hover h3 { color: var(--blauw); }
-.advertentie { border: 2px dashed #cfd5dc; border-radius: var(--radius); padding: 28px; margin: 8px 0; text-align: center; color: var(--grijs); background: var(--wit); }
 
 /* Artikel */
 .artikel-wrap { padding: 32px 0 48px; }
