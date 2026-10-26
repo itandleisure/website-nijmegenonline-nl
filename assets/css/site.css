@@ -450,6 +450,20 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .pakketten thead th span { display: block; font-size: .85rem; font-weight: 500; }
 .pakket-ja { color: var(--groen); font-weight: 700; font-size: 1.2rem; }
 .pakket-nee { color: #9aa1a9; }
+/* Op mobiel: de pakkettabel wordt een blok per regel, met de vier pakketten in twee kolommen */
+@media (max-width: 640px) {
+  .pakketten table { min-width: 0; }
+  .pakketten--vergelijk table, .pakketten--vergelijk thead, .pakketten--vergelijk tbody, .pakketten--vergelijk tr, .pakketten--vergelijk th, .pakketten--vergelijk td { display: block; }
+  .pakketten--vergelijk thead tr { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+  .pakketten--vergelijk thead td { display: none; }
+  .pakketten--vergelijk thead th { border-radius: 6px; border: 0; padding: 10px 12px; text-align: left; }
+  .pakketten--vergelijk tbody tr { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; row-gap: 6px; padding: 14px 0; border-bottom: 1px solid var(--rand); }
+  .pakketten--vergelijk tbody th { grid-column: 1 / -1; padding: 0 0 2px; border: 0; }
+  .pakketten--vergelijk tbody td { padding: 0; border: 0; text-align: left; font-size: .95rem; line-height: 1.4; }
+  .pakketten--vergelijk tbody td::before { content: attr(data-pakket); display: block; font-size: .78rem; font-weight: 600; color: var(--grijs); }
+  .pakketten--vergelijk .pakket-ja, .pakketten--vergelijk .pakket-nee { font-size: 1.05rem; }
+  .pakketten:not(.pakketten--vergelijk) td { white-space: nowrap; }
+}
 .vacaturelijst { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin: 20px 0; }
 .vacaturekaart { display: flex; flex-direction: column; gap: 6px; padding: 18px; border: 1px solid var(--rand); border-left: 4px solid var(--groen); border-radius: var(--radius); background: var(--wit); color: inherit; text-decoration: none; }
 .vacaturekaart strong { font-size: 1.15rem; }
