@@ -1,3 +1,5 @@
-# Testomgeving: niet indexeren zolang www.nijmegenonline.nl nog op WordPress draait.
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /statistiek/
+
+Sitemap: https://www.nijmegenonline.nl/sitemap.xml
