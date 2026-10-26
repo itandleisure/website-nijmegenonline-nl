@@ -462,9 +462,14 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .formulier__hint { margin: 0; font-size: .9rem; color: var(--grijs); }
 .formulier__kop { margin: 22px 0 0; padding-top: 14px; border-top: 1px solid #e3e6ea; font-size: 1.15rem; }
 .formulier__kop:first-of-type { margin-top: 4px; padding-top: 0; border-top: 0; }
-.formulier__rij { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; }
-.formulier__rij > div { display: grid; gap: 6px; align-content: start; }
+.formulier__rij { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 12px; }
+.formulier__rij > div { display: grid; gap: 6px; align-content: start; min-width: 0; }
 .formulier select { width: 100%; padding: 10px 12px; border: 1px solid #c9ced4; border-radius: 6px; font: inherit; background: #fff; }
+/* Datumveld en keuzelijst even hoog en wit; iOS Safari maakt datumvelden anders grijs, hoger en breder dan hun kolom */
+.formulier input[type="date"], .formulier select { box-sizing: border-box; min-width: 0; height: calc(1.7em + 22px); color: inherit; background-color: #fff; }
+.formulier input[type="date"] { -webkit-appearance: none; appearance: none; display: block; text-align: left; }
+.formulier input[type="date"]::-webkit-date-and-time-value { text-align: left; margin: 0; }
+@media (max-width: 340px) { .formulier__rij { grid-template-columns: minmax(0, 1fr); gap: 0; } }
 
 /* Bedrijvengids */
 .bedrijflijst { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-top: 14px; }
