@@ -37,13 +37,19 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
 
 ## Op de dag zelf
 
-1. `python tools/build.py --live`: haalt de testbalk en `noindex` weg en zet robots.txt open
-2. In `404.html` de verwijzingen `/website-nijmegenonline-nl/` vervangen door `/`
-3. Sitemap controleren: `sitemap.xml` wordt door `tools/build.py` gemaakt. Pagina's die nog op WordPress staan (bedrijvengids, agenda, nieuws) komen erin zodra ze hier gebouwd zijn
-4. Hosting naar Cloudflare Pages (die leest `_redirects` voor de 301's van oude pagina's, ook die uit Rank Math;
-   GitHub Pages kan dat niet)
-5. DNS van nijmegenonline.nl naar de nieuwe hosting; WordPress als back-up laten staan
-6. MailerLite: in de RSS-campagne de feed-adressen veranderen in
+De site blijft op GitHub Pages. Cloudflare Pages is niet nodig: `_redirects` werkt daar niet, maar elk oud adres heeft
+een eigen doorstuurpagina in de repo (meta-refresh met canonical), en die volgt Google ook.
+
+1. DNS bij Zxcs: de A- en AAAA-records van `@` (185.104.29.78 en 2a06:2ec0:1::117) weg, vier A-records
+   185.199.108.153, 185.199.109.153, 185.199.110.153 en 185.199.111.153 erbij, en `www` als CNAME naar
+   `itandleisure.github.io`. MX, `mail`, SPF, DKIM en DMARC blijven zoals ze zijn
+2. De pull request met het bestand `CNAME` (`www.nijmegenonline.nl`) mergen. De workflow *Agenda bijwerken* start dan
+   vanzelf en bouwt de live-versie: `tools/build.py` ziet `CNAME` en haalt de testbalk en `noindex` weg, zet robots.txt
+   open en maakt 404.html geschikt voor de root. Zolang `CNAME` er staat, blijft dat zo, ook na de nachtelijke runs
+3. GitHub → Settings → Pages: controleren dat het custom domain `www.nijmegenonline.nl` is, en *Enforce HTTPS*
+   aanvinken zodra het certificaat klaar is (kan tot een uur duren nadat de DNS is doorgekomen)
+4. WordPress als back-up laten staan
+5. MailerLite: in de RSS-campagne de feed-adressen veranderen in
    `https://www.nijmegenonline.nl/nieuwsbrief/uitgelicht.xml`, `.../nieuwsbrief/nieuws.xml` en `.../nieuwsbrief/agenda.xml`
-7. Google Analytics → Realtime: controleren of bezoekers binnenkomen
-8. Search Console: nieuwe sitemap indienen, daarna een paar weken 404's in de gaten houden
+6. Google Analytics → Realtime: controleren of bezoekers binnenkomen
+7. Search Console: nieuwe sitemap indienen, daarna een paar weken 404's in de gaten houden
