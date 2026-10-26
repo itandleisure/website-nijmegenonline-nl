@@ -271,7 +271,7 @@ def kop(titel, beschrijving, canonical, root, afbeelding=None, extra=""):
   <meta property="og:description" content="{beschrijving}">
   <meta property="og:url" content="{canonical}">
   <meta property="og:site_name" content="NijmegenOnline">{og_img}
-  <link rel="stylesheet" href="{root}assets/css/site.css?v=29">
+  <link rel="stylesheet" href="{root}assets/css/site.css?v=30">
   <link rel="icon" href="{root}assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{root}assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="{root}partners/slider.css?v=5">
