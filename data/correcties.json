@@ -154,5 +154,11 @@
   "reden": "Link naar de Mookerheide-gids",
   "oud": "De Mookerheide is een glooiend heidegebied",
   "nieuw": "De <a href=\"../../mookerheide/\">Mookerheide</a> is een glooiend heidegebied"
+ },
+ {
+  "artikel": "bestemmingen/groesbeek",
+  "reden": "Link naar de Vrijheidsmuseum-gids",
+  "oud": "In Groesbeek staat het indrukwekkende Vrijheidsmuseum, een plek",
+  "nieuw": "In Groesbeek staat het indrukwekkende <a href=\"../../vrijheidsmuseum-groesbeek/\">Vrijheidsmuseum</a>, een plek"
  }
 ]
