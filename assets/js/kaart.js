@@ -1,5 +1,6 @@
 // Kaart van de bedrijvengids: Leaflet met OpenStreetMap-tegels, punten die dicht bij elkaar liggen worden een bolletje met een getal.
-// Gegevens staan in <script type="application/json" id="kaartdata">: {groepen: [...], punten: [[naam, lat, lon, url, adres, groep], ...]}
+// Gegevens staan in <script type="application/json" id="kaartdata">:
+// {groepen: [...], iconen: {categorie: svg-inhoud}, punten: [[naam, lat, lon, url, adres, groep, categorie, (1, foto bij partners)], ...]}
 (function () {
   var el = document.getElementById("gidskaart");
   var bron = document.getElementById("kaartdata");
@@ -11,8 +12,17 @@
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-bijdragers</a>'
   }).addTo(kaart);
   var lagen = {};
-  // Eigen markers in de huisstijl (geen plaatjes): een groen rondje, en bolletjes met het aantal
-  var punt = L.divIcon({ className: "kaartpunt", html: "<span></span>", iconSize: [22, 22], iconAnchor: [11, 11], popupAnchor: [0, -10] });
+  // Eigen markers in de huisstijl: een groen rondje met het icoon van de categorie, en bolletjes met het aantal
+  var iconen = data.iconen || {}, punten = {};
+  function svg(inhoud) {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (inhoud || "") + "</svg>";
+  }
+  function punt(cat) {
+    if (!punten[cat]) {
+      punten[cat] = L.divIcon({ className: "kaartpunt", html: "<span>" + svg(iconen[cat]) + "</span>", iconSize: [28, 28], iconAnchor: [14, 14], popupAnchor: [0, -12] });
+    }
+    return punten[cat];
+  }
   function bolletje(cluster) {
     var n = cluster.getChildCount();
     var maat = n < 10 ? 34 : n < 50 ? 42 : 50;
@@ -27,7 +37,7 @@
   });
   function partnerpunt(p) {
     // Een kaartspeld met de foto van de partner (of een ster als er geen foto is) en een label eronder
-    var foto = p[7] ? '<img src="' + p[7].replace(/"/g, "&quot;") + '" alt="" onerror="this.remove()">' : "";
+    var foto = p[8] ? '<img src="' + p[8].replace(/"/g, "&quot;") + '" alt="" onerror="this.remove()">' : "";
     return L.divIcon({ className: "kaartpartner",
                        html: '<span class="kaartpartner__speld"><span class="kaartpartner__foto">' + foto + '</span></span>' +
                              '<span class="kaartpartner__label">Partner</span>',
@@ -40,10 +50,10 @@
     var adres = document.createElement("div");
     adres.textContent = p[4];
     pop.appendChild(a); pop.appendChild(adres);
-    if (p[6]) {
+    if (p[7]) {
       L.marker([p[1], p[2]], { icon: partnerpunt(p), title: p[0], zIndexOffset: 1000 }).bindPopup(pop).addTo(partners[p[5]]);
     } else {
-      L.marker([p[1], p[2]], { icon: punt, title: p[0] }).bindPopup(pop).addTo(bollen[p[5]]);
+      L.marker([p[1], p[2]], { icon: punt(p[6]), title: p[0] }).bindPopup(pop).addTo(bollen[p[5]]);
     }
   });
   var knoppen = document.getElementById("kaartgroepen");
@@ -54,7 +64,7 @@
     zet(g, i === 0);
     if (!knoppen) return;
     var b = document.createElement("button");
-    b.type = "button"; b.textContent = g; b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+    b.type = "button"; b.innerHTML = svg(iconen["groep:" + g]) + " "; b.appendChild(document.createTextNode(g)); b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
     b.onclick = function () {
       var aan = b.getAttribute("aria-pressed") !== "true";
       b.setAttribute("aria-pressed", aan ? "true" : "false");

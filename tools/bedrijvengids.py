@@ -28,6 +28,7 @@ import xml.etree.ElementTree as ET
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import DOORVERWIJZING, SITE, VOET, datum_nl as datum_tijd_nl, esc, kop, samenvatting, schoon  # noqa: E402
+import gidsiconen
 import nieuws  # noqa: E402
 
 NS = {"wp": "http://wordpress.org/export/1.2/", "content": "http://purl.org/rss/1.0/modules/content/"}
@@ -2575,13 +2576,16 @@ def kaart_blok(bedrijven, root, knoppen=False):
     """Kaart met alle bedrijven; bedrijven is een lijst (groep, bedrijf). Met knoppen kun je groepen aan- en uitzetten."""
     groepen = list(dict.fromkeys(g for g, _ in bedrijven))
     # Betalende bedrijven (partner, uitgelicht) krijgen een grote marker met hun foto, buiten de bolletjes
-    punten = [[b["naam"], round(float(b["lat"]), 6), round(float(b["lon"]), 6), "%sbedrijvengids/%s/" % (root, b["slug"]), adresregel(b), g]
-              + ([1, kaartfoto(b.get("foto") or "", root)] if b.get("uitgelicht") else [])
+    # Elk punt draagt zijn categorie; het icoon per categorie (tools/gidsiconen.py) gaat één keer mee
+    punten = [[b["naam"], round(float(b["lat"]), 6), round(float(b["lon"]), 6), "%sbedrijvengids/%s/" % (root, b["slug"]), adresregel(b), g,
+               b.get("categorie", "")] + ([1, kaartfoto(b.get("foto") or "", root)] if b.get("uitgelicht") else [])
               for g, b in bedrijven if b["lat"]]
-    data = json.dumps({"groepen": groepen, "punten": punten}, ensure_ascii=False).replace("</", "<\\/")
+    iconen = {c: gidsiconen.inhoud(c, g) for g, b in bedrijven for c in [b.get("categorie", "")]}
+    iconen.update({"groep:" + g: gidsiconen.inhoud(gidsiconen.GROEPEN.get(g, "")) for g in groepen})
+    data = json.dumps({"groepen": groepen, "punten": punten, "iconen": iconen}, ensure_ascii=False).replace("</", "<\\/")
     return ('%s          <div id="gidskaart" class="gidskaart" role="region" aria-label="Kaart met bedrijven"></div>\n'
             '          <script type="application/json" id="kaartdata">%s</script>\n'
-            '          <script src="%sassets/js/kaart.js?v=9" defer></script>'
+            '          <script src="%sassets/js/kaart.js?v=10" defer></script>'
             % ('          <div id="kaartgroepen" class="kaartgroepen"></div>\n' if knoppen else "", data, root))
 
 
@@ -2601,10 +2605,10 @@ def start_pagina(groepen, root="../"):
     out.append('          <p class="bron">Gegevens: onze eigen gids, aangevuld met © OpenStreetMap-bijdragers en Overture Maps.</p>\n        </section>')
     out.append('        <section class="gids-sectie">\n          <h2>Categorieën</h2>\n          <div class="gidsgroepen">')
     for g, cats in groepen:
-        out.append('            <div><h3>%s</h3><ul>%s</ul></div>' % (esc(g), "".join(
-            '<li><a href="%sbedrijvengids-categorie/%s/">%s</a> (%d)%s</li>' % (root, cat["slug"], esc(cat["naam"]), len(gids) + len(overig),
+        out.append('            <div><h3>%s%s</h3><ul>%s</ul></div>' % (gidsiconen.icoon(gidsiconen.GROEPEN.get(g, "")), esc(g), "".join(
+            '<li><a href="%sbedrijvengids-categorie/%s/">%s%s</a> (%d)%s</li>' % (root, cat["slug"], gidsiconen.icoon(cat["slug"], g), esc(cat["naam"]), len(gids) + len(overig),
                 '<ul>%s</ul>' % "".join('<li><a href="%sbedrijvengids-categorie/%s/">%s</a></li>' % (root, x["slug"], esc(x["naam"].replace(" in Nijmegen", "")))
-                                       for x in cat["subs"]) if cat.get("subs") else "")
+                                       for x in cat["subs"] if x["ouder"] == cat["slug"]) if any(x["ouder"] == cat["slug"] for x in cat.get("subs", [])) else "")
             for cat, gids, overig in cats)))
     out.append('          </div>\n          <p>Staat jouw bedrijf er niet bij? <a href="%sbedrijf-aanmelden/">Meld je bedrijf aan</a>.</p>\n        </section>' % root)
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
@@ -2657,7 +2661,7 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     ouder = ('<a href="%sbedrijvengids-categorie/%s/">%s</a> › ' % (root, cat["ouder"], esc(cat["ouder_naam"]))) if cat.get("ouder") else ""
     out.append('        <div class="kruimelpad"><a href="%s">Home</a> › Bedrijvengids › %s%s</div>' % (root, ouder, esc(cat["naam"])))
     out.append('        <p class="gidslabel">Bedrijvengids</p>')
-    out.append("        <h1>%s</h1>" % esc(cat["naam"]))
+    out.append('        <h1><span class="gidsicoon">%s</span>%s</h1>' % (gidsiconen.icoon(cat["slug"], cat["groep"]), esc(cat["naam"])))
     intro = re.sub(r"<p>Op deze pagina vind je.*?</p>", "<p>Op deze pagina vind je alle %d %s in Nijmegen, met openingstijden, "
                    "een eigen pagina en een kaart. Filter hieronder op wat jij belangrijk vindt, zoals %s.</p>"
                    % (len(alle), cat["meervoud"], cat["filtervoorbeeld"]), cat["intro"], flags=re.S)
@@ -3083,6 +3087,8 @@ def main(bron):
         gids = [b for b in gids if b["slug"] not in gebruikt and not niet_in(b, cat, scan)]
         overig = [b for b in overig if b["slug"] not in gebruikt and not niet_in(b, cat, scan)]
         gebruikt.update(b["slug"] for b in gids + overig)
+        for b in gids + overig:
+            b["categorie"] = cat["slug"]
         scan_toepassen(overig, ROOT / "data" / "bedrijvengids-scan.json")
         scan_toepassen(gids, ROOT / "data" / "bedrijvengids-scan.json", eigen_tekst=True)
         correcties_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-correcties.json")
