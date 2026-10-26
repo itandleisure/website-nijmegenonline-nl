@@ -198,7 +198,7 @@ Betaalde pakketten staan in `data/bedrijvengids-pakketten.json` (pakket, betaald
 
 Alle beslissingen van de redactie staan in bestanden, zodat een nieuwe scan ze niet ongedaan maakt:
 
-- `data/bedrijvengids-scan.json`: per bedrijf de status. `goedgekeurd` = tekst en kenmerken akkoord, `verwijderd` = uit de gids, met `reden` (wie en wanneer). Een verwijderd bedrijf komt nooit vanzelf terug, ook niet via een nieuwe scan of een claim; alleen door de status met de hand te veranderen.
+- `data/bedrijvengids-scan.json`: per bedrijf de status. `voorstel` = tekst uit de scan, staat sinds de livegang (26-10-2026) gewoon in Google; `goedgekeurd` = tekst en kenmerken akkoord, `verwijderd` = uit de gids, met `reden` (wie en wanneer). Een verwijderd bedrijf komt nooit vanzelf terug, ook niet via een nieuwe scan of een claim; alleen door de status met de hand te veranderen.
 - `data/bedrijvengids-correcties.json`: adressen en ligging die de redactie heeft verbeterd (gaan voor op oude gids en OpenStreetMap).
 - `data/bedrijvengids-websites.json`: uitkomst van de wekelijkse websitecontrole; zonder werkende website valt een bedrijf vanzelf uit de gids.
 - `data/bedrijvengids-wijzigingen.json`: goedgekeurde claims (*Dit is mijn bedrijf*), gaan voor op alles.

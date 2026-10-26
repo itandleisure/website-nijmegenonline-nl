@@ -2412,8 +2412,9 @@ def bedrijf_pagina(b, cat, anderen, root="../../", berichten=()):
         {"@type": "ListItem", "position": 2, "name": cat["naam"], "item": "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"])},
         {"@type": "ListItem", "position": 3, "name": b["naam"], "item": canonical}]}
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in (ld, kruim))
-    if not b["tekst"] or b.get("concept"):
-        # Nog geen (goedgekeurde) eigen tekst: wel een pagina (klikbaar vanuit de lijst), maar niet in Google tot de tekst er is
+    if not b["tekst"]:
+        # Helemaal geen tekst: wel een pagina (klikbaar vanuit de lijst), maar niet in Google tot er tekst is.
+        # Een concepttekst uit de scan mag wel in Google (besluit Frans bij de livegang, 26-10-2026).
         extra += '\n  <meta name="robots" content="noindex">'
     out = [kop(b["naam"], beschrijving, canonical, root, foto_url(b["foto"], SITE + "/") or None, extra)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel bedrijf">')
