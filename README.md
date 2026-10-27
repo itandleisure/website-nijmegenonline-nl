@@ -150,6 +150,12 @@ Is het eigenlijk een evenement, zet dan bij het doorsturen **Agenda** vooraan in
 haalt dan datum, tijden, locatie en adres uit de mail en schrijft de agendatekst; het komt in het tabblad Evenementen
 en gaat verder als een aangemeld evenement.
 
+### Berichten en evenementen zonder foto
+
+Komt er geen foto mee, dan krijgt het bericht of evenement een foto van Nijmegen uit `assets/img/standaard/` (op de
+kaart, als deelafbeelding en op de pagina met het bijschrift "Archieffoto NijmegenOnline"). Een foto erbij zetten
+is genoeg: een .webp van ongeveer 1200 px breed in die map, en bij de volgende bouw doet hij mee.
+
 ### Welk Claude-model per stroom
 
 Besluit Frans (27-10-2026): Sonnet 5.5 voor het lopende werk, Opus 5.5 alleen op afroep. Per stroom in te stellen
