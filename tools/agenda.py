@@ -15,9 +15,11 @@ Afgesproken met Frans (22-10-2026):
   datum in.
 
 Een evenement toevoegen: een nieuw item in data/evenementen.json met slug, titel, start en eind
-("2026-11-28T20:30" of alleen "2026-11-28" voor de hele dag), locatie, adres, afbeelding, alt, tekst (HTML)
+("2026-11-28T20:30" of alleen "2026-11-28" voor de hele dag), locatie, adres, afbeelding, alt, tekst (HTML),
 uitgelicht (klanten: groen, bovenaan en met een link naar hun site in "link"; de rest is een gewone,
 gratis vermelding). Daarna: python tools/agenda.py && python tools/build.py
+Evenementen uit een mail (tools/aanmeldingen.py) hebben ook bijschrift (fotograaf of bron) en fotos: de andere
+foto's uit de mail, elk met een eigen bijschrift, onder de tekst.
 
 Gebruik: python tools/agenda.py [--datum 2026-10-22]
 """
@@ -33,6 +35,7 @@ import zoneinfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import DOORVERWIJZING, SITE, VOET, esc, kop, samenvatting  # noqa: E402
+import nieuws  # noqa: E402
 
 BEWAAR_DAGEN = 92
 OVERZICHT = "nijmegen-evenementen-overzicht"
@@ -200,9 +203,13 @@ def event_pagina(e, vandaag, komend, aanbieders):
     if e["afbeelding"]:
         foto = lokaal(e["afbeelding"])
         src = root + foto if foto and not "/wp-content/" in e["afbeelding"] else e["afbeelding"]
-        out.append('        <figure><img src="%s" alt="%s"></figure>' % (esc(src), esc(e["alt"] or e["titel"])))
+        bijschrift = "<figcaption>%s</figcaption>" % esc(e["bijschrift"]) if e.get("bijschrift") else ""
+        out.append('        <figure><img src="%s" alt="%s">%s</figure>' % (esc(src), esc(e["alt"] or e["titel"]), bijschrift))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % e["tekst"])
+    if e.get("fotos"):
+        # De andere foto's uit de mail (tools/aanmeldingen.py), elk met het eigen bijschrift
+        out.append(nieuws.extra_fotos_html(e["fotos"], e["titel"], root))
     van_hen = []
     if e.get("aanbieder") in aanbieders:
         naam = aanbieders[e["aanbieder"]]["naam"]
