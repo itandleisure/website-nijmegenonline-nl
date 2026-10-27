@@ -34,6 +34,17 @@
       document.head.appendChild(ga);
     }
   </script>
+  <!-- Microsoft Clarity (project z48xknybw7): heatmaps en sessieopnames om te zien waar bezoekers klikken en afhaken.
+       Laadt net als Analytics alleen op www.nijmegenonline.nl. Clarity maskeert ingevoerde tekst standaard (zie /privacy-policy/). -->
+  <script>
+    if (location.hostname === "www.nijmegenonline.nl") {
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "z48xknybw7");
+    }
+  </script>
   <!-- /analytics -->
 </head>
 <body>
@@ -104,7 +115,7 @@
 
         <h2>In het kort</h2>
         <ul>
-          <li>We meten bezoekersaantallen met Google Analytics, privacyvriendelijk ingesteld. We gebruiken geen advertentie- of trackingcookies.</li>
+          <li>We meten bezoekersaantallen met Google Analytics en bekijken met Microsoft Clarity hoe pagina's gebruikt worden, beide privacyvriendelijk ingesteld. We gebruiken geen advertentie- of trackingcookies.</li>
           <li>We verkopen je gegevens niet en geven ze niet aan adverteerders.</li>
           <li>Gegevens uit formulieren bewaren we drie maanden. Daarna verwijderen we ze.</li>
           <li>Je kunt ons altijd vragen je gegevens in te zien of te verwijderen.</li>
@@ -123,6 +134,9 @@
           <li>De gegevens worden na 14 maanden automatisch verwijderd.</li>
         </ul>
         <p>Google Analytics plaatst twee cookies, <code>_ga</code> en <code>_ga_…</code>, om herhaalde bezoeken te herkennen. Ze blijven maximaal twee jaar bewaard. Google kan gegevens in de Verenigde Staten verwerken. Google is aangesloten bij het EU-VS Data Privacy Framework, dat daarvoor een passend beschermingsniveau biedt. Wil je helemaal niet meegeteld worden? Weiger dan cookies in je browser, of gebruik de <a href="https://tools.google.com/dlpage/gaoptout?hl=nl" target="_blank" rel="noopener">browserextensie van Google</a>.</p>
+
+        <h2>Gebruik van de pagina's: Microsoft Clarity</h2>
+        <p>Met Microsoft Clarity zien we hoe bezoekers onze pagina's gebruiken: waar ze klikken, hoe ver ze scrollen en waar ze afhaken. Zo kunnen we de site overzichtelijker maken. Clarity maakt daarvoor geanonimiseerde heatmaps en opnames van de schermweergave. Tekst die je zelf invoert, zoals in een formulier, wordt daarbij standaard gemaskeerd en komt niet in de opnames terecht. Clarity plaatst de cookies <code>_clck</code> en <code>_clsk</code> om een bezoek te herkennen; die blijven maximaal een jaar bewaard. We gebruiken Clarity niet voor advertenties. Microsoft kan gegevens in de Verenigde Staten verwerken en is aangesloten bij het EU-VS Data Privacy Framework. Meer informatie staat in de <a href="https://privacy.microsoft.com/nl-nl/privacystatement" target="_blank" rel="noopener">privacyverklaring van Microsoft</a>.</p>
 
         <h2>Vindbaarheid in Google: Search Console</h2>
         <p>Via Google Search Console zien we op welke zoekwoorden onze pagina's in Google verschijnen en hoe vaak erop wordt geklikt. Dat zijn alleen totalen. Search Console plaatst geen cookies op deze site, en we zien niet wie er gezocht heeft.</p>
