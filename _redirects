@@ -269,9 +269,12 @@
 /listdom-category/* /bedrijvengids/ 301
 # agenda (tools/agenda.py)
 /events/benefietconcert-nijmeegs-mannenkoor/ /nijmegen-evenementen-overzicht/ 301
+/events/concert-vierdaagse-orkest-in-de-goffert/ /nijmegen-evenementen-overzicht/ 301
 /events/festival-de-oversteek/ /nijmegen-evenementen-overzicht/ 301
+/events/highlight-tours-in-het-vrijheidsmuseum-6/ /nijmegen-evenementen-overzicht/ 301
 /events/jaarlijks-gratis-festival-nijmegen-klinkt/ /nijmegen-evenementen-overzicht/ 301
 /events/late-night-shopping-in-kleef/ /nijmegen-evenementen-overzicht/ 301
 /events/modelspoor-weekend-2025-een-paradijs-voor-treinliefhebbers-in-ewijk/ /nijmegen-evenementen-overzicht/ 301
 /events/oude-ambachten-herleven-bij-buurderij-de-lage-hof-in-overasselt/ /nijmegen-evenementen-overzicht/ 301
 /events/stadfeest-in-kleve/ /kerstmarkt-kleve/ 301
+/event-location/openluchttheater-de-goffert/ /nijmegen-evenementen-overzicht/ 301
