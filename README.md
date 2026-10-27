@@ -142,6 +142,10 @@ Nieuw nieuws komt per mail binnen:
 4. Na "Opslaan en publiceren" zet de uurlijkse taak (`tools/aanmeldingen.py`) het op de site en krijgt de inzender
    een mail met de link.
 
+Zitten er meer foto's in de mail, dan wordt de grootste de hoofdfoto en staan de andere op de beoordeelpagina, elk met
+een eigen bijschrift (fotograaf of bron), een vinkje "Niet op de site" en een knop "Hoofdfoto maken". Die andere foto's
+komen onder de tekst op de pagina.
+
 Is het eigenlijk een evenement, zet dan bij het doorsturen **Agenda** vooraan in het onderwerp ("Agenda: Fwd: …"). Claude
 haalt dan datum, tijden, locatie en adres uit de mail en schrijft de agendatekst; het komt in het tabblad Evenementen
 en gaat verder als een aangemeld evenement.

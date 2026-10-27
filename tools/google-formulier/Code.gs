@@ -60,14 +60,15 @@ var FORMULIEREN = {
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 3, onderwerp: 'Evenement aangemeld', goedkeuren: true,
     openbaar: ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats',
-      'site', 'evenementmail', 'evenementtelefoon', 'aanbieder'],
+      'site', 'evenementmail', 'evenementtelefoon', 'aanbieder', 'bijschrift'],
     velden: [['titel', 'Evenement'], ['datum', 'Begindatum'], ['starttijd', 'Begintijd'], ['einddatum', 'Einddatum'],
       ['eindtijd', 'Eindtijd'],
       ['omschrijving', 'Omschrijving'], ['locatie', 'Locatie'], ['adres', 'Adres'], ['postcode', 'Postcode'],
       ['plaats', 'Plaats'], ['site', 'Website'], ['evenementmail', 'E-mail bezoekers'],
-      ['evenementtelefoon', 'Telefoon bezoekers'], ['foto', 'Foto'],
+      ['evenementtelefoon', 'Telefoon bezoekers'], ['foto', 'Foto'], ['bijschrift', 'Fotobijschrift'],
       ['naam', 'Naam'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking'],
-      ['aanbieder', 'Aanbieder']]   // gekozen op de beoordeelpagina (slug uit data/aanbieders.json, of "nieuw")
+      ['aanbieder', 'Aanbieder'],   // gekozen op de beoordeelpagina (slug uit data/aanbieders.json, of "nieuw")
+      ['extrafotos', "Andere foto's (Drive-ID's)"], ['fotocredits', "Bijschriften andere foto's"]]
   },
   // Geen formulier op de site: mails die de redactie doorstuurt naar nieuws@nijmegenonline.nl.
   // tools/nieuws_ophalen.py (GitHub, elke 15 minuten) stuurt ze hierheen, zie nieuwsOntvangen().
@@ -77,7 +78,7 @@ var FORMULIEREN = {
     bewerkbaar: ['titel', 'samenvatting', 'bijschrift', 'naam', 'email'],   // naam en e-mail niet naar de site
     velden: [['titel', 'Titel'], ['samenvatting', 'Samenvatting (Google)'], ['bijschrift', 'Fotobijschrift'],
       ['omschrijving', 'Ingestuurde tekst'], ['foto', 'Foto'], ['extrafotos', "Andere foto's (Drive-ID's)"],
-      ['naam', 'Inzender'], ['email', 'E-mail inzender'], ['onderwerp', 'Onderwerp mail'], ['berichtid', 'Bericht-ID mail']]
+      ['fotocredits', "Bijschriften andere foto's"], ['naam', 'Inzender'], ['email', 'E-mail inzender'], ['onderwerp', 'Onderwerp mail'], ['berichtid', 'Bericht-ID mail']]
   }
 };
 
@@ -224,6 +225,12 @@ function lijst() {
       if (g.tekstSite) item.omschrijving = g.tekstSite;
       var blob = fotoBlob(g.fotoId);
       if (blob) item.foto = { type: blob.getContentType(), data: Utilities.base64Encode(blob.getBytes()) };
+      // De andere foto's, elk met het eigen bijschrift (fotograaf of bron)
+      var cr = credits(g);
+      item.fotos = String(g.extrafotos || '').split(',').filter(String).map(function (fid) {
+        var b = fotoBlob(fid);
+        return b ? { type: b.getContentType(), data: Utilities.base64Encode(b.getBytes()), bijschrift: String(cr[fid] || '') } : null;
+      }).filter(Boolean);
       item.gepubliceerd = ScriptApp.getService().getUrl() + '?actie=gepubliceerd&type=' + type + '&id=' +
         encodeURIComponent(item.id) + '&t=' + teken(type, item.id);
       return item;
@@ -451,24 +458,9 @@ function nieuwsOntvangen(p) {
   var g = { pagina: 'Mail aan nieuws@', onderwerp: schoon(p.onderwerp, 300), berichtid: berichtid,
     omschrijving: schoon(p.tekst, 30000), titel: '', samenvatting: '', bijschrift: '', naam: '', email: '', foto: '', fotoId: '' };
   g.titel = g.onderwerp;
-  var extra = [];
   var fotos = [];
   try { fotos = JSON.parse(p.fotos || '[]'); } catch (fout) { console.error('Foto-lijst onleesbaar: ' + fout); }
-  fotos.slice(0, 8).forEach(function (f, i) {
-    if (!/^image\/(jpeg|png|webp)$/.test(f.type || '')) return;
-    try {
-      var bestand = bewaarFoto('data:' + f.type + ';base64,' + f.data, schoon(f.naam, 100) || 'foto', g.onderwerp);
-      if (!g.fotoId) {
-        g.foto = bestand.getUrl();
-        g.fotoId = bestand.getId();
-      } else {
-        extra.push(bestand.getId());
-      }
-    } catch (fout) {
-      console.error('Foto ' + i + ' opslaan mislukt: ' + fout);
-    }
-  });
-  g.extrafotos = extra.join(',');
+  g.extrafotos = bewaarMailfotos(fotos, g);
 
   var controle = [];
   if (apiSleutel()) {
@@ -506,6 +498,32 @@ function nieuwsOntvangen(p) {
     console.error('Mail versturen mislukt: ' + fout);
   }
   return antwoord({ ok: true, id: g.id });
+}
+
+// Foto's uit een doorgestuurde mail naar Drive: de eerste (grootste) wordt de hoofdfoto, de rest komt in extrafotos.
+// Geeft de Drive-ID's van die andere foto's, met komma's ertussen.
+function bewaarMailfotos(fotos, g) {
+  var extra = [];
+  fotos.slice(0, 8).forEach(function (f, i) {
+    if (!/^image\/(jpeg|png|webp)$/.test(f.type || '')) return;
+    try {
+      var bestand = bewaarFoto('data:' + f.type + ';base64,' + f.data, schoon(f.naam, 100) || 'foto', g.titel || g.onderwerp);
+      if (!g.fotoId) {
+        g.foto = bestand.getUrl();
+        g.fotoId = bestand.getId();
+      } else {
+        extra.push(bestand.getId());
+      }
+    } catch (fout) {
+      console.error('Foto ' + i + ' opslaan mislukt: ' + fout);
+    }
+  });
+  return extra.join(',');
+}
+
+// Bijschriften (fotograaf of bron) van de andere foto's: {Drive-ID: tekst}, als JSON in de kolom fotocredits
+function credits(g) {
+  try { return JSON.parse(g.fotocredits || '{}') || {}; } catch (fout) { return {}; }
 }
 
 var NIEUWSREDACTEUR = [
@@ -606,23 +624,14 @@ function evenementUitMail(p) {
     foto: '', fotoId: '' };
   var fotos = [];
   try { fotos = JSON.parse(p.fotos || '[]'); } catch (fout) { console.error('Foto-lijst onleesbaar: ' + fout); }
-  fotos = fotos.filter(function (f) { return /^image\/(jpeg|png|webp)$/.test(f.type || ''); });
-  if (fotos.length) {
-    try {
-      var bestand = bewaarFoto('data:' + fotos[0].type + ';base64,' + fotos[0].data, schoon(fotos[0].naam, 100) || 'foto', g.titel);
-      g.foto = bestand.getUrl();
-      g.fotoId = bestand.getId();
-    } catch (fout) {
-      console.error('Foto opslaan mislukt: ' + fout);
-    }
-  }
+  g.extrafotos = bewaarMailfotos(fotos, g);
 
   var controle = [];
   if (apiSleutel()) {
     try {
       var ai = evenementUitTekst(g);
       ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'locatie', 'adres', 'postcode', 'plaats', 'site',
-        'evenementmail', 'evenementtelefoon'].forEach(function (k) { if (ai[k]) g[k] = ai[k]; });
+        'evenementmail', 'evenementtelefoon', 'bijschrift'].forEach(function (k) { if (ai[k]) g[k] = ai[k]; });
       g.naam = ai.inzender_naam;
       g.email = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(ai.inzender_email) ? ai.inzender_email : '';
       g.telefoon = ai.inzender_telefoon;
@@ -636,7 +645,6 @@ function evenementUitMail(p) {
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(g.datum || '')) controle.push('Geen datum gevonden: vul die in voordat je publiceert.');
   if (!g.fotoId) controle.push('Er zat geen bruikbare foto bij de mail.');
-  if (fotos.length > 1) controle.push('In de mail zaten ' + fotos.length + " foto's; de grootste is gekozen.");
   if (g.postcode) g.postcode = postcode(g.postcode);
   g.controle = controle.join('\n');
 
@@ -675,6 +683,7 @@ var AGENDAREDACTEUR = [
   '- evenementmail en evenementtelefoon: alleen contactgegevens die bedoeld zijn voor bezoekers.',
   '- inzender_naam, inzender_email en inzender_telefoon: de oorspronkelijke afzender van de mail, uit de doorstuurkop',
   '  of de handtekening. Nooit een adres van nijmegenonline.nl: dat is de redactie zelf.',
+  '- bijschrift: de fotograaf als die genoemd wordt, als "Foto: Naam". Anders leeg.',
   '',
   'tekst: een nieuwe, unieke omschrijving voor de agenda, volledig in eigen woorden. In goed, natuurlijk Nederlands,',
   'helder en vriendelijk, informatief en niet overdreven wervend. Geen emoji, geen reeksen uitroeptekens. Twee tot vier',
@@ -690,7 +699,7 @@ var AGENDAREDACTEUR = [
 ].join('\n');
 
 var AGENDA_VELDEN = ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'locatie', 'adres', 'postcode', 'plaats', 'site',
-  'evenementmail', 'evenementtelefoon', 'tekst', 'inzender_naam', 'inzender_email', 'inzender_telefoon'];
+  'evenementmail', 'evenementtelefoon', 'bijschrift', 'tekst', 'inzender_naam', 'inzender_email', 'inzender_telefoon'];
 var AGENDA_SCHEMA = {
   type: 'object',
   properties: AGENDA_VELDEN.reduce(function (uit, k) { uit[k] = { type: 'string' }; return uit; }, {
@@ -737,6 +746,7 @@ function bewerkPagina(type, id) {
   var basis = ScriptApp.getService().getUrl() + '?type=' + type + '&id=' + encodeURIComponent(id) + '&t=' + t + '&actie=';
 
   var velden = (cfg.bewerkbaar || cfg.openbaar).filter(function (veld) { return veld !== 'omschrijving'; }).map(function (veld) {
+    if (veld === 'bijschrift') return '';   // staat onder de foto
     var soort = { datum: 'date', einddatum: 'date', starttijd: 'time', eindtijd: 'time', site: 'url', bedrijfsmail: 'email', evenementmail: 'email',
       telefoon: 'tel', evenementtelefoon: 'tel', email: 'email' }[veld] || 'text';
     if (veld === 'aanbieder') return aanbiederKeuze(g);
@@ -757,15 +767,24 @@ function bewerkPagina(type, id) {
       : '<p><a href="' + html_(g.foto) + '" target="_blank">Foto bekijken in Drive</a></p>';
   }
 
+  var heeftBijschrift = cfg.velden.some(function (v) { return v[0] === 'bijschrift'; });
+  if (blob && heeftBijschrift) {
+    foto += '<label>Bijschrift hoofdfoto (fotograaf of bron, bijvoorbeeld "Foto: Jan Jansen" of "Eigen foto")' +
+      '<input type="text" name="bijschrift" value="' + html_(g.bijschrift) + '"></label>';
+  }
+  // De andere foto's uit de mail: elk met een eigen bijschrift, weg te halen of te kiezen als hoofdfoto
+  var cr = credits(g);
   var andere = String(g.extrafotos || '').split(',').filter(String).map(function (fid) {
     var klein = null;
     try { klein = DriveApp.getFileById(fid).getThumbnail(); } catch (fout) { return ''; }
     if (!klein) return '';
-    return '<button type="button" class="kies" data-id="' + html_(fid) + '" onclick="kiesFoto(this)"><img src="data:' +
-      klein.getContentType() + ';base64,' + Utilities.base64Encode(klein.getBytes()) + '" alt=""></button>';
+    return '<div class="andere"><img src="data:' + klein.getContentType() + ';base64,' + Utilities.base64Encode(klein.getBytes()) + '" alt="">' +
+      '<div><label>Bijschrift<input type="text" name="credit_' + html_(fid) + '" value="' + html_(cr[fid] || '') + '"></label>' +
+      '<label class="vink"><input type="checkbox" name="weg_' + html_(fid) + '"> Niet op de site</label>' +
+      '<button type="button" class="kies" data-id="' + html_(fid) + '" onclick="kiesFoto(this)">Hoofdfoto maken</button></div></div>';
   }).join('');
   if (andere) {
-    foto += '<p>Andere foto\'s uit de mail (klik om die te gebruiken):</p><div class="andere">' + andere + '</div>' +
+    foto += '<p><b>Andere foto\'s uit de mail</b> (komen onder de tekst, in deze volgorde)</p>' + andere +
       '<input type="hidden" name="kiesfoto" id="kiesfoto" value="">';
   }
 
@@ -780,8 +799,9 @@ function bewerkPagina(type, id) {
     '.knoppen{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}button,.knop{padding:12px 20px;border:0;border-radius:6px;' +
     'font:inherit;font-weight:bold;cursor:pointer;color:#fff;background:#9aa1a9;text-decoration:none}' +
     'button.hoofd{background:#539c20}button:disabled{opacity:.5}#melding{font-weight:bold;min-height:1.4em}.leeg{color:#777}' +
-    '.andere{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}button.kies{padding:0;background:none;border:3px solid transparent}' +
-    'button.kies img{display:block;max-height:110px;border-radius:4px}button.kies.gekozen{border-color:#539c20}';
+    '.andere{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start}.andere img{max-height:110px;max-width:160px;border-radius:4px;margin:0}' +
+    '.andere div{flex:1}.andere label{margin-bottom:8px}.vink{font-weight:normal}.vink input{display:inline;width:auto;margin:0 6px 0 0}' +
+    'button.kies{padding:8px 14px;background:#9aa1a9}button.kies.gekozen{background:#539c20}';
 
   var html = '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
     '<style>' + css + '</style></head><body>' +
@@ -817,7 +837,7 @@ function bewerkPagina(type, id) {
     'function knoppen(aan){document.querySelectorAll("button").forEach(function(b){b.disabled=!aan})}' +
     'function stuur(actie){' +
     ' var f=document.getElementById("f"),d={actie:actie,type:SLEUTEL.type,id:SLEUTEL.id,t:SLEUTEL.t};' +
-    ' Array.prototype.forEach.call(f.elements,function(el){if(el.name)d[el.name]=el.value});' +
+    ' Array.prototype.forEach.call(f.elements,function(el){if(el.name)d[el.name]=el.type==="checkbox"?el.checked:el.value});' +
     ' var weg=document.getElementById("fotoweg");d.fotoweg=!!(weg&&weg.checked);' +
     ' var bestand=document.getElementById("foto").files[0];' +
     ' if(bestand&&bestand.size>5*1024*1024){zet("De foto is groter dan 5 MB.");return}' +
@@ -829,9 +849,9 @@ function bewerkPagina(type, id) {
     '  .withFailureHandler(function(e){knoppen(true);zet("Dat lukte niet: "+e.message)}).bewaarBewerking(d)};' +
     ' if(bestand){var lezer=new FileReader();lezer.onload=function(){d.foto=lezer.result;d.foto_naam=bestand.name;verder()};' +
     '  lezer.readAsDataURL(bestand)}else verder()}' +
-    'function kiesFoto(knop){document.querySelectorAll(".kies").forEach(function(b){b.classList.remove("gekozen")});' +
-    ' var veld=document.getElementById("kiesfoto");if(veld.value===knop.getAttribute("data-id")){veld.value="";zet("");return}' +
-    ' knop.classList.add("gekozen");veld.value=knop.getAttribute("data-id");zet("Deze foto wordt de hoofdfoto als je opslaat of publiceert.")}' +
+    'function kiesFoto(knop){var was=knop.classList.contains("gekozen");document.querySelectorAll(".kies").forEach(function(b){b.classList.remove("gekozen")});' +
+    ' var veld=document.getElementById("kiesfoto");if(was){veld.value="";zet("");return}' +
+    ' knop.classList.add("gekozen");veld.value=knop.getAttribute("data-id");zet("Deze foto wordt de hoofdfoto als je opslaat of publiceert; de huidige hoofdfoto komt dan bij de andere foto\'s.")}' +
     ADRES_JS +
     '</script></body></html>';
   return HtmlService.createHtmlOutput(html).setTitle((type === 'nieuws' ? 'Nieuwsbericht' : 'Aanmelding') + ' bewerken · NijmegenOnline')
@@ -867,15 +887,31 @@ function bewaarBewerking(d) {
       var foto = bewaarFoto(d.foto, schoon(d.foto_naam, 100) || 'foto', d.titel || d.bedrijf || '');
       zet('foto', foto.getUrl());
       zet('Foto-ID', foto.getId());
-    } else if (d.kiesfoto && cfg === FORMULIEREN.nieuws) {
-      // Een andere foto uit de mail wordt de hoofdfoto; de oude gaat naar de andere foto's
+    }
+    if (plek(cfg, 'extrafotos') >= 0) {
+      // De andere foto's: bijschrift per foto, weghalen, of een andere foto als hoofdfoto (de oude gaat naar de andere)
       var andere = String(r[plek(cfg, 'extrafotos')] || '').split(',').filter(String);
-      if (andere.indexOf(d.kiesfoto) >= 0) {
+      var cr = credits({ fotocredits: r[plek(cfg, 'fotocredits')] });
+      andere.forEach(function (fid) {
+        if (d['credit_' + fid] !== undefined) cr[fid] = schoon(d['credit_' + fid], 200);
+      });
+      andere.filter(function (fid) { return d['weg_' + fid] === true || d['weg_' + fid] === 'true'; }).forEach(function (fid) {
+        andere = andere.filter(function (x) { return x !== fid; });
+        delete cr[fid];
+        try { DriveApp.getFileById(fid).setTrashed(true); } catch (fout) { console.error('Foto ' + fid + ': ' + fout); }
+      });
+      if (d.kiesfoto && andere.indexOf(d.kiesfoto) >= 0 && !d.fotoweg && !/^data:image/.test(d.foto || '')) {
         var oudId = String(r[k.indexOf('Foto-ID')] || '');
-        zet('extrafotos', andere.filter(function (x) { return x !== d.kiesfoto; }).concat(oudId ? [oudId] : []).join(','));
+        var oudBijschrift = String(r[plek(cfg, 'bijschrift')] || '');
+        andere = andere.filter(function (x) { return x !== d.kiesfoto; }).concat(oudId ? [oudId] : []);
+        if (oudId) cr[oudId] = oudBijschrift;
+        zet('bijschrift', cr[d.kiesfoto] || '');
+        delete cr[d.kiesfoto];
         zet('Foto-ID', d.kiesfoto);
         zet('foto', 'https://drive.google.com/file/d/' + d.kiesfoto + '/view');
       }
+      zet('extrafotos', andere.join(','));
+      zet('fotocredits', JSON.stringify(cr));
     }
     var uit = {};
     if (d.actie === 'online') {
@@ -1309,7 +1345,7 @@ function label(cfg, veld) {
 }
 
 function stuurMail(cfg, g, onderwerp) {
-  var rijen = cfg.velden.filter(function (v) { return ['extrafotos', 'berichtid'].indexOf(v[0]) < 0; })
+  var rijen = cfg.velden.filter(function (v) { return ['extrafotos', 'fotocredits', 'berichtid'].indexOf(v[0]) < 0; })
     .map(function (v) { return [v[1], g[v[0]]]; }).concat([['Pagina', g.pagina]]);
   var stijl = 'font-family:Arial,sans-serif;font-size:14px';
   var html = '<table cellpadding="6" style="border-collapse:collapse;' + stijl + '">' +

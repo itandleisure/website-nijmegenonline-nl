@@ -60,6 +60,19 @@ def bewaar_foto(foto, naam):
     return pad
 
 
+def extra_fotos(a, naam):
+    """De andere foto's uit de mail, elk met het eigen bijschrift (fotograaf of bron): [{"foto": url, "bijschrift": ...}]."""
+    uit = []
+    for n, f in enumerate(a.get("fotos") or [], 2):
+        try:
+            pad = bewaar_foto(f, "%s-%d" % (naam, n))
+        except Exception as fout:  # één kapotte foto mag het bericht niet tegenhouden
+            print("Foto %d van %s overgeslagen: %s" % (n, naam, fout))
+            continue
+        uit.append({"foto": "%s/%s" % (SITE, pad), "bijschrift": (f.get("bijschrift") or "").strip()})
+    return uit
+
+
 def alinea(tekst):
     delen = [d.strip() for d in re.split(r"\n\s*\n", tekst.replace("\r", "")) if d.strip()]
     return "\n".join("<p>%s</p>" % html.escape(d).replace("\n", "<br>") for d in delen)
@@ -104,6 +117,7 @@ def nieuwsbericht(a, berichten):
         "gewijzigd": nu,
         "foto": "%s/%s" % (SITE, foto) if foto else "",
         "bijschrift": (a.get("bijschrift") or "").strip() if foto else "",
+        "fotos": extra_fotos(a, "nieuws-" + s),
         "tekst": tekst,
         "aanmelding": a["id"],
     }
@@ -205,6 +219,8 @@ def evenement(a, evenementen, aanbieders):
         "adres": adres,
         "afbeelding": "%s/%s" % (SITE, foto) if foto else "",
         "alt": a["titel"].strip() if foto else "",
+        "bijschrift": (a.get("bijschrift") or "").strip() if foto else "",
+        "fotos": extra_fotos(a, s),
         "uitgelicht": False,
         "aanbieder": aanbieder or "",
         "link": "",

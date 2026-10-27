@@ -83,6 +83,18 @@ def foto_src(b, root):
     return b["foto"]
 
 
+def extra_fotos_html(fotos, titel, root, inspringen="        "):
+    """De andere foto's bij een bericht of evenement, elk met het eigen bijschrift, onder de tekst."""
+    if not fotos:
+        return ""
+    figuren = []
+    for n, f in enumerate(fotos, 2):
+        bijschrift = "<figcaption>%s</figcaption>" % esc(f["bijschrift"]) if f.get("bijschrift") else ""
+        figuren.append('%s<figure><img src="%s" alt="%s, foto %d" loading="lazy">%s</figure>'
+                       % (inspringen, esc(foto_src({"foto": f["foto"]}, root)), esc(titel), n, bijschrift))
+    return "\n".join(figuren)
+
+
 def zonder_dubbele_foto(b):
     """De uitgelichte foto staat vaak ook als eerste afbeelding in de tekst."""
     if not b["foto"]:
@@ -126,6 +138,8 @@ def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
                       bijschrift))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
+    if b.get("fotos"):
+        out.append(extra_fotos_html(b["fotos"], b["titel"], root))
     if bedrijven:
         out.append('        <p class="gids-verder">In de bedrijvengids: %s</p>' % ", ".join(
             '<a href="%sbedrijvengids/%s/">%s</a>' % (root, s, esc(naam)) for s, naam in bedrijven))
