@@ -150,6 +150,23 @@ Is het eigenlijk een evenement, zet dan bij het doorsturen **Agenda** vooraan in
 haalt dan datum, tijden, locatie en adres uit de mail en schrijft de agendatekst; het komt in het tabblad Evenementen
 en gaat verder als een aangemeld evenement.
 
+### Welk Claude-model per stroom
+
+Besluit Frans (27-10-2026): Sonnet 5.5 voor het lopende werk, Opus 5.5 alleen op afroep. Per stroom in te stellen
+zonder nieuwe code:
+
+| Stroom | Standaard | Anders instellen |
+|---|---|---|
+| Nieuwsmails herschrijven | Sonnet 5.5 | scripteigenschap `MODEL_NIEUWS` |
+| Evenementen uit mails | Sonnet 5.5 | scripteigenschap `MODEL_EVENEMENT` |
+| Aangemelde bedrijven en evenementen (knoppen op de beoordeelpagina) | Sonnet 5.5 | scripteigenschap `MODEL_FORMULIER` |
+| Knop "Nieuwe tekst laten schrijven" | Opus 5.5 | scripteigenschap `MODEL_OPNIEUW` |
+| Bedrijvengids-scan | Sonnet 5.5 | GitHub-variabele `MODEL_BEDRIJVENGIDS` |
+
+Scripteigenschappen staan in Apps Script onder Projectinstellingen (tandwiel); een GitHub-variabele onder Settings →
+Secrets and variables → Actions → Variables. Waarde bijvoorbeeld `claude-opus-5-5` of `claude-sonnet-5-5`. Dit alles
+loopt via de API-sleutel (API-tegoed op console.anthropic.com), los van het Claude-abonnement.
+
 Instellen (eenmalig): secrets `NIEUWS_MAIL_SERVER`, `NIEUWS_MAIL_GEBRUIKER`, `NIEUWS_MAIL_WACHTWOORD` en
 `NIEUWS_SLEUTEL` in GitHub. De sleutel maakt de functie `maakNieuwsSleutel` in het Apps Script. Alleen mails van
 `nijmegenonline.nl`-adressen worden verwerkt; andere gaan naar de map Genegeerd. Een extra afzender kan erbij via de
