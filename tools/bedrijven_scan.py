@@ -33,7 +33,9 @@ import anthropic
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 UIT = ROOT / "data" / "bedrijvengids-scan.json"
 BATCH = ROOT / "data" / "bedrijvengids-batch.json"   # een batch die nog loopt
-MODEL = "claude-opus-5-5"
+# Sonnet volstaat voor het samenvatten van een bedrijfswebsite (besluit Frans, 27-10-2026); anders instellen via de
+# GitHub-variabele MODEL_BEDRIJVENGIDS (Settings → Secrets and variables → Actions → Variables)
+MODEL = os.environ.get("MODEL_BEDRIJVENGIDS") or "claude-sonnet-5-5"
 
 # Vaste lijst (zie advies/bedrijvengids-categorieen.md); Claude kiest alleen hieruit
 CATEGORIEEN = {

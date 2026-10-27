@@ -83,6 +83,30 @@ def foto_src(b, root):
     return b["foto"]
 
 
+STANDAARDFOTOS = ROOT / "assets" / "img" / "standaard"
+
+
+def standaardfoto(sleutel):
+    """Een foto van Nijmegen voor berichten en evenementen zonder eigen foto (wens Frans 27-10-2026).
+
+    De foto's staan in assets/img/standaard/; daar kan er zo een bij. Elke slug krijgt vast dezelfde
+    foto, zodat de kaarten afwisselen maar niet bij elke bouw verspringen. Geeft "assets/img/standaard/x.webp"."""
+    fotos = sorted(f for f in STANDAARDFOTOS.glob("*.webp")) if STANDAARDFOTOS.is_dir() else []
+    if not fotos:
+        return None
+    keuze = fotos[sum(ord(c) for c in sleutel) % len(fotos)]
+    return "assets/img/standaard/" + keuze.name
+
+
+def archieffoto_html(sleutel, root):
+    """<figure> met een standaardfoto en een eerlijk bijschrift, voor de pagina zelf."""
+    foto = standaardfoto(sleutel)
+    if not foto:
+        return ""
+    return ('        <figure class="archieffoto"><img src="%s%s" alt="Nijmegen"><figcaption>Archieffoto NijmegenOnline</figcaption></figure>'
+            % (root, foto))
+
+
 def extra_fotos_html(fotos, titel, root, inspringen="        "):
     """De andere foto's bij een bericht of evenement, elk met het eigen bijschrift, onder de tekst."""
     if not fotos:
@@ -105,7 +129,8 @@ def zonder_dubbele_foto(b):
 
 
 def nieuwskaart(b, root):
-    img = '<img src="%s" alt="" loading="lazy">' % esc(foto_src(b, root)) if b["foto"] else ""
+    src = foto_src(b, root) if b["foto"] else root + (standaardfoto(b["slug"]) or "")
+    img = '<img src="%s" alt="" loading="lazy">' % esc(src) if src != root else ""
     return ('<article class="kaart"><a href="%snieuwsoverzicht/%s/">%s<div class="kaart__tekst"><div class="label">%s</div>'
             "<h3>%s</h3></div></a></article>" % (root, b["slug"], img, esc(datum_nl(b["datum"])), esc(b["titel"])))
 
@@ -125,7 +150,8 @@ def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
     if b["foto"]:
         ld[0]["image"] = b["foto"]
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in ld)
-    out = [kop(b["seo_titel"], beschrijving, canonical, root, b["foto"] or None, extra)]
+    standaard = None if b["foto"] else standaardfoto(b["slug"])
+    out = [kop(b["seo_titel"], beschrijving, canonical, root, b["foto"] or (SITE + "/" + standaard if standaard else None), extra)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel nieuwsbericht">')
     out.append('        <div class="kruimelpad"><a href="%s">Home</a> › <a href="%s/%s/">Nieuws</a> › %s</div>'
                % (root, SITE, OVERZICHT, esc(b["titel"])))
@@ -136,6 +162,8 @@ def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
         out.append('        <figure><img src="%s" alt="%s">%s</figure>'
                    % (esc(foto_src(b, root)), esc(b["titel"] if b.get("aanmelding") else goede_alt("", b["foto"], b["titel"])),
                       bijschrift))
+    elif standaard:
+        out.append(archieffoto_html(b["slug"], root))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
     if b.get("fotos"):

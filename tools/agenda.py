@@ -98,7 +98,7 @@ VERVANGFOTO = {}
 
 def kaartfoto(e, root, klasse):
     """<img> voor een kaart. Logo's en banners (heel breed of staand) worden heel getoond in plaats van bijgesneden."""
-    foto = lokaal(e["afbeelding"]) or VERVANGFOTO.get(e.get("aanbieder"))
+    foto = lokaal(e["afbeelding"]) or VERVANGFOTO.get(e.get("aanbieder")) or nieuws.standaardfoto(e["slug"])
     if not foto:
         return ""
     try:
@@ -165,7 +165,8 @@ def event_pagina(e, vandaag, komend, aanbieders):
         {"@type": "ListItem", "position": 2, "name": "Agenda", "item": "%s/%s/" % (SITE, OVERZICHT)},
         {"@type": "ListItem", "position": 3, "name": e["titel"], "item": canonical}]}
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in (ld, kruim))
-    out = [kop(e["titel"], beschrijving, canonical, root, e["afbeelding"] or None, extra)]
+    standaard = None if e["afbeelding"] else nieuws.standaardfoto(e["slug"])
+    out = [kop(e["titel"], beschrijving, canonical, root, e["afbeelding"] or (SITE + "/" + standaard if standaard else None), extra)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">\n      <div class="artikel-layout">\n      <article class="artikel evenement">')
     out.append('        <div class="kruimelpad"><a href="%s">Home</a> › <a href="%s/%s/">Agenda</a> › %s</div>'
                % (root, SITE, OVERZICHT, esc(e["titel"])))
@@ -205,6 +206,8 @@ def event_pagina(e, vandaag, komend, aanbieders):
         src = root + foto if foto and not "/wp-content/" in e["afbeelding"] else e["afbeelding"]
         bijschrift = "<figcaption>%s</figcaption>" % esc(e["bijschrift"]) if e.get("bijschrift") else ""
         out.append('        <figure><img src="%s" alt="%s">%s</figure>' % (esc(src), esc(e["alt"] or e["titel"]), bijschrift))
+    elif standaard:
+        out.append(nieuws.archieffoto_html(e["slug"], root))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % e["tekst"])
     if e.get("fotos"):
