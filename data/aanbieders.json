@@ -39,6 +39,10 @@
   "naam": "Bibliotheek Mariënburg",
   "adres": "Mariënburg 29"
  },
+ "binnenstad": {
+  "naam": "Binnenstad",
+  "adres": "Opschlag 20-22, 47533 Kleve"
+ },
  "binnenstad-nijmegen": {
   "naam": "Binnenstad Nijmegen"
  },
@@ -121,6 +125,10 @@
  "de-wieken": {
   "naam": "De Wieken",
   "adres": "Esdoornlaan 5, 6584 BD Molenhoek"
+ },
+ "de-witte-raaf": {
+  "naam": "De Witte Raaf",
+  "adres": "Grotestraat 11, 6511 VB Nijmegen"
  },
  "dijkmagazijn": {
   "naam": "dijkmagazijn",
