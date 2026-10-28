@@ -1,6 +1,7 @@
 # Meet elke maandag hoe NijmegenOnline scoort in Google en AI-antwoorden (tools/statistiek.py) en zet de
 # versleutelde cijfers in statistiek/data.json. Geheimen (Settings → Secrets and variables → Actions):
-# STATISTIEK_WACHTWOORD, DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD en GSC_SERVICE_ACCOUNT_JSON.
+# STATISTIEK_WACHTWOORD, DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD, GSC_SERVICE_ACCOUNT_JSON, BING_WEBMASTER_API_KEY
+# en CLARITY_API_TOKEN (Clarity draait daarnaast dagelijks, zie clarity.yml).
 name: Statistiek bijwerken
 
 on:
@@ -13,7 +14,7 @@ on:
         type: boolean
         default: false
       alleen:
-        description: "Alleen deze onderdelen meten, bijv. gsc (leeg = alles)"
+        description: "Alleen deze onderdelen meten: gsc, zoekwoorden, ai, bing, clarity (leeg = alles)"
         type: string
         default: ""
 
@@ -39,6 +40,8 @@ jobs:
           DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+          CLARITY_API_TOKEN: ${{ secrets.CLARITY_API_TOKEN }}
         run: python tools/statistiek.py ${{ inputs.ai_forceren && '--ai-forceren' || '' }} ${{ inputs.alleen && format('--alleen {0}', inputs.alleen) || '' }}
       - name: Opslaan
         run: |

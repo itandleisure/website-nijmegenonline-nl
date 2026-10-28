@@ -1,0 +1,36 @@
+# Haalt elke nacht de Clarity-cijfers van gisteren op (tools/statistiek.py --alleen clarity), omdat Clarity maar
+# 1 tot 3 dagen teruggeeft per opvraging. Geheimen: STATISTIEK_WACHTWOORD en CLARITY_API_TOKEN.
+name: Clarity bijwerken
+
+on:
+  schedule:
+    - cron: "40 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-bouwen
+  cancel-in-progress: false
+
+jobs:
+  meten:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests cryptography
+      - name: Meten
+        env:
+          STATISTIEK_WACHTWOORD: ${{ secrets.STATISTIEK_WACHTWOORD }}
+          CLARITY_API_TOKEN: ${{ secrets.CLARITY_API_TOKEN }}
+        run: python tools/statistiek.py --alleen clarity
+      - name: Opslaan
+        run: |
+          git config user.name "agenda-bot"
+          git config user.email "agenda-bot@users.noreply.github.com"
+          git add statistiek/data.json
+          git diff --cached --quiet || (git commit -m "Clarity bijgewerkt" && git pull --rebase && git push)
