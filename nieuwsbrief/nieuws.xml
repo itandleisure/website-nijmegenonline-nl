@@ -8,6 +8,24 @@
     <lastBuildDate>Wed, 28 Oct 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Met de bus naar De Vereeniging en schouwburg voor 2,50 euro</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro/</guid>
+      <pubDate>Wed, 28 Oct 2026 13:42:30 +0100</pubDate>
+      <description>Bezoekers van Stadsschouwburg Nijmegen en Concertgebouw De Vereeniging reizen voor 2,50 euro heen en terug met RRReis. Kinderen tot 13 jaar gaan gratis mee.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro.jpg" length="69344" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Boekpresentatie 'Molukse Lente' in Bibliotheek Hatert</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/boekpresentatie-molukse-lente-in-bibliotheek-hatert/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/boekpresentatie-molukse-lente-in-bibliotheek-hatert/</guid>
+      <pubDate>Wed, 28 Oct 2026 13:42:30 +0100</pubDate>
+      <description>Mediamaker Eva Metselaar presenteert op 12 november in Bibliotheek Hatert haar boek 'Molukse Lente' over tien Molukse rolmodellen. Gratis, aanmelden nodig.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-boekpresentatie-molukse-lente-in-bibliotheek-hatert.jpg" length="56841" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-boekpresentatie-molukse-lente-in-bibliotheek-hatert.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Grenzland-Draisine sluit seizoen af, in november ritten op aanvraag</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/grenzland-draisine-sluit-seizoen-af-in-november-ritten-op-aanvraag/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/grenzland-draisine-sluit-seizoen-af-in-november-ritten-op-aanvraag/</guid>
@@ -166,24 +184,6 @@
       <description>Simon Mamahit nieuwe stadsdichter van Nijmegen</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-simon-mamahit-nieuwe-stadsdichter-van-nijmegen.jpg" length="47296" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-simon-mamahit-nieuwe-stadsdichter-van-nijmegen.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Replica van kijkkast Gerrit Schouten tentoongesteld in Suriname</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/replica-van-kijkkast-gerrit-schouten-tentoongesteld-in-suriname/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/replica-van-kijkkast-gerrit-schouten-tentoongesteld-in-suriname/</guid>
-      <pubDate>Fri, 15 Mar 2024 10:06:26 +0100</pubDate>
-      <description>Replica van kijkkast Gerrit Schouten tentoongesteld in Suriname</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-replica-van-kijkkast-gerrit-schouten-tentoongesteld-in-suriname.jpg" length="37001" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-replica-van-kijkkast-gerrit-schouten-tentoongesteld-in-suriname.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Nieuwe raad van bestuur voor Talis</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/nieuwe-raad-van-bestuur-voor-talis/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/nieuwe-raad-van-bestuur-voor-talis/</guid>
-      <pubDate>Thu, 08 Feb 2024 15:35:17 +0100</pubDate>
-      <description>Per 1 maart is Eefje Lentjes – de Bruin benoemd tot nieuwe bestuurder van Talis. Eefje werkt vijf jaar als controller bij Talis. Daarvoor werkte zij acht jaar bij accountantskantoor PwC. Samen met…</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-nieuwe-raad-van-bestuur-voor-talis.jpg" length="28299" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-nieuwe-raad-van-bestuur-voor-talis.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

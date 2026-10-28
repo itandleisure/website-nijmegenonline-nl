@@ -142,7 +142,7 @@
  },
  "doornroosje": {
   "naam": "Doornroosje",
-  "adres": "Stationsplein 11"
+  "adres": "Stationsplein 11, Nijmegen"
  },
  "evenemententerrein-park-winkelsteeg": {
   "naam": "Evenemententerrein Park Winkelsteeg",
@@ -297,6 +297,10 @@
  "petruskerk": {
   "naam": "Petruskerk",
   "adres": "Schependomlaan 85"
+ },
+ "plan-a": {
+  "naam": "Plan_A",
+  "adres": "Vlietstraat 22, 6542 SM Nijmegen"
  },
  "pop-culture-arcade": {
   "naam": "Pop Culture Arcade",
