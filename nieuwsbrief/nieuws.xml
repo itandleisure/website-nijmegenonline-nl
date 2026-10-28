@@ -8,6 +8,24 @@
     <lastBuildDate>Wed, 28 Oct 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Vrijwilliger Knud helpt bij DigiD-vragen in Bibliotheek Mariënburg</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/vrijwilliger-knud-helpt-bij-digid-vragen-in-bibliotheek-marienburg/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/vrijwilliger-knud-helpt-bij-digid-vragen-in-bibliotheek-marienburg/</guid>
+      <pubDate>Wed, 28 Oct 2026 19:47:41 +0100</pubDate>
+      <description>Elke donderdagochtend helpt vrijwilliger Knud Gramser inwoners in Bibliotheek Mariënburg met DigiD en andere digitale overheidszaken.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-vrijwilliger-knud-helpt-bij-digid-vragen-in-bibliotheek-marienburg.jpg" length="37024" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-vrijwilliger-knud-helpt-bij-digid-vragen-in-bibliotheek-marienburg.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Clowns Got Talent met acht acts in Cultuurhuis de Lindenberg</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/clowns-got-talent-met-acht-acts-in-cultuurhuis-de-lindenberg/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/clowns-got-talent-met-acht-acts-in-cultuurhuis-de-lindenberg/</guid>
+      <pubDate>Wed, 28 Oct 2026 19:47:41 +0100</pubDate>
+      <description>Op zondag 8 november strijkt de twaalfde editie van Clowns Got Talent neer in Nijmegen, met acht clowneske acts in De Lindenberg.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-clowns-got-talent-met-acht-acts-in-cultuurhuis-de-lindenberg.jpg" length="65857" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-clowns-got-talent-met-acht-acts-in-cultuurhuis-de-lindenberg.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Met de bus naar De Vereeniging en schouwburg voor 2,50 euro</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro/</guid>
@@ -166,24 +184,6 @@
       <description>Sven Ratzke wint de Karel de Grote Oeuvreprijs stad Nijmegen 2024</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-sven-ratzke-wint-de-karel-de-grote-oeuvreprijs-stad-nijmegen-2024.jpg" length="25726" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-sven-ratzke-wint-de-karel-de-grote-oeuvreprijs-stad-nijmegen-2024.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Erespeld Grenzland Europaër van het jaar 2024</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/erespeld-grenzland-europaer-van-het-jaar-2024/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/erespeld-grenzland-europaer-van-het-jaar-2024/</guid>
-      <pubDate>Tue, 23 Apr 2024 10:14:49 +0200</pubDate>
-      <description>Erespeld Grenzland Europaër van het jaar 2024</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-erespeld-grenzland-europaer-van-het-jaar-2024.jpg" length="38325" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-erespeld-grenzland-europaer-van-het-jaar-2024.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Simon Mamahit nieuwe stadsdichter van Nijmegen</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/simon-mamahit-nieuwe-stadsdichter-van-nijmegen/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/simon-mamahit-nieuwe-stadsdichter-van-nijmegen/</guid>
-      <pubDate>Mon, 01 Apr 2024 20:05:46 +0200</pubDate>
-      <description>Simon Mamahit nieuwe stadsdichter van Nijmegen</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-simon-mamahit-nieuwe-stadsdichter-van-nijmegen.jpg" length="47296" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-simon-mamahit-nieuwe-stadsdichter-van-nijmegen.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
