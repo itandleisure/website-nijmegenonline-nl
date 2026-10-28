@@ -8,12 +8,18 @@ Elke run (wekelijks, zie .github/workflows/statistiek.yml) voegt een meetpunt to
 3. AI-antwoorden: de vaste vragen aan ChatGPT, Gemini, Perplexity en Claude (met zoeken op internet), en of
    NijmegenOnline genoemd of als bron gelinkt wordt (DataForSEO AI Optimization). Alleen als de vorige
    AI-meting ouder is dan "ai_elke_dagen", omdat dit het duurste deel is.
+4. Bing Webmaster Tools: klikken en vertoningen in Bing per week, plus de beste zoekwoorden en pagina's en
+   hoeveel pagina's Bing in de index heeft. Overgeslagen als BING_WEBMASTER_API_KEY ontbreekt.
+5. Microsoft Clarity: per dag het aantal sessies (echte bezoekers en bots apart), scrolldiepte, actieve tijd,
+   dead/rage clicks en de meest bezochte pagina's. Clarity geeft maar 1 tot 3 dagen terug per opvraging, dus dit
+   draait dagelijks (.github/workflows/clarity.yml). Overgeslagen als CLARITY_API_TOKEN ontbreekt.
 
 Alles staat in statistiek/data.json, versleuteld met AES-GCM (sleutel via PBKDF2 uit STATISTIEK_WACHTWOORD).
 De repo is openbaar, dus zonder wachtwoord is er niets te lezen; de pagina ontsleutelt in de browser.
 
-Omgeving: STATISTIEK_WACHTWOORD (verplicht), DATAFORSEO_LOGIN + DATAFORSEO_PASSWORD, GSC_SERVICE_ACCOUNT_JSON.
-Gebruik: python tools/statistiek.py [--alleen gsc,zoekwoorden,ai] [--ai-forceren]
+Omgeving: STATISTIEK_WACHTWOORD (verplicht), DATAFORSEO_LOGIN + DATAFORSEO_PASSWORD, GSC_SERVICE_ACCOUNT_JSON,
+BING_WEBMASTER_API_KEY, CLARITY_API_TOKEN.
+Gebruik: python tools/statistiek.py [--alleen gsc,zoekwoorden,ai,bing,clarity] [--ai-forceren]
 """
 import base64
 import collections
@@ -50,7 +56,7 @@ def sleutel(wachtwoord, zout, iteraties):
 
 def openen(wachtwoord):
     if not BESTAND.exists():
-        return {"zoekwoorden": [], "ai": [], "gsc": None}
+        return {"zoekwoorden": [], "ai": [], "gsc": None, "bing": None, "clarity": []}
     pakket = json.loads(BESTAND.read_text(encoding="utf-8"))
     zout, iv, data = (base64.b64decode(pakket[k]) for k in ("salt", "iv", "data"))
     try:
@@ -172,6 +178,108 @@ def ai_meten():
     return {"datum": VANDAAG.isoformat(), "antwoorden": antwoorden, "kosten": round(kosten, 3)}
 
 
+# ---------- Bing Webmaster Tools ----------
+
+def bing_meten():
+    sleutelwaarde = os.environ.get("BING_WEBMASTER_API_KEY")
+    if not sleutelwaarde:
+        print("Bing overgeslagen: BING_WEBMASTER_API_KEY ontbreekt")
+        return None
+    site = INSTELLINGEN["search_console_property"]
+
+    def vraag(methode):
+        r = requests.get("https://ssl.bing.com/webmaster/api.svc/json/" + methode,
+                         params={"siteUrl": site, "apikey": sleutelwaarde}, timeout=120)
+        r.raise_for_status()
+        return r.json()["d"]
+
+    def datum(waarde):  # "/Date(1751068800000)/" -> date
+        return datetime.datetime.fromtimestamp(int(re.search(r"\d+", waarde).group()) // 1000, datetime.timezone.utc).date()
+
+    weken = collections.OrderedDict()
+    for rij in vraag("GetRankAndTrafficStats"):
+        dag = datum(rij["Date"])
+        maandag = (dag - datetime.timedelta(days=dag.weekday())).isoformat()
+        w = weken.setdefault(maandag, {"week": maandag, "klikken": 0, "vertoningen": 0, "dagen": 0})
+        w["klikken"] += rij["Clicks"]
+        w["vertoningen"] += rij["Impressions"]
+        w["dagen"] += 1
+
+    def top(methode, pad=False):  # Bing geeft per zoekwoord of pagina een rij per dag; optellen per naam
+        totalen = {}
+        for rij in vraag(methode):
+            naam = urllib.parse.urlsplit(rij["Query"]).path if pad else rij["Query"]
+            t = totalen.setdefault(naam, {"naam": naam, "klikken": 0, "vertoningen": 0, "_pos": 0.0})
+            t["klikken"] += rij["Clicks"]
+            t["vertoningen"] += rij["Impressions"]
+            t["_pos"] += rij["AvgImpressionPosition"] * max(rij["Impressions"], 1)
+        uit = []
+        for t in sorted(totalen.values(), key=lambda t: (-t["klikken"], -t["vertoningen"]))[:30]:
+            t["positie"] = round(t.pop("_pos") / max(t["vertoningen"], 1), 1)
+            uit.append(t)
+        return uit
+
+    crawl = max(vraag("GetCrawlStats"), key=lambda r: datum(r["Date"]), default={})
+    bing = {"bijgewerkt": VANDAAG.isoformat(), "weken": list(weken.values()),
+            "zoekwoorden": top("GetQueryStats"), "paginas": top("GetPageStats", pad=True),
+            "index": {"datum": datum(crawl["Date"]).isoformat() if crawl else None,
+                      "in_index": crawl.get("InIndex"), "gecrawld": crawl.get("CrawledPages"),
+                      "fouten": crawl.get("CrawlErrors")}}
+    print("Bing: %d weken, %d pagina's in de index" % (len(weken), bing["index"]["in_index"] or 0))
+    return bing
+
+
+# ---------- Microsoft Clarity ----------
+
+def clarity_meten():
+    token = os.environ.get("CLARITY_API_TOKEN")
+    if not token:
+        print("Clarity overgeslagen: CLARITY_API_TOKEN ontbreekt")
+        return None
+
+    def vraag(**params):
+        r = requests.get("https://www.clarity.ms/export-data/api/v1/project-live-insights",
+                         params=dict(numOfDays=1, **params), headers={"Authorization": "Bearer " + token}, timeout=120)
+        r.raise_for_status()
+        return {m["metricName"]: m["information"] for m in r.json()}
+
+    def eerste(info, sleutelnaam, standaard=None):
+        return info[0].get(sleutelnaam, standaard) if info else standaard
+
+    totaal = vraag()
+    verkeer = totaal.get("Traffic", [])
+    sessies = eerste(verkeer, "totalSessionCount", 0)
+    bots = eerste(verkeer, "totalBotSessionCount", 0)
+    meting = {
+        "datum": (VANDAAG - datetime.timedelta(days=1)).isoformat(),  # de meting van vannacht gaat over gisteren
+        "sessies": sessies - bots, "bots": bots,
+        "gebruikers": eerste(verkeer, "distinctUserCount", 0),
+        "scrolldiepte": eerste(totaal.get("ScrollDepth"), "averageScrollDepth"),
+        "actieve_tijd": eerste(totaal.get("EngagementTime"), "activeTime"),
+        "totale_tijd": eerste(totaal.get("EngagementTime"), "totalTime"),
+        "dead_clicks": eerste(totaal.get("DeadClickCount"), "sessionsWithMetricPercentage"),
+        "rage_clicks": eerste(totaal.get("RageClickCount"), "sessionsWithMetricPercentage"),
+        "quick_backs": eerste(totaal.get("QuickbackClick"), "sessionsWithMetricPercentage"),
+        "scriptfouten": eerste(totaal.get("ScriptErrorCount"), "sessionsWithMetricPercentage"),
+        "apparaten": {d["name"]: d["sessionsCount"] for d in totaal.get("Device", []) if "name" in d},
+        "paginas": [],
+    }
+    per_url = vraag(dimension1="URL")
+    scroll = {u["Url"]: u.get("averageScrollDepth") for u in per_url.get("ScrollDepth", []) if "Url" in u}
+    tijd = {u["Url"]: u.get("activeTime") for u in per_url.get("EngagementTime", []) if "Url" in u}
+    paginas = []
+    for u in per_url.get("Traffic", []):
+        if "Url" not in u or not u["Url"].startswith(INSTELLINGEN["search_console_property"]):
+            continue
+        echt = u["totalSessionCount"] - u.get("totalBotSessionCount", 0)
+        if echt > 0:
+            paginas.append({"naam": urllib.parse.urlsplit(u["Url"]).path, "sessies": echt,
+                            "scrolldiepte": scroll.get(u["Url"]), "actieve_tijd": tijd.get(u["Url"])})
+    meting["paginas"] = sorted(paginas, key=lambda p: -p["sessies"])[:30]
+    print("Clarity: %d echte sessies en %d bots op %s" % (meting["sessies"], bots, meting["datum"]))
+    return meting
+
+
 # ---------- Search Console ----------
 
 def gsc_meten():
@@ -238,7 +346,7 @@ def main():
     wachtwoord = os.environ.get("STATISTIEK_WACHTWOORD")
     if not wachtwoord:
         sys.exit("STATISTIEK_WACHTWOORD ontbreekt")
-    alleen = set(sys.argv[sys.argv.index("--alleen") + 1].split(",")) if "--alleen" in sys.argv else {"gsc", "zoekwoorden", "ai"}
+    alleen = set(sys.argv[sys.argv.index("--alleen") + 1].split(",")) if "--alleen" in sys.argv else {"gsc", "zoekwoorden", "ai", "bing", "clarity"}
     gegevens = openen(wachtwoord)
 
     if "gsc" in alleen:
@@ -248,6 +356,23 @@ def main():
                 gegevens["gsc"] = gsc
         except Exception as e:  # een Google-storing mag de rest van de meting niet tegenhouden
             print("Search Console mislukt: %s" % e, file=sys.stderr)
+
+    if "bing" in alleen:
+        try:
+            bing = bing_meten()
+            if bing:
+                gegevens["bing"] = bing
+        except Exception as e:
+            print("Bing mislukt: %s" % e, file=sys.stderr)
+
+    if "clarity" in alleen:
+        try:
+            meting = clarity_meten()
+            if meting:
+                oud = [m for m in gegevens.get("clarity") or [] if m["datum"] != meting["datum"]]
+                gegevens["clarity"] = sorted(oud + [meting], key=lambda m: m["datum"])[-400:]
+        except Exception as e:
+            print("Clarity mislukt: %s" % e, file=sys.stderr)
 
     if "zoekwoorden" in alleen:
         meting = zoekwoorden_meten()

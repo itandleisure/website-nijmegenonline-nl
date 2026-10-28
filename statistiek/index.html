@@ -91,6 +91,14 @@
     <p class="uitleg">Uit Google Search Console: hoe vaak de site in Google getoond werd (vertoningen) en hoe vaak mensen erop klikten, per week.</p>
     <div id="gsc"></div>
 
+    <h2>Bezoekers uit Bing</h2>
+    <p class="uitleg">Uit Bing Webmaster Tools: vertoningen en klikken in Bing per week. Bing is ook de zoekmachine achter Copilot en ChatGPT-zoeken, dus deze cijfers zeggen iets over de zichtbaarheid daar.</p>
+    <div id="bing"></div>
+
+    <h2>Hoe bezoekers de site gebruiken</h2>
+    <p class="uitleg">Uit Microsoft Clarity, elke nacht bijgewerkt: hoeveel echte bezoekers er per dag waren (bots tellen apart), hoe ver ze scrollen, hoe lang ze actief lezen en op welke pagina's ze komen. "Dead clicks" zijn klikken op iets dat niet reageert; "rage clicks" zijn snelle herhaalde klikken uit frustratie.</p>
+    <div id="clarity"></div>
+
     <h2>Posities op belangrijke zoekwoorden</h2>
     <p class="uitleg">Elke week zoeken we de vaste lijst zoekwoorden op in Google (Nederland, desktop) en kijken we op welke plek NijmegenOnline staat in de eerste 50 resultaten. "AI-overzicht" betekent dat Google bovenaan een AI-samenvatting toont; een vinkje bij "bron" betekent dat NijmegenOnline daarin als bron genoemd wordt.</p>
     <div id="zoekwoorden"></div>
@@ -168,7 +176,7 @@
       }
       if (punten.length <= 30) punten.forEach(function (p, i) { if (p.y != null) s += '<circle class="punt" cx="' + X(i) + '" cy="' + Y(p.y) + '" r="4"/>'; });
       s += '<line class="kruis" visibility="hidden" y1="' + T + '" y2="' + (H - O) + '" x1="-9" x2="-9"/><circle class="punt hoverpunt" r="5" cx="-9" cy="-9"/></svg><div class="tip"></div>';
-      if (punten.length === 1) s += '<p class="leeg">Eerste meting. Vanaf volgende week verschijnt hier een lijn.</p>';
+      if (punten.length === 1) s += '<p class="leeg">Eerste meting. Vanaf ' + (opties.volgende || "volgende week") + ' verschijnt hier een lijn.</p>';
       el.innerHTML = s;
       var svg = el.querySelector("svg"), tip = el.querySelector(".tip"), kruis = svg.querySelector(".kruis"), stip = svg.querySelectorAll("circle");
       stip = stip[stip.length - 1];
@@ -281,8 +289,16 @@
         var x = ai[ai.length - 1], y = ai[ai.length - 2];
         t += tegel("Genoemd in AI-antwoorden", fmt.format(x.pct) + "%", x.zichtbaar + " van " + x.n + " antwoorden" + (y ? " · " + verschil(x.pct, y.pct, false, "%") : ""));
       }
+      var cl = (D.clarity || []).slice(-14);
+      if (cl.length >= 7) {
+        var som2 = function (a, k) { return a.reduce(function (s, m) { return s + (m[k] || 0); }, 0); };
+        var sn = som2(cl.slice(-7), "sessies"), se = cl.length >= 14 ? som2(cl.slice(-14, -7), "sessies") : null;
+        t += tegel("Echte bezoekers, laatste 7 dagen", fmt.format(sn), (se != null ? verschil(sn, se) + " t.o.v. de week ervoor · " : "") + fmt.format(som2(cl.slice(-7), "bots")) + " bots");
+      }
       $("tegels").innerHTML = t;
       tekenGsc(weken);
+      tekenBing();
+      tekenClarity();
       tekenZoekwoorden(zw);
       tekenAi(ai);
     }
@@ -311,6 +327,56 @@
       };
       tabel($("t-gq"), kol("Zoekwoord"), D.gsc.zoekwoorden);
       tabel($("t-gp"), kol("Pagina", true), D.gsc.paginas);
+    }
+
+    function tekenBing() {
+      var el = $("bing");
+      if (!D.bing) { el.innerHTML = '<div class="melding">Bing Webmaster Tools is nog niet gekoppeld aan de wekelijkse meting. Zodra de sleutel in GitHub staat, verschijnen hier de cijfers.</div>'; return; }
+      var weken = D.bing.weken.filter(function (w) { return w.dagen === 7; });
+      var h = '<div class="rij2"><div class="kaart"><h3>Klikken per week</h3><div class="grafiek" id="g-bklik"></div></div>' +
+           '<div class="kaart"><h3>Vertoningen per week</h3><div class="grafiek" id="g-bvert"></div></div></div>' +
+           '<div class="rij2"><div class="kaart"><h3>Beste zoekwoorden in Bing</h3><div id="t-bq"></div></div>' +
+           '<div class="kaart"><h3>Beste pagina\'s in Bing</h3><div id="t-bp"></div></div></div>';
+      if (D.bing.index && D.bing.index.in_index != null) h += '<p class="uitleg">Bing heeft ' + fmt.format(D.bing.index.in_index) + " pagina's in de index" + (D.bing.index.fouten ? ", met " + fmt.format(D.bing.index.fouten) + " crawlfouten" : "") + " (stand " + datumFmt.format(d(D.bing.index.datum)) + ").</p>";
+      el.innerHTML = h;
+      var lab = function (p) { return "week van " + kortFmt.format(d(p.x)); };
+      grafiek($("g-bklik"), weken.map(function (w) { return { x: w.week, y: w.klikken }; }), { min: 0, label: lab, titel: "Klikken per week in Bing" });
+      grafiek($("g-bvert"), weken.map(function (w) { return { x: w.week, y: w.vertoningen }; }), { min: 0, label: lab, titel: "Vertoningen per week in Bing" });
+      var kol = function (kop, link) {
+        return [
+          { kop: kop, veld: "naam", html: link ? function (r) { return '<a href="https://www.nijmegenonline.nl' + esc(r.naam) + '" target="_blank" rel="noopener">' + esc(r.naam) + "</a>"; } : null },
+          { kop: "Klikken", veld: "klikken", n: true, html: function (r) { return fmt.format(r.klikken); } },
+          { kop: "Vertoningen", veld: "vertoningen", n: true, html: function (r) { return fmt.format(r.vertoningen); } },
+          { kop: "Positie", veld: "positie", n: true, html: function (r) { return fmt.format(r.positie); } },
+        ];
+      };
+      tabel($("t-bq"), kol("Zoekwoord"), D.bing.zoekwoorden);
+      tabel($("t-bp"), kol("Pagina", true), D.bing.paginas);
+    }
+
+    function tekenClarity() {
+      var el = $("clarity"), cl = D.clarity || [];
+      if (!cl.length) { el.innerHTML = '<div class="melding">Clarity is nog niet gekoppeld aan de dagelijkse meting. Zodra het token in GitHub staat, verschijnen hier de cijfers.</div>'; return; }
+      var laatst = cl[cl.length - 1];
+      var h = '<div class="rij2"><div class="kaart"><h3>Echte bezoekers per dag</h3><div class="grafiek" id="g-cses"></div></div>' +
+           '<div class="kaart"><h3>Bots per dag</h3><div class="grafiek" id="g-cbot"></div></div></div>' +
+           '<div class="rij2"><div class="kaart"><h3>Gemiddelde scrolldiepte</h3><div class="grafiek" id="g-cscr"></div></div>' +
+           '<div class="kaart"><h3>Actieve leestijd per bezoek (seconden)</h3><div class="grafiek" id="g-ctijd"></div></div></div>' +
+           '<div class="kaart"><h3>Meest bezochte pagina\'s op ' + datumFmt.format(d(laatst.datum)) + '</h3><div id="t-cp"></div></div>';
+      var app = Object.keys(laatst.apparaten || {});
+      if (app.length) h += '<p class="uitleg">Apparaten op ' + datumFmt.format(d(laatst.datum)) + ': ' + app.map(function (k) { return esc(k) + " " + fmt.format(laatst.apparaten[k]); }).join(", ") + '. Dead clicks in ' + fmt.format(laatst.dead_clicks || 0) + '% van de bezoeken, rage clicks in ' + fmt.format(laatst.rage_clicks || 0) + '%, scriptfouten in ' + fmt.format(laatst.scriptfouten || 0) + '%.</p>';
+      el.innerHTML = h;
+      var lab = function (p) { return datumFmt.format(d(p.x)); };
+      grafiek($("g-cses"), cl.map(function (m) { return { x: m.datum, y: m.sessies }; }), { min: 0, label: lab, titel: "Echte bezoekers per dag", volgende: "morgen" });
+      grafiek($("g-cbot"), cl.map(function (m) { return { x: m.datum, y: m.bots }; }), { min: 0, label: lab, titel: "Bots per dag", volgende: "morgen" });
+      grafiek($("g-cscr"), cl.map(function (m) { return { x: m.datum, y: m.scrolldiepte }; }), { min: 0, label: lab, titel: "Gemiddelde scrolldiepte", volgende: "morgen", waarde: function (v) { return fmt.format(v) + "%"; } });
+      grafiek($("g-ctijd"), cl.map(function (m) { return { x: m.datum, y: m.actieve_tijd }; }), { min: 0, label: lab, titel: "Actieve leestijd per bezoek", volgende: "morgen", waarde: function (v) { return fmt.format(v) + " s"; } });
+      tabel($("t-cp"), [
+        { kop: "Pagina", veld: "naam", html: function (r) { return '<a href="https://www.nijmegenonline.nl' + esc(r.naam) + '" target="_blank" rel="noopener">' + esc(r.naam.length > 60 ? r.naam.slice(0, 58) + "…" : r.naam) + "</a>"; } },
+        { kop: "Bezoeken", veld: "sessies", n: true },
+        { kop: "Scrolldiepte", veld: "scrolldiepte", n: true, html: function (r) { return r.scrolldiepte != null ? fmt.format(Math.round(r.scrolldiepte)) + "%" : "–"; } },
+        { kop: "Actieve tijd", veld: "actieve_tijd", n: true, html: function (r) { return r.actieve_tijd != null ? fmt.format(r.actieve_tijd) + " s" : "–"; } },
+      ], laatst.paginas || []);
     }
 
     function tekenZoekwoorden(zw) {
