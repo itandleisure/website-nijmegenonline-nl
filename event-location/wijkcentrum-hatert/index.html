@@ -2,10 +2,22 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8">
-  <meta name="robots" content="noindex">
-  <title>Agenda Nijmegen</title>
-  <link rel="canonical" href="https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/">
-  <meta http-equiv="refresh" content="0; url=../../nijmegen-evenementen-overzicht/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evenementen bij Wijkcentrum Hatert | NijmegenOnline</title>
+  <meta name="description" content="Evenementen bij Wijkcentrum Hatert (Couwenbergstraat 22, 6535 RZ Nijmegen): concerten, exposities en activiteiten, met datum, tijd en adres.">
+  <link rel="canonical" href="https://www.nijmegenonline.nl/event-location/wijkcentrum-hatert/">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:title" content="Evenementen bij Wijkcentrum Hatert">
+  <meta property="og:description" content="Evenementen bij Wijkcentrum Hatert (Couwenbergstraat 22, 6535 RZ Nijmegen): concerten, exposities en activiteiten, met datum, tijd en adres.">
+  <meta property="og:url" content="https://www.nijmegenonline.nl/event-location/wijkcentrum-hatert/">
+  <meta property="og:site_name" content="NijmegenOnline">
+  <meta property="og:image" content="https://www.nijmegenonline.nl/assets/uploads/aangemeld/parkinson-cafe-nijmegen-3.webp">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=30">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="../../partners/slider.css?v=5">
+  <script src="../../partners/slider.js?v=6" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nijmegenonline.nl/"}, {"@type": "ListItem", "position": 2, "name": "Agenda", "item": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/"}, {"@type": "ListItem", "position": 3, "name": "Wijkcentrum Hatert", "item": "https://www.nijmegenonline.nl/event-location/wijkcentrum-hatert/"}]}</script>
   <!-- analytics -->
   <!-- Search Console: verificatiecode van de property https://www.nijmegenonline.nl/ (HTML-tag). -->
   <meta name="google-site-verification" content="DvTKwDdZ4RPX1t_mRT4x6b5YhA5R_AMz0w_hEi2foeQ">
@@ -37,6 +49,127 @@
   <!-- /analytics -->
 </head>
 <body>
-  <p>Dit evenement is afgelopen. Bekijk de <a href="../../nijmegen-evenementen-overzicht/">Agenda Nijmegen</a>.</p>
+
+  <!-- header -->
+  <div class="bovenbalk">
+    <div class="container">
+      <ul>
+        <li><a href="../../kom-in-contact/">Kom in contact</a></li>
+        <li><a href="../../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+        <li><a href="../../vacatures/">Vacatures</a></li>
+      </ul>
+    </div>
+  </div>
+  <header class="sitekop">
+    <div class="hoofdbalk">
+      <div class="container kop">
+        <a class="logo" href="../../"><img src="../../assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104"></a>
+        <nav class="hoofdmenu" id="hoofdmenu" aria-label="Hoofdmenu">
+          <ul>
+            <li><a href="../../">Home</a></li>
+            <li><a href="../../nijmegen-evenementen-overzicht/" data-paden="nijmegen-evenementen-overzicht/ events/ event-location/ event-directory/ agenda/ jaarlijkse-evenementen/">Agenda</a></li>
+            <li><a href="../../nieuwsberichten/" data-paden="nieuwsberichten/ nieuwsoverzicht/">Nieuws</a></li>
+            <li><a href="../../blog/" data-paden="blog/ category/">Inspiratie opdoen</a></li>
+            <li><a href="../../thema/" data-paden="thema/ bestemmingen/">Gidsen</a></li>
+            <li><a href="../../bedrijvengids/" data-paden="bedrijvengids/ bedrijvengids-categorie/ overzicht/ bedrijf-aanmelden/">Bedrijvengids</a></li>
+            <li class="hoofdmenu__extra"><a href="../../kom-in-contact/">Kom in contact</a></li>
+            <li class="hoofdmenu__extra"><a href="../../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+            <li class="hoofdmenu__extra"><a href="../../vacatures/">Vacatures</a></li>
+          </ul>
+        </nav>
+        <a class="kop__knop" href="../../zoeken/" aria-label="Zoeken"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></a>
+        <button class="kop__knop kop__menuknop" type="button" aria-expanded="false" aria-controls="hoofdmenu" aria-label="Menu"><svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="dicht" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <script>
+    /* Hoofdmenu: knop op mobiel, en het onderdeel waar je bent krijgt aria-current */
+    (function () {
+      var knop = document.querySelector(".kop__menuknop"), menu = document.getElementById("hoofdmenu");
+      knop.addEventListener("click", function () {
+        var open = knop.getAttribute("aria-expanded") !== "true";
+        knop.setAttribute("aria-expanded", open);
+        menu.classList.toggle("open", open);
+      });
+      var basis = new URL(document.querySelector(".logo").href).pathname;
+      var pad = location.pathname.indexOf(basis) === 0 ? location.pathname.slice(basis.length) : "";
+      menu.querySelectorAll("a").forEach(function (a) {
+        var paden = (a.getAttribute("data-paden") || "").split(" ").filter(Boolean);
+        var hier = a.href.replace(/[?#].*$/, "") === location.href.replace(/[?#].*$/, "").replace(/index\.html$/, "");
+        if (hier || paden.some(function (p) { return pad.indexOf(p) === 0; })) a.setAttribute("aria-current", "page");
+      });
+    })();
+  </script>
+  <!-- /header -->
+
+  <main class="artikel-wrap" data-pagefind-body data-pagefind-filter="soort:Agenda">
+    <div class="container">
+      <div class="kruimelpad"><a href="../../">Home</a> › <a href="../../nijmegen-evenementen-overzicht/">Agenda</a> › Wijkcentrum Hatert</div>
+      <header class="rubriek-kop">
+        <h1>Evenementen bij Wijkcentrum Hatert</h1>
+        <p>Couwenbergstraat 22, 6535 RZ Nijmegen</p>
+      </header>
+      <section class="agenda-maand">
+        <h2>Binnenkort</h2>
+        <div class="eventlijst">
+          <a class="eventkaart" href="../../events/parkinson-cafe-nijmegen-3/"><span class="eventkaart__datum"><b>20</b>nov</span><img src="../../assets/uploads/aangemeld/parkinson-cafe-nijmegen-3.webp" alt="Parkinson Café Nijmegen" loading="lazy"><span class="eventkaart__tekst"><strong>Parkinson Café Nijmegen</strong><span class="eventkaart__wanneer">20 nov, 12.00 uur</span><span class="eventkaart__plaats">Wijkcentrum Hatert</span></span></a>
+        </div>
+      </section>
+      <div class="partner-slider" data-plaatsing="blog"></div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="container voet">
+      <div class="voet__merk">
+        <img src="../../assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104" loading="lazy">
+        <p>Alles over uitgaan, evenementen, nieuws en lokale bedrijven in Nijmegen en omgeving.</p>
+        <!-- opent het pop-upformulier qG49m3 van MailerLite (script hieronder) -->
+        <button type="button" class="knop ml-onclick-form" onclick="ml('show', 'qG49m3', true)">Aanmelden voor de nieuwsbrief</button>
+      </div>
+      <nav aria-label="Ontdekken">
+        <h2>Ontdekken</h2>
+        <ul>
+          <li><a href="../../nijmegen-evenementen-overzicht/">Agenda</a></li>
+          <li><a href="../../nieuwsberichten/">Nieuws</a></li>
+          <li><a href="../../blog/">Inspiratie opdoen</a></li>
+          <li><a href="../../thema/">Gidsen</a></li>
+          <li><a href="../../bestemmingen/">Bestemmingen</a></li>
+          <li><a href="../../zoeken/">Zoeken</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Voor ondernemers">
+        <h2>Voor ondernemers</h2>
+        <ul>
+          <li><a href="../../bedrijvengids/">Bedrijvengids</a></li>
+          <li><a href="../../bedrijf-aanmelden/">Bedrijf aanmelden</a></li>
+          <li><a href="../../evenement-aanmelden/">Evenement aanmelden</a></li>
+          <li><a href="../../adverteren-bij-nijmegenonline/">Adverteren</a></li>
+          <li><a href="../../vacatures/">Vacatures</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Over NijmegenOnline">
+        <h2>Over NijmegenOnline</h2>
+        <ul>
+          <li><a href="../../kom-in-contact/">Kom in contact</a></li>
+          <li><a href="../../algemene-voorwaarden/">Algemene voorwaarden</a></li>
+          <li><a href="../../privacy-policy/">Privacyverklaring</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container voet__onder">
+      <p>&copy; NijmegenOnline</p>
+    </div>
+  </footer>
+  <!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknoppen in de zijbalk en de footer (pop-upformulier qG49m3) -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '364874');
+  </script>
+  <!-- /footer -->
 </body>
 </html>

@@ -3156,6 +3156,7 @@
   <url><loc>https://www.nijmegenonline.nl/event-location/kleine-kirche/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/event-location/kleve-centrum/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/event-location/kloster-graefenthal/</loc></url>
+  <url><loc>https://www.nijmegenonline.nl/event-location/lindenberg-cultuurhuis/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/event-location/lutherse-kerk/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/event-location/plan-a/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/event-location/pop-culture-arcade/</loc></url>
@@ -3165,6 +3166,7 @@
   <url><loc>https://www.nijmegenonline.nl/event-location/thiemeloods/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/event-location/titus-brandsma-gedachteniskerk/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/event-location/vrijheidsmuseum/</loc></url>
+  <url><loc>https://www.nijmegenonline.nl/event-location/wijkcentrum-hatert/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/ambachten-in-werking-xxl-bij-agrarisch-museum-in-overasselt/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/ancient-cards-x-pop-culture-arcade-pokeon/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/anne-frank-middag-3/</loc></url>
@@ -3207,6 +3209,7 @@
   <url><loc>https://www.nijmegenonline.nl/events/highlight-tours-in-het-vrijheidsmuseum-5/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/highlight-tours-in-het-vrijheidsmuseum-7/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/hilde-vos-trio/</loc></url>
+  <url><loc>https://www.nijmegenonline.nl/events/ik-ben-een-bed/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/in-extase-gay-dansfeest-voor-mannen-30-2/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/jeroen-kramer/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/johnny-and-the-rockets/</loc></url>
@@ -3237,6 +3240,7 @@
   <url><loc>https://www.nijmegenonline.nl/events/open-repetities-toonkunstkoor-nijmegen-2/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/paradies-concert-met-sopraan-en-kamerorkest/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/paraview-paranormaalbeurs-nijmegen-wijchen-17-en-18-okt-2026/</loc></url>
+  <url><loc>https://www.nijmegenonline.nl/events/parkinson-cafe-nijmegen-3/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/phil-seeboth-2/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/pokemon-trade-night-bij-pop-culture-arcade-nijmegen/</loc></url>
   <url><loc>https://www.nijmegenonline.nl/events/polderpop-party/</loc></url>
@@ -3351,19 +3355,25 @@
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/artsen-fietsen-van-den-bosch-naar-radboudumc-voor-prostaatkankeronderzoek/</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/boekpresentatie-molukse-lente-in-bibliotheek-hatert/</loc><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/boompjes-voor-de-buurt-deelt-bomen-uit-in-drie-nijmeegse-wijken/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/buiten-bereik-speelt-improvisatievoorstelling-in-het-badhuis/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/buren-uit-groesbeek-ontwikkelen-samen-het-bordspel-kaartello/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/burgemeester-wijchen-krijgt-eerste-kerstbal-van-de-wijchense-molen/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/clowns-got-talent-met-acht-acts-in-cultuurhuis-de-lindenberg/</loc><lastmod>2026-10-28</lastmod></url>
+  <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/dirk-groenen-van-energylabs-is-startupper-van-het-jaar-2026/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/drie-ondernemers-strijden-om-titel-startupper-van-het-jaar-2026/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/elf-kinderen-in-regio-nijmegen-wachten-op-een-pleeggezin/</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/erespeld-grenzland-europaer-van-het-jaar-2024/</loc><lastmod>2024-04-23</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/erik-jansen-geeerd-met-de-blauwe-steen-2023-in-nijmegen/</loc><lastmod>2024-01-18</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/ernie-bossmann-sluit-periode-als-stadstekenaar-nijmegen-af-met-expositie-in-valkhof-museum/</loc><lastmod>2024-08-26</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/esther-horsten-aangesteld-als-nieuwe-directeur-van-het-vrijheidsmuseum/</loc><lastmod>2024-01-10</lastmod></url>
+  <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/expositie-over-130-jaar-bioscoopgeschiedenis-in-marienburgkapel/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/festival-jazz-international-nijmegen-viert-tiende-editie/</loc><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/gebroeders-van-lymborch-experience-geopend-in-stevenskerk/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/grenzland-draisine-sluit-seizoen-af-in-november-ritten-op-aanvraag/</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/helen-dowling-instituut-nijmegen-verhuist-naar-ruimere-locatie-voor-uitgebreidere-zorg/</loc><lastmod>2024-01-31</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/hubertusviering-met-hondenzegening-in-cenakelkerk-heilig-landstichting/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/juneville-en-theaterkerk-bemmel-vieren-samen-tienjarig-bestaan/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/kerstdemonstratie-bloemschikken-door-ben-clevers-in-alverna/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/marikenhuis-houdt-ontmoetingsmiddag-yoga-en-wandelingen-in-november/</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/marikenhuis-in-nijmegen-toont-schilderijen-van-joep-van-baars/</loc><lastmod>2026-10-27</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro/</loc><lastmod>2026-10-28</lastmod></url>
@@ -3373,6 +3383,7 @@
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/replica-van-kijkkast-gerrit-schouten-tentoongesteld-in-suriname/</loc><lastmod>2024-03-15</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/romeinenpaspoort-gelderland-feestelijk-gelanceerd-bij-museumpark-orientalis/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/simon-mamahit-nieuwe-stadsdichter-van-nijmegen/</loc><lastmod>2024-04-01</lastmod></url>
+  <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/sportkaart-arnhem-wordt-onderdeel-van-lifeport-vitaal-app/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/sterker-ouderenwerk-een-nieuwe-naam-en-locatie-voor-toonaangevend-ouderenwerk-in-nijmegenregio-arnhem-nijmegen/</loc><lastmod>2024-02-05</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/stichting-vrouwenrechtswinkel-nijmegen-gratis-juridisch-advies-voor-vrouwen-door-vrouwen/</loc><lastmod>2024-01-24</lastmod></url>
   <url><loc>https://www.nijmegenonline.nl/nieuwsoverzicht/sven-ratzke-wint-de-karel-de-grote-oeuvreprijs-stad-nijmegen-2024/</loc><lastmod>2024-05-17</lastmod></url>
