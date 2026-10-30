@@ -8,6 +8,15 @@
     <lastBuildDate>Fri, 30 Oct 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Basteicafé over Nijmeegse maakindustrie van Romeinen tot nu</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu/</guid>
+      <pubDate>Fri, 30 Oct 2026 19:33:43 +0100</pubDate>
+      <description>Het Basteicafé in Museum De Bastei draait op 12 november om de Nijmeegse maakindustrie, van Romeinse dakpannen tot de fabrieken van de twintigste eeuw.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu.jpg" length="74646" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Sportkaart Arnhem wordt onderdeel van Lifeport Vitaal App</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/sportkaart-arnhem-wordt-onderdeel-van-lifeport-vitaal-app/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/sportkaart-arnhem-wordt-onderdeel-van-lifeport-vitaal-app/</guid>
@@ -177,13 +186,6 @@
       <description>De band Juneville en de Theaterkerk in Bemmel bestaan allebei tien jaar. Op zondag 1 november vieren ze dat met een jubileumconcert.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-juneville-en-theaterkerk-bemmel-vieren-samen-tienjarig-bestaan.jpg" length="55479" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-juneville-en-theaterkerk-bemmel-vieren-samen-tienjarig-bestaan.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Hubertusviering met hondenzegening in Cenakelkerk Heilig Landstichting</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/hubertusviering-met-hondenzegening-in-cenakelkerk-heilig-landstichting/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/hubertusviering-met-hondenzegening-in-cenakelkerk-heilig-landstichting/</guid>
-      <pubDate>Mon, 26 Oct 2026 23:36:25 +0100</pubDate>
-      <description>Op zondag 8 november is er een Hubertusviering in de Cenakelkerk in Heilig Landstichting, met zegening van honden en wijding van Hubertusbroodjes.</description>
     </item>
   </channel>
 </rss>
