@@ -112,6 +112,11 @@ img { max-width: 100%; height: auto; display: block; }
 .hoofdmenu a:hover { background: rgba(255, 255, 255, 0.14); color: var(--wit); }
 .hoofdmenu a[aria-current] { background: rgba(13, 58, 99, 0.35); color: var(--wit); box-shadow: inset 0 -3px 0 #b9e58f; }
 .hoofdmenu__extra { display: none; }
+/* Acht menu-onderdelen: op desktop geen Home (het logo gaat al naar home) en iets compacter; onder 1100px het mobiele menu */
+.logo { flex-shrink: 0; }
+.hoofdmenu a { white-space: nowrap; }
+.hoofdmenu__home { display: none; }
+@media (min-width: 1101px) { .hoofdmenu a { padding: 8px 9px; font-size: 0.85rem; letter-spacing: 0.3px; } }
 .kop__knop { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.14); color: var(--wit); cursor: pointer; padding: 0; flex: none; transition: background-color 0.15s ease; }
 .kop__knop:hover { background: rgba(255, 255, 255, 0.26); color: var(--wit); }
 .kop__knop svg { width: 20px; height: 20px; }
@@ -119,8 +124,9 @@ img { max-width: 100%; height: auto; display: block; }
 .kop__menuknop .dicht { display: none; }
 .kop__menuknop[aria-expanded="true"] .open { display: none; }
 .kop__menuknop[aria-expanded="true"] .dicht { display: block; }
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   html { scroll-padding-top: 80px; }
+  .hoofdmenu__home { display: block; }
   .bovenbalk { display: none; }
   .kop { flex-wrap: wrap; padding: 8px 16px; }
   .logo img { height: 44px; }
@@ -629,3 +635,11 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .pagina th, .pagina td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #ddd; vertical-align: top; }
 .pagina th { font-weight: 700; }
 @media (max-width: 600px) { .pagina table { display: block; overflow-x: auto; } }
+
+/* Bezoekersrubrieken /zien-en-doen/ en /plan-je-bezoek/ (tools/bezoekers.py) */
+.gidsen-filter .knop-link { font-size: 0.9rem; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rand); background: var(--wit); color: var(--tekst); text-decoration: none; }
+.gidsen-filter .knop-link:hover, .gidsen-filter .knop-link:focus-visible { border-color: var(--groen); color: var(--groen); }
+.bezoekers-groep { margin: 32px 0; scroll-margin-top: 90px; }
+.bezoekers-groep > h2 { margin: 0 0 6px; }
+.bezoekers-groep > p { margin: 0 0 16px; color: var(--grijs); max-width: 720px; }
+.gidskaart h3 { margin: 0; font-size: 1.1rem; color: var(--kop); }

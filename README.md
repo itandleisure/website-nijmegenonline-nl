@@ -20,6 +20,7 @@ _redirects            301's van oude WordPress-categoriepagina's (voor Cloudflar
 partials/             gedeelde header, footer en zijbalk
 tools/import_wordpress.py     zet de WordPress-export om naar pagina's
 tools/build.py        zet de onderdelen uit partials/ in alle pagina's
+zien-en-doen/, plan-je-bezoek/  bezoekersrubrieken, gemaakt door tools/bezoekers.py uit data/bezoekers.json
 zoeken/               zoekpagina (Pagefind), het zoekveld in de zijbalk stuurt hierheen
 pagefind/             zoekindex, gebouwd door tools/zoekindex.py (niet met de hand aanpassen)
 robots.txt            blokkeert zoekmachines zolang dit een test is
