@@ -1,32 +1,46 @@
 {
   "domein": "nijmegenonline.nl",
   "search_console_property": "https://www.nijmegenonline.nl/",
+  "_uitleg": "Zoekwoorden per onderwerp; de onderwerpen volgen de gidsen van /thema/ en advies/seo/ontbrekende-gidsen.md. Zoekvolumes haalt tools/statistiek.py zelf op (Google Ads via DataForSEO) en bewaart ze in statistiek/data.json. Lijst uitgebreid op 1 november 2026 van 74 naar 100 zoekwoorden.",
   "zoekwoorden": {
-    "Algemeen": [
-      "nijmegen", "nijmegen centrum", "wat te doen in nijmegen", "uitgaan nijmegen", "evenementen nijmegen",
-      "agenda nijmegen", "nieuws nijmegen", "bedrijvengids nijmegen", "activiteiten nijmegen", "weekendje nijmegen",
-      "webcam waalkade", "openingstijden centrum nijmegen", "koopzondag nijmegen", "parkeren nijmegen"
+    "Algemeen en centrum": [
+      "nijmegen centrum", "wat te doen in nijmegen", "agenda nijmegen", "evenementen nijmegen", "uitgaan nijmegen",
+      "nieuws nijmegen", "koopzondag nijmegen", "openingstijden centrum nijmegen", "weekendje nijmegen",
+      "waalkade", "plein 1944", "kelfkensbos", "grote markt nijmegen", "webcam nijmegen", "webcam waalkade"
+    ],
+    "Parkeren": [
+      "parkeren nijmegen", "parkeergarage eiermarkt", "parkeergarage kelfkensbos", "parkeergarage keizer karel",
+      "parkeergarage nijmegen", "gratis parkeren nijmegen"
+    ],
+    "Natuur en wandelen": [
+      "kronenburgerpark", "duivelsberg", "mookerheide", "ooijpolder", "heumensoord", "sint jansberg", "goffertpark",
+      "wandelen nijmegen"
     ],
     "Eten en drinken": [
-      "restaurants nijmegen", "restaurant nijmegen", "restaurants nijmegen centrum", "uit eten nijmegen",
-      "goedkoop uit eten nijmegen", "lunchen nijmegen", "cafés nijmegen", "high tea nijmegen", "high wine nijmegen",
-      "pizza nijmegen", "sushi nijmegen", "tapas nijmegen", "italiaans restaurant nijmegen", "turks restaurant nijmegen",
-      "thais restaurant nijmegen", "biercafé nijmegen", "vegan restaurant nijmegen", "uit eten met kinderen nijmegen"
+      "restaurants nijmegen", "restaurants nijmegen centrum", "uit eten nijmegen", "goedkoop uit eten nijmegen",
+      "lunchen nijmegen", "ontbijt nijmegen", "high tea nijmegen", "high wine nijmegen", "sushi nijmegen",
+      "all you can eat nijmegen", "pizza nijmegen", "italiaans restaurant nijmegen", "tapas nijmegen",
+      "thais restaurant nijmegen", "turks restaurant nijmegen", "cafe nijmegen", "biercafe nijmegen",
+      "vegan restaurant nijmegen", "uit eten met kinderen nijmegen"
     ],
     "Evenementen en seizoen": [
-      "kerstmarkt nijmegen", "kerstmarkten nijmegen 2026", "vierdaagse nijmegen", "vierdaagsefeesten",
-      "vierdaagse 2027", "kermis nijmegen", "koningsdag nijmegen", "bevrijdingsfestival nijmegen", "kerstmarkt kleve"
+      "kerstmarkt nijmegen", "kerstmarkten nijmegen 2026", "kerstmarkt kleve", "zevenheuvelenloop", "stevensloop",
+      "vierdaagse nijmegen", "vierdaagsefeesten", "vierdaagse 2027", "kermis nijmegen", "koningsdag nijmegen",
+      "bevrijdingsfestival nijmegen", "festivals nijmegen", "carnaval nijmegen"
     ],
-    "Gidsen en uitjes": [
-      "trouwen nijmegen", "trouwlocaties nijmegen", "zaal huren nijmegen", "overnachten nijmegen", "hotels nijmegen",
-      "b&b nijmegen", "camping nijmegen", "musea nijmegen", "winkelen nijmegen", "bioscoop nijmegen",
-      "kinderfeestje nijmegen", "bedrijfsuitje nijmegen", "kleve", "kringloopwinkel nijmegen", "studeren in nijmegen"
+    "Uitjes, sport en cultuur": [
+      "escape room nijmegen", "bowlen nijmegen", "zwembad nijmegen", "goffertbad", "schaatsen nijmegen", "padel nijmegen",
+      "bioscoop nijmegen", "theater nijmegen", "sauna nijmegen", "thermen nijmegen", "musea nijmegen",
+      "kinderfeestje nijmegen", "speeltuin nijmegen", "bedrijfsuitje nijmegen"
+    ],
+    "Overnachten, winkelen en over de grens": [
+      "overnachten nijmegen", "hotels nijmegen", "b&b nijmegen", "camping nijmegen", "winkelen nijmegen",
+      "kringloop nijmegen", "kleve", "kleef", "goch", "emmerich"
     ],
     "Bedrijven en diensten": [
       "kapper nijmegen", "massage nijmegen", "nagelsalon nijmegen", "pedicure nijmegen", "permanente make-up nijmegen",
-      "fotograaf nijmegen", "fysiotherapeut nijmegen", "tandarts nijmegen", "huisarts nijmegen", "apotheek nijmegen",
-      "makelaar nijmegen", "advocaat nijmegen", "bloemist nijmegen", "sportschool nijmegen", "rijschool nijmegen",
-      "dansschool nijmegen", "cursus nijmegen", "ondernemen nijmegen"
+      "fotograaf nijmegen", "bloemist nijmegen", "sportschool nijmegen", "makelaar nijmegen", "tandarts nijmegen",
+      "huisarts nijmegen", "apotheek nijmegen", "studeren in nijmegen", "trouwen nijmegen", "zaal huren nijmegen"
     ]
   },
   "ai_vragen": [
@@ -34,6 +48,7 @@
     "Welke evenementen zijn er binnenkort in Nijmegen?",
     "Wat zijn de leukste kerstmarkten in Nijmegen dit jaar?",
     "Wat moet ik weten over de Nijmeegse Vierdaagse?",
+    "Wanneer is de Zevenheuvelenloop en wat moet ik als bezoeker weten?",
     "Wat zijn goede restaurants in het centrum van Nijmegen?",
     "Waar kun je goed lunchen in Nijmegen?",
     "Wat zijn gezellige cafés in Nijmegen?",
@@ -44,8 +59,12 @@
     "Waar kun je in Nijmegen een zaal huren voor een feest?",
     "Wat zijn mooie trouwlocaties in Nijmegen?",
     "Waar parkeer je het beste in Nijmegen centrum?",
+    "Waar kan ik gratis of goedkoop parkeren in Nijmegen?",
     "Wat zijn de openingstijden van de winkels in Nijmegen centrum?",
     "Welke musea zijn er in Nijmegen?",
+    "Wat zijn mooie wandelroutes en natuurgebieden rond Nijmegen?",
+    "Welke zwembaden zijn er in Nijmegen?",
+    "Waar kun je in de buurt van Nijmegen naar de sauna of een wellness?",
     "Is Kleve leuk voor een dagje uit vanuit Nijmegen?",
     "Wat is een goede kapper in Nijmegen?",
     "Waar vind ik een goede massagesalon in Nijmegen?",
@@ -62,5 +81,6 @@
     "Perplexity": ["perplexity", "sonar"],
     "Claude": ["claude", "claude-haiku-4-5"]
   },
-  "ai_elke_dagen": 28
+  "ai_elke_dagen": 28,
+  "zoekvolume_elke_dagen": 90
 }
