@@ -643,3 +643,8 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .bezoekers-groep > h2 { margin: 0 0 6px; }
 .bezoekers-groep > p { margin: 0 0 16px; color: var(--grijs); max-width: 720px; }
 .gidskaart h3 { margin: 0; font-size: 1.1rem; color: var(--kop); }
+
+/* Agenda: filter op datum (assets/js/agendafilter.js) */
+.agendafilter { align-items: center; }
+.agendafilter__uitkomst { flex-basis: 100%; margin: 4px 0 0; font-size: 0.9rem; color: var(--grijs); }
+.eventkaart[hidden], .agenda-maand[hidden] { display: none; }
