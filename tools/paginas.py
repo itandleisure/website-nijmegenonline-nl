@@ -30,9 +30,9 @@ VACATURES = [
     ("vacature-redacteur", "Redacteur (stage)", True,
      "Voor NijmegenOnline zoeken we toppers die hun schrijfervaring willen uitbreiden. Als redacteur ga je veel op pad in "
      "Nijmegen en ben je het visitekaartje van onze organisatie."),
-    ("vacature-accountmanager", "Accountmanager", True,
-     "We zoeken een verbinder die onze partners helpt krijgen wat ze nodig hebben: meer zichtbaarheid, een ingevulde "
-     "vacature of een goed bezocht evenement."),
+    ("vacature-accountmanager", "Lokale partner en mede-eigenaar", True,
+     "We zoeken iemand die NijmegenOnline in de stad een gezicht geeft, partners binnenhaalt en daarvoor provisie en "
+     "aandelen krijgt."),
     ("vacature-fotograaf", "Fotograaf", False,
      "Ben jij dag en nacht op pad met je camera en vind je het leuk om Nijmegen en omgeving vast te leggen?"),
     ("vacature-social-media-strateeg", "Social media strateeg", False,
