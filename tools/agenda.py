@@ -115,9 +115,9 @@ def eventkaart(e, vandaag, root):
     img = kaartfoto(e, root, "eventkaart__heel")
     plaats = '<span class="eventkaart__plaats">%s</span>' % esc(e["locatie"]) if e["locatie"] else ""
     label = '<span class="eventkaart__label">Uitgelicht</span>' if e["uitgelicht"] else ""
-    return ('<a class="eventkaart%s" href="%sevents/%s/"><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
+    return ('<a class="eventkaart%s" href="%sevents/%s/" data-van="%s" data-tot="%s"><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
             '<span class="eventkaart__tekst">%s<strong>%s</strong><span class="eventkaart__wanneer">%s</span>%s</span></a>'
-            % (" eventkaart--uitgelicht" if e["uitgelicht"] else "", root, e["slug"], s.day, MAANDEN[s.month - 1][:3], img, label,
+            % (" eventkaart--uitgelicht" if e["uitgelicht"] else "", root, e["slug"], e["start"][:10], e["eind"][:10], s.day, MAANDEN[s.month - 1][:3], img, label,
                esc(e["titel"]), esc(kort_wanneer(e, vandaag)), plaats))
 
 
@@ -302,6 +302,20 @@ def aanbieder_overzicht(rij, vandaag):
     return "\n".join(out)
 
 
+# Filter op datum boven de agenda (assets/js/agendafilter.js). Werkt in de browser met de datum van de bezoeker, dus ook
+# als de nachtelijke herbouw een dag achterloopt. Met ?wanneer=weekend (of vandaag, morgen, week) staat een filter meteen aan.
+AGENDAFILTER = [
+    '      <div class="gidsen-filter agendafilter" id="agendafilter" role="group" aria-label="Filter op datum">',
+    '        <button type="button" data-wanneer="" aria-pressed="true">Alles</button>',
+    '        <button type="button" data-wanneer="vandaag" aria-pressed="false">Vandaag</button>',
+    '        <button type="button" data-wanneer="morgen" aria-pressed="false">Morgen</button>',
+    '        <button type="button" data-wanneer="weekend" aria-pressed="false">Dit weekend</button>',
+    '        <button type="button" data-wanneer="week" aria-pressed="false">Komende 7 dagen</button>',
+    '        <p class="agendafilter__uitkomst" aria-live="polite" hidden></p>',
+    '      </div>',
+]
+
+
 def overzicht(komend, vandaag):
     root = "../"
     canonical = "%s/%s/" % (SITE, OVERZICHT)
@@ -317,6 +331,8 @@ def overzicht(komend, vandaag):
     if not komend:
         out.append("      <p>Er staan op dit moment geen evenementen in de agenda.</p>")
     out.extend("      " + r for r in uitgelicht_blok(komend, vandaag, root, 6))
+    if komend:
+        out += AGENDAFILTER
     # Langlopende exposities apart bovenaan, zodat ze niet elke maand opnieuw de lijst openen
     lopend = [e for e in komend if dag(e, "start") < vandaag]
     if lopend:
@@ -339,6 +355,8 @@ def overzicht(komend, vandaag):
         out.append("        </div>\n      </section>")
     out.append('      <p class="gids-cta"><a class="knop" href="%s">Evenement aanmelden</a> <a href="%s%s/">Bekijk evenementen per locatie</a></p>'
                % (AANMELDEN, root, AANBIEDERS))
+    if komend:
+        out.append('      <script src="%sassets/js/agendafilter.js?v=1" defer></script>' % root)
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
