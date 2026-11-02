@@ -3,7 +3,8 @@
 Twee overzichtspagina's voor bezoekers van buiten de stad, zoals de vaste rubrieken van Visit Nijmegen en Regio Arnhem.
 Ze bundelen pagina's die al op de site staan. De indeling staat in data/bezoekers.json: per pagina groepen met kaarten.
 Een kaart naar een eigen pagina krijgt vanzelf de titel, omschrijving en foto van die pagina (h1, meta description,
-og:image). Bij een externe link (bijv. Visit Nijmegen) staan titel en tekst in het json-bestand. Een kaart naar een pagina
+og:image, anders de eerste eigen foto op de pagina). Bij een externe link (bijv. Visit Nijmegen) staan titel, tekst en
+foto in het json-bestand; "foto" kan ook bij een eigen pagina de foto vervangen. Een kaart naar een pagina
 die niet (meer) bestaat of een doorverwijzing is geworden, slaat het script over en meldt het.
 
 Gebruik: python tools/bezoekers.py   (daarna tools/build.py en tools/zoekindex.py)
@@ -17,6 +18,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import SITE, VOET, esc, kop  # noqa: E402
+import nieuws  # noqa: E402
 
 DATA = json.load(open(ROOT / "data" / "bezoekers.json", encoding="utf-8"))
 
@@ -41,18 +43,23 @@ def eigen_pagina(pad):
         foto = foto[len(SITE) + 1:]   # eigen foto: relatief, zodat de testsite hem ook toont
     elif "/assets/img/logo" in foto:
         foto = ""
+    if not foto:   # geen eigen og:image (bijv. een categorie in de bedrijvengids): de eerste eigen foto op de pagina
+        m = re.search(r'<img[^>]+src="(?:\.\./)*(assets/uploads/[^"]+)"', s)
+        foto = m.group(1) if m else ""
+    if not foto:   # en anders een vaste foto van Nijmegen, net als bij nieuws zonder eigen foto
+        foto = nieuws.standaardfoto(pad.strip("/")) or ""
     return {"titel": titel, "tekst": meta(s, "description"), "foto": foto}
 
 
 def kaart(k, root):
     if k.get("extern"):
-        href, info, doel = k["extern"], {"titel": k["titel"], "tekst": k["tekst"], "foto": ""}, ' rel="noopener" target="_blank"'
+        href, info, doel = k["extern"], {"titel": k["titel"], "tekst": k["tekst"], "foto": k.get("foto", "")}, ' rel="noopener" target="_blank"'
     else:
         info = eigen_pagina(k["pad"])
         if info is None:
             print("Overgeslagen, bestaat niet of is een doorverwijzing:", k["pad"])
             return ""
-        info.update({x: k[x] for x in ("titel", "tekst") if k.get(x)})
+        info.update({x: k[x] for x in ("titel", "tekst", "foto") if k.get(x)})
         href, doel = root + k["pad"].lstrip("/"), ""
     tekst = info["tekst"]
     if len(tekst) > 150:

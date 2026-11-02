@@ -221,13 +221,15 @@
             "titel": "Mobiliteit in Nijmegen"
           },
           {
-            "pad": "/bedrijvengids-categorie/taxi/"
+            "pad": "/bedrijvengids-categorie/taxi/",
+            "foto": "assets/uploads/2022/09/met-de-taxi-op-pad-in-nijmegen.webp"
           },
           {
             "extern": "https://www.visitnijmegen.com/plan-je-bezoek/bereikbaarheid",
             "bron": "Visit Nijmegen",
             "titel": "Bereikbaarheid en wegafsluitingen",
-            "tekst": "Actuele informatie over wegwerkzaamheden en omleidingen in het Rijk van Nijmegen."
+            "tekst": "Actuele informatie over wegwerkzaamheden en omleidingen in het Rijk van Nijmegen.",
+            "foto": "assets/uploads/2026/06/Oversteek-brug-1200x800.webp"
           }
         ]
       },
@@ -287,7 +289,8 @@
             "extern": "https://www.visitnijmegen.com/plan-je-bezoek/citystorenijmegen",
             "bron": "Visit Nijmegen",
             "titel": "Toeristische informatiepunten",
-            "tekst": "Waar je in Nijmegen en de regio terecht kunt voor folders, kaarten, routes en souvenirs."
+            "tekst": "Waar je in Nijmegen en de regio terecht kunt voor folders, kaarten, routes en souvenirs.",
+            "foto": "assets/uploads/2023/01/stadsdelen-nijmegen.webp"
           },
           {
             "pad": "/parkeren-in-nijmegen/#gehandicapten",
@@ -298,7 +301,8 @@
             "extern": "https://www.visitnijmegen.com/zorgeloos-op-vakantie",
             "bron": "Visit Nijmegen",
             "titel": "Toegankelijk op pad",
-            "tekst": "Tips voor bezoekers met een beperking: toegankelijke uitjes, accommodaties en voorzieningen in de regio."
+            "tekst": "Tips voor bezoekers met een beperking: toegankelijke uitjes, accommodaties en voorzieningen in de regio.",
+            "foto": "assets/uploads/2026/10/Gezicht_op_de_stad_vanaf_de_overkant_van_de_rivier_-_Nijmegen_-_20415752_-_RCE-1329x800.webp"
           }
         ]
       },
