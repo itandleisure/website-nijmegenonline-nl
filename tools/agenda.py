@@ -139,9 +139,9 @@ def eventkaart(e, vandaag, root):
     plek = plek_tekst(e)
     plaats = '<span class="eventkaart__plaats">%s</span>' % esc(plek) if plek else ""
     label = '<span class="eventkaart__label">Uitgelicht</span>' if e["uitgelicht"] else ""
-    return ('<a class="eventkaart%s" href="%sevents/%s/"%s><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
+    return ('<a class="eventkaart%s" href="%sevents/%s/" data-van="%s" data-tot="%s"%s><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
             '<span class="eventkaart__tekst">%s<strong>%s</strong><span class="eventkaart__wanneer">%s</span>%s</span></a>'
-            % (" eventkaart--uitgelicht" if e["uitgelicht"] else "", root, e["slug"],
+            % (" eventkaart--uitgelicht" if e["uitgelicht"] else "", root, e["slug"], e["start"][:10], e["eind"][:10],
                ' data-plaats="%s"' % esc(e["_plaats"]) if e.get("_plaats") else "", s.day, MAANDEN[s.month - 1][:3], img, label,
                esc(e["titel"]), esc(kort_wanneer(e, vandaag)), plaats))
 
@@ -337,6 +337,20 @@ def aanbieder_overzicht(rij, vandaag):
     return "\n".join(out)
 
 
+# Filter op datum boven de agenda (assets/js/agendafilter.js). Werkt in de browser met de datum van de bezoeker, dus ook
+# als de nachtelijke herbouw een dag achterloopt. Met ?wanneer=weekend (of vandaag, morgen, week) staat een filter meteen aan.
+AGENDAFILTER = [
+    '      <div class="gidsen-filter agendafilter" id="agendafilter" role="group" aria-label="Filter op datum">',
+    '        <button type="button" data-wanneer="" aria-pressed="true">Alles</button>',
+    '        <button type="button" data-wanneer="vandaag" aria-pressed="false">Vandaag</button>',
+    '        <button type="button" data-wanneer="morgen" aria-pressed="false">Morgen</button>',
+    '        <button type="button" data-wanneer="weekend" aria-pressed="false">Dit weekend</button>',
+    '        <button type="button" data-wanneer="week" aria-pressed="false">Komende 7 dagen</button>',
+    '        <p class="agendafilter__uitkomst" aria-live="polite" hidden></p>',
+    '      </div>',
+]
+
+
 def overzicht(komend, vandaag):
     root = "../"
     canonical = "%s/%s/" % (SITE, OVERZICHT)
@@ -351,8 +365,10 @@ def overzicht(komend, vandaag):
                'Organiseer je zelf iets? <a href="%s">Meld je evenement aan</a>.</p>\n      </header>' % AANMELDEN)
     if not komend:
         out.append("      <p>Er staan op dit moment geen evenementen in de agenda.</p>")
-    out.extend("      " + r for r in plaatsfilter(komend))
     out.extend("      " + r for r in uitgelicht_blok(komend, vandaag, root, 6))
+    if komend:
+        out += AGENDAFILTER
+        out.extend("      " + r for r in plaatsfilter(komend))
     # Langlopende exposities apart bovenaan, zodat ze niet elke maand opnieuw de lijst openen
     lopend = [e for e in komend if dag(e, "start") < vandaag]
     if lopend:
@@ -375,17 +391,17 @@ def overzicht(komend, vandaag):
         out.append("        </div>\n      </section>")
     out.append('      <p class="gids-cta"><a class="knop" href="%s">Evenement aanmelden</a> <a href="%s%s/">Bekijk evenementen per locatie</a></p>'
                % (AANMELDEN, root, AANBIEDERS))
-    out.append('      <p class="agenda-leeg" hidden>Er staan nu geen evenementen in deze plaats in de agenda.</p>')
+    if komend:
+        out.append('      <script src="%sassets/js/agendafilter.js?v=2" defer></script>' % root)
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
-    out.append('      <script src="%sassets/js/agenda.js" defer></script>' % root)
     out.append("    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
 
 
 def plaatsfilter(komend):
-    """Knoppen om de agenda op plaats te filteren (assets/js/agenda.js); Nijmegen eerst, dan de rest op aantal.
-    Zonder JavaScript blijven ze verborgen en staat de hele agenda er gewoon."""
+    """Knoppen om de agenda op plaats te filteren (assets/js/agendafilter.js, samen met het filter op datum); Nijmegen
+    eerst, dan de rest op aantal. Zonder JavaScript blijven ze verborgen en staat de hele agenda er gewoon."""
     tel = {}
     for e in komend:
         tel[e["_plaats"]] = tel.get(e["_plaats"], 0) + 1
@@ -395,7 +411,7 @@ def plaatsfilter(komend):
     knoppen = ['<button type="button" data-plaats="" aria-pressed="true">Alle plaatsen</button>']
     knoppen += ['<button type="button" data-plaats="%s" aria-pressed="false">%s <span>%d</span></button>' % (esc(p), esc(p), tel[p])
                 for p in volgorde]
-    return ['<nav class="agenda-plaatsen" aria-label="Filter op plaats" hidden>', '  ' + "".join(knoppen), "</nav>"]
+    return ['<div class="gidsen-filter agenda-plaatsen" role="group" aria-label="Filter op plaats" hidden>', '  ' + "".join(knoppen), "</div>"]
 
 
 def plaats_blok(plaats, komend, vandaag):

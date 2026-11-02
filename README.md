@@ -20,6 +20,7 @@ _redirects            301's van oude WordPress-categoriepagina's (voor Cloudflar
 partials/             gedeelde header, footer en zijbalk
 tools/import_wordpress.py     zet de WordPress-export om naar pagina's
 tools/build.py        zet de onderdelen uit partials/ in alle pagina's
+zien-en-doen/, plan-je-bezoek/  bezoekersrubrieken, gemaakt door tools/bezoekers.py uit data/bezoekers.json
 zoeken/               zoekpagina (Pagefind), het zoekveld in de zijbalk stuurt hierheen
 pagefind/             zoekindex, gebouwd door tools/zoekindex.py (niet met de hand aanpassen)
 robots.txt            blokkeert zoekmachines zolang dit een test is
@@ -125,7 +126,7 @@ De bedrijvengids is de basis: een evenement, nieuwsbericht (en straks een vacatu
 - **Nieuws**: veld `"bedrijven"` (lijst) in `data/nieuws.json`, of automatisch als de tekst naar de website van het bedrijf linkt.
 - **Plaats**: elk evenement en elke aanbieder heeft een plaats (`"plaats"`, anders uit het adres of de postcode). Dorpen
   horen bij hun gemeente (Malden bij Heumen, Beek bij Berg en Dal). Het agenda-overzicht filtert op plaats
-  (`assets/js/agenda.js`, ook via `?plaats=Wijchen`), en elke plaatspagina in `/bestemmingen/` toont de agenda van die
+  (`assets/js/agendafilter.js`, samen met het filter op datum, ook via `?plaats=Wijchen`), en elke plaatspagina in `/bestemmingen/` toont de agenda van die
   plaats tussen `<!-- agenda-plaats -->` en `<!-- /agenda-plaats -->`.
 - **Wat de bezoeker ziet**: op de bedrijfspagina de blokken Agenda en In het nieuws (boven de kaart); op de evenement- en
   nieuwspagina's het kaartje "Over <bedrijf>" en in de gestructureerde gegevens `organizer` / `about`.

@@ -112,6 +112,11 @@ img { max-width: 100%; height: auto; display: block; }
 .hoofdmenu a:hover { background: rgba(255, 255, 255, 0.14); color: var(--wit); }
 .hoofdmenu a[aria-current] { background: rgba(13, 58, 99, 0.35); color: var(--wit); box-shadow: inset 0 -3px 0 #b9e58f; }
 .hoofdmenu__extra { display: none; }
+/* Acht menu-onderdelen: op desktop geen Home (het logo gaat al naar home) en iets compacter; onder 1100px het mobiele menu */
+.logo { flex-shrink: 0; }
+.hoofdmenu a { white-space: nowrap; }
+.hoofdmenu__home { display: none; }
+@media (min-width: 1101px) { .hoofdmenu a { padding: 8px 9px; font-size: 0.85rem; letter-spacing: 0.3px; } }
 .kop__knop { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.14); color: var(--wit); cursor: pointer; padding: 0; flex: none; transition: background-color 0.15s ease; }
 .kop__knop:hover { background: rgba(255, 255, 255, 0.26); color: var(--wit); }
 .kop__knop svg { width: 20px; height: 20px; }
@@ -119,8 +124,9 @@ img { max-width: 100%; height: auto; display: block; }
 .kop__menuknop .dicht { display: none; }
 .kop__menuknop[aria-expanded="true"] .open { display: none; }
 .kop__menuknop[aria-expanded="true"] .dicht { display: block; }
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   html { scroll-padding-top: 80px; }
+  .hoofdmenu__home { display: block; }
   .bovenbalk { display: none; }
   .kop { flex-wrap: wrap; padding: 8px 16px; }
   .logo img { height: 44px; }
@@ -507,14 +513,15 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .bedrijfkaart--uitgelicht { border: 2px solid var(--groen); background: #eef6e8; }
 @media (min-width: 640px) { .bedrijfkaart--uitgelicht { flex-direction: row; } .bedrijfkaart--uitgelicht img { width: 45%; aspect-ratio: 4 / 3; } .bedrijfkaart--uitgelicht .bedrijfkaart__tekst { padding: 16px 20px; font-size: 1rem; } .bedrijfkaart--uitgelicht strong { font-size: 1.25rem; } }
 .bedrijfkaart__label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--groen); }
-.gidskaart { height: 460px; border: 1px solid var(--rand); border-radius: var(--radius); margin-top: 12px; z-index: 0; }
+/* Kaart in de bedrijvengids: op id, zodat de gidskaarten op /thema/ niet 460px hoog worden */
+#gidskaart { height: 460px; border: 1px solid var(--rand); border-radius: var(--radius); margin-top: 12px; z-index: 0; }
 .kaartgroepen { display: flex; flex-wrap: wrap; gap: 8px; }
 .kaartgroepen button { font: inherit; font-size: 0.9rem; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--groen); background: var(--wit); color: var(--groen); cursor: pointer; }
 .kaartgroepen button[aria-pressed="true"] { background: var(--groen); color: var(--wit); }
 .gidsgroepen { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 14px; }
 .gidsgroepen h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .gidsgroepen ul { margin: 0; padding-left: 18px; }
-@media (max-width: 600px) { .gidskaart { height: 360px; } }
+@media (max-width: 600px) { #gidskaart { height: 360px; } }
 .kaartpunt span { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; box-sizing: border-box; border-radius: 50%; background: var(--groen); color: var(--wit); border: 2px solid var(--wit); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35); transition: transform 0.15s ease; }
 .kaartpunt svg { width: 16px; height: 16px; }
 .kaartgroepen button svg { width: 1.1em; height: 1.1em; vertical-align: -0.2em; margin-right: 2px; }
@@ -536,8 +543,8 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .kaartpartner__foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .kaartpartner__label { display: block; width: max-content; margin: 22px auto 0; padding: 2px 9px; border-radius: 999px; background: var(--groen); color: var(--wit); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3px; line-height: 1.4; white-space: nowrap; }
 .kaartpartner:hover .kaartpartner__speld, .kaartpartner:focus .kaartpartner__speld { transform: rotate(-45deg) scale(1.08); }
-.gidskaart .leaflet-popup-content { font-family: inherit; font-size: 0.95rem; }
-.gidskaart .leaflet-popup-content a { font-weight: 700; }
+#gidskaart .leaflet-popup-content { font-family: inherit; font-size: 0.95rem; }
+#gidskaart .leaflet-popup-content a { font-weight: 700; }
 
 /* Bedrijvengids: kenmerken en filter */
 .bedrijfkaart[hidden], .gids-sectie[hidden] { display: none; }
@@ -630,14 +637,23 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .pagina th { font-weight: 700; }
 @media (max-width: 600px) { .pagina table { display: block; overflow-x: auto; } }
 
-/* Agenda: filter op plaats (assets/js/agenda.js) */
-.eventkaart[hidden], .uitgelicht[hidden], .agenda-maand[hidden], .agenda-uitgelicht[hidden], .agenda-plaatsen[hidden] { display: none; }
-.agenda-plaatsen { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
-.agenda-plaatsen button { font: inherit; font-size: 0.9rem; font-weight: 600; padding: 6px 14px; border: 1px solid var(--rand); border-radius: 999px; background: var(--wit); color: var(--tekst); cursor: pointer; }
-.agenda-plaatsen button span { color: var(--grijs); font-weight: 500; margin-left: 2px; }
-.agenda-plaatsen button:hover { border-color: var(--groen); }
-.agenda-plaatsen button[aria-pressed="true"] { background: var(--donkerblauw); border-color: var(--donkerblauw); color: var(--wit); }
-.agenda-plaatsen button[aria-pressed="true"] span { color: rgba(255, 255, 255, 0.75); }
+/* Bezoekersrubrieken /zien-en-doen/ en /plan-je-bezoek/ (tools/bezoekers.py) */
+.gidsen-filter .knop-link { font-size: 0.9rem; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rand); background: var(--wit); color: var(--tekst); text-decoration: none; }
+.gidsen-filter .knop-link:hover, .gidsen-filter .knop-link:focus-visible { border-color: var(--groen); color: var(--groen); }
+.bezoekers-groep { margin: 32px 0; scroll-margin-top: 90px; }
+.bezoekers-groep > h2 { margin: 0 0 6px; }
+.bezoekers-groep > p { margin: 0 0 16px; color: var(--grijs); max-width: 720px; }
+.gidskaart h3 { margin: 0; font-size: 1.1rem; color: var(--kop); }
+
+/* Agenda: filter op datum (assets/js/agendafilter.js) */
+.agendafilter { align-items: center; }
+.agendafilter__uitkomst { flex-basis: 100%; margin: 4px 0 0; font-size: 0.9rem; color: var(--grijs); }
+.eventkaart[hidden], .agenda-maand[hidden] { display: none; }
+
+/* Agenda: filter op plaats (assets/js/agendafilter.js) */
+.uitgelicht[hidden], .agenda-uitgelicht[hidden], .agenda-plaatsen[hidden] { display: none; }
+.agenda-plaatsen { margin-top: -8px; }
+.agenda-plaatsen button span { opacity: 0.7; font-weight: 500; margin-left: 2px; }
 
 /* Kaartje "Over <bedrijf>" onder evenementen en nieuws (tools/koppeling.py) */
 .over-bedrijf { margin: 32px 0; }
