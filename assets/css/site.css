@@ -507,14 +507,15 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .bedrijfkaart--uitgelicht { border: 2px solid var(--groen); background: #eef6e8; }
 @media (min-width: 640px) { .bedrijfkaart--uitgelicht { flex-direction: row; } .bedrijfkaart--uitgelicht img { width: 45%; aspect-ratio: 4 / 3; } .bedrijfkaart--uitgelicht .bedrijfkaart__tekst { padding: 16px 20px; font-size: 1rem; } .bedrijfkaart--uitgelicht strong { font-size: 1.25rem; } }
 .bedrijfkaart__label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--groen); }
-.gidskaart { height: 460px; border: 1px solid var(--rand); border-radius: var(--radius); margin-top: 12px; z-index: 0; }
+/* Kaart in de bedrijvengids: op id, zodat de gidskaarten op /thema/ niet 460px hoog worden */
+#gidskaart { height: 460px; border: 1px solid var(--rand); border-radius: var(--radius); margin-top: 12px; z-index: 0; }
 .kaartgroepen { display: flex; flex-wrap: wrap; gap: 8px; }
 .kaartgroepen button { font: inherit; font-size: 0.9rem; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--groen); background: var(--wit); color: var(--groen); cursor: pointer; }
 .kaartgroepen button[aria-pressed="true"] { background: var(--groen); color: var(--wit); }
 .gidsgroepen { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 14px; }
 .gidsgroepen h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .gidsgroepen ul { margin: 0; padding-left: 18px; }
-@media (max-width: 600px) { .gidskaart { height: 360px; } }
+@media (max-width: 600px) { #gidskaart { height: 360px; } }
 .kaartpunt span { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; box-sizing: border-box; border-radius: 50%; background: var(--groen); color: var(--wit); border: 2px solid var(--wit); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35); transition: transform 0.15s ease; }
 .kaartpunt svg { width: 16px; height: 16px; }
 .kaartgroepen button svg { width: 1.1em; height: 1.1em; vertical-align: -0.2em; margin-right: 2px; }
@@ -536,8 +537,8 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .kaartpartner__foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .kaartpartner__label { display: block; width: max-content; margin: 22px auto 0; padding: 2px 9px; border-radius: 999px; background: var(--groen); color: var(--wit); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3px; line-height: 1.4; white-space: nowrap; }
 .kaartpartner:hover .kaartpartner__speld, .kaartpartner:focus .kaartpartner__speld { transform: rotate(-45deg) scale(1.08); }
-.gidskaart .leaflet-popup-content { font-family: inherit; font-size: 0.95rem; }
-.gidskaart .leaflet-popup-content a { font-weight: 700; }
+#gidskaart .leaflet-popup-content { font-family: inherit; font-size: 0.95rem; }
+#gidskaart .leaflet-popup-content a { font-weight: 700; }
 
 /* Bedrijvengids: kenmerken en filter */
 .bedrijfkaart[hidden], .gids-sectie[hidden] { display: none; }
