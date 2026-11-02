@@ -34,6 +34,10 @@
     .slechter { color: var(--rood); font-weight: 700; }
     .kaart { background: var(--wit); border-radius: var(--radius); box-shadow: var(--schaduw); padding: 16px 18px; margin-top: 12px; }
     .rij2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+    .rij3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+    .let-op { color: #a35a00; font-weight: 700; }
+    .melding ul { margin: 6px 0 0; padding-left: 20px; }
+    .melding li { margin: 3px 0; }
     .grafiek { position: relative; }
     .grafiek svg { display: block; width: 100%; height: 220px; overflow: visible; }
     .grafiek .as { font-size: 11px; fill: var(--grijs); font-family: inherit; }
@@ -104,11 +108,11 @@
     <div id="clarity"></div>
 
     <h2>Posities op belangrijke zoekwoorden</h2>
-    <p class="uitleg">Elke week zoeken we de vaste lijst zoekwoorden op in Google (Nederland, desktop) en kijken we op welke plek NijmegenOnline staat in de eerste 50 resultaten. "AI-overzicht" betekent dat Google bovenaan een AI-samenvatting toont; een vinkje bij "bron" betekent dat NijmegenOnline daarin als bron genoemd wordt.</p>
+    <p class="uitleg">Elke week zoeken we een vaste lijst van 100 zoekwoorden op in Google (Nederland, desktop) en kijken we op welke plek NijmegenOnline staat in de eerste 50 resultaten. De lijst volgt de gidsen en het zoekwoordenonderzoek van 1 november 2026 (tot die datum waren het 74 zoekwoorden). Bij elk zoekwoord staat hoe vaak het per maand gezocht wordt; "geschat zoekverkeer" is zoekvolume maal de klikkans op die positie, zodat een plek 3 op "parkeergarage eiermarkt" zwaarder telt dan een plek 1 op een klein woord. Google wisselt van dag tot dag, dus kijk naar de trend over weken. "AI-overzicht" betekent dat Google bovenaan een AI-samenvatting toont; "bron" dat NijmegenOnline daarin genoemd wordt.</p>
     <div id="zoekwoorden"></div>
 
     <h2>Zichtbaarheid in AI-antwoorden</h2>
-    <p class="uitleg">Elke vier weken stellen we dezelfde vragen over Nijmegen aan ChatGPT, Gemini, Perplexity en Claude, met zoeken op internet aan. We tellen hoe vaak NijmegenOnline in het antwoord genoemd wordt of als bron gelinkt is.</p>
+    <p class="uitleg">Elke vier weken stellen we dezelfde 30 vragen over Nijmegen aan ChatGPT, Gemini, Perplexity en Claude, met zoeken op internet aan (tot 1 november 2026 waren het 25 vragen; de nieuwe gaan over parkeren, wandelen, zwemmen, sauna en de Zevenheuvelenloop). We tellen hoe vaak NijmegenOnline in het antwoord genoemd wordt of als bron gelinkt is.</p>
     <div id="ai"></div>
   </main>
 
@@ -251,13 +255,19 @@
     }
 
     // ---------- afgeleide cijfers ----------
+    // Klikkans per positie (zelfde tabel als tools/statistiek.py): plek 1 t/m 10, daarna 1% (11-20) en 0,3% (21-50).
+    var KLIKKANS = [0.28, 0.15, 0.10, 0.07, 0.05, 0.04, 0.03, 0.025, 0.02, 0.018];
+    function klikkans(pos) { return !pos ? 0 : pos <= 10 ? KLIKKANS[pos - 1] : pos <= 20 ? 0.01 : 0.003; }
+    function volumeVan(z) { return (D.zoekvolume && D.zoekvolume.volumes && D.zoekvolume.volumes[z]) || 0; }
     function zwSamenvatting(m) {
-      var p = Object.values(m.posities), pos = p.map(function (u) { return u.pos; }).filter(Boolean);
+      var p = Object.values(m.posities), pos = p.map(function (u) { return u.pos; }).filter(Boolean), verkeer = 0;
+      Object.keys(m.posities).forEach(function (z) { verkeer += volumeVan(z) * klikkans(m.posities[z].pos); });
       return {
         datum: m.datum, totaal: p.length,
         top3: pos.filter(function (x) { return x <= 3; }).length,
         top10: pos.filter(function (x) { return x <= 10; }).length,
         top50: pos.length,
+        verkeer: Math.round(verkeer),
         aioBron: p.filter(function (u) { return u.aio_bron; }).length,
         aio: p.filter(function (u) { return u.aio; }).length,
       };
@@ -293,6 +303,7 @@
         var a = zw[zw.length - 1], b = zw[zw.length - 2];
         t += tegel("Zoekwoorden in de top 10", a.top10 + '<span class="klein" style="font-size:1rem;color:var(--grijs)"> / ' + a.totaal + "</span>", b ? verschil(a.top10, b.top10) + " sinds " + kortFmt.format(d(b.datum)) : "eerste meting");
         t += tegel("Zoekwoorden in de top 3", a.top3, b ? verschil(a.top3, b.top3) + " sinds " + kortFmt.format(d(b.datum)) : "eerste meting");
+        if (D.zoekvolume) t += tegel("Geschat zoekverkeer per maand", fmt.format(a.verkeer), (b ? verschil(a.verkeer, b.verkeer) + " sinds " + kortFmt.format(d(b.datum)) + " · " : "") + "uit de " + a.totaal + " gemeten zoekwoorden");
         t += tegel("Bron in Google AI-overzicht", a.aioBron + '<span style="font-size:1rem;color:var(--grijs)"> / ' + a.aio + "</span>", "van de zoekwoorden met een AI-overzicht");
       }
       if (ai.length) {
@@ -392,37 +403,79 @@
     function tekenZoekwoorden(zw) {
       var el = $("zoekwoorden");
       if (!zw.length) { el.innerHTML = '<p class="leeg">Nog geen metingen.</p>'; return; }
-      el.innerHTML = '<div class="rij2"><div class="kaart"><h3>Aantal zoekwoorden in de top 10</h3><div class="grafiek" id="g-top10"></div></div>' +
-        '<div class="kaart"><h3>Aantal zoekwoorden in de top 50</h3><div class="grafiek" id="g-top50"></div></div></div>' +
+      var metVolume = !!D.zoekvolume;
+      el.innerHTML = '<div class="rij3"><div class="kaart"><h3>Aantal zoekwoorden in de top 10</h3><div class="grafiek" id="g-top10"></div></div>' +
+        '<div class="kaart"><h3>Aantal zoekwoorden in de top 50</h3><div class="grafiek" id="g-top50"></div></div>' +
+        (metVolume ? '<div class="kaart"><h3>Geschat zoekverkeer per maand</h3><div class="grafiek" id="g-verkeer"></div></div>' : "") + '</div>' +
+        '<div id="aandacht"></div>' +
+        (metVolume ? '<div class="kaart"><h3>Per onderwerp</h3><p class="uitleg">Waar zit het zoekvolume en waar staan we al? "Grootste kans" is het zoekwoord met het meeste volume waarop we nog niet in de top 10 staan.</p><div id="t-groep"></div></div>' : "") +
         '<div class="kaart"><h3>Alle zoekwoorden</h3><div class="filters"><select id="f-groep"><option value="">Alle onderwerpen</option></select>' +
-        '<select id="f-stand"><option value="">Alle posities</option><option value="10">In de top 10</option><option value="50">Plek 11 tot 50</option><option value="0">Niet in de top 50</option></select>' +
+        '<select id="f-stand"><option value="">Alle posities</option><option value="10">In de top 10</option><option value="50">Plek 11 tot 50</option><option value="0">Niet in de top 50</option><option value="kans">Kansen: veel volume, plek 11-30</option></select>' +
         '<input id="f-zoek" type="search" placeholder="Zoek een zoekwoord"></div><div id="t-zw"></div></div>';
       var opt = { min: 0, label: function (p) { return datumFmt.format(d(p.x)); }, waarde: function (v) { return v + " zoekwoorden"; } };
       grafiek($("g-top10"), zw.map(function (s) { return { x: s.datum, y: s.top10 }; }), Object.assign({ titel: "Zoekwoorden in de top 10" }, opt));
       grafiek($("g-top50"), zw.map(function (s) { return { x: s.datum, y: s.top50 }; }), Object.assign({ titel: "Zoekwoorden in de top 50" }, opt));
+      if (metVolume) grafiek($("g-verkeer"), zw.map(function (s) { return { x: s.datum, y: s.verkeer }; }), { min: 0, titel: "Geschat zoekverkeer per maand", label: opt.label, waarde: function (v) { return fmt.format(v) + " bezoekers/maand"; } });
 
       var metingen = D.zoekwoorden, laatst = metingen[metingen.length - 1], vorig = metingen[metingen.length - 2];
       var rijen = Object.keys(laatst.posities).map(function (z) {
         var u = laatst.posities[z], v = vorig && vorig.posities[z], beste = null;
         metingen.forEach(function (m) { var p = m.posities[z] && m.posities[z].pos; if (p && (beste == null || p < beste)) beste = p; });
-        return { zoekwoord: z, groep: u.groep, pos: u.pos, vorige: v ? v.pos : undefined, beste: beste, url: u.url, top: u.top, aio: u.aio, aio_bron: u.aio_bron };
+        return { zoekwoord: z, groep: u.groep, pos: u.pos, vorige: v ? v.pos : undefined, beste: beste, url: u.url, top: u.top, aio: u.aio, aio_bron: u.aio_bron,
+                 volume: volumeVan(z), verkeer: Math.round(volumeVan(z) * klikkans(u.pos)), status: u.status || "ok", doel: u.doel };
       });
       var groepen = []; rijen.forEach(function (r) { if (groepen.indexOf(r.groep) < 0) groepen.push(r.groep); });
       $("f-groep").innerHTML += groepen.map(function (g) { return "<option>" + esc(g) + "</option>"; }).join("");
+
+      // Aandachtspunten: Google toont een pagina die doorverwijst of weg is (de les van /webcam-waalkade/), en kansen vlak onder pagina 1
+      var problemen = rijen.filter(function (r) { return r.status !== "ok"; });
+      var kansen = rijen.filter(function (r) { return r.volume >= 1000 && r.pos && r.pos > 10 && r.pos <= 30; }).sort(function (a, b) { return b.volume - a.volume; }).slice(0, 8);
+      var ah = "";
+      if (problemen.length) ah += '<div class="melding"><b>Let op:</b> Google toont voor deze zoekwoorden een pagina van NijmegenOnline die inmiddels doorverwijst of niet meer bestaat. Bezoekers komen dan niet uit waar ze iets zoeken, en de positie zakt meestal weg.<ul>' +
+        problemen.map(function (r) { return "<li>" + esc(r.zoekwoord) + " (plek " + r.pos + ", " + fmt.format(r.volume) + "/mnd): <code>" + esc(r.url) + "</code> " + (r.status === "ontbreekt" ? "bestaat niet meer" : "verwijst door" + (r.doel ? " naar <code>" + esc(r.doel) + "</code>" : "")) + "</li>"; }).join("") + "</ul></div>";
+      if (kansen.length) ah += '<div class="melding" style="background:#eef6ea"><b>Kansen:</b> veel gezocht en al op plek 11 tot 30. Een betere pagina of een paar interne links kan deze naar pagina 1 brengen.<ul>' +
+        kansen.map(function (r) { return "<li>" + esc(r.zoekwoord) + ": plek " + r.pos + ", " + fmt.format(r.volume) + " zoekopdrachten per maand" + (r.url ? " (<code>" + esc(r.url) + "</code>)" : "") + "</li>"; }).join("") + "</ul></div>";
+      $("aandacht").innerHTML = ah;
+
+      if (metVolume) {
+        var perGroep = groepen.map(function (g) {
+          var rs = rijen.filter(function (r) { return r.groep === g; });
+          var kans = rs.filter(function (r) { return !(r.pos && r.pos <= 10); }).sort(function (a, b) { return b.volume - a.volume; })[0];
+          return { groep: g, n: rs.length, top10: rs.filter(function (r) { return r.pos && r.pos <= 10; }).length,
+                   volume: rs.reduce(function (s, r) { return s + r.volume; }, 0), verkeer: rs.reduce(function (s, r) { return s + r.verkeer; }, 0),
+                   kans: kans ? kans.zoekwoord + " (" + fmt.format(kans.volume) + "/mnd" + (kans.pos ? ", plek " + kans.pos : "") + ")" : "–" };
+        });
+        tabel($("t-groep"), [
+          { kop: "Onderwerp", veld: "groep" },
+          { kop: "Zoekwoorden", veld: "n", n: true },
+          { kop: "In top 10", veld: "top10", n: true, html: function (r) { return (r.top10 ? "<b>" + r.top10 + "</b>" : '<span class="nee">0</span>') + ' <span class="klein">/ ' + r.n + "</span>"; } },
+          { kop: "Zoekvolume per maand", veld: "volume", n: true, html: function (r) { return fmt.format(r.volume); } },
+          { kop: "Geschat verkeer", veld: "verkeer", n: true, html: function (r) { return fmt.format(r.verkeer); } },
+          { kop: "Grootste kans", veld: "kans" },
+        ], perGroep.sort(function (a, b) { return b.volume - a.volume; }));
+      }
+
       var kolommen = [
         { kop: "Zoekwoord", veld: "zoekwoord", html: function (r) { return esc(r.zoekwoord) + '<br><span class="klein">' + esc(r.groep) + "</span>"; } },
+        { kop: "Zoekvolume", veld: "volume", n: true, html: function (r) { return r.volume ? fmt.format(r.volume) : '<span class="nee">–</span>'; } },
         { kop: "Positie", veld: "pos", n: true, html: function (r) { return r.pos ? "<b>" + r.pos + "</b>" : '<span class="nee">&gt; 50</span>'; } },
         { kop: "Verschil", n: true, sort: function (r) { return r.vorige === undefined ? null : (r.vorige || 60) - (r.pos || 60); }, html: function (r) {
           if (r.vorige === undefined) return '<span class="klein">nieuw</span>';
           return verschil(r.pos || 60, r.vorige || 60, true).replace("+", "↓ ").replace("−", "↑ ");
         } },
         { kop: "Beste ooit", veld: "beste", n: true, html: function (r) { return r.beste || "–"; } },
-        { kop: "Pagina", veld: "url", html: function (r) { return r.url ? '<a class="klein" href="https://www.nijmegenonline.nl' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.url.length > 42 ? r.url.slice(0, 40) + "…" : r.url) + "</a>" : ""; } },
+        { kop: "Geschat verkeer", veld: "verkeer", n: true, html: function (r) { return r.verkeer ? fmt.format(r.verkeer) : '<span class="nee">0</span>'; } },
+        { kop: "Pagina", veld: "url", html: function (r) {
+          if (!r.url) return "";
+          var a = '<a class="klein" href="https://www.nijmegenonline.nl' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.url.length > 42 ? r.url.slice(0, 40) + "…" : r.url) + "</a>";
+          return r.status === "ok" ? a : a + '<br><span class="let-op">⚠ ' + (r.status === "ontbreekt" ? "bestaat niet meer" : "verwijst door") + "</span>";
+        } },
         { kop: "Top 3 in Google", html: function (r) { return '<span class="klein">' + r.top.map(esc).join("<br>") + "</span>"; } },
         { kop: "AI-overzicht / bron", sort: function (r) { return (r.aio ? 1 : 0) + (r.aio_bron ? 2 : 0); }, html: function (r) {
           return r.aio ? (r.aio_bron ? '<span class="ja">✓ bron</span>' : '<span class="klein">ja, niet als bron</span>') : '<span class="nee">geen</span>';
         } },
       ];
+      if (!metVolume) kolommen = kolommen.filter(function (k) { return k.veld !== "volume" && k.veld !== "verkeer"; });
       function filter() {
         var g = $("f-groep").value, s = $("f-stand").value, q = $("f-zoek").value.trim().toLowerCase();
         tabel($("t-zw"), kolommen, rijen.filter(function (r) {
@@ -430,8 +483,9 @@
           if (s === "10" && !(r.pos && r.pos <= 10)) return false;
           if (s === "50" && !(r.pos && r.pos > 10)) return false;
           if (s === "0" && r.pos) return false;
+          if (s === "kans" && !(r.volume >= 1000 && r.pos && r.pos > 10 && r.pos <= 30)) return false;
           return !q || r.zoekwoord.indexOf(q) >= 0;
-        }).sort(function (a, b) { return (a.pos || 99) - (b.pos || 99); }));
+        }).sort(function (a, b) { return (a.pos || 99) - (b.pos || 99) || b.volume - a.volume; }));
       }
       ["f-groep", "f-stand", "f-zoek"].forEach(function (id) { $(id).addEventListener("input", filter); });
       filter();
