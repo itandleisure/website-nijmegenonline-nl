@@ -453,10 +453,10 @@ def plaatspaginas_bijwerken(komend, vandaag):
     return bijgewerkt
 
 
-def doorverwijzing(map_, doel_pad, titel, url):
+def doorverwijzing(map_, doel_pad, titel, url, zin="Dit evenement is afgelopen. Bekijk de"):
     map_.mkdir(parents=True, exist_ok=True)
     tekst = DOORVERWIJZING % {"titel": esc(titel), "url": url, "pad": doel_pad}
-    tekst = tekst.replace("Dit artikel is samengevoegd met", "Dit evenement is afgelopen. Bekijk de")
+    tekst = tekst.replace("Dit artikel is samengevoegd met", zin)
     (map_ / "index.html").write_text(tekst, encoding="utf-8")
 
 
@@ -526,6 +526,12 @@ def main(vandaag):
             (info["bedrijf"], vermeldingen[info["bedrijf"]]) if info.get("bedrijf") in vermeldingen else None), encoding="utf-8")
         if k:
             rij.append((slug, info["naam"], len(k), any(e["uitgelicht"] for e in alle)))
+    # Samengevoegde aanbieders (data/aanbieders-samengevoegd.json, tools/koppelen.py) verwijzen naar de nieuwe
+    samen = {o: n for o, n in koppeling.samengevoegd().items() if o not in aanbieders and n in aanbieders}
+    for oud, nieuw in samen.items():
+        naar = "%s/%s/" % (AANBIEDERS, nieuw) if nieuw not in weg_aanbieder else OVERZICHT + "/"
+        doorverwijzing(locaties / oud, "../../%s" % naar, aanbieders[nieuw]["naam"], "%s/%s" % (SITE, naar),
+                      "Deze locatie heet nu")
     rij.sort(key=lambda r: (not r[3], -r[2], r[1].lower()))
     (locaties / "index.html").write_text(aanbieder_overzicht(rij, vandaag), encoding="utf-8")
 
@@ -552,6 +558,8 @@ def main(vandaag):
     regels = ["# agenda (tools/agenda.py)", "/agenda/ /%s/ 301" % OVERZICHT]
     regels += ["/events/%s/ /%s/ 301" % (slug, doel.get(slug, "/%s/" % OVERZICHT).strip("/")) for slug in sorted(weg)]
     regels += ["/%s/%s/ /%s/ 301" % (AANBIEDERS, slug, OVERZICHT) for slug in sorted(weg_aanbieder)]
+    regels += ["/%s/%s/ /%s/ 301" % (AANBIEDERS, oud, (OVERZICHT if nieuw in weg_aanbieder else "%s/%s" % (AANBIEDERS, nieuw)))
+               for oud, nieuw in sorted(samen.items())]
     redirects.write_text((oud + "\n" if oud else "") + "\n".join(regels) + "\n", encoding="utf-8")
 
     print("Agenda %s: %d komend, %d evenementpagina's (waarvan %d afgelopen), %d aanbieders (%d met komende evenementen), %d doorverwijzingen, %d plaatspagina's"

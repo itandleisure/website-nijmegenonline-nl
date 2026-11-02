@@ -169,12 +169,16 @@ def kies_aanbieder(a, evenementen, aanbieders):
     """De aanbieder die de redactie op de beoordeelpagina koos; anders een bestaande met (bijna) dezelfde naam
     of hetzelfde adres; anders een nieuwe op naam van de locatie."""
     keuze = (a.get("aanbieder") or "").strip()
+    keuze = koppeling.samengevoegd().get(keuze, keuze)   # een aanbieder die inmiddels is samengevoegd
     locatie = a.get("locatie", "").strip()
     if keuze in aanbieders:
         return keuze
     if keuze != "nieuw":
-        sleutel = naam_sleutel(locatie)
-        gevonden = next((k for k, v in aanbieders.items() if sleutel and naam_sleutel(v["naam"]) == sleutel), None)
+        # Aanbieders heten "naam plus plaats" (Boskapel Nijmegen); in het formulier staat vaak alleen "Boskapel"
+        p = (koppeling.plaats_naam(a.get("plaats", "")) or koppeling.plaats_van(a.get("adres", "") + " " + a.get("plaats", ""))
+             or "Nijmegen")
+        sleutels = {naam_sleutel(locatie), naam_sleutel(koppeling.naam_met_plaats(locatie, p))} - {""}
+        gevonden = next((k for k, v in aanbieders.items() if naam_sleutel(v["naam"]) in sleutels), None)
         if not gevonden and a.get("adres"):
             straat = adres_sleutel(a["adres"])
             gevonden = next((e["aanbieder"] for e in reversed(evenementen)
@@ -183,6 +187,8 @@ def kies_aanbieder(a, evenementen, aanbieders):
             return gevonden
     if not locatie:
         return ""
+    if koppeling.samengevoegd().get(slug(locatie)) in aanbieders:   # "Stadthalle Kleve" is nu Kleve
+        return koppeling.samengevoegd()[slug(locatie)]
     s, n = slug(locatie), 2
     while s in aanbieders:
         s, n = "%s-%d" % (slug(locatie), n), n + 1
@@ -221,7 +227,9 @@ def evenement(a, evenementen, aanbieders):
     if aanbieder in aanbieders:
         locatie = aanbieders[aanbieder]["naam"]   # de bekende schrijfwijze
     elif aanbieder:
-        aanbieders[aanbieder] = {"naam": locatie, "plaats": plaats_ or koppeling.plaats_van(locatie) or "Nijmegen"}
+        p = plaats_ or koppeling.plaats_van(locatie) or koppeling.plaats_van(a.get("adres", "")) or "Nijmegen"
+        locatie = koppeling.naam_met_plaats(locatie, p)   # besluit Frans: altijd naam plus plaats
+        aanbieders[aanbieder] = {"naam": locatie, "plaats": p}
         # Een nieuwe aanbieder met hetzelfde bedrijf: dan hoort de plek bij dat bedrijf
         if bedrijf and vermeldingen()[bedrijf]["bedrijf"].lower() in locatie.lower():
             aanbieders[aanbieder]["bedrijf"] = bedrijf

@@ -18,6 +18,7 @@ from import_wordpress import SITE, esc
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 VERMELDINGEN = ROOT / "data" / "bedrijvengids-vermeldingen.json"
 ZOEKLIJST = ROOT / "data" / "bedrijven-zoek.json"
+SAMENGEVOEGD = ROOT / "data" / "aanbieders-samengevoegd.json"
 
 # Plaats -> (bestemmingspagina of None, andere schrijfwijzen). De naam is zoals hij op de site staat.
 # Dorpen horen bij de pagina van hun gemeente (Malden bij Heumen, Beek bij Berg en Dal).
@@ -83,6 +84,11 @@ def plaats_van(adres):
     return DUITS.get(m.group(1), "") if m else ""
 
 
+def samengevoegd():
+    """{"oude-aanbieder": "nieuwe-aanbieder"} voor aanbieders die zijn samengevoegd (tools/koppelen.py)."""
+    return json.loads(SAMENGEVOEGD.read_text(encoding="utf-8")) if SAMENGEVOEGD.exists() else {}
+
+
 def bestemming(plaats):
     """Slug van de plaatspagina in /bestemmingen/, of None."""
     return PLAATSEN.get(plaats, (None, []))[0]
@@ -142,3 +148,15 @@ def organisatie_ld(slug, v):
     if v.get("site"):
         uit["sameAs"] = v["site"]
     return uit
+
+
+def naam_met_plaats(naam, plaats):
+    """De naam van een aanbieder met de plaats erachter (besluit Frans, 2-11-2026): "Boskapel" -> "Boskapel Nijmegen".
+    Staat de plaats (of een dorp ervan) al in de naam, dan blijft hij zoals hij is. Kleef heet hier Kleve, zoals ter plekke."""
+    naam = (naam or "").strip().rstrip(".")
+    if not naam:
+        return naam
+    naam = naam[0].upper() + naam[1:]
+    if not plaats or plaats_van(naam) or (plaats == "Nijmegen" and "nijmeeg" in naam.lower()):
+        return naam
+    return "%s %s" % (naam, "Kleve" if plaats == "Kleef" else plaats)

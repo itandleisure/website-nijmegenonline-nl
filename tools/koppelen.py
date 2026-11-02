@@ -8,6 +8,13 @@
   data/aanbieders.json ("bedrijf") of data/nieuws.json ("bedrijven"); een aanbieder die een plek is (kerk, park,
   binnenstad) krijgt "bedrijf": "" en blijft gewoon een locatie.
 
+Besluit Frans (2-11-2026, na de eerste lijst):
+- Dubbele aanbieders worden samengevoegd: data/aanbieders-samengevoegd.json ({"oude-sleutel": "nieuwe-sleutel"}). De
+  evenementen gaan naar de nieuwe aanbieder, de oude verdwijnt uit data/aanbieders.json en /event-location/<oud>/ verwijst
+  met een 301 door (tools/agenda.py). Een nieuwe sleutel die nog niet bestaat, krijgt de naam en plaats van de eerste oude.
+- Elke aanbieder heet "naam plus plaats": Boskapel Nijmegen, Bottendaal Nijmegen (koppeling.naam_met_plaats). De locatie
+  van de evenementen gaat mee als die gelijk was aan de oude naam.
+
 Gebruik: python tools/koppelen.py            (schrijft de automatische koppelingen en de lijst)
 """
 import collections
@@ -55,12 +62,45 @@ def voorstel(slug, info, evenementen, vermeldingen, per_naam, per_domein):
             d = domein(e.get(veld))
             if d and d in per_domein:
                 return per_domein[d], "website van een evenement (%s)" % d
-    # De ene naam zit helemaal in de andere ("Hortus Nijmegen" en "Stichting Hortus Nijmegen")
+    # De ene naam zit helemaal in de andere ("Hortus Nijmegen" en "Stichting Hortus Nijmegen"). Zonder de plaats die we
+    # achter de naam zetten: anders zit "Ds Nijmegen" in "Thiemeloods Nijmegen".
+    plaats = "Kleve" if info.get("plaats") == "Kleef" else info.get("plaats") or ""
+    if plaats and info["naam"].endswith(" " + plaats):
+        kaal = info["naam"][:-len(plaats) - 1]
+        # Eén los woord ("Kasteel") zit te vaak toevallig in een andere naam
+        k = naam_sleutel(kaal) if len(naam_woorden(kaal)) >= 2 else ""
     if len(k) >= 6:
         binnen = sorted(s for n, s in per_naam.items() if len(n) >= 6 and n not in GENERIEK and (k in n or n in k))
         if len(binnen) == 1:
             return binnen[0], "de ene naam zit in de andere"
     return None, ""
+
+
+def samenvoegen(aanbieders, evenementen):
+    """Voegt dubbele aanbieders samen volgens data/aanbieders-samengevoegd.json."""
+    pad = ROOT / "data" / "aanbieders-samengevoegd.json"
+    naar = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
+    for oud, nieuw in sorted(naar.items()):
+        if oud not in aanbieders:
+            continue
+        info = aanbieders.pop(oud)
+        if nieuw not in aanbieders:
+            aanbieders[nieuw] = {k: v for k, v in info.items() if k in ("naam", "adres", "plaats", "bedrijf")}
+        for e in evenementen:
+            if e.get("aanbieder") == oud:
+                e["aanbieder"] = nieuw
+                if not e.get("locatie") or e["locatie"] == info["naam"]:
+                    e["locatie"] = aanbieders[nieuw]["naam"]
+
+
+def namen_met_plaats(aanbieders, evenementen):
+    for slug, info in aanbieders.items():
+        nieuw = koppeling.naam_met_plaats(info["naam"], info.get("plaats"))
+        if nieuw != info["naam"]:
+            for e in evenementen:
+                if e.get("aanbieder") == slug and e.get("locatie", "").strip().rstrip(".") in (info["naam"], info["naam"].rstrip(".")):
+                    e["locatie"] = nieuw
+            info["naam"] = nieuw
 
 
 def main():
@@ -76,6 +116,7 @@ def main():
     # Een domein dat bij meer bedrijven hoort (een keten, een platform) zegt niets
     per_domein = {d: s[0] for d, s in per_domein.items() if len(s) == 1}
 
+    samenvoegen(aanbieders, evenementen)
     automatisch, lijst, plekken, open_ = [], [], [], []
     for slug, info in sorted(aanbieders.items()):
         eigen = [e for e in evenementen if e.get("aanbieder") == slug]
@@ -95,6 +136,8 @@ def main():
             plekken.append((slug, info, len(eigen)))
         else:
             open_.append((slug, info, len(eigen)))
+    namen_met_plaats(aanbieders, evenementen)
+    (ROOT / "data" / "evenementen.json").write_text(json.dumps(evenementen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     (ROOT / "data" / "aanbieders.json").write_text(json.dumps(dict(sorted(aanbieders.items())), ensure_ascii=False, indent=1) + "\n",
                                                    encoding="utf-8")
 

@@ -137,6 +137,11 @@ De bedrijvengids is de basis: een evenement, nieuwsbericht (en straks een vacatu
 - **Eenmalig koppelen**: `python tools/koppelen.py` geeft elke aanbieder een plaats, koppelt aanbieders met dezelfde sleutel of
   naam, en zet de rest met een voorstel in `docs/koppellijst-<jaar-maand>.md` voor de redactie.
 
+Na de eerste koppellijst (Frans, 2-11-2026): elke locatie in de agenda heet "naam plus plaats" (Boskapel Nijmegen,
+Kleine Kirche Kleve), ook nieuwe uit het formulier. Dubbele locaties worden samengevoegd via
+`data/aanbieders-samengevoegd.json` (oud -> nieuw); `python tools/koppelen.py` verwerkt dat en het oude
+`/event-location/<oud>/` verwijst door.
+
 ## Nieuwsbrief (MailerLite)
 
 `python tools/nieuwsbrief.py` maakt elke nacht drie RSS-feeds waar MailerLite met een RSS-campagne zelf de
