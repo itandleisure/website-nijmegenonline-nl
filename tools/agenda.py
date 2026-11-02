@@ -4,6 +4,12 @@
 - /events/<slug>/                    een pagina per evenement
 - /event-location/<aanbieder>/       alle evenementen van een aanbieder (EventOn-locatie, data/aanbieders.json)
 - homepage en zijbalk                de eerstvolgende evenementen (tussen <!-- agenda --> en <!-- binnenkort -->)
+- /bestemmingen/<plaats>/            de agenda van die plaats (tussen <!-- agenda-plaats --> en <!-- /agenda-plaats -->)
+
+Bedrijf en plaats (besluit Frans, 2-11-2026, zie tools/koppeling.py): elk evenement hoort bij een plaats ("plaats", anders
+uit het adres of van de aanbieder) en, als het kan, bij een bedrijf uit de gids ("bedrijf", anders "bedrijf" van de
+aanbieder). De evenementpagina krijgt dan het kaartje "Over <bedrijf>", de bedrijfspagina de komende evenementen
+(tools/bedrijvengids.py) en het overzicht een filter op plaats.
 
 Afgesproken met Frans (22-10-2026):
 - Een evenement verdwijnt de dag na afloop uit de agenda, de homepage en de zijbalk.
@@ -35,6 +41,7 @@ import zoneinfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import DOORVERWIJZING, SITE, VOET, esc, kop, samenvatting  # noqa: E402
+import koppeling  # noqa: E402
 import nieuws  # noqa: E402
 
 BEWAAR_DAGEN = 92
@@ -110,23 +117,42 @@ def kaartfoto(e, root, klasse):
     return '<img src="%s%s" alt="" loading="lazy"%s>' % (root, foto, ' class="%s"' % klasse if heel else "")
 
 
+def verrijk(evenementen, aanbieders):
+    """Zet bij elk evenement (alleen in het geheugen) de plaats en het bedrijf, zie tools/koppeling.py."""
+    for e in evenementen:
+        e["_plaats"] = koppeling.plaats_van_evenement(e, aanbieders)
+        e["_bedrijf"] = koppeling.bedrijf_van_evenement(e, aanbieders)
+    return evenementen
+
+
+def plek_tekst(e):
+    """Locatie, met de plaats erachter als die buiten Nijmegen ligt en nog niet in de naam staat."""
+    plaats = e.get("_plaats") or ""
+    if plaats and plaats != "Nijmegen" and koppeling.plaats_van(e["locatie"]) != plaats:
+        return ", ".join(x for x in (e["locatie"], plaats) if x)
+    return e["locatie"]
+
+
 def eventkaart(e, vandaag, root):
     s = max(dag(e, "start"), vandaag) if dag(e, "eind") >= vandaag else dag(e, "start")
     img = kaartfoto(e, root, "eventkaart__heel")
-    plaats = '<span class="eventkaart__plaats">%s</span>' % esc(e["locatie"]) if e["locatie"] else ""
+    plek = plek_tekst(e)
+    plaats = '<span class="eventkaart__plaats">%s</span>' % esc(plek) if plek else ""
     label = '<span class="eventkaart__label">Uitgelicht</span>' if e["uitgelicht"] else ""
-    return ('<a class="eventkaart%s" href="%sevents/%s/"><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
+    return ('<a class="eventkaart%s" href="%sevents/%s/"%s><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
             '<span class="eventkaart__tekst">%s<strong>%s</strong><span class="eventkaart__wanneer">%s</span>%s</span></a>'
-            % (" eventkaart--uitgelicht" if e["uitgelicht"] else "", root, e["slug"], s.day, MAANDEN[s.month - 1][:3], img, label,
+            % (" eventkaart--uitgelicht" if e["uitgelicht"] else "", root, e["slug"],
+               ' data-plaats="%s"' % esc(e["_plaats"]) if e.get("_plaats") else "", s.day, MAANDEN[s.month - 1][:3], img, label,
                esc(e["titel"]), esc(kort_wanneer(e, vandaag)), plaats))
 
 
 def uitgelichtkaart(e, vandaag, root):
     """Grote groene kaart voor evenementen van klanten, bovenaan de agenda en op de homepage."""
     img = kaartfoto(e, root, "uitgelicht__heel") or '<span class="uitgelicht__geenfoto">%s</span>' % esc(e["locatie"] or "NijmegenOnline")
-    plaats = '<span class="uitgelicht__plaats">%s</span>' % esc(e["locatie"]) if e["locatie"] else ""
-    return ('<a class="uitgelicht" href="%sevents/%s/">%s<span class="uitgelicht__tekst"><span class="uitgelicht__wanneer">%s</span>'
-            '<strong>%s</strong>%s</span></a>' % (root, e["slug"], img, esc(kort_wanneer(e, vandaag)), esc(e["titel"]), plaats))
+    plaats = '<span class="uitgelicht__plaats">%s</span>' % esc(plek_tekst(e)) if e["locatie"] else ""
+    return ('<a class="uitgelicht" href="%sevents/%s/"%s>%s<span class="uitgelicht__tekst"><span class="uitgelicht__wanneer">%s</span>'
+            '<strong>%s</strong>%s</span></a>' % (root, e["slug"], ' data-plaats="%s"' % esc(e["_plaats"]) if e.get("_plaats") else "",
+                                                  img, esc(kort_wanneer(e, vandaag)), esc(e["titel"]), plaats))
 
 
 def uitgelicht_blok(komend, vandaag, root, aantal, kop_="h2"):
@@ -144,7 +170,7 @@ def ld_datum(waarde):
     return d.isoformat()
 
 
-def event_pagina(e, vandaag, komend, aanbieders):
+def event_pagina(e, vandaag, komend, aanbieders, vermeldingen):
     root = "../../"
     canonical = "%s/events/%s/" % (SITE, e["slug"])
     afgelopen = dag(e, "eind") < vandaag
@@ -158,6 +184,11 @@ def event_pagina(e, vandaag, komend, aanbieders):
     if e["locatie"] or e["adres"]:
         ld["location"] = {"@type": "Place", "name": e["locatie"] or e["adres"],
                           "address": {"@type": "PostalAddress", "streetAddress": e["adres"] or e["locatie"]}}
+        if e.get("_plaats"):
+            ld["location"]["address"]["addressLocality"] = e["_plaats"]
+    bedrijf = e.get("_bedrijf") if e.get("_bedrijf") in vermeldingen else ""
+    if bedrijf:
+        ld["organizer"] = koppeling.organisatie_ld(bedrijf, vermeldingen[bedrijf])
     if e["afbeelding"]:
         ld["image"] = e["afbeelding"]
     kruim = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -213,6 +244,8 @@ def event_pagina(e, vandaag, komend, aanbieders):
     if e.get("fotos"):
         # De andere foto's uit de mail (tools/aanmeldingen.py), elk met het eigen bijschrift
         out.append(nieuws.extra_fotos_html(e["fotos"], e["titel"], root))
+    if bedrijf:
+        out.append(koppeling.over_bedrijf(bedrijf, vermeldingen[bedrijf], root))
     van_hen = []
     if e.get("aanbieder") in aanbieders:
         naam = aanbieders[e["aanbieder"]]["naam"]
@@ -236,7 +269,7 @@ def event_pagina(e, vandaag, komend, aanbieders):
     return "\n".join(out)
 
 
-def aanbieder_pagina(slug, naam, komend, eerder, alle, vandaag):
+def aanbieder_pagina(slug, naam, komend, eerder, alle, vandaag, bedrijf=None):
     """Overzicht per aanbieder op het oude EventOn-adres /event-location/<slug>/."""
     root = "../../"
     canonical = "%s/%s/%s/" % (SITE, AANBIEDERS, slug)
@@ -261,6 +294,8 @@ def aanbieder_pagina(slug, naam, komend, eerder, alle, vandaag):
                % (" rubriek-kop--uitgelicht" if klant else "", esc(naam)))
     if adres:
         out.append('        <p>%s</p>' % esc(adres))
+    if bedrijf:
+        out.append('        <p><a href="%sbedrijvengids/%s/">Meer over %s in de bedrijvengids</a></p>' % (root, bedrijf[0], esc(bedrijf[1]["bedrijf"])))
     if klant:
         out.append('        <p class="gids-cta"><a class="knop" href="%s" target="_blank" rel="sponsored noopener">Naar de website van %s</a></p>'
                    % (esc(klant["link"]), esc(naam)))
@@ -316,6 +351,7 @@ def overzicht(komend, vandaag):
                'Organiseer je zelf iets? <a href="%s">Meld je evenement aan</a>.</p>\n      </header>' % AANMELDEN)
     if not komend:
         out.append("      <p>Er staan op dit moment geen evenementen in de agenda.</p>")
+    out.extend("      " + r for r in plaatsfilter(komend))
     out.extend("      " + r for r in uitgelicht_blok(komend, vandaag, root, 6))
     # Langlopende exposities apart bovenaan, zodat ze niet elke maand opnieuw de lijst openen
     lopend = [e for e in komend if dag(e, "start") < vandaag]
@@ -339,10 +375,66 @@ def overzicht(komend, vandaag):
         out.append("        </div>\n      </section>")
     out.append('      <p class="gids-cta"><a class="knop" href="%s">Evenement aanmelden</a> <a href="%s%s/">Bekijk evenementen per locatie</a></p>'
                % (AANMELDEN, root, AANBIEDERS))
+    out.append('      <p class="agenda-leeg" hidden>Er staan nu geen evenementen in deze plaats in de agenda.</p>')
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
+    out.append('      <script src="%sassets/js/agenda.js" defer></script>' % root)
     out.append("    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
+
+
+def plaatsfilter(komend):
+    """Knoppen om de agenda op plaats te filteren (assets/js/agenda.js); Nijmegen eerst, dan de rest op aantal.
+    Zonder JavaScript blijven ze verborgen en staat de hele agenda er gewoon."""
+    tel = {}
+    for e in komend:
+        tel[e["_plaats"]] = tel.get(e["_plaats"], 0) + 1
+    if len(tel) < 2:
+        return []
+    volgorde = sorted(tel, key=lambda p: (p != "Nijmegen", -tel[p], p))
+    knoppen = ['<button type="button" data-plaats="" aria-pressed="true">Alle plaatsen</button>']
+    knoppen += ['<button type="button" data-plaats="%s" aria-pressed="false">%s <span>%d</span></button>' % (esc(p), esc(p), tel[p])
+                for p in volgorde]
+    return ['<nav class="agenda-plaatsen" aria-label="Filter op plaats" hidden>', '  ' + "".join(knoppen), "</nav>"]
+
+
+def plaats_blok(plaats, komend, vandaag):
+    """De agenda op de plaatspagina /bestemmingen/<slug>/ (root ../../)."""
+    eigen = [e for e in komend if e["_plaats"] == plaats]
+    if not eigen:
+        return ""
+    regels = ['        <section class="gids-sectie" id="agenda">', '          <h2>Agenda in %s</h2>' % esc(plaats),
+              '          <div class="eventlijst">']
+    regels += ["            " + eventkaart(e, vandaag, "../../") for e in eigen[:6]]
+    regels.append("          </div>")
+    if len(eigen) > 6:
+        regels.append('          <p class="gids-verder"><a href="../../%s/?plaats=%s">Alle %d evenementen in %s</a></p>'
+                      % (OVERZICHT, esc(plaats.replace(" ", "+")), len(eigen), esc(plaats)))
+    else:
+        regels.append('          <p class="gids-verder"><a href="../../%s/">Bekijk de hele agenda</a></p>' % OVERZICHT)
+    regels.append("        </section>")
+    return "\n".join(regels)
+
+
+def plaatspaginas_bijwerken(komend, vandaag):
+    """Zet de agenda op elke plaatspagina die bij een plaats hoort. Ontbreekt de markering (oudere pagina), dan komt hij
+    vóór "Andere bestemmingen"."""
+    bijgewerkt = 0
+    for plaats, (slug, _) in koppeling.PLAATSEN.items():
+        pad = ROOT / "bestemmingen" / (slug or "-") / "index.html"
+        if not slug or not pad.exists():
+            continue
+        tekst = pad.read_text(encoding="utf-8")
+        if "<!-- agenda-plaats -->" not in tekst:
+            anker = '        <section class="gids-sectie"><h2>Andere bestemmingen</h2>'
+            if anker not in tekst:
+                print("Geen plek voor de agenda op %s" % pad.relative_to(ROOT))
+                continue
+            tekst = tekst.replace(anker, "        <!-- agenda-plaats -->\n        <!-- /agenda-plaats -->\n" + anker, 1)
+            pad.write_text(tekst, encoding="utf-8")
+        vervang_blok(pad, "agenda-plaats", plaats_blok(plaats, komend, vandaag))
+        bijgewerkt += 1
+    return bijgewerkt
 
 
 def doorverwijzing(map_, doel_pad, titel, url):
@@ -364,6 +456,8 @@ def vervang_blok(pad, naam, inhoud):
 def main(vandaag):
     evenementen = json.load(open(ROOT / "data" / "evenementen.json", encoding="utf-8"))
     aanbieders = json.load(open(ROOT / "data" / "aanbieders.json", encoding="utf-8"))
+    vermeldingen = koppeling.laad_vermeldingen()
+    verrijk(evenementen, aanbieders)
     verwijderd = [r for r in (ROOT / "data" / "evenementen-verwijderd.txt").read_text(encoding="utf-8").split() if r]
     doel = json.load(open(ROOT / "data" / "evenementen-doorverwijzingen.json", encoding="utf-8"))
     grens = vandaag - datetime.timedelta(days=BEWAAR_DAGEN)
@@ -388,7 +482,7 @@ def main(vandaag):
     for e in pagina:
         d = events / e["slug"]
         d.mkdir(parents=True)
-        (d / "index.html").write_text(event_pagina(e, vandaag, komend, aanbieders), encoding="utf-8")
+        (d / "index.html").write_text(event_pagina(e, vandaag, komend, aanbieders, vermeldingen), encoding="utf-8")
     for slug in weg:
         if slug in doel:
             pad = doel[slug].strip("/")
@@ -411,7 +505,9 @@ def main(vandaag):
             doorverwijzing(locaties / slug, "../../%s/" % OVERZICHT, "Agenda Nijmegen", agenda_url)
             continue
         (locaties / slug).mkdir(parents=True)
-        (locaties / slug / "index.html").write_text(aanbieder_pagina(slug, info["naam"], k, eerder, alle, vandaag), encoding="utf-8")
+        (locaties / slug / "index.html").write_text(aanbieder_pagina(
+            slug, info["naam"], k, eerder, alle, vandaag,
+            (info["bedrijf"], vermeldingen[info["bedrijf"]]) if info.get("bedrijf") in vermeldingen else None), encoding="utf-8")
         if k:
             rij.append((slug, info["naam"], len(k), any(e["uitgelicht"] for e in alle)))
     rij.sort(key=lambda r: (not r[3], -r[2], r[1].lower()))
@@ -432,6 +528,7 @@ def main(vandaag):
     zij = ['      <li><span class="zijbalk__datum">%s</span><a href="%s/events/%s/">%s</a></li>'
            % (esc(kort_wanneer(e, vandaag)), SITE, e["slug"], esc(e["titel"])) for e in eerst[:3]]
     vervang_blok(ROOT / "partials" / "zijbalk.html", "binnenkort", "\n".join(zij))
+    plaatsen = plaatspaginas_bijwerken(komend, vandaag)
 
     # 301's voor Cloudflare; het blok "# agenda" wordt elke keer opnieuw geschreven
     redirects = ROOT / "_redirects"
@@ -441,9 +538,9 @@ def main(vandaag):
     regels += ["/%s/%s/ /%s/ 301" % (AANBIEDERS, slug, OVERZICHT) for slug in sorted(weg_aanbieder)]
     redirects.write_text((oud + "\n" if oud else "") + "\n".join(regels) + "\n", encoding="utf-8")
 
-    print("Agenda %s: %d komend, %d evenementpagina's (waarvan %d afgelopen), %d aanbieders (%d met komende evenementen), %d doorverwijzingen"
+    print("Agenda %s: %d komend, %d evenementpagina's (waarvan %d afgelopen), %d aanbieders (%d met komende evenementen), %d doorverwijzingen, %d plaatspagina's"
           % (vandaag, len(komend), len(pagina), len(pagina) - len(komend), len(aanbieders) - len(weg_aanbieder), len(rij),
-             len(weg) + len(weg_aanbieder)))
+             len(weg) + len(weg_aanbieder), plaatsen))
 
 
 if __name__ == "__main__":

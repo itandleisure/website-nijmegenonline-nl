@@ -123,6 +123,15 @@
           <input type="hidden" name="pagina" value="">
           <input type="hidden" name="duur" value="">
           <div class="formulier__val" aria-hidden="true"><label>Laat dit veld leeg <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <h3 class="formulier__kop">Organisator</h3>
+          <div class="bedrijfzoeker" data-bedrijfzoeker data-vullen="{&quot;locatie&quot;: &quot;naam&quot;, &quot;adres&quot;: &quot;adres&quot;, &quot;postcode&quot;: &quot;postcode&quot;, &quot;plaats&quot;: &quot;plaats&quot;, &quot;site&quot;: &quot;site&quot;}">
+            <label for="evenement-bedrijf">Zoek je bedrijf of organisatie</label>
+            <div class="bedrijfzoeker__zoek"><input id="evenement-bedrijf" type="search" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="evenement-bedrijf-lijst" placeholder="Typ de naam, bijvoorbeeld Doornroosje"></div>
+            <ul class="bedrijfzoeker__lijst" id="evenement-bedrijf-lijst" role="listbox" hidden></ul>
+            <div class="bedrijfzoeker__gekozen" hidden><span>Gekozen: <strong></strong> <span class="bedrijfzoeker__regel"></span></span><button type="button" class="link">Ander bedrijf kiezen</button></div>
+            <p class="formulier__hint">Staat je bedrijf of organisatie in onze bedrijvengids? Kies het hier, dan komt je evenement ook op je bedrijfspagina. Staat het er niet in, laat dit veld dan leeg.</p>
+            <input type="hidden" name="bedrijf" value="">
+          </div>
           <h3 class="formulier__kop">Het evenement</h3>
           <label for="evenement-titel">Naam van het evenement <span aria-hidden="true">*</span></label>
           <input id="evenement-titel" name="titel" type="text" autocomplete="on" required>
@@ -137,7 +146,7 @@
           <input id="evenement-adres" name="adres" type="text" autocomplete="on" required>
           <label for="evenement-postcode">Postcode <span aria-hidden="true">*</span></label>
           <input id="evenement-postcode" name="postcode" type="text" autocomplete="postal-code" maxlength="8" data-postcode required>
-          <p class="formulier__hint">Bijvoorbeeld 6511 AB. In Duitsland 5 cijfers, bijvoorbeeld 47533.</p>
+          <p class="formulier__hint" data-postcode-hint>Bijvoorbeeld 6511 AB. In Duitsland 5 cijfers, bijvoorbeeld 47533.</p>
           <label for="evenement-plaats">Plaats <span aria-hidden="true">*</span></label>
           <input id="evenement-plaats" name="plaats" type="text" autocomplete="on" required>
           <h3 class="formulier__kop">Contactgegevens voor bezoekers</h3>
@@ -218,7 +227,7 @@
       </div>
     </div>
   </main>
-  <script src="../assets/js/formulier.js?v=11" defer></script>
+  <script src="../assets/js/formulier.js?v=12" defer></script>
 
   <!-- footer -->
   <footer>

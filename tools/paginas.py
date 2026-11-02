@@ -124,7 +124,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=11" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=12" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -176,6 +176,20 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
             regels += ['            <label><input type="radio" name="%s" value="%s"%s> %s</label>' % (veld, esc(w), " checked" if i == 0 else "", esc(o))
                        for i, (w, o) in enumerate(opties)]
             regels.append("          </fieldset>")
+        elif soort == "bedrijf":
+            # Zoekveld "Zoek je bedrijf" (assets/js/formulier.js); opties = {veld: kolom} om lege velden in te vullen
+            regels += ['          <div class="bedrijfzoeker" data-bedrijfzoeker data-vullen="%s">' % esc(json.dumps(opties or {})),
+                       '            <label for="%s">%s</label>' % (id_, esc(label)),
+                       '            <div class="bedrijfzoeker__zoek"><input id="%s" type="search" autocomplete="off" role="combobox" '
+                       'aria-autocomplete="list" aria-expanded="false" aria-controls="%s-lijst" placeholder="Typ de naam, bijvoorbeeld Doornroosje"></div>'
+                       % (id_, id_),
+                       '            <ul class="bedrijfzoeker__lijst" id="%s-lijst" role="listbox" hidden></ul>' % id_,
+                       '            <div class="bedrijfzoeker__gekozen" hidden><span>Gekozen: <strong></strong> '
+                       '<span class="bedrijfzoeker__regel"></span></span><button type="button" class="link">Ander bedrijf kiezen</button></div>',
+                       '            <p class="formulier__hint">Staat je bedrijf of organisatie in onze bedrijvengids? Kies het hier, dan komt '
+                       'je evenement ook op je bedrijfspagina. Staat het er niet in, laat dit veld dan leeg.</p>',
+                       '            <input type="hidden" name="%s" value="">' % veld,
+                       '          </div>']
         elif soort == "verborgen":
             regels.append('          <input type="hidden" name="%s" value="">' % veld)
         elif soort == "bestand":
@@ -315,6 +329,9 @@ def evenement_aanmelden():
         <p>Een gratis aanmelding komt in de agenda, met je website, e-mailadres en telefoonnummer als je die invult. Je evenement wordt dan niet uitgelicht in onze wekelijkse nieuwsbrief, op social media en op onze websites. Wil je die extra aandacht wel? Mail naar <a href="mailto:{email}">{email}</a> en vraag naar de mogelijkheden, of bekijk de <a href="{site}/adverteren-bij-nijmegenonline/">pakketten</a>.</p>
         <h2>Je evenement</h2>
 {formulier}""".format(email=EMAIL, site=SITE, formulier=formulier("evenement", "Evenement aangemeld via NijmegenOnline", [
+        ("kop", "Organisator", "kop", False, None),
+        ("bedrijf", "Zoek je bedrijf of organisatie", "bedrijf", False,
+         {"locatie": "naam", "adres": "adres", "postcode": "postcode", "plaats": "plaats", "site": "site"}),
         ("kop", "Het evenement", "kop", False, None),
         ("titel", "Naam van het evenement", "text", True, None),
         (("datum", "starttijd"), ("Begindatum", "Begintijd"), "datumtijd", True, None),

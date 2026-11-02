@@ -32,9 +32,25 @@ sys.path.insert(0, str(ROOT / "tools"))
 from paginas import GOOGLE_FORM_URL  # noqa: E402
 from import_wordpress import SITE  # noqa: E402
 import nieuws  # noqa: E402
+import koppeling  # noqa: E402
 
 VERWERKT = ROOT / "data" / "aanmeldingen-verwerkt.txt"
 FOTOMAP = "assets/uploads/aangemeld"
+
+
+_VERMELDINGEN = {}
+
+
+def vermeldingen():
+    if not _VERMELDINGEN:
+        _VERMELDINGEN.update(koppeling.laad_vermeldingen())
+    return _VERMELDINGEN
+
+
+def bedrijf_sleutel(a):
+    """Het bedrijf uit de gids dat de inzender (of de redactie op de beoordeelpagina) koos; '' als het niet bestaat."""
+    s = (a.get("bedrijf") or "").strip()
+    return s if re.match(r"^[a-z0-9-]{1,120}$", s) and s in vermeldingen() else ""
 
 
 def slug(tekst):
@@ -120,6 +136,7 @@ def nieuwsbericht(a, berichten):
         "fotos": extra_fotos(a, "nieuws-" + s),
         "tekst": tekst,
         "aanmelding": a["id"],
+        **({"bedrijven": [bedrijf_sleutel(a)]} if bedrijf_sleutel(a) else {}),
     }
 
 
@@ -199,10 +216,15 @@ def evenement(a, evenementen, aanbieders):
         s, n = "%s-%d" % (basis, n), n + 1
     locatie = a.get("locatie", "").strip()
     aanbieder = kies_aanbieder(a, evenementen, aanbieders)
+    bedrijf = bedrijf_sleutel(a)
+    plaats_ = koppeling.plaats_naam(a.get("plaats", "")) or a.get("plaats", "").strip()
     if aanbieder in aanbieders:
         locatie = aanbieders[aanbieder]["naam"]   # de bekende schrijfwijze
     elif aanbieder:
-        aanbieders[aanbieder] = {"naam": locatie}
+        aanbieders[aanbieder] = {"naam": locatie, "plaats": plaats_ or koppeling.plaats_van(locatie) or "Nijmegen"}
+        # Een nieuwe aanbieder met hetzelfde bedrijf: dan hoort de plek bij dat bedrijf
+        if bedrijf and vermeldingen()[bedrijf]["bedrijf"].lower() in locatie.lower():
+            aanbieders[aanbieder]["bedrijf"] = bedrijf
     plaats = " ".join(x for x in (postcode(a.get("postcode", "")), a.get("plaats", "").strip()) if x)
     adres = ", ".join(x for x in (a.get("adres", "").strip(), plaats) if x) or next(
         (e["adres"] for e in reversed(evenementen) if e.get("aanbieder") == aanbieder and e["adres"]), "")
@@ -223,6 +245,8 @@ def evenement(a, evenementen, aanbieders):
         "fotos": extra_fotos(a, s),
         "uitgelicht": False,
         "aanbieder": aanbieder or "",
+        "bedrijf": bedrijf,
+        "plaats": plaats_,
         "link": "",
         "terugkerend": False,
         "gepubliceerd": (a.get("ontvangen") or "")[:10],

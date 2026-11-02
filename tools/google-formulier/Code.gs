@@ -73,7 +73,7 @@ var FORMULIEREN = {
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 3, onderwerp: 'Evenement aangemeld', goedkeuren: true,
     openbaar: ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats',
-      'site', 'evenementmail', 'evenementtelefoon', 'aanbieder', 'bijschrift'],
+      'site', 'evenementmail', 'evenementtelefoon', 'aanbieder', 'bedrijf', 'bijschrift'],
     velden: [['titel', 'Evenement'], ['datum', 'Begindatum'], ['starttijd', 'Begintijd'], ['einddatum', 'Einddatum'],
       ['eindtijd', 'Eindtijd'],
       ['omschrijving', 'Omschrijving'], ['locatie', 'Locatie'], ['adres', 'Adres'], ['postcode', 'Postcode'],
@@ -81,17 +81,19 @@ var FORMULIEREN = {
       ['evenementtelefoon', 'Telefoon bezoekers'], ['foto', 'Foto'], ['bijschrift', 'Fotobijschrift'],
       ['naam', 'Naam'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking'],
       ['aanbieder', 'Aanbieder'],   // gekozen op de beoordeelpagina (slug uit data/aanbieders.json, of "nieuw")
-      ['extrafotos', "Andere foto's (Drive-ID's)"], ['fotocredits', "Bijschriften andere foto's"]]
+      ['extrafotos', "Andere foto's (Drive-ID's)"], ['fotocredits', "Bijschriften andere foto's"],
+      ['bedrijf', 'Bedrijf in de gids']]   // sleutel uit /bedrijvengids/<sleutel>/, gekozen in het formulier of op de beoordeelpagina
   },
   // Geen formulier op de site: mails die de redactie doorstuurt naar nieuws@nijmegenonline.nl.
   // tools/nieuws_ophalen.py (GitHub, elke 15 minuten) stuurt ze hierheen, zie nieuwsOntvangen().
   nieuws: {
     tabblad: 'Nieuws', bewaarMaanden: 3, onderwerp: 'Nieuwsbericht', goedkeuren: true,
-    openbaar: ['titel', 'samenvatting', 'bijschrift', 'omschrijving'],
-    bewerkbaar: ['titel', 'samenvatting', 'bijschrift', 'naam', 'email'],   // naam en e-mail niet naar de site
+    openbaar: ['titel', 'samenvatting', 'bijschrift', 'omschrijving', 'bedrijf'],
+    bewerkbaar: ['titel', 'samenvatting', 'bijschrift', 'bedrijf', 'naam', 'email'],   // naam en e-mail niet naar de site
     velden: [['titel', 'Titel'], ['samenvatting', 'Samenvatting (Google)'], ['bijschrift', 'Fotobijschrift'],
       ['omschrijving', 'Ingestuurde tekst'], ['foto', 'Foto'], ['extrafotos', "Andere foto's (Drive-ID's)"],
-      ['fotocredits', "Bijschriften andere foto's"], ['naam', 'Inzender'], ['email', 'E-mail inzender'], ['onderwerp', 'Onderwerp mail'], ['berichtid', 'Bericht-ID mail']]
+      ['fotocredits', "Bijschriften andere foto's"], ['naam', 'Inzender'], ['email', 'E-mail inzender'], ['onderwerp', 'Onderwerp mail'], ['berichtid', 'Bericht-ID mail'],
+      ['bedrijf', 'Bedrijf in de gids']]   // gekozen op de beoordeelpagina; het bericht komt dan op de bedrijfspagina
   }
 };
 
@@ -763,6 +765,7 @@ function bewerkPagina(type, id) {
     var soort = { datum: 'date', einddatum: 'date', starttijd: 'time', eindtijd: 'time', site: 'url', bedrijfsmail: 'email', evenementmail: 'email',
       telefoon: 'tel', evenementtelefoon: 'tel', email: 'email' }[veld] || 'text';
     if (veld === 'aanbieder') return aanbiederKeuze(g);
+    if (veld === 'bedrijf') return bedrijfKeuze(g);
     var invoer = veld === 'openingstijden' || veld === 'samenvatting'
       ? '<textarea name="' + veld + '" rows="' + (veld === 'samenvatting' ? 2 : 3) + '">' + html_(g[veld]) + '</textarea>'
       : '<input type="' + soort + '" name="' + veld + '" value="' + html_(g[veld]) + '">';
@@ -865,7 +868,7 @@ function bewerkPagina(type, id) {
     'function kiesFoto(knop){var was=knop.classList.contains("gekozen");document.querySelectorAll(".kies").forEach(function(b){b.classList.remove("gekozen")});' +
     ' var veld=document.getElementById("kiesfoto");if(was){veld.value="";zet("");return}' +
     ' knop.classList.add("gekozen");veld.value=knop.getAttribute("data-id");zet("Deze foto wordt de hoofdfoto als je opslaat of publiceert; de huidige hoofdfoto komt dan bij de andere foto\'s.")}' +
-    ADRES_JS +
+    ADRES_JS + BEDRIJF_JS +
     '</script></body></html>';
   return HtmlService.createHtmlOutput(html).setTitle((type === 'nieuws' ? 'Nieuwsbericht' : 'Aanmelding') + ' bewerken · NijmegenOnline')
     .addMetaTag('viewport', 'width=device-width, initial-scale=1');
@@ -1177,6 +1180,53 @@ var ADRES_JS =
   '  var t=document.createElement("button");t.type="button";t.textContent="Adres van de inzender terugzetten";t.onclick=window.terugzetten;' +
   '  noot.appendChild(t);noot.style.display="block"}' +
   ' keuze.addEventListener("change",pas);pas()})();';
+
+// ---------- Bedrijf uit de gids kiezen (besluit Frans, 2-11-2026) ----------
+
+// Lijst voor het zoekveld: [sleutel, naam, adres, postcode, plaats, website, categorie], gemaakt door tools/bedrijvengids.py.
+// De beoordeelpagina haalt hem zelf op (te groot voor de cache van Apps Script).
+var BEDRIJVEN_URL = 'https://raw.githubusercontent.com/itandleisure/website-nijmegenonline-nl/main/data/bedrijven-zoek.json';
+
+// Zoekveld op de beoordeelpagina. Is er nog niets gekozen, dan stelt de pagina een bedrijf voor op het domein van de
+// website of het e-mailadres van de inzender, links in de tekst, of de naam van de locatie.
+function bedrijfKeuze(g) {
+  var domeinen = [g.site, g.email].concat(String(g.omschrijving || '').match(/https?:\/\/[^\s"<>]+/g) || [])
+    .map(domeinVan).filter(function (d) {
+      return d && !/(gmail|hotmail|outlook|live|yahoo|icloud|ziggo|kpnmail|home|planet|xs4all|nijmegenonline)\./.test(d);
+    });
+  return '<label>Bedrijf in de bedrijvengids <span class="leeg">(het ' + (g.titel && g.datum ? 'evenement' : 'bericht') +
+    ' komt dan ook op de bedrijfspagina)</span>' +
+    '<input type="search" id="bedrijfzoek" autocomplete="off" placeholder="Zoek op naam">' +
+    '<input type="hidden" name="bedrijf" id="bedrijf" value="' + html_(g.bedrijf) + '"></label>' +
+    '<div id="bedrijflijst" class="bedrijflijst"></div>' +
+    '<p id="bedrijfgekozen" class="leeg" style="margin:-8px 0 18px"></p>' +
+    '<script>var BEDRIJF_HINT=' + JSON.stringify({ domeinen: domeinen, naam: g.locatie || '', url: BEDRIJVEN_URL }).replace(/</g, '\\u003c') + ';</script>';
+}
+
+var BEDRIJF_JS =
+  '(function(){var zoek=document.getElementById("bedrijfzoek"),veld=document.getElementById("bedrijf"),lijst=document.getElementById("bedrijflijst"),' +
+  ' info=document.getElementById("bedrijfgekozen");if(!zoek)return;var alle=[];' +
+  ' function sl(t){return String(t||"").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim()}' +
+  ' function dom(u){var m=String(u||"").toLowerCase().match(/^(?:[a-z]+:\\/\\/)?(?:www\\.)?([^\\/:?#]+)/);return m?m[1]:""}' +
+  ' function toonKeuze(r,voorstel){info.innerHTML="";if(!r){info.textContent="Geen bedrijf gekozen.";return}' +
+  '  var a=document.createElement("a");a.href="https://www.nijmegenonline.nl/bedrijvengids/"+r[0]+"/";a.target="_blank";a.textContent=r[1];' +
+  '  info.appendChild(document.createTextNode(voorstel?"Voorstel: ":"Gekozen: "));info.appendChild(a);' +
+  '  info.appendChild(document.createTextNode(" ("+[r[2],r[4]].filter(Boolean).join(", ")+") "));' +
+  '  var weg=document.createElement("button");weg.type="button";weg.className="kies";weg.textContent="Geen bedrijf";' +
+  '  weg.onclick=function(){veld.value="";toonKeuze(null)};info.appendChild(weg)}' +
+  ' function kies(r,voorstel){veld.value=r[0];zoek.value="";lijst.innerHTML="";toonKeuze(r,voorstel)}' +
+  ' function toon(){var w=sl(zoek.value).split(" ").filter(Boolean);lijst.innerHTML="";if(!w.length)return;' +
+  '  alle.filter(function(r){var s=sl(r[1]+" "+r[4]+" "+r[2]);return w.every(function(x){return s.indexOf(x)>=0})}).slice(0,8).forEach(function(r){' +
+  '   var b=document.createElement("button");b.type="button";b.className="kies";b.style.cssText="display:block;width:100%;text-align:left;margin:0 0 6px";' +
+  '   b.textContent=r[1]+" \u2013 "+[r[2],r[4]].filter(Boolean).join(", ");b.onclick=function(){kies(r)};lijst.appendChild(b)})}' +
+  ' zoek.addEventListener("input",toon);' +
+  ' fetch(BEDRIJF_HINT.url).then(function(r){return r.json()}).then(function(rijen){alle=rijen;' +
+  '  if(veld.value){var r=alle.filter(function(x){return x[0]===veld.value})[0];toonKeuze(r||null);return}' +
+  '  var d=alle.filter(function(x){var s=dom(x[5]);return s&&BEDRIJF_HINT.domeinen.indexOf(s)>=0})[0];' +
+  '  var n=sl(BEDRIJF_HINT.naam),m=n&&alle.filter(function(x){return sl(x[1])===n})[0];' +
+  '  if(d||m)kies(d||m,true);else toonKeuze(null)})' +
+  ' .catch(function(){info.textContent="De lijst met bedrijven kon niet worden geladen; vul eventueel de sleutel uit de url van de bedrijfspagina in.";' +
+  '  zoek.type="text";zoek.placeholder="sleutel, bijvoorbeeld doornroosje-stationsplein";zoek.value=veld.value;zoek.oninput=function(){veld.value=zoek.value.trim()}})})();';
 
 // ---------- Dit is mijn bedrijf (wijziging van een bestaande vermelding) ----------
 

@@ -629,3 +629,35 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .pagina th, .pagina td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #ddd; vertical-align: top; }
 .pagina th { font-weight: 700; }
 @media (max-width: 600px) { .pagina table { display: block; overflow-x: auto; } }
+
+/* Agenda: filter op plaats (assets/js/agenda.js) */
+.eventkaart[hidden], .uitgelicht[hidden], .agenda-maand[hidden], .agenda-uitgelicht[hidden], .agenda-plaatsen[hidden] { display: none; }
+.agenda-plaatsen { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
+.agenda-plaatsen button { font: inherit; font-size: 0.9rem; font-weight: 600; padding: 6px 14px; border: 1px solid var(--rand); border-radius: 999px; background: var(--wit); color: var(--tekst); cursor: pointer; }
+.agenda-plaatsen button span { color: var(--grijs); font-weight: 500; margin-left: 2px; }
+.agenda-plaatsen button:hover { border-color: var(--groen); }
+.agenda-plaatsen button[aria-pressed="true"] { background: var(--donkerblauw); border-color: var(--donkerblauw); color: var(--wit); }
+.agenda-plaatsen button[aria-pressed="true"] span { color: rgba(255, 255, 255, 0.75); }
+
+/* Kaartje "Over <bedrijf>" onder evenementen en nieuws (tools/koppeling.py) */
+.over-bedrijf { margin: 32px 0; }
+.over-bedrijf h2 { margin: 0 0 12px; }
+.over-bedrijf__kaart { display: flex; gap: 16px; align-items: center; padding: 14px; background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); text-decoration: none; color: var(--tekst); transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.over-bedrijf__kaart:hover, .over-bedrijf__kaart:focus-visible { border-color: var(--groen); box-shadow: var(--schaduw-hover); }
+.over-bedrijf__kaart img { flex: 0 0 96px; width: 96px; height: 72px; object-fit: cover; border-radius: 6px; }
+.over-bedrijf__kaart > span { display: flex; flex-direction: column; gap: 2px; }
+.over-bedrijf__kaart strong { color: var(--kop); font-size: 1.1rem; }
+.over-bedrijf__regel { color: var(--grijs); font-size: 0.9rem; }
+.over-bedrijf__meer { color: var(--groen); font-weight: 700; font-size: 0.9rem; }
+.over-bedrijf__meer::after { content: " \2192"; }
+
+/* Zoekveld "Zoek je bedrijf" in de formulieren (assets/js/formulier.js) */
+.bedrijfzoeker { position: relative; margin-bottom: 18px; }
+.bedrijfzoeker__lijst { list-style: none; margin: 4px 0 0; padding: 0; background: var(--wit); border: 1px solid var(--rand); border-radius: 8px; box-shadow: var(--schaduw); max-height: 320px; overflow-y: auto; }
+.bedrijfzoeker__lijst[hidden], .bedrijfzoeker__gekozen[hidden], .bedrijfzoeker__zoek[hidden] { display: none; }
+.bedrijfzoeker__lijst li { padding: 8px 12px; cursor: pointer; line-height: 1.35; }
+.bedrijfzoeker__lijst li span { display: block; color: var(--grijs); font-size: 0.85rem; }
+.bedrijfzoeker__lijst li[aria-selected="true"], .bedrijfzoeker__lijst li:hover { background: var(--licht); }
+.bedrijfzoeker__gekozen { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 10px 14px; background: var(--licht); border-radius: 8px; }
+.bedrijfzoeker__gekozen strong { color: var(--kop); }
+.bedrijfzoeker button.link { font: inherit; font-size: 0.9rem; background: none; border: 0; padding: 0; color: var(--blauw); text-decoration: underline; cursor: pointer; }
