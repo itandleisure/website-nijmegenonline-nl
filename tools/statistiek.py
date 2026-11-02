@@ -5,6 +5,8 @@ Elke run (wekelijks, zie .github/workflows/statistiek.yml) voegt een meetpunt to
    zoekwoorden en pagina's van de laatste 28 dagen. Overgeslagen als GSC_SERVICE_ACCOUNT_JSON ontbreekt.
 2. Zoekwoorden: positie in Google (top 50, nl-NL) voor de vaste lijst uit data/statistiek-instellingen.json,
    of NijmegenOnline als bron in het AI-overzicht bovenaan staat, en wie er op 1-3 staan (DataForSEO SERP).
+   Daarbij het maandelijkse zoekvolume per zoekwoord (elke 90 dagen ververst), zodat de pagina het geschatte
+   zoekverkeer kan uitrekenen, en een controle of de pagina die Google toont nog bestaat en niet doorverwijst.
 3. AI-antwoorden: de vaste vragen aan ChatGPT, Gemini, Perplexity en Claude (met zoeken op internet), en of
    NijmegenOnline genoemd of als bron gelinkt wordt (DataForSEO AI Optimization). Alleen als de vorige
    AI-meting ouder is dan "ai_elke_dagen", omdat dit het duurste deel is.
@@ -97,6 +99,89 @@ def domein_van(url):
     return host[4:] if host.startswith("www.") else host
 
 
+def alle_zoekwoorden():
+    return [(groep, z) for groep, zoekwoorden in INSTELLINGEN["zoekwoorden"].items() for z in zoekwoorden]
+
+
+def doorverwijzingen():
+    """Vaste 301's uit _redirects, zodat we zien als Google nog een pagina toont die inmiddels doorverwijst.
+    Les van /webcam-waalkade/: die stond op 1 en verwees na de livegang naar een artikel zonder webcam."""
+    kaart = {}
+    pad = ROOT / "_redirects"
+    for regel in pad.read_text(encoding="utf-8").splitlines() if pad.exists() else []:
+        delen = regel.split()
+        if len(delen) >= 2 and delen[0].startswith("/") and not any(t in delen[0] for t in "*:") and delen[1].startswith("/"):
+            kaart.setdefault(delen[0], delen[1])
+    return kaart
+
+
+def pagina_status(pad, kaart):
+    """'ok', 'doorverwijzing' of 'ontbreekt' voor het pad dat Google toont, gezien vanuit deze repo."""
+    pad = pad if pad.endswith("/") else pad + "/"
+    if pad in kaart:
+        return "doorverwijzing", kaart[pad]
+    lokaal = ROOT / pad.strip("/") / "index.html" if pad.strip("/") else ROOT / "index.html"
+    if not lokaal.is_file():
+        return "ontbreekt", None
+    if 'http-equiv="refresh"' in lokaal.read_text(encoding="utf-8", errors="ignore")[:3000]:
+        return "doorverwijzing", None
+    return "ok", None
+
+
+PADEN = None  # alle paginapaden in deze repo, om een afgekort pad uit Google aan te vullen
+
+
+def echt_adres(item):
+    """(domein, pad) van een zoekresultaat. Sinds eind oktober 2026 verpakt Google veel resultaten in een
+    google.com/goto-link; het echte adres staat dan alleen nog (afgekort) in de broodkruimel, bijv.
+    'https://www.nijmegenonline.nl › tapas-eten-in-nijmegen...'. Zonder deze stap lijkt elke site 'google.com'."""
+    global PADEN
+    url = item.get("url") or ""
+    d = domein_van(url)
+    if d != "google.com" or "/goto" not in url:
+        return d, urllib.parse.urlsplit(url).path
+    kruimel = (item.get("breadcrumb") or "").strip()
+    if kruimel.startswith("http"):
+        delen = [x.strip() for x in kruimel.split("›")]
+        d = domein_van(delen[0])
+        return d, (pad_uit_kruimel(delen[1:]) if d.endswith(DOMEIN) else "/" + "/".join(delen[1:]))
+    naam = (item.get("website_name") or "").lower().replace("\xa0", " ").split("·")[0].replace(" ", "")
+    if "nijmegenonline" in naam:
+        return DOMEIN, None
+    return naam or "google.com", None
+
+
+def pad_uit_kruimel(delen):
+    """Het pad op onze site uit de broodkruimel van Google, of None als dat niet te herleiden is.
+    Google kort af ('tapas-eten-in-nijmegen...'), laat alleen het laatste deel zien ('› podia' voor
+    /bedrijvengids-categorie/podia/) of toont een menulabel ('› Gidsen'); dat laatste is geen pad."""
+    global PADEN
+    if PADEN is None:
+        PADEN = set()
+        for p in ROOT.rglob("index.html"):
+            delen_p = p.relative_to(ROOT).parts
+            if any(x.startswith(".") or x in ("partials", "tools", "node_modules") for x in delen_p):
+                continue
+            PADEN.add("/" if len(delen_p) == 1 else "/" + "/".join(delen_p[:-1]) + "/")
+    segmenten = [s for s in delen if s and s != "."]
+    if not segmenten:
+        return "/"
+    afgekort = segmenten[-1].endswith("...")
+    laatste = segmenten[-1][:-3] if afgekort else segmenten[-1]
+    if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", laatste):
+        return None  # menulabel zoals 'Gidsen' of 'Inspiratie opdoen'
+    pad = "/" + "/".join(segmenten[:-1] + [laatste]) + "/"
+    if afgekort:
+        kandidaten = sorted((p for p in PADEN if p.startswith(pad[:-1])), key=len)
+        return kandidaten[0] if kandidaten else pad[:-1] + "..."
+    if pad in PADEN:
+        return pad
+    if any(p.startswith(pad) for p in PADEN):
+        return None  # alleen de map is zichtbaar ('› bedrijvengids-categorie'), de pagina zelf niet
+    kandidaten = sorted((p for p in PADEN if p.endswith("/" + laatste + "/")), key=len)
+    return kandidaten[0] if kandidaten else pad
+
+
 def zoekwoord_meten(zoekwoord):
     t = dataforseo("serp/google/organic/live/advanced", {
         "keyword": zoekwoord, "location_code": 2528, "language_code": "nl", "device": "desktop",
@@ -107,12 +192,12 @@ def zoekwoord_meten(zoekwoord):
     uitslag = {"pos": None, "url": None, "aio": False, "aio_bron": False, "top": []}
     for item in items:
         if item["type"] == "organic":
-            d = domein_van(item.get("url"))
+            d, pad = echt_adres(item)
             if len(uitslag["top"]) < 3:
                 uitslag["top"].append(d)
             if d.endswith(DOMEIN) and uitslag["pos"] is None:
                 uitslag["pos"] = item["rank_group"]
-                uitslag["url"] = urllib.parse.urlsplit(item["url"]).path
+                uitslag["url"] = pad
         elif item["type"] == "ai_overview":
             uitslag["aio"] = True
             bronnen = [domein_van(b.get("url")) for b in item.get("references") or []]
@@ -121,18 +206,57 @@ def zoekwoord_meten(zoekwoord):
 
 
 def zoekwoorden_meten():
-    lijst = [(groep, z) for groep, zoekwoorden in INSTELLINGEN["zoekwoorden"].items() for z in zoekwoorden]
+    lijst = alle_zoekwoorden()
     groep_van = dict((z, g) for g, z in lijst)
+    kaart = doorverwijzingen()
     posities, kosten = {}, 0
     with concurrent.futures.ThreadPoolExecutor(8) as pool:
         for zoekwoord, uitslag, prijs in pool.map(zoekwoord_meten, [z for _, z in lijst]):
             kosten += prijs
             if uitslag:
                 uitslag["groep"] = groep_van[zoekwoord]
+                if uitslag["url"]:
+                    uitslag["status"], uitslag["doel"] = pagina_status(uitslag["url"], kaart)
                 posities[zoekwoord] = uitslag
     print("Zoekwoorden: %d van %d gemeten, %d in top 10 ($%.2f)" % (
         len(posities), len(lijst), sum(1 for u in posities.values() if u["pos"] and u["pos"] <= 10), kosten))
     return {"datum": VANDAAG.isoformat(), "posities": posities, "kosten": round(kosten, 3)}
+
+
+def zoekvolumes_meten(oud):
+    """Maandelijks zoekvolume (Google Ads, Nederland) per zoekwoord; ververst als er zoekwoorden bij zijn gekomen
+    of de vorige keer langer dan zoekvolume_elke_dagen geleden is. Eén aanvraag voor de hele lijst, een paar cent."""
+    zoekwoorden = [z for _, z in alle_zoekwoorden()]
+    oud = oud or {}
+    dagen = (VANDAAG - datetime.date.fromisoformat(oud["datum"])).days if oud.get("datum") else None
+    if dagen is not None and dagen < INSTELLINGEN.get("zoekvolume_elke_dagen", 90) and all(z in oud.get("volumes", {}) for z in zoekwoorden):
+        return oud
+    t = dataforseo("keywords_data/google_ads/search_volume/live", {
+        "keywords": zoekwoorden, "location_code": 2528, "language_code": "nl"})
+    if not t:
+        return oud
+    volumes = dict(oud.get("volumes", {}))
+    for rij in t["result"] or []:
+        volumes[rij["keyword"]] = rij.get("search_volume") or 0
+    print("Zoekvolumes: %d zoekwoorden, samen %s zoekopdrachten per maand ($%.2f)" % (
+        len(volumes), format(sum(volumes.get(z, 0) for z in zoekwoorden), ","), t.get("cost", 0)))
+    return {"datum": VANDAAG.isoformat(), "volumes": volumes}
+
+
+# Hoeveel procent van de zoekers klikt op plek 1, 2, 3, ...; daarna 1% voor plek 11-20 en 0,3% voor 21-50.
+# Grove gemiddelden, maar genoeg om zoekwoorden met veel volume zwaarder te laten wegen dan kleine.
+KLIKKANS = [0.28, 0.15, 0.10, 0.07, 0.05, 0.04, 0.03, 0.025, 0.02, 0.018]
+
+
+def geschat_verkeer(posities, volumes):
+    """Geschat aantal bezoekers per maand uit de gemeten zoekwoorden: zoekvolume x klikkans op de positie."""
+    totaal = 0.0
+    for z, u in posities.items():
+        p = u.get("pos")
+        if p:
+            kans = KLIKKANS[p - 1] if p <= 10 else 0.01 if p <= 20 else 0.003
+            totaal += (volumes.get(z) or 0) * kans
+    return round(totaal)
 
 
 def ai_vraag(args):
@@ -174,7 +298,9 @@ def ai_meten():
                 antwoorden[vraag][model] = uitslag
     n = sum(len(v) for v in antwoorden.values())
     zichtbaar = sum(1 for v in antwoorden.values() for u in v.values() if u["genoemd"] or u["gelinkt"])
-    print("AI: %d van %d antwoorden, NijmegenOnline in %d ($%.2f)" % (n, len(taken), zichtbaar, kosten))
+    per_model = collections.Counter(m for v in antwoorden.values() for m, u in v.items() if u["genoemd"] or u["gelinkt"])
+    print("AI: %d van %d antwoorden, NijmegenOnline in %d ($%.2f): %s" % (
+        n, len(taken), zichtbaar, kosten, ", ".join("%s %d" % (m, per_model.get(m, 0)) for m in INSTELLINGEN["ai_modellen"])))
     return {"datum": VANDAAG.isoformat(), "antwoorden": antwoorden, "kosten": round(kosten, 3)}
 
 
@@ -375,9 +501,16 @@ def main():
             print("Clarity mislukt: %s" % e, file=sys.stderr)
 
     if "zoekwoorden" in alleen:
+        gegevens["zoekvolume"] = zoekvolumes_meten(gegevens.get("zoekvolume"))
         meting = zoekwoorden_meten()
         if meting["posities"]:
             gegevens["zoekwoorden"] = [m for m in gegevens["zoekwoorden"] if m["datum"] != meting["datum"]] + [meting]
+            volumes = gegevens["zoekvolume"].get("volumes", {})
+            print("Geschat zoekverkeer uit deze zoekwoorden: %d bezoekers per maand" % geschat_verkeer(meting["posities"], volumes))
+            for z, u in meting["posities"].items():
+                if u.get("status") in ("doorverwijzing", "ontbreekt"):
+                    print("  let op: '%s' staat op %d met %s, maar die pagina %s" % (
+                        z, u["pos"], u["url"], "verwijst door" if u["status"] == "doorverwijzing" else "bestaat niet meer"))
 
     if "ai" in alleen:
         vorige = max((m["datum"] for m in gegevens["ai"]), default=None)
