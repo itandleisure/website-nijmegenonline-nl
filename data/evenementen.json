@@ -4822,22 +4822,6 @@
   "tekst": "<h2>👻 HALLOWEEN BIJ POP CULTURE ARCADE 🎃</h2>\n        <p>Op 31 oktober nemen de spoken de arcade over. Trek je engste outfit aan, kies je favoriete game en daag iemand uit voor een avond vol griezels, neon en games.<br/>\n        🦇 BRING A VICTIM<br/>\n        Neem je favoriete slachtoffer mee en speel samen een uur onbeperkt voor €40. Jullie hebben dan allebei een eigen uurkaart.<br/>\n        Wie neem jij mee de arcade in? Tag je slachtoffer hieronder. 👇<br/>\n        📍 Pop Culture Arcade, centrum Nijmegen<br/>\n        📅 31 oktober</p>"
  },
  {
-  "slug": "nijmegenklinktstevenskerk-2",
-  "titel": "Nijmegen Klinkt",
-  "start": "2026-10-31T15:30",
-  "eind": "2026-10-31T16:15",
-  "locatie": "Stevenskerk",
-  "adres": "Sint Stevenskerkhof 62, 6511 VZ Nijmegen",
-  "afbeelding": "https://www.nijmegenonline.nl/wp-content/uploads/2026/10/Vief-koper-koperkwintet-542x400.jpeg",
-  "alt": "",
-  "uitgelicht": false,
-  "aanbieder": "stevenskerk",
-  "link": "https://www.stevenskerk.nl/",
-  "terugkerend": false,
-  "gepubliceerd": "2026-10-15",
-  "tekst": "<p>Zuiderkapel Stevenskerk<br/>\n        Vief Koper</p>\n        <p>Op zaterdag 31 oktober 2026 om 15:30 treedt Vief Koper op in de Zuiderkapel van de Stevenskerk.</p>\n        <p>Op initiatief van Gijsbert Peelen is een koperkwintet ontstaan waarbij plezier in muziek samengaat met aangenaam musiceren. Hun muziek is publieksgericht.<br/>\n        Alle vijf musici komen uit het Nijmeegse blazerscircuit en musiceren ook in andere bekende gezelschappen.<br/>\n        Met Vief Koper wordt het een plezierige middag.</p>\n        <p>Elke laatste zaterdag van de maand van 15:30 tot 16:15 biedt de nieuw gerestaureerde Zuiderkapel van de Stevenskerk een stijlvol podium voor Nijmegens toptalent uit de amateur- en jongprofessionele sector. Gratis entree en een uitgangscollecte.</p>"
- },
- {
   "slug": "ik-ben-een-bed",
   "titel": "Ik ben een bed",
   "start": "2026-10-31T14:30",
@@ -4853,11 +4837,27 @@
   "link": "",
   "terugkerend": false,
   "gepubliceerd": "2026-10-30",
-  "tekst": "<p>Vrijdag 31 oktober is om 14.30 uur de première van de theaterproductie Ik ben een bed. De indrukwekkende tekst van het stuk is geschreven door regisseur Joos van Dooremalen en handelt over jong verlies, rouw en veerkracht, met als altijd indringende muziek van componist Theo Hoek. Na de première zijn er tot 15 november nog zes voorstellingen in Lindenberg Cultuurhuis Nijmegen. Tickets via de website.</p>",
+  "tekst": "<p>Zaterdag 31 oktober is om 14.30 uur de première van de theaterproductie Ik ben een bed. De indrukwekkende tekst van het stuk is geschreven door regisseur Joos van Dooremalen en handelt over jong verlies, rouw en veerkracht, met als altijd indringende muziek van componist Theo Hoek. Na de première zijn er tot 15 november nog zes voorstellingen in Lindenberg Cultuurhuis Nijmegen. Tickets via de website.</p>",
   "aanmelding": "637089fc",
   "website": "https://www.stimagt.nl/",
   "contactmail": "secretariaat@stimagt.nl",
   "telefoon": ""
+ },
+ {
+  "slug": "nijmegenklinktstevenskerk-2",
+  "titel": "Nijmegen Klinkt",
+  "start": "2026-10-31T15:30",
+  "eind": "2026-10-31T16:15",
+  "locatie": "Stevenskerk",
+  "adres": "Sint Stevenskerkhof 62, 6511 VZ Nijmegen",
+  "afbeelding": "https://www.nijmegenonline.nl/wp-content/uploads/2026/10/Vief-koper-koperkwintet-542x400.jpeg",
+  "alt": "",
+  "uitgelicht": false,
+  "aanbieder": "stevenskerk",
+  "link": "https://www.stevenskerk.nl/",
+  "terugkerend": false,
+  "gepubliceerd": "2026-10-15",
+  "tekst": "<p>Zuiderkapel Stevenskerk<br/>\n        Vief Koper</p>\n        <p>Op zaterdag 31 oktober 2026 om 15:30 treedt Vief Koper op in de Zuiderkapel van de Stevenskerk.</p>\n        <p>Op initiatief van Gijsbert Peelen is een koperkwintet ontstaan waarbij plezier in muziek samengaat met aangenaam musiceren. Hun muziek is publieksgericht.<br/>\n        Alle vijf musici komen uit het Nijmeegse blazerscircuit en musiceren ook in andere bekende gezelschappen.<br/>\n        Met Vief Koper wordt het een plezierige middag.</p>\n        <p>Elke laatste zaterdag van de maand van 15:30 tot 16:15 biedt de nieuw gerestaureerde Zuiderkapel van de Stevenskerk een stijlvol podium voor Nijmegens toptalent uit de amateur- en jongprofessionele sector. Gratis entree en een uitgangscollecte.</p>"
  },
  {
   "slug": "halloween-festival",
@@ -5074,6 +5074,28 @@
   "tekst": "<p>Magda Novels is de artiestennaam van de Zweedse zangeres Magda Andersson uit Umeå. Ze maakt dromerige indiefolk en alternatieve pop met persoonlijke teksten en veel emotie. Haar muziek gaat vaak over zelfreflectie, verlies en identiteit. Voor het optreden in De Brauerij neemt Andersson extra muzikale begeleiding mee, dit wordt een bijzonder duoconcert. Magda Novels wordt vergeleken met artiesten zoals Aurora en Big Thief. In 2025 is het debuutalbum Vol. 1: Shadow Work uitgekomen.</p>\n        <p>Ticketlink: https://debrauerij.nl/event/magda-novels/</p>"
  },
  {
+  "slug": "swingende-senioren-in-obg",
+  "titel": "Swingende senioren in OBG",
+  "start": "2026-11-10T17:30",
+  "eind": "2026-11-10T20:00",
+  "locatie": "OBG Nijmegen",
+  "adres": "Prof. Cornelissenstraat 2, 6524 PJ Nijmegen",
+  "afbeelding": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/swingende-senioren-in-obg.webp",
+  "alt": "Swingende senioren in OBG",
+  "bijschrift": "Eigen foto",
+  "fotos": [],
+  "uitgelicht": false,
+  "aanbieder": "obg-nijmegen",
+  "link": "",
+  "terugkerend": false,
+  "gepubliceerd": "2026-11-01",
+  "tekst": "<p>Zestig-plus en dans- of muziekliefhebber? Kom dan dinsdag 10 november naar OBG Nijmegen. Entertainer Jan Kersten staat garant voor een geweldige avond! Aanvang 19.30, zaal open vanaf 19.15 uur. De toegang is gratis, maar vergeet niet om contant geld mee te nemen voor de drankjes.</p>\n<p>Seniorencafé Burgerlust organiseert elke tweede en vierde dinsdag van de maand in OBG een dansavond met live muziek: foxtrot, wals; maar ook beat en linedance horen tot het repertoire.<br>Bezoekers zijn vaak trouwe gasten, maar ook veel nieuwelingen weten het danscafé te vinden.<br>Het is een fijne ontmoetingsplek, waar alleengaanden meer dan welkom zijn. Prima locatie ook om met je date af te spreken. Kom langs, breng een goed humeur mee en je hebt een onvergetelijke avond.</p>\n<p>Voor een actieve levensstijl<br>OBG is er voor iedereen die actief en gezond oud wil worden. Het gaat hier om samenzijn en ontmoeten. De brasserie is elke dag open voor een kopje koffie, een maaltijd of een praatje. Kom gerust eens langs en ervaar de sfeer!</p>\n<p>Adres en tijd<br>Seniorencafé Burgerlust in OBG, Prof. Cornelissenstraat 2, 6524 PJ Nijmegen. Tijd: 19.30 – 22.00 uur, zaal open vanaf 19.15 uur, de toegang is gratis!</p>",
+  "aanmelding": "d0a02e17",
+  "website": "https://obg.nu/",
+  "contactmail": "info@obg.nu",
+  "telefoon": "024 3279279"
+ },
+ {
   "slug": "pubquiz-bij-cafe-t-haantje2",
   "titel": "Pubquiz bij café ’t Haantje",
   "start": "2026-11-14T20:30",
@@ -5088,6 +5110,33 @@
   "terugkerend": false,
   "gepubliceerd": "2026-09-24",
   "tekst": "<h2>Pubquiz bij Café ’t Haantje 🧠🍻</h2>\n        <p><strong>Zaterdag 14 november 2026 | Aanvang 20.30 uur</strong></p>\n        <p>Weet jij nét dat ene antwoord waar de rest van je team geen idee van heeft? Dan komt dat goed uit, want op zaterdag 10 oktober is het weer tijd voor de <strong>maandelijkse Pubquiz bij Café ’t Haantje</strong>!</p>\n        <p>Stel een team samen van maximaal vier deelnemers en maak je klaar voor een gezellige avond vol vragen, verrassende weetjes en natuurlijk de nodige gezonde competitie. Van algemene kennis tot vragen waarbij je diep in je geheugen moet graven: samen weet je altijd meer.</p>\n        <h3>Meedoen?</h3>\n        <p>Aanmelden kan aan de bar van Café ’t Haantje. Geef daarbij je <strong>teamnaam en het aantal deelnemers</strong> door. Het aantal gereserveerde tafels is beperkt, dus wacht niet te lang met inschrijven.</p>\n        <p>Heb je een tafel gereserveerd? Zorg dan dat je op tijd aanwezig bent. <strong>Om 20.15 uur worden niet-bezette gereserveerde tafels door de quizmaster vrijgegeven.</strong></p>\n        <p>Kun je onverwacht niet komen of verandert het aantal deelnemers? Geef dit dan zo snel mogelijk door, zodat iemand anders van de beschikbare plek gebruik kan maken.</p>\n        <p>📅 <strong>Zaterdag 14 november 2026</strong><br/>\n        🕣 <strong>Aanvang: 20.30 uur</strong><br/>\n        👥 <strong>Maximaal 4 deelnemers per team</strong><br/>\n        📍 <strong>Café ’t Haantje, Nijmegen</strong></p>\n        <p>Verzamel je slimste vrienden, bedenk alvast een ijzersterke teamnaam en ga voor de eeuwige roem tijdens de Pubquiz! 🍺🏆</p>\n        <p><em>Datum en programma onder voorbehoud van wijzigingen.</em></p>"
+ },
+ {
+  "slug": "expositie-marlie-duizings-in-kunst-in-het-kerkje",
+  "titel": "Expositie Marlie Duizings in kunst in het kerkje",
+  "start": "2026-11-20T09:00",
+  "eind": "2026-12-06T15:00",
+  "locatie": "Kerkje van Persingen",
+  "adres": "Persingense straat 7 Persingen, 5363 VE Velp",
+  "afbeelding": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/expositie-marlie-duizings-in-kunst-in-het-kerkje.webp",
+  "alt": "Expositie Marlie Duizings in kunst in het kerkje",
+  "bijschrift": "Eigen foto",
+  "fotos": [
+   {
+    "foto": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/expositie-marlie-duizings-in-kunst-in-het-kerkje-2.webp",
+    "bijschrift": "Eigen foto"
+   }
+  ],
+  "uitgelicht": false,
+  "aanbieder": "kerkje-van-persingen",
+  "link": "",
+  "terugkerend": false,
+  "gepubliceerd": "2026-11-02",
+  "tekst": "<p>Stichting Kunst in het Kerkje presenteert in het Vincentiuskerkje in Velp bij Grave een expositie van Marlie Duizings. Zij toont schilderijen en werken op papier waarin waarneming en innerlijke verbeelding samenkomen. De expositie is te zien op vrijdag, zaterdag en zondag.</p>\n<p>Duizings begon haar opleiding met beeldhouwen aan de Kunstacademie Maastricht en de Rietveld Academie in Amsterdam. Gaandeweg verschoof haar aandacht naar het schilderen, waarin ze de vrijheid vond om vormen, herinneringen en innerlijke beelden met elkaar te verbinden.</p>\n<p>Fotografie, tekenen en schilderen zijn voor haar verschillende fasen van hetzelfde creatieve proces. Met de camera kijkt ze aandachtig naar vorm, licht en structuur, en in haar tekeningen onderzoekt ze beelden die later in haar schilderijen terugkomen. Natuurlijke vormen en archetypische beelden spelen daarbij een grote rol. Vaak zijn het de beelden die ze ziet wanneer ze haar ogen sluit, die het vertrekpunt vormen.</p>\n<p>De series Inner Landscapes, Archetypes en It&#x27;s all in your head komen voort uit de zoektocht naar de verbinding tussen de zichtbare werkelijkheid en de innerlijke wereld. Haar schilderijen nodigen uit tot verstilling en laten ruimte voor wat zich niet direct laat benoemen.</p>",
+  "aanmelding": "7c49fa1c",
+  "website": "https://www.kunstinhetkerkje.nl",
+  "contactmail": "exposities@kunstinhetkerkje.nl",
+  "telefoon": ""
  },
  {
   "slug": "parkinson-cafe-nijmegen-3",
@@ -5162,6 +5211,28 @@
   "terugkerend": false,
   "gepubliceerd": "2026-03-24",
   "tekst": "<p>Hilde Vos hoorde op jonge leeftijd Dolly Parton in een Nijmeegse muziekwinkel en dat was het startpunt van haar muzikale pad. Inmiddels is de cv zeer goed gevuld: een indrukwekkende theatertour met Johan Derksen, samenwerkingen met Dick Altena, een handvol prijzen en awards binnen de countrywereld en zelfs een avontuur bij The Voice. Ook nam ze een album op in Nashville. Om dat te bekostigen verkocht ze zelfs haar verlovingsring.</p>\n        <p>Sinds een paar jaar noemt ze Drenthe haar thuis, geïnspireerd door de verbondenheid met de natuur en de open velden die haar muziek perfect weerspiegelen. De 38-jarige zangeres noemt Drenthe liefkozend het “Texas van Nederland”. Samen met twee doorgewinterde muzikanten komt ze naar De Brauerij.</p>\n        <blockquote><p><a href=\"https://debrauerij.nl/event/hilde-vos-trio/\" rel=\"noopener\" target=\"_blank\">Hilde Vos Trio</a></p>\n        </blockquote>"
+ },
+ {
+  "slug": "maak-kennis-met-intuitieve-ontwikkeling-open-les-7",
+  "titel": "Maak kennis met intuïtieve ontwikkeling (open les)",
+  "start": "2026-11-23T16:30",
+  "eind": "2026-11-23T18:30",
+  "locatie": "Bosatelier",
+  "adres": "Scheidingsweg 99, 6581 KN Nijmegen",
+  "afbeelding": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/maak-kennis-met-intuitieve-ontwikkeling-open-les-7.webp",
+  "alt": "Maak kennis met intuïtieve ontwikkeling (open les)",
+  "bijschrift": "Eigen foto",
+  "fotos": [],
+  "uitgelicht": false,
+  "aanbieder": "bosatelier",
+  "link": "",
+  "terugkerend": false,
+  "gepubliceerd": "2026-11-01",
+  "tekst": "<p>Maak kennis met intuïtieve ontwikkeling (open les)</p>\n<p>Iedereen heeft van nature een intuïtief kompas, maar hoe weet je wat jouw binnenwereld je te vertellen heeft? Intuïtieve ontwikkeling biedt je tools om jouw intuïtie helder te leren verstaan. Je leert signalen herkennen en meer op jouw gevoel en weten te vertrouwen. Via de taal van energie kom je beter in verbinding met jezelf en meer in je kracht. Thuis, op het werk en in relaties.</p>\n<p>Spreekt dit je aan? Meld je dan aan voor de gratis open les op maandagavond 23 november. In de twee uur durende les doe je mee met oefeningen uit de basiscursus. Je maakt kennis met energiewerk én met de docenten. Het laatste deel van de les is er gelegenheid om vragen te stellen.</p>\n<p>Reading cadeau<br>Bezoek je de open les, dan krijg je van ons een reading cadeau. Zo kun je het effect van energetische communicatie zelf ervaren. Je bent daarvoor welkom op een maandag- of donderdagavond. Kijk voor meer informatie en aanmelden op www.intuitieftraject.nl bij healing en reading.</p>\n<p>Cursussen<br>Onze cursussen gaan drie keer per jaar van start en kun je volgen op een avond, overdag, in het weekend of als WEEK! Kijk voor meer informatie en aanmelden op www.intuitieftraject.nl bij aanbod.</p>",
+  "aanmelding": "7083f096",
+  "website": "https://www.intuitieftraject.nl/open-les",
+  "contactmail": "info@intuitieftraject.nl",
+  "telefoon": "+31616051782"
  },
  {
   "slug": "nijmegen-veilig-de-nacht-in-actie-aletta",

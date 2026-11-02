@@ -31,8 +31,8 @@ VACATURES = [
      "Voor NijmegenOnline zoeken we toppers die hun schrijfervaring willen uitbreiden. Als redacteur ga je veel op pad in "
      "Nijmegen en ben je het visitekaartje van onze organisatie."),
     ("vacature-accountmanager", "Lokale partner en mede-eigenaar", True,
-     "We zoeken iemand die NijmegenOnline in de stad een gezicht geeft, partners binnenhaalt en daarvoor provisie en "
-     "aandelen krijgt."),
+     "We zoeken iemand die NijmegenOnline in de stad een gezicht geeft en lokale ondernemers helpt zichtbaarder te "
+     "worden en meer omzet te halen."),
     ("vacature-fotograaf", "Fotograaf", False,
      "Ben jij dag en nacht op pad met je camera en vind je het leuk om Nijmegen en omgeving vast te leggen?"),
     ("vacature-social-media-strateeg", "Social media strateeg", False,
