@@ -2681,7 +2681,7 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     if len(uitgelicht) < MAX_UITGELICHT:
         out.append('            <a class="vrijeplek" href="%sbedrijf-aanmelden/?pakket=uitgelicht&amp;categorie=%s"><strong>Nog %d %s vrij</strong>'
                    '<span>Zet jouw %s hier bovenaan, boven %d andere %s. Met foto\'s, je actie, een eigen knop en je banner bij onze blogs over %s.</span>'
-                   '<span class="vrijeplek__prijs">Het eerste jaar &euro; 99</span></a>'
+                   '<span class="vrijeplek__prijs">&euro; 149 per jaar</span></a>'
                    % (root, esc(cat.get("ouder", cat["slug"])), MAX_UITGELICHT - len(uitgelicht), "plek" if MAX_UITGELICHT - len(uitgelicht) == 1 else "plekken",
                       esc(cat["enkelvoud"].lower()), len(alle), esc(cat["meervoud"]), esc(cat["blogonderwerp"])))
     out.append("          </div>\n        </section>")
@@ -2707,7 +2707,7 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     out.append('        <section class="gids-sectie pakketvergelijk">\n          <h2>Heb je een %s in Nijmegen?</h2>'
                '\n          <p>Elk%s %s staat gratis in onze gids. Wil je opvallen tussen %d %s? Kies dan voor Uitgelicht of Partner.</p>'
                % (enk, "e" if cat.get("de_woord", True) else "", enk, len(alle), esc(cat["meervoud"])))
-    out.append('          <div class="tabel-scroll"><table>\n            <thead><tr><th></th><th>Gratis</th><th>Uitgelicht<br><small>&euro; 149 per jaar,<br>eerste jaar &euro; 99</small></th>'
+    out.append('          <div class="tabel-scroll"><table>\n            <thead><tr><th></th><th>Gratis</th><th>Uitgelicht<br><small>&euro; 149 per jaar</small></th>'
                '<th>Partner<br><small>&euro; 449 per jaar</small></th></tr></thead>\n            <tbody>')
     def cel(w):
         return {"ja": '<td class="ja">&#10003;</td>', "nee": '<td class="nee">&ndash;</td>'}.get(w, "<td>%s</td>" % w)
