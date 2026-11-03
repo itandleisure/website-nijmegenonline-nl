@@ -674,7 +674,12 @@
     "tekst": "<p>De musea in Nijmegen en omgeving die de moeite waard zijn. Tijden en prijzen van het vernieuwde Valkhof Museum vind je in onze gids over <a href=\"../../valkhof-nijmegen/\">het Valkhof</a>. Net buiten de stad ligt <a href=\"../../museumpark-orientalis/\">Museumpark Orientalis</a>. Tijden en prijzen van het <a href=\"../../vrijheidsmuseum-groesbeek/\">Vrijheidsmuseum</a> in Groesbeek staan in onze eigen gids. Ook over <a href=\"../../de-bastei-nijmegen/\">De Bastei</a> aan de Waalkade hebben we een eigen gids, net als over het fietsmuseum <a href=\"../../velorama-nijmegen/\">Velorama</a> ernaast.</p>",
     "artikelen": [
      "museums-in-nijmegen-wat-ga-jij-ontdekken",
-     "hoe-het-afrika-museum-je-elke-keer-weer-inspireert"
+     "hoe-het-afrika-museum-je-elke-keer-weer-inspireert",
+     "valkhof-nijmegen",
+     "museumpark-orientalis",
+     "vrijheidsmuseum-groesbeek",
+     "de-bastei-nijmegen",
+     "velorama-nijmegen"
     ]
    },
    {
@@ -809,5 +814,207 @@
   ],
   "bedrijvengids": "",
   "kort": "Afstanden, voorbereiding, blessures voorkomen en overnachten."
+ },
+ {
+  "url": "/thema/centrum-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2023/01/Skyline-1.webp",
+  "naam": "Het centrum van Nijmegen",
+  "zoekwoord": "centrum nijmegen",
+  "seo_titel": "Centrum van Nijmegen: pleinen, Waalkade, winkelen en parkeren",
+  "beschrijving": "Gids voor het centrum van Nijmegen: de Grote Markt, Plein 1944, het Kelfkensbos, de Waalkade en de Waalbrug, plus openingstijden, markten en parkeren.",
+  "intro": "<p>Het centrum van Nijmegen ligt op de heuvel boven de Waal, tussen het station en de rivier. Het is compact: van het Stationsplein loop je in een kwartier naar de Grote Markt, en vandaar ben je in vijf minuten op de Waalkade. Onderweg kom je langs de Stevenskerk, de winkelstraten en de pleinen die elk hun eigen verhaal hebben, van het bombardement van 1944 tot de Romeinse vondsten onder het Kelfkensbos.</p><p>In deze gids staan de pleinen, straten en plekken aan de Waal op een rij, met de openingstijden van de winkels, de markten en de handigste plekken om te parkeren.</p>",
+  "secties": [
+   {
+    "kop": "Pleinen en kerk",
+    "tekst": "<p>Vier plekken vormen het hart van de binnenstad: de Grote Markt met de Waag en de Stevenskerk, Plein 1944 dat na het bombardement ontstond, het Kelfkensbos bij het Valkhof en de kerk zelf, al bijna acht eeuwen het hoogste punt van de stad.</p>",
+    "artikelen": [
+     "grote-markt",
+     "plein-1944",
+     "kelfkensbos",
+     "stevenskerk-nijmegen"
+    ]
+   },
+   {
+    "kop": "Aan de Waal",
+    "tekst": "<p>Beneden aan de rivier liggen de Waalkade met zijn terrassen, het Valkhofpark met de Sint-Nicolaaskapel en de Waalbrug uit 1936. De mooiste fotospots van de stad vind je hier.</p>",
+    "artikelen": [
+     "waalkade-nijmegen",
+     "valkhof-nijmegen",
+     "waalbrug-nijmegen",
+     "de-beste-fotospots-in-nijmegen"
+    ]
+   },
+   {
+    "kop": "Winkelen, markten en openingstijden",
+    "tekst": "<p>De winkels in het centrum zijn ook op zondag open, en op maandag en zaterdag staat de weekmarkt in de binnenstad. Hieronder de openingstijden, de markten en tips van een Nijmegenaar.</p>",
+    "artikelen": [
+     "openingstijden-centrum-nijmegen",
+     "markten-nijmegen",
+     "wat-te-doen-in-nijmegen",
+     "ontdek-nijmegen-door-de-ogen-van-een-local"
+    ]
+   },
+   {
+    "kop": "Parkeren en bereikbaarheid",
+    "tekst": "<p>Met de trein stap je uit aan de rand van het centrum. Met de auto parkeer je in een van de garages onder de binnenstad, of goedkoper op een P+R buiten de stad.</p>",
+    "artikelen": [
+     "parkeren-in-nijmegen",
+     "station-nijmegen",
+     "parkeergarage-kelfkensbos-nijmegen",
+     "parkeergarage-marienburg-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Wat is het centrale plein van Nijmegen?",
+    "a": "De Grote Markt, met de Waag uit 1612 en de Stevenskerk erachter. Plein 1944 is het grootste plein en ontstond na het bombardement van 22 februari 1944."
+   },
+   {
+    "v": "Hoe ver is het van station Nijmegen naar het centrum?",
+    "a": "Het station ligt aan de westrand van het centrum. Lopend ben je in een kwartier op de Grote Markt."
+   },
+   {
+    "v": "Zijn de winkels in het centrum van Nijmegen op zondag open?",
+    "a": "Ja, de meeste winkels in de binnenstad zijn elke zondag open, meestal van 12.00 tot 17.00 uur. Kijk voor de precieze tijden bij de openingstijden van het centrum."
+   },
+   {
+    "v": "Waar parkeer je in het centrum van Nijmegen?",
+    "a": "In de garages Keizer Karel, Kelfkensbos, Mariënburg en Eiermarkt, voor € 3,90 per uur overdag. Goedkoper is P+R Nijmegen Noord, € 3,50 per dag inclusief de bus naar het centrum."
+   }
+  ],
+  "bedrijvengids": "",
+  "kort": "Pleinen, Waalkade, winkels, markten en parkeren in de binnenstad."
+ },
+ {
+  "url": "/thema/parkeren-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2022/09/parkeren-in-de-parkeergarage-in-nijmegen.webp",
+  "naam": "Parkeren en bereikbaarheid in Nijmegen",
+  "zoekwoord": "parkeren nijmegen",
+  "seo_titel": "Parkeren en bereikbaarheid in Nijmegen: garages, P+R, trein en bus",
+  "beschrijving": "Alles over parkeren in Nijmegen en hoe je er komt: de parkeergarages in het centrum met tarieven, gratis en goedkope P+R-terreinen, station Nijmegen, de bus en de fiets.",
+  "intro": "<p>Nijmegen heeft een compact centrum op een heuvel, met vier parkeergarages eronder en P+R-terreinen aan de rand van de stad. Wie met de trein komt, stapt uit op een kwartier lopen van de Grote Markt. In deze gids staan alle pagina's over parkeren en bereikbaarheid bij elkaar: de garages met hun tarieven, de goedkope en gratis alternatieven, het station, de bus en hoe je je door de stad beweegt.</p>",
+  "secties": [
+   {
+    "kop": "Parkeren in het centrum",
+    "tekst": "<p>In de garages Keizer Karel, Kelfkensbos, Mariënburg en Eiermarkt betaal je € 3,90 per uur overdag en € 0,50 per uur 's nachts. Op straat is het centrum duurder. Gratis parkeer je op P+R Nijmegen West; P+R Nijmegen Noord kost € 3,50 per dag inclusief de bus.</p>",
+    "artikelen": [
+     "parkeren-in-nijmegen",
+     "parkeergarage-kelfkensbos-nijmegen",
+     "parkeergarage-marienburg-nijmegen",
+     "parkeergarage-eiermarkt-nijmegen",
+     "parkeergarage-keizer-karel-nijmegen"
+    ]
+   },
+   {
+    "kop": "Met trein, bus en fiets",
+    "tekst": "<p>Station Nijmegen heeft directe intercity's naar onder meer Utrecht, Amsterdam en Den Haag; het busstation ligt ernaast. Op de fiets is de stad vlak, behalve de heuvel naar het centrum, en een e-bike helpt op de stuwwal richting Berg en Dal.</p>",
+    "artikelen": [
+     "station-nijmegen",
+     "plan-je-bezoek",
+     "zo-vind-je-een-e-bike-die-bij-jou-past",
+     "nijmegen-op-de-scooter-de-leukste-routes-en-handige-weetjes"
+    ]
+   },
+   {
+    "kop": "Onderweg in de stad",
+    "tekst": "<p>Deelauto's, deelscooters en de pont over de Waal: zo kom je rond zonder eigen auto. En over de Waalbrug rijden dagelijks tienduizenden voertuigen de stad in en uit.</p>",
+    "artikelen": [
+     "mobiliteit-in-nijmegen-hoe-flexibele-oplossingen-het-dagelijks-leven-vergemakkelijken",
+     "over-het-water-nijmegen-verkennen-zo-doe-je-dat",
+     "waalbrug-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Wat kost parkeren in het centrum van Nijmegen?",
+    "a": "In de parkeergarages € 3,90 per uur van 8.00 tot 18.00 uur en € 0,50 per uur 's nachts. Op straat € 4,00 per uur. In Eiermarkt, Mariënburg en Keizer Karel betaal je maximaal € 16,- per 24 uur."
+   },
+   {
+    "v": "Waar kun je gratis parkeren in Nijmegen?",
+    "a": "Op P+R Nijmegen West, en de eerste twee uur in de garage van winkelcentrum Dukenburg. P+R Nijmegen Noord kost € 3,50 per dag inclusief de bus naar het centrum."
+   },
+   {
+    "v": "Welke parkeergarages zijn er in het centrum van Nijmegen?",
+    "a": "Keizer Karel, Kelfkensbos, Mariënburg en Eiermarkt. Kelfkensbos ligt het dichtst bij de Waalkade en het Valkhof, Mariënburg midden in het winkelgebied."
+   },
+   {
+    "v": "Hoe kom je van station Nijmegen naar het centrum?",
+    "a": "Lopend, in ongeveer een kwartier naar de Grote Markt. Het busstation ligt direct naast het station."
+   }
+  ],
+  "bedrijvengids": "",
+  "kort": "Parkeergarages, tarieven, P+R, station, bus en fiets."
+ },
+ {
+  "url": "/thema/natuur-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2022/09/Ooijpolder-in-nijmegen.webp",
+  "naam": "Natuur, parken en wandelen rond Nijmegen",
+  "zoekwoord": "wandelen nijmegen",
+  "seo_titel": "Natuur, parken en wandelen rond Nijmegen: polder, heuvels en bos",
+  "beschrijving": "Gids voor natuur rond Nijmegen: de Ooijpolder, de heuvels van Berg en Dal en de Duivelsberg, de Mookerheide en Sint-Jansberg, de bossen van Heumensoord en de parken in de stad, met wandelroutes.",
+  "intro": "<p>Weinig steden hebben zoveel verschillende natuur binnen fietsafstand als Nijmegen. Aan de noordkant ligt de Ooijpolder met de Waal, de Bisonbaai en grazende runderen. Aan de oostkant en zuidkant klimt de stuwwal op tot bijna tachtig meter, met de Duivelsberg, de Mookerheide en de Sint-Jansberg. Daartussen liggen de bossen van Heumensoord en Heilig Landstichting, en in de stad zelf het Kronenburgerpark, het Goffertpark en het Valkhof.</p><p>In deze gids staan alle natuurgebieden en parken bij elkaar, met per gebied de routes, waar je parkeert en wat je er ziet.</p>",
+  "secties": [
+   {
+    "kop": "Wandelen",
+    "tekst": "<p>Begin bij ons overzicht van wandelroutes: stadswandelingen, de Waalbrug en de Spiegelwaal, het Boswachterspad door de polder en de lange Walk of Wisdom rond de stad.</p>",
+    "artikelen": [
+     "wandelen-nijmegen",
+     "de-andere-rivier-die-door-nijmegen-stroomt",
+     "over-het-water-nijmegen-verkennen-zo-doe-je-dat"
+    ]
+   },
+   {
+    "kop": "Polder en rivier",
+    "tekst": "<p>Direct ten oosten van de stad ligt de Ooijpolder, een rivierlandschap met kolken, wilgen en vrij lopende runderen en paarden. In de zomer zwem je in de Bisonbaai.</p>",
+    "artikelen": [
+     "ooijpolder"
+    ]
+   },
+   {
+    "kop": "Heuvels en bossen",
+    "tekst": "<p>De stuwwal uit de ijstijd geeft Nijmegen echte heuvels. De Duivelsberg bij Berg en Dal was tot 1949 Duits, de Mookerheide bloeit in augustus paars, en op de Sint-Jansberg borrelen bronnen uit de helling en liggen de resten van een Romeinse villa.</p>",
+    "artikelen": [
+     "duivelsberg",
+     "mookerheide",
+     "sint-jansberg",
+     "heumensoord",
+     "heilig-landstichting"
+    ]
+   },
+   {
+    "kop": "Parken in de stad",
+    "tekst": "<p>Ook binnen de stad is het groen: het Kronenburgerpark met de middeleeuwse Kruittoren, het Goffertpark rond het stadion en het Valkhofpark hoog boven de Waal.</p>",
+    "artikelen": [
+     "kronenburgerpark-nijmegen",
+     "goffertpark-nijmegen",
+     "valkhof-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Waar kun je mooi wandelen bij Nijmegen?",
+    "a": "In de Ooijpolder (Boswachterspad, 7,5 km), op de Mookerheide (3 tot 17 km), in Heumensoord (2, 5 en 6 km) en op de Duivelsberg en Sint-Jansberg, waar het Pieterpad overheen loopt. In de stad zijn er de Stadswandeling (5 km) en de Walk of the Town (7 km)."
+   },
+   {
+    "v": "Wat is het hoogste punt bij Nijmegen?",
+    "a": "De Sint-Jansberg bij Plasmolen haalt met de Kiekberg 77 meter; de Duivelsberg bij Berg en Dal is 75,9 meter."
+   },
+   {
+    "v": "Kun je zwemmen in de natuur bij Nijmegen?",
+    "a": "Ja, in de Bisonbaai in de Ooijpolder en in de Spiegelwaal bij Lent. Kijk altijd naar de actuele waterkwaliteit op zwemwater.nl."
+   },
+   {
+    "v": "Welke parken heeft Nijmegen?",
+    "a": "Het Kronenburgerpark bij het station, het Goffertpark in Nijmegen-Zuid en het Valkhofpark met het Hunnerpark boven de Waal."
+   }
+  ],
+  "bedrijvengids": "",
+  "kort": "Ooijpolder, Duivelsberg, Mookerheide, Sint-Jansberg, Heumensoord en de stadsparken."
  }
 ]
