@@ -368,7 +368,12 @@ def aanbieder_overzicht(rij, vandaag):
         out.append('        </ul>\n      </section>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
-    return "\n".join(out)
+    return "\n".join(out).replace("site.css?v=30", CSS_VERSIE)
+
+
+# De agenda en de locatiepagina gebruiken nieuwe opmaak (filters, locaties per plaats). Met een eigen versie haalt de
+# browser site.css opnieuw op, zonder dat alle 10.000 andere pagina's mee hoeven te veranderen.
+CSS_VERSIE = "site.css?v=33"
 
 
 # Filter op datum boven de agenda (assets/js/agendafilter.js). Werkt in de browser met de datum van de bezoeker, dus ook
@@ -400,8 +405,13 @@ def overzicht(komend, vandaag):
         out.append("      <p>Er staan op dit moment geen evenementen in de agenda.</p>")
     out.extend("      " + r for r in uitgelicht_blok(komend, vandaag, root, 6))
     if komend:
+        out.extend("      " + r for r in soorttegels(komend))
+        out.append('      <div class="agenda-balk">')
         out += AGENDAFILTER
         out.extend("      " + r for r in meerfilter(komend))
+        out.append('      </div>')
+        out.append('      <p class="agendafilter__uitkomst" aria-live="polite" hidden><span></span> '
+                   '<button type="button" class="agenda-wis">Wis filters</button></p>')
     # Langlopende exposities apart bovenaan, zodat ze niet elke maand opnieuw de lijst openen
     lopend = [e for e in komend if dag(e, "start") < vandaag]
     if lopend:
@@ -425,40 +435,51 @@ def overzicht(komend, vandaag):
     out.append('      <p class="gids-cta"><a class="knop" href="%s">Evenement aanmelden</a> <a href="%s%s/">Bekijk evenementen per locatie</a></p>'
                % (AANMELDEN, root, AANBIEDERS))
     if komend:
-        out.append('      <script src="%sassets/js/agendafilter.js?v=4" defer></script>' % root)
+        out.append('      <script src="%sassets/js/agendafilter.js?v=5" defer></script>' % root)
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
-    return "\n".join(out)
+    return "\n".join(out).replace("site.css?v=30", CSS_VERSIE)
+
+
+# Tegels per soort boven de agenda (besluit Frans 3-11-2026, voorstel 4): korte naam en icoon
+SOORTTEGELS = {"Muziek": ("Muziek", "🎵"), "Theater en dans": ("Theater en dans", "🎭"), "Film": ("Film", "🎬"),
+               "Expositie": ("Exposities", "🖼️"), "Lezing en rondleiding": ("Lezingen", "🎤"),
+               "Workshop en cursus": ("Workshops", "🧩"), "Markt": ("Markten", "🛍️"), "Feest en festival": ("Feesten", "🎉"),
+               "Sport en beweging": ("Sport", "🏃"), "Eten en drinken": ("Eten en drinken", "🍽️"), "Spel en quiz": ("Spel en quiz", "🎲")}
+
+
+def soorttegels(komend):
+    """Tegels om op soort te filteren (assets/js/agendafilter.js). Nog een keer klikken zet het filter uit.
+    Zonder JavaScript blijven ze verborgen en staat de hele agenda er gewoon."""
+    tel = {}
+    for e in komend:
+        tel[e.get("soort") or "Overig"] = tel.get(e.get("soort") or "Overig", 0) + 1
+    lijst = [x for x in evenement_indeling.SOORTEN if tel.get(x) and x in SOORTTEGELS]
+    if len(lijst) < 2:
+        return []
+    return (['<div class="agenda-tegels" role="group" aria-label="Wat wil je doen?" hidden>'] +
+            ['  <button type="button" data-soort="%s" aria-pressed="false"><span aria-hidden="true">%s</span>%s <small>%d</small></button>'
+             % (esc(x), SOORTTEGELS[x][1], esc(SOORTTEGELS[x][0]), tel[x]) for x in lijst] + ["</div>"])
 
 
 def meerfilter(komend):
-    """Tweede filterregel onder de datumknoppen (assets/js/agendafilter.js): keuzelijstjes voor plaats en soort, plus
-    aan/uit-knoppen voor Gratis (ook vrije gift) en Leuk voor kinderen. Indeling: tools/evenement_indeling.py.
-    Zonder JavaScript blijft de regel verborgen en staat de hele agenda er gewoon."""
-    plaatsen, soorten = {}, {}
+    """Na de datumknoppen, op dezelfde regel (assets/js/agendafilter.js): keuzelijst voor plaats en aan/uit-knoppen
+    Gratis (ook vrije gift) en Kinderen. Indeling: tools/evenement_indeling.py."""
+    plaatsen = {}
     for e in komend:
         plaatsen[e["_plaats"]] = plaatsen.get(e["_plaats"], 0) + 1
-        x = e.get("soort") or "Overig"
-        soorten[x] = soorten.get(x, 0) + 1
-    regels = ['<div class="agenda-meer" role="group" aria-label="Meer filters" hidden>']
+    regels = ['<div class="agenda-meer" role="group" aria-label="Plaats, gratis en kinderen" hidden>']
     if len(plaatsen) > 1:
         volgorde = sorted(plaatsen, key=lambda p: (p != "Nijmegen", -plaatsen[p], p))
-        regels.append('  <label class="agenda-keuze"><span>Plaats</span><select data-filter="plaats"><option value="">Alle plaatsen</option>%s</select></label>'
+        regels.append('  <label class="agenda-keuze"><span class="sr-only">Plaats</span><select data-filter="plaats">'
+                      '<option value="">Alle plaatsen</option>%s</select></label>'
                       % "".join('<option value="%s">%s (%d)</option>' % (esc(p), esc(p), plaatsen[p]) for p in volgorde))
-    lijst = [x for x in evenement_indeling.SOORTEN if soorten.get(x) and x != "Overig"]
-    if lijst:
-        regels.append('  <label class="agenda-keuze"><span>Soort</span><select data-filter="soort"><option value="">Alle soorten</option>%s</select></label>'
-                      % "".join('<option value="%s">%s (%d)</option>' % (esc(x), esc(x), soorten[x]) for x in lijst))
-    gratis = sum(e.get("toegang") in ("gratis", "vrije gift") for e in komend)
-    kinderen = sum("kinderen" in e.get("kenmerken", []) for e in komend)
-    if gratis:
+    if any(e.get("toegang") in ("gratis", "vrije gift") for e in komend):
         regels.append('  <button type="button" class="agenda-schakel" data-extra="gratis" aria-pressed="false">Gratis</button>')
-    if kinderen:
-        regels.append('  <button type="button" class="agenda-schakel" data-extra="kinderen" aria-pressed="false">Leuk voor kinderen</button>')
-    regels.append('  <button type="button" class="agenda-wis link" hidden>Wis filters</button>')
+    if any("kinderen" in e.get("kenmerken", []) for e in komend):
+        regels.append('  <button type="button" class="agenda-schakel" data-extra="kinderen" aria-pressed="false">Kinderen</button>')
     regels.append("</div>")
-    regels.append('<p class="agendafilter__uitkomst" aria-live="polite" hidden></p>')
     return regels
 
 

@@ -1,8 +1,9 @@
 // Filters in de agenda, samen te gebruiken:
 // - op datum: vandaag, morgen, dit weekend of de komende 7 dagen. Een evenement blijft staan als het op een van die
 //   dagen loopt (data-van t/m data-tot op de kaart). De uitgelichte evenementen bovenaan blijven daarbij staan.
-// - in de regel eronder (tools/agenda.py, meerfilter): een keuzelijst voor plaats (besluit Frans, 2-11-2026) en
-//   voor soort, en aan/uit-knoppen Gratis (ook vrije gift) en Leuk voor kinderen (besluit Frans, 3-11-2026).
+// - op soort met de tegels erboven (tools/agenda.py, soorttegels; nog een keer klikken zet het uit), en op dezelfde
+//   regel als de datum een keuzelijst voor plaats (besluit Frans, 2-11-2026) en aan/uit-knoppen Gratis (ook vrije gift)
+//   en Kinderen (besluit Frans, 3-11-2026, voorstel 4).
 //   Op de kaart: data-plaats, data-soort, data-gratis en data-kinderen; ook de uitgelichte kaarten.
 // ?wanneer=weekend, ?plaats=Wijchen, ?soort=Muziek, ?gratis=1 en ?kinderen=1 in de URL zetten een filter meteen aan;
 // de plaatspagina's linken zo hierheen.
@@ -13,8 +14,11 @@
   var meer = document.querySelector(".agenda-meer");
   var keuzes = meer ? meer.querySelectorAll("select[data-filter]") : [];
   var schakels = meer ? meer.querySelectorAll("button[data-extra]") : [];
-  var wis = meer ? meer.querySelector(".agenda-wis") : null;
+  var tegelNav = document.querySelector(".agenda-tegels");
+  var tegels = tegelNav ? tegelNav.querySelectorAll("button[data-soort]") : [];
   var uitkomst = document.querySelector(".agendafilter__uitkomst");
+  var uitkomstTekst = uitkomst ? uitkomst.querySelector("span") : null;
+  var wis = uitkomst ? uitkomst.querySelector(".agenda-wis") : null;
   var kaarten = document.querySelectorAll(".agenda-maand .eventkaart");
   var uitgelicht = document.querySelectorAll(".agenda-uitgelicht .uitgelicht");
   var stand = { wanneer: "", plaats: "", soort: "", gratis: false, kinderen: false };
@@ -51,7 +55,7 @@
     knoppen.forEach(function (k) { k.setAttribute("aria-pressed", String(k.dataset.wanneer === stand.wanneer)); });
     keuzes.forEach(function (s) { s.value = stand[s.dataset.filter]; s.classList.toggle("is-actief", !!s.value); });
     schakels.forEach(function (k) { k.setAttribute("aria-pressed", String(stand[k.dataset.extra])); });
-    if (wis) wis.hidden = !meerAan && !r;
+    tegels.forEach(function (k) { k.setAttribute("aria-pressed", String(k.dataset.soort === stand.soort)); });
     kaarten.forEach(function (kaart) {
       var past = (!r || (kaart.dataset.van <= tot && kaart.dataset.tot >= van)) && pastMeer(kaart);
       kaart.hidden = !past;
@@ -67,7 +71,7 @@
     var gefilterd = !!r || meerAan;
     if (uitkomst) {
       uitkomst.hidden = !gefilterd;
-      if (gefilterd) uitkomst.textContent = zichtbaar === 0 ? "Geen evenementen gevonden. Probeer een ander filter."
+      if (gefilterd) uitkomstTekst.textContent = zichtbaar === 0 ? "Geen evenementen gevonden. Probeer een ander filter."
         : zichtbaar + (zichtbaar === 1 ? " evenement" : " evenementen") + " gevonden.";
     }
     try {
@@ -85,7 +89,11 @@
     stand = { wanneer: "", plaats: "", soort: "", gratis: false, kinderen: false };
     toepassen();
   });
+  tegels.forEach(function (k) {
+    k.addEventListener("click", function () { stand.soort = stand.soort === k.dataset.soort ? "" : k.dataset.soort; toepassen(); });
+  });
   if (meer) meer.hidden = false;
+  if (tegelNav) tegelNav.hidden = false;
 
   var zoek = new URLSearchParams(location.search);
   var wanneer = zoek.get("wanneer");
@@ -95,5 +103,7 @@
     if (w && Array.prototype.some.call(s.options, function (o) { return o.value === w; })) stand[s.dataset.filter] = w;
   });
   schakels.forEach(function (k) { if (zoek.get(k.dataset.extra) === "1") stand[k.dataset.extra] = true; });
+  var soort = zoek.get("soort");
+  if (soort && Array.prototype.some.call(tegels, function (k) { return k.dataset.soort === soort; })) stand.soort = soort;
   if (stand.wanneer || stand.plaats || stand.soort || stand.gratis || stand.kinderen) toepassen();
 })();

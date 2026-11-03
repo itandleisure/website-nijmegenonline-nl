@@ -655,11 +655,20 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .agendafilter__uitkomst { margin: 0 0 12px; font-size: 0.9rem; color: var(--grijs); }
 .eventkaart[hidden], .agenda-maand[hidden] { display: none; }
 
-/* Agenda: tweede filterregel met plaats, soort, gratis en kinderen (assets/js/agendafilter.js, tools/agenda.py meerfilter) */
-.uitgelicht[hidden], .agenda-uitgelicht[hidden], .agenda-meer[hidden], .agenda-wis[hidden] { display: none; }
-.agenda-meer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: -8px 0 16px; padding-top: 14px; border-top: 1px solid var(--rand); }
-.agenda-keuze { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 0.9rem; font-weight: 600; color: var(--grijs); }
-.agenda-keuze select { font: inherit; font-weight: 600; color: var(--tekst); padding: 8px 32px 8px 14px; border: 1px solid var(--rand); border-radius: 999px; background: var(--wit) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23333' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center; -webkit-appearance: none; appearance: none; cursor: pointer; max-width: 100%; }
+/* Agenda: tegels per soort en één regel met datum, plaats, Gratis en Kinderen (assets/js/agendafilter.js, tools/agenda.py) */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.uitgelicht[hidden], .agenda-uitgelicht[hidden], .agenda-meer[hidden], .agenda-tegels[hidden] { display: none; }
+.agenda-tegels { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; margin: 24px 0 14px; }
+.agenda-tegels button { font: inherit; font-size: 0.88rem; font-weight: 600; line-height: 1.25; color: var(--tekst); background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: 12px 6px 10px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; text-align: center; }
+.agenda-tegels button > span { font-size: 1.6rem; line-height: 1; }
+.agenda-tegels small { font-size: 0.75rem; font-weight: 500; color: var(--grijs); }
+.agenda-tegels button:hover { border-color: var(--groen); }
+.agenda-tegels button[aria-pressed="true"] { border-color: var(--groen); background: #e9f3e1; color: var(--groen); box-shadow: inset 0 0 0 1px var(--groen); }
+.agenda-balk { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin: 0 0 16px; }
+.agenda-balk .agendafilter { margin: 0; }
+.agenda-meer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding-left: 10px; border-left: 1px solid var(--rand); }
+.agenda-keuze { margin: 0; }
+.agenda-keuze select { font: inherit; font-size: 0.9rem; font-weight: 600; color: var(--tekst); padding: 8px 32px 8px 14px; border: 1px solid var(--rand); border-radius: 999px; background: var(--wit) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23333' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center; -webkit-appearance: none; appearance: none; cursor: pointer; max-width: 100%; }
 .agenda-keuze select:hover { border-color: var(--groen); }
 .agenda-keuze select.is-actief { border-color: var(--groen); color: var(--groen); }
 .agenda-schakel { font: inherit; font-size: 0.9rem; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rand); background: var(--wit); color: var(--tekst); cursor: pointer; }
@@ -667,8 +676,17 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .agenda-schakel:hover { border-color: var(--groen); }
 .agenda-schakel[aria-pressed="true"] { background: var(--groen); border-color: var(--groen); color: var(--wit); }
 .agenda-schakel[aria-pressed="true"]::before { content: "✓ "; color: var(--wit); }
-.agenda-wis { font: inherit; font-size: 0.9rem; background: none; border: 0; padding: 0; color: var(--blauw); text-decoration: underline; cursor: pointer; }
-.agendafilter + .agenda-meer { margin-top: -8px; }
+.agenda-wis { font: inherit; font-size: 0.9rem; background: none; border: 0; padding: 0; margin-left: 6px; color: var(--blauw); text-decoration: underline; cursor: pointer; }
+@media (max-width: 700px) {
+  /* Op mobiel: tegels en datumknoppen als regel om opzij te vegen, plaats en Gratis/Kinderen eronder */
+  .agenda-tegels { display: flex; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding: 0 16px; margin: 20px -16px 12px; padding: 0 16px 4px; scrollbar-width: none; }
+  .agenda-tegels::-webkit-scrollbar, .agenda-balk .agendafilter::-webkit-scrollbar { display: none; }
+  .agenda-tegels button { flex: 0 0 96px; scroll-snap-align: start; }
+  .agenda-balk { display: block; }
+  .agenda-balk .agendafilter { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px 10px; padding: 0 16px 2px; scrollbar-width: none; }
+  .agenda-balk .agendafilter button { flex: 0 0 auto; }
+  .agenda-meer { padding-left: 0; border-left: 0; }
+}
 .eventkaart__prijs { color: var(--grijs); font-weight: 500; }
 
 /* Kaartje "Over <bedrijf>" onder evenementen en nieuws (tools/koppeling.py) */
