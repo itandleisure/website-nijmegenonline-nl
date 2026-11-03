@@ -1270,26 +1270,30 @@ function aanbiederKeuze(g) {
     '<div id="adresnoot" class="controle" style="display:none"></div>';
 }
 
-// Bewerkpagina: kies je een bestaande aanbieder met een ander adres, dan komt het bekende adres in de velden.
-// Wat de inzender invulde blijft zichtbaar, met een knop om dat terug te zetten.
+// Bewerkpagina: kies je een bestaande aanbieder met een ander adres, dan blijft het adres van de inzender staan
+// (de inzender weet waar het evenement is; een organisator kan op een andere plek exposeren of spelen, zoals Kunst in het
+// Kerkje in het Vincentiuskerkje in Velp). Het bekende adres staat ernaast, met een knop om het over te nemen.
 var ADRES_JS =
   '(function(){var f=document.getElementById("f"),keuze=document.getElementById("aanbieder"),noot=document.getElementById("adresnoot");' +
   ' if(!keuze||!f.adres)return;' +
   ' var ingevuld={adres:f.adres.value,postcode:f.postcode.value,plaats:f.plaats.value};' +
   ' function sleutel(t){return String(t||"").toLowerCase().replace(/[^a-z0-9]/g,"")}' +
   ' function zetVelden(w){f.adres.value=w.adres;f.postcode.value=w.postcode;f.plaats.value=w.plaats}' +
-  ' window.terugzetten=function(){zetVelden(ingevuld);noot.style.display="none"};' +
+  ' function knop(tekst,actie){var t=document.createElement("button");t.type="button";t.textContent=tekst;t.onclick=actie;return t}' +
   ' function pas(){var optie=keuze.options[keuze.selectedIndex],bekend=optie&&optie.getAttribute("data-adres");' +
   '  zetVelden(ingevuld);noot.style.display="none";if(!bekend)return;' +
   '  var delen=bekend.split(","),straat=delen.shift().trim(),rest=delen.join(",").trim();' +
   '  var m=rest.match(/^(\\d{4}\\s*[A-Za-z]{2}|\\d{5})?\\s*(.*)$/),pc=(m&&m[1]||"").toUpperCase().replace(/^(\\d{4})\\s*/,"$1 "),pl=m&&m[2]||"";' +
+  '  var bekendAdres={adres:straat,postcode:pc,plaats:pl};' +
+  '  if(!ingevuld.adres){zetVelden(bekendAdres);return}' +
   '  if(sleutel(straat)===sleutel(ingevuld.adres))return;' +
-  '  zetVelden({adres:straat,postcode:pc,plaats:pl||ingevuld.plaats});' +
-  '  noot.innerHTML="";var b=document.createElement("b");b.textContent="Adres aangepast";noot.appendChild(b);' +
-  '  noot.appendChild(document.createTextNode("\\nHet bekende adres van "+optie.textContent+" is ingevuld. De inzender vulde in: "+' +
-  '   [ingevuld.adres,ingevuld.postcode,ingevuld.plaats].filter(Boolean).join(", ")+"\\n"));' +
-  '  var t=document.createElement("button");t.type="button";t.textContent="Adres van de inzender terugzetten";t.onclick=window.terugzetten;' +
-  '  noot.appendChild(t);noot.style.display="block"}' +
+  '  noot.innerHTML="";var b=document.createElement("b");b.textContent="Ander adres dan bij "+optie.textContent;noot.appendChild(b);' +
+  '  noot.appendChild(document.createTextNode("\\nDe inzender vulde in: "+[ingevuld.adres,ingevuld.postcode,ingevuld.plaats].filter(Boolean).join(", ")+' +
+  '   "\\nBekend adres van "+optie.textContent+": "+bekend+' +
+  '   "\\nIs het een andere plek, kies dan een andere aanbieder of Nieuwe aanbieder. Het adres van de inzender blijft staan.\\n"));' +
+  '  noot.appendChild(knop("Bekend adres gebruiken",function(){zetVelden(bekendAdres)}));' +
+  '  noot.appendChild(knop("Adres van de inzender",function(){zetVelden(ingevuld)}));' +
+  '  noot.style.display="block"}' +
   ' keuze.addEventListener("change",pas);pas()})();';
 
 // ---------- Bedrijf uit de gids kiezen (besluit Frans, 2-11-2026) ----------

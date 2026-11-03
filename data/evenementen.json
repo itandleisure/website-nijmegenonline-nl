@@ -6678,8 +6678,8 @@
   "titel": "Expositie Marlie Duizings in kunst in het kerkje",
   "start": "2026-11-20T09:00",
   "eind": "2026-12-06T15:00",
-  "locatie": "Kerkje van Persingen",
-  "adres": "Persingense straat 7 Persingen, 5363 VE Velp",
+  "locatie": "Vincentiuskerkje Velp",
+  "adres": "Pastoor Loefsweg 1, 5363 VE Velp",
   "afbeelding": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/expositie-marlie-duizings-in-kunst-in-het-kerkje.webp",
   "alt": "Expositie Marlie Duizings in kunst in het kerkje",
   "bijschrift": "Eigen foto",
@@ -6690,7 +6690,7 @@
    }
   ],
   "uitgelicht": false,
-  "aanbieder": "kerkje-van-persingen",
+  "aanbieder": "vincentiuskerkje-velp",
   "link": "",
   "terugkerend": false,
   "gepubliceerd": "2026-11-02",
@@ -6702,7 +6702,8 @@
   "soort": "Expositie",
   "toegang": "",
   "prijs": "",
-  "kenmerken": []
+  "kenmerken": [],
+  "plaats": "Velp"
  },
  {
   "slug": "parkinson-cafe-nijmegen-3",
