@@ -79,6 +79,8 @@ def main(urls):
         if m:
             anker = '        <section class="gids-sectie faq"' if '<section class="gids-sectie faq"' in s else "      </article>"
             s = s.replace(anker, m.group(0) + anker, 1)
+        # og:image moet absoluut zijn; zonder gidsfoto komt hij van de eerste kaart (relatief pad)
+        s = s.replace('content="%sassets/' % root, 'content="%s/assets/' % iw.SITE)
         (d / "index.html").write_text(s, encoding="utf-8")
         print("Gemaakt:", g["url"])
     # Het overzicht op /thema/: kaartfoto's komen uit de gidsfoto of de eerste pagina met foto

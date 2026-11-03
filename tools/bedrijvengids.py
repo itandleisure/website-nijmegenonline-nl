@@ -2783,7 +2783,9 @@ THEMA = {"massage-nijmegen": "massagesalon", "kappers-in-nijmegen": "kapper", "n
          "cafes-in-nijmegen": "cafe", "restaurants-in-nijmegen-restaurant": "restaurant", "bb-nijmegen": "bed-and-breakfast",
          "campings-in-nijmegen": "camping", "overnachten-in-nijmegen": "hotel", "zaal-huren-in-nijmegen": "zaalverhuur",
          "fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen": "fotograaf", "cursus-nijmegen": "opleiding-en-training",
-         "winkelen-in-nijmegen": "kledingwinkel", "sporten-in-nijmegen": "sportschool", "uitjes-nijmegen": "uitjes"}
+         "winkelen-in-nijmegen": "kledingwinkel", "sporten-in-nijmegen": "sportschool", "uitjes-nijmegen": "uitjes",
+         "film-theater-nijmegen": "podia", "lunch-nijmegen": "lunch", "sauna-wellness-nijmegen": "wellness", "kringloop-nijmegen": "tweedehands-winkel",
+         "uitgaan-nijmegen": "cafe"}
 
 
 def thema_blokken(gebouwd, aantal=9):
