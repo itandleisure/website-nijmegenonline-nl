@@ -64,7 +64,7 @@ def bewaar(vacatures):
 
 
 def looptijd(v):
-    """Dagen online (ook bij verlengen): 90 voor betaalde vacatures (Uitgelicht of bureau), anders 45."""
+    """Dagen online: 90 voor betaalde vacatures (Uitgelicht of bureau, ook bij verlengen), anders 45 (niet te verlengen)."""
     return LOOPTIJD_BETAALD if v.get("uitgelicht") or v.get("bureau") else LOOPTIJD
 
 
@@ -416,7 +416,8 @@ def plaatsen_pagina():
           <li>Vul het formulier in. Kies je bedrijf uit onze bedrijvengids, dan komt de vacature ook op je bedrijfspagina.</li>
           <li>De redactie bekijkt elke vacature voordat hij online gaat. Je krijgt een e-mail zodra hij op de site staat.</li>
           <li>Je vacature staat {dagen} dagen online, of {betaald} dagen bij Uitgelicht of als bureau. Kies je een eerdere sluitdatum, dan gaat hij eerder offline.</li>
-          <li>Een week voor het einde krijg je een e-mail. Daarmee verleng je de vacature (opnieuw {dagen} of {betaald} dagen), of sluit je hem als hij vervuld is. Eerder sluiten kan ook met de link in de mail die je krijgt als de vacature online staat.</li>
+          <li>Een gratis vacature staat maximaal {dagen} dagen online en kun je niet verlengen. Uitgelichte vacatures en vacatures van bureaus kun je verlengen: een week voor het einde krijg je daarvoor een e-mail.</li>
+          <li>Is de vacature eerder vervuld? Sluit hem dan met de link in de mail die je krijgt als de vacature online staat.</li>
           <li>Elke vacature komt met de juiste gegevens op de site, zodat Google hem kan tonen in Google for Jobs.</li>
         </ul>
         <h2>Prijzen</h2>
@@ -457,13 +458,14 @@ def voorwaarden_pagina():
         <h2>3. Hoe lang staat een vacature online?</h2>
         <ul>
           <li>Een vacature staat {dagen} dagen online. Uitgelichte vacatures en vacatures van bureaus staan {betaald} dagen online. Kies je een eerdere sluitdatum, dan gaat hij eerder offline.</li>
-          <li>Een week voor het einde krijg je een e-mail. Daarmee verleng je de vacature met dezelfde looptijd ({dagen} of {betaald} dagen), of sluit je hem.</li>
+          <li>Een gratis vacature (Basis) kun je niet verlengen: hij staat maximaal {dagen} dagen online.</li>
+          <li>Een uitgelichte vacature of een vacature van een bureau kun je verlengen met {betaald} dagen. Een week voor het einde krijg je daarvoor een e-mail.</li>
           <li>Is de vacature eerder vervuld? Sluit hem dan met de link uit de e-mail. Hij gaat dan binnen een uur offline.</li>
           <li>Doe je niets, dan gaat de vacature na de sluitdatum vanzelf offline. De pagina blijft nog even bereikbaar met de melding dat de vacature gesloten is.</li>
         </ul>
         <h2>4. Prijzen en betalen</h2>
         <ul>
-          <li><strong>Basis</strong> is gratis voor werkgevers uit Nijmegen en omgeving, ook bij verlengen.</li>
+          <li><strong>Basis</strong> is gratis voor werkgevers uit Nijmegen en omgeving, voor maximaal {dagen} dagen. Verlengen kan niet.</li>
           <li><strong>Uitgelicht</strong> kost € 49 excl. btw per vacature, voor {betaald} dagen. De vacature staat bovenaan het overzicht en komt in onze nieuwsbrief. Verleng je een uitgelichte vacature, dan kost dat opnieuw € 49.</li>
           <li><strong>Bureaus</strong> betalen € 19 excl. btw per vacature, voor {betaald} dagen, ook in onze nieuwsbrief. Verlengen kost opnieuw € 19.</li>
           <li>Je krijgt de factuur nadat de vacature online staat. Betaal binnen 14 dagen.</li>

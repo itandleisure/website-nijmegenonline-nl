@@ -1173,7 +1173,8 @@ function stuurPlaatsingsmail(type, id, url) {
         (looptijd(g) > VERLENG_DAGEN ? ' Hij komt ook in onze wekelijkse nieuwsbrief.' : '') +
         (/^Uitgelicht/.test(g.pakket) ? ' Je hebt gekozen voor Uitgelicht; de factuur volgt apart.' : '') +
         (g.bureau === 'ja' ? ' Als bureau betaal je € 19 excl. btw per vacature; de factuur volgt apart.' : '') +
-        ' Een week voor het einde krijg je een mail waarmee je hem kunt verlengen. Is de vacature eerder vervuld? Sluit hem dan hier: ' +
+        (betaald(g) ? ' Een week voor het einde krijg je een mail waarmee je hem kunt verlengen.' : '') +
+        ' Is de vacature eerder vervuld? Sluit hem dan hier: ' +
         beheerLink(id)
       : g.vermelding ? 'de wijzigingen voor "' + naam + '" staan nu in de bedrijvengids van NijmegenOnline.'
       : 'je bedrijf "' + naam + '" staat nu in de bedrijvengids van NijmegenOnline.') +
@@ -1579,6 +1580,11 @@ function html_(tekst) {
 var VERLENG_DAGEN = 45;          // Basis
 var VERLENG_DAGEN_BETAALD = 90;  // Uitgelicht en bureaus (besluit Frans, 3-11-2026); gelijk aan tools/vacatures.py
 
+// Alleen betaalde vacatures kun je verlengen; gratis staat maximaal 45 dagen online (besluit Frans, 3-11-2026)
+function betaald(g) {
+  return /^Uitgelicht/.test(g.pakket || '') || g.bureau === 'ja';
+}
+
 function looptijd(g) {
   return /^Uitgelicht/.test(g.pakket || '') || g.bureau === 'ja' ? VERLENG_DAGEN_BETAALD : VERLENG_DAGEN;
 }
@@ -1635,10 +1641,12 @@ function beheerPagina(id, t) {
     'button.sluit{background:#b03a2e}button:disabled{opacity:.5}#melding{font-weight:bold}';
   var html = '<!doctype html><html><head><meta charset="utf-8"><style>' + css + '</style></head><body>' +
     '<h1>' + html_(naam) + '</h1>' +
-    '<p>Wil je deze vacature op NijmegenOnline verlengen of sluiten?</p>' +
-    '<p><b>Verlengen</b>: de vacature blijft nog ' + dagen + ' dagen online.<br>' +
-    '<b>Sluiten</b>: de vacature is vervuld en gaat binnen een uur offline.</p>' +
-    '<div class="knoppen"><button onclick="kies(\'verlengen\')">Verleng ' + dagen + ' dagen</button>' +
+    (betaald(g)
+      ? '<p>Wil je deze vacature op NijmegenOnline verlengen of sluiten?</p>' +
+        '<p><b>Verlengen</b>: de vacature blijft nog ' + dagen + ' dagen online.<br>' +
+        '<b>Sluiten</b>: de vacature is vervuld en gaat binnen een uur offline.</p>'
+      : '<p>Is de vacature vervuld? Sluit hem dan hier. Hij gaat binnen een uur offline.</p>') +
+    '<div class="knoppen">' + (betaald(g) ? '<button onclick="kies(\'verlengen\')">Verleng ' + dagen + ' dagen</button>' : '') +
     '<button class="sluit" onclick="kies(\'sluiten\')">Sluit de vacature</button></div><p id="melding"></p>' +
     '<script>var S=' + js_({ id: id, t: t }) + ';' +
     'function kies(a){document.querySelectorAll("button").forEach(function(b){b.disabled=true});' +
@@ -1656,6 +1664,7 @@ function vacatureKeuze(id, t, keuze) {
   var rij = vacatureRij(id);
   if (!rij) throw new Error('Deze vacature staat niet meer in ons systeem.');
   if (rij.g.status !== 'Gepubliceerd') throw new Error('Deze vacature staat nog niet online.');
+  if (keuze === 'verlengen' && !betaald(rij.g)) throw new Error('Een gratis vacature kun je niet verlengen.');
   zetWijziging(rij.nr, keuze + ' ' + Utilities.formatDate(new Date(), 'Europe/Amsterdam', 'yyyy-MM-dd HH:mm'));
   try {
     MailApp.sendEmail(ONTVANGER, 'Vacature ' + (keuze === 'verlengen' ? 'verlengd' : 'gesloten') + ': ' + rij.g.functie,
@@ -1687,9 +1696,13 @@ function stuurVerlengmail(id, sluit, url) {
     : 'binnenkort';
   var tekst = 'Beste ' + (g.naam || 'werkgever') + ',\n\nJe vacature "' + g.functie + '" staat nog tot ' + datum + ' op NijmegenOnline.' +
     (url ? '\n\nBekijk hem hier: ' + url : '') +
-    '\n\nZoek je nog mensen? Verleng de vacature dan met ' + looptijd(g) + ' dagen. Is hij vervuld? Sluit hem dan, zodat er geen sollicitaties meer komen. ' +
-    'Allebei kan hier: ' + beheerLink(id) +
-    (/^Uitgelicht/.test(g.pakket) || g.bureau === 'ja' ? '\n\nVerleng je, dan sturen we een nieuwe factuur, net als bij de eerste plaatsing.' : '') +
+    (betaald(g)
+      ? '\n\nZoek je nog mensen? Verleng de vacature dan met ' + looptijd(g) + ' dagen. Is hij vervuld? Sluit hem dan, zodat er geen sollicitaties meer komen. ' +
+        'Allebei kan hier: ' + beheerLink(id) +
+        '\n\nVerleng je, dan sturen we een nieuwe factuur, net als bij de eerste plaatsing.'
+      : '\n\nEen gratis vacature staat maximaal ' + VERLENG_DAGEN + ' dagen online en kun je niet verlengen. Zoek je daarna nog mensen? ' +
+        'Kies dan voor Uitgelicht: € 49 excl. btw voor ' + VERLENG_DAGEN_BETAALD + ' dagen, bovenaan het overzicht en in onze nieuwsbrief. ' +
+        'Beantwoord deze mail, dan regelen we het. Is de vacature al vervuld? Sluit hem dan hier: ' + beheerLink(id)) +
     '\n\nDoe je niets, dan gaat de vacature op ' + datum + ' vanzelf offline.\n\nMet vriendelijke groet,\nRedactie NijmegenOnline';
   mailInzender({
     to: g.email,

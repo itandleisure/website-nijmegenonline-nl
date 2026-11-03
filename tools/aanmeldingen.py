@@ -239,7 +239,10 @@ def vacature_beheer(beheer, vacatures, nieuw, terugmelden, vandaag=None):
             continue
         keuze = b.get("wijziging") or ""
         if keuze and keuze != v.get("wijziging"):
-            if keuze.startswith("verlengen"):
+            if keuze.startswith("verlengen") and vacaturebank.looptijd(v) == vacaturebank.LOOPTIJD:
+                # Gratis vacatures zijn niet te verlengen (besluit Frans, 3-11-2026); Code.gs biedt het ook niet aan
+                nieuw.append("vacature %s: verlengen genegeerd (gratis)" % v["slug"])
+            elif keuze.startswith("verlengen"):
                 basis = max(datetime.date.fromisoformat(v.get("sluit") or vandaag.isoformat()), vandaag)
                 v["sluit"] = (basis + datetime.timedelta(days=vacaturebank.looptijd(v))).isoformat()
                 v.pop("ingevuld", None)
