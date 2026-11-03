@@ -17,6 +17,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import SITE, VOET, esc, kop, schoon  # noqa: E402
+import evenement_indeling  # noqa: E402
 
 # /exec-URL van de Google Apps Script-web-app (tools/google-formulier/Code.gs); leeg = mailknop
 GOOGLE_FORM_URL = "https://script.google.com/macros/s/AKfycbyELOZGBRvXanmgy7LSaQD4G5WnAZbACtAWVvcKoslJHT0-NxunjLngM7fJJOrxQyIM/exec"
@@ -124,7 +125,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=14" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=15" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -179,6 +180,20 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
             regels += ['            <label><input type="radio" name="%s" value="%s"%s> %s</label>' % (veld, esc(w), " checked" if i == 0 else "", esc(o))
                        for i, (w, o) in enumerate(opties)]
             regels.append("          </fieldset>")
+        elif soort == "radio":
+            # Eén keuze (radio) zonder vooraf gekozen waarde; opties = teksten, of (waarde, tekst)
+            regels.append('          <fieldset class="formulier__keuzes"><legend>%s%s</legend>' % (esc(label), ster))
+            regels += ['            <label><input type="radio" name="%s" value="%s"%s> %s</label>' % (veld, esc(w), req, esc(o))
+                       for w, o in (x if isinstance(x, tuple) else (x, x) for x in opties)]
+            regels.append("          </fieldset>")
+        elif soort == "lijst":
+            regels.append('          <label for="%s">%s%s</label>\n          <select id="%s" name="%s"%s><option value="">Kies</option>%s</select>'
+                          % (id_, esc(label), ster, id_, veld, req, "".join('<option>%s</option>' % esc(o) for o in opties)))
+        elif soort == "prijs":
+            regels.append('          <label for="%s">%s%s</label>\n          <input id="%s" name="%s" type="text" inputmode="decimal" autocomplete="off" maxlength="10"%s>'
+                          % (id_, esc(label), ster, id_, veld, req))
+            if opties:
+                regels.append('          <p class="formulier__hint">%s</p>' % esc(opties))
         elif soort == "bedrijf":
             # Zoekveld "Zoek je bedrijf" (assets/js/formulier.js); opties = {veld: kolom} om lege velden in te vullen
             regels += ['          <div class="bedrijfzoeker" data-bedrijfzoeker data-vullen="%s">' % esc(json.dumps(opties or {})),
@@ -351,6 +366,11 @@ def evenement_aanmelden():
         (("datum", "starttijd"), ("Begindatum", "Begintijd"), "datumtijd", True, None),
         (("einddatum", "eindtijd"), ("Einddatum", "Eindtijd"), "datumtijd", True, None),
         ("omschrijving", "Omschrijving van het evenement", "tekst", True, None),
+        ("kop", "Soort en toegang", "kop", False, "Hiermee vinden bezoekers je evenement via de filters in de agenda."),
+        ("soort", "Soort evenement", "lijst", True, evenement_indeling.SOORTEN),
+        ("toegang", "Toegang", "radio", True, [("gratis", "Gratis"), ("vrije gift", "Vrije gift"), ("betaald", "Betaald")]),
+        ("prijs", "Prijs vanaf (in euro per persoon)", "prijs", False, "Alleen bij betaald: de laagste prijs voor een volwassene, bijvoorbeeld 12,50."),
+        ("kenmerken", "Wat geldt er nog meer?", "keuzes", False, list(evenement_indeling.KENMERKEN.values())),
         ("kop", "Locatie", "kop", False, None),
         ("locatie", "Naam van de locatie", "text", True, None),
         ("adres", "Straat en huisnummer", "text", True, None),

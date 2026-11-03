@@ -655,6 +655,12 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .agenda-plaatsen { margin-top: -8px; }
 .agenda-plaatsen button span { opacity: 0.7; font-weight: 500; margin-left: 2px; }
 
+/* Agenda: filter op soort, gratis en kinderen (assets/js/agendafilter.js) */
+.agenda-soorten[hidden], .agenda-extra[hidden] { display: none; }
+.agenda-soorten, .agenda-extra { margin-top: -8px; }
+.agenda-soorten button span, .agenda-extra button span { opacity: 0.7; font-weight: 500; margin-left: 2px; }
+.eventkaart__prijs { color: var(--grijs); font-weight: 500; }
+
 /* Kaartje "Over <bedrijf>" onder evenementen en nieuws (tools/koppeling.py) */
 .over-bedrijf { margin: 32px 0; }
 .over-bedrijf h2 { margin: 0 0 12px; }

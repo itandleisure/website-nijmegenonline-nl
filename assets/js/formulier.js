@@ -40,7 +40,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     melding.classList.toggle("formulier__melding--fout", !!fout);
   }
   function label(v) {
-    var l = v.type === "checkbox" ? v.closest("fieldset").querySelector("legend") : form.querySelector('label[for="' + v.id + '"]');
+    var l = v.type === "checkbox" || v.type === "radio" ? v.closest("fieldset").querySelector("legend") : form.querySelector('label[for="' + v.id + '"]');
     return (l ? l.textContent : v.name).replace(/\s*\*\s*$/, "").replace(/\s*\(.*\)$/, "");
   }
   function mailknop() {
