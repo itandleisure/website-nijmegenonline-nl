@@ -7,7 +7,8 @@ Bouwt uit data/vacatures.json:
 - /voorwaarden-vacatures/      de voorwaarden
 
 Afspraken:
-- Een vacature staat standaard 45 dagen online (sluit = geplaatst + 45 dagen). Geeft de werkgever een eerdere
+- Een vacature staat standaard 45 dagen online (sluit = geplaatst + 45 dagen); Uitgelicht en vacatures van bureaus
+  (betaald) 90 dagen (besluit Frans, 3-11-2026). Geeft de werkgever een eerdere
   sluitdatum op, dan geldt die.
 - Basis is gratis voor lokale werkgevers; Uitgelicht kost € 49 (factuur achteraf). Uitzend-, wervings- en
   selectiebureaus ("bureau": true) betalen € 19 per vacature en krijgen het label "Via een bureau".
@@ -42,6 +43,7 @@ import paginas  # noqa: E402
 
 DATA = ROOT / "data" / "vacatures.json"
 LOOPTIJD = 45        # dagen online (besluit Frans, 3-11-2026)
+LOOPTIJD_BETAALD = 90   # Uitgelicht en bureaus: betaald, dus langer online (besluit Frans, 3-11-2026)
 BEWAAR_DAGEN = 90    # gesloten pagina blijft zo lang staan, daarna een 301
 SOORTEN = ["Horeca", "Zorg en welzijn", "Winkel en verkoop", "Techniek en bouw", "Kantoor en administratie",
            "Onderwijs en kinderopvang", "ICT en marketing", "Bijbaan of stage", "Overig"]
@@ -61,9 +63,14 @@ def bewaar(vacatures):
     DATA.write_text(json.dumps(vacatures, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
-def sluitdatum(geplaatst, gekozen=""):
-    """45 dagen na plaatsing, of eerder als de werkgever dat koos."""
-    standaard = datetime.date.fromisoformat(geplaatst) + datetime.timedelta(days=LOOPTIJD)
+def looptijd(v):
+    """Dagen online (ook bij verlengen): 90 voor betaalde vacatures (Uitgelicht of bureau), anders 45."""
+    return LOOPTIJD_BETAALD if v.get("uitgelicht") or v.get("bureau") else LOOPTIJD
+
+
+def sluitdatum(geplaatst, gekozen="", dagen=LOOPTIJD):
+    """dagen (45 of 90) na plaatsing, of eerder als de werkgever dat koos."""
+    standaard = datetime.date.fromisoformat(geplaatst) + datetime.timedelta(days=dagen)
     try:
         eigen = datetime.date.fromisoformat((gekozen or "")[:10])
     except ValueError:
@@ -283,8 +290,8 @@ def overzicht(open_, vandaag):
         inhoud.append('        <p>Er staan op dit moment geen open vacatures. Kijk binnenkort nog eens.</p>')
     inhoud.append('        <h2>Zelf een vacature plaatsen?</h2>\n'
                   '        <p>Ben je een werkgever in Nijmegen of omgeving? Plaats je vacature gratis: hij staat %d dagen online, op je '
-                  'bedrijfspagina in de bedrijvengids en in Google for Jobs. Wil je meer opvallen, kies dan Uitgelicht. '
-                  '<a href="%svacature-plaatsen/">Zo werkt het</a>.</p>' % (LOOPTIJD, root))
+                  'bedrijfspagina in de bedrijvengids en in Google for Jobs. Wil je meer opvallen, kies dan Uitgelicht: %d dagen '
+                  'online, bovenaan en in onze nieuwsbrief. <a href="%svacature-plaatsen/">Zo werkt het</a>.</p>' % (LOOPTIJD, LOOPTIJD_BETAALD, root))
     inhoud.append('        <script src="%sassets/js/vacatures.js?v=2" defer></script>' % root)
     lijst = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
         {"@type": "ListItem", "position": n + 1, "url": "%s/vacatures/%s/" % (SITE, v["slug"])} for n, v in enumerate(open_[:50])]}
@@ -367,7 +374,7 @@ def plaatsen_pagina():
         ("werkgever", "Naam van het bedrijf", "text", True, None),
         ("site", "Website", "url", True, None),
         ("bureau", "Ben je een uitzend-, wervings- of selectiebureau?", "radio", True,
-         [("nee", "Nee, we zoeken iemand voor ons eigen bedrijf"), ("ja", "Ja, we werven voor een opdrachtgever (€ 19 per vacature)")]),
+         [("nee", "Nee, we zoeken iemand voor ons eigen bedrijf"), ("ja", "Ja, we werven voor een opdrachtgever (€ 19 per vacature, %d dagen online)" % LOOPTIJD_BETAALD)]),
         ("foto", "Logo (optioneel)", "bestand", False, "JPG, PNG of WebP."),
         ("kop", "De functie", "kop", False, None),
         ("functie", "Functietitel", "text", True, None),
@@ -389,10 +396,10 @@ def plaatsen_pagina():
         ("omschrijving", "Vacaturetekst", "tekst", True, None),
         ("kop", "Solliciteren", "kop", False, None),
         ("solliciteren", "Link naar de sollicitatiepagina of e-mailadres voor sollicitaties", "text", True, None),
-        ("sluitdatum", "Sluitdatum (optioneel, hooguit %d dagen vooruit)" % LOOPTIJD, "date", False, None),
+        ("sluitdatum", "Sluitdatum (optioneel; zonder sluitdatum %d dagen online, %d bij Uitgelicht of als bureau)" % (LOOPTIJD, LOOPTIJD_BETAALD), "date", False, None),
         ("kop", "Hoe wil je de vacature plaatsen?", "kop", False, None),
         ("pakket", "Pakket", "keuze", True, [("Basis", "Basis: gratis, %d dagen online" % LOOPTIJD),
-                                             ("Uitgelicht", "Uitgelicht: € 49 excl. btw, bovenaan met label (factuur achteraf)")]),
+                                             ("Uitgelicht", "Uitgelicht: € 49 excl. btw, %d dagen online, bovenaan met label en in de nieuwsbrief (factuur achteraf)" % LOOPTIJD_BETAALD)]),
         ("factuur", "Factuurgegevens (alleen bij Uitgelicht of als bureau)", "tekst", False, None),
         ("kop", "Jouw gegevens", "kop", False, "Deze gegevens komen niet op de website."),
         ("naam", "Je naam", "text", True, None),
@@ -408,20 +415,20 @@ def plaatsen_pagina():
         <ul>
           <li>Vul het formulier in. Kies je bedrijf uit onze bedrijvengids, dan komt de vacature ook op je bedrijfspagina.</li>
           <li>De redactie bekijkt elke vacature voordat hij online gaat. Je krijgt een e-mail zodra hij op de site staat.</li>
-          <li>Je vacature staat {dagen} dagen online, of korter als je een eerdere sluitdatum kiest. Daarna gaat hij vanzelf offline.</li>
-          <li>Een week voor het einde krijg je een e-mail. Daarmee verleng je de vacature met {dagen} dagen, of sluit je hem als hij vervuld is. Eerder sluiten kan ook met de link in de mail die je krijgt als de vacature online staat.</li>
+          <li>Je vacature staat {dagen} dagen online, of {betaald} dagen bij Uitgelicht of als bureau. Kies je een eerdere sluitdatum, dan gaat hij eerder offline.</li>
+          <li>Een week voor het einde krijg je een e-mail. Daarmee verleng je de vacature (opnieuw {dagen} of {betaald} dagen), of sluit je hem als hij vervuld is. Eerder sluiten kan ook met de link in de mail die je krijgt als de vacature online staat.</li>
           <li>Elke vacature komt met de juiste gegevens op de site, zodat Google hem kan tonen in Google for Jobs.</li>
         </ul>
         <h2>Prijzen</h2>
         <ul>
           <li><strong>Basis</strong>: gratis voor werkgevers uit Nijmegen en omgeving.</li>
-          <li><strong>Uitgelicht</strong>: € 49 excl. btw per vacature. Bovenaan het overzicht, met een label.</li>
-          <li><strong>Uitzend-, wervings- en selectiebureaus</strong>: € 19 excl. btw per vacature. We vermelden dat de vacature via een bureau gaat.</li>
+          <li><strong>Uitgelicht</strong>: € 49 excl. btw per vacature. {betaald} dagen online, bovenaan het overzicht met een label, en elke week in onze nieuwsbrief.</li>
+          <li><strong>Uitzend-, wervings- en selectiebureaus</strong>: € 19 excl. btw per vacature, {betaald} dagen online en in onze nieuwsbrief. We vermelden dat de vacature via een bureau gaat.</li>
           <li>Heb je een pakket in de bedrijvengids? Dan zitten er uitgelichte vacatures bij: 2 per jaar bij Uitgelicht, 6 bij Partner en onbeperkt bij Hoofdpartner.</li>
         </ul>
         <p>We plaatsen geen vacatures waarvoor sollicitanten moeten betalen, geen reclame die op een vacature lijkt en geen vacatures met discriminerende eisen. Het werk moet in Nijmegen of omgeving zijn (tot en met Kleve). Lees ook de <a href="../voorwaarden-vacatures/">voorwaarden voor vacatures</a>.</p>
         <h2>Je vacature</h2>
-{formulier}""".format(dagen=LOOPTIJD, formulier=paginas.formulier("vacature", "Vacature aangemeld via NijmegenOnline", velden, "Vacature versturen",
+{formulier}""".format(dagen=LOOPTIJD, betaald=LOOPTIJD_BETAALD, formulier=paginas.formulier("vacature", "Vacature aangemeld via NijmegenOnline", velden, "Vacature versturen",
         "Bedankt! De redactie heeft je vacature ontvangen en bekijkt hem zo snel mogelijk. Je krijgt een e-mail zodra hij online staat, "
         "of als we hem niet kunnen plaatsen."))
     return paginas.pagina("Vacature plaatsen", "Plaats je vacature gratis op NijmegenOnline: voor werkgevers in Nijmegen en omgeving, ook in Google for Jobs.",
@@ -449,16 +456,16 @@ def voorwaarden_pagina():
         </ul>
         <h2>3. Hoe lang staat een vacature online?</h2>
         <ul>
-          <li>Een vacature staat {dagen} dagen online, of korter als je een eerdere sluitdatum kiest.</li>
-          <li>Een week voor het einde krijg je een e-mail. Daarmee verleng je de vacature met {dagen} dagen, of sluit je hem.</li>
+          <li>Een vacature staat {dagen} dagen online. Uitgelichte vacatures en vacatures van bureaus staan {betaald} dagen online. Kies je een eerdere sluitdatum, dan gaat hij eerder offline.</li>
+          <li>Een week voor het einde krijg je een e-mail. Daarmee verleng je de vacature met dezelfde looptijd ({dagen} of {betaald} dagen), of sluit je hem.</li>
           <li>Is de vacature eerder vervuld? Sluit hem dan met de link uit de e-mail. Hij gaat dan binnen een uur offline.</li>
           <li>Doe je niets, dan gaat de vacature na de sluitdatum vanzelf offline. De pagina blijft nog even bereikbaar met de melding dat de vacature gesloten is.</li>
         </ul>
         <h2>4. Prijzen en betalen</h2>
         <ul>
           <li><strong>Basis</strong> is gratis voor werkgevers uit Nijmegen en omgeving, ook bij verlengen.</li>
-          <li><strong>Uitgelicht</strong> kost € 49 excl. btw per vacature, voor {dagen} dagen. Verleng je een uitgelichte vacature, dan kost dat opnieuw € 49.</li>
-          <li><strong>Bureaus</strong> betalen € 19 excl. btw per vacature, voor {dagen} dagen. Ook verlengen kost € 19.</li>
+          <li><strong>Uitgelicht</strong> kost € 49 excl. btw per vacature, voor {betaald} dagen. De vacature staat bovenaan het overzicht en komt in onze nieuwsbrief. Verleng je een uitgelichte vacature, dan kost dat opnieuw € 49.</li>
+          <li><strong>Bureaus</strong> betalen € 19 excl. btw per vacature, voor {betaald} dagen, ook in onze nieuwsbrief. Verlengen kost opnieuw € 19.</li>
           <li>Je krijgt de factuur nadat de vacature online staat. Betaal binnen 14 dagen.</li>
           <li>Heb je een pakket in de bedrijvengids? Dan zitten er uitgelichte vacatures bij: 2 per jaar bij Uitgelicht, 6 bij Partner en onbeperkt bij Hoofdpartner.</li>
           <li>Haalt de redactie een vacature offline omdat hij niet aan deze voorwaarden voldoet, dan krijg je geen geld terug.</li>
@@ -480,7 +487,7 @@ def voorwaarden_pagina():
         <p>Je naam, e-mailadres en telefoonnummer gebruiken we alleen om contact over de vacature op te nemen. Ze komen niet op de website. We bewaren je aanmelding drie maanden na het insturen. Lees meer in onze <a href="../privacy-policy/">privacyverklaring</a>.</p>
         <h2>8. Vragen</h2>
         <p>Heb je een vraag, of zie je een vacature die niet klopt? Mail naar <a href="mailto:redactie@nijmegenonline.nl">redactie@nijmegenonline.nl</a> of <a href="../kom-in-contact/">neem contact op</a>.</p>
-        <p><a class="knop" href="../vacature-plaatsen/">Vacature plaatsen</a></p>""".format(dagen=LOOPTIJD)
+        <p><a class="knop" href="../vacature-plaatsen/">Vacature plaatsen</a></p>""".format(dagen=LOOPTIJD, betaald=LOOPTIJD_BETAALD)
     return paginas.pagina("Voorwaarden voor vacatures", "De voorwaarden voor het plaatsen van een vacature op NijmegenOnline: wie kan plaatsen, wat we niet plaatsen, looptijd en prijzen.",
                           "voorwaarden-vacatures", '<a href="../vacatures/">Vacatures</a> › Voorwaarden', inhoud)
 
