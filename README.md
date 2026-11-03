@@ -248,6 +248,7 @@ Meteen publiceren in plaats van op het hele uur: Actions > Aanmeldingen publicer
 - Werkgevers plaatsen gratis een vacature via `/vacature-plaatsen/` (formulier `vacature` in `tools/google-formulier/Code.gs`, tab Vacatures in de Sheet). Beoordelen gaat net als bij evenementen en bedrijven.
 - Een vacature staat standaard 45 dagen online (`LOOPTIJD` in `tools/vacatures.py`), of korter als de werkgever een eerdere sluitdatum kiest. Daarna krijgt de pagina noindex en "Deze vacature is gesloten"; na nog 90 dagen volgt een 301 naar `/vacatures/`.
 - Uitzend-, wervings- en selectiebureaus geven dat aan met een ja/nee-vraag; die plaatsing kost €19. Uitgelicht kost €49. Er is geen startactie.
+- Betaalde vacatures (Uitgelicht en bureaus) staan 90 dagen online in plaats van 45, ook bij verlengen, en komen elke week in de nieuwsbrief via de feed `/nieuwsbrief/vacatures.xml` (besluit Frans, 3-11-2026). Die feed moet in MailerLite als blok aan de RSS-campagne worden toegevoegd.
 - Open vacatures krijgen JobPosting-gegevens voor Google for Jobs. Een vacature staat ook op de bedrijfspagina van de werkgever in de bedrijvengids.
 - Data: `data/vacatures.json`. Bouwen: `python3 tools/vacatures.py` (draait mee in de workflows agenda en aanmeldingen). De eigen NijmegenOnline-vacatures (`eigen_pagina`) houden hun eigen pagina.
 - Werkgebied: Nijmegen en omgeving, plus Kleve. Arnhem valt erbuiten.

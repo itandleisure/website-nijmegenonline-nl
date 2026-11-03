@@ -70,6 +70,11 @@ def bewaar_foto(foto, naam):
     """Foto (base64) als webp van maximaal 1200 px breed; geeft het pad terug."""
     from PIL import Image
     im = Image.open(io.BytesIO(base64.b64decode(foto["data"])))
+    if im.mode in ("RGBA", "LA", "P"):   # doorzichtig (logo's): op wit, anders wordt de achtergrond zwart
+        im = im.convert("RGBA")
+        wit = Image.new("RGB", im.size, (255, 255, 255))
+        wit.paste(im, mask=im.split()[-1])
+        im = wit
     im = im.convert("RGB")
     if im.width > 1200:
         im = im.resize((1200, round(im.height * 1200 / im.width)))
@@ -189,6 +194,7 @@ def vacature(a, bestaand):
         site = "https://" + site
     logo = bewaar_foto(a["foto"], "vacature-" + s) if a.get("foto") else ""
     plaats = (a.get("plaats") or "").strip()
+    betaald = (a.get("bureau") or "").strip().lower() == "ja" or (a.get("pakket") or "").strip().lower().startswith("uitgelicht")
     return {
         "slug": s,
         "functie": functie,
@@ -212,7 +218,8 @@ def vacature(a, bestaand):
         "tekst": tekst,
         "solliciteren": (a.get("solliciteren") or "").strip(),
         "geplaatst": vandaag,
-        "sluit": vacaturebank.sluitdatum(vandaag, str(a.get("sluitdatum") or "")[:10]),
+        "sluit": vacaturebank.sluitdatum(vandaag, str(a.get("sluitdatum") or "")[:10],
+                                       vacaturebank.LOOPTIJD_BETAALD if betaald else vacaturebank.LOOPTIJD),
         "uitgelicht": (a.get("pakket") or "").strip().lower().startswith("uitgelicht"),
         "aanmelding": a["id"],
     }
@@ -234,7 +241,7 @@ def vacature_beheer(beheer, vacatures, nieuw, terugmelden, vandaag=None):
         if keuze and keuze != v.get("wijziging"):
             if keuze.startswith("verlengen"):
                 basis = max(datetime.date.fromisoformat(v.get("sluit") or vandaag.isoformat()), vandaag)
-                v["sluit"] = (basis + datetime.timedelta(days=vacaturebank.LOOPTIJD)).isoformat()
+                v["sluit"] = (basis + datetime.timedelta(days=vacaturebank.looptijd(v))).isoformat()
                 v.pop("ingevuld", None)
                 v.pop("herinnerd", None)
                 nieuw.append("vacature %s verlengd tot %s" % (v["slug"], v["sluit"]))
