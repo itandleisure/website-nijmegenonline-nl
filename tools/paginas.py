@@ -195,8 +195,15 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
             if opties:
                 regels.append('          <p class="formulier__hint">%s</p>' % esc(opties))
         elif soort == "bedrijf":
-            # Zoekveld "Zoek je bedrijf" (assets/js/formulier.js); opties = {veld: kolom} om lege velden in te vullen
-            regels += ['          <div class="bedrijfzoeker" data-bedrijfzoeker data-vullen="%s">' % esc(json.dumps(opties or {})),
+            # Zoekveld "Zoek je bedrijf" (assets/js/formulier.js); opties = {veld: kolom} om lege velden in te vullen,
+            # met eventueel "_hint" als eigen uitleg onder het veld
+            opties = dict(opties or {})
+            # "_hint" is HTML (de standaardtekst bevat een link), dus niet escapen
+            hint = opties.pop("_hint", 'Staat je bedrijf of organisatie in onze bedrijvengids? Kies het hier, dan komt '
+                                       'je evenement ook op je bedrijfspagina. Staat het er nog niet in? <a href="../bedrijf-aanmelden/" target="_blank" '
+                                       'rel="noopener">Meld het dan eerst gratis aan</a> en kies het daarna hier. Ben je geen bedrijf of organisatie, '
+                                       'laat dit veld dan leeg.')
+            regels += ['          <div class="bedrijfzoeker" data-bedrijfzoeker data-vullen="%s">' % esc(json.dumps(opties)),
                        '            <label for="%s">%s</label>' % (id_, esc(label)),
                        '            <div class="bedrijfzoeker__zoek"><input id="%s" type="search" autocomplete="off" role="combobox" '
                        'aria-autocomplete="list" aria-expanded="false" aria-controls="%s-lijst" placeholder="Typ de naam, bijvoorbeeld Doornroosje"></div>'
@@ -204,10 +211,7 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
                        '            <ul class="bedrijfzoeker__lijst" id="%s-lijst" role="listbox" hidden></ul>' % id_,
                        '            <div class="bedrijfzoeker__gekozen" hidden><span>Gekozen: <strong></strong> '
                        '<span class="bedrijfzoeker__regel"></span></span><button type="button" class="link">Ander bedrijf kiezen</button></div>',
-                       '            <p class="formulier__hint">Staat je bedrijf of organisatie in onze bedrijvengids? Kies het hier, dan komt '
-                       'je evenement ook op je bedrijfspagina. Staat het er nog niet in? <a href="%sbedrijf-aanmelden/" target="_blank" '
-                       'rel="noopener">Meld het dan eerst gratis aan</a> en kies het daarna hier. Ben je geen bedrijf of organisatie, '
-                       'laat dit veld dan leeg.</p>' % "../",
+                       '            <p class="formulier__hint">%s</p>' % hint,
                        '            <input type="hidden" name="%s" value="">' % veld,
                        '          </div>']
         elif soort == "fotobron":
@@ -654,7 +658,7 @@ def main(bron):
     schrijf("adverteren-bij-nijmegenonline", adverteren(pag["adverteren-bij-nijmegenonline"][2]))
     titel, tekst, meta = pag["wat-kost-adverteren-bij-anderen"]
     schrijf("wat-kost-adverteren-bij-anderen", wat_kost(titel, tekst, meta, fotos))
-    schrijf("vacatures", vacatures(pag["vacatures"][2]))
+    # /vacatures/ zelf bouwt tools/vacatures.py (vacaturebank, besluit Frans 3-11-2026)
     for slug, functie, open_, _ in VACATURES:
         if slug in EIGEN_TEKST:
             continue
