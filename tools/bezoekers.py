@@ -39,9 +39,8 @@ def eigen_pagina(pad):
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S)
     titel = html.unescape(re.sub(r"<[^>]+>", "", h1.group(1))).strip() if h1 else meta(s, "og:title")
     foto = meta(s, "og:image")
-    if foto.startswith(SITE + "/assets/uploads/"):
-        foto = foto[len(SITE) + 1:]   # eigen foto: relatief, zodat de testsite hem ook toont
-    elif "/assets/img/logo" in foto:
+    foto = re.sub(r"^https?://(www\.)?nijmegenonline\.nl/(?=assets/)", "", foto)   # eigen foto: relatief, zodat de testsite hem ook toont
+    if foto.startswith("http") or "/assets/img/logo" in foto:   # foto van elders of het logo: liever een foto hieronder
         foto = ""
     if not foto:   # geen eigen og:image (bijv. een categorie in de bedrijvengids): de eerste eigen foto op de pagina
         m = re.search(r'<img[^>]+src="(?:\.\./)*(assets/uploads/[^"]+)"', s)
