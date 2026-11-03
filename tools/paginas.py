@@ -54,7 +54,8 @@ KENMERKEN = [
     ("Bovenaan je categorie met het label Uitgelicht (maximaal 3 per categorie)", ["nee", "ja", "ja", "ja"]),
     ("Actieknop (reserveren, offerte, bellen) en een aanbieding", ["nee", "ja", "ja", "ja"]),
     ("Uitgelicht onder onze blogberichten over jouw onderwerp", ["nee", "ja", "ja", "ja"]),
-    ("Je evenementen uitgelicht in de agenda", ["nee", "ja", "ja", "ja"]),
+    ("Je evenementen uitgelicht in de agenda en op Facebook en Instagram", ["nee", "ja", "ja", "ja"]),
+    ("Eigen post over je bedrijf op Facebook en Instagram", ["nee", "nee", "4&times; per jaar", "12&times; per jaar"]),
     ("Nieuwsbrief", ["nee", "1&times; per jaar in Nieuw in de gids", "2&times; een eigen tegel", "logo in elke editie"]),
     ("Banner in de partnerbalk", ["nee", "bij blogs over jouw onderwerp", "op de hele site", "op de hele site, vaker in beeld"]),
     ("Artikel over je bedrijf (gemarkeerd als partnerbijdrage)", ["nee", "nee", "1 per jaar", "3 per jaar"]),
@@ -63,7 +64,8 @@ KENMERKEN = [
 ]
 # Losse mogelijkheden: wat, prijs excl. btw
 LOSSE = [
-    ("Evenement uitgelicht in de agenda en op de homepage, 2 weken voor de datum", "&euro; 39"),
+    ("Evenement uitgelicht in de agenda en op de homepage, 2 weken voor de datum, met een post op Facebook en Instagram "
+     "en een Instagram-story op de dag zelf", "&euro; 39"),
     ("Artikel over je bedrijf of evenement, door ons geschreven", "&euro; 249"),
     ("Tegel in de nieuwsbrief, per editie", "&euro; 49"),
     ("Vacature uitgelicht, 30 dagen", "&euro; 49"),
