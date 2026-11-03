@@ -550,7 +550,7 @@ HOME_GIDSEN = ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/trouwen-in-
                "/thema/bb-nijmegen/", "/jaarlijkse-evenementen/nijmeegse-vierdaagse/", "/thema/studeren-in-nijmegen/",
                "/thema/zaal-huren-in-nijmegen/", "/thema/cafes-in-nijmegen/"]
 GIDS_GROEPEN = [
-    ("Zien en doen", ["/thema/centrum-nijmegen/", "/thema/natuur-nijmegen/", "/thema/parkeren-nijmegen/"]),
+    ("Zien en doen", ["/thema/centrum-nijmegen/", "/thema/natuur-nijmegen/", "/thema/evenementen-nijmegen/", "/thema/uitjes-nijmegen/", "/thema/sporten-in-nijmegen/", "/thema/parkeren-nijmegen/"]),
     ("Eten, drinken en cultuur", ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/cafes-in-nijmegen/", "/thema/museums-nijmegen/"]),
     ("Bijzondere momenten", ["/thema/trouwen-in-nijmegen/", "/thema/zaal-huren-in-nijmegen/", "/jaarlijkse-evenementen/nijmeegse-vierdaagse/", "/thema/fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen/"]),
     ("Overnachten", ["/thema/overnachten-in-nijmegen/", "/thema/bb-nijmegen/", "/thema/campings-in-nijmegen/"]),
