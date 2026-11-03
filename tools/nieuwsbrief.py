@@ -152,6 +152,13 @@ def main(vandaag):
         tekst = "%s. %s" % (" · ".join(x for x in (v["werkgever"], vacatures.kenmerken(v)) if x),
                             v.get("kort") or samenvatting(v.get("tekst", ""), 200))
         items.append(item(v["functie"], "%s/vacatures/%s/" % (url, v["slug"]), "vacature-%s#%s" % (v["slug"], week), nu, tekst, foto))
+    if not items:
+        # MailerLite keurt een lege feed af. Zonder betaalde vacatures één vast item (vaste guid, dus hooguit één
+        # keer in de nieuwsbrief) dat werkgevers uitnodigt een vacature te plaatsen.
+        items.append(item("Personeel nodig? Plaats je vacature op NijmegenOnline", "%s/vacature-plaatsen/" % url,
+                          "vacature-plaatsen", datetime.datetime(2026, 11, 3, 6, tzinfo=AMSTERDAM),   # vaste datum: niet elke week nieuw
+                          "Zoek je personeel in Nijmegen of omgeving? Plaats je vacature gratis op NijmegenOnline. Kies je Uitgelicht, "
+                          "dan staat hij %d dagen online, bovenaan het overzicht en in deze nieuwsbrief." % vacatures.LOOPTIJD_BETAALD, None))
     feed(url, "vacatures.xml", "Vacatures NijmegenOnline", "Vacatures van werkgevers uit Nijmegen en omgeving", "%s/vacatures/" % url, items, nu)
 
     for oud in FOTOS.glob("*.jpg"):
