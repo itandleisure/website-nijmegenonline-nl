@@ -308,7 +308,7 @@
  },
  "kerkje-van-persingen": {
   "naam": "Kerkje van Persingen",
-  "adres": "Persingense straat 7 Persingen, 5363 VE Velp",
+  "adres": "Persingense straat 7 Persingen",
   "bedrijf": "",
   "plaats": "Berg en Dal"
  },
@@ -530,6 +530,12 @@
   "adres": "De Kolk 6",
   "bedrijf": "vasim-circus-space",
   "plaats": "Nijmegen"
+ },
+ "vincentiuskerkje-velp": {
+  "naam": "Vincentiuskerkje Velp",
+  "adres": "Pastoor Loefsweg 1, 5363 VE Velp",
+  "bedrijf": "",
+  "plaats": "Velp"
  },
  "vrijheidsmuseum": {
   "naam": "Vrijheidsmuseum Groesbeek",
