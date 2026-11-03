@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/">
   <meta property="og:site_name" content="NijmegenOnline">
   <meta property="og:image" content="https://www.nijmegenonline.nl/assets/uploads/2023/07/vrijheidsmuseum-groesbeek-gebouw.webp">
-  <link rel="stylesheet" href="../assets/css/site.css?v=31">
+  <link rel="stylesheet" href="../assets/css/site.css?v=34">
   <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="../partners/slider.css?v=5">
@@ -121,21 +121,31 @@
           <a class="uitgelicht" href="../events/johnny-and-the-rockets/" data-plaats="Nijmegen" data-soort="Muziek"><img src="../assets/uploads/2026/10/Johnny-and-the-Rockets-cafe-t-haantje-533x800.webp" alt="Johnny and the Rockets" loading="lazy" class="uitgelicht__heel"><span class="uitgelicht__tekst"><span class="uitgelicht__wanneer">28 nov, 20.30 uur</span><strong>Johnny and the Rockets</strong><span class="uitgelicht__plaats">Cafe &#x27;t Haantje Nijmegen</span></span></a>
         </div>
       </section>
+      <div class="agenda-tegels" role="group" aria-label="Wat wil je doen?" hidden>
+        <button type="button" data-soort="Muziek" aria-pressed="false"><span aria-hidden="true">🎵</span>Muziek <small>13</small></button>
+        <button type="button" data-soort="Theater en dans" aria-pressed="false"><span aria-hidden="true">🎭</span>Theater <small>2</small></button>
+        <button type="button" data-soort="Expositie" aria-pressed="false"><span aria-hidden="true">🖼️</span>Exposities <small>3</small></button>
+        <button type="button" data-soort="Lezing en rondleiding" aria-pressed="false"><span aria-hidden="true">🎤</span>Lezingen <small>4</small></button>
+        <button type="button" data-soort="Workshop en cursus" aria-pressed="false"><span aria-hidden="true">🧩</span>Workshops <small>1</small></button>
+        <button type="button" data-soort="Markt" aria-pressed="false"><span aria-hidden="true">🛍️</span>Markten <small>1</small></button>
+        <button type="button" data-soort="Feest en festival" aria-pressed="false"><span aria-hidden="true">🎉</span>Feesten <small>7</small></button>
+        <button type="button" data-soort="Spel en quiz" aria-pressed="false"><span aria-hidden="true">🎲</span>Spel en quiz <small>1</small></button>
+      </div>
+      <div class="agenda-balk">
       <div class="gidsen-filter agendafilter" id="agendafilter" role="group" aria-label="Filter op datum">
         <button type="button" data-wanneer="" aria-pressed="true">Alles</button>
         <button type="button" data-wanneer="vandaag" aria-pressed="false">Vandaag</button>
         <button type="button" data-wanneer="morgen" aria-pressed="false">Morgen</button>
         <button type="button" data-wanneer="weekend" aria-pressed="false">Dit weekend</button>
-        <button type="button" data-wanneer="week" aria-pressed="false">Komende 7 dagen</button>
+        <button type="button" data-wanneer="week" aria-pressed="false"><span class="agenda-lang">Komende </span>7 dagen</button>
       </div>
-      <div class="agenda-meer" role="group" aria-label="Meer filters" hidden>
-        <label class="agenda-keuze"><span>Plaats</span><select data-filter="plaats"><option value="">Alle plaatsen</option><option value="Nijmegen">Nijmegen (18)</option><option value="Kranenburg">Kranenburg (5)</option><option value="Groesbeek">Groesbeek (4)</option><option value="Kleef">Kleef (4)</option><option value="Berg en Dal">Berg en Dal (1)</option><option value="Goch">Goch (1)</option></select></label>
-        <label class="agenda-keuze"><span>Soort</span><select data-filter="soort"><option value="">Alle soorten</option><option value="Muziek">Muziek (13)</option><option value="Theater en dans">Theater en dans (2)</option><option value="Expositie">Expositie (3)</option><option value="Lezing en rondleiding">Lezing en rondleiding (4)</option><option value="Workshop en cursus">Workshop en cursus (1)</option><option value="Markt">Markt (1)</option><option value="Feest en festival">Feest en festival (7)</option><option value="Spel en quiz">Spel en quiz (1)</option></select></label>
+      <div class="agenda-meer" role="group" aria-label="Plaats, gratis en kinderen" hidden>
+        <label class="agenda-keuze"><span class="sr-only">Plaats</span><select data-filter="plaats"><option value="">Alle plaatsen</option><option value="Nijmegen">Nijmegen (18)</option><option value="Kranenburg">Kranenburg (5)</option><option value="Groesbeek">Groesbeek (4)</option><option value="Kleef">Kleef (4)</option><option value="Berg en Dal">Berg en Dal (1)</option><option value="Goch">Goch (1)</option></select></label>
         <button type="button" class="agenda-schakel" data-extra="gratis" aria-pressed="false">Gratis</button>
-        <button type="button" class="agenda-schakel" data-extra="kinderen" aria-pressed="false">Leuk voor kinderen</button>
-        <button type="button" class="agenda-wis link" hidden>Wis filters</button>
+        <button type="button" class="agenda-schakel" data-extra="kinderen" aria-pressed="false">Kinderen</button>
       </div>
-      <p class="agendafilter__uitkomst" aria-live="polite" hidden></p>
+      </div>
+      <p class="agendafilter__uitkomst" aria-live="polite" hidden><span></span> <button type="button" class="agenda-wis">Wis filters</button></p>
       <section class="agenda-maand">
         <h2>Nu te zien</h2>
         <div class="eventlijst">
@@ -190,7 +200,7 @@
         </div>
       </section>
       <p class="gids-cta"><a class="knop" href="../evenement-aanmelden/">Evenement aanmelden</a> <a href="../event-location/">Bekijk evenementen per locatie</a></p>
-      <script src="../assets/js/agendafilter.js?v=4" defer></script>
+      <script src="../assets/js/agendafilter.js?v=5" defer></script>
       <div class="partner-slider" data-plaatsing="blog"></div>
     </div>
   </main>
