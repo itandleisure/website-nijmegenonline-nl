@@ -243,6 +243,16 @@ gaan in `data/evenementen.json` (foto in `assets/uploads/aangemeld/`), bedrijven
 (voor de bedrijvengids). Een evenement komt bij een bestaande aanbieder als de naam overeenkomt (los van café/het/'t, leestekens en accenten) of als straat en huisnummer gelijk zijn aan die van een eerder evenement; op de beoordeelpagina kies je de aanbieder ook zelf in een keuzelijst. Heeft de gekozen aanbieder een bekend adres (`adres` in `data/aanbieders.json`, bijgewerkt bij elke publicatie), dan vult de beoordeelpagina dat in; het adres van de inzender kun je terugzetten. Postcodes: 1234 AB, of 5 cijfers voor Duitsland. Daarna wordt de site gebouwd en zet het script de status in de Sheet op "Gepubliceerd".
 Meteen publiceren in plaats van op het hele uur: Actions > Aanmeldingen publiceren > Run workflow.
 
+### Vacaturebank (fase 1, besluit Frans 3-11-2026)
+
+- Werkgevers plaatsen gratis een vacature via `/vacature-plaatsen/` (formulier `vacature` in `tools/google-formulier/Code.gs`, tab Vacatures in de Sheet). Beoordelen gaat net als bij evenementen en bedrijven.
+- Een vacature staat standaard 45 dagen online (`LOOPTIJD` in `tools/vacatures.py`), of korter als de werkgever een eerdere sluitdatum kiest. Daarna krijgt de pagina noindex en "Deze vacature is gesloten"; na nog 90 dagen volgt een 301 naar `/vacatures/`.
+- Uitzend-, wervings- en selectiebureaus geven dat aan met een ja/nee-vraag; die plaatsing kost €19. Uitgelicht kost €49. Er is geen startactie.
+- Open vacatures krijgen JobPosting-gegevens voor Google for Jobs. Een vacature staat ook op de bedrijfspagina van de werkgever in de bedrijvengids.
+- Data: `data/vacatures.json`. Bouwen: `python3 tools/vacatures.py` (draait mee in de workflows agenda en aanmeldingen). De eigen NijmegenOnline-vacatures (`eigen_pagina`) houden hun eigen pagina.
+- Werkgebied: Nijmegen en omgeving, plus Kleve. Arnhem valt erbuiten.
+- Nog niet gebouwd: verlengmail, artikel met voorwaarden, pagina's per soort werk en plaats, blok op de homepage, Indexing API.
+
 ### Bedrijvengids (in opbouw)
 
 `python tools/bedrijvengids.py` bouwt de startpagina `/bedrijvengids/` (kaart met alle bedrijven, Leaflet + OpenStreetMap),

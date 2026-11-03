@@ -689,3 +689,13 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .jarenlijst a { color: var(--kop); font-weight: 600; }
 .jarenlijst span { color: var(--grijs); font-size: 0.85rem; }
 .archief-melding { font-size: 0.9rem; color: var(--grijs); border-left: 3px solid var(--rand); padding-left: 12px; }
+
+/* Vacaturebank (tools/vacatures.py, assets/js/vacatures.js) */
+.vacaturekaart[hidden], .vacaturefilter[hidden], .vacaturefilter__uitkomst[hidden] { display: none; }
+.vacaturekaart__werkgever { font-weight: 600; color: var(--kop); }
+.vacaturekaart__regel { font-size: .9rem; color: var(--grijs); }
+.vacaturekaart--uitgelicht { border-left-color: var(--groen); background: var(--licht); }
+.vacaturefilter { margin: 12px 0 0; }
+.vacaturefilter button span { opacity: 0.7; font-weight: 500; margin-left: 2px; }
+.vacaturefilter__uitkomst { margin: 8px 0 0; font-size: 0.9rem; color: var(--grijs); }
+.vacature__logo img { max-width: 180px; max-height: 90px; object-fit: contain; }
