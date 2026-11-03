@@ -125,7 +125,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=15" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=16" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -198,8 +198,11 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
             # Zoekveld "Zoek je bedrijf" (assets/js/formulier.js); opties = {veld: kolom} om lege velden in te vullen,
             # met eventueel "_hint" als eigen uitleg onder het veld
             opties = dict(opties or {})
-            hint = opties.pop("_hint", "Staat je bedrijf of organisatie in onze bedrijvengids? Kies het hier, dan komt "
-                                       "je evenement ook op je bedrijfspagina. Staat het er niet in, laat dit veld dan leeg.")
+            # "_hint" is HTML (de standaardtekst bevat een link), dus niet escapen
+            hint = opties.pop("_hint", 'Staat je bedrijf of organisatie in onze bedrijvengids? Kies het hier, dan komt '
+                                       'je evenement ook op je bedrijfspagina. Staat het er nog niet in? <a href="../bedrijf-aanmelden/" target="_blank" '
+                                       'rel="noopener">Meld het dan eerst gratis aan</a> en kies het daarna hier. Ben je geen bedrijf of organisatie, '
+                                       'laat dit veld dan leeg.')
             regels += ['          <div class="bedrijfzoeker" data-bedrijfzoeker data-vullen="%s">' % esc(json.dumps(opties)),
                        '            <label for="%s">%s</label>' % (id_, esc(label)),
                        '            <div class="bedrijfzoeker__zoek"><input id="%s" type="search" autocomplete="off" role="combobox" '
@@ -208,7 +211,7 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
                        '            <ul class="bedrijfzoeker__lijst" id="%s-lijst" role="listbox" hidden></ul>' % id_,
                        '            <div class="bedrijfzoeker__gekozen" hidden><span>Gekozen: <strong></strong> '
                        '<span class="bedrijfzoeker__regel"></span></span><button type="button" class="link">Ander bedrijf kiezen</button></div>',
-                       '            <p class="formulier__hint">%s</p>' % esc(hint),
+                       '            <p class="formulier__hint">%s</p>' % hint,
                        '            <input type="hidden" name="%s" value="">' % veld,
                        '          </div>']
         elif soort == "fotobron":

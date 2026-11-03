@@ -423,10 +423,15 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .uitgelicht__geenfoto { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 10; padding: 16px; background: var(--groen); color: var(--wit); font-weight: 700; font-size: 1.15rem; text-align: center; }
 .rubriek-kop--uitgelicht { border: 2px solid var(--groen); }
 .rubriek-kop .gids-cta { margin-top: 16px; }
-.aanbieders { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; align-items: start; }
-.aanbieders li { background: var(--wit); border-radius: var(--radius); padding: 12px 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; align-items: baseline; }
-.aanbieders li span { color: var(--grijs); font-size: .9rem; white-space: nowrap; }
-.aanbieders__klant { border-left: 4px solid var(--groen); }
+.aanbieders-plaats { margin: 28px 0; scroll-margin-top: 90px; }
+.aanbieders-plaats > h2 { margin: 0 0 12px; font-size: 1.3rem; }
+.aanbieders { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.aanbieders li { display: flex; }
+.aanbieders a { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 2px; background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: 12px 16px; text-decoration: none; color: var(--tekst); min-height: 64px; }
+.aanbieders a:hover, .aanbieders a:focus-visible { border-color: var(--groen); box-shadow: var(--schaduw-hover); }
+.aanbieders strong { color: var(--kop); font-weight: 600; line-height: 1.3; }
+.aanbieders span { color: var(--grijs); font-size: .85rem; }
+.aanbieders__klant a { border-left: 4px solid var(--groen); }
 .pagina__intro { font-size: 1.1rem; }
 .pagina__let-op { background: #fff8e1; border-radius: var(--radius); padding: 12px 16px; }
 .contactgegevens { list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 8px; }
@@ -647,18 +652,23 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 
 /* Agenda: filter op datum (assets/js/agendafilter.js) */
 .agendafilter { align-items: center; }
-.agendafilter__uitkomst { flex-basis: 100%; margin: 4px 0 0; font-size: 0.9rem; color: var(--grijs); }
+.agendafilter__uitkomst { margin: 0 0 12px; font-size: 0.9rem; color: var(--grijs); }
 .eventkaart[hidden], .agenda-maand[hidden] { display: none; }
 
-/* Agenda: filter op plaats (assets/js/agendafilter.js) */
-.uitgelicht[hidden], .agenda-uitgelicht[hidden], .agenda-plaatsen[hidden] { display: none; }
-.agenda-plaatsen { margin-top: -8px; }
-.agenda-plaatsen button span { opacity: 0.7; font-weight: 500; margin-left: 2px; }
-
-/* Agenda: filter op soort, gratis en kinderen (assets/js/agendafilter.js) */
-.agenda-soorten[hidden], .agenda-extra[hidden] { display: none; }
-.agenda-soorten, .agenda-extra { margin-top: -8px; }
-.agenda-soorten button span, .agenda-extra button span { opacity: 0.7; font-weight: 500; margin-left: 2px; }
+/* Agenda: tweede filterregel met plaats, soort, gratis en kinderen (assets/js/agendafilter.js, tools/agenda.py meerfilter) */
+.uitgelicht[hidden], .agenda-uitgelicht[hidden], .agenda-meer[hidden], .agenda-wis[hidden] { display: none; }
+.agenda-meer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: -8px 0 16px; padding-top: 14px; border-top: 1px solid var(--rand); }
+.agenda-keuze { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 0.9rem; font-weight: 600; color: var(--grijs); }
+.agenda-keuze select { font: inherit; font-weight: 600; color: var(--tekst); padding: 8px 32px 8px 14px; border: 1px solid var(--rand); border-radius: 999px; background: var(--wit) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23333' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center; -webkit-appearance: none; appearance: none; cursor: pointer; max-width: 100%; }
+.agenda-keuze select:hover { border-color: var(--groen); }
+.agenda-keuze select.is-actief { border-color: var(--groen); color: var(--groen); }
+.agenda-schakel { font: inherit; font-size: 0.9rem; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rand); background: var(--wit); color: var(--tekst); cursor: pointer; }
+.agenda-schakel::before { content: "+ "; color: var(--grijs); }
+.agenda-schakel:hover { border-color: var(--groen); }
+.agenda-schakel[aria-pressed="true"] { background: var(--groen); border-color: var(--groen); color: var(--wit); }
+.agenda-schakel[aria-pressed="true"]::before { content: "✓ "; color: var(--wit); }
+.agenda-wis { font: inherit; font-size: 0.9rem; background: none; border: 0; padding: 0; color: var(--blauw); text-decoration: underline; cursor: pointer; }
+.agendafilter + .agenda-meer { margin-top: -8px; }
 .eventkaart__prijs { color: var(--grijs); font-weight: 500; }
 
 /* Kaartje "Over <bedrijf>" onder evenementen en nieuws (tools/koppeling.py) */

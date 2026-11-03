@@ -127,17 +127,15 @@
         <button type="button" data-wanneer="morgen" aria-pressed="false">Morgen</button>
         <button type="button" data-wanneer="weekend" aria-pressed="false">Dit weekend</button>
         <button type="button" data-wanneer="week" aria-pressed="false">Komende 7 dagen</button>
-        <p class="agendafilter__uitkomst" aria-live="polite" hidden></p>
       </div>
-      <div class="gidsen-filter agenda-plaatsen" role="group" aria-label="Filter op plaats" hidden>
-        <button type="button" data-plaats="" aria-pressed="true">Alle plaatsen</button><button type="button" data-plaats="Nijmegen" aria-pressed="false">Nijmegen <span>18</span></button><button type="button" data-plaats="Kranenburg" aria-pressed="false">Kranenburg <span>5</span></button><button type="button" data-plaats="Groesbeek" aria-pressed="false">Groesbeek <span>4</span></button><button type="button" data-plaats="Kleef" aria-pressed="false">Kleef <span>4</span></button><button type="button" data-plaats="Berg en Dal" aria-pressed="false">Berg en Dal <span>1</span></button><button type="button" data-plaats="Goch" aria-pressed="false">Goch <span>1</span></button>
+      <div class="agenda-meer" role="group" aria-label="Meer filters" hidden>
+        <label class="agenda-keuze"><span>Plaats</span><select data-filter="plaats"><option value="">Alle plaatsen</option><option value="Nijmegen">Nijmegen (18)</option><option value="Kranenburg">Kranenburg (5)</option><option value="Groesbeek">Groesbeek (4)</option><option value="Kleef">Kleef (4)</option><option value="Berg en Dal">Berg en Dal (1)</option><option value="Goch">Goch (1)</option></select></label>
+        <label class="agenda-keuze"><span>Soort</span><select data-filter="soort"><option value="">Alle soorten</option><option value="Muziek">Muziek (13)</option><option value="Theater en dans">Theater en dans (2)</option><option value="Expositie">Expositie (3)</option><option value="Lezing en rondleiding">Lezing en rondleiding (4)</option><option value="Workshop en cursus">Workshop en cursus (1)</option><option value="Markt">Markt (1)</option><option value="Feest en festival">Feest en festival (7)</option><option value="Spel en quiz">Spel en quiz (1)</option></select></label>
+        <button type="button" class="agenda-schakel" data-extra="gratis" aria-pressed="false">Gratis</button>
+        <button type="button" class="agenda-schakel" data-extra="kinderen" aria-pressed="false">Leuk voor kinderen</button>
+        <button type="button" class="agenda-wis link" hidden>Wis filters</button>
       </div>
-      <div class="gidsen-filter agenda-soorten" role="group" aria-label="Filter op soort" hidden>
-        <button type="button" data-soort="" aria-pressed="true">Alle soorten</button><button type="button" data-soort="Muziek" aria-pressed="false">Muziek <span>13</span></button><button type="button" data-soort="Theater en dans" aria-pressed="false">Theater en dans <span>2</span></button><button type="button" data-soort="Expositie" aria-pressed="false">Expositie <span>3</span></button><button type="button" data-soort="Lezing en rondleiding" aria-pressed="false">Lezing en rondleiding <span>4</span></button><button type="button" data-soort="Workshop en cursus" aria-pressed="false">Workshop en cursus <span>1</span></button><button type="button" data-soort="Markt" aria-pressed="false">Markt <span>1</span></button><button type="button" data-soort="Feest en festival" aria-pressed="false">Feest en festival <span>7</span></button><button type="button" data-soort="Spel en quiz" aria-pressed="false">Spel en quiz <span>1</span></button>
-      </div>
-      <div class="gidsen-filter agenda-extra" role="group" aria-label="Gratis of voor kinderen" hidden>
-        <button type="button" data-extra="gratis" aria-pressed="false">Gratis <span>3</span></button><button type="button" data-extra="kinderen" aria-pressed="false">Leuk voor kinderen <span>7</span></button>
-      </div>
+      <p class="agendafilter__uitkomst" aria-live="polite" hidden></p>
       <section class="agenda-maand">
         <h2>Nu te zien</h2>
         <div class="eventlijst">
@@ -192,7 +190,7 @@
         </div>
       </section>
       <p class="gids-cta"><a class="knop" href="../evenement-aanmelden/">Evenement aanmelden</a> <a href="../event-location/">Bekijk evenementen per locatie</a></p>
-      <script src="../assets/js/agendafilter.js?v=3" defer></script>
+      <script src="../assets/js/agendafilter.js?v=4" defer></script>
       <div class="partner-slider" data-plaatsing="blog"></div>
     </div>
   </main>

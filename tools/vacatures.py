@@ -307,7 +307,8 @@ def plaatsen_pagina():
         ("bedrijf", "Zoek je bedrijf", "bedrijf", False,
          {"werkgever": "naam", "site": "site", "adres": "adres", "postcode": "postcode", "plaats": "plaats",
           "_hint": "Staat je bedrijf in onze bedrijvengids? Kies het hier, dan komt de vacature ook op je bedrijfspagina. "
-                   "Staat het er niet in, laat dit veld dan leeg en vul hieronder de gegevens in."}),
+                   "Staat het er nog niet in? <a href=\"../bedrijf-aanmelden/\" target=\"_blank\" rel=\"noopener\">Meld het gratis aan</a>, "
+                   "of laat dit veld leeg en vul hieronder de gegevens in."}),
         ("werkgever", "Naam van het bedrijf", "text", True, None),
         ("site", "Website", "url", True, None),
         ("kvk", "KvK-nummer", "text", False, None),
