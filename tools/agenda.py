@@ -413,7 +413,7 @@ def aanbieder_overzicht(rij, vandaag):
 
 # De agenda en de locatiepagina gebruiken nieuwe opmaak (filters, locaties per plaats). Met een eigen versie haalt de
 # browser site.css opnieuw op, zonder dat alle 10.000 andere pagina's mee hoeven te veranderen.
-CSS_VERSIE = "site.css?v=34"
+CSS_VERSIE = "site.css?v=35"
 
 
 # Filter op datum boven de agenda (assets/js/agendafilter.js). Werkt in de browser met de datum van de bezoeker, dus ook
