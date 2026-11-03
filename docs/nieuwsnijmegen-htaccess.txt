@@ -1,0 +1,39 @@
+# .htaccess voor nieuwsnijmegen.nl én nieuws.nijmegenonline.nl (Zxcs, Apache)
+#
+# Wanneer: pas nadat de pull request met het nieuwsarchief live staat op www.nijmegenonline.nl.
+# Hoe:     1. Maak in het control panel een volledige back-up van de WordPress-site (bestanden + database).
+#          2. Zet in de hoofdmap (public_html) van nieuwsnijmegen.nl alleen dit bestand neer, als .htaccess.
+#             De WordPress-bestanden kunnen naar een map buiten public_html, als back-up.
+#          3. Doe hetzelfde voor nieuws.nijmegenonline.nl (die verwijst nu naar /nieuwsberichten/<slug>/, dat geeft een 404).
+#          4. Test: https://nieuwsnijmegen.nl/koningsdag-vrijmarkt-goffert/ moet in één stap (301) naar
+#             https://www.nijmegenonline.nl/nieuwsoverzicht/koningsdag-vrijmarkt-goffert/ gaan.
+#
+# Alle berichten hebben op nijmegenonline.nl dezelfde slug, dus één regel volstaat. Uitzonderingen staan erboven.
+# Een slug die niet (meer) bestaat komt op een 404 van nijmegenonline.nl; die stuurt zelf door naar /nieuwsberichten/.
+
+RewriteEngine On
+
+# Homepage, categorieën, tags, auteurs, archief per datum, zoeken en paginering -> nieuwsoverzicht
+RewriteRule ^$ https://www.nijmegenonline.nl/nieuwsberichten/ [R=301,L]
+RewriteCond %{QUERY_STRING} (^|&)(p|s|cat|tag|page_id)= [NC]
+RewriteRule ^ https://www.nijmegenonline.nl/nieuwsberichten/? [R=301,L]
+RewriteRule ^(category|tag|author|page|wp-content|wp-includes|wp-admin|wp-json)(/|$) https://www.nijmegenonline.nl/nieuwsberichten/ [R=301,L,NC]
+RewriteRule ^\d{4}(/\d{2})?(/\d{2})?/?$ https://www.nijmegenonline.nl/nieuwsberichten/ [R=301,L]
+
+# Feeds
+RewriteRule ^(.+/)?feed/?$ https://www.nijmegenonline.nl/nieuwsoverzicht/feed/ [R=301,L,NC]
+
+# De tien pagina's van nieuwsnijmegen.nl
+RewriteRule ^(contact|kom-in-contact)/?$ https://www.nijmegenonline.nl/contact/ [R=301,L,NC]
+RewriteRule ^(aanmelden-nieuws|het-laatste-nieuws|nieuws-uit-nijmegen|nijmegen-google-nieuws|meer-politie-meldingen|meer-radboud-universiteit-nieuws|meer-videos-uit-nijmegen-en-omgeving|elektrische-scooter-huren-in-nijmegen-en-omgeving)/?$ https://www.nijmegenonline.nl/nieuwsberichten/ [R=301,L,NC]
+RewriteRule ^(sitemap_index|post-sitemap\d*|page-sitemap|category-sitemap|post_tag-sitemap\d*)\.xml$ https://www.nijmegenonline.nl/sitemap.xml [R=301,L,NC]
+
+# Twee slugs met een ² of º kregen gewone letters
+RewriteRule ^tegelophaaldagen-van-steenbreek-en-dar-goed-voor-1400-m https://www.nijmegenonline.nl/nieuwsoverzicht/tegelophaaldagen-van-steenbreek-en-dar-goed-voor-1400-m2-stenen/ [R=301,L,NC]
+RewriteRule ^vierdaagsepil-tot-273 https://www.nijmegenonline.nl/nieuwsoverzicht/vierdaagsepil-tot-273oc-geen-oververhitting/ [R=301,L,NC]
+
+# Elk bericht -> zelfde slug op nijmegenonline.nl
+RewriteRule ^([A-Za-z0-9_-]+)/?$ https://www.nijmegenonline.nl/nieuwsoverzicht/$1/ [R=301,L]
+
+# Al het andere
+RewriteRule ^ https://www.nijmegenonline.nl/nieuwsberichten/ [R=301,L]

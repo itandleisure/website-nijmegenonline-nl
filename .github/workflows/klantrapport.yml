@@ -1,0 +1,56 @@
+# Maakt op verzoek klantrapporten (tools/klantrapport.py) en zet ze als download bij de run (Actions → run → Artifacts).
+# Nodig: secret GSC_SERVICE_ACCOUNT_JSON (hetzelfde serviceaccount als de statistiekpagina), met de rol Lezer
+# op Google Analytics-property 337370292. De rapporten komen niet in de repo, want die is openbaar.
+name: Klantrapport maken
+
+on:
+  workflow_dispatch:
+    inputs:
+      bedrijf:
+        description: "Slug van het bedrijf (/bedrijvengids/<slug>/), of leeg voor alle bedrijven met een pakket"
+        type: string
+        default: ""
+      partner:
+        description: "Id uit partners/partners.json voor de bannercijfers (optioneel)"
+        type: string
+        default: ""
+      van:
+        description: "Begindatum JJJJ-MM-DD (leeg = 12 maanden terug)"
+        type: string
+        default: ""
+      tot:
+        description: "Einddatum JJJJ-MM-DD (leeg = gisteren)"
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  rapport:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests google-auth
+      - name: Rapporten maken
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          BEDRIJF: ${{ inputs.bedrijf }}
+          PARTNER: ${{ inputs.partner }}
+          VAN: ${{ inputs.van }}
+          TOT: ${{ inputs.tot }}
+        run: |
+          args=()
+          if [ -n "$BEDRIJF" ]; then args+=(--bedrijf "$BEDRIJF"); else args+=(--alle); fi
+          [ -n "$PARTNER" ] && args+=(--partner "$PARTNER")
+          [ -n "$VAN" ] && args+=(--van "$VAN")
+          [ -n "$TOT" ] && args+=(--tot "$TOT")
+          python tools/klantrapport.py "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: klantrapporten
+          path: rapporten/
+          retention-days: 30

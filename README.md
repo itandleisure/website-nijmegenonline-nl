@@ -16,6 +16,8 @@ partners/             centrale partnerlijst + roterende slider, zie partners/REA
 category/<rubriek>/   overzicht per rubriek (8 rubrieken + partnerbijdragen)
 blog/                 "Inspiratie opdoen": alle rubrieken op één pagina
 data/indeling-artikelen.csv   welke rubriek elk artikel heeft
+data/nieuws-archief.json      nieuwsarchief van nieuwsnijmegen.nl (2006-2024), zie tools/import_nieuwsnijmegen.py
+nieuwsberichten/<jaar>/       al het nieuws per jaar (tools/nieuws.py)
 _redirects            301's van oude WordPress-categoriepagina's (voor Cloudflare Pages)
 partials/             gedeelde header, footer en zijbalk
 tools/import_wordpress.py     zet de WordPress-export om naar pagina's

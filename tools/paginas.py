@@ -31,8 +31,8 @@ VACATURES = [
      "Voor NijmegenOnline zoeken we toppers die hun schrijfervaring willen uitbreiden. Als redacteur ga je veel op pad in "
      "Nijmegen en ben je het visitekaartje van onze organisatie."),
     ("vacature-accountmanager", "Lokale partner en mede-eigenaar", True,
-     "We zoeken iemand die NijmegenOnline in de stad een gezicht geeft, partners binnenhaalt en daarvoor provisie en "
-     "aandelen krijgt."),
+     "We zoeken iemand die NijmegenOnline in de stad een gezicht geeft en lokale ondernemers helpt zichtbaarder te "
+     "worden en meer omzet te halen."),
     ("vacature-fotograaf", "Fotograaf", False,
      "Ben jij dag en nacht op pad met je camera en vind je het leuk om Nijmegen en omgeving vast te leggen?"),
     ("vacature-social-media-strateeg", "Social media strateeg", False,
@@ -44,7 +44,7 @@ VACATURES = [
 EIGEN_TEKST = {"vacature-accountmanager"}
 
 # Pakketten uit het advies Verdienmodel NijmegenOnline (okt 2026): naam, prijs per jaar excl. btw, toelichting
-PAKKETTEN = [("Gratis", "0", "voor elk bedrijf"), ("Uitgelicht", "149", "eerste jaar &euro; 99*"),
+PAKKETTEN = [("Gratis", "0", "voor elk bedrijf"), ("Uitgelicht", "149", ""),
              ("Partner", "449", ""), ("Hoofdpartner", "1.200", "maximaal 10")]
 KENMERKEN = [
     ("Eigen pagina in de bedrijvengids met adres, kaart en openingstijden", ["ja", "ja", "ja", "ja"]),
@@ -283,7 +283,7 @@ def algemene_voorwaarden(tekst, meta):
 # Zie het verdienmodel (Claude Doc "Verdienmodel NijmegenOnline"); prijzen per jaar, excl. btw
 BEDRIJF_PAKKETTEN = [
     ("gratis", "Gratis: eigen pagina met adres, kaart, openingstijden, een korte tekst en één foto"),
-    ("uitgelicht", "Uitgelicht (€149 per jaar, het eerste jaar €99): bovenaan je categorie, met logo, foto's en een actieknop"),
+    ("uitgelicht", "Uitgelicht (€149 per jaar): bovenaan je categorie, met logo, foto's en een actieknop"),
     ("partner", "Partner (€449 per jaar): Uitgelicht, plus een banner in je branche, een artikel en de nieuwsbrief"),
 ]
 
@@ -429,7 +429,7 @@ def adverteren(meta, root="../"):
             </tbody>
           </table>
         </div>
-        <p>Prijzen per jaar, exclusief btw. * Introductieprijs voor de eerste 50 klanten, en de prijs staat twee jaar vast. Een pakket loopt twaalf maanden en wordt daarna steeds met een jaar verlengd. Opzeggen kan tot een maand voor de einddatum, met een mail. Zie <a href="{site}/algemene-voorwaarden/">artikel 13 van de algemene voorwaarden</a>.</p>
+        <p>Prijzen per jaar, exclusief btw. Een pakket loopt twaalf maanden en wordt daarna steeds met een jaar verlengd. Opzeggen kan tot een maand voor de einddatum, met een mail. Zie <a href="{site}/algemene-voorwaarden/">artikel 13 van de algemene voorwaarden</a>.</p>
         <h2>Losse mogelijkheden</h2>
         <div class="pakketten">
           <table>

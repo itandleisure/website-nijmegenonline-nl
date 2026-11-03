@@ -677,3 +677,9 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .bedrijfzoeker__gekozen { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 10px 14px; background: var(--licht); border-radius: 8px; }
 .bedrijfzoeker__gekozen strong { color: var(--kop); }
 .bedrijfzoeker button.link { font: inherit; font-size: 0.9rem; background: none; border: 0; padding: 0; color: var(--blauw); text-decoration: underline; cursor: pointer; }
+
+/* nieuwsarchief per jaar (tools/nieuws.py) */
+.jarenlijst { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.jarenlijst a { color: var(--kop); font-weight: 600; }
+.jarenlijst span { color: var(--grijs); font-size: 0.85rem; }
+.archief-melding { font-size: 0.9rem; color: var(--grijs); border-left: 3px solid var(--rand); padding-left: 12px; }

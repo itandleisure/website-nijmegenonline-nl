@@ -25,6 +25,15 @@
     }
   </script>
   <!-- /analytics -->
+  <script>
+    // Oude nieuwsadressen (zie tools/import_nieuwsnijmegen.py): /nieuws/<slug>/ van de oude nijmegenonline.nl gaat naar
+    // /nieuwsoverzicht/<slug>/; een onbekend bericht daar naar het nieuwsoverzicht in plaats van deze 404.
+    (function () {
+      var p = location.pathname, m = p.match(/^\/nieuws\/([^\/]+)\/?$/);
+      if (m && !/\./.test(m[1])) { location.replace("/nieuwsoverzicht/" + m[1].toLowerCase() + "/"); return; }
+      if (/^\/(nieuws|nieuwsoverzicht)\/./.test(p)) { location.replace("/nieuwsberichten/"); }
+    })();
+  </script>
 </head>
 <body>
   <main class="container" style="padding:64px 16px">

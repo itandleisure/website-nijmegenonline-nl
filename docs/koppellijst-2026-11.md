@@ -23,7 +23,7 @@ Een plek, of een bedrijf dat (nog) niet in de gids staat. Staat het er wel in, z
 | Ateliers Vrouwe Udasigel Nijmegen (`ateliers-vrouwe-udasigel`) | Nijmegen | 1 |
 | Besiendershuis Nijmegen (`besiendershuis`) | Nijmegen | 1 |
 | Bibliotheek Mariënburg Nijmegen (`bibliotheek-marienburg`) | Nijmegen | 2 |
-| Bosatelier Nijmegen (`bosatelier`) | Nijmegen | 7 |
+| Bosatelier Nijmegen (`bosatelier`) | Nijmegen | 8 |
 | Buurderij de Lage Hof Heumen (`buurderij-de-lage-hof`) | Heumen | 2 |
 | Café De Kroon Nijmegen (`cafe-de-kroon`) | Nijmegen | 1 |
 | Concertgebouw De Vereeniging Nijmegen (`concertgebouw-de-vereeniging`) | Nijmegen | 4 |
@@ -41,7 +41,7 @@ Een plek, of een bedrijf dat (nog) niet in de gids staat. Staat het er wel in, z
 | Museum Kurhaus Kleve (`museum-kurhaus`) | Kleef | 1 |
 | Museumpark oriëntalis Nijmegen (`museumpark-orientalis`) | Nijmegen | 2 |
 | NYMA makersplaats Nijmegen (`nyma-makersplaats`) | Nijmegen | 2 |
-| OBG Nijmegen (`obg-nijmegen`) | Nijmegen | 13 |
+| OBG Nijmegen (`obg-nijmegen`) | Nijmegen | 14 |
 | Pastor-Leinung-Platz, Kleef, Duitsland (`pastor-leinung-platz`) | Kleef | 1 |
 | Pastor-Leinung-Platz, Kleef, Duitsland (`pastor-leinung-platz-kleef-duitsland`) | Kleef | 1 |
 | Pop Culture Arcade Nijmegen (`pop-culture-arcade`) | Nijmegen | 17 |
