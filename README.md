@@ -143,6 +143,9 @@ Na de eerste koppellijst (Frans, 2-11-2026): elke locatie in de agenda heet "naa
 Kleine Kirche Kleve), ook nieuwe uit het formulier. Dubbele locaties worden samengevoegd via
 `data/aanbieders-samengevoegd.json` (oud -> nieuw); `python tools/koppelen.py` verwerkt dat en het oude
 `/event-location/<oud>/` verwijst door.
+Locaties die een bedrijf zijn maar niet in de gids stonden, zet de redactie in `data/bedrijvengids-toegevoegd.json`
+(naam, categorie, adres, website, ligging); `tools/bedrijvengids.py` neemt ze op in die categorie. Zonder eigen tekst
+staan ze als concept (noindex) online tot de websitescan een tekst heeft.
 
 ## Nieuwsbrief (MailerLite)
 

@@ -52,7 +52,8 @@
  "bibliotheek-marienburg": {
   "naam": "Bibliotheek Mariënburg Nijmegen",
   "adres": "Mariënburg 29",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "bibliotheek-marienburg"
  },
  "binnenstad-nijmegen": {
   "naam": "Binnenstad Nijmegen",
@@ -68,7 +69,8 @@
  "bosatelier": {
   "naam": "Bosatelier Nijmegen",
   "adres": "Scheidingsweg 99, 6581 KN Nijmegen",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "bosatelier"
  },
  "boskapel": {
   "naam": "Boskapel Nijmegen",
@@ -108,7 +110,8 @@
  "cafe-de-kroon": {
   "naam": "Café De Kroon Nijmegen",
   "adres": "Daalseweg 361",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "cafe-de-kroon"
  },
  "cafe-t-haantje": {
   "naam": "Cafe 't Haantje Nijmegen",
@@ -137,12 +140,14 @@
  "concertgebouw-de-vereeniging": {
   "naam": "Concertgebouw De Vereeniging Nijmegen",
   "adres": "Keizer Karelplein 2D",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "concertgebouw-de-vereeniging"
  },
  "de-boekerij": {
   "naam": "De Boekerij Nijmegen",
   "adres": "Berg en Dalseweg 77 A, Nijmegen 6522 BC, Nijmegen",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "de-boekerij"
  },
  "de-brauerij": {
   "naam": "De Brauerij Kranenburg",
@@ -234,7 +239,8 @@
  "hackerspace-nijmegen": {
   "naam": "Hackerspace Nijmegen",
   "adres": "Winkesteegseweg 209, Nijmegen, Gelderland 6534AP, Nederland",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "hackerspace-nijmegen"
  },
  "hema-nijmegen": {
   "naam": "HEMA Nijmegen",
@@ -269,7 +275,8 @@
  "hotel-the-rebyl": {
   "naam": "Hotel The Rebyl Nijmegen",
   "adres": "Vierdaagseplein 1, Nijmegen, Gelderland 6524 AG, Nederland",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "hotel-the-rebyl"
  },
  "huis-van-de-nijmeegse-geschiedenis": {
   "naam": "Huis van de Nijmeegse Geschiedenis",
@@ -291,18 +298,14 @@
  "kasteel-wijchen": {
   "naam": "Kasteel Wijchen",
   "adres": "Kasteellaan 9, Wijchen 6602 DA",
-  "plaats": "Wijchen"
+  "plaats": "Wijchen",
+  "bedrijf": "kasteel-wijchen"
  },
  "kerkje-van-persingen": {
   "naam": "Kerkje van Persingen",
   "adres": "Persingense straat 7 Persingen, 5363 VE Velp",
   "bedrijf": "",
   "plaats": "Berg en Dal"
- },
- "kleine-kirche": {
-  "naam": "Kleine Kirche Kleve",
-  "adres": "Böllenstege, D-47533 Kleve",
-  "plaats": "Kleef"
  },
  "kleine-wiel": {
   "naam": "Kleine Wiel Nijmegen",
@@ -329,7 +332,8 @@
  "kunstkring-wijchen": {
   "naam": "Kunstkring Wijchen",
   "adres": "Kasteellaan 13, 6602 DA Wijchen",
-  "plaats": "Wijchen"
+  "plaats": "Wijchen",
+  "bedrijf": "kunstkring-wijchen"
  },
  "lieskes-wengs": {
   "naam": "Lieskes Wengs Berg en Dal",
@@ -367,12 +371,14 @@
  "museum-kurhaus": {
   "naam": "Museum Kurhaus Kleve",
   "adres": "Tiergartenstraße 41, D-47533 Kleve",
-  "plaats": "Kleef"
+  "plaats": "Kleef",
+  "bedrijf": "museum-kurhaus-kleve"
  },
  "museumpark-orientalis": {
   "naam": "Museumpark oriëntalis Nijmegen",
   "adres": "Profetenlaan 2",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "museumpark-orientalis"
  },
  "nyma-makersplaats": {
   "naam": "NYMA makersplaats Nijmegen",
@@ -427,7 +433,8 @@
  "pop-culture-arcade": {
   "naam": "Pop Culture Arcade Nijmegen",
   "adres": "Van Welderenstraat 80, Nijmegen, Gelderland 6511MR, Nederland",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "pop-culture-arcade"
  },
  "popop": {
   "naam": "POPOP Nijmegen",
@@ -498,7 +505,8 @@
  "thiemeloods": {
   "naam": "Thiemeloods Nijmegen",
   "adres": "Leemptstraat 34 Nijmegen ",
-  "plaats": "Nijmegen"
+  "plaats": "Nijmegen",
+  "bedrijf": "thiemeloods"
  },
  "titus-brandsma-gedachteniskerk": {
   "naam": "Titus Brandsma Gedachteniskerk Nijmegen",

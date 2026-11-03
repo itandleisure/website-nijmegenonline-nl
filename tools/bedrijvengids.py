@@ -3079,6 +3079,18 @@ def sub_cat(sub, ouder):
     return cat
 
 
+def toegevoegd(cat, bekend):
+    """Bedrijven die de redactie zelf toevoegt (data/bedrijvengids-toegevoegd.json, besluit Frans 3-11-2026), als ze er
+    nog niet in staan. Zelfde velden als een bedrijf uit OpenStreetMap; de scan vult tekst en openingstijden aan."""
+    pad = ROOT / "data" / "bedrijvengids-toegevoegd.json"
+    lijst = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
+    return [{"naam": v["naam"], "adres": v.get("adres", ""), "postcode": v.get("postcode", ""), "plaats": v.get("plaats", ""),
+             "telefoon": v.get("telefoon", ""), "website": v.get("website", ""), "lat": v.get("lat", ""), "lon": v.get("lon", ""),
+             "soort": v.get("soort", ""), "bron": "redactie", "in_gids": False, "email": "", "facebook": "", "instagram": "",
+             "openingstijden": [], "foto": "", "beschrijving": v.get("beschrijving", ""), "tekst": "", "slug": slug}
+            for slug, v in sorted(lijst.items()) if not slug.startswith("_") and v.get("categorie") == cat["slug"] and slug not in bekend]
+
+
 def main(bron):
     bron = pathlib.Path(bron)
     xml_ = bron / "bron" / "wp-xml" / "bedrijvengids-listdom.xml"
@@ -3097,6 +3109,7 @@ def main(bron):
             gids, overig = json.loads(json.dumps((opgeslagen[cat["slug"]]["gids"], opgeslagen[cat["slug"]]["overig"])))
         else:
             continue
+        overig += toegevoegd(cat, gebruikt | {b["slug"] for b in gids + overig})
         # Een bedrijf uit de oude gids kan in meer categorieën staan; het krijgt één pagina (bij de eerste categorie)
         # Hoort het volgens de scan bij een andere categorie, dan valt het hier stil weg (geen doorverwijzing: het
         # komt bij die andere categorie).

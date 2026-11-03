@@ -22,36 +22,22 @@ Een plek, of een bedrijf dat (nog) niet in de gids staat. Staat het er wel in, z
 | Ark van Oost Nijmegen (`ark-van-oost`) | Nijmegen | 1 |
 | Ateliers Vrouwe Udasigel Nijmegen (`ateliers-vrouwe-udasigel`) | Nijmegen | 1 |
 | Besiendershuis Nijmegen (`besiendershuis`) | Nijmegen | 1 |
-| Bibliotheek Mariënburg Nijmegen (`bibliotheek-marienburg`) | Nijmegen | 2 |
-| Bosatelier Nijmegen (`bosatelier`) | Nijmegen | 8 |
 | Buurderij de Lage Hof Heumen (`buurderij-de-lage-hof`) | Heumen | 2 |
-| Café De Kroon Nijmegen (`cafe-de-kroon`) | Nijmegen | 1 |
-| Concertgebouw De Vereeniging Nijmegen (`concertgebouw-de-vereeniging`) | Nijmegen | 4 |
-| De Boekerij Nijmegen (`de-boekerij`) | Nijmegen | 1 |
 | De Wieken Heumen (`de-wieken`) | Heumen | 3 |
-| Hackerspace Nijmegen (`hackerspace-nijmegen`) | Nijmegen | 1 |
-| Hotel The Rebyl Nijmegen (`hotel-the-rebyl`) | Nijmegen | 1 |
 | Irish pub The Shamrock Nijmegen (`irish-pub-the-shamrock`) | Nijmegen | 6 |
-| Kasteel Wijchen (`kasteel-wijchen`) | Wijchen | 2 |
-| Kleine Kirche Kleve (`kleine-kirche`) | Kleef | 1 |
 | Kloster Graefenthal Goch (`kloster-graefenthal`) | Goch | 9 |
-| Kunstkring Wijchen (`kunstkring-wijchen`) | Wijchen | 10 |
 | Lieskes Wengs Berg en Dal (`lieskes-wengs`) | Berg en Dal | 2 |
 | Marienburgplaats Nijmegen (`marienburgplaats`) | Nijmegen | 1 |
-| Museum Kurhaus Kleve (`museum-kurhaus`) | Kleef | 1 |
-| Museumpark oriëntalis Nijmegen (`museumpark-orientalis`) | Nijmegen | 2 |
 | NYMA makersplaats Nijmegen (`nyma-makersplaats`) | Nijmegen | 2 |
 | OBG Nijmegen (`obg-nijmegen`) | Nijmegen | 14 |
 | Pastor-Leinung-Platz, Kleef, Duitsland (`pastor-leinung-platz`) | Kleef | 1 |
 | Pastor-Leinung-Platz, Kleef, Duitsland (`pastor-leinung-platz-kleef-duitsland`) | Kleef | 1 |
-| Pop Culture Arcade Nijmegen (`pop-culture-arcade`) | Nijmegen | 17 |
 | Regeneratieve Burgerboerderij De Biesterhof Berg en Dal (`regeneratieve-burgerboerderij-de-biesterhof`) | Berg en Dal | 1 |
 | Roomsch leven Nijmegen (`roomsch-leven`) | Nijmegen | 1 |
 | Stedelijk Gymnasium Nijmegen (`stedelijk-gymnasium`) | Nijmegen | 1 |
 | Theater De Kik Elst (`theater-de-kik`) | Elst | 1 |
 | Theaterzaal C Nijmegen (`theaterzaal-c`) | Nijmegen | 2 |
 | Theaterzaal Pro Persona, hoofdgebouw Sterrenberg Nijmegen (`theaterzaal-pro-persona-hoofdgebouw-sterrenberg`) | Nijmegen | 1 |
-| Thiemeloods Nijmegen (`thiemeloods`) | Nijmegen | 3 |
 | Ufer des Kermisdahls Kleve (`ufer-des-kermisdahls`) | Kleef | 1 |
 | Wijngaard de plack Groesbeek (`wijngaard-de-plack`) | Groesbeek | 1 |
 
