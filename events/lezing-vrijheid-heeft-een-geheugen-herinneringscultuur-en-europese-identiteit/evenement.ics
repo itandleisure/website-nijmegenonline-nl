@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:lezing-vrijheid-heeft-een-geheugen-herinneringscultuur-en-europese-identiteit@nijmegenonline.nl
+DTSTAMP:20261103T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261110T180000
+DTEND;TZID=Europe/Amsterdam:20261110T190000
+SUMMARY:Lezing: Vrijheid heeft een Geheugen  Herinneringscultuur en Europese identiteit
+URL:https://www.nijmegenonline.nl/events/lezing-vrijheid-heeft-een-geheugen-herinneringscultuur-en-europese-identiteit/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/lezing-vrijheid-heeft-een-geheugen-herinneringscultuur-en-europese-identiteit/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

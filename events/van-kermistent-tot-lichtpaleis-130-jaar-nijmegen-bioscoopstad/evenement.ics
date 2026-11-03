@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:van-kermistent-tot-lichtpaleis-130-jaar-nijmegen-bioscoopstad@nijmegenonline.nl
+DTSTAMP:20261103T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261107T090000
+DTEND;TZID=Europe/Amsterdam:20270228T150000
+SUMMARY:Van kermistent tot lichtpaleis: 130 jaar Nijmegen bioscoopstad
+URL:https://www.nijmegenonline.nl/events/van-kermistent-tot-lichtpaleis-130-jaar-nijmegen-bioscoopstad/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/van-kermistent-tot-lichtpaleis-130-jaar-nijmegen-bioscoopstad/
+LOCATION:Huis van de Nijmeegse Geschiendenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

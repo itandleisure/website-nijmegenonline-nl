@@ -163,7 +163,7 @@
  },
  "de-vasim": {
   "naam": "De Vasim Nijmegen",
-  "adres": "Winselingseweg 41 Nijmegen",
+  "adres": "Winselingseweg 86, Nijmegen 6545 AH",
   "bedrijf": "de-vasim-nijmegen",
   "plaats": "Nijmegen"
  },
@@ -284,6 +284,11 @@
   "bedrijf": "huis-van-de-nijmeegse-geschiedenis",
   "plaats": "Nijmegen"
  },
+ "huis-van-de-nijmeegse-geschiendenis": {
+  "naam": "Huis van de Nijmeegse Geschiendenis",
+  "plaats": "Nijmegen",
+  "adres": "Mariënburg 26, 6511 PS Nijmegen"
+ },
  "infocentrum-wo2-nijmegen": {
   "naam": "Infocentrum WO2 Nijmegen",
   "adres": "Ridderstraat 27 6511 TM Nijmegen",
@@ -316,7 +321,8 @@
  "kleve": {
   "naam": "Kleve",
   "plaats": "Kleef",
-  "bedrijf": ""
+  "bedrijf": "",
+  "adres": "Opschlag 20-22, 47533 Kleve"
  },
  "kloster-graefenthal": {
   "naam": "Kloster Graefenthal Goch",
