@@ -218,6 +218,45 @@ def vacature(a, bestaand):
     }
 
 
+HERINNER_DAGEN = 7   # zoveel dagen voor de sluitdatum gaat de verlengmail
+
+
+def vacature_beheer(beheer, vacatures, nieuw, terugmelden, vandaag=None):
+    """Verlengen of sluiten zoals de werkgever koos via de mail, en de verlengmail een week voor de sluitdatum.
+    De mail gaat pas na een geslaagde commit (via terugmelden), zodat "herinnerd" eerst bewaard is."""
+    vandaag = vandaag or datetime.datetime.now(zoneinfo.ZoneInfo("Europe/Amsterdam")).date()
+    gewijzigd = False
+    for b in beheer:
+        v = next((x for x in vacatures if x.get("aanmelding") and x.get("aanmelding") == b.get("id")), None)
+        if not v:
+            continue
+        keuze = b.get("wijziging") or ""
+        if keuze and keuze != v.get("wijziging"):
+            if keuze.startswith("verlengen"):
+                basis = max(datetime.date.fromisoformat(v.get("sluit") or vandaag.isoformat()), vandaag)
+                v["sluit"] = (basis + datetime.timedelta(days=vacaturebank.LOOPTIJD)).isoformat()
+                v.pop("ingevuld", None)
+                v.pop("herinnerd", None)
+                nieuw.append("vacature %s verlengd tot %s" % (v["slug"], v["sluit"]))
+            elif keuze.startswith("sluiten"):
+                v["ingevuld"] = vandaag.isoformat()
+                nieuw.append("vacature %s gesloten" % v["slug"])
+            v["wijziging"] = keuze
+            gewijzigd = True
+        if keuze and b.get("verwerkt"):
+            terugmelden.append(b["verwerkt"])
+        geplaatst = datetime.date.fromisoformat(v.get("geplaatst") or vandaag.isoformat())
+        if (b.get("herinner") and vacaturebank.is_open(v, vandaag) and v.get("sluit") and not v.get("herinnerd")
+                and (vandaag - geplaatst).days >= HERINNER_DAGEN
+                and (datetime.date.fromisoformat(v["sluit"]) - vandaag).days <= HERINNER_DAGEN):
+            v["herinnerd"] = vandaag.isoformat()
+            gewijzigd = True
+            nieuw.append("verlengmail vacature %s" % v["slug"])
+            terugmelden.append(b["herinner"] + "&sluit=" + v["sluit"] +
+                               "&url=" + urllib.parse.quote("%s/vacatures/%s/" % (SITE, v["slug"]), safe=""))
+    return gewijzigd
+
+
 def tijd(waarde):
     m = re.match(r"(\d{1,2})[:.](\d{2})", waarde or "")
     return "%02d:%s" % (int(m.group(1)), m.group(2)) if m else ""
@@ -408,6 +447,8 @@ def main(test=None):
         slug_ = next((v["slug"] for v in vacatures if v.get("aanmelding") == a["id"]), "")
         if a.get("gepubliceerd"):
             terugmelden.append(a["gepubliceerd"] + ("&url=" + urllib.parse.quote("%s/vacatures/%s/" % (SITE, slug_), safe="") if slug_ else ""))
+    if vacature_beheer(lijst.get("vacature_beheer", []), vacatures, nieuw, terugmelden):
+        nieuwe_vacatures = True
     if nieuwe_vacatures:
         vacaturebank.bewaar(vacatures)
     nieuwe_berichten = False

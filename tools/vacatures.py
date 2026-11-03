@@ -4,6 +4,7 @@ Bouwt uit data/vacatures.json:
 - /vacatures/                  alle open vacatures, Uitgelicht bovenaan, met filters op soort werk en plaats
 - /vacatures/<slug>/           een pagina per vacature met JobPosting-gegevens voor Google for Jobs
 - /vacature-plaatsen/          uitleg, prijzen en het formulier (naar tools/google-formulier/Code.gs, type "vacature")
+- /voorwaarden-vacatures/      de voorwaarden
 
 Afspraken:
 - Een vacature staat standaard 45 dagen online (sluit = geplaatst + 45 dagen). Geeft de werkgever een eerdere
@@ -19,7 +20,11 @@ Afspraken:
 Velden per vacature: slug, functie, werkgever, bedrijf (sleutel in de bedrijvengids, of ""), site, logo, bureau,
 soort, dienstverband, uren_van, uren_tot, opleiding, adres, postcode, plaats, thuiswerken, salaris_van, salaris_tot,
 salaris_per ("uur" of "maand"), tekst (HTML), kort, solliciteren (link of e-mailadres), geplaatst, sluit, uitgelicht,
-aanmelding, eigen_pagina.
+aanmelding, eigen_pagina, ingevuld (datum waarop de werkgever hem sloot), wijziging (laatst verwerkte keuze uit de
+mail: verlengen of sluiten, met tijdstip), herinnerd (datum van de verlengmail).
+
+Verlengen en sluiten: tools/aanmeldingen.py verwerkt de keuze van de werkgever (zie vacature_beheer daar en
+beheerPagina in Code.gs) en vraagt een week voor de sluitdatum de verlengmail aan.
 
 Gebruik: python tools/vacatures.py [--datum 2026-11-03]
 """
@@ -189,13 +194,35 @@ def kenmerken(v):
     return " · ".join(x for x in (plaats_van(v), uren(v), v.get("dienstverband", "")) if x)
 
 
+URENBANDEN = [("fulltime", "Fulltime (32 uur of meer)"), ("parttime", "Parttime (12 tot 32 uur)"), ("weinig", "Minder dan 12 uur")]
+
+
+def urenbanden(v):
+    """De urenbanden waar de vacature in valt (een bereik als 24 tot 36 uur valt in parttime en fulltime)."""
+    getallen = [int(float(x)) for x in (v.get("uren_van"), v.get("uren_tot")) if re.match(r"^\d+([.,]\d+)?$", str(x or "").strip().replace(",", "."))]
+    if not getallen:
+        return []
+    van, tot = min(getallen), max(getallen)
+    return [b for b, (onder, boven) in zip([b[0] for b in URENBANDEN], [(32, 999), (12, 31), (0, 11)]) if van <= boven and tot >= onder]
+
+
+def niveau(v):
+    """Opleidingsniveau als getal: 0 = geen voorkeur, 1 = vmbo ... 4 = wo."""
+    return OPLEIDINGEN.index(v["opleiding"]) if v.get("opleiding") in OPLEIDINGEN else 0
+
+
 def kaart(v, root):
     href = "%svacatures/%s/" % (root, v["slug"])
     label = "Uitgelicht" if v.get("uitgelicht") else ("Via een bureau" if v.get("bureau") else v.get("soort") or "Vacature")
     kort = v.get("kort") or samenvatting(v.get("tekst", ""), 140)
-    return ('<a class="vacaturekaart%s" href="%s" data-soort="%s" data-plaats="%s"><span class="vacaturekaart__status">%s</span>'
+    data = {"soort": v.get("soort") or "Overig", "plaats": plaats_van(v), "dienstverband": v.get("dienstverband", ""),
+            "uren": " ".join(urenbanden(v)), "opleiding": str(niveau(v)),
+            "thuis": "1" if v.get("thuiswerken") in ("Deels", "Volledig") else "",
+            "zoek": " ".join((v["functie"], v["werkgever"], v.get("soort", ""))).lower()}
+    return ('<a class="vacaturekaart%s" href="%s"%s><span class="vacaturekaart__status">%s</span>'
             '<strong>%s</strong><span class="vacaturekaart__werkgever">%s</span><span class="vacaturekaart__regel">%s</span><span>%s</span></a>'
-            % (" vacaturekaart--uitgelicht" if v.get("uitgelicht") else "", href, esc(v.get("soort") or "Overig"), esc(plaats_van(v)),
+            % (" vacaturekaart--uitgelicht" if v.get("uitgelicht") else "", href,
+               "".join(' data-%s="%s"' % (k, esc(w)) for k, w in data.items()),
                esc(label), esc(v["functie"]), esc(v["werkgever"]), esc(kenmerken(v)), esc(kort)))
 
 
@@ -205,6 +232,35 @@ def filterknoppen(naam, waarden, label):
                 for w, n in waarden]
     return ('        <div class="gidsen-filter vacaturefilter" role="group" aria-label="%s" hidden>\n          %s\n        </div>'
             % (esc(label), "\n          ".join(knoppen)))
+
+
+def keuzelijst(naam, label, alles, opties):
+    """Keuzelijst in de regel "meer filters" (zelfde stijl als de agenda); opties = [(waarde, tekst)]."""
+    return ('<label class="agenda-keuze"><span>%s</span><select data-filter="%s"><option value="">%s</option>%s</select></label>'
+            % (esc(label), naam, esc(alles), "".join('<option value="%s">%s</option>' % (esc(w), esc(t)) for w, t in opties)))
+
+
+def meer_filters(open_, plaatsen):
+    """Tweede filterregel: zoeken, plaats, dienstverband, uren, opleiding en thuiswerken (besluit Frans, 3-11-2026).
+    Een keuzelijst staat er alleen als er iets te kiezen valt."""
+    delen = ['<label class="agenda-keuze vacaturezoek"><span>Zoek</span><input type="search" data-filter="zoek" placeholder="Functie of bedrijf"></label>']
+    if len(plaatsen) > 1:
+        delen.append(keuzelijst("plaats", "Plaats", "Alle plaatsen", [(p, "%s (%d)" % (p, n)) for p, n in plaatsen]))
+    diensten = [d for d in DIENSTVERBANDEN if any(v.get("dienstverband") == d for v in open_)]
+    if len(diensten) > 1:
+        delen.append(keuzelijst("dienstverband", "Dienstverband", "Alle", [(d, "%s (%d)" % (d, sum(1 for v in open_ if v.get("dienstverband") == d))) for d in diensten]))
+    banden = [(b, t) for b, t in URENBANDEN if any(b in urenbanden(v) for v in open_)]
+    if len(banden) > 1:
+        delen.append(keuzelijst("uren", "Uren", "Alle", banden))
+    if len({niveau(v) for v in open_}) > 1:
+        delen.append(keuzelijst("opleiding", "Jouw opleiding", "Maakt niet uit",
+                                [(str(i), o) for i, o in enumerate(OPLEIDINGEN) if i > 0]))
+    thuis = sum(1 for v in open_ if v.get("thuiswerken") in ("Deels", "Volledig"))
+    if 0 < thuis < len(open_):
+        delen.append('<button type="button" class="agenda-schakel" data-extra="thuis" aria-pressed="false">Thuiswerken mogelijk</button>')
+    delen.append('<button type="button" class="agenda-wis link" hidden>Wis filters</button>')
+    return ('        <div class="agenda-meer vacature-meer" role="group" aria-label="Meer filters" hidden>\n          %s\n        </div>'
+            % "\n          ".join(delen))
 
 
 def overzicht(open_, vandaag):
@@ -220,8 +276,7 @@ def overzicht(open_, vandaag):
     if open_:
         if len(soorten) > 1:
             inhoud.append(filterknoppen("soort", soorten, "Filter op soort werk"))
-        if len(plaatsen) > 1:
-            inhoud.append(filterknoppen("plaats", plaatsen, "Filter op plaats"))
+        inhoud.append(meer_filters(open_, plaatsen))
         inhoud.append('        <p class="vacaturefilter__uitkomst" role="status" hidden></p>')
         inhoud.append('        <div class="vacaturelijst">\n%s\n        </div>' % "\n".join("          " + kaart(v, root) for v in open_))
     else:
@@ -230,7 +285,7 @@ def overzicht(open_, vandaag):
                   '        <p>Ben je een werkgever in Nijmegen of omgeving? Plaats je vacature gratis: hij staat %d dagen online, op je '
                   'bedrijfspagina in de bedrijvengids en in Google for Jobs. Wil je meer opvallen, kies dan Uitgelicht. '
                   '<a href="%svacature-plaatsen/">Zo werkt het</a>.</p>' % (LOOPTIJD, root))
-    inhoud.append('        <script src="%sassets/js/vacatures.js?v=1" defer></script>' % root)
+    inhoud.append('        <script src="%sassets/js/vacatures.js?v=2" defer></script>' % root)
     lijst = {"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
         {"@type": "ListItem", "position": n + 1, "url": "%s/vacatures/%s/" % (SITE, v["slug"])} for n, v in enumerate(open_[:50])]}
     extra = '\n  <script type="application/ld+json">%s</script>' % json.dumps(lijst, ensure_ascii=False) if open_ else ""
@@ -311,7 +366,6 @@ def plaatsen_pagina():
                    "of laat dit veld leeg en vul hieronder de gegevens in."}),
         ("werkgever", "Naam van het bedrijf", "text", True, None),
         ("site", "Website", "url", True, None),
-        ("kvk", "KvK-nummer", "text", False, None),
         ("bureau", "Ben je een uitzend-, wervings- of selectiebureau?", "radio", True,
          [("nee", "Nee, we zoeken iemand voor ons eigen bedrijf"), ("ja", "Ja, we werven voor een opdrachtgever (€ 19 per vacature)")]),
         ("foto", "Logo (optioneel)", "bestand", False, "JPG, PNG of WebP."),
@@ -355,6 +409,7 @@ def plaatsen_pagina():
           <li>Vul het formulier in. Kies je bedrijf uit onze bedrijvengids, dan komt de vacature ook op je bedrijfspagina.</li>
           <li>De redactie bekijkt elke vacature voordat hij online gaat. Je krijgt een e-mail zodra hij op de site staat.</li>
           <li>Je vacature staat {dagen} dagen online, of korter als je een eerdere sluitdatum kiest. Daarna gaat hij vanzelf offline.</li>
+          <li>Een week voor het einde krijg je een e-mail. Daarmee verleng je de vacature met {dagen} dagen, of sluit je hem als hij vervuld is. Eerder sluiten kan ook met de link in de mail die je krijgt als de vacature online staat.</li>
           <li>Elke vacature komt met de juiste gegevens op de site, zodat Google hem kan tonen in Google for Jobs.</li>
         </ul>
         <h2>Prijzen</h2>
@@ -364,13 +419,70 @@ def plaatsen_pagina():
           <li><strong>Uitzend-, wervings- en selectiebureaus</strong>: € 19 excl. btw per vacature. We vermelden dat de vacature via een bureau gaat.</li>
           <li>Heb je een pakket in de bedrijvengids? Dan zitten er uitgelichte vacatures bij: 2 per jaar bij Uitgelicht, 6 bij Partner en onbeperkt bij Hoofdpartner.</li>
         </ul>
-        <p>We plaatsen geen vacatures waarvoor sollicitanten moeten betalen, geen reclame die op een vacature lijkt en geen vacatures met discriminerende eisen. Het werk moet in Nijmegen of omgeving zijn (tot en met Kleve).</p>
+        <p>We plaatsen geen vacatures waarvoor sollicitanten moeten betalen, geen reclame die op een vacature lijkt en geen vacatures met discriminerende eisen. Het werk moet in Nijmegen of omgeving zijn (tot en met Kleve). Lees ook de <a href="../voorwaarden-vacatures/">voorwaarden voor vacatures</a>.</p>
         <h2>Je vacature</h2>
 {formulier}""".format(dagen=LOOPTIJD, formulier=paginas.formulier("vacature", "Vacature aangemeld via NijmegenOnline", velden, "Vacature versturen",
         "Bedankt! De redactie heeft je vacature ontvangen en bekijkt hem zo snel mogelijk. Je krijgt een e-mail zodra hij online staat, "
         "of als we hem niet kunnen plaatsen."))
     return paginas.pagina("Vacature plaatsen", "Plaats je vacature gratis op NijmegenOnline: voor werkgevers in Nijmegen en omgeving, ook in Google for Jobs.",
                           "vacature-plaatsen", '<a href="../vacatures/">Vacatures</a> › Vacature plaatsen', inhoud)
+
+
+def voorwaarden_pagina():
+    """Voorwaarden voor vacatures (besluit Frans, 3-11-2026: "Voorwaarden mag je uitwerken")."""
+    inhoud = """        <h1>Voorwaarden voor vacatures</h1>
+        <p class="pagina__intro">Deze voorwaarden gelden voor elke vacature op NijmegenOnline. Door een vacature te plaatsen ga je ermee akkoord. Verder gelden onze <a href="../algemene-voorwaarden/">algemene voorwaarden</a>.</p>
+        <h2>1. Wie kan een vacature plaatsen?</h2>
+        <ul>
+          <li>Werkgevers met een werkplek in Nijmegen of omgeving, tot en met Kleve. Bij een functie op afstand moet het bedrijf in die regio gevestigd zijn.</li>
+          <li>Uitzend-, wervings- en selectiebureaus, voor werk in dezelfde regio. Een bureau geeft in het formulier aan dat het een bureau is. Op de site staat dan "Via een bureau".</li>
+          <li>Je plaatst alleen vacatures die echt open zijn, en je mag namens het bedrijf optreden.</li>
+        </ul>
+        <h2>2. Wat plaatsen we niet?</h2>
+        <ul>
+          <li>Vacatures waarvoor sollicitanten iets moeten betalen, kopen of investeren, zoals een starterspakket, cursus of borg.</li>
+          <li>Piramidespelen, netwerkmarketing en "word je eigen baas"-aanbod dat geen echte baan is.</li>
+          <li>Reclame of werving van klanten die zich voordoet als vacature.</li>
+          <li>Eisen die discrimineren, bijvoorbeeld op geslacht, afkomst, geloof, leeftijd, handicap of seksuele gerichtheid, tenzij de wet dat toestaat (zoals een minimumleeftijd voor het schenken van alcohol).</li>
+          <li>Werk dat in strijd is met de wet, zoals werk onder het minimumloon of zonder geldige verblijfs- of werkvergunning.</li>
+          <li>Erotisch werk en vacatures met onrealistische beloftes over verdiensten.</li>
+        </ul>
+        <h2>3. Hoe lang staat een vacature online?</h2>
+        <ul>
+          <li>Een vacature staat {dagen} dagen online, of korter als je een eerdere sluitdatum kiest.</li>
+          <li>Een week voor het einde krijg je een e-mail. Daarmee verleng je de vacature met {dagen} dagen, of sluit je hem.</li>
+          <li>Is de vacature eerder vervuld? Sluit hem dan met de link uit de e-mail. Hij gaat dan binnen een uur offline.</li>
+          <li>Doe je niets, dan gaat de vacature na de sluitdatum vanzelf offline. De pagina blijft nog even bereikbaar met de melding dat de vacature gesloten is.</li>
+        </ul>
+        <h2>4. Prijzen en betalen</h2>
+        <ul>
+          <li><strong>Basis</strong> is gratis voor werkgevers uit Nijmegen en omgeving, ook bij verlengen.</li>
+          <li><strong>Uitgelicht</strong> kost € 49 excl. btw per vacature, voor {dagen} dagen. Verleng je een uitgelichte vacature, dan kost dat opnieuw € 49.</li>
+          <li><strong>Bureaus</strong> betalen € 19 excl. btw per vacature, voor {dagen} dagen. Ook verlengen kost € 19.</li>
+          <li>Je krijgt de factuur nadat de vacature online staat. Betaal binnen 14 dagen.</li>
+          <li>Heb je een pakket in de bedrijvengids? Dan zitten er uitgelichte vacatures bij: 2 per jaar bij Uitgelicht, 6 bij Partner en onbeperkt bij Hoofdpartner.</li>
+          <li>Haalt de redactie een vacature offline omdat hij niet aan deze voorwaarden voldoet, dan krijg je geen geld terug.</li>
+        </ul>
+        <h2>5. Wat doet de redactie?</h2>
+        <ul>
+          <li>We bekijken elke vacature voordat hij online gaat. We mogen een vacature weigeren of later offline halen, ook zonder opgave van reden.</li>
+          <li>We mogen de tekst inkorten of herschrijven, zodat hij goed leesbaar is en past bij de site. De inhoud van de functie veranderen we niet.</li>
+          <li>We mogen bij twijfel om meer informatie vragen, bijvoorbeeld om te controleren of het bedrijf echt bestaat.</li>
+        </ul>
+        <h2>6. Jouw verantwoordelijkheid</h2>
+        <ul>
+          <li>Jij bent verantwoordelijk voor de inhoud van de vacature: die klopt en houdt zich aan de wet.</li>
+          <li>Sollicitaties gaan rechtstreeks naar jou. NijmegenOnline is geen partij bij de sollicitatie en ontvangt geen sollicitaties.</li>
+          <li>Je gaat zorgvuldig om met de gegevens van sollicitanten, volgens de AVG.</li>
+          <li>We doen ons best om je vacature goed te laten zien, ook in Google for Jobs, maar we garanderen geen aantal reacties of een plek in Google.</li>
+        </ul>
+        <h2>7. Privacy</h2>
+        <p>Je naam, e-mailadres en telefoonnummer gebruiken we alleen om contact over de vacature op te nemen. Ze komen niet op de website. We bewaren je aanmelding drie maanden na het insturen. Lees meer in onze <a href="../privacy-policy/">privacyverklaring</a>.</p>
+        <h2>8. Vragen</h2>
+        <p>Heb je een vraag, of zie je een vacature die niet klopt? Mail naar <a href="mailto:redactie@nijmegenonline.nl">redactie@nijmegenonline.nl</a> of <a href="../kom-in-contact/">neem contact op</a>.</p>
+        <p><a class="knop" href="../vacature-plaatsen/">Vacature plaatsen</a></p>""".format(dagen=LOOPTIJD)
+    return paginas.pagina("Voorwaarden voor vacatures", "De voorwaarden voor het plaatsen van een vacature op NijmegenOnline: wie kan plaatsen, wat we niet plaatsen, looptijd en prijzen.",
+                          "voorwaarden-vacatures", '<a href="../vacatures/">Vacatures</a> › Voorwaarden', inhoud)
 
 
 def doorverwijzing(slug):
@@ -393,11 +505,12 @@ def main(vandaag):
     open_ = open_vacatures(vandaag, vacatures)
     schrijf("vacatures", overzicht(open_, vandaag))
     schrijf("vacature-plaatsen", plaatsen_pagina())
+    schrijf("voorwaarden-vacatures", voorwaarden_pagina())
     pagina_, weg = 0, []
     for v in vacatures:
         if v.get("eigen_pagina"):
             continue
-        sluit = v.get("sluit") or "9999-12-31"
+        sluit = min(v.get("sluit") or "9999-12-31", v.get("ingevuld") or "9999-12-31")   # ingevuld: door de werkgever gesloten
         if (vandaag - datetime.date.fromisoformat(min(sluit, vandaag.isoformat()))).days > BEWAAR_DAGEN:
             doorverwijzing(v["slug"])
             weg.append(v["slug"])

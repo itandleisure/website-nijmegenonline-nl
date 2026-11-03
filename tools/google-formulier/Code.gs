@@ -96,13 +96,15 @@ var FORMULIEREN = {
     bewerkbaar: ['functie', 'werkgever', 'bedrijf', 'site', 'bureau', 'soort', 'dienstverband', 'uren_van', 'uren_tot', 'opleiding',
       'adres', 'postcode', 'plaats', 'thuiswerken', 'salaris_van', 'salaris_tot', 'salaris_per', 'solliciteren', 'sluitdatum', 'pakket'],
     velden: [['functie', 'Functie'], ['werkgever', 'Werkgever'], ['bedrijf', 'Bedrijf in de gids'], ['site', 'Website'],
-      ['kvk', 'KvK-nummer'], ['bureau', 'Uitzend-, wervings- of selectiebureau (ja/nee)'], ['soort', 'Soort werk'],
+      ['bureau', 'Uitzend-, wervings- of selectiebureau (ja/nee)'], ['soort', 'Soort werk'],
       ['dienstverband', 'Dienstverband'], ['uren_van', 'Uren per week vanaf'], ['uren_tot', 'Uren per week tot'],
       ['opleiding', 'Opleidingsniveau'], ['adres', 'Adres'], ['postcode', 'Postcode'], ['plaats', 'Plaats'],
       ['thuiswerken', 'Thuiswerken'], ['salaris_van', 'Salaris vanaf'], ['salaris_tot', 'Salaris tot'], ['salaris_per', 'Salaris per (maand/uur)'],
       ['omschrijving', 'Vacaturetekst'], ['solliciteren', 'Solliciteren via'], ['sluitdatum', 'Sluitdatum'],
       ['pakket', 'Pakket (Basis of Uitgelicht)'], ['factuur', 'Factuurgegevens'], ['foto', 'Logo'],
-      ['naam', 'Contactpersoon'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking'], ['voorwaarden', 'Voorwaarden']]
+      ['naam', 'Contactpersoon'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking'], ['voorwaarden', 'Voorwaarden'],
+      // Niet in het formulier: de werkgever kiest verlengen of sluiten via de link in de mail (zie beheerPagina)
+      ['wijziging', 'Verlengen of sluiten']]
   },
   // Geen formulier op de site: mails die de redactie doorstuurt naar nieuws@nijmegenonline.nl.
   // tools/nieuws_ophalen.py (GitHub, elke 15 minuten) stuurt ze hierheen, zie nieuwsOntvangen().
@@ -179,6 +181,7 @@ function doPost(e) {
     ['functie', 'werkgever', 'site', 'bureau', 'soort', 'dienstverband', 'plaats', 'thuiswerken', 'omschrijving', 'solliciteren', 'telefoon']
       .forEach(function (v) { if (!g[v]) fouten.push(v); });
     if (g.voorwaarden !== 'akkoord') fouten.push('voorwaarden');
+    g.wijziging = '';
   }
   if (type === 'bedrijf') {
     ['bedrijf', 'categorie', 'adres', 'postcode', 'plaats', 'telefoon', 'omschrijving'].forEach(function (v) { if (!g[v]) fouten.push(v); });
@@ -225,6 +228,15 @@ function doPost(e) {
 function doGet(e) {
   var p = (e && e.parameter) || {};
   if (p.actie === 'lijst') return antwoord(lijst());
+  // Vacature verlengen of sluiten: de werkgever opent de link uit de mail
+  if (p.actie === 'beheer') return beheerPagina(p.id, p.t);
+  // De workflow (tools/aanmeldingen.py) vraagt om een verlengmail of meldt een wijziging als verwerkt
+  if (p.actie === 'herinner' || p.actie === 'verwerkt') {
+    if (!p.id || p.t !== teken('herinner', p.id)) return antwoord({ ok: false });
+    if (p.actie === 'verwerkt') wijzigingVerwerkt(p.id);
+    else stuurVerlengmail(p.id, p.sluit, /^https:\/\/www\.nijmegenonline\.nl\//.test(p.url || '') ? p.url : '');
+    return antwoord({ ok: true });
+  }
   if (p.actie === 'akkoord' || p.actie === 'afwijzen' || p.actie === 'gepubliceerd' || p.actie === 'bewerken') {
     var cfg = FORMULIEREN[p.type];
     if (!cfg || !cfg.goedkeuren || !p.id || p.t !== teken(p.type, p.id)) return pagina('Deze link klopt niet.');
@@ -282,6 +294,7 @@ function lijst() {
       return item;
     });
   });
+  uit.vacature_beheer = vacatureBeheer();
   return uit;
 }
 
@@ -1158,7 +1171,9 @@ function stuurPlaatsingsmail(type, id, url) {
     (type === 'evenement' ? 'je evenement "' + naam + '" staat nu in de agenda van NijmegenOnline.'
       : type === 'vacature' ? 'je vacature "' + naam + '" staat nu op NijmegenOnline. Hij blijft 45 dagen online, of tot de sluitdatum die je koos.' +
         (/^Uitgelicht/.test(g.pakket) ? ' Je hebt gekozen voor Uitgelicht; de factuur volgt apart.' : '') +
-        (g.bureau === 'ja' ? ' Als bureau betaal je € 19 excl. btw per vacature; de factuur volgt apart.' : '')
+        (g.bureau === 'ja' ? ' Als bureau betaal je € 19 excl. btw per vacature; de factuur volgt apart.' : '') +
+        ' Een week voor het einde krijg je een mail waarmee je hem kunt verlengen. Is de vacature eerder vervuld? Sluit hem dan hier: ' +
+        beheerLink(id)
       : g.vermelding ? 'de wijzigingen voor "' + naam + '" staan nu in de bedrijvengids van NijmegenOnline.'
       : 'je bedrijf "' + naam + '" staat nu in de bedrijvengids van NijmegenOnline.') +
     (url ? '\n\nBekijk het hier: ' + url : '') +
@@ -1326,13 +1341,12 @@ function domeinVan(tekst) {
 
 // Blok voor de mail en de bewerkpagina: wat er nu staat naast wat er is ingestuurd, met de wijzigingen gemarkeerd,
 // en of het e-mailadres bij de website van het bedrijf hoort (een concurrent heeft dat meestal niet).
-// Bovenaan de beoordeelpagina van een vacature: wat de redactie moet nakijken (bureau, pakket, factuur, KvK, e-mail)
+// Bovenaan de beoordeelpagina van een vacature: wat de redactie moet nakijken (bureau, pakket, factuur, e-mail)
 function vacatureBlok(g) {
   var punten = [];
   if (g.bureau === 'ja') punten.push('Uitzend-, wervings- of selectiebureau: € 19 per vacature factureren. Op de site staat "via een bureau".');
   if (/^Uitgelicht/.test(g.pakket)) punten.push('Gekozen voor Uitgelicht (€ 49): factureren, of zet Pakket op Basis tot de betaling binnen is.');
   if (g.factuur) punten.push('Factuurgegevens: ' + g.factuur);
-  if (g.kvk) punten.push('KvK-nummer: ' + g.kvk);
   if (!g.bedrijf) punten.push('Niet gekoppeld aan een bedrijf in de gids. Kies het hieronder als het er wel in staat.');
   var mail = domeinVan(g.email), site = domeinVan(g.site);
   if (mail && site && mail !== site) punten.push('Het e-mailadres (' + mail + ') hoort niet bij de website (' + site + ').');
@@ -1466,7 +1480,9 @@ function blad(cfg) {
     sheet.getRange(1, 1, 1, nieuw.length).setValues([nieuw]).setFontWeight('bold');
     sheet.getRange(2, 1, omgezet.length, nieuw.length).setValues(omgezet);
     if (cfg.goedkeuren) sheet.getRange(1, 3, sheet.getMaxRows(), kop.length - 2).setNumberFormat('@');
-  } else if (sheet.getLastColumn() < kop.length || oud[0] !== 'Datum') {
+  } else if (oud.join('|') !== kop.join('|')) {
+    // Nog geen rijen (of nog geen kopregel): de kopregel gewoon vervangen, ook als er een veld is vervallen
+    if (oud.length > kop.length) sheet.getRange(1, kop.length + 1, 1, oud.length - kop.length).clearContent();
     sheet.getRange(1, 1, 1, kop.length).setValues([kop]).setFontWeight('bold');
     // Datum, tijden en teksten als tekst bewaren, zodat Sheets er geen eigen notatie van maakt
     if (cfg.goedkeuren) sheet.getRange(1, 3, sheet.getMaxRows(), kop.length - 2).setNumberFormat('@');
@@ -1551,4 +1567,129 @@ function js_(waarde) {
 
 function html_(tekst) {
   return String(tekst || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// ---------- Vacatures verlengen en sluiten (besluit Frans, 3-11-2026) ----------
+// Plaatsingsmail en verlengmail bevatten een link naar beheerPagina. De werkgever kiest daar verlengen of sluiten;
+// dat komt in de kolom "Verlengen of sluiten". tools/aanmeldingen.py haalt het elk uur op (lijst → vacature_beheer),
+// past data/vacatures.json aan en meldt het daarna als verwerkt. De verlengmail vraagt diezelfde workflow aan,
+// een week voor de sluitdatum, want alleen de website weet wanneer een vacature sluit.
+
+var VERLENG_DAGEN = 45;
+
+function beheerLink(id) {
+  return ScriptApp.getService().getUrl() + '?actie=beheer&id=' + encodeURIComponent(id) + '&t=' + teken('beheer', id);
+}
+
+function vacatureRij(id) {
+  var cfg = FORMULIEREN.vacature;
+  var nr = zoekRij(cfg, id);
+  if (!nr) return null;
+  var k = kolommen(cfg);
+  return { nr: nr, g: rijNaarG(cfg, blad(cfg).getRange(nr, 1, 1, k.length).getValues()[0], k) };
+}
+
+function zetWijziging(nr, waarde) {
+  var cfg = FORMULIEREN.vacature;
+  blad(cfg).getRange(nr, plek(cfg, 'wijziging') + 1).setValue(waarde);
+}
+
+// Gepubliceerde vacatures met hun gekozen wijziging, en de links waarmee de workflow een verlengmail vraagt
+// of een wijziging als verwerkt meldt. Het teken staat alleen in deze lijst, nooit in de repository.
+function vacatureBeheer() {
+  var cfg = FORMULIEREN.vacature;
+  var sheet = blad(cfg);
+  var k = kolommen(cfg);
+  if (sheet.getLastRow() < 2) return [];
+  var basis = ScriptApp.getService().getUrl();
+  return sheet.getRange(2, 1, sheet.getLastRow() - 1, k.length).getValues().map(function (r) {
+    return rijNaarG(cfg, r, k);
+  }).filter(function (g) { return g.status === 'Gepubliceerd' && g.id; }).map(function (g) {
+    var t = teken('herinner', g.id);
+    return {
+      id: g.id,
+      wijziging: /^(verlengen|sluiten) /.test(g.wijziging) ? g.wijziging : '',   // met tijdstip, zodat dezelfde keuze maar één keer telt
+      herinner: basis + '?actie=herinner&id=' + encodeURIComponent(g.id) + '&t=' + t,
+      verwerkt: basis + '?actie=verwerkt&id=' + encodeURIComponent(g.id) + '&t=' + t
+    };
+  });
+}
+
+// Pagina voor de werkgever. Een knop, geen directe actie bij het openen: virusscanners in mailprogramma's openen links ook.
+function beheerPagina(id, t) {
+  if (!id || t !== teken('beheer', id)) return pagina('Deze link klopt niet.');
+  var rij = vacatureRij(id);
+  if (!rij) return pagina('Deze vacature staat niet meer in ons systeem. Neem contact op via ' + ONTVANGER + '.');
+  var g = rij.g;
+  var naam = g.functie + (g.werkgever ? ' bij ' + g.werkgever : '');
+  var css = 'body{font-family:Arial,sans-serif;font-size:17px;color:#222;max-width:560px;margin:40px auto;padding:16px;line-height:1.5}' +
+    'h1{font-size:24px;color:#539c20}.knoppen{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}' +
+    'button{padding:12px 20px;border:0;border-radius:6px;font:inherit;font-weight:bold;cursor:pointer;color:#fff;background:#539c20}' +
+    'button.sluit{background:#b03a2e}button:disabled{opacity:.5}#melding{font-weight:bold}';
+  var html = '<!doctype html><html><head><meta charset="utf-8"><style>' + css + '</style></head><body>' +
+    '<h1>' + html_(naam) + '</h1>' +
+    '<p>Wil je deze vacature op NijmegenOnline verlengen of sluiten?</p>' +
+    '<p><b>Verlengen</b>: de vacature blijft nog ' + VERLENG_DAGEN + ' dagen online.<br>' +
+    '<b>Sluiten</b>: de vacature is vervuld en gaat binnen een uur offline.</p>' +
+    '<div class="knoppen"><button onclick="kies(\'verlengen\')">Verleng ' + VERLENG_DAGEN + ' dagen</button>' +
+    '<button class="sluit" onclick="kies(\'sluiten\')">Sluit de vacature</button></div><p id="melding"></p>' +
+    '<script>var S=' + js_({ id: id, t: t }) + ';' +
+    'function kies(a){document.querySelectorAll("button").forEach(function(b){b.disabled=true});' +
+    ' google.script.run.withSuccessHandler(function(m){document.getElementById("melding").textContent=m})' +
+    ' .withFailureHandler(function(e){document.querySelectorAll("button").forEach(function(b){b.disabled=false});' +
+    '  document.getElementById("melding").textContent="Dat lukte niet: "+e.message}).vacatureKeuze(S.id,S.t,a)}' +
+    '</script></body></html>';
+  return HtmlService.createHtmlOutput(html).setTitle('Vacature verlengen of sluiten · NijmegenOnline')
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1');
+}
+
+// Aangeroepen vanaf de beheerpagina (google.script.run)
+function vacatureKeuze(id, t, keuze) {
+  if (!id || t !== teken('beheer', id) || (keuze !== 'verlengen' && keuze !== 'sluiten')) throw new Error('Deze link klopt niet.');
+  var rij = vacatureRij(id);
+  if (!rij) throw new Error('Deze vacature staat niet meer in ons systeem.');
+  if (rij.g.status !== 'Gepubliceerd') throw new Error('Deze vacature staat nog niet online.');
+  zetWijziging(rij.nr, keuze + ' ' + Utilities.formatDate(new Date(), 'Europe/Amsterdam', 'yyyy-MM-dd HH:mm'));
+  try {
+    MailApp.sendEmail(ONTVANGER, 'Vacature ' + (keuze === 'verlengen' ? 'verlengd' : 'gesloten') + ': ' + rij.g.functie,
+      rij.g.functie + ' bij ' + rij.g.werkgever + ' is door de werkgever ' + (keuze === 'verlengen' ? 'verlengd' : 'gesloten') +
+      '. De website past het binnen een uur aan.' + (keuze === 'verlengen' && /^Uitgelicht/.test(rij.g.pakket) ? ' Let op: Uitgelicht, verlenging factureren.' : '') +
+      (keuze === 'verlengen' && rij.g.bureau === 'ja' ? ' Let op: bureau, verlenging factureren (€ 19).' : ''),
+      { name: AFZENDER_NAAM });
+  } catch (fout) { console.error('Melding aan de redactie mislukt: ' + fout); }
+  return keuze === 'verlengen'
+    ? 'Gelukt. De vacature blijft nog ' + VERLENG_DAGEN + ' dagen online; de website past het binnen een uur aan.'
+    : 'Gelukt. De vacature gaat binnen een uur offline. Succes met je nieuwe collega!';
+}
+
+function wijzigingVerwerkt(id) {
+  var rij = vacatureRij(id);
+  if (rij && rij.g.wijziging && !/^verwerkt/.test(rij.g.wijziging)) zetWijziging(rij.nr, 'verwerkt: ' + rij.g.wijziging);
+}
+
+function stuurVerlengmail(id, sluit, url) {
+  var rij = vacatureRij(id);
+  if (!rij) return;
+  var g = rij.g;
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email)) return;
+  var datum = /^\d{4}-\d{2}-\d{2}$/.test(sluit || '')
+    ? Utilities.formatDate(new Date(sluit + 'T12:00:00Z'), 'Europe/Amsterdam', 'd MMMM yyyy').replace(/[A-Za-z]+/, function (m) {
+        return { January: 'januari', February: 'februari', March: 'maart', April: 'april', May: 'mei', June: 'juni', July: 'juli',
+          August: 'augustus', September: 'september', October: 'oktober', November: 'november', December: 'december' }[m] || m;
+      })
+    : 'binnenkort';
+  var tekst = 'Beste ' + (g.naam || 'werkgever') + ',\n\nJe vacature "' + g.functie + '" staat nog tot ' + datum + ' op NijmegenOnline.' +
+    (url ? '\n\nBekijk hem hier: ' + url : '') +
+    '\n\nZoek je nog mensen? Verleng de vacature dan met ' + VERLENG_DAGEN + ' dagen. Is hij vervuld? Sluit hem dan, zodat er geen sollicitaties meer komen. ' +
+    'Allebei kan hier: ' + beheerLink(id) +
+    (/^Uitgelicht/.test(g.pakket) || g.bureau === 'ja' ? '\n\nVerleng je, dan sturen we een nieuwe factuur, net als bij de eerste plaatsing.' : '') +
+    '\n\nDoe je niets, dan gaat de vacature op ' + datum + ' vanzelf offline.\n\nMet vriendelijke groet,\nRedactie NijmegenOnline';
+  mailInzender({
+    to: g.email,
+    name: 'Redactie NijmegenOnline',
+    subject: 'Je vacature loopt bijna af: ' + g.functie,
+    body: tekst,
+    htmlBody: '<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5">' +
+      html_(tekst).replace(/(https:\/\/[^\s<]+[^\s<.,])/g, '<a href="$1">$1</a>').replace(/\n/g, '<br>') + '</div>'
+  });
 }

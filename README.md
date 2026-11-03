@@ -251,7 +251,11 @@ Meteen publiceren in plaats van op het hele uur: Actions > Aanmeldingen publicer
 - Open vacatures krijgen JobPosting-gegevens voor Google for Jobs. Een vacature staat ook op de bedrijfspagina van de werkgever in de bedrijvengids.
 - Data: `data/vacatures.json`. Bouwen: `python3 tools/vacatures.py` (draait mee in de workflows agenda en aanmeldingen). De eigen NijmegenOnline-vacatures (`eigen_pagina`) houden hun eigen pagina.
 - Werkgebied: Nijmegen en omgeving, plus Kleve. Arnhem valt erbuiten.
-- Nog niet gebouwd: verlengmail, artikel met voorwaarden, pagina's per soort werk en plaats, blok op de homepage, Indexing API.
+- Verlengen en sluiten (fase 2): de plaatsingsmail heeft een link om de vacature te sluiten. Een week voor de sluitdatum vraagt `tools/aanmeldingen.py` de verlengmail aan; daarin kiest de werkgever verlengen (45 dagen erbij) of sluiten. De keuze komt in de Sheet (kolom "Verlengen of sluiten") en de workflow past `data/vacatures.json` binnen een uur aan (`ingevuld`, `sluit`, `herinnerd`). Verlengen van Uitgelicht (€ 49) of door een bureau (€ 19) wordt opnieuw gefactureerd; de redactie krijgt daar een mail over.
+- Voorwaarden: `/voorwaarden-vacatures/` (gemaakt door `tools/vacatures.py`).
+- Filters op `/vacatures/`: soort werk (knoppen), en zoeken, plaats, dienstverband, uren, jouw opleiding en thuiswerken. Een keuzelijst staat er alleen als er iets te kiezen valt.
+- Het formulier vraagt geen KvK-nummer (besluit Frans, 3-11-2026).
+- Nog niet gebouwd: pagina's per soort werk en plaats, blok op de homepage, Indexing API.
 
 ### Bedrijvengids (in opbouw)
 
