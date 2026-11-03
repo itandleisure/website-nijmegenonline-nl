@@ -125,7 +125,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=15" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=16" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -205,7 +205,9 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
                        '            <div class="bedrijfzoeker__gekozen" hidden><span>Gekozen: <strong></strong> '
                        '<span class="bedrijfzoeker__regel"></span></span><button type="button" class="link">Ander bedrijf kiezen</button></div>',
                        '            <p class="formulier__hint">Staat je bedrijf of organisatie in onze bedrijvengids? Kies het hier, dan komt '
-                       'je evenement ook op je bedrijfspagina. Staat het er niet in, laat dit veld dan leeg.</p>',
+                       'je evenement ook op je bedrijfspagina. Staat het er nog niet in? <a href="%sbedrijf-aanmelden/" target="_blank" '
+                       'rel="noopener">Meld het dan eerst gratis aan</a> en kies het daarna hier. Ben je geen bedrijf of organisatie, '
+                       'laat dit veld dan leeg.</p>' % "../",
                        '            <input type="hidden" name="%s" value="">' % veld,
                        '          </div>']
         elif soort == "fotobron":

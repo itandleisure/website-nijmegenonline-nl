@@ -348,11 +348,24 @@ def aanbieder_overzicht(rij, vandaag):
     out.append('      <div class="kruimelpad"><a href="%s">Home</a> › <a href="%s/%s/">Agenda</a> › Per locatie</div>' % (root, SITE, OVERZICHT))
     out.append('      <header class="rubriek-kop">\n        <h1>Evenementen per locatie</h1>\n'
                '        <p>Alle podia, musea en organisatoren met evenementen in de agenda.</p>\n      </header>')
-    out.append('      <ul class="aanbieders">')
-    for slug, naam, aantal, klant in rij:
-        out.append('        <li%s><a href="%s/">%s</a> <span>%d %s</span></li>'
-                   % (' class="aanbieders__klant"' if klant else "", slug, esc(naam), aantal, "evenement" if aantal == 1 else "evenementen"))
-    out.append('      </ul>')
+    # Per plaats (Nijmegen eerst, dan op aantal locaties), elke locatie een even grote kaart
+    plaatsen = {}
+    for r in rij:
+        plaatsen.setdefault(r[4] or "Overig", []).append(r)
+    volgorde = sorted(plaatsen, key=lambda p: (p != "Nijmegen", -len(plaatsen[p]), p))
+    if len(volgorde) > 1:
+        out.append('      <nav class="gidsen-filter" aria-label="Plaatsen">%s</nav>' % "".join(
+            '<a class="knop-link" href="#%s">%s</a>' % (re.sub(r"[^a-z0-9]+", "-", p.lower()).strip("-"), esc(p)) for p in volgorde))
+    for p in volgorde:
+        out.append('      <section class="aanbieders-plaats" id="%s">\n        <h2>%s</h2>\n        <ul class="aanbieders">'
+                   % (re.sub(r"[^a-z0-9]+", "-", p.lower()).strip("-"), esc(p)))
+        for slug, naam, aantal, klant, _ in plaatsen[p]:
+            # De plaats staat al in de kop, dus niet nog eens achter de naam
+            kort = naam[:-len(p)].rstrip(" ,") if naam.endswith(" " + p) else naam
+            out.append('          <li%s><a href="%s/"><strong>%s</strong><span>%d %s</span></a></li>'
+                       % (' class="aanbieders__klant"' if klant else "", slug, esc(kort), aantal,
+                          "evenement" if aantal == 1 else "evenementen"))
+        out.append('        </ul>\n      </section>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
@@ -367,7 +380,6 @@ AGENDAFILTER = [
     '        <button type="button" data-wanneer="morgen" aria-pressed="false">Morgen</button>',
     '        <button type="button" data-wanneer="weekend" aria-pressed="false">Dit weekend</button>',
     '        <button type="button" data-wanneer="week" aria-pressed="false">Komende 7 dagen</button>',
-    '        <p class="agendafilter__uitkomst" aria-live="polite" hidden></p>',
     '      </div>',
 ]
 
@@ -389,8 +401,7 @@ def overzicht(komend, vandaag):
     out.extend("      " + r for r in uitgelicht_blok(komend, vandaag, root, 6))
     if komend:
         out += AGENDAFILTER
-        out.extend("      " + r for r in plaatsfilter(komend))
-        out.extend("      " + r for r in soortfilter(komend))
+        out.extend("      " + r for r in meerfilter(komend))
     # Langlopende exposities apart bovenaan, zodat ze niet elke maand opnieuw de lijst openen
     lopend = [e for e in komend if dag(e, "start") < vandaag]
     if lopend:
@@ -414,47 +425,40 @@ def overzicht(komend, vandaag):
     out.append('      <p class="gids-cta"><a class="knop" href="%s">Evenement aanmelden</a> <a href="%s%s/">Bekijk evenementen per locatie</a></p>'
                % (AANMELDEN, root, AANBIEDERS))
     if komend:
-        out.append('      <script src="%sassets/js/agendafilter.js?v=3" defer></script>' % root)
+        out.append('      <script src="%sassets/js/agendafilter.js?v=4" defer></script>' % root)
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
 
 
-def plaatsfilter(komend):
-    """Knoppen om de agenda op plaats te filteren (assets/js/agendafilter.js, samen met het filter op datum); Nijmegen
-    eerst, dan de rest op aantal. Zonder JavaScript blijven ze verborgen en staat de hele agenda er gewoon."""
-    tel = {}
+def meerfilter(komend):
+    """Tweede filterregel onder de datumknoppen (assets/js/agendafilter.js): keuzelijstjes voor plaats en soort, plus
+    aan/uit-knoppen voor Gratis (ook vrije gift) en Leuk voor kinderen. Indeling: tools/evenement_indeling.py.
+    Zonder JavaScript blijft de regel verborgen en staat de hele agenda er gewoon."""
+    plaatsen, soorten = {}, {}
     for e in komend:
-        tel[e["_plaats"]] = tel.get(e["_plaats"], 0) + 1
-    if len(tel) < 2:
-        return []
-    volgorde = sorted(tel, key=lambda p: (p != "Nijmegen", -tel[p], p))
-    knoppen = ['<button type="button" data-plaats="" aria-pressed="true">Alle plaatsen</button>']
-    knoppen += ['<button type="button" data-plaats="%s" aria-pressed="false">%s <span>%d</span></button>' % (esc(p), esc(p), tel[p])
-                for p in volgorde]
-    return ['<div class="gidsen-filter agenda-plaatsen" role="group" aria-label="Filter op plaats" hidden>', '  ' + "".join(knoppen), "</div>"]
-
-
-def soortfilter(komend):
-    """Knoppen om de agenda op soort te filteren, plus Gratis (ook vrije gift) en Leuk voor kinderen
-    (assets/js/agendafilter.js, besluit Frans 3-11-2026). Indeling: tools/evenement_indeling.py."""
-    tel = {}
-    for e in komend:
-        tel[e.get("soort") or "Overig"] = tel.get(e.get("soort") or "Overig", 0) + 1
-    knoppen = ['<button type="button" data-soort="" aria-pressed="true">Alle soorten</button>']
-    knoppen += ['<button type="button" data-soort="%s" aria-pressed="false">%s <span>%d</span></button>' % (esc(x), esc(x), tel[x])
-                for x in evenement_indeling.SOORTEN if tel.get(x) and x != "Overig"]
+        plaatsen[e["_plaats"]] = plaatsen.get(e["_plaats"], 0) + 1
+        x = e.get("soort") or "Overig"
+        soorten[x] = soorten.get(x, 0) + 1
+    regels = ['<div class="agenda-meer" role="group" aria-label="Meer filters" hidden>']
+    if len(plaatsen) > 1:
+        volgorde = sorted(plaatsen, key=lambda p: (p != "Nijmegen", -plaatsen[p], p))
+        regels.append('  <label class="agenda-keuze"><span>Plaats</span><select data-filter="plaats"><option value="">Alle plaatsen</option>%s</select></label>'
+                      % "".join('<option value="%s">%s (%d)</option>' % (esc(p), esc(p), plaatsen[p]) for p in volgorde))
+    lijst = [x for x in evenement_indeling.SOORTEN if soorten.get(x) and x != "Overig"]
+    if lijst:
+        regels.append('  <label class="agenda-keuze"><span>Soort</span><select data-filter="soort"><option value="">Alle soorten</option>%s</select></label>'
+                      % "".join('<option value="%s">%s (%d)</option>' % (esc(x), esc(x), soorten[x]) for x in lijst))
     gratis = sum(e.get("toegang") in ("gratis", "vrije gift") for e in komend)
     kinderen = sum("kinderen" in e.get("kenmerken", []) for e in komend)
-    extra = []
     if gratis:
-        extra.append('<button type="button" data-extra="gratis" aria-pressed="false">Gratis <span>%d</span></button>' % gratis)
+        regels.append('  <button type="button" class="agenda-schakel" data-extra="gratis" aria-pressed="false">Gratis</button>')
     if kinderen:
-        extra.append('<button type="button" data-extra="kinderen" aria-pressed="false">Leuk voor kinderen <span>%d</span></button>' % kinderen)
-    regels = ['<div class="gidsen-filter agenda-soorten" role="group" aria-label="Filter op soort" hidden>', '  ' + "".join(knoppen), "</div>"]
-    if extra:
-        regels += ['<div class="gidsen-filter agenda-extra" role="group" aria-label="Gratis of voor kinderen" hidden>', '  ' + "".join(extra), "</div>"]
+        regels.append('  <button type="button" class="agenda-schakel" data-extra="kinderen" aria-pressed="false">Leuk voor kinderen</button>')
+    regels.append('  <button type="button" class="agenda-wis link" hidden>Wis filters</button>')
+    regels.append("</div>")
+    regels.append('<p class="agendafilter__uitkomst" aria-live="polite" hidden></p>')
     return regels
 
 
@@ -572,7 +576,7 @@ def main(vandaag):
             slug, info["naam"], k, eerder, alle, vandaag,
             (info["bedrijf"], vermeldingen[info["bedrijf"]]) if info.get("bedrijf") in vermeldingen else None), encoding="utf-8")
         if k:
-            rij.append((slug, info["naam"], len(k), any(e["uitgelicht"] for e in alle)))
+            rij.append((slug, info["naam"], len(k), any(e["uitgelicht"] for e in alle), k[0].get("_plaats") or info.get("plaats", "")))
     # Samengevoegde aanbieders (data/aanbieders-samengevoegd.json, tools/koppelen.py) verwijzen naar de nieuwe
     samen = {o: n for o, n in koppeling.samengevoegd().items() if o not in aanbieders and n in aanbieders}
     for oud, nieuw in samen.items():

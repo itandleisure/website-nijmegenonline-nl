@@ -343,7 +343,17 @@ document.querySelectorAll("[data-bedrijfzoeker]").forEach(function (blok) {
     if (!treffers.length) {
       var leeg = document.createElement("li");
       leeg.className = "bedrijfzoeker__niets";
-      leeg.textContent = "Niet gevonden. Laat dit veld leeg en vul hieronder je gegevens in.";
+      // Nog niet in de gids: eerst (gratis) aanmelden, in een nieuw tabblad zodat dit formulier blijft staan
+      leeg.appendChild(document.createTextNode("Niet gevonden. "));
+      var aanmaken = document.createElement("a");
+      aanmaken.href = new URL("../../bedrijf-aanmelden/", SCRIPT.src).href;
+      aanmaken.target = "_blank";
+      aanmaken.rel = "noopener";
+      aanmaken.textContent = "Meld je bedrijf of organisatie eerst gratis aan";
+      leeg.appendChild(aanmaken);
+      leeg.appendChild(document.createTextNode(", of laat dit veld leeg."));
+      leeg.addEventListener("mousedown", function (e) { if (e.target !== aanmaken) e.preventDefault(); });
+      aanmaken.addEventListener("mousedown", function (e) { e.preventDefault(); });
       lijst.appendChild(leeg);
     }
     treffers.forEach(function (r, i) {
