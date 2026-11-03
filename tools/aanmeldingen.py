@@ -389,7 +389,8 @@ def evenement(a, evenementen, aanbieders):
         "aanmelding": a["id"],
         "website": site if re.match(r"https?://[^\s/]+\.[^\s]+$", site) else "",
         "contactmail": a.get("evenementmail", "").strip(),
-        "telefoon": a.get("evenementtelefoon", "").strip(),
+        # Alleen een echt nummer: "geen" of "-" werd anders een kapotte bel-link
+        "telefoon": a.get("evenementtelefoon", "").strip() if len(re.sub(r"\D", "", a.get("evenementtelefoon", ""))) >= 6 else "",
     }
     # Soort, gratis/betaald, prijs en extra's uit het formulier; wat ontbreekt (oude aanmeldingen) vult de indeling aan
     e.update(evenement_indeling.uit_formulier(a))

@@ -5,8 +5,8 @@ CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:toonkunstkoor-nijmegen-zingt-brahms@nijmegenonline.nl
 DTSTAMP:20261102T000000Z
-DTSTART;TZID=Europe/Amsterdam:20261115T140000
-DTEND;TZID=Europe/Amsterdam:20261115T153000
+DTSTART;TZID=Europe/Amsterdam:20261115T150000
+DTEND;TZID=Europe/Amsterdam:20261115T163000
 SUMMARY:Toonkunstkoor Nijmegen zingt Brahms
 URL:https://www.nijmegenonline.nl/events/toonkunstkoor-nijmegen-zingt-brahms/
 DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/toonkunstkoor-nijmegen-zingt-brahms/

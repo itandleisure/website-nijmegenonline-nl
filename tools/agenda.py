@@ -268,7 +268,8 @@ def event_pagina(e, vandaag, komend, aanbieders, vermeldingen):
                       % (plek, ("<br>" + esc(e["adres"])) if e["adres"] and e["adres"] != e["locatie"] else "", esc(kaart)))
     toegang = {"gratis": "Gratis", "vrije gift": "Vrije gift"}.get(e.get("toegang"), "")
     if e.get("toegang") == "betaald":
-        toegang = "Vanaf € %s per persoon" % e["prijs"] if e.get("prijs") else "Betaald"
+        # "Vanaf" tenzij de organisator één vaste prijs opgeeft (prijs_vast in data/evenementen.json)
+        toegang = ("€ %s per persoon" if e.get("prijs_vast") else "Vanaf € %s per persoon") % e["prijs"] if e.get("prijs") else "Betaald"
     extra = [evenement_indeling.KENMERKEN[k] for k in evenement_indeling.KENMERKEN if k in e.get("kenmerken", [])]
     if toegang or extra:
         regels.append('<li><span class="evenement-info__kop">Toegang</span>%s</li>' % "<br>".join(esc(x) for x in [toegang] + extra if x))
@@ -279,8 +280,9 @@ def event_pagina(e, vandaag, komend, aanbieders, vermeldingen):
         contact.append('<a href="%s" target="_blank" rel="nofollow noopener">%s</a>' % (esc(e["website"]), esc(domein)))
     if e.get("contactmail"):
         contact.append('<a href="mailto:%s">%s</a>' % (esc(e["contactmail"]), esc(e["contactmail"])))
-    if e.get("telefoon"):
-        contact.append('<a href="tel:%s">%s</a>' % (esc(re.sub(r"[^\d+]", "", e["telefoon"])), esc(e["telefoon"])))
+    nummer = re.sub(r"[^\d+]", "", e.get("telefoon") or "")
+    if len(re.sub(r"\D", "", nummer)) >= 6:   # "geen", "-" of "n.v.t." in het formulier is geen telefoonnummer
+        contact.append('<a href="tel:%s">%s</a>' % (esc(nummer), esc(e["telefoon"])))
     if contact:
         regels.append('<li><span class="evenement-info__kop">Contact</span>%s</li>' % "<br>".join(contact))
     if e["uitgelicht"] and e.get("link"):
