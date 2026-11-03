@@ -1,12 +1,18 @@
-// Filter op datum in de agenda: vandaag, morgen, dit weekend of de komende 7 dagen.
-// Een evenement blijft staan als het op een van die dagen loopt (data-van t/m data-tot op de kaart).
-// De uitgelichte evenementen bovenaan blijven altijd staan. ?wanneer=weekend in de URL zet het filter meteen aan.
+// Filters in de agenda, samen te gebruiken:
+// - op datum: vandaag, morgen, dit weekend of de komende 7 dagen. Een evenement blijft staan als het op een van die
+//   dagen loopt (data-van t/m data-tot op de kaart). De uitgelichte evenementen bovenaan blijven daarbij staan.
+// - op plaats (besluit Frans, 2-11-2026): Nijmegen, Wijchen, Kleef, ... (data-plaats op de kaart, ook de uitgelichte).
+// ?wanneer=weekend en ?plaats=Wijchen in de URL zetten een filter meteen aan; de plaatspagina's linken zo hierheen.
 (function () {
   var blok = document.getElementById("agendafilter");
   if (!blok) return;
   var knoppen = blok.querySelectorAll("button[data-wanneer]");
   var uitkomst = blok.querySelector(".agendafilter__uitkomst");
+  var plaatsNav = document.querySelector(".agenda-plaatsen");
+  var plaatsKnoppen = plaatsNav ? plaatsNav.querySelectorAll("button[data-plaats]") : [];
   var kaarten = document.querySelectorAll(".agenda-maand .eventkaart");
+  var uitgelicht = document.querySelectorAll(".agenda-uitgelicht .uitgelicht");
+  var stand = { wanneer: "", plaats: "" };
 
   function iso(d) {
     return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
@@ -28,28 +34,40 @@
     return null;
   }
 
-  function toepassen(wanneer) {
-    var r = bereik(wanneer), van = r && iso(r[0]), tot = r && iso(r[1]), zichtbaar = 0;
-    knoppen.forEach(function (k) { k.setAttribute("aria-pressed", k.dataset.wanneer === (wanneer || "")); });
+  function toepassen() {
+    var r = bereik(stand.wanneer), van = r && iso(r[0]), tot = r && iso(r[1]), plaats = stand.plaats, zichtbaar = 0;
+    knoppen.forEach(function (k) { k.setAttribute("aria-pressed", String(k.dataset.wanneer === stand.wanneer)); });
+    plaatsKnoppen.forEach(function (k) { k.setAttribute("aria-pressed", String(k.dataset.plaats === plaats)); });
     kaarten.forEach(function (kaart) {
-      var past = !r || (kaart.dataset.van <= tot && kaart.dataset.tot >= van);
+      var past = (!r || (kaart.dataset.van <= tot && kaart.dataset.tot >= van)) && (!plaats || kaart.dataset.plaats === plaats);
       kaart.hidden = !past;
       if (past) zichtbaar++;
     });
+    uitgelicht.forEach(function (kaart) { kaart.hidden = !!plaats && kaart.dataset.plaats !== plaats; });
     document.querySelectorAll(".agenda-maand").forEach(function (sectie) {
-      sectie.hidden = !!r && !sectie.querySelector(".eventkaart:not([hidden])");
+      sectie.hidden = (!!r || !!plaats) && !sectie.querySelector(".eventkaart:not([hidden])");
     });
-    uitkomst.hidden = !r;
-    if (r) uitkomst.textContent = zichtbaar === 0 ? "Geen evenementen gevonden voor deze periode."
-      : zichtbaar + (zichtbaar === 1 ? " evenement" : " evenementen") + " gevonden.";
+    document.querySelectorAll(".agenda-uitgelicht").forEach(function (sectie) {
+      sectie.hidden = !!plaats && !sectie.querySelector(".uitgelicht:not([hidden])");
+    });
+    var gefilterd = !!r || !!plaats;
+    uitkomst.hidden = !gefilterd;
+    if (gefilterd) uitkomst.textContent = zichtbaar === 0 ? "Geen evenementen gevonden" + (plaats ? " in " + plaats : "") +
+      (r ? " voor deze periode." : ".") : zichtbaar + (zichtbaar === 1 ? " evenement" : " evenementen") + " gevonden.";
     try {
       var url = new URL(location.href);
-      if (wanneer) url.searchParams.set("wanneer", wanneer); else url.searchParams.delete("wanneer");
+      if (stand.wanneer) url.searchParams.set("wanneer", stand.wanneer); else url.searchParams.delete("wanneer");
+      if (plaats) url.searchParams.set("plaats", plaats); else url.searchParams.delete("plaats");
       history.replaceState(null, "", url);
     } catch (e) { /* oude browser: filter werkt, alleen de URL blijft gelijk */ }
   }
 
-  knoppen.forEach(function (k) { k.addEventListener("click", function () { toepassen(k.dataset.wanneer); }); });
-  var start = new URLSearchParams(location.search).get("wanneer");
-  if (start && bereik(start)) toepassen(start);
+  knoppen.forEach(function (k) { k.addEventListener("click", function () { stand.wanneer = k.dataset.wanneer; toepassen(); }); });
+  plaatsKnoppen.forEach(function (k) { k.addEventListener("click", function () { stand.plaats = k.dataset.plaats; toepassen(); }); });
+  if (plaatsNav) plaatsNav.hidden = false;
+  var zoek = new URLSearchParams(location.search);
+  var wanneer = zoek.get("wanneer"), plaats = zoek.get("plaats");
+  if (wanneer && bereik(wanneer)) stand.wanneer = wanneer;
+  if (plaats && Array.prototype.some.call(plaatsKnoppen, function (k) { return k.dataset.plaats === plaats; })) stand.plaats = plaats;
+  if (stand.wanneer || stand.plaats) toepassen();
 })();

@@ -26,11 +26,13 @@ import urllib.parse
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from import_wordpress import (DOORVERWIJZING, ROOT, SITE, VOET, datum_nl, esc, goede_alt, kop,  # noqa: E402
                               samenvatting)
+import koppeling  # noqa: E402
 
 OVERZICHT = "nieuwsberichten"
 DATA = ROOT / "data" / "nieuws.json"
 ARCHIEF = ROOT / "data" / "nieuws-archief.json"  # nieuwsnijmegen.nl, 2006-2024 (tools/import_nieuwsnijmegen.py)
 VERWIJDERD = ROOT / "data" / "nieuws-verwijderd.json"
+
 VERMELDINGEN = ROOT / "data" / "bedrijvengids-vermeldingen.json"
 RECENT = 365  # dagen; ouder nieuws staat in het overzicht onder "Archief"
 # Websites van platforms: een link daarheen zegt niets over welk bedrijf het bericht gaat
@@ -141,7 +143,8 @@ def nieuwskaart(b, root):
             "<h3>%s</h3></div></a></article>" % (root, b["slug"], img, esc(datum_nl(b["datum"])), esc(b["titel"])))
 
 
-def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
+def bericht_pagina(b, nieuwer, ouder, bedrijven=(), vermeldingen=None):
+    """bedrijven: (sleutel, naam) uit de gids waar het bericht over gaat; die krijgen een kaartje "Over <bedrijf>"."""
     root = "../../"
     canonical = "%s/nieuwsoverzicht/%s/" % (SITE, b["slug"])
     tekst = zonder_dubbele_foto(b)
@@ -155,6 +158,9 @@ def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
               {"@type": "ListItem", "position": 3, "name": b["titel"], "item": canonical}]}]
     if b["foto"]:
         ld[0]["image"] = b["foto"]
+    over = [(s, vermeldingen[s]) for s, _ in bedrijven if vermeldingen and s in vermeldingen]
+    if over:
+        ld[0]["about"] = [koppeling.organisatie_ld(s, v) for s, v in over]
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in ld)
     standaard = None if b["foto"] else standaardfoto(b["slug"])
     out = [kop(b["seo_titel"], beschrijving, canonical, root, b["foto"] or (SITE + "/" + standaard if standaard else None), extra)]
@@ -177,9 +183,8 @@ def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
     if b.get("fotos"):
         out.append(extra_fotos_html(b["fotos"], b["titel"], root))
-    if bedrijven:
-        out.append('        <p class="gids-verder">In de bedrijvengids: %s</p>' % ", ".join(
-            '<a href="%sbedrijvengids/%s/">%s</a>' % (root, s, esc(naam)) for s, naam in bedrijven))
+    if over:
+        out.extend(koppeling.over_bedrijf(s, v, root) for s, v in over[:3])
     nav = []
     if ouder:
         nav.append('<a class="vorige" href="../%s/"><span>Vorig bericht</span>%s</a>' % (ouder["slug"], esc(ouder["titel"])))
@@ -287,7 +292,7 @@ def main():
         d.mkdir(parents=True, exist_ok=True)
         nieuwer = berichten[n - 1] if n > 0 else None
         ouder = berichten[n + 1] if n + 1 < len(berichten) else None
-        (d / "index.html").write_text(bericht_pagina(b, nieuwer, ouder, bij.get(b["slug"], ())), encoding="utf-8")
+        (d / "index.html").write_text(bericht_pagina(b, nieuwer, ouder, bij.get(b["slug"], ()), vermeldingen), encoding="utf-8")
     verwijderd = laad_verwijderd()
     doorverwijzingen(verwijderd, vermeldingen)
     (ROOT / OVERZICHT).mkdir(exist_ok=True)

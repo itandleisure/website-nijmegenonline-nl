@@ -1,421 +1,575 @@
 {
  "achterlo-sporthallen": {
-  "naam": "Achterlo Sporthallen",
-  "adres": "Homberg 2535, 6601 XW Nijmegen/Wijchen"
+  "naam": "Achterlo Sporthallen Wijchen",
+  "adres": "Homberg 2535, 6601 XW Nijmegen/Wijchen",
+  "plaats": "Wijchen"
  },
  "achtertuin": {
-  "naam": "Achtertuin",
-  "adres": "De Kolk 14, Nijmegen"
+  "naam": "Achtertuin Nijmegen",
+  "adres": "De Kolk 14, Nijmegen",
+  "bedrijf": "de-achtertuin",
+  "plaats": "Nijmegen"
  },
  "antonius-abtkerk": {
-  "naam": "Antonius Abtkerk",
-  "adres": "Dennenstraat 125 "
+  "naam": "Antonius Abtkerk Nijmegen",
+  "adres": "Dennenstraat 125 ",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "antonius-van-paduakerk": {
-  "naam": "Antonius van Paduakerk",
-  "adres": "Groesbeekseweg 96"
+  "naam": "Antonius van Paduakerk Nijmegen",
+  "adres": "Groesbeekseweg 96",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "ark-van-oost": {
-  "naam": "Ark van Oost",
-  "adres": "Cipresstraat 154"
+  "naam": "Ark van Oost Nijmegen",
+  "adres": "Cipresstraat 154",
+  "plaats": "Nijmegen"
  },
  "ateliers-vrouwe-udasigel": {
-  "naam": "Ateliers Vrouwe Udasigel",
-  "adres": "Vrouwe Udasingel Lent, Lent Nijmegen, Nederland"
+  "naam": "Ateliers Vrouwe Udasigel Nijmegen",
+  "adres": "Vrouwe Udasingel Lent, Lent Nijmegen, Nederland",
+  "plaats": "Nijmegen"
  },
  "begraafplaats-daalseweg": {
-  "naam": "Begraafplaats Daalseweg",
-  "adres": "Daalseweg 237, Nijmegen"
+  "naam": "Begraafplaats Daalseweg Nijmegen",
+  "adres": "Daalseweg 237, Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "begraafplaats-stenenkruisstraat-julianapark": {
-  "naam": "Begraafplaats Stenenkruisstraat (Julianapark)",
-  "adres": "Prins Bernhardstraat, Nijmegen"
+  "naam": "Begraafplaats Stenenkruisstraat (Julianapark) Nijmegen",
+  "adres": "Prins Bernhardstraat, Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "besiendershuis": {
-  "naam": "Besiendershuis",
-  "adres": "Steenstraat 26, 6511 TV Nijmegen"
+  "naam": "Besiendershuis Nijmegen",
+  "adres": "Steenstraat 26, 6511 TV Nijmegen",
+  "plaats": "Nijmegen"
  },
  "bibliotheek-marienburg": {
-  "naam": "Bibliotheek Mariënburg",
-  "adres": "Mariënburg 29"
- },
- "binnenstad": {
-  "naam": "Binnenstad",
-  "adres": "Opschlag 20-22, 47533 Kleve"
+  "naam": "Bibliotheek Mariënburg Nijmegen",
+  "adres": "Mariënburg 29",
+  "plaats": "Nijmegen",
+  "bedrijf": "bibliotheek-marienburg"
  },
  "binnenstad-nijmegen": {
-  "naam": "Binnenstad Nijmegen"
+  "naam": "Binnenstad Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "binnenstad-nijmegen-en-het-valkhofpark": {
   "naam": "Binnenstad Nijmegen en het Valkhofpark",
-  "adres": "Centrum Nijmegen"
+  "adres": "Centrum Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "bosatelier": {
-  "naam": "Bosatelier",
-  "adres": "Scheidingsweg 99, 6581 KN Nijmegen"
+  "naam": "Bosatelier Nijmegen",
+  "adres": "Scheidingsweg 99, 6581 KN Nijmegen",
+  "plaats": "Nijmegen",
+  "bedrijf": "bosatelier"
  },
  "boskapel": {
-  "naam": "Boskapel",
-  "adres": "Graafseweg 276, 6532 ZV Nijmegen"
+  "naam": "Boskapel Nijmegen",
+  "adres": "Graafseweg 276, 6532 ZV Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "bottendaal": {
-  "naam": "Bottendaal",
-  "adres": "Burggardt van den Berghstraat"
+  "naam": "Bottendaal Nijmegen",
+  "adres": "Burggardt van den Berghstraat",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "brasserie-jolie": {
-  "naam": "Brasserie Jolie",
-  "adres": "Daalseweg 279, Nijmegen 6521 GL, NL"
+  "naam": "Brasserie Jolie Nijmegen",
+  "adres": "Daalseweg 279, Nijmegen 6521 GL, NL",
+  "bedrijf": "brasserie-jolie-nijmegen",
+  "plaats": "Nijmegen"
  },
  "brebl": {
-  "naam": "Brebl",
-  "adres": "Waalbandijk 14, 6541 AJ Nijmegen"
+  "naam": "Brebl Nijmegen",
+  "adres": "Waalbandijk 14, 6541 AJ Nijmegen",
+  "bedrijf": "brebl",
+  "plaats": "Nijmegen"
  },
  "brebl-locatie-meesterproef": {
-  "naam": "Brebl (locatie Meesterproef)",
-  "adres": "Waalbandijk 14 Nijmegen"
+  "naam": "Brebl (locatie Meesterproef) Nijmegen",
+  "adres": "Waalbandijk 14 Nijmegen",
+  "bedrijf": "brebl",
+  "plaats": "Nijmegen"
  },
  "buurderij-de-lage-hof": {
-  "naam": "Buurderij de Lage Hof",
-  "adres": "Kasteelsestraat 5 Overasselt"
+  "naam": "Buurderij de Lage Hof Heumen",
+  "adres": "Kasteelsestraat 5 Overasselt",
+  "plaats": "Heumen"
  },
  "cafe-de-kroon": {
-  "naam": "Café De Kroon",
-  "adres": "Daalseweg 361"
+  "naam": "Café De Kroon Nijmegen",
+  "adres": "Daalseweg 361",
+  "plaats": "Nijmegen",
+  "bedrijf": "cafe-de-kroon"
  },
  "cafe-t-haantje": {
-  "naam": "Cafe 't Haantje",
-  "adres": "Daalseweg 19"
+  "naam": "Cafe 't Haantje Nijmegen",
+  "adres": "Daalseweg 19",
+  "bedrijf": "cafe-t-haantje",
+  "plaats": "Nijmegen"
  },
  "cafe-van-buren": {
-  "naam": "Café Van Buren",
-  "adres": "Molenstraat 89, Nijmegen 6511 HC, Nederland"
+  "naam": "Café Van Buren Nijmegen",
+  "adres": "Molenstraat 89, Nijmegen 6511 HC, Nederland",
+  "bedrijf": "cafe-van-buren",
+  "plaats": "Nijmegen"
  },
  "cenakelkerk-heilig-landstichting": {
   "naam": "Cenakelkerk, Heilig Landstichting",
-  "adres": "Pastoor Rabouplein 1"
+  "adres": "Pastoor Rabouplein 1",
+  "bedrijf": "",
+  "plaats": "Groesbeek"
  },
  "centrum-nijmegen": {
-  "naam": "centrum Nijmegen",
-  "adres": "Nijmegen Centrum, Nijmegen"
+  "naam": "Centrum Nijmegen",
+  "adres": "Nijmegen Centrum, Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "concertgebouw-de-vereeniging": {
-  "naam": "Concertgebouw De Vereeniging",
-  "adres": "Keizer Karelplein 2D"
+  "naam": "Concertgebouw De Vereeniging Nijmegen",
+  "adres": "Keizer Karelplein 2D",
+  "plaats": "Nijmegen",
+  "bedrijf": "concertgebouw-de-vereeniging"
  },
  "de-boekerij": {
-  "naam": "De Boekerij",
-  "adres": "Berg en Dalseweg 77 A, Nijmegen 6522 BC, Nijmegen"
+  "naam": "De Boekerij Nijmegen",
+  "adres": "Berg en Dalseweg 77 A, Nijmegen 6522 BC, Nijmegen",
+  "plaats": "Nijmegen",
+  "bedrijf": "de-boekerij"
  },
  "de-brauerij": {
-  "naam": "De Brauerij",
-  "adres": "Mehrer Straße 1 Kranenburg"
+  "naam": "De Brauerij Kranenburg",
+  "adres": "Mehrer Straße 1 Kranenburg",
+  "bedrijf": "de-brauerij",
+  "plaats": "Kranenburg"
  },
  "de-kaaij": {
-  "naam": "De Kaaij",
-  "adres": "Lindenberghaven 1 C, 6511 XT Nijmegen"
+  "naam": "De Kaaij Nijmegen",
+  "adres": "Lindenberghaven 1 C, 6511 XT Nijmegen",
+  "bedrijf": "de-kaaij",
+  "plaats": "Nijmegen"
  },
  "de-vasim": {
-  "naam": "De Vasim",
-  "adres": "Winselingseweg 41 Nijmegen"
+  "naam": "De Vasim Nijmegen",
+  "adres": "Winselingseweg 41 Nijmegen",
+  "bedrijf": "de-vasim-nijmegen",
+  "plaats": "Nijmegen"
  },
  "de-waagh": {
-  "naam": "De Waagh",
-  "adres": "Grote Markt 26, Nijmegen 6511 KB, Nederland"
+  "naam": "De Waagh Nijmegen",
+  "adres": "Grote Markt 26, Nijmegen 6511 KB, Nederland",
+  "bedrijf": "de-waagh",
+  "plaats": "Nijmegen"
  },
  "de-wieken": {
-  "naam": "De Wieken",
-  "adres": "Esdoornlaan 5, 6584 BD Molenhoek"
+  "naam": "De Wieken Heumen",
+  "adres": "Esdoornlaan 5, 6584 BD Molenhoek",
+  "plaats": "Heumen"
  },
  "de-witte-raaf": {
-  "naam": "De Witte Raaf",
-  "adres": "Grotestraat 11, 6511 VB Nijmegen"
+  "naam": "De Witte Raaf Nijmegen",
+  "adres": "Grotestraat 11, 6511 VB Nijmegen",
+  "bedrijf": "de-witte-raaf",
+  "plaats": "Nijmegen"
  },
  "dijkmagazijn": {
-  "naam": "dijkmagazijn",
-  "adres": "Dijk 27 Winssen, winssen 6645ka, Nederland"
+  "naam": "Dijkmagazijn Beuningen",
+  "adres": "Dijk 27 Winssen, winssen 6645ka, Nederland",
+  "bedrijf": "",
+  "plaats": "Beuningen"
  },
  "diverse-particuliere-tuinen": {
-  "naam": "diverse particuliere tuinen."
+  "naam": "Diverse particuliere tuinen Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "door-heel-nijmegen": {
-  "naam": "Door heel Nijmegen"
+  "naam": "Door heel Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "doornroosje": {
-  "naam": "Doornroosje",
-  "adres": "Stationsplein 11, Nijmegen"
+  "naam": "Doornroosje Nijmegen",
+  "adres": "Stationsplein 11, Nijmegen",
+  "bedrijf": "doornroosje-stationsplein",
+  "plaats": "Nijmegen"
  },
  "evenemententerrein-park-winkelsteeg": {
-  "naam": "Evenemententerrein Park Winkelsteeg",
-  "adres": "Vossendijk/Winkelsteegseweg 210, Nijmegen, nederland 6534AR"
+  "naam": "Evenemententerrein Park Winkelsteeg Nijmegen",
+  "adres": "Vossendijk/Winkelsteegseweg 210, Nijmegen, nederland 6534AR",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "expo-bart": {
-  "naam": "Expo Bart",
-  "adres": "Waalplein 6, Nijmegen, Gelderland 6541 AX, Nederland"
+  "naam": "Expo Bart Nijmegen",
+  "adres": "Waalplein 6, Nijmegen, Gelderland 6541 AX, Nederland",
+  "bedrijf": "expo-bart",
+  "plaats": "Nijmegen"
  },
  "extrapool": {
-  "naam": "Extrapool",
-  "adres": "Tweede Walstraat 5 6511LN Nijmegen"
- },
- "fotobolwerkvasim": {
-  "naam": "Fotobolwerk,Vasim",
-  "adres": "Winselingseweg 86, Nijmegen 6545 AH"
+  "naam": "Extrapool Nijmegen",
+  "adres": "Tweede Walstraat 5 6511LN Nijmegen",
+  "bedrijf": "extrapool",
+  "plaats": "Nijmegen"
  },
  "groenestraatkerk": {
-  "naam": "Groenestraatkerk",
-  "adres": "Groenestraat 229 Nijmegen"
+  "naam": "Groenestraatkerk Nijmegen",
+  "adres": "Groenestraat 229 Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "grote-markt-en-stevenskerk": {
-  "naam": "Grote Markt en Stevenskerk",
-  "adres": "Grote Markt, Nijmegen"
+  "naam": "Grote Markt en Stevenskerk Nijmegen",
+  "adres": "Grote Markt, Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "hackerspace-nijmegen": {
   "naam": "Hackerspace Nijmegen",
-  "adres": "Winkesteegseweg 209, Nijmegen, Gelderland 6534AP, Nederland"
+  "adres": "Winkesteegseweg 209, Nijmegen, Gelderland 6534AP, Nederland",
+  "plaats": "Nijmegen",
+  "bedrijf": "hackerspace-nijmegen"
  },
- "hema-etalages": {
-  "naam": "HEMA Etalages",
-  "adres": "Grote Markt 5, 6511 KA Nijmegen"
+ "hema-nijmegen": {
+  "naam": "HEMA Nijmegen",
+  "adres": "Grote Markt 5, 6511 KA Nijmegen",
+  "plaats": "Nijmegen",
+  "bedrijf": ""
  },
  "het-kerkje-van-persingen": {
   "naam": "Het Kerkje van Persingen",
-  "adres": "Persingensestraat 7, Persingen, Gelderland 6575JA, Nederland"
+  "adres": "Persingensestraat 7, Persingen, Gelderland 6575JA, Nederland",
+  "bedrijf": "",
+  "plaats": "Berg en Dal"
  },
  "het-landhoofd": {
-  "naam": "Het Landhoofd",
-  "adres": "spoorburgkade 3a, Nijmegen 6511 XV"
+  "naam": "Het Landhoofd Nijmegen",
+  "adres": "spoorburgkade 3a, Nijmegen 6511 XV",
+  "bedrijf": "landhoofd",
+  "plaats": "Nijmegen"
  },
  "historische-kerk-aan-de-groesbeek": {
   "naam": "Historische kerk aan de Groesbeek",
-  "adres": "Kerkstraat 18, Groesbeek 6561CC, Nederland"
+  "adres": "Kerkstraat 18, Groesbeek 6561CC, Nederland",
+  "bedrijf": "",
+  "plaats": "Groesbeek"
  },
  "hortus-nijmegen": {
   "naam": "Hortus Nijmegen",
-  "adres": "Victor Westhofflaan 22 (Google maps: d’Almarasweg 22d)"
+  "adres": "Victor Westhofflaan 22 (Google maps: d’Almarasweg 22d)",
+  "bedrijf": "stichting-hortus-nijmegen",
+  "plaats": "Nijmegen"
  },
  "hotel-the-rebyl": {
-  "naam": "Hotel The Rebyl",
-  "adres": "Vierdaagseplein 1, Nijmegen, Gelderland 6524 AG, Nederland"
+  "naam": "Hotel The Rebyl Nijmegen",
+  "adres": "Vierdaagseplein 1, Nijmegen, Gelderland 6524 AG, Nederland",
+  "plaats": "Nijmegen",
+  "bedrijf": "hotel-the-rebyl"
  },
  "huis-van-de-nijmeegse-geschiedenis": {
   "naam": "Huis van de Nijmeegse Geschiedenis",
-  "adres": "Mariënburg 26, 6511 PS Nijmegen"
+  "adres": "Mariënburg 26, 6511 PS Nijmegen",
+  "bedrijf": "huis-van-de-nijmeegse-geschiedenis",
+  "plaats": "Nijmegen"
  },
  "infocentrum-wo2-nijmegen": {
   "naam": "Infocentrum WO2 Nijmegen",
-  "adres": "Ridderstraat 27 6511 TM Nijmegen"
+  "adres": "Ridderstraat 27 6511 TM Nijmegen",
+  "bedrijf": "infocentrum-wo2-nijmegen",
+  "plaats": "Nijmegen"
  },
  "irish-pub-the-shamrock": {
-  "naam": "Irish pub The Shamrock",
-  "adres": "Smetiusstraat 17 Nijmegen"
+  "naam": "Irish pub The Shamrock Nijmegen",
+  "adres": "Smetiusstraat 17 Nijmegen",
+  "plaats": "Nijmegen"
  },
  "kasteel-wijchen": {
   "naam": "Kasteel Wijchen",
-  "adres": "Kasteellaan 9, Wijchen 6602 DA"
+  "adres": "Kasteellaan 9, Wijchen 6602 DA",
+  "plaats": "Wijchen",
+  "bedrijf": "kasteel-wijchen"
  },
  "kerkje-van-persingen": {
   "naam": "Kerkje van Persingen",
-  "adres": "Persingense straat 7 Persingen, 5363 VE Velp"
- },
- "kleine-kirche": {
-  "naam": "Kleine Kirche",
-  "adres": "Böllenstege, D-47533 Kleve"
+  "adres": "Persingense straat 7 Persingen, 5363 VE Velp",
+  "bedrijf": "",
+  "plaats": "Berg en Dal"
  },
  "kleine-wiel": {
-  "naam": "Kleine Wiel",
-  "adres": "Karl Marxstraat 101"
+  "naam": "Kleine Wiel Nijmegen",
+  "adres": "Karl Marxstraat 101",
+  "bedrijf": "de-kleine-wiel",
+  "plaats": "Nijmegen"
  },
- "kleve-centrum": {
-  "naam": "Kleve Centrum"
+ "kleve": {
+  "naam": "Kleve",
+  "plaats": "Kleef",
+  "bedrijf": ""
  },
  "kloster-graefenthal": {
-  "naam": "Kloster Graefenthal",
-  "adres": "Maasstraße 48, 47574 Goch, Deutschland"
+  "naam": "Kloster Graefenthal Goch",
+  "adres": "Maasstraße 48, 47574 Goch, Deutschland",
+  "plaats": "Goch"
  },
  "krayenhoffkazerne": {
-  "naam": "Krayenhoffkazerne",
-  "adres": "Molenveldlaan 12-144"
+  "naam": "Krayenhoffkazerne Nijmegen",
+  "adres": "Molenveldlaan 12-144",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "kunstkring-wijchen": {
   "naam": "Kunstkring Wijchen",
-  "adres": "Kasteellaan 13, 6602 DA Wijchen"
+  "adres": "Kasteellaan 13, 6602 DA Wijchen",
+  "plaats": "Wijchen",
+  "bedrijf": "kunstkring-wijchen"
  },
  "lieskes-wengs": {
-  "naam": "Lieskes Wengs",
-  "adres": "Lieskes Wengs 1, Leuth 6587 JK, Nederland"
+  "naam": "Lieskes Wengs Berg en Dal",
+  "adres": "Lieskes Wengs 1, Leuth 6587 JK, Nederland",
+  "plaats": "Berg en Dal"
  },
  "lindenberg-cultuurhuis": {
-  "naam": "Lindenberg Cultuurhuis",
-  "adres": "Ridderstraat 23, 6511 TM Nijmegen"
+  "naam": "Lindenberg Cultuurhuis Nijmegen",
+  "adres": "Ridderstraat 23, 6511 TM Nijmegen",
+  "bedrijf": "lindenberg-cultuurhuis",
+  "plaats": "Nijmegen"
  },
  "lutherse-kerk": {
-  "naam": "Lutherse kerk",
-  "adres": "Prins Hendrikstraat 79, 6521 AX  Nijmegen"
+  "naam": "Lutherse kerk Nijmegen",
+  "adres": "Prins Hendrikstraat 79, 6521 AX  Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "lux-nijmegen": {
   "naam": "Lux Nijmegen",
-  "adres": "Mariënburg 38 – 39, Nijmegen"
+  "adres": "Mariënburg 38 – 39, Nijmegen",
+  "bedrijf": "lux",
+  "plaats": "Nijmegen"
  },
  "maelwael-van-lymborch-huis": {
-  "naam": "Maelwael van Lymborch Huis",
-  "adres": "Burchtstraat 63, 6511 RC Nijmegen"
+  "naam": "Maelwael van Lymborch Huis Nijmegen",
+  "adres": "Burchtstraat 63, 6511 RC Nijmegen",
+  "bedrijf": "maelwael-van-lymborch-huis",
+  "plaats": "Nijmegen"
  },
  "marienburgplaats": {
-  "naam": "Marienburgplaats"
+  "naam": "Marienburgplaats Nijmegen",
+  "plaats": "Nijmegen"
  },
  "museum-kurhaus": {
-  "naam": "Museum Kurhaus",
-  "adres": "Tiergartenstraße 41, D-47533 Kleve"
+  "naam": "Museum Kurhaus Kleve",
+  "adres": "Tiergartenstraße 41, D-47533 Kleve",
+  "plaats": "Kleef",
+  "bedrijf": "museum-kurhaus-kleve"
  },
  "museumpark-orientalis": {
-  "naam": "museumpark oriëntalis",
-  "adres": "Profetenlaan 2"
+  "naam": "Museumpark oriëntalis Nijmegen",
+  "adres": "Profetenlaan 2",
+  "plaats": "Nijmegen",
+  "bedrijf": "museumpark-orientalis"
  },
  "nyma-makersplaats": {
-  "naam": "NYMA makersplaats",
-  "adres": "Winselingseweg 16"
+  "naam": "NYMA makersplaats Nijmegen",
+  "adres": "Winselingseweg 16",
+  "plaats": "Nijmegen"
  },
  "obg-nijmegen": {
   "naam": "OBG Nijmegen",
-  "adres": "Prof. Cornelissenstraat 2, 6524 PJ Nijmegen"
+  "adres": "Prof. Cornelissenstraat 2, 6524 PJ Nijmegen",
+  "plaats": "Nijmegen"
  },
  "old-cave": {
-  "naam": "Old Cave",
-  "adres": "Sint Anthoniusplaats 13"
+  "naam": "Old Cave Nijmegen",
+  "adres": "Sint Anthoniusplaats 13",
+  "bedrijf": "old-cave-nijmegen",
+  "plaats": "Nijmegen"
  },
  "openluchttheater-de-goffert": {
-  "naam": "Openluchttheater De Goffert",
-  "adres": "Steinweglaan 2, 6532AE Nijmegen"
+  "naam": "Openluchttheater De Goffert Nijmegen",
+  "adres": "Steinweglaan 2, 6532AE Nijmegen",
+  "bedrijf": "openluchttheater-de-goffert",
+  "plaats": "Nijmegen"
  },
  "park-de-omloop-lindenholt": {
   "naam": "Park de Omloop - Lindenholt",
-  "adres": "Zellersacker 1003, Nijmegen 6546 HA"
+  "adres": "Zellersacker 1003, Nijmegen 6546 HA",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "pastor-leinung-platz": {
   "naam": "Pastor-Leinung-Platz, Kleef, Duitsland",
-  "adres": "Pastor-Leinung-Platz 10, 47533 Kleve, Duitsland"
+  "adres": "Pastor-Leinung-Platz 10, 47533 Kleve, Duitsland",
+  "plaats": "Kleef"
  },
  "pastor-leinung-platz-kleef-duitsland": {
   "naam": "Pastor-Leinung-Platz, Kleef, Duitsland",
-  "adres": "Pastor-Leinung-Platz 10, 47533 Kleve, Duitsland"
+  "adres": "Pastor-Leinung-Platz 10, 47533 Kleve, Duitsland",
+  "plaats": "Kleef"
  },
  "petruskerk": {
-  "naam": "Petruskerk",
-  "adres": "Schependomlaan 85"
+  "naam": "Petruskerk Nijmegen",
+  "adres": "Schependomlaan 85",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "plan-a": {
-  "naam": "Plan_A",
-  "adres": "Vlietstraat 22, 6542 SM Nijmegen"
+  "naam": "Plan_A Nijmegen",
+  "adres": "Vlietstraat 22, 6542 SM Nijmegen",
+  "bedrijf": "plan-a",
+  "plaats": "Nijmegen"
  },
  "pop-culture-arcade": {
-  "naam": "Pop Culture Arcade",
-  "adres": "Van Welderenstraat 80, Nijmegen, Gelderland 6511MR, Nederland"
+  "naam": "Pop Culture Arcade Nijmegen",
+  "adres": "Van Welderenstraat 80, Nijmegen, Gelderland 6511MR, Nederland",
+  "plaats": "Nijmegen",
+  "bedrijf": "pop-culture-arcade"
  },
  "popop": {
-  "naam": "POPOP",
-  "adres": "Passage Molenpoort 4, Nijmegen, Gelderland 6511HV, Nederland"
+  "naam": "POPOP Nijmegen",
+  "adres": "Passage Molenpoort 4, Nijmegen, Gelderland 6511HV, Nederland",
+  "bedrijf": "popop",
+  "plaats": "Nijmegen"
  },
  "regeneratieve-burgerboerderij-de-biesterhof": {
-  "naam": "Regeneratieve Burgerboerderij De Biesterhof",
-  "adres": "Zeelandsestraat 74, Millingen aan de Rijn"
+  "naam": "Regeneratieve Burgerboerderij De Biesterhof Berg en Dal",
+  "adres": "Zeelandsestraat 74, Millingen aan de Rijn",
+  "plaats": "Berg en Dal"
  },
  "roomsch-leven": {
-  "naam": "Roomsch leven",
-  "adres": "Heyendaalseweg 239 Nijmegen"
+  "naam": "Roomsch leven Nijmegen",
+  "adres": "Heyendaalseweg 239 Nijmegen",
+  "plaats": "Nijmegen"
  },
  "sint-jacobskapel": {
-  "naam": "Sint Jacobskapel",
-  "adres": "Glashuis 4"
- },
- "stadthalle-kleve": {
-  "naam": "Stadthalle Kleve",
-  "adres": "Lohstätte 7, D-47533 Kleve"
+  "naam": "Sint Jacobskapel Nijmegen",
+  "adres": "Glashuis 4",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "stedelijk-gymnasium": {
-  "naam": "Stedelijk Gymnasium",
-  "adres": "Kronenburgersingel 269, Nijmegen 6511AS, Nederland"
+  "naam": "Stedelijk Gymnasium Nijmegen",
+  "adres": "Kronenburgersingel 269, Nijmegen 6511AS, Nederland",
+  "plaats": "Nijmegen"
  },
  "stevenskerk": {
-  "naam": "Stevenskerk",
-  "adres": "Sint Stevenskerkhof 62, 6511 VZ Nijmegen"
+  "naam": "Stevenskerk Nijmegen",
+  "adres": "Sint Stevenskerkhof 62, 6511 VZ Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "theater-de-kik": {
-  "naam": "Theater De Kik",
-  "adres": "Dorpstraat 39, 6661 EG Elst"
+  "naam": "Theater De Kik Elst",
+  "adres": "Dorpstraat 39, 6661 EG Elst",
+  "plaats": "Elst"
  },
  "theater-de-klif": {
-  "naam": "Theater de Klif",
-  "adres": "Pijlpuntstraat 1"
- },
- "theater-het-badhuis": {
-  "naam": "Theater Het Badhuis",
-  "adres": "Daalseweg 262, Nijmegen 6523 CD, Nederland"
+  "naam": "Theater de Klif Nijmegen",
+  "adres": "Pijlpuntstraat 1",
+  "bedrijf": "theater-de-klif",
+  "plaats": "Nijmegen"
  },
  "theater-het-badhuis-nijmegen": {
   "naam": "Theater het Badhuis Nijmegen",
-  "adres": "Daalseweg 262  6523 CD Nijmegen"
+  "adres": "Daalseweg 262  6523 CD Nijmegen",
+  "bedrijf": "badhuis",
+  "plaats": "Nijmegen"
  },
  "theaterkerk-bemmel": {
   "naam": "Theaterkerk Bemmel",
-  "adres": "Martk 5, Bemmel"
+  "adres": "Martk 5, Bemmel",
+  "bedrijf": "",
+  "plaats": "Bemmel"
  },
  "theaterzaal-c": {
-  "naam": "Theaterzaal C",
-  "adres": "Heyendaalseweg 141, Nijmegen 6525 AJ, Nederland"
+  "naam": "Theaterzaal C Nijmegen",
+  "adres": "Heyendaalseweg 141, Nijmegen 6525 AJ, Nederland",
+  "plaats": "Nijmegen"
  },
  "theaterzaal-pro-persona-hoofdgebouw-sterrenberg": {
-  "naam": "Theaterzaal Pro Persona, hoofdgebouw Sterrenberg",
-  "adres": "Nijmeegsebaan 61, Nijmegen, 20 6525DX, Nederland"
+  "naam": "Theaterzaal Pro Persona, hoofdgebouw Sterrenberg Nijmegen",
+  "adres": "Nijmeegsebaan 61, Nijmegen, 20 6525DX, Nederland",
+  "plaats": "Nijmegen"
  },
  "thiemeloods": {
-  "naam": "Thiemeloods",
-  "adres": "Leemptstraat 34 Nijmegen "
+  "naam": "Thiemeloods Nijmegen",
+  "adres": "Leemptstraat 34 Nijmegen ",
+  "plaats": "Nijmegen",
+  "bedrijf": "thiemeloods"
  },
  "titus-brandsma-gedachteniskerk": {
-  "naam": "Titus Brandsma Gedachteniskerk",
-  "adres": "Keizer Karelplein, Nijmegen"
- },
- "tourist-information-kleve": {
-  "naam": "Tourist Information Kleve",
-  "adres": "Minoritenplatz 2, 47533 Kleve"
+  "naam": "Titus Brandsma Gedachteniskerk Nijmegen",
+  "adres": "Keizer Karelplein, Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "ufer-des-kermisdahls": {
-  "naam": "Ufer des Kermisdahls",
-  "adres": "Wasserstraße, Kleve 47533, Deutschland"
+  "naam": "Ufer des Kermisdahls Kleve",
+  "adres": "Wasserstraße, Kleve 47533, Deutschland",
+  "plaats": "Kleef"
  },
  "vasim-circus-space": {
-  "naam": "Vasim Circus Space",
-  "adres": "De Kolk 6"
+  "naam": "Vasim Circus Space Nijmegen",
+  "adres": "De Kolk 6",
+  "bedrijf": "vasim-circus-space",
+  "plaats": "Nijmegen"
  },
  "vrijheidsmuseum": {
-  "naam": "Vrijheidsmuseum",
-  "adres": "Wylerbaan 4, 6561 KR Groesbeek"
+  "naam": "Vrijheidsmuseum Groesbeek",
+  "adres": "Wylerbaan 4, 6561 KR Groesbeek",
+  "bedrijf": "vrijheidsmuseum",
+  "plaats": "Groesbeek"
  },
  "waalhalla": {
-  "naam": "Waalhalla",
-  "adres": "Winselingseweg 12, 6541 AK Nijmegen"
+  "naam": "Waalhalla Nijmegen",
+  "adres": "Winselingseweg 12, 6541 AK Nijmegen",
+  "bedrijf": "waalhalla",
+  "plaats": "Nijmegen"
  },
  "waalkade": {
-  "naam": "Waalkade",
-  "adres": "Waalkade 100, 6511 XR Nijmegen"
+  "naam": "Waalkade Nijmegen",
+  "adres": "Waalkade 100, 6511 XR Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "wijkcentrum-ark-van-oost": {
-  "naam": "Wijkcentrum Ark van Oost",
-  "adres": "Cipresstraat 154 6523 HR NIJMEGEN"
+  "naam": "Wijkcentrum Ark van Oost Nijmegen",
+  "adres": "Cipresstraat 154 6523 HR NIJMEGEN",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "wijkcentrum-de-biezantijn": {
-  "naam": "Wijkcentrum De Biezantijn",
-  "adres": "Waterstraat 146, 6541 TN Nijmegen"
+  "naam": "Wijkcentrum De Biezantijn Nijmegen",
+  "adres": "Waterstraat 146, 6541 TN Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "wijkcentrum-hatert": {
   "naam": "Wijkcentrum Hatert",
-  "adres": "Couwenbergstraat 22, 6535 RZ Nijmegen"
+  "adres": "Couwenbergstraat 22, 6535 RZ Nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen"
  },
  "wijngaard-de-plack": {
-  "naam": "wijngaard de plack",
-  "adres": "ketelstraat 36, groesbeek, gelderland 6562lh, nederland"
+  "naam": "Wijngaard de plack Groesbeek",
+  "adres": "ketelstraat 36, groesbeek, gelderland 6562lh, nederland",
+  "plaats": "Groesbeek"
  },
  "zeester-nijmegen": {
   "naam": "Zeester Nijmegen",
-  "adres": "Lindenberghaven 1D, Nijmegen 6511 XT, Nederland"
+  "adres": "Lindenberghaven 1D, Nijmegen 6511 XT, Nederland",
+  "bedrijf": "zeester-nijmegen-2",
+  "plaats": "Nijmegen"
  }
 }

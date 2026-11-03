@@ -1,0 +1,103 @@
+{
+ "_uitleg": "Bedrijven die de redactie zelf aan de gids toevoegt (besluit Frans, 3-11-2026: locaties uit de agenda die een bedrijf zijn). tools/bedrijvengids.py zet ze bij de categorie; de websitescan vult later tekst en openingstijden aan.",
+ "bosatelier": {
+  "naam": "Bosatelier",
+  "categorie": "coach",
+  "adres": "Scheidingsweg 99",
+  "postcode": "6581 KN",
+  "plaats": "Nijmegen",
+  "website": "https://www.intuitieftraject.nl/",
+  "lat": "51.8087602",
+  "lon": "5.8603504"
+ },
+ "hotel-the-rebyl": {
+  "naam": "Hotel The Rebyl",
+  "categorie": "hotel",
+  "adres": "Vierdaagseplein 1",
+  "postcode": "6524 AG",
+  "plaats": "Nijmegen",
+  "website": "https://therebyl.com/",
+  "lat": "51.8414453",
+  "lon": "5.8678972"
+ },
+ "kunstkring-wijchen": {
+  "naam": "Kunstkring Wijchen",
+  "categorie": "galerie",
+  "adres": "Kasteellaan 13",
+  "postcode": "6602 DA",
+  "plaats": "Wijchen",
+  "website": "https://www.kunstkringwijchen.nl/",
+  "lat": "51.8085412",
+  "lon": "5.7284772"
+ },
+ "kasteel-wijchen": {
+  "naam": "Kasteel Wijchen",
+  "categorie": "musea",
+  "adres": "Kasteellaan 9",
+  "postcode": "6602 DA",
+  "plaats": "Wijchen",
+  "website": "https://www.kasteelwijchen.nl/",
+  "lat": "51.8085399",
+  "lon": "5.7275987"
+ },
+ "de-boekerij": {
+  "naam": "De Boekerij",
+  "categorie": "zaalverhuur",
+  "adres": "Berg en Dalseweg 77A",
+  "postcode": "6522 BC",
+  "plaats": "Nijmegen",
+  "website": "https://deboekerij.com/",
+  "lat": "51.8407064",
+  "lon": "5.8783945"
+ },
+ "bibliotheek-marienburg": {
+  "naam": "Bibliotheek Mariënburg",
+  "categorie": "uitjes",
+  "adres": "Mariënburg 29",
+  "postcode": "6511 PS",
+  "plaats": "Nijmegen",
+  "website": "https://www.obgz.nl/",
+  "lat": "51.8454012",
+  "lon": "5.8670264"
+ },
+ "hackerspace-nijmegen": {
+  "naam": "Hackerspace Nijmegen",
+  "categorie": "uitjes",
+  "adres": "Winkelsteegseweg 209",
+  "postcode": "6534 AP",
+  "plaats": "Nijmegen",
+  "website": "https://hackerspacenijmegen.nl/",
+  "lat": "51.8150836",
+  "lon": "5.8157996"
+ },
+ "museum-kurhaus-kleve": {
+  "naam": "Museum Kurhaus Kleve",
+  "categorie": "musea",
+  "adres": "Tiergartenstraße 41",
+  "postcode": "47533",
+  "plaats": "Kleve",
+  "website": "https://www.mkk.art/",
+  "lat": "51.7956133",
+  "lon": "6.1252950"
+ },
+ "museumpark-orientalis": {
+  "naam": "Museumpark Oriëntalis",
+  "categorie": "musea",
+  "adres": "Profetenlaan 2",
+  "postcode": "",
+  "plaats": "Heilig Landstichting",
+  "website": "https://www.museumparkorientalis.nl/",
+  "lat": "51.8173916",
+  "lon": "5.8959290"
+ },
+ "thiemeloods": {
+  "naam": "Thiemeloods",
+  "categorie": "podia",
+  "adres": "Leemptstraat 34",
+  "postcode": "",
+  "plaats": "Nijmegen",
+  "website": "https://thiemeloods.nl/",
+  "lat": "51.8384519",
+  "lon": "5.8556477"
+ }
+}

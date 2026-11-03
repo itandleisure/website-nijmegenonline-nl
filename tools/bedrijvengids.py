@@ -30,6 +30,8 @@ sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import DOORVERWIJZING, SITE, VOET, datum_nl as datum_tijd_nl, esc, kop, samenvatting, schoon  # noqa: E402
 import gidsiconen
 import nieuws  # noqa: E402
+import agenda  # noqa: E402
+import koppeling  # noqa: E402
 
 NS = {"wp": "http://wordpress.org/export/1.2/", "content": "http://purl.org/rss/1.0/modules/content/"}
 BETAALD = ("uitgelicht", "partner", "hoofdpartner")
@@ -2389,7 +2391,7 @@ def adresregel(b):
     return ", ".join(x for x in (b["adres"], " ".join(x for x in (pc, b["plaats"]) if x)) if x)
 
 
-def bedrijf_pagina(b, cat, anderen, root="../../", berichten=()):
+def bedrijf_pagina(b, cat, anderen, root="../../", berichten=(), evenementen=()):
     canonical = "%s/bedrijvengids/%s/" % (SITE, b["slug"])
     soort = (b.get("soort") or cat["enkelvoud"]).lower()
     kort = "<p>%s is een %s aan de %s in %s.</p>" % (esc(b["naam"]), esc(soort), esc(b["adres"]), esc(b["plaats"])) if b["adres"] else ""
@@ -2486,6 +2488,22 @@ def bedrijf_pagina(b, cat, anderen, root="../../", berichten=()):
     if not b.get("uitgelicht"):
         out.append(mijn_bedrijf(b, cat, root))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
+    # Alles van dit bedrijf op NijmegenOnline (besluit Frans, 2-11-2026): vacatures, agenda, nieuws, boven de kaart
+    if evenementen:
+        out.append('        <section class="gids-sectie" id="agenda">\n          <h2>Agenda</h2>\n          <div class="eventlijst">')
+        out.extend("            " + agenda.eventkaart(e, datetime.date.today(), root) for e in evenementen[:5])
+        out.append('          </div>')
+        if len(evenementen) > 5:
+            out.append('          <p class="gids-verder"><a href="%s%s/%s/">Alle %d evenementen</a></p>'
+                       % (root, agenda.AANBIEDERS, evenementen[0]["aanbieder"], len(evenementen)))
+        out.append('          <p class="bron">Organiseer je zelf iets? <a href="%sevenement-aanmelden/?bedrijf=%s">Meld je evenement aan</a>.</p>'
+                   % (root, b["slug"]))
+        out.append('        </section>')
+    if berichten:
+        out.append('        <section class="gids-sectie">\n          <h2>In het nieuws</h2>\n          <ul class="archieflijst">')
+        out.extend('            <li><time datetime="%s">%s</time> <a href="%snieuwsoverzicht/%s/">%s</a></li>'
+                   % (x["datum"][:10], esc(datum_tijd_nl(x["datum"])), root, x["slug"], esc(x["titel"])) for x in berichten[:5])
+        out.append("          </ul>\n        </section>")
     if b["lat"]:
         lat, lon = float(b["lat"]), float(b["lon"])
         bbox = "%.5f,%.5f,%.5f,%.5f" % (lon - 0.006, lat - 0.003, lon + 0.006, lat + 0.003)
@@ -2494,11 +2512,6 @@ def bedrijf_pagina(b, cat, anderen, root="../../", berichten=()):
                    'src="https://www.openstreetmap.org/export/embed.html?bbox=%s&amp;layer=mapnik&amp;marker=%s,%s"></iframe>'
                    % (esc(b["naam"]), bbox, b["lat"], b["lon"]))
         out.append('          <p class="bron">Kaart: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-bijdragers</a></p>\n        </section>')
-    if berichten:
-        out.append('        <section class="gids-sectie">\n          <h2>In het nieuws</h2>\n          <ul class="archieflijst">')
-        out.extend('            <li><time datetime="%s">%s</time> <a href="%snieuwsoverzicht/%s/">%s</a></li>'
-                   % (x["datum"][:10], esc(datum_tijd_nl(x["datum"])), root, x["slug"], esc(x["titel"])) for x in berichten[:5])
-        out.append("          </ul>\n        </section>")
     if anderen:
         out.append('        <section class="gids-sectie">\n          <h2>Meer %s in Nijmegen</h2>\n          <div class="bedrijflijst">' % esc(cat["meervoud"]))
         out.extend("            " + (uitgelicht_kaart(x, root) if x.get("uitgelicht") else gewone_kaart(x, root)) for x in anderen[:4])
@@ -2519,7 +2532,9 @@ def mijn_bedrijf(b, cat, root):
     link = "%sbedrijf-aanmelden/?%s" % (root, urllib.parse.urlencode({k: v for k, v in velden.items() if v}))
     return ('        <aside class="mijnbedrijf">\n          <p><strong>Is %s jouw bedrijf?</strong> Vul je gegevens aan met foto\'s, openingstijden '
             'en een eigen tekst. Je vermelding is en blijft gratis; wil je meer opvallen, dan kun je hem laten uitlichten.</p>\n'
-            '          <p><a class="knop" href="%s">Dit is mijn bedrijf</a></p>\n        </aside>' % (esc(b["naam"]), esc(link)))
+            '          <p><a class="knop" href="%s">Dit is mijn bedrijf</a></p>\n'
+            '          <p>Organiseer je een evenement? <a href="%sevenement-aanmelden/?bedrijf=%s">Zet het gratis in de agenda</a>, '
+            'dan staat het ook op deze pagina.</p>\n        </aside>' % (esc(b["naam"]), esc(link), root, b["slug"]))
 
 
 def datum_nl(iso):
@@ -3064,6 +3079,18 @@ def sub_cat(sub, ouder):
     return cat
 
 
+def toegevoegd(cat, bekend):
+    """Bedrijven die de redactie zelf toevoegt (data/bedrijvengids-toegevoegd.json, besluit Frans 3-11-2026), als ze er
+    nog niet in staan. Zelfde velden als een bedrijf uit OpenStreetMap; de scan vult tekst en openingstijden aan."""
+    pad = ROOT / "data" / "bedrijvengids-toegevoegd.json"
+    lijst = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
+    return [{"naam": v["naam"], "adres": v.get("adres", ""), "postcode": v.get("postcode", ""), "plaats": v.get("plaats", ""),
+             "telefoon": v.get("telefoon", ""), "website": v.get("website", ""), "lat": v.get("lat", ""), "lon": v.get("lon", ""),
+             "soort": v.get("soort", ""), "bron": "redactie", "in_gids": False, "email": "", "facebook": "", "instagram": "",
+             "openingstijden": [], "foto": "", "beschrijving": v.get("beschrijving", ""), "tekst": "", "slug": slug}
+            for slug, v in sorted(lijst.items()) if not slug.startswith("_") and v.get("categorie") == cat["slug"] and slug not in bekend]
+
+
 def main(bron):
     bron = pathlib.Path(bron)
     xml_ = bron / "bron" / "wp-xml" / "bedrijvengids-listdom.xml"
@@ -3082,6 +3109,7 @@ def main(bron):
             gids, overig = json.loads(json.dumps((opgeslagen[cat["slug"]]["gids"], opgeslagen[cat["slug"]]["overig"])))
         else:
             continue
+        overig += toegevoegd(cat, gebruikt | {b["slug"] for b in gids + overig})
         # Een bedrijf uit de oude gids kan in meer categorieën staan; het krijgt één pagina (bij de eerste categorie)
         # Hoort het volgens de scan bij een andere categorie, dan valt het hier stil weg (geen doorverwijzing: het
         # komt bij die andere categorie).
@@ -3128,13 +3156,22 @@ def main(bron):
             o.setdefault("subs", []).append(c)
         print("subpagina %s: %d bedrijven" % (sub["slug"], len(lijst)))
     per_bedrijf = nieuws.koppelingen(nieuws.laad(), [(b["slug"], b.get("website")) for _, g, o in gebouwd for b in g + o])
+    # Komende evenementen per bedrijf (eigen veld "bedrijf", of via de aanbieder), zie tools/koppeling.py
+    aanbieders = json.loads((ROOT / "data" / "aanbieders.json").read_text(encoding="utf-8"))
+    vandaag = datetime.date.today()
+    evenementen_per = {}
+    for e in sorted(agenda.verrijk(json.loads((ROOT / "data" / "evenementen.json").read_text(encoding="utf-8")), aanbieders),
+                    key=lambda e: (max(agenda.dag(e, "start"), vandaag), e["start"], e["slug"])):
+        if e["_bedrijf"] and agenda.dag(e, "eind") >= vandaag:
+            evenementen_per.setdefault(e["_bedrijf"], []).append(e)
     for cat, gids, overig in gebouwd:
         extra = [b for c, g, o in gebouwd if c is not cat for b in g + o if cat["slug"] in b.get("ook_in", [])]
         artikelen = [(s_, titel_van(s_)) for s_ in cat["artikelen"] if titel_van(s_)]
         schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig + extra, artikelen))
         for b in gids + overig:
             anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
-            schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen, berichten=per_bedrijf.get(b["slug"], ())))
+            schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen, berichten=per_bedrijf.get(b["slug"], ()),
+                                                                     evenementen=evenementen_per.get(b["slug"], ())))
         blog_blokken(cat, gids + overig + extra)
         groepen.setdefault(cat["groep"], []).append((cat, gids, overig + extra))
     for c, lijst in subs:
@@ -3154,6 +3191,7 @@ def main(bron):
     schrijf_redirects(alle_weg, [(oud, cat["slug"]) for cat in CATEGORIEEN for oud in sorted(cat["listdom"]) if oud != cat["slug"]])
     (ROOT / "data" / "bedrijvengids-vermeldingen.json").write_text(
         json.dumps(alle_vermeldingen, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    koppeling.schrijf_zoeklijst(alle_vermeldingen)
     schrijf("bedrijvengids", start_pagina(list(groepen.items())))
     homepage_bijwerken(list(groepen.items()))
     thema_blokken(gebouwd)
