@@ -674,7 +674,12 @@
     "tekst": "<p>De musea in Nijmegen en omgeving die de moeite waard zijn. Tijden en prijzen van het vernieuwde Valkhof Museum vind je in onze gids over <a href=\"../../valkhof-nijmegen/\">het Valkhof</a>. Net buiten de stad ligt <a href=\"../../museumpark-orientalis/\">Museumpark Orientalis</a>. Tijden en prijzen van het <a href=\"../../vrijheidsmuseum-groesbeek/\">Vrijheidsmuseum</a> in Groesbeek staan in onze eigen gids. Ook over <a href=\"../../de-bastei-nijmegen/\">De Bastei</a> aan de Waalkade hebben we een eigen gids, net als over het fietsmuseum <a href=\"../../velorama-nijmegen/\">Velorama</a> ernaast.</p>",
     "artikelen": [
      "museums-in-nijmegen-wat-ga-jij-ontdekken",
-     "hoe-het-afrika-museum-je-elke-keer-weer-inspireert"
+     "hoe-het-afrika-museum-je-elke-keer-weer-inspireert",
+     "valkhof-nijmegen",
+     "museumpark-orientalis",
+     "vrijheidsmuseum-groesbeek",
+     "de-bastei-nijmegen",
+     "velorama-nijmegen"
     ]
    },
    {
@@ -809,5 +814,798 @@
   ],
   "bedrijvengids": "",
   "kort": "Afstanden, voorbereiding, blessures voorkomen en overnachten."
+ },
+ {
+  "url": "/thema/centrum-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2023/01/Skyline-1.webp",
+  "naam": "Het centrum van Nijmegen",
+  "zoekwoord": "centrum nijmegen",
+  "seo_titel": "Centrum van Nijmegen: pleinen, Waalkade, winkelen en parkeren",
+  "beschrijving": "Gids voor het centrum van Nijmegen: de Grote Markt, Plein 1944, het Kelfkensbos, de Waalkade en de Waalbrug, plus openingstijden, markten en parkeren.",
+  "intro": "<p>Het centrum van Nijmegen ligt op de heuvel boven de Waal, tussen het station en de rivier. Het is compact: van het Stationsplein loop je in een kwartier naar de Grote Markt, en vandaar ben je in vijf minuten op de Waalkade. Onderweg kom je langs de Stevenskerk, de winkelstraten en de pleinen die elk hun eigen verhaal hebben, van het bombardement van 1944 tot de Romeinse vondsten onder het Kelfkensbos.</p><p>In deze gids staan de pleinen, straten en plekken aan de Waal op een rij, met de openingstijden van de winkels, de markten en de handigste plekken om te parkeren.</p>",
+  "secties": [
+   {
+    "kop": "Pleinen en kerk",
+    "tekst": "<p>Vier plekken vormen het hart van de binnenstad: de Grote Markt met de Waag en de Stevenskerk, Plein 1944 dat na het bombardement ontstond, het Kelfkensbos bij het Valkhof en de kerk zelf, al bijna acht eeuwen het hoogste punt van de stad.</p>",
+    "artikelen": [
+     "grote-markt",
+     "plein-1944",
+     "kelfkensbos",
+     "stevenskerk-nijmegen"
+    ]
+   },
+   {
+    "kop": "Aan de Waal",
+    "tekst": "<p>Beneden aan de rivier liggen de Waalkade met zijn terrassen, het Valkhofpark met de Sint-Nicolaaskapel en de Waalbrug uit 1936. De mooiste fotospots van de stad vind je hier.</p>",
+    "artikelen": [
+     "waalkade-nijmegen",
+     "valkhof-nijmegen",
+     "waalbrug-nijmegen",
+     "de-beste-fotospots-in-nijmegen"
+    ]
+   },
+   {
+    "kop": "Winkelen, markten en openingstijden",
+    "tekst": "<p>De winkels in het centrum zijn ook op zondag open, en op maandag en zaterdag staat de weekmarkt in de binnenstad. Hieronder de openingstijden, de markten en tips van een Nijmegenaar.</p>",
+    "artikelen": [
+     "openingstijden-centrum-nijmegen",
+     "markten-nijmegen",
+     "wat-te-doen-in-nijmegen",
+     "ontdek-nijmegen-door-de-ogen-van-een-local"
+    ]
+   },
+   {
+    "kop": "Parkeren en bereikbaarheid",
+    "tekst": "<p>Met de trein stap je uit aan de rand van het centrum. Met de auto parkeer je in een van de garages onder de binnenstad, of goedkoper op een P+R buiten de stad.</p>",
+    "artikelen": [
+     "parkeren-in-nijmegen",
+     "station-nijmegen",
+     "parkeergarage-kelfkensbos-nijmegen",
+     "parkeergarage-marienburg-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Wat is het centrale plein van Nijmegen?",
+    "a": "De Grote Markt, met de Waag uit 1612 en de Stevenskerk erachter. Plein 1944 is het grootste plein en ontstond na het bombardement van 22 februari 1944."
+   },
+   {
+    "v": "Hoe ver is het van station Nijmegen naar het centrum?",
+    "a": "Het station ligt aan de westrand van het centrum. Lopend ben je in een kwartier op de Grote Markt."
+   },
+   {
+    "v": "Zijn de winkels in het centrum van Nijmegen op zondag open?",
+    "a": "Ja, de meeste winkels in de binnenstad zijn elke zondag open, meestal van 12.00 tot 17.00 uur. Kijk voor de precieze tijden bij de openingstijden van het centrum."
+   },
+   {
+    "v": "Waar parkeer je in het centrum van Nijmegen?",
+    "a": "In de garages Keizer Karel, Kelfkensbos, Mariënburg en Eiermarkt, voor € 3,90 per uur overdag. Goedkoper is P+R Nijmegen Noord, € 3,50 per dag inclusief de bus naar het centrum."
+   }
+  ],
+  "bedrijvengids": "",
+  "kort": "Pleinen, Waalkade, winkels, markten en parkeren in de binnenstad."
+ },
+ {
+  "url": "/thema/parkeren-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2022/09/parkeren-in-de-parkeergarage-in-nijmegen.webp",
+  "naam": "Parkeren en bereikbaarheid in Nijmegen",
+  "zoekwoord": "parkeren nijmegen",
+  "seo_titel": "Parkeren en bereikbaarheid in Nijmegen: garages, P+R, trein en bus",
+  "beschrijving": "Alles over parkeren in Nijmegen en hoe je er komt: de parkeergarages in het centrum met tarieven, gratis en goedkope P+R-terreinen, station Nijmegen, de bus en de fiets.",
+  "intro": "<p>Nijmegen heeft een compact centrum op een heuvel, met vier parkeergarages eronder en P+R-terreinen aan de rand van de stad. Wie met de trein komt, stapt uit op een kwartier lopen van de Grote Markt. In deze gids staan alle pagina's over parkeren en bereikbaarheid bij elkaar: de garages met hun tarieven, de goedkope en gratis alternatieven, het station, de bus en hoe je je door de stad beweegt.</p>",
+  "secties": [
+   {
+    "kop": "Parkeren in het centrum",
+    "tekst": "<p>In de garages Keizer Karel, Kelfkensbos, Mariënburg en Eiermarkt betaal je € 3,90 per uur overdag en € 0,50 per uur 's nachts. Op straat is het centrum duurder. Gratis parkeer je op P+R Nijmegen West; P+R Nijmegen Noord kost € 3,50 per dag inclusief de bus.</p>",
+    "artikelen": [
+     "parkeren-in-nijmegen",
+     "parkeergarage-kelfkensbos-nijmegen",
+     "parkeergarage-marienburg-nijmegen",
+     "parkeergarage-eiermarkt-nijmegen",
+     "parkeergarage-keizer-karel-nijmegen"
+    ]
+   },
+   {
+    "kop": "Met trein, bus en fiets",
+    "tekst": "<p>Station Nijmegen heeft directe intercity's naar onder meer Utrecht, Amsterdam en Den Haag; het busstation ligt ernaast. Op de fiets is de stad vlak, behalve de heuvel naar het centrum, en een e-bike helpt op de stuwwal richting Berg en Dal.</p>",
+    "artikelen": [
+     "station-nijmegen",
+     "plan-je-bezoek",
+     "zo-vind-je-een-e-bike-die-bij-jou-past",
+     "nijmegen-op-de-scooter-de-leukste-routes-en-handige-weetjes"
+    ]
+   },
+   {
+    "kop": "Onderweg in de stad",
+    "tekst": "<p>Deelauto's, deelscooters en de pont over de Waal: zo kom je rond zonder eigen auto. En over de Waalbrug rijden dagelijks tienduizenden voertuigen de stad in en uit.</p>",
+    "artikelen": [
+     "mobiliteit-in-nijmegen-hoe-flexibele-oplossingen-het-dagelijks-leven-vergemakkelijken",
+     "over-het-water-nijmegen-verkennen-zo-doe-je-dat",
+     "waalbrug-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Wat kost parkeren in het centrum van Nijmegen?",
+    "a": "In de parkeergarages € 3,90 per uur van 8.00 tot 18.00 uur en € 0,50 per uur 's nachts. Op straat € 4,00 per uur. In Eiermarkt, Mariënburg en Keizer Karel betaal je maximaal € 16,- per 24 uur."
+   },
+   {
+    "v": "Waar kun je gratis parkeren in Nijmegen?",
+    "a": "Op P+R Nijmegen West, en de eerste twee uur in de garage van winkelcentrum Dukenburg. P+R Nijmegen Noord kost € 3,50 per dag inclusief de bus naar het centrum."
+   },
+   {
+    "v": "Welke parkeergarages zijn er in het centrum van Nijmegen?",
+    "a": "Keizer Karel, Kelfkensbos, Mariënburg en Eiermarkt. Kelfkensbos ligt het dichtst bij de Waalkade en het Valkhof, Mariënburg midden in het winkelgebied."
+   },
+   {
+    "v": "Hoe kom je van station Nijmegen naar het centrum?",
+    "a": "Lopend, in ongeveer een kwartier naar de Grote Markt. Het busstation ligt direct naast het station."
+   }
+  ],
+  "bedrijvengids": "",
+  "kort": "Parkeergarages, tarieven, P+R, station, bus en fiets."
+ },
+ {
+  "url": "/thema/natuur-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2022/09/Ooijpolder-in-nijmegen.webp",
+  "naam": "Natuur, parken en wandelen rond Nijmegen",
+  "zoekwoord": "wandelen nijmegen",
+  "seo_titel": "Natuur, parken en wandelen rond Nijmegen: polder, heuvels en bos",
+  "beschrijving": "Gids voor natuur rond Nijmegen: de Ooijpolder, de heuvels van Berg en Dal en de Duivelsberg, de Mookerheide en Sint-Jansberg, de bossen van Heumensoord en de parken in de stad, met wandelroutes.",
+  "intro": "<p>Weinig steden hebben zoveel verschillende natuur binnen fietsafstand als Nijmegen. Aan de noordkant ligt de Ooijpolder met de Waal, de Bisonbaai en grazende runderen. Aan de oostkant en zuidkant klimt de stuwwal op tot bijna tachtig meter, met de Duivelsberg, de Mookerheide en de Sint-Jansberg. Daartussen liggen de bossen van Heumensoord en Heilig Landstichting, en in de stad zelf het Kronenburgerpark, het Goffertpark en het Valkhof.</p><p>In deze gids staan alle natuurgebieden en parken bij elkaar, met per gebied de routes, waar je parkeert en wat je er ziet.</p>",
+  "secties": [
+   {
+    "kop": "Wandelen",
+    "tekst": "<p>Begin bij ons overzicht van wandelroutes: stadswandelingen, de Waalbrug en de Spiegelwaal, het Boswachterspad door de polder en de lange Walk of Wisdom rond de stad.</p>",
+    "artikelen": [
+     "wandelen-nijmegen",
+     "de-andere-rivier-die-door-nijmegen-stroomt",
+     "over-het-water-nijmegen-verkennen-zo-doe-je-dat"
+    ]
+   },
+   {
+    "kop": "Polder en rivier",
+    "tekst": "<p>Direct ten oosten van de stad ligt de Ooijpolder, een rivierlandschap met kolken, wilgen en vrij lopende runderen en paarden. In de zomer zwem je in de Bisonbaai.</p>",
+    "artikelen": [
+     "ooijpolder"
+    ]
+   },
+   {
+    "kop": "Heuvels en bossen",
+    "tekst": "<p>De stuwwal uit de ijstijd geeft Nijmegen echte heuvels. De Duivelsberg bij Berg en Dal was tot 1949 Duits, de Mookerheide bloeit in augustus paars, en op de Sint-Jansberg borrelen bronnen uit de helling en liggen de resten van een Romeinse villa.</p>",
+    "artikelen": [
+     "duivelsberg",
+     "mookerheide",
+     "sint-jansberg",
+     "heumensoord",
+     "heilig-landstichting"
+    ]
+   },
+   {
+    "kop": "Parken in de stad",
+    "tekst": "<p>Ook binnen de stad is het groen: het Kronenburgerpark met de middeleeuwse Kruittoren, het Goffertpark rond het stadion en het Valkhofpark hoog boven de Waal.</p>",
+    "artikelen": [
+     "kronenburgerpark-nijmegen",
+     "goffertpark-nijmegen",
+     "valkhof-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Waar kun je mooi wandelen bij Nijmegen?",
+    "a": "In de Ooijpolder (Boswachterspad, 7,5 km), op de Mookerheide (3 tot 17 km), in Heumensoord (2, 5 en 6 km) en op de Duivelsberg en Sint-Jansberg, waar het Pieterpad overheen loopt. In de stad zijn er de Stadswandeling (5 km) en de Walk of the Town (7 km)."
+   },
+   {
+    "v": "Wat is het hoogste punt bij Nijmegen?",
+    "a": "De Sint-Jansberg bij Plasmolen haalt met de Kiekberg 77 meter; de Duivelsberg bij Berg en Dal is 75,9 meter."
+   },
+   {
+    "v": "Kun je zwemmen in de natuur bij Nijmegen?",
+    "a": "Ja, in de Bisonbaai in de Ooijpolder en in de Spiegelwaal bij Lent. Kijk altijd naar de actuele waterkwaliteit op zwemwater.nl."
+   },
+   {
+    "v": "Welke parken heeft Nijmegen?",
+    "a": "Het Kronenburgerpark bij het station, het Goffertpark in Nijmegen-Zuid en het Valkhofpark met het Hunnerpark boven de Waal."
+   }
+  ],
+  "bedrijvengids": "",
+  "kort": "Ooijpolder, Duivelsberg, Mookerheide, Sint-Jansberg, Heumensoord en de stadsparken."
+ },
+ {
+  "url": "/thema/evenementen-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2024/03/vierdaagsefeesten-nijmegen-15-07-2023_StadseilandStek_Edwin-Smits_Rechtenvrij.webp",
+  "naam": "Evenementen in Nijmegen door het jaar",
+  "zoekwoord": "evenementen nijmegen",
+  "seo_titel": "Evenementen in Nijmegen door het jaar: jaarkalender van carnaval tot kerst",
+  "beschrijving": "De jaarkalender van Nijmegen: carnaval, de Stevensloop, Koningsdag, Bevrijdingsfestival, kermis, Vierdaagse en Vierdaagsefeesten, Zevenheuvelenloop, Sint Maarten en de kerstmarkten, met data en links.",
+  "intro": "<p>Nijmegen heeft het hele jaar door iets te vieren. Het jaar begint met carnaval in Knotsenburg en de Stevensloop in maart, gevolgd door Koningsdag in het Goffertpark en het Bevrijdingsfestival op 5 mei. In juli loopt de stad vol voor de Vierdaagse en de Vierdaagsefeesten, het grootste gratis evenement van Nederland. In het najaar volgen de kermis, de Zevenheuvelenloop, Sint Maarten en de kerstmarkten.</p><p>In deze gids staan de vaste evenementen in volgorde van het jaar, elk met een eigen pagina met data, tijden en praktische tips. Wat er deze week te doen is, staat in de agenda.</p>",
+  "secties": [
+   {
+    "kop": "Winter en voorjaar",
+    "tekst": "<p>Carnaval 2027 is van zaterdag 6 tot en met dinsdag 9 februari, met de stadsoptocht op zondag vanaf Plein 1944. Op zondag 21 maart 2027 is de Stevensloop, met start in het Kronenburgerpark en finish bij de Grote Markt. Koningsdag valt op dinsdag 27 april 2027, met de vrijmarkt in het Goffertpark, en op 5 mei is het Bevrijdingsfestival in het Hunnerpark.</p>",
+    "artikelen": [
+     "carnaval-nijmegen",
+     "stevensloop-nijmegen",
+     "koningsdag-nijmegen",
+     "bevrijdingsfestival-nijmegen"
+    ]
+   },
+   {
+    "kop": "Zomer: Vierdaagse en festivals",
+    "tekst": "<p>Half juni staat de zomerkermis aan de Waalkade. De derde week van juli is van de Vierdaagse (20 tot en met 23 juli 2027) en de Vierdaagsefeesten (17 tot en met 23 juli 2027), met de intocht over de Via Gladiola op vrijdag. Festivals als het Valkhof Festival en Music Meeting staan in ons festivaloverzicht.</p>",
+    "artikelen": [
+     "vierdaagse-2027",
+     "vierdaagsefeesten-nijmegen",
+     "via-gladiola",
+     "festivals-nijmegen",
+     "kermis-nijmegen"
+    ]
+   },
+   {
+    "kop": "Najaar en kerst",
+    "tekst": "<p>Begin oktober is de najaarskermis, negen dagen in de binnenstad. Op zondag 15 november 2026 loopt de Zevenheuvelenloop door de heuvels van Berg en Dal, op 11 november lopen de kinderen met lampionnen voor Sint Maarten, en in december zijn er de kerstmarkten in het Kronenburgerpark, de binnenstad en over de grens in Kleef.</p>",
+    "artikelen": [
+     "zevenheuvelenloop",
+     "sint-maarten-nijmegen",
+     "kerstmarkten-in-nijmegen",
+     "kerstmarkt-kleve",
+     "schaatsen-in-nijmegen"
+    ]
+   },
+   {
+    "kop": "Agenda en markten",
+    "tekst": "<p>Concerten, exposities, rondleidingen en markten van deze week vind je in de agenda. De weekmarkt staat op maandag en zaterdag in de binnenstad.</p>",
+    "artikelen": [
+     "nijmegen-evenementen-overzicht",
+     "markten-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Wat is het grootste evenement van Nijmegen?",
+    "a": "De Vierdaagsefeesten, zeven dagen gratis feest in de binnenstad rond de Vierdaagse, met jaarlijks ongeveer 1,5 miljoen bezoekers. In 2027 zijn ze van 17 tot en met 23 juli."
+   },
+   {
+    "v": "Wanneer is de Vierdaagse 2027?",
+    "a": "Van dinsdag 20 tot en met vrijdag 23 juli 2027. De Vierdaagsefeesten beginnen al op zaterdag 17 juli."
+   },
+   {
+    "v": "Wanneer is carnaval in Nijmegen?",
+    "a": "Carnaval 2027 is van zaterdag 6 tot en met dinsdag 9 februari. Nijmegen heet dan Knotsenburg, en de stadsoptocht trekt op zondagmiddag vanaf Plein 1944 door de stad."
+   },
+   {
+    "v": "Wat is er in december te doen in Nijmegen?",
+    "a": "Winterburg in het Kronenburgerpark met een kerstmarkt, de Nijmeegse Winterweken in de binnenstad, het Kerstcircus in het Goffertpark en schaatsen bij Triavium. Over de grens is de kerstmarkt van Kleef."
+   },
+   {
+    "v": "Waar vind ik wat er deze week te doen is in Nijmegen?",
+    "a": "In onze agenda, met concerten, exposities, markten en rondleidingen in Nijmegen en de regio, elke dag bijgewerkt."
+   }
+  ],
+  "bedrijvengids": "",
+  "kort": "Jaarkalender: carnaval, Koningsdag, Vierdaagse, kermis, Zevenheuvelenloop en kerst."
+ },
+ {
+  "url": "/thema/sporten-in-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2022/11/zwemmen-in-nijmegen.webp",
+  "naam": "Sporten en zwemmen in Nijmegen",
+  "zoekwoord": "zwemmen nijmegen",
+  "seo_titel": "Sporten en zwemmen in Nijmegen: zwembaden, hardlopen, schaatsen en meer",
+  "beschrijving": "Sporten in Nijmegen: de zwembaden en het buitenwater, hardloopevenementen als de Zevenheuvelenloop en de Stevensloop, schaatsen bij Triavium, dansscholen, het Goffertstadion en tips om fit te blijven.",
+  "intro": "<p>Nijmegen is een sportstad: de Zevenheuvelenloop en de Stevensloop trekken elk jaar tienduizenden lopers, de Vierdaagse is het grootste wandelevenement ter wereld en N.E.C. speelt in het Goffertstadion. Zelf bewegen kan in drie overdekte zwembaden en twee buitenbaden, op de ijsbaan van Triavium, in de heuvels en bossen rond de stad en bij tientallen sportscholen en verenigingen.</p><p>In deze gids staan de pagina's over sporten en zwemmen bij elkaar: waar je zwemt, loopt en schaatst, welke evenementen er zijn en hoe je blessures voorkomt.</p>",
+  "secties": [
+   {
+    "kop": "Zwemmen",
+    "tekst": "<p>Overdekt zwem je in Sportfondsenbad Nijmegen-West, het Erica Terpstra Sportfondsenbad en Sportfondsenbad Dukenburg; in de zomer gaan de buitenbaden van de Goffert en Nijmegen-West open. Buiten zwem je in de Spiegelwaal, de Bisonbaai en de Mookerplas.</p>",
+    "artikelen": [
+     "zwembaden-nijmegen",
+     "ooijpolder",
+     "over-het-water-nijmegen-verkennen-zo-doe-je-dat"
+    ]
+   },
+   {
+    "kop": "Hardlopen en wandelen",
+    "tekst": "<p>De Zevenheuvelenloop (15 km, november) en de Stevensloop (halve marathon, 10 en 5 km, maart) zijn de grote loopevenementen. Trainen kan in Heumensoord, op de Mookerheide en langs de Waal. En in juli loopt de hele wereld de Vierdaagse.</p>",
+    "artikelen": [
+     "zevenheuvelenloop",
+     "stevensloop-nijmegen",
+     "vierdaagse-2027",
+     "wandelen-nijmegen",
+     "blessures-voorkomen-tijdens-de-voorbereiding-op-de-nijmeegse-vierdaagse-7-slimme-tips"
+    ]
+   },
+   {
+    "kop": "Schaatsen, dansen en voetbal",
+    "tekst": "<p>Bij Triavium in Dukenburg schaats je het hele seizoen overdekt. Dansen leer je bij een van de dansscholen in de stad, en N.E.C. speelt in het Goffertstadion, midden in het Goffertpark.</p>",
+    "artikelen": [
+     "schaatsen-in-nijmegen",
+     "de-beste-dansscholen-in-nijmegen",
+     "goffertstadion-nijmegen",
+     "goffertpark-nijmegen"
+    ]
+   },
+   {
+    "kop": "Fit blijven",
+    "tekst": "<p>Tips voor een goede warming-up, afvallen met sport en herstel bij een fysiotherapeut.</p>",
+    "artikelen": [
+     "bammmm-en-je-bent-fit",
+     "7x-de-beste-warming-up-oefeningen",
+     "afvallen-met-sport-tips-voor-een-kleinere-maat",
+     "voordelen-fysiotherapie-snel-herstel-met-een-fysio"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Welke zwembaden heeft Nijmegen?",
+    "a": "Drie overdekte baden: Sportfondsenbad Nijmegen-West, het Erica Terpstra Sportfondsenbad en Sportfondsenbad Dukenburg. In de zomer zijn er het openluchtbad de Goffert en het buitenbad van Nijmegen-West."
+   },
+   {
+    "v": "Waar kun je buiten zwemmen bij Nijmegen?",
+    "a": "In de Spiegelwaal bij Lent, de Bisonbaai in de Ooijpolder, de Berendonck, de Groene Heuvels en de Mookerplas. Kijk voor de waterkwaliteit op zwemwater.nl."
+   },
+   {
+    "v": "Wanneer zijn de Zevenheuvelenloop en de Stevensloop?",
+    "a": "De Zevenheuvelenloop is op zondag 15 november 2026, de Stevensloop op zondag 21 maart 2027."
+   },
+   {
+    "v": "Waar kun je schaatsen in Nijmegen?",
+    "a": "Bij Triavium aan de Van Rosenburgweg 2 in Dukenburg, met een overdekte ringbaan van 333 meter, een funbaan en een ijshockeybaan."
+   }
+  ],
+  "bedrijvengids": "/bedrijvengids-categorie/sportschool/",
+  "kort": "Zwembaden, buitenwater, hardlopen, schaatsen, dansen en N.E.C."
+ },
+ {
+  "url": "/thema/uitjes-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2022/11/escaperoom-in-nijmegen-533x400.webp",
+  "naam": "Uitjes en activiteiten in Nijmegen",
+  "zoekwoord": "uitjes nijmegen",
+  "seo_titel": "Uitjes en activiteiten in Nijmegen: met vrienden, collega's of kinderen",
+  "beschrijving": "Leuke uitjes en activiteiten in Nijmegen: escape rooms, suppen en varen op de Waal, teamuitjes, dagjes uit met kinderen, workshops, musea en uitstapjes net buiten de stad.",
+  "intro": "<p>Iets leuks doen in Nijmegen? De stad heeft escape rooms, boottochten en suppen op de Waal, musea voor jong en oud, workshops van edelsmeden tot fotografie en volop natuur om de hoek. In deze gids staan de ideeën voor een uitje bij elkaar, voor een middag met vrienden, een teamuitje met collega's of een dag met de kinderen.</p>",
+  "secties": [
+   {
+    "kop": "Met vrienden of collega's",
+    "tekst": "<p>Van escape room tot een avond happen en stappen: de leukste activiteiten om samen te doen, en ideeën voor een teamuitje met spanning, natuur en eten.</p>",
+    "artikelen": [
+     "activiteiten-in-nijmegen",
+     "5x-een-bijzonder-uitje-in-nijmegen",
+     "teamuitje-nijmegen-spanning-natuur-en-culinair-genieten",
+     "happen-stappen-in-nijmegen-een-wereld-aan-mogelijkheden"
+    ]
+   },
+   {
+    "kop": "Op en aan het water",
+    "tekst": "<p>Nijmegen ligt aan de Waal: huur een sup of een boot, of ga naar het strand aan de Spiegelwaal of bij Dushi.</p>",
+    "artikelen": [
+     "over-het-water-nijmegen-verkennen-zo-doe-je-dat",
+     "water-hotspot-buiten-nijmegen-ontdek-dushi",
+     "waalkade-nijmegen"
+    ]
+   },
+   {
+    "kop": "Met kinderen",
+    "tekst": "<p>Parken met speeltuinen, musea die gratis zijn voor kinderen, zwembaden met glijbanen en restaurants waar kinderen welkom zijn.</p>",
+    "artikelen": [
+     "nijmegen-met-kinderen",
+     "zwembaden-nijmegen",
+     "uit-eten-met-kinderen-in-nijmegen-deze-locaties-mag-je-niet-missen",
+     "kermis-nijmegen"
+    ]
+   },
+   {
+    "kop": "Cultuur en workshops",
+    "tekst": "<p>Een middag in het museum, een film, of zelf aan de slag bij een cursus edelsmeden, houtbewerking of fotografie.</p>",
+    "artikelen": [
+     "valkhof-nijmegen",
+     "de-bastei-nijmegen",
+     "bioscopen-in-nijmegen",
+     "top-5-cursussen-edelsmeden-in-nijmegen-vind-jouw-creatieve-spark",
+     "fotografie-workshops-nijmegen"
+    ]
+   },
+   {
+    "kop": "Net buiten de stad",
+    "tekst": "<p>Wandelen in de Ooijpolder of op de Duivelsberg, een dagje Kleef net over de grens, of verder weg naar zee of stad.</p>",
+    "artikelen": [
+     "ooijpolder",
+     "duivelsberg",
+     "7x-kleef-net-over-de-grens-bij-nijmegen",
+     "zin-in-zee-of-stad-3x-perfecte-uitstapjes-buiten-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Wat kun je doen in Nijmegen met vrienden?",
+    "a": "Een escape room, suppen of varen op de Waal, een middag happen en stappen in de binnenstad, een biercafé of een museum. Onze pagina's over activiteiten en bijzondere uitjes geven de adressen."
+   },
+   {
+    "v": "Wat is leuk om te doen in Nijmegen met kinderen?",
+    "a": "Het Kronenburgerpark met hertenkamp en speeltuin, het Valkhof Museum (tot en met 17 jaar gratis), De Bastei, zwembad Nijmegen-West met glijbaan en in de zomer het strand aan de Spiegelwaal."
+   },
+   {
+    "v": "Wat kun je doen in Nijmegen als het regent?",
+    "a": "Zwemmen, naar de bioscoop, een museum zoals het Valkhof Museum of De Bastei, een escape room of een workshop."
+   },
+   {
+    "v": "Kun je varen op de Waal in Nijmegen?",
+    "a": "Ja, er zijn rondvaarten vanaf de Waalkade en je kunt een sup of boot huren. Zie onze pagina over Nijmegen op het water."
+   }
+  ],
+  "bedrijvengids": "/bedrijvengids-categorie/uitjes/",
+  "kort": "Escape rooms, op het water, met kinderen, workshops en dagjes uit."
+ },
+ {
+  "url": "/thema/film-theater-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2022/12/bioscoop-nijmegen-533x400.webp",
+  "naam": "Film, theater en concerten in Nijmegen",
+  "zoekwoord": "theater nijmegen",
+  "seo_titel": "Film, theater en concerten in Nijmegen: bioscopen, podia en zalen",
+  "beschrijving": "Uit in Nijmegen: de drie bioscopen (LUX, Pathé, Vue), de Stadsschouwburg en De Vereeniging, poppodium Doornroosje en de andere podia, de festivals en de agenda van deze week.",
+  "intro": "<p>Nijmegen heeft voor een stad van zijn grootte opvallend veel podia: drie bioscopen, waaronder arthouse LUX, twee grote zalen aan het Keizer Karelplein, poppodium Doornroosje naast het station en een reeks kleinere theaters en zalen. In de zomer komen daar de openluchtconcerten in het Goffertpark en de gratis festivals bij.</p><p>In deze gids staan de pagina's over film, theater en muziek bij elkaar, met adressen, zalen en tips. Wat er vanavond speelt, staat in de agenda.</p>",
+  "secties": [
+   {
+    "kop": "Bioscopen",
+    "tekst": "<p>LUX aan de Mariënburg draait arthouse en heeft ook een theaterzaal, Pathé bij de Lentse Plas heeft acht zalen met Dolby Atmos en 4DX, en Vue aan de Walstraat is de knusse bioscoop met pauze.</p>",
+    "artikelen": [
+     "bioscopen-in-nijmegen"
+    ]
+   },
+   {
+    "kop": "Theater en klassiek",
+    "tekst": "<p>De Stadsschouwburg (ruim 900 stoelen) en Concertgebouw De Vereeniging (1.450 stoelen, een van de beste akoestieken ter wereld) staan tegenover elkaar aan het Keizer Karelplein. Kleiner zijn LUX, De Lindenberg, Het Badhuis en De Vasim.</p>",
+    "artikelen": [
+     "theaters-nijmegen"
+    ]
+   },
+   {
+    "kop": "Concerten en festivals",
+    "tekst": "<p>Doornroosje, Merleyn en Brebl voor pop en jazz, het Goffertpark voor de grote namen, en gratis muziek bij de Vierdaagsefeesten, het Valkhof Festival en het Bevrijdingsfestival.</p>",
+    "artikelen": [
+     "concerten-nijmegen",
+     "festivals-nijmegen",
+     "bevrijdingsfestival-nijmegen",
+     "vierdaagsefeesten-nijmegen"
+    ]
+   },
+   {
+    "kop": "Agenda en cultuur",
+    "tekst": "<p>Alle voorstellingen, concerten en exposities van deze week, en de musea voor een middag cultuur.</p>",
+    "artikelen": [
+     "nijmegen-evenementen-overzicht",
+     "valkhof-nijmegen",
+     "de-bastei-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Welke bioscopen heeft Nijmegen?",
+    "a": "Drie: LUX aan de Mariënburg (arthouse, zeven zalen), Pathé aan de Willem van Arenbergstraat bij de Lentse Plas (acht zalen) en Vue aan de Walstraat."
+   },
+   {
+    "v": "Welke theaters heeft Nijmegen?",
+    "a": "De Stadsschouwburg en Concertgebouw De Vereeniging aan het Keizer Karelplein, LUX, cultuurhuis De Lindenberg, jeugdtheater Het Badhuis en De Vasim. In onze bedrijvengids staan 36 podia."
+   },
+   {
+    "v": "Waar zijn popconcerten in Nijmegen?",
+    "a": "In Doornroosje aan het Stationsplein (zalen voor 1.100 en 400 bezoekers), in Merleyn aan de Hertogstraat en in Brebl aan de Waalbandijk. Grote concerten zijn in het Goffertpark."
+   },
+   {
+    "v": "Wat is er vanavond te doen in Nijmegen?",
+    "a": "Kijk in onze agenda, met concerten, voorstellingen, films en exposities in Nijmegen en de regio, elke dag bijgewerkt."
+   }
+  ],
+  "bedrijvengids": "/bedrijvengids-categorie/podia/",
+  "kort": "Bioscopen, Stadsschouwburg, De Vereeniging, Doornroosje en festivals."
+ },
+ {
+  "url": "/thema/lunch-nijmegen/",
+  "hand": true,
+  "hoofdgids": "/thema/restaurants-in-nijmegen-restaurant/",
+  "foto": "/assets/uploads/2023/02/high-tea-arranagement-in-nijmegen-533x400.webp",
+  "naam": "Lunch, ontbijt en high tea in Nijmegen",
+  "zoekwoord": "lunch nijmegen",
+  "seo_titel": "Lunch, ontbijt en high tea in Nijmegen: de lekkerste adressen",
+  "beschrijving": "Lunchen in Nijmegen, ontbijten of brunchen, een high tea of high wine: de beste plekken in de binnenstad en de wijken, met tips voor betaalbaar eten, pannenkoeken en eten met kinderen.",
+  "intro": "<p>Nijmegen is een stad van terrassen en lunchrooms: aan de Grote Markt, in de Lange Hezelstraat, op de Waalkade en in de wijken. In onze bedrijvengids staan 55 lunchrooms, 31 zaken voor ontbijt en brunch en 17 plekken voor high tea. Deze gids helpt je kiezen, met onze artikelen over de lekkerste adressen per gelegenheid.</p>",
+  "secties": [
+   {
+    "kop": "Lunchen",
+    "tekst": "<p>Van een broodje op de markt tot een uitgebreide lunch met uitzicht op de Waal: onze favoriete lunchplekken, en tips voor wie betaalbaar wil eten.</p>",
+    "artikelen": [
+     "lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes",
+     "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
+     "de-10-beste-restaurants-in-nijmegen-centrum"
+    ]
+   },
+   {
+    "kop": "High tea en high wine",
+    "tekst": "<p>Een middag lang thee, taartjes en sandwiches, of de hartige variant met wijn: de mooiste high tea- en high wine-locaties van de stad.</p>",
+    "artikelen": [
+     "op-zoek-naar-de-beste-high-tea-locaties-in-nijmegen-5-tips-waar-je-meteen-enthousiast-van-wordt",
+     "droom-je-van-een-high-wine-in-nijmegen-dit-zijn-de-5-mooiste-locaties"
+    ]
+   },
+   {
+    "kop": "Ontbijt, brunch en koffie",
+    "tekst": "<p>Alle 31 zaken voor <a href=\"../../bedrijvengids-categorie/ontbijt-en-brunch/\">ontbijt en brunch</a> en de <a href=\"../../bedrijvengids-categorie/koffiezaak/\">koffiebars</a> staan in de bedrijvengids. Zelf leren hoe je de perfecte cappuccino maakt? Volg een baristatraining.</p>",
+    "artikelen": [
+     "barista-training-in-nijmegen-word-koffie-expert-2",
+     "het-belang-van-goede-koffie-op-het-werk"
+    ]
+   },
+   {
+    "kop": "Met kinderen en pannenkoeken",
+    "tekst": "<p>Restaurants waar kinderen welkom zijn, en de vijf beste pannenkoekenrestaurants in en rond de stad.</p>",
+    "artikelen": [
+     "uit-eten-met-kinderen-in-nijmegen-deze-locaties-mag-je-niet-missen",
+     "pannenkoekenrestaurants-in-nijmegen-onze-top-5"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Waar kun je lekker lunchen in Nijmegen?",
+    "a": "In de binnenstad rond de Grote Markt, de Lange Hezelstraat en de Waalkade zitten de meeste lunchrooms. Onze pagina met de beste lunchplekken geeft de adressen; in de bedrijvengids staan alle 55 lunchrooms."
+   },
+   {
+    "v": "Waar kun je high tea doen in Nijmegen?",
+    "a": "In onze bedrijvengids staan 17 plekken voor high tea in Nijmegen. De vijf mooiste staan op onze high tea-pagina."
+   },
+   {
+    "v": "Waar kun je ontbijten in Nijmegen?",
+    "a": "In de bedrijvengids staan 31 zaken voor ontbijt en brunch, in het centrum en in de wijken, met openingstijden."
+   }
+  ],
+  "bedrijvengids": "/bedrijvengids-categorie/lunch/",
+  "kort": "Lunchrooms, ontbijt en brunch, high tea en high wine."
+ },
+ {
+  "url": "/thema/sauna-wellness-nijmegen/",
+  "hand": true,
+  "foto": "/assets/uploads/2023/01/Sanadome-Hotel-Spa-Nijmegen-booking.webp",
+  "naam": "Sauna en wellness in Nijmegen",
+  "zoekwoord": "sauna nijmegen",
+  "seo_titel": "Sauna en wellness in Nijmegen: thermen, spa, massage en ontspanning",
+  "beschrijving": "Ontspannen in Nijmegen: de Thermen van Sanadome, Thermen Berendonck in Wijchen, de spa's in de binnenstad, massage, pedicure en tips om tot rust te komen.",
+  "intro": "<p>Even helemaal niets: in Nijmegen kan dat in de Thermen van Sanadome, met water uit eigen bronnen, of een kwartier verderop in Thermen Berendonck in Wijchen, een saunaresort met hotel. Voor een massage of hammam zijn er kleine spa's in de binnenstad, en in onze bedrijvengids staan alle massagesalons, pedicures en schoonheidssalons van de stad.</p><p>In deze gids staan sauna, spa, massage en verzorging bij elkaar, met prijzen, tijden en regels.</p>",
+  "secties": [
+   {
+    "kop": "Sauna en thermen",
+    "tekst": "<p>Sanadome in Nijmegen-Zuid (badkleding verplicht, vanaf 8 jaar) en Thermen Berendonck in Wijchen (dagentree vanaf € 56, zonder badkleding): wat ze bieden en wat het kost.</p>",
+    "artikelen": [
+     "sauna-nijmegen"
+    ]
+   },
+   {
+    "kop": "Massage en spa",
+    "tekst": "<p>Welke massage past bij jou, en waar vind je een goede salon? Alle massagesalons staan in onze gids massage in Nijmegen.</p>",
+    "artikelen": [
+     "hoe-ontdek-je-welke-massage-het-beste-werkt-voor-jou",
+     "massagesalon-nijmegen-zelfzorg-en-pure-ontspanning"
+    ]
+   },
+   {
+    "kop": "Verzorging",
+    "tekst": "<p>Van een luxe pedicure tot een nieuwe look bij de kapper: de verzorgingsgidsen van NijmegenOnline.</p>",
+    "artikelen": [
+     "een-verwenmoment-voor-je-voeten-luxe-pedicurebehandelingen-in-nijmegen",
+     "stap-in-de-wereld-van-voetverwennerij"
+    ]
+   },
+   {
+    "kop": "Ontspannen buiten",
+    "tekst": "<p>Ontspanning is ook een wandeling door het bos of een dag aan het water: Heumensoord ligt naast Sanadome, en de Berendonck heeft een strand.</p>",
+    "artikelen": [
+     "heumensoord",
+     "wandelen-nijmegen",
+     "ontspannen-op-vakantie-zo-doe-je-dat"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Welke sauna's zijn er in en bij Nijmegen?",
+    "a": "Sanadome in Nijmegen-Zuid en Thermen Berendonck in Wijchen. In de binnenstad zijn kleine spa's voor massage en hammam, zoals Golden Spa en Royal Thai Massage & Spa aan de Bloemerstraat."
+   },
+   {
+    "v": "Wat kost een dagje sauna bij Nijmegen?",
+    "a": "Bij Thermen Berendonck kost een hele dag vanaf € 56, een ochtend vanaf € 42 en een avond vanaf € 45. De actuele entree van Sanadome staat op sanadome.nl."
+   },
+   {
+    "v": "Kun je in Nijmegen naar de sauna met badkleding?",
+    "a": "Ja, bij Sanadome is badkleding zelfs verplicht. Thermen Berendonck is standaard zonder badkleding, met speciale badkledingdagen."
+   }
+  ],
+  "bedrijvengids": "/bedrijvengids-categorie/sauna/",
+  "kort": "Thermen, spa, massage en verzorging."
+ },
+ {
+  "url": "/thema/kringloop-nijmegen/",
+  "hand": true,
+  "hoofdgids": "/thema/winkelen-in-nijmegen/",
+  "foto": "/assets/uploads/2022/12/kringloopwinkels-in-nijmegen.webp",
+  "naam": "Kringloop en tweedehands in Nijmegen",
+  "zoekwoord": "kringloop nijmegen",
+  "seo_titel": "Kringloop en tweedehands in Nijmegen: kringloopwinkels, vintage en antiek",
+  "beschrijving": "Tweedehands winkelen in Nijmegen: alle kringloopwinkels, vintage kledingzaken en antiekwinkels, waar je spullen brengt, wie op zondag open is en tips om parels te vinden.",
+  "intro": "<p>Tweedehands is in Nijmegen nooit ver weg: Het Goed in Nijmegen-West is de grootste kringloopwinkel, in de binnenstad zitten Basta, Habbekrats en een rij vintagezaken, en aan de Stationsweg staan de antiekhallen. In onze bedrijvengids staan 22 kringloop-, vintage- en antiekwinkels met adres en openingstijden.</p>",
+  "secties": [
+   {
+    "kop": "Kringloopwinkels",
+    "tekst": "<p>Alle kringloop-, vintage- en antiekwinkels van de stad op een rij, met waar je spullen kunt brengen en wie op zondag open is, plus tips om echte vondsten te doen.</p>",
+    "artikelen": [
+     "kringloopwinkels-nijmegen",
+     "parels-vinden-in-nijmeegse-kringloopwinkels"
+    ]
+   },
+   {
+    "kop": "Markten en meubels",
+    "tekst": "<p>Rommel- en vlooienmarkten door het jaar, de vrijmarkt op Koningsdag, en voor wie liever nieuw op maat koopt: de meubelmaker.</p>",
+    "artikelen": [
+     "markten-nijmegen",
+     "koningsdag-nijmegen",
+     "kies-voor-een-unieke-meubels-ambachtelijke-gemaakt-door-de-meubelmaker"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Welke kringloopwinkels heeft Nijmegen?",
+    "a": "De grote zijn Het Goed (Industrieweg 54), Kringloopwinkel Marcel (Marie Curiestraat 72), Kleren Goed (Prins Hendrikstraat 14) en Riesruimt (Zwanenveld 6600). In de binnenstad zitten Basta, Habbekrats en de Terre des Hommes Shop."
+   },
+   {
+    "v": "Welke kringloopwinkel in Nijmegen is op zondag open?",
+    "a": "Het Goed, Kringloopwinkel Marcel en de Terre des Hommes Shop."
+   },
+   {
+    "v": "Waar vind je vintage kleding in Nijmegen?",
+    "a": "Bij Habbekrats, Just Vintage, Studio Zoef, 2ndMas, Appel & Ei en de ReShare Store in de binnenstad, en bij Secondhand Rose en Javco daarbuiten."
+   }
+  ],
+  "bedrijvengids": "/bedrijvengids-categorie/tweedehands-winkel/",
+  "kort": "Kringloopwinkels, vintage kleding, antiek en markten."
+ },
+ {
+  "url": "/thema/uitgaan-nijmegen/",
+  "hand": true,
+  "hoofdgids": "/thema/cafes-in-nijmegen/",
+  "foto": "/assets/uploads/2022/10/biertje-drinken-in-nijmegen-768x432.webp",
+  "naam": "Uitgaan in Nijmegen: kroegen, clubs en bars",
+  "zoekwoord": "uitgaan nijmegen",
+  "seo_titel": "Uitgaan in Nijmegen: kroegen, biercafés, clubs, bars en livemuziek",
+  "beschrijving": "Uitgaan in Nijmegen: de gezelligste kroegen en biercafés, clubavonden in Doornroosje en Merleyn, cocktailbars, eetcafés en tips om te happen en stappen in de binnenstad.",
+  "intro": "<p>Nijmegen is een studentenstad met 64 cafés in de bedrijvengids, van bruine kroegen uit de zeventiende eeuw tot cocktailbars en biercafés met honderd soorten op de kaart. Het uitgaansleven speelt zich af rond de Grote Markt, de Molenstraat en de Waalkade, met Doornroosje en Merleyn voor wie wil dansen. En in juli is de hele binnenstad zeven dagen lang één feest tijdens de Vierdaagsefeesten.</p><p>In deze gids staan de pagina's over uitgaan bij elkaar: kroegen, bars, clubs, eetcafés en livemuziek.</p>",
+  "secties": [
+   {
+    "kop": "Kroegen en biercafés",
+    "tekst": "<p>De cafés met de meeste historie, de beste biercafés en een avond happen en stappen door de binnenstad.</p>",
+    "artikelen": [
+     "lekker-uitgaan-in-nijmegen-hier-doe-je-dat",
+     "de-7-cafes-met-de-meeste-historie-van-nijmegen",
+     "de-8-beste-biercafes-van-nijmegen",
+     "happen-stappen-in-nijmegen-een-wereld-aan-mogelijkheden"
+    ]
+   },
+   {
+    "kop": "Dansen en livemuziek",
+    "tekst": "<p>Doornroosje aan het Stationsplein heeft clubavonden als Planet Rose, Merleyn aan de Hertogstraat is het pop- en danscafé van de stad, en veel kroegen hebben livemuziek.</p>",
+    "artikelen": [
+     "concerten-nijmegen",
+     "festivals-nijmegen",
+     "vierdaagsefeesten-nijmegen"
+    ]
+   },
+   {
+    "kop": "Eetcafés en buiten het centrum",
+    "tekst": "<p>Eerst eten, dan stappen: de leukste eetcafés, tapas, en de gezelligste cafés in de wijken buiten het centrum.</p>",
+    "artikelen": [
+     "de-dit-zijn-de-6-leukste-eetcafes-van-nijmegen",
+     "tapas-eten-in-nijmegen-hier-kan-je-dat-doen",
+     "de-7-gezelligste-cafes-buiten-het-centrum-van-nijmegen"
+    ]
+   },
+   {
+    "kop": "Praktisch",
+    "tekst": "<p>Hoe je thuiskomt en waar je parkeert: het station ligt op een kwartier lopen van de Grote Markt, en 's nachts parkeer je in de garages voor € 0,50 per uur.</p>",
+    "artikelen": [
+     "station-nijmegen",
+     "parkeren-in-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Waar ga je uit in Nijmegen?",
+    "a": "Rond de Grote Markt, de Molenstraat, de Lange Hezelstraat en de Waalkade zitten de meeste kroegen en bars. Dansen doe je in Doornroosje aan het Stationsplein en Merleyn aan de Hertogstraat."
+   },
+   {
+    "v": "Welke clubs heeft Nijmegen?",
+    "a": "Doornroosje organiseert clubavonden, waaronder Planet Rose, sinds 1995 de langstlopende clubavond van Nederland. Merleyn is het pop- en danscafé in de binnenstad. Daarnaast zijn er clubs en danscafés in het centrum; zie de cafés in onze bedrijvengids."
+   },
+   {
+    "v": "Hoe laat sluiten de cafés in Nijmegen?",
+    "a": "Dat verschilt per café; veel kroegen in de binnenstad zijn in het weekend tot diep in de nacht open. Tijdens de Vierdaagsefeesten stopt de muziek op straat om 00.30 uur, op vrijdag om 01.00 uur."
+   },
+   {
+    "v": "Wat is het bekendste biercafé van Nijmegen?",
+    "a": "Nijmegen heeft meerdere biercafés met een grote kaart; de acht beste staan op onze pagina over biercafés."
+   }
+  ],
+  "bedrijvengids": "/bedrijvengids-categorie/cafe/",
+  "kort": "Kroegen, biercafés, clubs, bars en eetcafés."
+ },
+ {
+  "url": "/thema/over-de-grens/",
+  "hand": true,
+  "foto": "/assets/uploads/2023/08/kleve-kleef-duitsland-winkelstraat.webp",
+  "naam": "Over de grens: Kleef, Emmerik, Goch en Kranenburg",
+  "zoekwoord": "kleef",
+  "seo_titel": "Over de grens bij Nijmegen: Kleef, Emmerik, Goch en Kranenburg",
+  "beschrijving": "Een dagje Duitsland vanuit Nijmegen: Kleef met de Schwanenburg en de kerstmarkt, Emmerik aan de Rijn, Goch met klooster Graefenthal en het grensdorp Kranenburg, met tips voor winkelen en bereikbaarheid.",
+  "intro": "<p>De Duitse grens ligt op tien kilometer van het centrum van Nijmegen. Kleef, met de Schwanenburg en de barokke tuinen, is in een kwartier bereikt; Kranenburg ligt nog dichterbij, Goch en Emmerik op een half uur. Veel Nijmegenaren gaan voor de supermarkten en drogisterijen, de kerstmarkten en de terrassen aan de Rijn.</p><p>In deze gids staan onze bestemmingen en artikelen over de grensstreek bij elkaar. Let op: in Duitsland zijn de winkels op zondag gesloten.</p>",
+  "secties": [
+   {
+    "kop": "Kleef",
+    "tekst": "<p>De grootste stad net over de grens, met de Schwanenburg, de tuinen van Johan Maurits, de winkelstraten en in december de Klever Weihnachtsmarkt.</p>",
+    "artikelen": [
+     "bestemmingen/kleve",
+     "7x-kleef-net-over-de-grens-bij-nijmegen",
+     "kerstmarkt-kleve"
+    ]
+   },
+   {
+    "kop": "Emmerik, Goch en Kranenburg",
+    "tekst": "<p>Emmerik aan de Rijn met de langste hangbrug van Duitsland, Goch met klooster Graefenthal en het grensdorp Kranenburg aan de voet van de stuwwal.</p>",
+    "artikelen": [
+     "bestemmingen/emmerich",
+     "bestemmingen/goch",
+     "bestemmingen/kranenburg"
+    ]
+   },
+   {
+    "kop": "De grensstreek",
+    "tekst": "<p>De Duivelsberg was tot 1949 Duits, de Ooijpolder loopt door tot aan de grens en verder weg lonken zee en stad.</p>",
+    "artikelen": [
+     "duivelsberg",
+     "ooijpolder",
+     "zin-in-zee-of-stad-3x-perfecte-uitstapjes-buiten-nijmegen"
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "v": "Hoe ver is Kleef van Nijmegen?",
+    "a": "Ongeveer 20 kilometer, een kwartier tot twintig minuten rijden. Snelbus 58 rijdt vanaf station Nijmegen naar Kleef en door naar Emmerik."
+   },
+   {
+    "v": "Zijn de winkels in Kleef op zondag open?",
+    "a": "Nee. In Duitsland zijn de winkels op zondag gesloten, op enkele koopzondagen per jaar na."
+   },
+   {
+    "v": "Wanneer is de kerstmarkt in Kleef?",
+    "a": "De Klever Weihnachtsmarkt is in 2026 van 27 november tot en met 6 december. Zie onze pagina over de kerstmarkt in Kleef."
+   },
+   {
+    "v": "Wat is er te zien in Emmerik?",
+    "a": "De Rijnpromenade, de Rijnbrug (de langste hangbrug van Duitsland), de Sint-Martinikerk en Sint-Aldegundiskerk, het Rheinmuseum en het PAN kunstforum."
+   }
+  ],
+  "bedrijvengids": "",
+  "kort": "Kleef, Emmerik, Goch en Kranenburg: winkelen, kerstmarkten en de Rijn."
  }
 ]

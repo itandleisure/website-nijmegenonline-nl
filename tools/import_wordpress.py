@@ -550,11 +550,12 @@ HOME_GIDSEN = ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/trouwen-in-
                "/thema/bb-nijmegen/", "/jaarlijkse-evenementen/nijmeegse-vierdaagse/", "/thema/studeren-in-nijmegen/",
                "/thema/zaal-huren-in-nijmegen/", "/thema/cafes-in-nijmegen/"]
 GIDS_GROEPEN = [
-    ("Eten, drinken en cultuur", ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/cafes-in-nijmegen/", "/thema/museums-nijmegen/"]),
+    ("Zien en doen", ["/thema/centrum-nijmegen/", "/thema/natuur-nijmegen/", "/thema/evenementen-nijmegen/", "/thema/uitjes-nijmegen/", "/thema/sporten-in-nijmegen/", "/thema/over-de-grens/", "/thema/parkeren-nijmegen/"]),
+    ("Eten, drinken en cultuur", ["/thema/restaurants-in-nijmegen-restaurant/", "/thema/lunch-nijmegen/", "/thema/cafes-in-nijmegen/", "/thema/uitgaan-nijmegen/", "/thema/museums-nijmegen/", "/thema/film-theater-nijmegen/"]),
     ("Bijzondere momenten", ["/thema/trouwen-in-nijmegen/", "/thema/zaal-huren-in-nijmegen/", "/jaarlijkse-evenementen/nijmeegse-vierdaagse/", "/thema/fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen/"]),
     ("Overnachten", ["/thema/overnachten-in-nijmegen/", "/thema/bb-nijmegen/", "/thema/campings-in-nijmegen/"]),
-    ("Verzorging", ["/thema/kappers-in-nijmegen/", "/thema/massage-nijmegen/", "/thema/nagelsalon-in-nijmegen/", "/thema/pedicures-in-nijmegen/", "/thema/permanente-make-up-in-nijmegen/"]),
-    ("Wonen, leren en werken", ["/thema/studeren-in-nijmegen/", "/thema/cursus-nijmegen/", "/ondernemen-in-nijmegen/", "/thema/winkelen-in-nijmegen/"]),
+    ("Verzorging", ["/thema/kappers-in-nijmegen/", "/thema/massage-nijmegen/", "/thema/nagelsalon-in-nijmegen/", "/thema/pedicures-in-nijmegen/", "/thema/permanente-make-up-in-nijmegen/", "/thema/sauna-wellness-nijmegen/"]),
+    ("Wonen, leren en werken", ["/thema/studeren-in-nijmegen/", "/thema/cursus-nijmegen/", "/ondernemen-in-nijmegen/", "/thema/winkelen-in-nijmegen/", "/thema/kringloop-nijmegen/"]),
 ]
 
 
