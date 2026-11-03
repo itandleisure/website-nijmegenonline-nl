@@ -6591,8 +6591,8 @@
  {
   "slug": "toonkunstkoor-nijmegen-zingt-brahms",
   "titel": "Toonkunstkoor Nijmegen zingt Brahms",
-  "start": "2026-11-15T14:00",
-  "eind": "2026-11-15T15:30",
+  "start": "2026-11-15T15:00",
+  "eind": "2026-11-15T16:30",
   "locatie": "Stevenskerk Nijmegen",
   "adres": "Sint Stevenskerkhof 62, 6511 VZ Nijmegen",
   "afbeelding": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/toonkunstkoor-nijmegen-zingt-brahms.webp",
@@ -6608,11 +6608,12 @@
   "aanmelding": "862a640f",
   "website": "https://www.toonkunstkoornijmegen.nl",
   "contactmail": "pr@toonkunstkoornijmegen.nl",
-  "telefoon": "geen",
+  "telefoon": "",
   "soort": "Muziek",
   "toegang": "betaald",
   "prijs": "30",
-  "kenmerken": []
+  "kenmerken": [],
+  "prijs_vast": true
  },
  {
   "slug": "expositie-marlie-duizings-in-kunst-in-het-kerkje",

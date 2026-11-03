@@ -192,7 +192,7 @@ def prijslabel(e):
     if t == "vrije gift":
         return "Vrije gift"
     if t == "betaald":
-        return "Vanaf € %s" % e["prijs"] if e.get("prijs") else ""
+        return ("€ %s" if e.get("prijs_vast") else "Vanaf € %s") % e["prijs"] if e.get("prijs") else ""
     return ""
 
 
