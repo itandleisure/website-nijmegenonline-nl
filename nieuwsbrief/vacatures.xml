@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vacatures NijmegenOnline</title>
+    <link>https://www.nijmegenonline.nl/vacatures/</link>
+    <description>Vacatures van werkgevers uit Nijmegen en omgeving</description>
+    <language>nl-nl</language>
+    <lastBuildDate>Tue, 03 Nov 2026 06:00:00 +0100</lastBuildDate>
+    <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/vacatures.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Personeel nodig? Plaats je vacature op NijmegenOnline</title>
+      <link>https://www.nijmegenonline.nl/vacature-plaatsen/</link>
+      <guid isPermaLink="false">vacature-plaatsen</guid>
+      <pubDate>Tue, 03 Nov 2026 06:00:00 +0100</pubDate>
+      <description>Zoek je personeel in Nijmegen of omgeving? Plaats je vacature gratis op NijmegenOnline. Kies je Uitgelicht, dan staat hij 90 dagen online, bovenaan het overzicht en in deze nieuwsbrief.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+{
+ "_uitleg": "Instellingen voor tools/social.py (elke dag een post op Facebook en Instagram). aan: false zet het plaatsen uit (voorbereiden en de linkpagina gaan door). controle_posts: zolang er minder posts geplaatst zijn dan dit aantal, maakt het script elke ochtend een issue met de post erin; sluit je dat issue voor het plaatsingstijdstip, dan wordt de post overgeslagen. betaald_per_week: hoeveel betaalde posts (partners, uitgelichte bedrijven) er hoogstens in 7 dagen komen; uitgelichte evenementen gaan altijd voor als hun laatste kans vandaag is. partner_elke_dagen: om de hoeveel dagen een partner of hoofdpartner een eigen post krijgt (0 = nooit). Afgesproken met Frans 02-11-2026: 1 post per dag, nog geen advertentiebudget, partners voorrang op gratis content.",
+ "aan": false,
+ "facebook": true,
+ "instagram": true,
+ "controle_posts": 14,
+ "betaald_per_week": 3,
+ "partner_elke_dagen": {"hoofdpartner": 30, "partner": 91, "uitgelicht": 0},
+ "evenement_dagen_vooraf": [9, 1],
+ "hashtags": ["nijmegen", "nijmegenonline"],
+ "seizoen": {
+  "/kerstmarkten-in-nijmegen/": [11, 12],
+  "/schaatsen-in-nijmegen/": [12, 1, 2],
+  "/carnaval-nijmegen/": [1, 2],
+  "/stevensloop-nijmegen/": [2, 3],
+  "/koningsdag-nijmegen/": [4],
+  "/bevrijdingsfestival-nijmegen/": [4, 5],
+  "/jaarlijkse-evenementen/nijmeegse-vierdaagse/": [6, 7],
+  "/vierdaagsefeesten-nijmegen/": [7],
+  "/kermis-nijmegen/": [6, 10],
+  "/zevenheuvelenloop/": [11]
+ }
+}

@@ -1,0 +1,68 @@
+# Elke dag een post op Facebook en Instagram (tools/social.py, instellingen in data/social-instellingen.json).
+# 's Ochtends vroeg: post kiezen, beelden maken, Claude de tekst laten schrijven en /social/ (link in bio) bijwerken.
+# In de controleperiode komt de post ook in een issue: sluit het issue om hem over te slaan.
+# Rond het middaguur: plaatsen via de Meta Graph API.
+# Geheimen (Settings → Secrets and variables → Actions): ANTHROPIC_API_KEY (bestaat al), META_TOKEN en optioneel
+# META_PAGE_ID. Zie docs/social-media-koppelen.md.
+name: Social media
+
+on:
+  schedule:
+    - cron: "15 5 * * *"   # voorbereiden, 06.15 of 07.15 uur Nederlandse tijd
+    - cron: "0 10 * * *"   # plaatsen, 11.00 of 12.00 uur
+  workflow_dispatch:
+    inputs:
+      stap:
+        description: "Wat moet er gebeuren?"
+        type: choice
+        options: [voorbereiden, plaatsen]
+        default: voorbereiden
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: site-bouwen
+  cancel-in-progress: false
+
+jobs:
+  social:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      STAP: ${{ github.event_name == 'workflow_dispatch' && inputs.stap || (github.event.schedule == '0 10 * * *' && 'plaatsen' || 'voorbereiden') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install anthropic beautifulsoup4 pillow requests
+      - name: Voorbereiden
+        if: env.STAP == 'voorbereiden'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MODEL_SOCIAL: ${{ vars.MODEL_SOCIAL }}
+        run: python tools/social.py voorbereiden && python tools/build.py
+      - name: Plaatsen
+        if: env.STAP == 'plaatsen'
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/social.py plaatsen
+      - name: Wijzigingen opslaan
+        if: always()
+        run: |
+          git config user.name "agenda-bot"
+          git config user.email "agenda-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Social media: $STAP $(date +%F)" && git pull --rebase && git push)
+      - name: Issue voor de controleperiode
+        if: env.STAP == 'voorbereiden'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python tools/social.py melden
+          git add -A data
+          git diff --cached --quiet || (git commit -m "Social media: issue gemaakt" && git pull --rebase && git push)

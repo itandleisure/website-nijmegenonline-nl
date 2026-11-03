@@ -5,6 +5,8 @@ In de nieuwsbrief in deze volgorde (afgesproken met Frans, 24-10-2026):
 - /nieuwsbrief/nieuws.xml      de nieuwste nieuwsberichten, met foto
 - /nieuwsbrief/agenda.xml      de overige (gratis) evenementen van vandaag t/m DAGEN_VOORUIT dagen verder, met
                                foto; lang lopende alleen in de week dat ze beginnen
+- /nieuwsbrief/vacatures.xml   de betaalde vacatures (Uitgelicht en bureaus), elke week zolang ze open staan, met
+                               logo (besluit Frans, 3-11-2026; zie tools/vacatures.py)
 
 MailerLite neemt bij elke verzending alleen de items die nieuw zijn sinds de vorige. Bij nieuws is dat
 precies goed (echte publicatiedatum). Een evenement staat vaak meerdere weken in de agenda; daarom krijgt
@@ -36,6 +38,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from agenda import dag, lokaal, wanneer  # noqa: E402
 from import_wordpress import ROOT, SITE, samenvatting  # noqa: E402
 import nieuws  # noqa: E402
+import vacatures  # noqa: E402
 
 TESTSITE = "https://itandleisure.github.io/website-nijmegenonline-nl"
 DAGEN_VOORUIT = 14
@@ -43,6 +46,7 @@ DAGEN_UITGELICHT = 30   # klanten mogen al eerder in de nieuwsbrief
 MAX_UITGELICHT = 20   # Frans kiest er in MailerLite zelf uit
 MAX_EVENEMENTEN = 40
 MAX_NIEUWS = 20
+MAX_VACATURES = 20
 MAP = ROOT / "nieuwsbrief"
 FOTOS = ROOT / "assets" / "nieuwsbrief"
 AMSTERDAM = zoneinfo.ZoneInfo("Europe/Amsterdam")
@@ -140,11 +144,28 @@ def main(vandaag):
                           b.get("beschrijving") or samenvatting(b["tekst"], 200), foto))
     feed(url, "nieuws.xml", "Nieuws NijmegenOnline", "Het laatste nieuws uit Nijmegen", "%s/nieuwsberichten/" % url, items, nu)
 
+    # Betaalde vacatures: elke week opnieuw (eigen guid per week), Uitgelicht eerst
+    betaald = [v for v in vacatures.open_vacatures(vandaag) if v.get("uitgelicht") or v.get("bureau")][:MAX_VACATURES]
+    items = []
+    for v in betaald:
+        foto = jpg(v.get("logo"), "vacature-" + v["slug"], url, gemaakt)
+        tekst = "%s. %s" % (" · ".join(x for x in (v["werkgever"], vacatures.kenmerken(v)) if x),
+                            v.get("kort") or samenvatting(v.get("tekst", ""), 200))
+        items.append(item(v["functie"], "%s/vacatures/%s/" % (url, v["slug"]), "vacature-%s#%s" % (v["slug"], week), nu, tekst, foto))
+    if not items:
+        # MailerLite keurt een lege feed af. Zonder betaalde vacatures één vast item (vaste guid, dus hooguit één
+        # keer in de nieuwsbrief) dat werkgevers uitnodigt een vacature te plaatsen.
+        items.append(item("Personeel nodig? Plaats je vacature op NijmegenOnline", "%s/vacature-plaatsen/" % url,
+                          "vacature-plaatsen", datetime.datetime(2026, 11, 3, 6, tzinfo=AMSTERDAM),   # vaste datum: niet elke week nieuw
+                          "Zoek je personeel in Nijmegen of omgeving? Plaats je vacature gratis op NijmegenOnline. Kies je Uitgelicht, "
+                          "dan staat hij %d dagen online, bovenaan het overzicht en in deze nieuwsbrief." % vacatures.LOOPTIJD_BETAALD, None))
+    feed(url, "vacatures.xml", "Vacatures NijmegenOnline", "Vacatures van werkgevers uit Nijmegen en omgeving", "%s/vacatures/" % url, items, nu)
+
     for oud in FOTOS.glob("*.jpg"):
         if oud.name not in gemaakt:
             oud.unlink()
-    print("nieuwsbrief: %d uitgelicht, %d overige evenementen, %d nieuwsberichten, %d foto's"
-          % (n_uitgelicht, n_overig, len(berichten), len(gemaakt)))
+    print("nieuwsbrief: %d uitgelicht, %d overige evenementen, %d nieuwsberichten, %d vacatures, %d foto's"
+          % (n_uitgelicht, n_overig, len(berichten), len(betaald), len(gemaakt)))
 
 
 if __name__ == "__main__":

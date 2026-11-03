@@ -243,6 +243,21 @@ gaan in `data/evenementen.json` (foto in `assets/uploads/aangemeld/`), bedrijven
 (voor de bedrijvengids). Een evenement komt bij een bestaande aanbieder als de naam overeenkomt (los van café/het/'t, leestekens en accenten) of als straat en huisnummer gelijk zijn aan die van een eerder evenement; op de beoordeelpagina kies je de aanbieder ook zelf in een keuzelijst. Heeft de gekozen aanbieder een bekend adres (`adres` in `data/aanbieders.json`, bijgewerkt bij elke publicatie), dan vult de beoordeelpagina dat in; het adres van de inzender kun je terugzetten. Postcodes: 1234 AB, of 5 cijfers voor Duitsland. Daarna wordt de site gebouwd en zet het script de status in de Sheet op "Gepubliceerd".
 Meteen publiceren in plaats van op het hele uur: Actions > Aanmeldingen publiceren > Run workflow.
 
+### Vacaturebank (fase 1, besluit Frans 3-11-2026)
+
+- Werkgevers plaatsen gratis een vacature via `/vacature-plaatsen/` (formulier `vacature` in `tools/google-formulier/Code.gs`, tab Vacatures in de Sheet). Beoordelen gaat net als bij evenementen en bedrijven.
+- Een vacature staat standaard 45 dagen online (`LOOPTIJD` in `tools/vacatures.py`), of korter als de werkgever een eerdere sluitdatum kiest. Daarna krijgt de pagina noindex en "Deze vacature is gesloten"; na nog 90 dagen volgt een 301 naar `/vacatures/`.
+- Uitzend-, wervings- en selectiebureaus geven dat aan met een ja/nee-vraag; die plaatsing kost €19. Uitgelicht kost €49. Er is geen startactie.
+- Betaalde vacatures (Uitgelicht en bureaus) staan 90 dagen online in plaats van 45, ook bij verlengen (gratis is niet te verlengen), en komen elke week in de nieuwsbrief via de feed `/nieuwsbrief/vacatures.xml` (besluit Frans, 3-11-2026). Die feed moet in MailerLite als blok aan de RSS-campagne worden toegevoegd.
+- Open vacatures krijgen JobPosting-gegevens voor Google for Jobs. Een vacature staat ook op de bedrijfspagina van de werkgever in de bedrijvengids.
+- Data: `data/vacatures.json`. Bouwen: `python3 tools/vacatures.py` (draait mee in de workflows agenda en aanmeldingen). De eigen NijmegenOnline-vacatures (`eigen_pagina`) houden hun eigen pagina.
+- Werkgebied: Nijmegen en omgeving, plus Kleve. Arnhem valt erbuiten.
+- Verlengen en sluiten (fase 2): de plaatsingsmail heeft een link om de vacature te sluiten. Een week voor de sluitdatum vraagt `tools/aanmeldingen.py` de verlengmail aan; daarin kiest de werkgever verlengen (90 dagen erbij) of sluiten. Alleen betaalde vacatures (Uitgelicht en bureaus) kun je verlengen; een gratis vacature staat maximaal 45 dagen online (besluit Frans, 3-11-2026), en de mail biedt dan Uitgelicht aan. De keuze komt in de Sheet (kolom "Verlengen of sluiten") en de workflow past `data/vacatures.json` binnen een uur aan (`ingevuld`, `sluit`, `herinnerd`). Verlengen van Uitgelicht (€ 49) of door een bureau (€ 19) wordt opnieuw gefactureerd; de redactie krijgt daar een mail over.
+- Voorwaarden: `/voorwaarden-vacatures/` (gemaakt door `tools/vacatures.py`).
+- Filters op `/vacatures/`: soort werk (knoppen), en zoeken, plaats, dienstverband, uren, jouw opleiding en thuiswerken. Een keuzelijst staat er alleen als er iets te kiezen valt.
+- Het formulier vraagt geen KvK-nummer (besluit Frans, 3-11-2026).
+- Nog niet gebouwd: pagina's per soort werk en plaats, blok op de homepage, Indexing API.
+
 ### Bedrijvengids (in opbouw)
 
 `python tools/bedrijvengids.py` bouwt de startpagina `/bedrijvengids/` (kaart met alle bedrijven, Leaflet + OpenStreetMap),

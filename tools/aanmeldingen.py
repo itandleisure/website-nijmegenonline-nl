@@ -1,4 +1,4 @@
-"""Haalt goedgekeurde aanmeldingen (evenementen, bedrijven en nieuwsberichten) op uit het Google Apps Script en zet
+"""Haalt goedgekeurde aanmeldingen (evenementen, bedrijven, vacatures en nieuwsberichten) op uit het Google Apps Script en zet
 ze in de data.
 
 Zo werkt de flow (zie ook tools/google-formulier/Code.gs):
@@ -6,7 +6,8 @@ Zo werkt de flow (zie ook tools/google-formulier/Code.gs):
 2. De redactie klikt in die mail op "Akkoord" (of zet "Akkoord" in de kolom Status).
 3. Elk uur draait dit script (.github/workflows/aanmeldingen.yml): het haalt de goedgekeurde aanmeldingen op,
    zet evenementen in data/evenementen.json (foto in assets/uploads/aangemeld/) en bedrijven in
-   data/bedrijven-aangemeld.json (voor de bedrijvengids) en nieuwsberichten in data/nieuws.json (foto ook in
+   data/bedrijven-aangemeld.json (voor de bedrijvengids), vacatures in data/vacatures.json (tools/vacatures.py) en
+   nieuwsberichten in data/nieuws.json (foto ook in
    assets/uploads/aangemeld/), en meldt ze terug zodat de status "Gepubliceerd" wordt en de inzender een mail krijgt.
    Daarna bouwen tools/agenda.py, tools/bedrijvengids.py, tools/nieuws.py en tools/build.py de site opnieuw.
    Nieuwsberichten komen niet via een formulier maar per mail binnen: zie tools/nieuws_ophalen.py.
@@ -34,6 +35,7 @@ from import_wordpress import SITE  # noqa: E402
 import nieuws  # noqa: E402
 import koppeling  # noqa: E402
 import evenement_indeling  # noqa: E402
+import vacatures as vacaturebank  # noqa: E402
 
 VERWERKT = ROOT / "data" / "aanmeldingen-verwerkt.txt"
 FOTOMAP = "assets/uploads/aangemeld"
@@ -68,6 +70,11 @@ def bewaar_foto(foto, naam):
     """Foto (base64) als webp van maximaal 1200 px breed; geeft het pad terug."""
     from PIL import Image
     im = Image.open(io.BytesIO(base64.b64decode(foto["data"])))
+    if im.mode in ("RGBA", "LA", "P"):   # doorzichtig (logo's): op wit, anders wordt de achtergrond zwart
+        im = im.convert("RGBA")
+        wit = Image.new("RGB", im.size, (255, 255, 255))
+        wit.paste(im, mask=im.split()[-1])
+        im = wit
     im = im.convert("RGB")
     if im.width > 1200:
         im = im.resize((1200, round(im.height * 1200 / im.width)))
@@ -139,6 +146,125 @@ def nieuwsbericht(a, berichten):
         "aanmelding": a["id"],
         **({"bedrijven": [bedrijf_sleutel(a)]} if bedrijf_sleutel(a) else {}),
     }
+
+
+def vacature_html(tekst):
+    """Vacaturetekst van de beoordeelpagina naar HTML: alinea's gescheiden door een lege regel, ## wordt een tussenkop,
+    regels die met "- " beginnen worden een opsomming, links klikbaar."""
+    def opmaak(t):
+        t = html.escape(t.strip())
+        return re.sub(r"(https?://[^\s<]+[^\s<.,;:)])", r'<a href="\1" rel="nofollow noopener" target="_blank">\1</a>', t)
+    uit = []
+    for blok in re.split(r"\n\s*\n", (tekst or "").replace("\r", "").strip()):
+        regels = [r for r in blok.strip().split("\n") if r.strip()]
+        if regels and regels[0].lstrip().startswith("#"):
+            uit.append("<h2>%s</h2>" % opmaak(regels.pop(0).lstrip("# ")))
+        punten, gewoon = [], []
+        for r in regels:
+            if re.match(r"^\s*[-*•]\s+", r):
+                if gewoon:
+                    uit.append("<p>%s</p>" % "<br>".join(opmaak(x) for x in gewoon))
+                    gewoon = []
+                punten.append(re.sub(r"^\s*[-*•]\s+", "", r))
+            else:
+                if punten:
+                    uit.append("<ul>%s</ul>" % "".join("<li>%s</li>" % opmaak(x) for x in punten))
+                    punten = []
+                gewoon.append(r)
+        if punten:
+            uit.append("<ul>%s</ul>" % "".join("<li>%s</li>" % opmaak(x) for x in punten))
+        if gewoon:
+            uit.append("<p>%s</p>" % "<br>".join(opmaak(x) for x in gewoon))
+    return "\n".join(uit)
+
+
+def vacature(a, bestaand):
+    """Een goedgekeurde vacature uit de Sheet als regel voor data/vacatures.json (zie tools/vacatures.py)."""
+    functie, werkgever = (a.get("functie") or "").strip(), (a.get("werkgever") or "").strip()
+    tekst = vacature_html(a.get("omschrijving") or "")
+    if not functie or not werkgever or not tekst:
+        raise ValueError("functie, werkgever of tekst ontbreekt")
+    basis = slug("%s %s" % (functie, werkgever))
+    s, n = basis, 2
+    while s in bestaand:
+        s, n = "%s-%d" % (basis, n), n + 1
+    vandaag = datetime.datetime.now(zoneinfo.ZoneInfo("Europe/Amsterdam")).date().isoformat()
+    site = (a.get("site") or "").strip()
+    if site and not re.match(r"https?://", site):
+        site = "https://" + site
+    logo = bewaar_foto(a["foto"], "vacature-" + s) if a.get("foto") else ""
+    plaats = (a.get("plaats") or "").strip()
+    betaald = (a.get("bureau") or "").strip().lower() == "ja" or (a.get("pakket") or "").strip().lower().startswith("uitgelicht")
+    return {
+        "slug": s,
+        "functie": functie,
+        "werkgever": werkgever,
+        "bedrijf": bedrijf_sleutel(a),
+        "site": site,
+        "logo": logo,
+        "bureau": (a.get("bureau") or "").strip().lower() == "ja",
+        "soort": (a.get("soort") or "").strip() or "Overig",
+        "dienstverband": (a.get("dienstverband") or "").strip(),
+        "uren_van": str(a.get("uren_van") or "").strip(),
+        "uren_tot": str(a.get("uren_tot") or "").strip(),
+        "opleiding": (a.get("opleiding") or "").strip(),
+        "adres": (a.get("adres") or "").strip(),
+        "postcode": postcode(a.get("postcode") or ""),
+        "plaats": koppeling.plaats_naam(plaats) or plaats,
+        "thuiswerken": (a.get("thuiswerken") or "").strip() or "Nee",
+        "salaris_van": str(a.get("salaris_van") or "").strip(),
+        "salaris_tot": str(a.get("salaris_tot") or "").strip(),
+        "salaris_per": "uur" if "uur" in (a.get("salaris_per") or "").lower() else "maand",
+        "tekst": tekst,
+        "solliciteren": (a.get("solliciteren") or "").strip(),
+        "geplaatst": vandaag,
+        "sluit": vacaturebank.sluitdatum(vandaag, str(a.get("sluitdatum") or "")[:10],
+                                       vacaturebank.LOOPTIJD_BETAALD if betaald else vacaturebank.LOOPTIJD),
+        "uitgelicht": (a.get("pakket") or "").strip().lower().startswith("uitgelicht"),
+        "aanmelding": a["id"],
+    }
+
+
+HERINNER_DAGEN = 7   # zoveel dagen voor de sluitdatum gaat de verlengmail
+
+
+def vacature_beheer(beheer, vacatures, nieuw, terugmelden, vandaag=None):
+    """Verlengen of sluiten zoals de werkgever koos via de mail, en de verlengmail een week voor de sluitdatum.
+    De mail gaat pas na een geslaagde commit (via terugmelden), zodat "herinnerd" eerst bewaard is."""
+    vandaag = vandaag or datetime.datetime.now(zoneinfo.ZoneInfo("Europe/Amsterdam")).date()
+    gewijzigd = False
+    for b in beheer:
+        v = next((x for x in vacatures if x.get("aanmelding") and x.get("aanmelding") == b.get("id")), None)
+        if not v:
+            continue
+        keuze = b.get("wijziging") or ""
+        if keuze and keuze != v.get("wijziging"):
+            if keuze.startswith("verlengen") and vacaturebank.looptijd(v) == vacaturebank.LOOPTIJD:
+                # Gratis vacatures zijn niet te verlengen (besluit Frans, 3-11-2026); Code.gs biedt het ook niet aan
+                nieuw.append("vacature %s: verlengen genegeerd (gratis)" % v["slug"])
+            elif keuze.startswith("verlengen"):
+                basis = max(datetime.date.fromisoformat(v.get("sluit") or vandaag.isoformat()), vandaag)
+                v["sluit"] = (basis + datetime.timedelta(days=vacaturebank.looptijd(v))).isoformat()
+                v.pop("ingevuld", None)
+                v.pop("herinnerd", None)
+                nieuw.append("vacature %s verlengd tot %s" % (v["slug"], v["sluit"]))
+            elif keuze.startswith("sluiten"):
+                v["ingevuld"] = vandaag.isoformat()
+                nieuw.append("vacature %s gesloten" % v["slug"])
+            v["wijziging"] = keuze
+            gewijzigd = True
+        if keuze and b.get("verwerkt"):
+            terugmelden.append(b["verwerkt"])
+        geplaatst = datetime.date.fromisoformat(v.get("geplaatst") or vandaag.isoformat())
+        if (b.get("herinner") and vacaturebank.is_open(v, vandaag) and v.get("sluit") and not v.get("herinnerd")
+                and (vandaag - geplaatst).days >= HERINNER_DAGEN
+                and (datetime.date.fromisoformat(v["sluit"]) - vandaag).days <= HERINNER_DAGEN):
+            v["herinnerd"] = vandaag.isoformat()
+            gewijzigd = True
+            nieuw.append("verlengmail vacature %s" % v["slug"])
+            terugmelden.append(b["herinner"] + "&sluit=" + v["sluit"] +
+                               "&url=" + urllib.parse.quote("%s/vacatures/%s/" % (SITE, v["slug"]), safe=""))
+    return gewijzigd
 
 
 def tijd(waarde):
@@ -315,6 +441,26 @@ def main(test=None):
             verwerkt.add(a["id"])
         url = "%s/bedrijvengids/%s/" % (SITE, a["vermelding"]) if a.get("vermelding") else ""
         terugmelden.append(a.get("gepubliceerd") and a["gepubliceerd"] + ("&url=" + urllib.parse.quote(url, safe="") if url else ""))
+    vacatures = vacaturebank.laad()
+    nieuwe_vacatures = False
+    for a in lijst.get("vacature", []):
+        if a["id"] not in verwerkt:
+            try:
+                v = vacature(a, {x["slug"] for x in vacatures})
+            except Exception as fout:  # één kapotte vacature mag de rest niet tegenhouden
+                print("Vacature %s overgeslagen: %s" % (a.get("id"), fout))
+                continue
+            vacatures.append(v)
+            nieuwe_vacatures = True
+            nieuw.append("vacature %s" % v["slug"])
+            verwerkt.add(a["id"])
+        slug_ = next((v["slug"] for v in vacatures if v.get("aanmelding") == a["id"]), "")
+        if a.get("gepubliceerd"):
+            terugmelden.append(a["gepubliceerd"] + ("&url=" + urllib.parse.quote("%s/vacatures/%s/" % (SITE, slug_), safe="") if slug_ else ""))
+    if vacature_beheer(lijst.get("vacature_beheer", []), vacatures, nieuw, terugmelden):
+        nieuwe_vacatures = True
+    if nieuwe_vacatures:
+        vacaturebank.bewaar(vacatures)
     nieuwe_berichten = False
     for a in lijst.get("nieuws", []):
         if a["id"] not in verwerkt:

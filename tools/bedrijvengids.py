@@ -31,6 +31,7 @@ from import_wordpress import DOORVERWIJZING, SITE, VOET, datum_nl as datum_tijd_
 import gidsiconen
 import nieuws  # noqa: E402
 import agenda  # noqa: E402
+import vacatures  # noqa: E402
 import koppeling  # noqa: E402
 
 NS = {"wp": "http://wordpress.org/export/1.2/", "content": "http://purl.org/rss/1.0/modules/content/"}
@@ -2391,7 +2392,7 @@ def adresregel(b):
     return ", ".join(x for x in (b["adres"], " ".join(x for x in (pc, b["plaats"]) if x)) if x)
 
 
-def bedrijf_pagina(b, cat, anderen, root="../../", berichten=(), evenementen=()):
+def bedrijf_pagina(b, cat, anderen, root="../../", berichten=(), evenementen=(), vacatures_=()):
     canonical = "%s/bedrijvengids/%s/" % (SITE, b["slug"])
     soort = (b.get("soort") or cat["enkelvoud"]).lower()
     kort = "<p>%s is een %s aan de %s in %s.</p>" % (esc(b["naam"]), esc(soort), esc(b["adres"]), esc(b["plaats"])) if b["adres"] else ""
@@ -2489,6 +2490,10 @@ def bedrijf_pagina(b, cat, anderen, root="../../", berichten=(), evenementen=())
         out.append(mijn_bedrijf(b, cat, root))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     # Alles van dit bedrijf op NijmegenOnline (besluit Frans, 2-11-2026): vacatures, agenda, nieuws, boven de kaart
+    if vacatures_:
+        out.append('        <section class="gids-sectie" id="vacatures">\n          <h2>Vacatures bij %s</h2>\n          <div class="vacaturelijst">' % esc(b["naam"]))
+        out.extend("            " + vacatures.kaart(v, root) for v in vacatures_)
+        out.append('          </div>\n        </section>')
     if evenementen:
         out.append('        <section class="gids-sectie" id="agenda">\n          <h2>Agenda</h2>\n          <div class="eventlijst">')
         out.extend("            " + agenda.eventkaart(e, datetime.date.today(), root) for e in evenementen[:5])
@@ -2534,7 +2539,8 @@ def mijn_bedrijf(b, cat, root):
             'en een eigen tekst. Je vermelding is en blijft gratis; wil je meer opvallen, dan kun je hem laten uitlichten.</p>\n'
             '          <p><a class="knop" href="%s">Dit is mijn bedrijf</a></p>\n'
             '          <p>Organiseer je een evenement? <a href="%sevenement-aanmelden/?bedrijf=%s">Zet het gratis in de agenda</a>, '
-            'dan staat het ook op deze pagina.</p>\n        </aside>' % (esc(b["naam"]), esc(link), root, b["slug"]))
+            'dan staat het ook op deze pagina. Personeel nodig? <a href="%svacature-plaatsen/?bedrijf=%s">Plaats gratis een vacature</a>.</p>\n'
+            '        </aside>' % (esc(b["naam"]), esc(link), root, b["slug"], root, b["slug"]))
 
 
 def datum_nl(iso):
@@ -3160,6 +3166,7 @@ def main(bron):
     aanbieders = json.loads((ROOT / "data" / "aanbieders.json").read_text(encoding="utf-8"))
     vandaag = datetime.date.today()
     evenementen_per = {}
+    vacatures_per = vacatures.per_bedrijf()
     for e in sorted(agenda.verrijk(json.loads((ROOT / "data" / "evenementen.json").read_text(encoding="utf-8")), aanbieders),
                     key=lambda e: (max(agenda.dag(e, "start"), vandaag), e["start"], e["slug"])):
         if e["_bedrijf"] and agenda.dag(e, "eind") >= vandaag:
@@ -3171,7 +3178,8 @@ def main(bron):
         for b in gids + overig:
             anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
             schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen, berichten=per_bedrijf.get(b["slug"], ()),
-                                                                     evenementen=evenementen_per.get(b["slug"], ())))
+                                                                     evenementen=evenementen_per.get(b["slug"], ()),
+                                                                     vacatures_=vacatures_per.get(b["slug"], ())))
         blog_blokken(cat, gids + overig + extra)
         groepen.setdefault(cat["groep"], []).append((cat, gids, overig + extra))
     for c, lijst in subs:

@@ -368,7 +368,7 @@ def aanbieder_overzicht(rij, vandaag):
         out.append('        </ul>\n      </section>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
-    return "\n".join(out).replace("site.css?v=30", CSS_VERSIE)
+    return re.sub(r"site\.css\?v=\d+", CSS_VERSIE, "\n".join(out))
 
 
 # De agenda en de locatiepagina gebruiken nieuwe opmaak (filters, locaties per plaats). Met een eigen versie haalt de
@@ -439,7 +439,7 @@ def overzicht(komend, vandaag):
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
-    return "\n".join(out).replace("site.css?v=30", CSS_VERSIE)
+    return re.sub(r"site\.css\?v=\d+", CSS_VERSIE, "\n".join(out))
 
 
 # Tegels per soort boven de agenda (besluit Frans 3-11-2026, voorstel 4): korte naam en icoon
