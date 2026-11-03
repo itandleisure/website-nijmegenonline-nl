@@ -5,8 +5,17 @@
     <link>https://www.nijmegenonline.nl/nieuwsberichten/</link>
     <description>Het laatste nieuws uit Nijmegen</description>
     <language>nl-nl</language>
-    <lastBuildDate>Tue, 03 Nov 2026 06:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Het Schort Kort Festival toont korte voorstellingen in de Lindenberg</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/het-schort-kort-festival-toont-korte-voorstellingen-in-de-lindenberg/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/het-schort-kort-festival-toont-korte-voorstellingen-in-de-lindenberg/</guid>
+      <pubDate>Wed, 04 Nov 2026 00:57:24 +0100</pubDate>
+      <description>Op 14 en 15 november wordt in de Lindenberg in Nijmegen de zevende editie van Het Schort Kort Festival gehouden, met korte voorstellingen van lokale makers.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-het-schort-kort-festival-toont-korte-voorstellingen-in-de-lindenberg.jpg" length="31219" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-het-schort-kort-festival-toont-korte-voorstellingen-in-de-lindenberg.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Goffert Run Festival in 2027 alsnog van start in Goffertstadion</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/goffert-run-festival-in-2027-alsnog-van-start-in-goffertstadion/</link>
@@ -177,15 +186,6 @@
       <description>Het Marikenhuis in Nijmegen exposeert tot 1 januari 2027 schilderijen van Joep van Baars, alias Perca. De toegang is gratis.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-marikenhuis-in-nijmegen-toont-schilderijen-van-joep-van-baars.jpg" length="33928" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-marikenhuis-in-nijmegen-toont-schilderijen-van-joep-van-baars.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Marikenhuis houdt ontmoetingsmiddag, yoga en wandelingen in november</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/marikenhuis-houdt-ontmoetingsmiddag-yoga-en-wandelingen-in-november/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/marikenhuis-houdt-ontmoetingsmiddag-yoga-en-wandelingen-in-november/</guid>
-      <pubDate>Tue, 27 Oct 2026 15:22:43 +0100</pubDate>
-      <description>Het Marikenhuis in Nijmegen heeft begin november een ontmoetingsmiddag over prostaatkanker, een voedingsspreekuur, herstelyoga en holistic pulsing.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-marikenhuis-houdt-ontmoetingsmiddag-yoga-en-wandelingen-in-november.jpg" length="51177" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-marikenhuis-houdt-ontmoetingsmiddag-yoga-en-wandelingen-in-november.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
