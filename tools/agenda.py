@@ -373,7 +373,7 @@ def aanbieder_overzicht(rij, vandaag):
 
 # De agenda en de locatiepagina gebruiken nieuwe opmaak (filters, locaties per plaats). Met een eigen versie haalt de
 # browser site.css opnieuw op, zonder dat alle 10.000 andere pagina's mee hoeven te veranderen.
-CSS_VERSIE = "site.css?v=33"
+CSS_VERSIE = "site.css?v=34"
 
 
 # Filter op datum boven de agenda (assets/js/agendafilter.js). Werkt in de browser met de datum van de bezoeker, dus ook
@@ -384,7 +384,7 @@ AGENDAFILTER = [
     '        <button type="button" data-wanneer="vandaag" aria-pressed="false">Vandaag</button>',
     '        <button type="button" data-wanneer="morgen" aria-pressed="false">Morgen</button>',
     '        <button type="button" data-wanneer="weekend" aria-pressed="false">Dit weekend</button>',
-    '        <button type="button" data-wanneer="week" aria-pressed="false">Komende 7 dagen</button>',
+    '        <button type="button" data-wanneer="week" aria-pressed="false"><span class="agenda-lang">Komende </span>7 dagen</button>',
     '      </div>',
 ]
 
@@ -443,7 +443,7 @@ def overzicht(komend, vandaag):
 
 
 # Tegels per soort boven de agenda (besluit Frans 3-11-2026, voorstel 4): korte naam en icoon
-SOORTTEGELS = {"Muziek": ("Muziek", "🎵"), "Theater en dans": ("Theater en dans", "🎭"), "Film": ("Film", "🎬"),
+SOORTTEGELS = {"Muziek": ("Muziek", "🎵"), "Theater en dans": ("Theater", "🎭"), "Film": ("Film", "🎬"),
                "Expositie": ("Exposities", "🖼️"), "Lezing en rondleiding": ("Lezingen", "🎤"),
                "Workshop en cursus": ("Workshops", "🧩"), "Markt": ("Markten", "🛍️"), "Feest en festival": ("Feesten", "🎉"),
                "Sport en beweging": ("Sport", "🏃"), "Eten en drinken": ("Eten en drinken", "🍽️"), "Spel en quiz": ("Spel en quiz", "🎲")}

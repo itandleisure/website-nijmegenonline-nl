@@ -678,14 +678,23 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .agenda-schakel[aria-pressed="true"]::before { content: "✓ "; color: var(--wit); }
 .agenda-wis { font: inherit; font-size: 0.9rem; background: none; border: 0; padding: 0; margin-left: 6px; color: var(--blauw); text-decoration: underline; cursor: pointer; }
 @media (max-width: 700px) {
-  /* Op mobiel: tegels en datumknoppen als regel om opzij te vegen, plaats en Gratis/Kinderen eronder */
-  .agenda-tegels { display: flex; overflow-x: auto; scroll-snap-type: x proximity; scroll-padding: 0 16px; margin: 20px -16px 12px; padding: 0 16px 4px; scrollbar-width: none; }
-  .agenda-tegels::-webkit-scrollbar, .agenda-balk .agendafilter::-webkit-scrollbar { display: none; }
-  .agenda-tegels button { flex: 0 0 96px; scroll-snap-align: start; }
+  /* Op mobiel alles in beeld, niets om opzij te vegen (besluit Frans 3-11-2026): tegels in een raster van vier,
+     kleiner en zonder aantal; datumknoppen en de rest lopen door op de volgende regel */
+  .agenda-tegels { grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 20px 0 12px; }
+  .agenda-tegels button { padding: 8px 2px 7px; font-size: 0.72rem; gap: 3px; hyphens: auto; }
+  .agenda-tegels button > span { font-size: 1.3rem; }
+  .agenda-tegels small, .agenda-lang { display: none; }
   .agenda-balk { display: block; }
-  .agenda-balk .agendafilter { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px 10px; padding: 0 16px 2px; scrollbar-width: none; }
-  .agenda-balk .agendafilter button { flex: 0 0 auto; }
+  .agenda-balk .agendafilter { gap: 6px; margin: 0 0 8px; }
+  .agenda-balk .agendafilter button, .agenda-schakel, .agenda-keuze select { font-size: 0.85rem; padding-top: 7px; padding-bottom: 7px; }
+  .agenda-balk .agendafilter button, .agenda-schakel { padding-left: 10px; padding-right: 10px; }
+  .agenda-balk .agendafilter { display: grid; grid-template-columns: auto auto auto 1.4fr auto; gap: 5px; }
+  .agenda-balk .agendafilter button { font-size: 0.8rem; padding-left: 6px; padding-right: 6px; white-space: nowrap; }
   .agenda-meer { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 380px) {
+  /* Smalle telefoons: datumknoppen mogen naar een tweede regel, nooit opzij scrollen */
+  .agenda-balk .agendafilter { display: flex; flex-wrap: wrap; }
 }
 .eventkaart__prijs { color: var(--grijs); font-weight: 500; }
 
