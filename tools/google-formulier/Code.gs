@@ -73,12 +73,14 @@ var FORMULIEREN = {
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 3, onderwerp: 'Evenement aangemeld', goedkeuren: true,
     openbaar: ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats',
-      'site', 'evenementmail', 'evenementtelefoon', 'aanbieder', 'bedrijf', 'bijschrift'],
+      'site', 'evenementmail', 'evenementtelefoon', 'soort', 'toegang', 'prijs', 'kenmerken', 'aanbieder', 'bedrijf', 'bijschrift'],
     velden: [['titel', 'Evenement'], ['datum', 'Begindatum'], ['starttijd', 'Begintijd'], ['einddatum', 'Einddatum'],
       ['eindtijd', 'Eindtijd'],
       ['omschrijving', 'Omschrijving'], ['locatie', 'Locatie'], ['adres', 'Adres'], ['postcode', 'Postcode'],
       ['plaats', 'Plaats'], ['site', 'Website'], ['evenementmail', 'E-mail bezoekers'],
       ['evenementtelefoon', 'Telefoon bezoekers'], ['foto', 'Foto'], ['bijschrift', 'Fotobijschrift'],
+      // Voor de filters in de agenda (tools/evenement_indeling.py): soort, gratis/vrije gift/betaald, prijs vanaf, extra's
+      ['soort', 'Soort'], ['toegang', 'Toegang'], ['prijs', 'Prijs vanaf'], ['kenmerken', "Extra's"],
       ['naam', 'Naam'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking'],
       ['aanbieder', 'Aanbieder'],   // gekozen op de beoordeelpagina (slug uit data/aanbieders.json, of "nieuw")
       ['extrafotos', "Andere foto's (Drive-ID's)"], ['fotocredits', "Bijschriften andere foto's"],
@@ -152,7 +154,8 @@ function doPost(e) {
       g.bijschrift = /^Fotocredits/.test(p.fotobron) ? (p.fotocredit ? 'Foto: ' + schoon(p.fotocredit, 200) : '') : schoon(p.fotobron, 100);
     }
     if (g.foto && !g.bijschrift) fouten.push('bijschrift');
-    ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats', 'telefoon'].forEach(function (v) { if (!g[v]) fouten.push(v); });
+    ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats', 'telefoon', 'soort', 'toegang'].forEach(function (v) { if (!g[v]) fouten.push(v); });
+    if (g.toegang !== 'betaald') g.prijs = '';
   }
   if (type === 'bedrijf') {
     ['bedrijf', 'categorie', 'adres', 'postcode', 'plaats', 'telefoon', 'omschrijving'].forEach(function (v) { if (!g[v]) fouten.push(v); });

@@ -33,6 +33,7 @@ from paginas import GOOGLE_FORM_URL  # noqa: E402
 from import_wordpress import SITE  # noqa: E402
 import nieuws  # noqa: E402
 import koppeling  # noqa: E402
+import evenement_indeling  # noqa: E402
 
 VERWERKT = ROOT / "data" / "aanmeldingen-verwerkt.txt"
 FOTOMAP = "assets/uploads/aangemeld"
@@ -240,7 +241,7 @@ def evenement(a, evenementen, aanbieders):
     if site and not re.match(r"https?://", site):
         site = "https://" + site
     foto = bewaar_foto(a["foto"], s) if a.get("foto") else ""
-    return {
+    e = {
         "slug": s,
         "titel": a["titel"].strip(),
         "start": "%sT%s" % (datum, begin) if begin else datum,
@@ -264,6 +265,10 @@ def evenement(a, evenementen, aanbieders):
         "contactmail": a.get("evenementmail", "").strip(),
         "telefoon": a.get("evenementtelefoon", "").strip(),
     }
+    # Soort, gratis/betaald, prijs en extra's uit het formulier; wat ontbreekt (oude aanmeldingen) vult de indeling aan
+    e.update(evenement_indeling.uit_formulier(a))
+    evenement_indeling.aanvullen(e)
+    return e
 
 
 def main(test=None):

@@ -41,6 +41,7 @@ import zoneinfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import DOORVERWIJZING, SITE, VOET, esc, kop, samenvatting  # noqa: E402
+import evenement_indeling  # noqa: E402
 import koppeling  # noqa: E402
 import nieuws  # noqa: E402
 
@@ -139,20 +140,29 @@ def eventkaart(e, vandaag, root):
     plek = plek_tekst(e)
     plaats = '<span class="eventkaart__plaats">%s</span>' % esc(plek) if plek else ""
     label = '<span class="eventkaart__label">Uitgelicht</span>' if e["uitgelicht"] else ""
-    return ('<a class="eventkaart%s" href="%sevents/%s/" data-van="%s" data-tot="%s"%s><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
-            '<span class="eventkaart__tekst">%s<strong>%s</strong><span class="eventkaart__wanneer">%s</span>%s</span></a>'
+    prijs = evenement_indeling.prijslabel(e)
+    prijs = '<span class="eventkaart__prijs"> · %s</span>' % esc(prijs) if prijs else ""
+    return ('<a class="eventkaart%s" href="%sevents/%s/" data-van="%s" data-tot="%s"%s%s><span class="eventkaart__datum"><b>%d</b>%s</span>%s'
+            '<span class="eventkaart__tekst">%s<strong>%s</strong><span class="eventkaart__wanneer">%s%s</span>%s</span></a>'
             % (" eventkaart--uitgelicht" if e["uitgelicht"] else "", root, e["slug"], e["start"][:10], e["eind"][:10],
-               ' data-plaats="%s"' % esc(e["_plaats"]) if e.get("_plaats") else "", s.day, MAANDEN[s.month - 1][:3], img, label,
-               esc(e["titel"]), esc(kort_wanneer(e, vandaag)), plaats))
+               ' data-plaats="%s"' % esc(e["_plaats"]) if e.get("_plaats") else "", filterdata(e), s.day, MAANDEN[s.month - 1][:3],
+               img, label, esc(e["titel"]), esc(kort_wanneer(e, vandaag)), prijs, plaats))
+
+
+def filterdata(e):
+    """data-attributen voor het filter op soort, gratis en kinderen (assets/js/agendafilter.js)."""
+    return ' data-soort="%s"%s%s' % (esc(e.get("soort") or "Overig"),
+                                     ' data-gratis="1"' if e.get("toegang") in ("gratis", "vrije gift") else "",
+                                     ' data-kinderen="1"' if "kinderen" in e.get("kenmerken", []) else "")
 
 
 def uitgelichtkaart(e, vandaag, root):
     """Grote groene kaart voor evenementen van klanten, bovenaan de agenda en op de homepage."""
     img = kaartfoto(e, root, "uitgelicht__heel") or '<span class="uitgelicht__geenfoto">%s</span>' % esc(e["locatie"] or "NijmegenOnline")
     plaats = '<span class="uitgelicht__plaats">%s</span>' % esc(plek_tekst(e)) if e["locatie"] else ""
-    return ('<a class="uitgelicht" href="%sevents/%s/"%s>%s<span class="uitgelicht__tekst"><span class="uitgelicht__wanneer">%s</span>'
+    return ('<a class="uitgelicht" href="%sevents/%s/"%s%s>%s<span class="uitgelicht__tekst"><span class="uitgelicht__wanneer">%s</span>'
             '<strong>%s</strong>%s</span></a>' % (root, e["slug"], ' data-plaats="%s"' % esc(e["_plaats"]) if e.get("_plaats") else "",
-                                                  img, esc(kort_wanneer(e, vandaag)), esc(e["titel"]), plaats))
+                                                  filterdata(e), img, esc(kort_wanneer(e, vandaag)), esc(e["titel"]), plaats))
 
 
 def uitgelicht_blok(komend, vandaag, root, aantal, kop_="h2"):
@@ -191,6 +201,10 @@ def event_pagina(e, vandaag, komend, aanbieders, vermeldingen):
         ld["organizer"] = koppeling.organisatie_ld(bedrijf, vermeldingen[bedrijf])
     if e["afbeelding"]:
         ld["image"] = e["afbeelding"]
+    if e.get("toegang") == "gratis":
+        ld["isAccessibleForFree"] = True
+    elif e.get("toegang") == "betaald" and e.get("prijs"):
+        ld["offers"] = {"@type": "Offer", "price": e["prijs"].replace(",", "."), "priceCurrency": "EUR", "url": canonical}
     kruim = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
         {"@type": "ListItem", "position": 2, "name": "Agenda", "item": "%s/%s/" % (SITE, OVERZICHT)},
@@ -204,7 +218,8 @@ def event_pagina(e, vandaag, komend, aanbieders, vermeldingen):
     if afgelopen:
         out.append('        <p class="afgelopen">Dit evenement is afgelopen. <a href="%s/%s/">Bekijk wat er binnenkort te doen is</a>.</p>'
                    % (SITE, OVERZICHT))
-    out.append('        <p class="gidslabel">%s</p>' % ("Uitgelicht evenement" if e["uitgelicht"] else "Evenement"))
+    soort = e.get("soort") if e.get("soort") not in (None, "", "Overig") else "Evenement"
+    out.append('        <p class="gidslabel">%s</p>' % ("Uitgelicht evenement" if e["uitgelicht"] else esc(soort)))
     out.append("        <h1>%s</h1>" % esc(e["titel"]))
     regels = ['<li><span class="evenement-info__kop">Wanneer</span>%s</li>' % esc(wanneer(e))]
     if e["locatie"] or e["adres"]:
@@ -215,6 +230,12 @@ def event_pagina(e, vandaag, komend, aanbieders, vermeldingen):
             plek = '<a href="%s%s/%s/">%s</a>' % (root, AANBIEDERS, e["aanbieder"], plek)
         regels.append('<li><span class="evenement-info__kop">Waar</span>%s%s <a href="%s" target="_blank" rel="noopener">Route</a></li>'
                       % (plek, ("<br>" + esc(e["adres"])) if e["adres"] and e["adres"] != e["locatie"] else "", esc(kaart)))
+    toegang = {"gratis": "Gratis", "vrije gift": "Vrije gift"}.get(e.get("toegang"), "")
+    if e.get("toegang") == "betaald":
+        toegang = "Vanaf € %s per persoon" % e["prijs"] if e.get("prijs") else "Betaald"
+    extra = [evenement_indeling.KENMERKEN[k] for k in evenement_indeling.KENMERKEN if k in e.get("kenmerken", [])]
+    if toegang or extra:
+        regels.append('<li><span class="evenement-info__kop">Toegang</span>%s</li>' % "<br>".join(esc(x) for x in [toegang] + extra if x))
     contact = []
     if e.get("website") and not (e["uitgelicht"] and e.get("link")):
         # Website uit een (gratis) aanmelding: wel een link, maar nofollow
@@ -369,6 +390,7 @@ def overzicht(komend, vandaag):
     if komend:
         out += AGENDAFILTER
         out.extend("      " + r for r in plaatsfilter(komend))
+        out.extend("      " + r for r in soortfilter(komend))
     # Langlopende exposities apart bovenaan, zodat ze niet elke maand opnieuw de lijst openen
     lopend = [e for e in komend if dag(e, "start") < vandaag]
     if lopend:
@@ -392,7 +414,7 @@ def overzicht(komend, vandaag):
     out.append('      <p class="gids-cta"><a class="knop" href="%s">Evenement aanmelden</a> <a href="%s%s/">Bekijk evenementen per locatie</a></p>'
                % (AANMELDEN, root, AANBIEDERS))
     if komend:
-        out.append('      <script src="%sassets/js/agendafilter.js?v=2" defer></script>' % root)
+        out.append('      <script src="%sassets/js/agendafilter.js?v=3" defer></script>' % root)
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append("    </div>\n  </main>")
     out.append(VOET)
@@ -412,6 +434,28 @@ def plaatsfilter(komend):
     knoppen += ['<button type="button" data-plaats="%s" aria-pressed="false">%s <span>%d</span></button>' % (esc(p), esc(p), tel[p])
                 for p in volgorde]
     return ['<div class="gidsen-filter agenda-plaatsen" role="group" aria-label="Filter op plaats" hidden>', '  ' + "".join(knoppen), "</div>"]
+
+
+def soortfilter(komend):
+    """Knoppen om de agenda op soort te filteren, plus Gratis (ook vrije gift) en Leuk voor kinderen
+    (assets/js/agendafilter.js, besluit Frans 3-11-2026). Indeling: tools/evenement_indeling.py."""
+    tel = {}
+    for e in komend:
+        tel[e.get("soort") or "Overig"] = tel.get(e.get("soort") or "Overig", 0) + 1
+    knoppen = ['<button type="button" data-soort="" aria-pressed="true">Alle soorten</button>']
+    knoppen += ['<button type="button" data-soort="%s" aria-pressed="false">%s <span>%d</span></button>' % (esc(x), esc(x), tel[x])
+                for x in evenement_indeling.SOORTEN if tel.get(x) and x != "Overig"]
+    gratis = sum(e.get("toegang") in ("gratis", "vrije gift") for e in komend)
+    kinderen = sum("kinderen" in e.get("kenmerken", []) for e in komend)
+    extra = []
+    if gratis:
+        extra.append('<button type="button" data-extra="gratis" aria-pressed="false">Gratis <span>%d</span></button>' % gratis)
+    if kinderen:
+        extra.append('<button type="button" data-extra="kinderen" aria-pressed="false">Leuk voor kinderen <span>%d</span></button>' % kinderen)
+    regels = ['<div class="gidsen-filter agenda-soorten" role="group" aria-label="Filter op soort" hidden>', '  ' + "".join(knoppen), "</div>"]
+    if extra:
+        regels += ['<div class="gidsen-filter agenda-extra" role="group" aria-label="Gratis of voor kinderen" hidden>', '  ' + "".join(extra), "</div>"]
+    return regels
 
 
 def plaats_blok(plaats, komend, vandaag):
@@ -471,6 +515,9 @@ def vervang_blok(pad, naam, inhoud):
 
 def main(vandaag):
     evenementen = json.load(open(ROOT / "data" / "evenementen.json", encoding="utf-8"))
+    # Nieuwe evenementen zonder soort of toegang (met de hand toegevoegd, uit een mail) automatisch indelen
+    if sum(evenement_indeling.aanvullen(e) for e in evenementen):
+        (ROOT / "data" / "evenementen.json").write_text(json.dumps(evenementen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     aanbieders = json.load(open(ROOT / "data" / "aanbieders.json", encoding="utf-8"))
     vermeldingen = koppeling.laad_vermeldingen()
     verrijk(evenementen, aanbieders)
