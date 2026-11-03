@@ -141,9 +141,13 @@
           <textarea id="bedrijf-openingstijden" name="openingstijden" rows="6"></textarea>
           <label for="bedrijf-omschrijving">Korte omschrijving van het bedrijf <span aria-hidden="true">*</span></label>
           <textarea id="bedrijf-omschrijving" name="omschrijving" rows="6" required></textarea>
-          <label for="bedrijf-foto">Logo of foto</label>
-          <input id="bedrijf-foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp">
-          <p class="formulier__hint">JPG, PNG of WebP, maximaal 20 MB.</p>
+          <label for="bedrijf-foto">Logo en foto&#x27;s</label>
+          <input id="bedrijf-foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp" multiple data-max="5">
+          <p class="formulier__hint">Kies er tot 5 tegelijk. De eerste wordt je hoofdfoto. Bij een gratis vermelding staat die op je pagina; bij Uitgelicht en Partner komen alle foto&#x27;s in een fotoreeks. JPG, PNG of WebP, maximaal 10 MB per foto.</p>
+          <fieldset class="formulier__keuzes"><legend>Foto&#x27;s in artikelen</legend>
+            <label><input type="checkbox" name="fotogebruik" value="Jullie mogen mijn foto&#x27;s ook gebruiken in artikelen op NijmegenOnline, met mijn bedrijfsnaam als fotocredit. Ik heb de rechten op deze foto&#x27;s."> Jullie mogen mijn foto&#x27;s ook gebruiken in artikelen op NijmegenOnline, met mijn bedrijfsnaam als fotocredit. Ik heb de rechten op deze foto&#x27;s.</label>
+            <label><input type="checkbox" name="fotogebruik" value="Jullie mogen ook foto&#x27;s van mijn website of social media gebruiken, met mijn bedrijfsnaam als fotocredit."> Jullie mogen ook foto&#x27;s van mijn website of social media gebruiken, met mijn bedrijfsnaam als fotocredit.</label>
+          </fieldset>
           <label for="bedrijf-naam">Je naam (contactpersoon) <span aria-hidden="true">*</span></label>
           <input id="bedrijf-naam" name="naam" type="text" autocomplete="on" required>
           <label for="bedrijf-email">Je e-mailadres <span aria-hidden="true">*</span></label>
@@ -209,7 +213,7 @@
       </div>
     </div>
   </main>
-  <script src="../assets/js/formulier.js?v=16" defer></script>
+  <script src="../assets/js/formulier.js?v=17" defer></script>
 
   <!-- footer -->
   <footer>

@@ -1,0 +1,391 @@
+{
+ "_uitleg": "Fotoregister (fotoplan, akkoord Frans 3-11-2026): per foto de bron, maker, licentie en het bijschrift dat onder de foto moet. status: kandidaat (gevonden, nog niet op de site), gebruikt (staat op de site), afgewezen. Bij Commons-foto's de naamsvermelding op de bestandspagina nalezen voordat de foto op de site komt. nodig: plekken uit de gidsen waarvoor nog geen eigen foto is.",
+ "fotos": [
+  {
+   "id": "grote-markt",
+   "plek": "De Grote Markt",
+   "gidsen": [
+    "centrum-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Nijmegen%2C_de_Grote_Markt_%28RM31130%2B1%2B2_en_31134%2B5%29_met_de_toren_van_de_Sint_Stevenskerk_RM31182_IMG_3983_2020-04-05_09.20.jpg",
+   "maker": "Michielverbeek",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Michielverbeek, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "plein-1944",
+   "plek": "Plein 1944",
+   "gidsen": [
+    "centrum-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Plein_1944_Nijmegen%2C_Bestanddeelnr_907-1312.jpg",
+   "maker": "Wim van Rossem / Anefo",
+   "licentie": "CC0",
+   "bijschrift": "Rechtenvrije afbeelding (bron: Wim van Rossem / Anefo, via Wikimedia Commons)",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "Historische foto; een actuele foto van het plein ontbreekt nog.",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "kelfkensbos",
+   "plek": "Het Kelfkensbos",
+   "gidsen": [
+    "centrum-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Toegangspoort_Valkhof%2C_Kelfkensbos%2C_Nijmegen.jpg",
+   "maker": "FakirNL",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: FakirNL, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "stevenskerk",
+   "plek": "De Stevenskerk",
+   "gidsen": [
+    "centrum-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Nijmegen_Stevenskerk_R02.jpg",
+   "maker": "Marc Ryckaert (MJJR)",
+   "licentie": "CC BY-SA 3.0 nl",
+   "bijschrift": "Foto: Marc Ryckaert (MJJR), CC BY-SA 3.0 nl, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "waalkade",
+   "plek": "De Waalkade",
+   "gidsen": [
+    "centrum-nijmegen",
+    "uitjes-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Waalkade_Benedenstad%2C_Nijmegen_Waal.jpg",
+   "maker": "Roger Veringmeier",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Roger Veringmeier, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "valkhof",
+   "plek": "Valkhof en Hunnerpark",
+   "gidsen": [
+    "centrum-nijmegen",
+    "uitjes-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Nijmegen%2C_kapel_van_het_Valkhof_met_Waalbrug_foto13_2010-12-20_12.36.JPG",
+   "maker": "Michielverbeek",
+   "licentie": "CC BY-SA 3.0",
+   "bijschrift": "Foto: Michielverbeek, CC BY-SA 3.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "waalbrug",
+   "plek": "De Waalbrug",
+   "gidsen": [
+    "centrum-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Nijmegen%2C_de_Waalbrug_RM523067_vanaf_Circul_van_de_Ooij_IMG_7809_2020-11-07_09.32.jpg",
+   "maker": "Michielverbeek",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Michielverbeek, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "station-nijmegen",
+   "plek": "Station Nijmegen",
+   "gidsen": [
+    "centrum-nijmegen",
+    "parkeren-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Station_Nijmegen_%282025%29-1.jpg",
+   "maker": "Sneeuwvlakte",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Sneeuwvlakte, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "duivelsberg",
+   "plek": "De Duivelsberg",
+   "gidsen": [
+    "natuur-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Berg_en_Dal%2C_Natuurgebied_de_Duivelsberg.jpg",
+   "maker": "Roger Veringmeier",
+   "licentie": "CC BY 4.0",
+   "bijschrift": "Foto: Roger Veringmeier, CC BY 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "mookerheide",
+   "plek": "Mookerheide",
+   "gidsen": [
+    "natuur-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Mookerheide%2C_view_towards_Cuijk%2C_Mook%2C_the_Netherlands.jpg",
+   "maker": "Bj.schoenmakers",
+   "licentie": "CC0",
+   "bijschrift": "Rechtenvrije afbeelding (bron: Bj.schoenmakers, via Wikimedia Commons)",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "sint-jansberg",
+   "plek": "De Sint-Jansberg",
+   "gidsen": [
+    "natuur-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Onderste_vijver_in_Groenewater%2C_Sint-Jansberg%2C_Plasmolen.jpg",
+   "maker": "FakirNL",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: FakirNL, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "heumensoord",
+   "plek": "Heumensoord",
+   "gidsen": [
+    "natuur-nijmegen",
+    "sauna-wellness-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Malden-Wachtpost_Heumensoord_%281%29.jpg",
+   "maker": "Romaine",
+   "licentie": "CC0",
+   "bijschrift": "Rechtenvrije afbeelding (bron: Romaine, via Wikimedia Commons)",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "Toont de nagebouwde Romeinse wachtpost, niet het bos zelf.",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "kronenburgerpark",
+   "plek": "Kronenburgerpark",
+   "gidsen": [
+    "natuur-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Nijmegen_Stadscentrum_Kronenburger_park_zomer.jpg",
+   "maker": "Roger Veringmeier",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Roger Veringmeier, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "goffertpark",
+   "plek": "Goffertpark",
+   "gidsen": [
+    "natuur-nijmegen",
+    "sporten-in-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Goffertpark_Nijmegen.jpg",
+   "maker": "Roger Veringmeier",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Roger Veringmeier, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "goffertstadion",
+   "plek": "Het Goffertstadion",
+   "gidsen": [
+    "sporten-in-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Goffertstadion_N.E.C._Nijmegen.jpg",
+   "maker": "Roger Veringmeier",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Roger Veringmeier, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "ooijpolder",
+   "plek": "Ooijpolder",
+   "gidsen": [
+    "natuur-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Typical_Dutch_winter_riverscape_of_the_Waal.jpg",
+   "maker": "Lendskaip",
+   "licentie": "CC0",
+   "bijschrift": "Rechtenvrije afbeelding (bron: Lendskaip, via Wikimedia Commons)",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "Nakijken op de bestandspagina of dit de Ooijpolder is.",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "vierdaagsefeesten",
+   "plek": "Vierdaagsefeesten",
+   "gidsen": [
+    "evenementen-nijmegen",
+    "film-theater-nijmegen",
+    "uitgaan-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Festival_op_%27t_Eiland_%28Vierdaagsefeesten_Nijmegen%29_2016_%281%29.jpg",
+   "maker": "FakirNL",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: FakirNL, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "stadsschouwburg",
+   "plek": "Stadsschouwburg",
+   "gidsen": [
+    "film-theater-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Stadsschouwburg_Nijmegen_-_Q2433308_%28totaal%29.jpg",
+   "maker": "Hay Kranen",
+   "licentie": "CC BY 4.0",
+   "bijschrift": "Foto: Hay Kranen, CC BY 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "doornroosje",
+   "plek": "Doornroosje",
+   "gidsen": [
+    "film-theater-nijmegen",
+    "uitgaan-nijmegen"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Doornroosje_Nijmegen_SSHN_Talia.jpg",
+   "maker": "Agora",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Agora, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "kleef",
+   "plek": "Kleef (Kleve)",
+   "gidsen": [
+    "over-de-grens"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Kleve_Schwanenburg_PM17.jpg",
+   "maker": "Pieter Delicaat",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Pieter Delicaat, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  },
+  {
+   "id": "emmerik",
+   "plek": "Emmerik (Emmerich am Rhein)",
+   "gidsen": [
+    "over-de-grens"
+   ],
+   "bron": "Wikimedia Commons",
+   "bestand": "https://commons.wikimedia.org/wiki/File:Emmerich_am_Rhein%2C_Rheinpromenade_--_2016_--_2318.jpg",
+   "maker": "Dietmar Rabich",
+   "licentie": "CC BY-SA 4.0",
+   "bijschrift": "Foto: Dietmar Rabich, CC BY-SA 4.0, via Wikimedia Commons",
+   "toestemming": "vrije licentie",
+   "status": "kandidaat",
+   "opmerking": "",
+   "gevonden": "2026-11-03"
+  }
+ ],
+ "nodig": [
+  {
+   "plek": "Parkeergarages Kelfkensbos, Mariënburg, Eiermarkt en Keizer Karel",
+   "gidsen": [
+    "parkeren-nijmegen",
+    "centrum-nijmegen"
+   ],
+   "hoe": "Niets bruikbaars op Commons. Vragen aan de exploitant of de gemeente."
+  },
+  {
+   "plek": "Heilig Landstichting",
+   "gidsen": [
+    "natuur-nijmegen"
+   ],
+   "hoe": "Nog zoeken op Commons of bij het Museumpark Orientalis vragen."
+  },
+  {
+   "plek": "Kermis, carnaval, Sint Maarten, kerstmarkten, schaatsen",
+   "gidsen": [
+    "evenementen-nijmegen",
+    "uitjes-nijmegen"
+   ],
+   "hoe": "Organisatoren om persfoto's vragen; foto's via het evenementformulier hergebruiken."
+  },
+  {
+   "plek": "Festivals en concerten",
+   "gidsen": [
+    "evenementen-nijmegen",
+    "film-theater-nijmegen",
+    "uitgaan-nijmegen"
+   ],
+   "hoe": "Persfoto's van de festivals; podia via de bedrijvengids-mail."
+  },
+  {
+   "plek": "LUX, bioscopen, zwembaden, Nijmegen met kinderen",
+   "gidsen": [
+    "film-theater-nijmegen",
+    "uitjes-nijmegen"
+   ],
+   "hoe": "Via de bedrijvengids-mail met de twee foto-vinkjes."
+  }
+ ]
+}

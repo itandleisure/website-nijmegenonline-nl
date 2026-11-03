@@ -127,7 +127,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=16" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=17" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -234,6 +234,12 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
                           % (id_, esc(label), ster, id_, veld, req))
             if opties:
                 regels.append('          <p class="formulier__hint">%s</p>' % esc(opties))
+        elif soort == "fotos":
+            # Meerdere foto's tegelijk kiezen (formulier.js: de eerste wordt de hoofdfoto, hooguit data-max)
+            regels.append('          <label for="%s">%s%s</label>\n          <input id="%s" name="%s" type="file" accept="image/jpeg,image/png,image/webp" multiple data-max="%d"%s>'
+                          % (id_, esc(label), ster, id_, veld, MAX_BEDRIJFSFOTOS, req))
+            if opties:
+                regels.append('          <p class="formulier__hint">%s</p>' % esc(opties))
         elif soort == "tekst":
             regels.append('          <label for="%s">%s%s</label>\n          <textarea id="%s" name="%s" rows="6"%s></textarea>'
                           % (id_, esc(label), ster, id_, veld, req))
@@ -325,6 +331,15 @@ BEDRIJF_PAKKETTEN = [
 ]
 
 
+# Hoeveel foto's een bedrijf in één keer kan meesturen (Code.gs neemt er niet meer aan)
+MAX_BEDRIJFSFOTOS = 5
+# Toestemming voor foto's in artikelen (fotoplan, akkoord Frans 3-11-2026): de meegestuurde foto's, en los daarvan
+# de foto's op de eigen website of social media. Code.gs zet de aangevinkte keuzes in de kolom "Foto's ook in artikelen".
+FOTOGEBRUIK = ["Jullie mogen mijn foto's ook gebruiken in artikelen op NijmegenOnline, met mijn bedrijfsnaam als fotocredit. "
+               "Ik heb de rechten op deze foto's.",
+               "Jullie mogen ook foto's van mijn website of social media gebruiken, met mijn bedrijfsnaam als fotocredit."]
+
+
 def bedrijf_aanmelden(categorieen):
     inhoud = """        <h1>Bedrijf aanmelden</h1>
         <p class="pagina__intro">Zet je bedrijf in de bedrijvengids van NijmegenOnline. Vul het formulier in, dan maken we je vermelding aan en nemen we contact met je op.</p>
@@ -342,7 +357,10 @@ def bedrijf_aanmelden(categorieen):
         ("bedrijfsmail", "E-mailadres van het bedrijf", "email", False, None),
         ("openingstijden", "Openingstijden", "tekst", False, None),
         ("omschrijving", "Korte omschrijving van het bedrijf", "tekst", True, None),
-        ("foto", "Logo of foto", "bestand", False, "JPG, PNG of WebP, maximaal 20 MB."),
+        ("foto", "Logo en foto's", "fotos", False,
+         "Kies er tot %d tegelijk. De eerste wordt je hoofdfoto. Bij een gratis vermelding staat die op je pagina; "
+         "bij Uitgelicht en Partner komen alle foto's in een fotoreeks. JPG, PNG of WebP, maximaal 10 MB per foto." % MAX_BEDRIJFSFOTOS),
+        ("fotogebruik", "Foto's in artikelen", "keuzes", False, FOTOGEBRUIK),
         ("naam", "Je naam (contactpersoon)", "text", True, None),
         ("email", "Je e-mailadres", "email", True, None),
         ("pakket", "Hoe wil je in de gids staan?", "keuze", True, BEDRIJF_PAKKETTEN)], "Aanmelden",

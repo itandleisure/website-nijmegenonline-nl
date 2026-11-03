@@ -428,9 +428,12 @@ def main(test=None):
             terugmelden.append(a["gepubliceerd"] + ("&url=" + urllib.parse.quote("%s/events/%s/" % (SITE, slug_), safe="") if slug_ else ""))
     for a in lijst.get("bedrijf", []):
         if a["id"] not in verwerkt:
-            b = {k: v for k, v in a.items() if k not in ("foto", "gepubliceerd")}
+            b = {k: v for k, v in a.items() if k not in ("foto", "fotos", "gepubliceerd")}
             if a.get("foto"):
                 b["foto"] = bewaar_foto(a["foto"], "bedrijf-" + slug(a.get("bedrijf", a["id"])))
+            # De andere foto's (tot 4): tools/bedrijvengids.py toont ze bij Uitgelicht en Partner in de fotoreeks
+            if a.get("fotos"):
+                b["fotos"] = extra_fotos(a, "bedrijf-" + slug(a.get("bedrijf", a["id"])))
             if a.get("vermelding"):
                 # Dit is mijn bedrijf: de redactie keurde de wijziging goed; tools/bedrijvengids.py past hem toe
                 b["goedgekeurd"] = time.strftime("%Y-%m-%d")
