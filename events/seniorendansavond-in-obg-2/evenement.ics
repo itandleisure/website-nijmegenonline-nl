@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:seniorendansavond-in-obg-2@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260825T193000
+DTEND;TZID=Europe/Amsterdam:20260825T223000
+SUMMARY:Seniorendansavond in OBG
+URL:https://www.nijmegenonline.nl/events/seniorendansavond-in-obg-2/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/seniorendansavond-in-obg-2/
+LOCATION:OBG Nijmegen\, Prof. Cornelissenstraat 2
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:kerstmarkt-klooster-graefenthal-twee-weekenden@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261127T160000
+DTEND;TZID=Europe/Amsterdam:20261206T190000
+SUMMARY:Kerstmarkt Klooster Graefenthal
+URL:https://www.nijmegenonline.nl/events/kerstmarkt-klooster-graefenthal-twee-weekenden/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/kerstmarkt-klooster-graefenthal-twee-weekenden/
+LOCATION:Kloster Graefenthal Goch\, Maasstraße 48\, 47574 Goch\, Deutschland
+END:VEVENT
+END:VCALENDAR

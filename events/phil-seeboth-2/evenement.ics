@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:phil-seeboth-2@nijmegenonline.nl
+DTSTAMP:20260324T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260816T150000
+DTEND;TZID=Europe/Amsterdam:20260816T170000
+SUMMARY:Phil Seeboth
+URL:https://www.nijmegenonline.nl/events/phil-seeboth-2/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/phil-seeboth-2/
+LOCATION:De Brauerij Kranenburg\, Mehrer Straße 1 Kranenburg
+END:VEVENT
+END:VCALENDAR

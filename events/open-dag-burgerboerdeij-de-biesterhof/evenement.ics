@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:open-dag-burgerboerdeij-de-biesterhof@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260905T103000
+DTEND;TZID=Europe/Amsterdam:20260905T153000
+SUMMARY:Open Dag Burgerboerdeij De Biesterhof
+URL:https://www.nijmegenonline.nl/events/open-dag-burgerboerdeij-de-biesterhof/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/open-dag-burgerboerdeij-de-biesterhof/
+LOCATION:Regeneratieve Burgerboerderij De Biesterhof Berg en Dal\, Zeelandsestraat 74\, Millingen aan de Rijn
+END:VEVENT
+END:VCALENDAR

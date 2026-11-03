@@ -30,7 +30,7 @@ def meta(s, naam):
 
 def eigen_pagina(pad):
     """Titel, omschrijving en foto van een pagina op deze site, of None als die er niet is of doorverwijst."""
-    bestand = ROOT / pad.split("#")[0].strip("/") / "index.html"
+    bestand = ROOT / pad.split("#")[0].split("?")[0].strip("/") / "index.html"
     if not bestand.is_file():
         return None
     s = bestand.read_text(encoding="utf-8")
@@ -47,7 +47,7 @@ def eigen_pagina(pad):
         m = re.search(r'<img[^>]+src="(?:\.\./)*(assets/uploads/[^"]+)"', s)
         foto = m.group(1) if m else ""
     if not foto:   # en anders een vaste foto van Nijmegen, net als bij nieuws zonder eigen foto
-        foto = nieuws.standaardfoto(pad.strip("/")) or ""
+        foto = nieuws.standaardfoto(pad.split("?")[0].strip("/")) or ""
     return {"titel": titel, "tekst": meta(s, "description"), "foto": foto}
 
 
@@ -75,14 +75,19 @@ def pagina(p):
     root = "../"
     canonical = "%s/%s/" % (SITE, p["slug"])
     eerste = next((eigen_pagina(k["pad"]) for g in p["groepen"] for k in g["kaarten"] if k.get("pad") and eigen_pagina(k["pad"])), None)
+    # Een pagina kan onder een andere hangen (bijv. de dagprogramma's onder Zien en doen): "ouder" in het json-bestand
+    kruimels = [("Home", SITE + "/", "../")]
+    if p.get("ouder"):
+        kruimels.append((p["ouder"]["naam"], SITE + p["ouder"]["pad"], ".." + p["ouder"]["pad"]))
     ld = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
-        {"@type": "ListItem", "position": 2, "name": p["naam"], "item": canonical}]}
+        {"@type": "ListItem", "position": i + 1, "name": naam, "item": url} for i, (naam, url, _) in enumerate(kruimels)] + [
+        {"@type": "ListItem", "position": len(kruimels) + 1, "name": p["naam"], "item": canonical}]}
     extra = '\n  <script type="application/ld+json">%s</script>' % json.dumps(ld, ensure_ascii=False)
     foto = SITE + "/" + eerste["foto"] if eerste and eerste["foto"] else None
     out = [kop(p["titel"], p["omschrijving"], canonical, root, foto, extra)]
     out.append('  <main class="artikel-wrap">\n    <div class="container">')
-    out.append('      <div class="kruimelpad"><a href="../">Home</a> › %s</div>' % esc(p["naam"]))
+    out.append('      <div class="kruimelpad">%s › %s</div>' % (" › ".join('<a href="%s">%s</a>' % (esc(h), esc(n)) for n, _, h in kruimels),
+                                                            esc(p["naam"])))
     out.append('      <header class="rubriek-kop">\n        <h1>%s</h1>\n        <p>%s</p>\n      </header>' % (esc(p["kop"]), esc(p["intro"])))
     out.append('      <nav class="gidsen-filter" aria-label="Op deze pagina">')
     for g in p["groepen"]:
@@ -92,6 +97,8 @@ def pagina(p):
         out.append('      <section class="bezoekers-groep" id="%s">\n        <h2>%s</h2>' % (g["id"], esc(g["naam"])))
         if g.get("intro"):
             out.append("        <p>%s</p>" % esc(g["intro"]))
+        if g.get("tekst"):   # een programma of verhaal: gewone alinea's boven de kaarten
+            out.append('        <div class="bezoekers-tekst">%s</div>' % "".join("<p>%s</p>" % esc(x) for x in g["tekst"]))
         out.append('        <div class="gidsen-raster">')
         out += [x for x in (kaart(k, root) for k in g["kaarten"]) if x]
         out.append("        </div>\n      </section>")
@@ -102,6 +109,12 @@ def pagina(p):
 
 
 def main():
+    # Twee keer: de pagina's linken naar elkaar, en een kaart naar een pagina die nog niet bestond wordt anders overgeslagen
+    for p in DATA:
+        d = ROOT / p["slug"]
+        d.mkdir(exist_ok=True)
+        if not (d / "index.html").exists():
+            (d / "index.html").write_text(pagina(p), encoding="utf-8")
     for p in DATA:
         d = ROOT / p["slug"]
         d.mkdir(exist_ok=True)

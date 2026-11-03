@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:expositie-ingrid-menge-in-het-kunsthuis-wijchen-5-t-m-27-september-2026@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260912T120000
+DTEND;TZID=Europe/Amsterdam:20260912T170000
+SUMMARY:Expositie Ingrid Menge in het Kunsthuis Wijchen
+URL:https://www.nijmegenonline.nl/events/expositie-ingrid-menge-in-het-kunsthuis-wijchen-5-t-m-27-september-2026/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/expositie-ingrid-menge-in-het-kunsthuis-wijchen-5-t-m-27-september-2026/
+LOCATION:Kunstkring Wijchen\, Kasteellaan 13\, 6602 DA Wijchen
+END:VEVENT
+END:VCALENDAR

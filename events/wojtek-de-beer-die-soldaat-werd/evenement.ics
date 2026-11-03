@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:wojtek-de-beer-die-soldaat-werd@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260816T100000
+DTEND;TZID=Europe/Amsterdam:20270404T170000
+SUMMARY:Wojtek! De beer die soldaat werd
+URL:https://www.nijmegenonline.nl/events/wojtek-de-beer-die-soldaat-werd/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/wojtek-de-beer-die-soldaat-werd/
+LOCATION:Vrijheidsmuseum Groesbeek\, Wylerbaan 4\, 6561 KR Groesbeek
+END:VEVENT
+END:VCALENDAR

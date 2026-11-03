@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:kijk-je-ogen-uit-familiedag-6@nijmegenonline.nl
+DTSTAMP:20260703T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260804T100000
+DTEND;TZID=Europe/Amsterdam:20260804T170000
+SUMMARY:Kijk je ogen uit – familiedag
+URL:https://www.nijmegenonline.nl/events/kijk-je-ogen-uit-familiedag-6/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/kijk-je-ogen-uit-familiedag-6/
+LOCATION:Vrijheidsmuseum Groesbeek\, Wylerbaan 4\, 6561 KR Groesbeek
+END:VEVENT
+END:VCALENDAR

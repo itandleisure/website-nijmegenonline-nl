@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:the-wine-archive-ii-een-reis-door-zuid-afrika@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261010T183000
+DTEND;TZID=Europe/Amsterdam:20261010T213000
+SUMMARY:The Wine Archive II – Een reis door Zuid-Afrika
+URL:https://www.nijmegenonline.nl/events/the-wine-archive-ii-een-reis-door-zuid-afrika/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/the-wine-archive-ii-een-reis-door-zuid-afrika/
+LOCATION:De Boekerij Nijmegen\, Berg en Dalseweg 77 A\, Nijmegen 6522 BC\, Nijmegen
+END:VEVENT
+END:VCALENDAR

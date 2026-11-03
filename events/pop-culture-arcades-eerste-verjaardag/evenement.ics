@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:pop-culture-arcades-eerste-verjaardag@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260901T140000
+DTEND;TZID=Europe/Amsterdam:20260901T220000
+SUMMARY:Pop Culture Arcade’s eerste verjaardag!
+URL:https://www.nijmegenonline.nl/events/pop-culture-arcades-eerste-verjaardag/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/pop-culture-arcades-eerste-verjaardag/
+LOCATION:Pop Culture Arcade Nijmegen\, Van Welderenstraat 80\, Nijmegen\, Gelderland 6511MR\, Nederland
+END:VEVENT
+END:VCALENDAR

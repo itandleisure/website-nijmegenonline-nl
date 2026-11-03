@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:superfoute-date-quiz-nijmegen@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260908T193000
+DTEND;TZID=Europe/Amsterdam:20260908T221500
+SUMMARY:Superfoute Date Quiz – Nijmegen
+URL:https://www.nijmegenonline.nl/events/superfoute-date-quiz-nijmegen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/superfoute-date-quiz-nijmegen/
+LOCATION:Café Van Buren Nijmegen\, Molenstraat 89\, Nijmegen 6511 HC\, Nederland
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:concert-nijmeegs-blazersensemble-4@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261018T160000
+DTEND;TZID=Europe/Amsterdam:20261018T173000
+SUMMARY:Concert Nijmeegs Blazersensemble
+URL:https://www.nijmegenonline.nl/events/concert-nijmeegs-blazersensemble-4/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/concert-nijmeegs-blazersensemble-4/
+LOCATION:Petruskerk Nijmegen\, Schependomlaan 85
+END:VEVENT
+END:VCALENDAR

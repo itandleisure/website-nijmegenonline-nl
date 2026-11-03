@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:solo-expositie-aquarellen-van-cesarine-in-kasteel-wijchen-2@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261010T120000
+DTEND;TZID=Europe/Amsterdam:20261010T170000
+SUMMARY:Solo-expositie Aquarellen van Cesarine in Kasteel wijchen
+URL:https://www.nijmegenonline.nl/events/solo-expositie-aquarellen-van-cesarine-in-kasteel-wijchen-2/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/solo-expositie-aquarellen-van-cesarine-in-kasteel-wijchen-2/
+LOCATION:Kasteel Wijchen\, Kasteellaan 9\, Wijchen 6602 DA
+END:VEVENT
+END:VCALENDAR

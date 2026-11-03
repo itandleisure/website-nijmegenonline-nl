@@ -232,6 +232,9 @@ section h2 { margin: 0 0 20px; font-size: 1.5rem; }
 footer { background: var(--donkerblauw); color: #cfe0f0; padding: 48px 0 0; font-size: 0.95rem; margin-top: 24px; }
 footer a { color: var(--wit); text-decoration: none; }
 footer a:hover { color: #b9e58f; text-decoration: underline; }
+.voet__social { list-style: none; display: flex; gap: 10px; margin: 18px 0 0; padding: 0; }
+.voet__social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.12); }
+.voet__social a:hover { background: var(--groen); color: var(--wit); }
 .voet { display: grid; gap: 32px; grid-template-columns: 1fr; }
 @media (min-width: 640px) { .voet { grid-template-columns: repeat(3, 1fr); } .voet__merk { grid-column: 1 / -1; } }
 @media (min-width: 960px) { .voet { grid-template-columns: 1.6fr 1fr 1fr 1fr; } .voet__merk { grid-column: auto; } }
@@ -380,6 +383,9 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .agenda-maand h2 { margin-bottom: 14px; }
 .evenement-info { list-style: none; margin: 0 0 20px; padding: 14px 18px; background: var(--licht); border-radius: var(--radius); display: grid; gap: 10px; }
 .evenement-info li { margin: 0; }
+.delen { display: flex; flex-wrap: wrap; gap: 8px; margin: -6px 0 20px; }
+.delen__knop { font: inherit; font-size: 0.88rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--rand); background: var(--wit); color: var(--tekst); text-decoration: none; cursor: pointer; }
+.delen__knop:hover { border-color: var(--groen); color: var(--groen); }
 .evenement-info__kop { display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--groen); }
 .afgelopen { background: #fdecec; border-left: 4px solid var(--rood); padding: 12px 16px; border-radius: 6px; font-weight: 600; }
 @media (max-width: 480px) {
@@ -648,6 +654,8 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .bezoekers-groep { margin: 32px 0; scroll-margin-top: 90px; }
 .bezoekers-groep > h2 { margin: 0 0 6px; }
 .bezoekers-groep > p { margin: 0 0 16px; color: var(--grijs); max-width: 720px; }
+.bezoekers-tekst { max-width: 760px; margin: 0 0 18px; font-size: 1.05rem; line-height: 1.65; }
+.bezoekers-tekst p { margin: 0 0 12px; }
 .gidskaart h3 { margin: 0; font-size: 1.1rem; color: var(--kop); }
 
 /* Agenda: filter op datum (assets/js/agendafilter.js) */
@@ -740,3 +748,13 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .vacature-meer { margin: 14px 0 0; }
 .vacaturezoek input { font: inherit; font-weight: 500; color: var(--tekst); padding: 8px 14px; border: 1px solid var(--rand); border-radius: 999px; background: var(--wit); width: 13em; max-width: 100%; }
 .vacaturezoek input:focus { border-color: var(--groen); outline: none; }
+
+/* Kaart van de stad (tools/stadskaart.py) */
+.stadskaart { height: 560px; }
+.stadskaart-lijst { margin: 32px 0; columns: 2 320px; column-gap: 32px; }
+.stadskaart-lijst h2 { column-span: all; }
+.stadskaart-lijst h3 { margin: 16px 0 6px; font-size: 1.05rem; break-after: avoid; }
+.stadskaart-lijst ul { margin: 0; padding-left: 18px; }
+.stadskaart-lijst li { margin: 3px 0; break-inside: avoid; }
+.stadskaart-lijst li span { color: var(--grijs); font-size: 0.88rem; }
+@media (max-width: 700px) { .stadskaart { height: 440px; } }

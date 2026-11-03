@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:concert-ensemble-septime@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260927T143000
+DTEND;TZID=Europe/Amsterdam:20260927T170000
+SUMMARY:Concert Ensemble Septime
+URL:https://www.nijmegenonline.nl/events/concert-ensemble-septime/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/concert-ensemble-septime/
+LOCATION:Lutherse kerk Nijmegen\, Prins Hendrikstraat 79\, 6521 AX  Nijmegen
+END:VEVENT
+END:VCALENDAR

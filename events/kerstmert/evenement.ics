@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:kerstmert@nijmegenonline.nl
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261212T110000
+DTEND;TZID=Europe/Amsterdam:20261213T170000
+SUMMARY:KerstMert!
+URL:https://www.nijmegenonline.nl/events/kerstmert/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/kerstmert/
+LOCATION:Plan_A Nijmegen\, Vlietstraat 22\, 6542 SM Nijmegen
+END:VEVENT
+END:VCALENDAR

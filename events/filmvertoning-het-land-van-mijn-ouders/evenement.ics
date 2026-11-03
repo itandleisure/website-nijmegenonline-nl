@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:filmvertoning-het-land-van-mijn-ouders@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261027T190000
+DTEND;TZID=Europe/Amsterdam:20261027T200000
+SUMMARY:Filmvertoning: Het land van mijn ouders
+URL:https://www.nijmegenonline.nl/events/filmvertoning-het-land-van-mijn-ouders/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/filmvertoning-het-land-van-mijn-ouders/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

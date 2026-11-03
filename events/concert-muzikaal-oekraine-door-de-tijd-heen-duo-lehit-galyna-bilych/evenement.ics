@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:concert-muzikaal-oekraine-door-de-tijd-heen-duo-lehit-galyna-bilych@nijmegenonline.nl
+DTSTAMP:20260703T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260823T150000
+DTEND;TZID=Europe/Amsterdam:20260823T160000
+SUMMARY:Concert “Muzikaal Oekraïne door de tijd heen”
+URL:https://www.nijmegenonline.nl/events/concert-muzikaal-oekraine-door-de-tijd-heen-duo-lehit-galyna-bilych/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/concert-muzikaal-oekraine-door-de-tijd-heen-duo-lehit-galyna-bilych/
+LOCATION:Stevenskerk Nijmegen\, Sint Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR

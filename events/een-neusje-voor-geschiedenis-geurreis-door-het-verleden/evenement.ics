@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:een-neusje-voor-geschiedenis-geurreis-door-het-verleden@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261010T140000
+DTEND;TZID=Europe/Amsterdam:20261010T160000
+SUMMARY:Een Neusje voor Geschiedenis: geurreis door het verleden
+URL:https://www.nijmegenonline.nl/events/een-neusje-voor-geschiedenis-geurreis-door-het-verleden/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/een-neusje-voor-geschiedenis-geurreis-door-het-verleden/
+LOCATION:Thiemeloods Nijmegen\, Leemptstraat 34 Nijmegen 
+END:VEVENT
+END:VCALENDAR

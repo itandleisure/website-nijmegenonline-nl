@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:open-monumentendag-mini-expositie-veerkrachtig-erfgoed-2@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20260921
+SUMMARY:Open Monumentendag: Mini-expositie Veerkrachtig erfgoed
+URL:https://www.nijmegenonline.nl/events/open-monumentendag-mini-expositie-veerkrachtig-erfgoed-2/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/open-monumentendag-mini-expositie-veerkrachtig-erfgoed-2/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

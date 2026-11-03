@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:sinterklaas-komt-over-het-water@nijmegenonline.nl
+DTSTAMP:20261027T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261204T151500
+DTEND;TZID=Europe/Amsterdam:20261204T171500
+SUMMARY:Sinterklaas komt over het water
+URL:https://www.nijmegenonline.nl/events/sinterklaas-komt-over-het-water/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/sinterklaas-komt-over-het-water/
+LOCATION:Kleve\, Opschlag 20-22\, 47533 Kleve
+END:VEVENT
+END:VCALENDAR

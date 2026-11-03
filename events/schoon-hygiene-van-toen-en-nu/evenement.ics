@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:schoon-hygiene-van-toen-en-nu@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261011T103000
+DTEND;TZID=Europe/Amsterdam:20261011T123000
+SUMMARY:Schoon! Hygiëne van TOEN en nu
+URL:https://www.nijmegenonline.nl/events/schoon-hygiene-van-toen-en-nu/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/schoon-hygiene-van-toen-en-nu/
+LOCATION:Zeester Nijmegen\, Lindenberghaven 1D\, Nijmegen 6511 XT\, Nederland
+END:VEVENT
+END:VCALENDAR

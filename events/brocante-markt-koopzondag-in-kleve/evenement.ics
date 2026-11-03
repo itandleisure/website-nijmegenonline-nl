@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:brocante-markt-koopzondag-in-kleve@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260927T130000
+DTEND;TZID=Europe/Amsterdam:20260927T180000
+SUMMARY:Brocante-Markt & Koopzondag in Kleve
+URL:https://www.nijmegenonline.nl/events/brocante-markt-koopzondag-in-kleve/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/brocante-markt-koopzondag-in-kleve/
+LOCATION:Kleve
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:science-cafe-smart-drugs-kunnen-we-ons-brein-hacken@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260907T193000
+DTEND;TZID=Europe/Amsterdam:20260907T220000
+SUMMARY:Science Café: Kunnen we ons brein hacken?
+URL:https://www.nijmegenonline.nl/events/science-cafe-smart-drugs-kunnen-we-ons-brein-hacken/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/science-cafe-smart-drugs-kunnen-we-ons-brein-hacken/
+LOCATION:Irish pub The Shamrock Nijmegen\, Smetiusstraat 17 Nijmegen
+END:VEVENT
+END:VCALENDAR

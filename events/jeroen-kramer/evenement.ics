@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:jeroen-kramer@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20270110T150000
+DTEND;TZID=Europe/Amsterdam:20270110T170000
+SUMMARY:Jeroen Kramer bij de Brauerij
+URL:https://www.nijmegenonline.nl/events/jeroen-kramer/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/jeroen-kramer/
+LOCATION:De Brauerij Kranenburg\, Mehrer Straße 1 Kranenburg
+END:VEVENT
+END:VCALENDAR

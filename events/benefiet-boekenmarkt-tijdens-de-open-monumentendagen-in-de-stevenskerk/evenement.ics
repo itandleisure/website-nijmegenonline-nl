@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:benefiet-boekenmarkt-tijdens-de-open-monumentendagen-in-de-stevenskerk@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260911T100000
+DTEND;TZID=Europe/Amsterdam:20260911T163000
+SUMMARY:Benefiet Boekenmarkt tijdens de Open Monumentendagen in de Stevenskerk
+URL:https://www.nijmegenonline.nl/events/benefiet-boekenmarkt-tijdens-de-open-monumentendagen-in-de-stevenskerk/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/benefiet-boekenmarkt-tijdens-de-open-monumentendagen-in-de-stevenskerk/
+LOCATION:Stevenskerk Nijmegen\, Sint Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR
