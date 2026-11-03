@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:expositie-nijmegen-in-kleur-groep-zwarte-vrouwen-nijmegen@nijmegenonline.nl
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260901T100000
+DTEND;TZID=Europe/Amsterdam:20260901T170000
+SUMMARY:Expositie: Nijmegen in kleur – Groep Zwarte Vrouwen Nijmegen
+URL:https://www.nijmegenonline.nl/events/expositie-nijmegen-in-kleur-groep-zwarte-vrouwen-nijmegen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/expositie-nijmegen-in-kleur-groep-zwarte-vrouwen-nijmegen/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

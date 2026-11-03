@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:arcade-van-de-maand-kun-jij-perry-ubeda-verslaan-2@nijmegenonline.nl
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260808T140000
+DTEND;TZID=Europe/Amsterdam:20260808T220000
+SUMMARY:Arcade van de maand\, Kun jij Perry Ubeda verslaan?
+URL:https://www.nijmegenonline.nl/events/arcade-van-de-maand-kun-jij-perry-ubeda-verslaan-2/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/arcade-van-de-maand-kun-jij-perry-ubeda-verslaan-2/
+LOCATION:Pop Culture Arcade Nijmegen\, Van Welderenstraat 80\, Nijmegen\, Gelderland 6511MR\, Nederland
+END:VEVENT
+END:VCALENDAR

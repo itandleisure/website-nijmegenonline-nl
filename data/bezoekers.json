@@ -8,10 +8,48 @@
     "intro": "Nijmegen is de oudste stad van Nederland, met Romeinse sporen, een levendige binnenstad aan de Waal en veel groen eromheen. Hier vind je de bezienswaardigheden, musea, parken, uitjes en evenementen die je niet wilt missen.",
     "groepen": [
       {
+        "id": "dagprogrammas",
+        "naam": "Dagprogramma's",
+        "intro": "Weet je niet waar je moet beginnen? Volg een van deze programma's.",
+        "kaarten": [
+          {
+            "pad": "/24-uur-in-nijmegen/",
+            "titel": "24 uur in Nijmegen",
+            "tekst": "Eén dag: het Valkhof, de Stevenskerk, de Waalkade en 's avonds een café."
+          },
+          {
+            "pad": "/weekend-nijmegen/",
+            "titel": "Een weekend Nijmegen",
+            "tekst": "Twee dagen: de stad, de Ooijpolder en de heuvels van Groesbeek."
+          },
+          {
+            "pad": "/nijmegen-bij-regen/",
+            "titel": "Nijmegen bij regen",
+            "tekst": "Musea, binnenuitjes en cafés voor als het slecht weer is."
+          },
+          {
+            "pad": "/dagje-nijmegen-met-kinderen/",
+            "titel": "Een dag met kinderen",
+            "tekst": "Parken, musea, zwemmen en uit eten met het hele gezin."
+          }
+        ]
+      },
+      {
         "id": "bezienswaardigheden",
         "naam": "Bezienswaardigheden",
         "intro": "De plekken die elke bezoeker van Nijmegen gezien moet hebben.",
         "kaarten": [
+          {
+            "pad": "/verhaal-van-nijmegen/",
+            "titel": "Het verhaal van Nijmegen",
+            "tekst": "Romeinen, keizers en de oorlog: de geschiedenis van de oudste stad in het kort."
+          },
+          {
+            "pad": "/kaart-nijmegen/",
+            "titel": "Kaart van Nijmegen",
+            "tekst": "Bezienswaardigheden, parken, musea, theaters, hotels, parkeergarages en het station op één kaart.",
+            "foto": "assets/uploads/2023/01/stadsdelen-nijmegen.webp"
+          },
           {
             "pad": "/wat-te-doen-in-nijmegen/"
           },
@@ -59,9 +97,14 @@
       },
       {
         "id": "natuur",
-        "naam": "Parken en natuur",
+        "naam": "Parken, natuur en routes",
         "intro": "Stadsparken om de hoek en heuvels, bossen en uiterwaarden net buiten de stad.",
         "kaarten": [
+          {
+            "pad": "/routes-nijmegen/",
+            "titel": "Routes in en rond Nijmegen",
+            "tekst": "Wandel- en fietsroutes door de stad, de polder en de heuvels."
+          },
           {
             "pad": "/wandelen-nijmegen/"
           },
@@ -198,6 +241,11 @@
             "pad": "/bestemmingen/",
             "titel": "Bestemmingen rond Nijmegen",
             "tekst": "Groesbeek, Berg en Dal, Wijchen, Kleef en meer dorpen en stadjes voor een dagje uit, plus de wijken van Nijmegen."
+          },
+          {
+            "pad": "/wijken-nijmegen/",
+            "titel": "De wijken van Nijmegen",
+            "tekst": "Van Nijmegen-Oost tot Lent: alle wijken met hun eigen karakter."
           }
         ]
       }
@@ -216,6 +264,12 @@
         "naam": "Bereikbaarheid",
         "intro": "Nijmegen heeft een groot station midden in de stad. Kom je met de auto, dan parkeer je in een van de parkeergarages rond de binnenstad.",
         "kaarten": [
+          {
+            "pad": "/kaart-nijmegen/",
+            "titel": "Kaart van Nijmegen",
+            "tekst": "Bezienswaardigheden, parken, musea, theaters, hotels, parkeergarages en het station op één kaart.",
+            "foto": "assets/uploads/2023/01/stadsdelen-nijmegen.webp"
+          },
           {
             "pad": "/station-nijmegen/"
           },
@@ -281,6 +335,11 @@
           },
           {
             "pad": "/thema/campings-in-nijmegen/"
+          },
+          {
+            "pad": "/zakelijk-nijmegen/",
+            "titel": "Zakelijk en met groepen",
+            "tekst": "Vergaderen, een zaal huren, een bedrijfsuitje of met een groep naar Nijmegen."
           }
         ]
       },
@@ -325,6 +384,675 @@
           },
           {
             "pad": "/thema/restaurants-in-nijmegen-restaurant/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "24-uur-in-nijmegen",
+    "naam": "24 uur in Nijmegen",
+    "ouder": {
+      "pad": "/zien-en-doen/",
+      "naam": "Zien en doen"
+    },
+    "titel": "24 uur in Nijmegen: een dagprogramma voor de oudste stad",
+    "omschrijving": "Eén dag in Nijmegen? Zo haal je er het meeste uit: het Valkhof, de Stevenskerk, de Waalkade, lunch in de binnenstad en 's avonds een café of podium.",
+    "kop": "24 uur in Nijmegen",
+    "intro": "Heb je één dag in Nijmegen? Dan zie je met dit programma het belangrijkste van de oudste stad van Nederland: de geschiedenis op het Valkhof, de levendige binnenstad en de Waal. Alles ligt op loopafstand van elkaar.",
+    "groepen": [
+      {
+        "id": "ochtend",
+        "naam": "Ochtend: de geschiedenis in",
+        "tekst": [
+          "Begin op het Valkhof, de heuvel boven de Waal waar de geschiedenis van Nijmegen begon. In het Valkhofpark staan de Sint-Nicolaaskapel en de Barbarossaruïne, en in het Valkhof Museum zie je wat de Romeinen hier achterlieten.",
+          "Loop daarna via de Kerkboog naar de Stevenskerk en de Grote Markt, het hart van de oude stad."
+        ],
+        "kaarten": [
+          {
+            "pad": "/valkhof-nijmegen/"
+          },
+          {
+            "pad": "/stevenskerk-nijmegen/"
+          },
+          {
+            "pad": "/nijmegen-de-oudste-stad-met-de-jongste-energie/"
+          }
+        ]
+      },
+      {
+        "id": "middag",
+        "naam": "Middag: lunch, winkels en de Waalkade",
+        "tekst": [
+          "Lunch in de binnenstad en neem de tijd voor de winkelstraten rond de Lange Hezelstraat, een van de oudste winkelstraten van Nederland.",
+          "Ga dan via de Veerpoorttrappen naar de Waalkade. Daar vind je het fietsmuseum Velorama en De Bastei, en zie je de Waalbrug en de Snelbinder over de rivier."
+        ],
+        "kaarten": [
+          {
+            "pad": "/lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes/"
+          },
+          {
+            "pad": "/thema/winkelen-in-nijmegen/"
+          },
+          {
+            "pad": "/waalkade-nijmegen/"
+          },
+          {
+            "pad": "/velorama-nijmegen/"
+          },
+          {
+            "pad": "/de-bastei-nijmegen/"
+          }
+        ]
+      },
+      {
+        "id": "avond",
+        "naam": "Avond: eten en uitgaan",
+        "tekst": [
+          "Eet in een van de restaurants in het centrum en sluit de dag af in een historisch café of een biercafé. Kijk in de agenda wat er vanavond in de podia te doen is."
+        ],
+        "kaarten": [
+          {
+            "pad": "/de-10-beste-restaurants-in-nijmegen-centrum/"
+          },
+          {
+            "pad": "/de-7-cafes-met-de-meeste-historie-van-nijmegen/"
+          },
+          {
+            "pad": "/lekker-uitgaan-in-nijmegen-hier-doe-je-dat/"
+          },
+          {
+            "pad": "/nijmegen-evenementen-overzicht/?wanneer=vandaag",
+            "titel": "Vandaag in de agenda",
+            "tekst": "Concerten, theater en exposities die vandaag in Nijmegen te zien zijn."
+          }
+        ]
+      },
+      {
+        "id": "meer",
+        "naam": "Blijf je langer?",
+        "kaarten": [
+          {
+            "pad": "/weekend-nijmegen/",
+            "titel": "Een weekend Nijmegen",
+            "tekst": "Twee dagen: de stad, de Ooijpolder en de heuvels van Groesbeek."
+          },
+          {
+            "pad": "/thema/overnachten-in-nijmegen/"
+          },
+          {
+            "pad": "/plan-je-bezoek/",
+            "titel": "Plan je bezoek",
+            "tekst": "Hoe je in Nijmegen komt, waar je parkeert en waar je overnacht."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "weekend-nijmegen",
+    "naam": "Een weekend Nijmegen",
+    "ouder": {
+      "pad": "/zien-en-doen/",
+      "naam": "Zien en doen"
+    },
+    "titel": "Een weekend Nijmegen: twee dagen stad, rivier en natuur",
+    "omschrijving": "Een weekendje Nijmegen? Op dag één de binnenstad en de Waal, op dag twee de Ooijpolder, de heuvels van Groesbeek en het Vrijheidsmuseum. Met tips om te overnachten.",
+    "kop": "Een weekend Nijmegen",
+    "intro": "In een weekend zie je niet alleen de stad, maar ook het groene land eromheen. Op zaterdag de binnenstad en de Waal, op zondag de polder of de heuvels.",
+    "groepen": [
+      {
+        "id": "overnachten",
+        "naam": "Overnachten",
+        "tekst": [
+          "Slaap in het centrum als je 's avonds wilt uitgaan, of net buiten de stad als je van rust houdt."
+        ],
+        "kaarten": [
+          {
+            "pad": "/weekendje-nijmegen-hier-kun-je-leuk-overnachten/"
+          },
+          {
+            "pad": "/wat-zijn-de-mooiste-hotels-in-nijmegen-onze-top-5/"
+          },
+          {
+            "pad": "/thema/bb-nijmegen/"
+          }
+        ]
+      },
+      {
+        "id": "zaterdag",
+        "naam": "Zaterdag: de stad",
+        "tekst": [
+          "Volg het programma van 24 uur in Nijmegen: 's ochtends het Valkhof en de Stevenskerk, 's middags de winkels en de Waalkade, 's avonds eten en een café. Op zaterdag is er markt op de Grote Markt."
+        ],
+        "kaarten": [
+          {
+            "pad": "/24-uur-in-nijmegen/",
+            "titel": "24 uur in Nijmegen",
+            "tekst": "Het dagprogramma voor de binnenstad, van het Valkhof tot de Waalkade."
+          },
+          {
+            "pad": "/markten-nijmegen/"
+          },
+          {
+            "pad": "/ontdek-nijmegen-door-de-ogen-van-een-local/"
+          }
+        ]
+      },
+      {
+        "id": "zondag",
+        "naam": "Zondag: polder of heuvels",
+        "tekst": [
+          "Kies op zondag tussen twee landschappen. Ten oosten van de stad ligt de Ooijpolder, met dijken, plassen en wilde paarden; je fietst er vanaf de Waalkade zo naartoe. Ten zuiden liggen de bossen en heuvels van Heumensoord en Groesbeek.",
+          "Combineer de heuvels met het Vrijheidsmuseum in Groesbeek, over de Tweede Wereldoorlog en de bevrijding van deze streek."
+        ],
+        "kaarten": [
+          {
+            "pad": "/ooijpolder/"
+          },
+          {
+            "pad": "/heumensoord/"
+          },
+          {
+            "pad": "/vrijheidsmuseum-groesbeek/"
+          },
+          {
+            "pad": "/wandelen-nijmegen/"
+          }
+        ]
+      },
+      {
+        "id": "meer",
+        "naam": "Meer ideeën",
+        "kaarten": [
+          {
+            "pad": "/routes-nijmegen/",
+            "titel": "Routes in en rond Nijmegen",
+            "tekst": "Wandel- en fietsroutes door de stad, de polder en de heuvels."
+          },
+          {
+            "pad": "/nijmegen-evenementen-overzicht/?wanneer=weekend",
+            "titel": "Dit weekend in de agenda",
+            "tekst": "Alles wat er dit weekend in Nijmegen en omgeving te doen is."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "nijmegen-bij-regen",
+    "naam": "Nijmegen bij regen",
+    "ouder": {
+      "pad": "/zien-en-doen/",
+      "naam": "Zien en doen"
+    },
+    "titel": "Nijmegen bij regen: wat te doen als het slecht weer is",
+    "omschrijving": "Regen in Nijmegen? Musea, binnenuitjes, zwembaden, cafés en een bioscoop: zo heb je ook bij slecht weer een leuke dag in Nijmegen.",
+    "kop": "Nijmegen bij regen",
+    "intro": "Regent het? Nijmegen heeft genoeg om binnen te doen: musea over de Romeinen, de oorlog en de fiets, binnenuitjes voor groepen en gezinnen, en gezellige cafés om op te warmen.",
+    "groepen": [
+      {
+        "id": "musea",
+        "naam": "Musea",
+        "tekst": [
+          "Het Valkhof Museum, het fietsmuseum Velorama aan de Waalkade en Museumpark Orientalis zijn goed voor een halve dag. Het Vrijheidsmuseum ligt een kwartier rijden buiten de stad."
+        ],
+        "kaarten": [
+          {
+            "pad": "/thema/museums-nijmegen/"
+          },
+          {
+            "pad": "/valkhof-nijmegen/"
+          },
+          {
+            "pad": "/velorama-nijmegen/"
+          },
+          {
+            "pad": "/museumpark-orientalis/"
+          },
+          {
+            "pad": "/vrijheidsmuseum-groesbeek/"
+          }
+        ]
+      },
+      {
+        "id": "binnen",
+        "naam": "Binnenuitjes",
+        "kaarten": [
+          {
+            "pad": "/bedrijvengids-categorie/binnenuitjes/"
+          },
+          {
+            "pad": "/zwembaden-nijmegen/"
+          },
+          {
+            "pad": "/bedrijvengids-categorie/bioscoop/"
+          },
+          {
+            "pad": "/bedrijvengids-categorie/podia/"
+          }
+        ]
+      },
+      {
+        "id": "opwarmen",
+        "naam": "Opwarmen",
+        "kaarten": [
+          {
+            "pad": "/thema/cafes-in-nijmegen/"
+          },
+          {
+            "pad": "/de-8-beste-biercafes-van-nijmegen/"
+          },
+          {
+            "pad": "/bedrijvengids-categorie/high-tea/"
+          },
+          {
+            "pad": "/lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes/"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "naam": "Vandaag in de agenda",
+        "kaarten": [
+          {
+            "pad": "/nijmegen-evenementen-overzicht/?soort=Expositie",
+            "titel": "Exposities",
+            "tekst": "Exposities in musea en galeries in Nijmegen en omgeving."
+          },
+          {
+            "pad": "/nijmegen-evenementen-overzicht/?soort=Theater+en+dans",
+            "titel": "Theater en dans",
+            "tekst": "Voorstellingen in de theaters en podia van Nijmegen."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "dagje-nijmegen-met-kinderen",
+    "naam": "Een dag met kinderen",
+    "ouder": {
+      "pad": "/zien-en-doen/",
+      "naam": "Zien en doen"
+    },
+    "titel": "Een dag Nijmegen met kinderen: een programma voor het hele gezin",
+    "omschrijving": "Een dagje Nijmegen met kinderen? Een programma met parken, musea, zwemmen en uit eten met kinderen, en wat er in de agenda leuk is voor kinderen.",
+    "kop": "Een dag Nijmegen met kinderen",
+    "intro": "Met kinderen naar Nijmegen? Met dit programma heeft iedereen een leuke dag: buiten spelen in de parken, een museum dat kinderen ook leuk vinden en een plek om samen te eten.",
+    "groepen": [
+      {
+        "id": "buiten",
+        "naam": "Ochtend: naar buiten",
+        "tekst": [
+          "Begin in het Goffertpark of het Kronenburgerpark, of ga naar de Ooijpolder om de wilde paarden te zien. Bij mooi weer kun je zwemmen in de Bisonbaai."
+        ],
+        "kaarten": [
+          {
+            "pad": "/goffertpark-nijmegen/"
+          },
+          {
+            "pad": "/kronenburgerpark-nijmegen/"
+          },
+          {
+            "pad": "/ooijpolder/"
+          }
+        ]
+      },
+      {
+        "id": "middag",
+        "naam": "Middag: een museum of zwemmen",
+        "tekst": [
+          "In Velorama zien kinderen hoe fietsen er vroeger uitzagen, en Museumpark Orientalis is een openluchtmuseum waar je kunt rondlopen. Bij regen kun je ook naar een van de zwembaden."
+        ],
+        "kaarten": [
+          {
+            "pad": "/velorama-nijmegen/"
+          },
+          {
+            "pad": "/museumpark-orientalis/"
+          },
+          {
+            "pad": "/zwembaden-nijmegen/"
+          },
+          {
+            "pad": "/nijmegen-met-kinderen/"
+          }
+        ]
+      },
+      {
+        "id": "eten",
+        "naam": "Eten met het hele gezin",
+        "kaarten": [
+          {
+            "pad": "/uit-eten-met-kinderen-in-nijmegen-deze-locaties-mag-je-niet-missen/"
+          },
+          {
+            "pad": "/pannenkoekenrestaurants-in-nijmegen-onze-top-5/"
+          }
+        ]
+      },
+      {
+        "id": "agenda",
+        "naam": "Leuk voor kinderen in de agenda",
+        "kaarten": [
+          {
+            "pad": "/nijmegen-evenementen-overzicht/?kinderen=1",
+            "titel": "Evenementen voor kinderen",
+            "tekst": "Alles in de agenda dat leuk is voor kinderen, van voorstellingen tot workshops."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "routes-nijmegen",
+    "naam": "Routes",
+    "ouder": {
+      "pad": "/zien-en-doen/",
+      "naam": "Zien en doen"
+    },
+    "titel": "Routes in en rond Nijmegen: wandelen en fietsen",
+    "omschrijving": "Wandel- en fietsroutes in en rond Nijmegen: de stadswandeling, de Ooijpolder, Heumensoord, de Mookerheide, de heuvels van Groesbeek en de Vierdaagse.",
+    "kop": "Routes in en rond Nijmegen",
+    "intro": "Nijmegen ligt tussen de rivier, de polder en de heuvels. Daardoor kun je vanuit de binnenstad zo een mooie wandeling of fietstocht maken. Hier staan de routes op een rij.",
+    "groepen": [
+      {
+        "id": "stad",
+        "naam": "Wandelen door de stad",
+        "tekst": [
+          "Een stadswandeling van ongeveer 5 kilometer brengt je langs de Grote Markt, de Stevenskerk, het Valkhof en de Waalkade. Over de Waalbrug loop je naar het eiland Veur-Lent en over de Snelbinder weer terug."
+        ],
+        "kaarten": [
+          {
+            "pad": "/wandelen-nijmegen/"
+          },
+          {
+            "pad": "/ontdek-nijmegen-door-de-ogen-van-een-local/"
+          },
+          {
+            "pad": "/de-beste-fotospots-in-nijmegen/"
+          },
+          {
+            "pad": "/waalkade-nijmegen/"
+          }
+        ]
+      },
+      {
+        "id": "natuur",
+        "naam": "Wandelen in de natuur",
+        "tekst": [
+          "In de Ooijpolder loop je langs dijken en plassen, in Heumensoord en op de Mookerheide door bos en heide."
+        ],
+        "kaarten": [
+          {
+            "pad": "/ooijpolder/"
+          },
+          {
+            "pad": "/heumensoord/"
+          },
+          {
+            "pad": "/mookerheide/"
+          },
+          {
+            "pad": "/de-andere-rivier-die-door-nijmegen-stroomt/"
+          }
+        ]
+      },
+      {
+        "id": "fietsen",
+        "naam": "Fietsen",
+        "tekst": [
+          "Nijmegen is een fietsstad. Vanaf de Waalkade fiets je in een paar minuten de Ooijpolder in, en wie van klimmen houdt, fietst naar de heuvels van Berg en Dal en Groesbeek. Volg de bordjes van het fietsknooppuntennetwerk om zelf een rondje te maken.",
+          "Geen fiets bij je? Bij verschillende fietsenwinkels in de stad kun je er een huren. En in Velorama zie je hoe de fiets er vroeger uitzag."
+        ],
+        "kaarten": [
+          {
+            "pad": "/ooijpolder/"
+          },
+          {
+            "pad": "/bestemmingen/berg-en-dal/"
+          },
+          {
+            "pad": "/bestemmingen/groesbeek/"
+          },
+          {
+            "pad": "/bedrijvengids-categorie/fietsenwinkel/"
+          },
+          {
+            "pad": "/velorama-nijmegen/"
+          }
+        ]
+      },
+      {
+        "id": "anders",
+        "naam": "Op een andere manier",
+        "kaarten": [
+          {
+            "pad": "/over-het-water-nijmegen-verkennen-zo-doe-je-dat/"
+          },
+          {
+            "pad": "/nijmegen-op-de-scooter-de-leukste-routes-en-handige-weetjes/"
+          },
+          {
+            "pad": "/vierdaagse-2027/"
+          },
+          {
+            "pad": "/zevenheuvelenloop/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "verhaal-van-nijmegen",
+    "naam": "Het verhaal van Nijmegen",
+    "ouder": {
+      "pad": "/zien-en-doen/",
+      "naam": "Zien en doen"
+    },
+    "titel": "Het verhaal van Nijmegen: Romeinen, keizers en de oorlog",
+    "omschrijving": "Nijmegen is de oudste stad van Nederland. Van de Romeinen en Karel de Grote tot het bombardement van 1944 en Market Garden: zo werd Nijmegen de stad van nu, en waar je die geschiedenis nog ziet.",
+    "kop": "Het verhaal van Nijmegen",
+    "intro": "Nijmegen noemt zich de oudste stad van Nederland, en in 2005 vierde de stad haar 2000-jarig bestaan. Op de heuvel boven de Waal woonden Romeinen, keizers en ridders, en in de Tweede Wereldoorlog lag de stad in de frontlinie. Hier lees je het verhaal in het kort, en waar je het nog ziet.",
+    "groepen": [
+      {
+        "id": "romeinen",
+        "naam": "De Romeinen",
+        "tekst": [
+          "Rond het begin van onze jaartelling legden de Romeinen hier een legerkamp aan, op een heuvel aan de Waal. Bij dat kamp groeide een stad, die van keizer Trajanus marktrecht kreeg en Ulpia Noviomagus ging heten. Daarom noemt Nijmegen zich de oudste stad van Nederland.",
+          "Wat de Romeinen achterlieten, zie je in het Valkhof Museum."
+        ],
+        "kaarten": [
+          {
+            "pad": "/valkhof-nijmegen/"
+          },
+          {
+            "pad": "/nijmegen-de-oudste-stad-met-de-jongste-energie/"
+          }
+        ]
+      },
+      {
+        "id": "middeleeuwen",
+        "naam": "Keizers en de middeleeuwse stad",
+        "tekst": [
+          "Rond 777 liet Karel de Grote op het Valkhof een paleis bouwen. Keizer Frederik Barbarossa bouwde er in de twaalfde eeuw een burcht; de Barbarossaruïne en de Sint-Nicolaaskapel staan er nog. In de middeleeuwen werd Nijmegen een handelsstad aan de rivier, met de Stevenskerk als middelpunt."
+        ],
+        "kaarten": [
+          {
+            "pad": "/stevenskerk-nijmegen/"
+          },
+          {
+            "pad": "/de-bastei-nijmegen/"
+          },
+          {
+            "pad": "/de-7-cafes-met-de-meeste-historie-van-nijmegen/"
+          }
+        ]
+      },
+      {
+        "id": "oorlog",
+        "naam": "De Tweede Wereldoorlog",
+        "tekst": [
+          "Op 22 februari 1944 werd de binnenstad per vergissing gebombardeerd door Amerikaanse vliegtuigen; honderden inwoners kwamen om. In september 1944 werd Nijmegen bevrijd tijdens Operatie Market Garden, toen geallieerde soldaten in bootjes de Waal overstaken om de Waalbrug te veroveren. Daarna lag de stad maandenlang aan het front.",
+          "In het Vrijheidsmuseum in Groesbeek hoor je het hele verhaal, en elk jaar wordt de bevrijding gevierd."
+        ],
+        "kaarten": [
+          {
+            "pad": "/vrijheidsmuseum-groesbeek/"
+          },
+          {
+            "pad": "/bevrijdingsfestival-nijmegen/"
+          },
+          {
+            "pad": "/waalkade-nijmegen/"
+          }
+        ]
+      },
+      {
+        "id": "nu",
+        "naam": "De stad van nu",
+        "tekst": [
+          "Het Nijmegen van nu is een studentenstad met de Radboud Universiteit, een stad van festivals en elk jaar in juli het decor van de Vierdaagse en de Vierdaagsefeesten."
+        ],
+        "kaarten": [
+          {
+            "pad": "/vierdaagse-2027/"
+          },
+          {
+            "pad": "/vierdaagsefeesten-nijmegen/"
+          },
+          {
+            "pad": "/thema/museums-nijmegen/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "wijken-nijmegen",
+    "naam": "Wijken",
+    "ouder": {
+      "pad": "/bestemmingen/",
+      "naam": "Bestemmingen"
+    },
+    "titel": "De wijken van Nijmegen: van Oost tot Lent",
+    "omschrijving": "Alle wijken van Nijmegen op een rij: Nijmegen-Oost, Lent, Hatert, Lindenholt, Dukenburg, Brakkenstein en meer. Wat je er vindt en wat ze bijzonder maakt.",
+    "kop": "De wijken van Nijmegen",
+    "intro": "Nijmegen is een stad van buurten, elk met een eigen karakter: de statige straten van Oost, de nieuwbouw aan de overkant van de Waal en de groene wijken in het zuidwesten.",
+    "groepen": [
+      {
+        "id": "wijken",
+        "naam": "Wijken",
+        "kaarten": [
+          {
+            "pad": "/nijmegen-oost/"
+          },
+          {
+            "pad": "/lent-nijmegen/"
+          },
+          {
+            "pad": "/brakkenstein-nijmegen/"
+          },
+          {
+            "pad": "/hatert-nijmegen/"
+          },
+          {
+            "pad": "/lindenholt-nijmegen/"
+          },
+          {
+            "pad": "/bestemmingen/nijmegen-dukenburg/"
+          }
+        ]
+      },
+      {
+        "id": "wonen",
+        "naam": "Wonen in Nijmegen",
+        "kaarten": [
+          {
+            "pad": "/nijmegen-de-oudste-stad-met-de-jongste-energie/"
+          },
+          {
+            "pad": "/in-deze-wijken-in-nijmegen-vind-je-prachtige-nieuwbouw/"
+          }
+        ]
+      },
+      {
+        "id": "regio",
+        "naam": "Rond Nijmegen",
+        "kaarten": [
+          {
+            "pad": "/bestemmingen/",
+            "titel": "Bestemmingen rond Nijmegen",
+            "tekst": "Groesbeek, Berg en Dal, Wijchen, Kleef en meer dorpen en stadjes in de regio."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "zakelijk-nijmegen",
+    "naam": "Zakelijk en groepen",
+    "ouder": {
+      "pad": "/plan-je-bezoek/",
+      "naam": "Plan je bezoek"
+    },
+    "titel": "Zakelijk en met groepen naar Nijmegen: vergaderen en uitjes",
+    "omschrijving": "Vergaderen, een zaal huren, een bedrijfsuitje of met een groep naar Nijmegen? Locaties, uitjes, catering en overnachten op een rij.",
+    "kop": "Zakelijk en met groepen naar Nijmegen",
+    "intro": "Komt je bedrijf, vereniging of vriendengroep naar Nijmegen? Hier vind je zalen om te vergaderen of te feesten, uitjes voor groepen en plekken om te eten en te overnachten.",
+    "groepen": [
+      {
+        "id": "zalen",
+        "naam": "Vergaderen en zalen",
+        "kaarten": [
+          {
+            "pad": "/7x-een-zaal-huren-in-nijmegen/"
+          },
+          {
+            "pad": "/thema/zaal-huren-in-nijmegen/"
+          },
+          {
+            "pad": "/bedrijvengids-categorie/zaalverhuur/"
+          },
+          {
+            "pad": "/bedrijvengids-categorie/catering/"
+          }
+        ]
+      },
+      {
+        "id": "uitjes",
+        "naam": "Uitjes voor groepen",
+        "kaarten": [
+          {
+            "pad": "/teamuitje-nijmegen-spanning-natuur-en-culinair-genieten/"
+          },
+          {
+            "pad": "/5x-een-bijzonder-uitje-in-nijmegen/"
+          },
+          {
+            "pad": "/bedrijvengids-categorie/uitjes/"
+          },
+          {
+            "pad": "/bedrijvengids-categorie/binnenuitjes/"
+          },
+          {
+            "pad": "/over-het-water-nijmegen-verkennen-zo-doe-je-dat/"
+          }
+        ]
+      },
+      {
+        "id": "eten-overnachten",
+        "naam": "Eten en overnachten",
+        "kaarten": [
+          {
+            "pad": "/de-10-beste-restaurants-in-nijmegen-centrum/"
+          },
+          {
+            "pad": "/wat-zijn-de-mooiste-hotels-in-nijmegen-onze-top-5/"
+          },
+          {
+            "pad": "/thema/overnachten-in-nijmegen/"
           }
         ]
       }

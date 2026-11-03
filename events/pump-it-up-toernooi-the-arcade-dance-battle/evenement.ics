@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:pump-it-up-toernooi-the-arcade-dance-battle@nijmegenonline.nl
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260818T140000
+DTEND;TZID=Europe/Amsterdam:20260818T220000
+SUMMARY:Pump It Up Toernooi – the arcade dance battle
+URL:https://www.nijmegenonline.nl/events/pump-it-up-toernooi-the-arcade-dance-battle/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/pump-it-up-toernooi-the-arcade-dance-battle/
+LOCATION:Pop Culture Arcade Nijmegen\, Van Welderenstraat 80\, Nijmegen\, Gelderland 6511MR\, Nederland
+END:VEVENT
+END:VCALENDAR

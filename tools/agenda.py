@@ -36,6 +36,7 @@ import pathlib
 import re
 import shutil
 import sys
+import urllib.parse
 import zoneinfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -180,6 +181,41 @@ def ld_datum(waarde):
     return d.isoformat()
 
 
+def ics(e, canonical):
+    """Agendabestand (.ics) voor "Zet in je agenda" naast de evenementpagina. Zonder tijd een hele dag (of meer dagen)."""
+    def tijd(w, eind=False):
+        if "T" in w:
+            return ";TZID=Europe/Amsterdam:" + w.replace("-", "").replace(":", "")[:13] + "00"
+        d = datetime.date.fromisoformat(w[:10]) + datetime.timedelta(days=1 if eind else 0)
+        return ";VALUE=DATE:" + d.strftime("%Y%m%d")
+    def tekst(t):
+        return re.sub(r"([,;\\])", r"\\\1", t).replace("\n", "\\n")
+    plek = ", ".join(x for x in (e["locatie"], e["adres"]) if x)
+    regels = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//NijmegenOnline//Agenda//NL", "CALSCALE:GREGORIAN", "BEGIN:VEVENT",
+              "UID:%s@nijmegenonline.nl" % e["slug"], # vaste DTSTAMP, zodat het bestand niet elke nacht verandert
+              "DTSTAMP:%sT000000Z" % (e.get("gepubliceerd") or e["start"])[:10].replace("-", ""),
+              "DTSTART" + tijd(e["start"]), "DTEND" + tijd(e["eind"], True),
+              "SUMMARY:" + tekst(e["titel"]), "URL:" + canonical, "DESCRIPTION:" + tekst("Meer informatie: " + canonical)]
+    if plek:
+        regels.append("LOCATION:" + tekst(plek))
+    regels += ["END:VEVENT", "END:VCALENDAR"]
+    return "\r\n".join(regels) + "\r\n"
+
+
+def delen_html(e, canonical):
+    """Knoppen onder de gegevens: in je agenda zetten (.ics) en delen via WhatsApp, Facebook of de deelknop van de telefoon
+    (assets/js/delen.js kopieert de link als de browser geen deelmenu heeft)."""
+    q = urllib.parse.quote
+    tekst = q("%s - %s" % (e["titel"], canonical))
+    return ('        <div class="delen">'
+            '<a class="delen__knop" href="evenement.ics" download="%s.ics">📅 Zet in je agenda</a>'
+            '<a class="delen__knop" href="https://wa.me/?text=%s" target="_blank" rel="noopener">WhatsApp</a>'
+            '<a class="delen__knop" href="https://www.facebook.com/sharer/sharer.php?u=%s" target="_blank" rel="noopener">Facebook</a>'
+            '<button type="button" class="delen__knop" data-delen="%s" data-titel="%s">Deel of kopieer link</button>'
+            '</div>\n        <script src="../../assets/js/delen.js?v=1" defer></script>'
+            % (esc(e["slug"]), tekst, q(canonical, safe=""), esc(canonical), esc(e["titel"])))
+
+
 def event_pagina(e, vandaag, komend, aanbieders, vermeldingen):
     root = "../../"
     canonical = "%s/events/%s/" % (SITE, e["slug"])
@@ -253,6 +289,8 @@ def event_pagina(e, vandaag, komend, aanbieders, vermeldingen):
         regels.append('<li><a class="knop" href="%s" target="_blank" rel="sponsored noopener">Bekijk op de website van %s</a></li>'
                       % (esc(e["link"]), esc(naam)))
     out.append('        <ul class="evenement-info%s">%s</ul>' % (" evenement-info--uitgelicht" if e["uitgelicht"] else "", "".join(regels)))
+    if not afgelopen:
+        out.append(delen_html(e, canonical))
     if e["afbeelding"]:
         foto = lokaal(e["afbeelding"])
         src = root + foto if foto and not "/wp-content/" in e["afbeelding"] else e["afbeelding"]
@@ -571,6 +609,7 @@ def main(vandaag):
         d = events / e["slug"]
         d.mkdir(parents=True)
         (d / "index.html").write_text(event_pagina(e, vandaag, komend, aanbieders, vermeldingen), encoding="utf-8")
+        (d / "evenement.ics").write_text(ics(e, "%s/events/%s/" % (SITE, e["slug"])), encoding="utf-8", newline="")
     for slug in weg:
         if slug in doel:
             pad = doel[slug].strip("/")

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:nijmegen-veilig-de-nacht-in-actie-aletta@nijmegenonline.nl
+DTSTAMP:20261027T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261124T173000
+DTEND;TZID=Europe/Amsterdam:20261124T000000
+SUMMARY:Nijmegen veilig de nacht in - Actie Aletta
+URL:https://www.nijmegenonline.nl/events/nijmegen-veilig-de-nacht-in-actie-aletta/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/nijmegen-veilig-de-nacht-in-actie-aletta/
+LOCATION:Doornroosje Nijmegen\, Stationsplein 11\, Nijmegen
+END:VEVENT
+END:VCALENDAR

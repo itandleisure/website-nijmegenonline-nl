@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:mini-expositie-van-zwanengas-tot-piersonstraat@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261019
+SUMMARY:Mini-expositie: Van Zwanengas tot Piersonstraat
+URL:https://www.nijmegenonline.nl/events/mini-expositie-van-zwanengas-tot-piersonstraat/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/mini-expositie-van-zwanengas-tot-piersonstraat/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

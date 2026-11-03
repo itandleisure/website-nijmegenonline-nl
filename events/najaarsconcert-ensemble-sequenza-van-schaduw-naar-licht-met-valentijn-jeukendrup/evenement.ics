@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:najaarsconcert-ensemble-sequenza-van-schaduw-naar-licht-met-valentijn-jeukendrup@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261101T160000
+DTEND;TZID=Europe/Amsterdam:20261101T173000
+SUMMARY:Najaarsconcert Ensemble Sequenza ‘Van schaduw naar licht’ met Valentijn Jeukendrup
+URL:https://www.nijmegenonline.nl/events/najaarsconcert-ensemble-sequenza-van-schaduw-naar-licht-met-valentijn-jeukendrup/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/najaarsconcert-ensemble-sequenza-van-schaduw-naar-licht-met-valentijn-jeukendrup/
+LOCATION:Lutherse kerk Nijmegen\, Prins Hendrikstraat 79\, 6521 AX  Nijmegen
+END:VEVENT
+END:VCALENDAR

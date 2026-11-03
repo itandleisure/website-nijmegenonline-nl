@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:we-the-people-250-usa-in-koormuziek@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261105T201500
+DTEND;TZID=Europe/Amsterdam:20261105T220000
+SUMMARY:“We the People” – 250 USA in koormuziek
+URL:https://www.nijmegenonline.nl/events/we-the-people-250-usa-in-koormuziek/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/we-the-people-250-usa-in-koormuziek/
+LOCATION:Titus Brandsma Gedachteniskerk Nijmegen\, Keizer Karelplein\, Nijmegen
+END:VEVENT
+END:VCALENDAR

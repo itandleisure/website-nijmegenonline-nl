@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:anne-frank-middag@nijmegenonline.nl
+DTSTAMP:20250723T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260810T140000
+DTEND;TZID=Europe/Amsterdam:20260810T160000
+SUMMARY:Anne Frank middag
+URL:https://www.nijmegenonline.nl/events/anne-frank-middag/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/anne-frank-middag/
+LOCATION:Vrijheidsmuseum Groesbeek\, Wylerbaan 4\, 6561 KR Groesbeek
+END:VEVENT
+END:VCALENDAR

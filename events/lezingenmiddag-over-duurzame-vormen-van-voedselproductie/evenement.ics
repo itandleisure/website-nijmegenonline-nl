@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:lezingenmiddag-over-duurzame-vormen-van-voedselproductie@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260925T150000
+DTEND;TZID=Europe/Amsterdam:20260925T180000
+SUMMARY:Lezingenmiddag over duurzame vormen van voedselproductie
+URL:https://www.nijmegenonline.nl/events/lezingenmiddag-over-duurzame-vormen-van-voedselproductie/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/lezingenmiddag-over-duurzame-vormen-van-voedselproductie/
+LOCATION:Buurderij de Lage Hof Heumen\, Kasteelsestraat 5 Overasselt
+END:VEVENT
+END:VCALENDAR

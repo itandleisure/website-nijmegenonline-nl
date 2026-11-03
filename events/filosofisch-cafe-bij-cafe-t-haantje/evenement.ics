@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:filosofisch-cafe-bij-cafe-t-haantje@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261005T200000
+DTEND;TZID=Europe/Amsterdam:20261005T213000
+SUMMARY:Filosofisch Cafe bij Café ’t Haantje
+URL:https://www.nijmegenonline.nl/events/filosofisch-cafe-bij-cafe-t-haantje/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/filosofisch-cafe-bij-cafe-t-haantje/
+LOCATION:Cafe 't Haantje Nijmegen\, Daalseweg 19
+END:VEVENT
+END:VCALENDAR

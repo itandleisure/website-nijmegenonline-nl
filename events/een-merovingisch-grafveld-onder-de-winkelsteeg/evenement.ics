@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:een-merovingisch-grafveld-onder-de-winkelsteeg@nijmegenonline.nl
+DTSTAMP:20260730T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260909T200000
+DTEND;TZID=Europe/Amsterdam:20260909T210000
+SUMMARY:Een Merovingisch grafveld onder de Winkelsteeg
+URL:https://www.nijmegenonline.nl/events/een-merovingisch-grafveld-onder-de-winkelsteeg/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/een-merovingisch-grafveld-onder-de-winkelsteeg/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:paraview-paranormaalbeurs-nijmegen-wijchen-17-en-18-okt-2026@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261017T120000
+DTEND;TZID=Europe/Amsterdam:20261018T173000
+SUMMARY:Paraview Paranormaalbeurs Nijmegen/Wijchen 17 en 18 okt. 2026
+URL:https://www.nijmegenonline.nl/events/paraview-paranormaalbeurs-nijmegen-wijchen-17-en-18-okt-2026/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/paraview-paranormaalbeurs-nijmegen-wijchen-17-en-18-okt-2026/
+LOCATION:Achterlo Sporthallen Wijchen\, Homberg 2535\, 6601 XW Nijmegen/Wijchen
+END:VEVENT
+END:VCALENDAR

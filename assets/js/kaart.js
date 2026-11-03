@@ -60,11 +60,13 @@
   function zet(g, aan) {
     if (aan) kaart.addLayer(lagen[g]); else kaart.removeLayer(lagen[g]);
   }
+  // Bedrijvengids: alleen de eerste groep staat aan; de stadskaart (tools/stadskaart.py) zet met allesAan alles aan
   data.groepen.forEach(function (g, i) {
-    zet(g, i === 0);
+    var start = data.allesAan || i === 0;
+    zet(g, start);
     if (!knoppen) return;
     var b = document.createElement("button");
-    b.type = "button"; b.innerHTML = svg(iconen["groep:" + g]) + " "; b.appendChild(document.createTextNode(g)); b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+    b.type = "button"; b.innerHTML = svg(iconen["groep:" + g]) + " "; b.appendChild(document.createTextNode(g)); b.setAttribute("aria-pressed", start ? "true" : "false");
     b.onclick = function () {
       var aan = b.getAttribute("aria-pressed") !== "true";
       b.setAttribute("aria-pressed", aan ? "true" : "false");

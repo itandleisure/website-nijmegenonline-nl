@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:swingende-senioren-in-obg@nijmegenonline.nl
+DTSTAMP:20261101T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261110T173000
+DTEND;TZID=Europe/Amsterdam:20261110T200000
+SUMMARY:Swingende senioren in OBG
+URL:https://www.nijmegenonline.nl/events/swingende-senioren-in-obg/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/swingende-senioren-in-obg/
+LOCATION:OBG Nijmegen\, Prof. Cornelissenstraat 2\, 6524 PJ Nijmegen
+END:VEVENT
+END:VCALENDAR

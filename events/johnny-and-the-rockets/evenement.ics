@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:johnny-and-the-rockets@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261128T203000
+DTEND;TZID=Europe/Amsterdam:20261128T223000
+SUMMARY:Johnny and the Rockets
+URL:https://www.nijmegenonline.nl/events/johnny-and-the-rockets/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/johnny-and-the-rockets/
+LOCATION:Cafe 't Haantje Nijmegen\, Daalseweg 19
+END:VEVENT
+END:VCALENDAR

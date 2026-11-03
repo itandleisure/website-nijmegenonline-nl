@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:doe-maar-lekker-disco-w-mias-house-of-disco-the-ultimate-disco-house-experience@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261107T200000
+DTEND;TZID=Europe/Amsterdam:20261107T235500
+SUMMARY:Doe Maar Lekker Disco w/ Mia’s House Of Disco – The Ultimate Disco & House Experience
+URL:https://www.nijmegenonline.nl/events/doe-maar-lekker-disco-w-mias-house-of-disco-the-ultimate-disco-house-experience/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/doe-maar-lekker-disco-w-mias-house-of-disco-the-ultimate-disco-house-experience/
+LOCATION:De Waagh Nijmegen\, Grote Markt 26\, Nijmegen 6511 KB\, Nederland
+END:VEVENT
+END:VCALENDAR

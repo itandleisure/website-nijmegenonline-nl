@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:de-stevenskerk-tot-1591@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261028T200000
+DTEND;TZID=Europe/Amsterdam:20261028T210000
+SUMMARY:De Stevenskerk tot 1591
+URL:https://www.nijmegenonline.nl/events/de-stevenskerk-tot-1591/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/de-stevenskerk-tot-1591/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

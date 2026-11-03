@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:vrijheidsfestival@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260920T100000
+DTEND;TZID=Europe/Amsterdam:20260920T170000
+SUMMARY:Vrijheidsfestival
+URL:https://www.nijmegenonline.nl/events/vrijheidsfestival/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/vrijheidsfestival/
+LOCATION:Vrijheidsmuseum Groesbeek\, Wylerbaan 4\, 6561 KR Groesbeek
+END:VEVENT
+END:VCALENDAR

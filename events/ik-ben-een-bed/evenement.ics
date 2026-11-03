@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:ik-ben-een-bed@nijmegenonline.nl
+DTSTAMP:20261030T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261031T143000
+DTEND;TZID=Europe/Amsterdam:20261115T190000
+SUMMARY:Ik ben een bed
+URL:https://www.nijmegenonline.nl/events/ik-ben-een-bed/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/ik-ben-een-bed/
+LOCATION:Lindenberg Cultuurhuis Nijmegen\, Ridderstraat 23\, 6511 TM Nijmegen
+END:VEVENT
+END:VCALENDAR

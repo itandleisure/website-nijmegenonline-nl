@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:oktoberfest-bij-cafe-t-haantje@nijmegenonline.nl
+DTSTAMP:20240827T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261003T210000
+DTEND;TZID=Europe/Amsterdam:20261003T235500
+SUMMARY:Oktoberfest bij Cafe ’t Haantje
+URL:https://www.nijmegenonline.nl/events/oktoberfest-bij-cafe-t-haantje/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/oktoberfest-bij-cafe-t-haantje/
+LOCATION:Cafe 't Haantje Nijmegen\, Daalseweg 19
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:parkinson-cafe-nijmegen-3@nijmegenonline.nl
+DTSTAMP:20261029T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261120T120000
+DTEND;TZID=Europe/Amsterdam:20261120T140000
+SUMMARY:Parkinson Café Nijmegen
+URL:https://www.nijmegenonline.nl/events/parkinson-cafe-nijmegen-3/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/parkinson-cafe-nijmegen-3/
+LOCATION:Wijkcentrum Hatert\, Couwenbergstraat 22\, 6535 RZ Nijmegen
+END:VEVENT
+END:VCALENDAR

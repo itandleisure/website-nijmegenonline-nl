@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:theatervoorstelling-buiten-bereik@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261106T200000
+DTEND;TZID=Europe/Amsterdam:20261106T223000
+SUMMARY:Theatervoorstelling Buiten Bereik
+URL:https://www.nijmegenonline.nl/events/theatervoorstelling-buiten-bereik/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/theatervoorstelling-buiten-bereik/
+LOCATION:Theater het Badhuis Nijmegen\, Daalseweg 262  6523 CD Nijmegen
+END:VEVENT
+END:VCALENDAR

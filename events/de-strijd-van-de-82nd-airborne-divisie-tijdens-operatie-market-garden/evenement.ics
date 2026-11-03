@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:de-strijd-van-de-82nd-airborne-divisie-tijdens-operatie-market-garden@nijmegenonline.nl
+DTSTAMP:20260703T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260916T193000
+DTEND;TZID=Europe/Amsterdam:20260916T210000
+SUMMARY:De strijd van de 82nd Airborne Divisie tijdens operatie Market Garden
+URL:https://www.nijmegenonline.nl/events/de-strijd-van-de-82nd-airborne-divisie-tijdens-operatie-market-garden/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/de-strijd-van-de-82nd-airborne-divisie-tijdens-operatie-market-garden/
+LOCATION:Vrijheidsmuseum Groesbeek\, Wylerbaan 4\, 6561 KR Groesbeek
+END:VEVENT
+END:VCALENDAR

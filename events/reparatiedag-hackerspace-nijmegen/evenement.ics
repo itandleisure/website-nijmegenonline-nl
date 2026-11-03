@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:reparatiedag-hackerspace-nijmegen@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261018T120000
+DTEND;TZID=Europe/Amsterdam:20261018T170000
+SUMMARY:Reparatiedag – Hackerspace Nijmegen
+URL:https://www.nijmegenonline.nl/events/reparatiedag-hackerspace-nijmegen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/reparatiedag-hackerspace-nijmegen/
+LOCATION:Hackerspace Nijmegen\, Winkesteegseweg 209\, Nijmegen\, Gelderland 6534AP\, Nederland
+END:VEVENT
+END:VCALENDAR

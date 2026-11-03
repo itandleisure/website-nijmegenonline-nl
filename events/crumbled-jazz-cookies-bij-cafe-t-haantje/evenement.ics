@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:crumbled-jazz-cookies-bij-cafe-t-haantje@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260905T160000
+DTEND;TZID=Europe/Amsterdam:20260905T200000
+SUMMARY:Crumbled Jazz Cookies bij Cafe ’t Haantje
+URL:https://www.nijmegenonline.nl/events/crumbled-jazz-cookies-bij-cafe-t-haantje/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/crumbled-jazz-cookies-bij-cafe-t-haantje/
+LOCATION:Cafe 't Haantje Nijmegen\, Daalseweg 19
+END:VEVENT
+END:VCALENDAR

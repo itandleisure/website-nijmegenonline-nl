@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:spurensuche-kamerconcert-met-strijkkwartet@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261106T200000
+DTEND;TZID=Europe/Amsterdam:20261106T220000
+SUMMARY:“Spurensuche” – Kamerconcert met strijkkwartet
+URL:https://www.nijmegenonline.nl/events/spurensuche-kamerconcert-met-strijkkwartet/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/spurensuche-kamerconcert-met-strijkkwartet/
+LOCATION:Kleve\, Lohstätte 7\, D-47533 Kleve
+END:VEVENT
+END:VCALENDAR

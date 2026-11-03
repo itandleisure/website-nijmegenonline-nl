@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:polderpop-party@nijmegenonline.nl
+DTSTAMP:20260327T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260815T193000
+DTEND;TZID=Europe/Amsterdam:20260815T235500
+SUMMARY:Polderpop Party
+URL:https://www.nijmegenonline.nl/events/polderpop-party/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/polderpop-party/
+LOCATION:Lieskes Wengs Berg en Dal\, Lieskes Wengs 1\, Leuth 6587 JK\, Nederland
+END:VEVENT
+END:VCALENDAR

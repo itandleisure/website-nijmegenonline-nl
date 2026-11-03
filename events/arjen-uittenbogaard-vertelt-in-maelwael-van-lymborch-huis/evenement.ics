@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:arjen-uittenbogaard-vertelt-in-maelwael-van-lymborch-huis@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260906T160000
+DTEND;TZID=Europe/Amsterdam:20260906T173000
+SUMMARY:Arjen Uittenbogaard vertelt in Maelwael Van Lymborch Huis
+URL:https://www.nijmegenonline.nl/events/arjen-uittenbogaard-vertelt-in-maelwael-van-lymborch-huis/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/arjen-uittenbogaard-vertelt-in-maelwael-van-lymborch-huis/
+LOCATION:Maelwael van Lymborch Huis Nijmegen\, Burchtstraat 63\, 6511 RC Nijmegen
+END:VEVENT
+END:VCALENDAR
