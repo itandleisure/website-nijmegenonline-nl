@@ -79,12 +79,16 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     });
   });
   landHint();
+  var bijschrift = fotobron(form);
   var tijden = openingstijden(form);
   huidigeVermelding(form, tijden);
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var ontbreekt = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (v) {
+      if (v.type === "radio") return !form.querySelector('input[name="' + v.name + '"]:checked');
       return v.type === "file" ? !v.files.length : !v.value.trim();
+    }).filter(function (v, i, alle) {   // een groep keuzes telt één keer
+      return v.type !== "radio" || alle.findIndex(function (w) { return w.name === v.name; }) === i;
     });
     var foto = form.querySelector('input[type="file"]');
     if (foto && foto.files.length && foto.files[0].size > MAX_FOTO) { meld("De foto is groter dan 10 MB. Kies een kleinere foto.", true); foto.focus(); return; }
@@ -111,6 +115,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
         meld("Het einde ligt voor het begin. Controleer de datums en tijden.", true); eind.focus(); return;
       }
     }
+    if (bijschrift) bijschrift();
     if (!form.dataset.url) { mailknop(); return; }
 
     form.pagina.value = location.href;
@@ -156,6 +161,30 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       .then(function () { knop.disabled = false; });
   });
 });
+
+// Verplicht bijschrift bij de foto: Eigen foto, Rechtenvrije afbeelding of Fotocredits bij: (naam verplicht).
+// Het naamveld verschijnt alleen bij fotocredits. Het bijschrift zelf gaat mee in het verborgen veld "bijschrift",
+// zoals het onder de foto op de evenementpagina komt: "Eigen foto", "Rechtenvrije afbeelding" of "Foto: Naam".
+function fotobron(form) {
+  var groep = form.querySelector("[data-fotobron]");
+  if (!groep) return;
+  var blok = form.querySelector("[data-fotocredit]");
+  var naam = blok.querySelector("input");
+  var uit = form.querySelector('input[type="hidden"][name="bijschrift"]');
+  var keuzes = groep.querySelectorAll('input[type="radio"]');
+  var credits = keuzes[keuzes.length - 1];
+  function bijwerken() {
+    blok.hidden = !credits.checked;
+    naam.required = credits.checked;
+    var gekozen = groep.querySelector("input:checked");
+    uit.value = !gekozen ? "" : gekozen === credits ? (naam.value.trim() ? "Foto: " + naam.value.trim() : "") : gekozen.value;
+  }
+  groep.addEventListener("change", function () { bijwerken(); if (credits.checked) naam.focus(); });
+  naam.addEventListener("input", bijwerken);
+  form.addEventListener("reset", function () { setTimeout(bijwerken, 0); });
+  bijwerken();
+  return bijwerken;
+}
 
 // Openingstijden per dag, zoals bij Google. Het tekstveld zelf blijft (verborgen) bestaan en krijgt
 // één regel per dag ("ma 09:00-17:00" of "ma gesloten"); zo hoeft het Apps Script niets te weten van dit schema.
