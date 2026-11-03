@@ -26,10 +26,13 @@ import urllib.parse
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from import_wordpress import (DOORVERWIJZING, ROOT, SITE, VOET, datum_nl, esc, goede_alt, kop,  # noqa: E402
                               samenvatting)
+import koppeling  # noqa: E402
 
 OVERZICHT = "nieuwsberichten"
 DATA = ROOT / "data" / "nieuws.json"
+ARCHIEF = ROOT / "data" / "nieuws-archief.json"  # nieuwsnijmegen.nl, 2006-2024 (tools/import_nieuwsnijmegen.py)
 VERWIJDERD = ROOT / "data" / "nieuws-verwijderd.json"
+
 VERMELDINGEN = ROOT / "data" / "bedrijvengids-vermeldingen.json"
 RECENT = 365  # dagen; ouder nieuws staat in het overzicht onder "Archief"
 # Websites van platforms: een link daarheen zegt niets over welk bedrijf het bericht gaat
@@ -40,6 +43,11 @@ PLATFORMS = {"facebook.com", "instagram.com", "linkedin.com", "youtube.com", "tw
 
 def laad():
     return json.load(open(DATA, encoding="utf-8"))
+
+
+def laad_archief():
+    """De berichten van nieuwsnijmegen.nl. Alleen voor de pagina's: aanmeldingen en nieuwsbrief gebruiken laad()."""
+    return json.load(open(ARCHIEF, encoding="utf-8")) if ARCHIEF.exists() else []
 
 
 def bewaar(berichten):
@@ -135,7 +143,8 @@ def nieuwskaart(b, root):
             "<h3>%s</h3></div></a></article>" % (root, b["slug"], img, esc(datum_nl(b["datum"])), esc(b["titel"])))
 
 
-def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
+def bericht_pagina(b, nieuwer, ouder, bedrijven=(), vermeldingen=None):
+    """bedrijven: (sleutel, naam) uit de gids waar het bericht over gaat; die krijgen een kaartje "Over <bedrijf>"."""
     root = "../../"
     canonical = "%s/nieuwsoverzicht/%s/" % (SITE, b["slug"])
     tekst = zonder_dubbele_foto(b)
@@ -149,6 +158,9 @@ def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
               {"@type": "ListItem", "position": 3, "name": b["titel"], "item": canonical}]}]
     if b["foto"]:
         ld[0]["image"] = b["foto"]
+    over = [(s, vermeldingen[s]) for s, _ in bedrijven if vermeldingen and s in vermeldingen]
+    if over:
+        ld[0]["about"] = [koppeling.organisatie_ld(s, v) for s, v in over]
     extra = "".join('\n  <script type="application/ld+json">%s</script>' % json.dumps(x, ensure_ascii=False) for x in ld)
     standaard = None if b["foto"] else standaardfoto(b["slug"])
     out = [kop(b["seo_titel"], beschrijving, canonical, root, b["foto"] or (SITE + "/" + standaard if standaard else None), extra)]
@@ -164,13 +176,15 @@ def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
                       bijschrift))
     elif standaard:
         out.append(archieffoto_html(b["slug"], root))
+    if b.get("bron"):
+        out.append('        <p class="archief-melding">Dit bericht uit ons archief verscheen op %s op NieuwsNijmegen.nl. '
+                   'Data, tijden en prijzen kunnen inmiddels anders zijn.</p>' % datum_nl(b["datum"]))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
     if b.get("fotos"):
         out.append(extra_fotos_html(b["fotos"], b["titel"], root))
-    if bedrijven:
-        out.append('        <p class="gids-verder">In de bedrijvengids: %s</p>' % ", ".join(
-            '<a href="%sbedrijvengids/%s/">%s</a>' % (root, s, esc(naam)) for s, naam in bedrijven))
+    if over:
+        out.extend(koppeling.over_bedrijf(s, v, root) for s, v in over[:3])
     nav = []
     if ouder:
         nav.append('<a class="vorige" href="../%s/"><span>Vorig bericht</span>%s</a>' % (ouder["slug"], esc(ouder["titel"])))
@@ -178,8 +192,9 @@ def bericht_pagina(b, nieuwer, ouder, bedrijven=()):
         nav.append('<a class="volgende" href="../%s/"><span>Volgend bericht</span>%s</a>' % (nieuwer["slug"], esc(nieuwer["titel"])))
     if nav:
         out.append('        <nav class="bericht-nav">%s</nav>' % "".join(nav))
-    out.append('        <p class="gids-verder"><a href="%s/%s/">Al het nieuws</a> · <a href="%s/nijmegen-evenementen-overzicht/">Agenda</a></p>'
-               % (SITE, OVERZICHT, SITE))
+    out.append('        <p class="gids-verder"><a href="%s/%s/">Al het nieuws</a> · <a href="%s/%s/%s/">Nieuws uit %s</a> · '
+               '<a href="%s/nijmegen-evenementen-overzicht/">Agenda</a></p>'
+               % (SITE, OVERZICHT, SITE, OVERZICHT, b["datum"][:4], b["datum"][:4], SITE))
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
@@ -203,11 +218,42 @@ def overzicht(berichten):
         out.extend("          " + nieuwskaart(b, root) for b in recent)
         out.append("        </div>\n      </section>")
     if archief:
-        out.append('      <section class="gids-sectie">\n        <h2>Archief</h2>\n        <ul class="archieflijst">')
-        out.extend('          <li><time datetime="%s">%s</time> <a href="%snieuwsoverzicht/%s/">%s</a></li>'
-                   % (b["datum"][:10], esc(datum_nl(b["datum"])), root, b["slug"], esc(b["titel"])) for b in archief)
+        jaren = sorted({b["datum"][:4] for b in berichten}, reverse=True)
+        out.append('      <section class="gids-sectie">\n        <h2>Archief</h2>\n'
+                   '        <p>Ouder nieuws per jaar, ook het archief van nieuwsnijmegen.nl (2006 tot 2024).</p>\n'
+                   '        <ul class="jarenlijst">')
+        out.extend('          <li><a href="%s/">%s</a> <span>%d</span></li>'
+                   % (j, j, sum(1 for b in berichten if b["datum"][:4] == j)) for j in jaren)
         out.append("        </ul>\n      </section>")
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
+    out.append("    </div>\n  </main>")
+    out.append(VOET)
+    return "\n".join(out)
+
+
+def jaarpagina(jaar, berichten, jaren):
+    """/nieuwsberichten/<jaar>/: alle berichten van dat jaar, per maand, zodat elk oud bericht een interne link heeft."""
+    root = "../../"
+    canonical = "%s/%s/%s/" % (SITE, OVERZICHT, jaar)
+    out = [kop("Nieuws uit Nijmegen in %s" % jaar, "Alle %d nieuwsberichten uit Nijmegen en omgeving uit %s, van nieuw naar oud."
+               % (len(berichten), jaar), canonical, root, next((b["foto"] for b in berichten if b["foto"]), None))]
+    out.append('  <main class="artikel-wrap">\n    <div class="container">')
+    out.append('      <div class="kruimelpad"><a href="%s">Home</a> › <a href="../">Nieuws</a> › %s</div>' % (root, jaar))
+    out.append('      <header class="rubriek-kop">\n        <h1>Nieuws uit Nijmegen in %s</h1>\n'
+               '        <p>%d berichten, van nieuw naar oud.</p>\n      </header>' % (jaar, len(berichten)))
+    out.append('      <nav class="jarenlijst">%s</nav>' % " ".join(
+        "<strong>%s</strong>" % j if j == jaar else '<a href="../%s/">%s</a>' % (j, j) for j in jaren))
+    maand = None
+    for b in berichten:
+        if b["datum"][:7] != maand:
+            if maand:
+                out.append("        </ul>\n      </section>")
+            maand = b["datum"][:7]
+            naam = datum_nl(maand + "-01").split(" ", 1)[1]
+            out.append('      <section class="gids-sectie">\n        <h2>%s</h2>\n        <ul class="archieflijst">' % naam)
+        out.append('          <li><time datetime="%s">%s</time> <a href="%snieuwsoverzicht/%s/">%s</a></li>'
+                   % (b["datum"][:10], esc(datum_nl(b["datum"])), root, b["slug"], esc(b["titel"])))
+    out.append("        </ul>\n      </section>")
     out.append("    </div>\n  </main>")
     out.append(VOET)
     return "\n".join(out)
@@ -234,7 +280,7 @@ def doorverwijzingen(verwijderd, vermeldingen):
 
 
 def main():
-    berichten = sorted(laad(), key=lambda b: (b["datum"], b["slug"]), reverse=True)
+    berichten = sorted(laad() + laad_archief(), key=lambda b: (b["datum"], b["slug"]), reverse=True)
     vermeldingen = json.load(open(VERMELDINGEN, encoding="utf-8")) if VERMELDINGEN.exists() else {}
     per_bedrijf = koppelingen(berichten, [(s, v.get("site")) for s, v in vermeldingen.items()])
     bij = {}
@@ -246,11 +292,17 @@ def main():
         d.mkdir(parents=True, exist_ok=True)
         nieuwer = berichten[n - 1] if n > 0 else None
         ouder = berichten[n + 1] if n + 1 < len(berichten) else None
-        (d / "index.html").write_text(bericht_pagina(b, nieuwer, ouder, bij.get(b["slug"], ())), encoding="utf-8")
+        (d / "index.html").write_text(bericht_pagina(b, nieuwer, ouder, bij.get(b["slug"], ()), vermeldingen), encoding="utf-8")
     verwijderd = laad_verwijderd()
     doorverwijzingen(verwijderd, vermeldingen)
     (ROOT / OVERZICHT).mkdir(exist_ok=True)
     (ROOT / OVERZICHT / "index.html").write_text(overzicht(berichten), encoding="utf-8")
+    jaren = sorted({b["datum"][:4] for b in berichten}, reverse=True)
+    oud = berichten
+    for j in jaren:
+        (ROOT / OVERZICHT / j).mkdir(exist_ok=True)
+        (ROOT / OVERZICHT / j / "index.html").write_text(jaarpagina(j, [b for b in oud if b["datum"][:4] == j], jaren),
+                                                          encoding="utf-8")
     stub = DOORVERWIJZING % {"titel": "Nieuws uit Nijmegen", "url": "%s/%s/" % (SITE, OVERZICHT), "pad": "../%s/" % OVERZICHT}
     (ROOT / "nieuwsoverzicht" / "index.html").write_text(stub.replace("Dit artikel is samengevoegd met", "Bekijk"), encoding="utf-8")
 
@@ -263,8 +315,8 @@ def main():
     if not n:
         raise SystemExit("Markering <!-- nieuws --> ontbreekt in index.html")
     home.write_text(t, encoding="utf-8")
-    print("%d nieuwsberichten, %s t/m %s, %d doorverwijzingen, %d bij een bedrijf"
-          % (len(berichten), berichten[-1]["datum"][:10], berichten[0]["datum"][:10], len(verwijderd), len(bij)))
+    print("%d nieuwsberichten (%d uit het archief van nieuwsnijmegen.nl), %s t/m %s, %d doorverwijzingen, %d bij een bedrijf"
+          % (len(berichten), sum(1 for b in berichten if b.get("bron")), berichten[-1]["datum"][:10], berichten[0]["datum"][:10], len(verwijderd), len(bij)))
 
 
 if __name__ == "__main__":

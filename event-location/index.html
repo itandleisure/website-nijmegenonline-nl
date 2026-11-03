@@ -65,8 +65,10 @@
         <a class="logo" href="../"><img src="../assets/img/logo-nijmegenonline.svg" alt="NijmegenOnline" width="378" height="104"></a>
         <nav class="hoofdmenu" id="hoofdmenu" aria-label="Hoofdmenu">
           <ul>
-            <li><a href="../">Home</a></li>
+            <li class="hoofdmenu__home"><a href="../">Home</a></li>
+            <li><a href="../zien-en-doen/" data-paden="zien-en-doen/">Zien en doen</a></li>
             <li><a href="../nijmegen-evenementen-overzicht/" data-paden="nijmegen-evenementen-overzicht/ events/ event-location/ event-directory/ agenda/ jaarlijkse-evenementen/">Agenda</a></li>
+            <li><a href="../plan-je-bezoek/" data-paden="plan-je-bezoek/">Plan je bezoek</a></li>
             <li><a href="../nieuwsberichten/" data-paden="nieuwsberichten/ nieuwsoverzicht/">Nieuws</a></li>
             <li><a href="../blog/" data-paden="blog/ category/">Inspiratie opdoen</a></li>
             <li><a href="../thema/" data-paden="thema/ bestemmingen/">Gidsen</a></li>
@@ -108,29 +110,57 @@
         <h1>Evenementen per locatie</h1>
         <p>Alle podia, musea en organisatoren met evenementen in de agenda.</p>
       </header>
-      <ul class="aanbieders">
-        <li class="aanbieders__klant"><a href="de-brauerij/">De Brauerij</a> <span>5 evenementen</span></li>
-        <li class="aanbieders__klant"><a href="cafe-t-haantje/">Cafe &#x27;t Haantje</a> <span>4 evenementen</span></li>
-        <li class="aanbieders__klant"><a href="vrijheidsmuseum/">Vrijheidsmuseum</a> <span>4 evenementen</span></li>
-        <li class="aanbieders__klant"><a href="kleve-centrum/">Kleve Centrum</a> <span>1 evenement</span></li>
-        <li><a href="binnenstad/">Binnenstad</a> <span>1 evenement</span></li>
-        <li><a href="binnenstad-nijmegen/">Binnenstad Nijmegen</a> <span>1 evenement</span></li>
-        <li><a href="brebl/">Brebl</a> <span>1 evenement</span></li>
-        <li><a href="de-waagh/">De Waagh</a> <span>1 evenement</span></li>
-        <li><a href="de-witte-raaf/">De Witte Raaf</a> <span>1 evenement</span></li>
-        <li><a href="doornroosje/">Doornroosje</a> <span>1 evenement</span></li>
-        <li><a href="grote-markt-en-stevenskerk/">Grote Markt en Stevenskerk</a> <span>1 evenement</span></li>
-        <li><a href="kleine-kirche/">Kleine Kirche</a> <span>1 evenement</span></li>
-        <li><a href="kloster-graefenthal/">Kloster Graefenthal</a> <span>1 evenement</span></li>
-        <li><a href="lindenberg-cultuurhuis/">Lindenberg Cultuurhuis</a> <span>1 evenement</span></li>
-        <li><a href="plan-a/">Plan_A</a> <span>1 evenement</span></li>
-        <li><a href="stadthalle-kleve/">Stadthalle Kleve</a> <span>1 evenement</span></li>
-        <li><a href="stevenskerk/">Stevenskerk</a> <span>1 evenement</span></li>
-        <li><a href="theater-het-badhuis-nijmegen/">Theater het Badhuis Nijmegen</a> <span>1 evenement</span></li>
-        <li><a href="thiemeloods/">Thiemeloods</a> <span>1 evenement</span></li>
-        <li><a href="titus-brandsma-gedachteniskerk/">Titus Brandsma Gedachteniskerk</a> <span>1 evenement</span></li>
-        <li><a href="wijkcentrum-hatert/">Wijkcentrum Hatert</a> <span>1 evenement</span></li>
-      </ul>
+      <nav class="gidsen-filter" aria-label="Plaatsen"><a class="knop-link" href="#nijmegen">Nijmegen</a><a class="knop-link" href="#berg-en-dal">Berg en Dal</a><a class="knop-link" href="#goch">Goch</a><a class="knop-link" href="#groesbeek">Groesbeek</a><a class="knop-link" href="#kleef">Kleef</a><a class="knop-link" href="#kranenburg">Kranenburg</a></nav>
+      <section class="aanbieders-plaats" id="nijmegen">
+        <h2>Nijmegen</h2>
+        <ul class="aanbieders">
+          <li class="aanbieders__klant"><a href="cafe-t-haantje/"><strong>Cafe &#x27;t Haantje</strong><span>3 evenementen</span></a></li>
+          <li><a href="stevenskerk/"><strong>Stevenskerk</strong><span>2 evenementen</span></a></li>
+          <li><a href="binnenstad-nijmegen/"><strong>Binnenstad</strong><span>1 evenement</span></a></li>
+          <li><a href="bosatelier/"><strong>Bosatelier</strong><span>1 evenement</span></a></li>
+          <li><a href="brebl/"><strong>Brebl</strong><span>1 evenement</span></a></li>
+          <li><a href="de-waagh/"><strong>De Waagh</strong><span>1 evenement</span></a></li>
+          <li><a href="de-witte-raaf/"><strong>De Witte Raaf</strong><span>1 evenement</span></a></li>
+          <li><a href="doornroosje/"><strong>Doornroosje</strong><span>1 evenement</span></a></li>
+          <li><a href="lindenberg-cultuurhuis/"><strong>Lindenberg Cultuurhuis</strong><span>1 evenement</span></a></li>
+          <li><a href="obg-nijmegen/"><strong>OBG</strong><span>1 evenement</span></a></li>
+          <li><a href="plan-a/"><strong>Plan_A</strong><span>1 evenement</span></a></li>
+          <li><a href="theater-het-badhuis-nijmegen/"><strong>Theater het Badhuis</strong><span>1 evenement</span></a></li>
+          <li><a href="thiemeloods/"><strong>Thiemeloods</strong><span>1 evenement</span></a></li>
+          <li><a href="titus-brandsma-gedachteniskerk/"><strong>Titus Brandsma Gedachteniskerk</strong><span>1 evenement</span></a></li>
+          <li><a href="wijkcentrum-hatert/"><strong>Wijkcentrum Hatert</strong><span>1 evenement</span></a></li>
+        </ul>
+      </section>
+      <section class="aanbieders-plaats" id="berg-en-dal">
+        <h2>Berg en Dal</h2>
+        <ul class="aanbieders">
+          <li><a href="kerkje-van-persingen/"><strong>Kerkje van Persingen</strong><span>1 evenement</span></a></li>
+        </ul>
+      </section>
+      <section class="aanbieders-plaats" id="goch">
+        <h2>Goch</h2>
+        <ul class="aanbieders">
+          <li><a href="kloster-graefenthal/"><strong>Kloster Graefenthal</strong><span>1 evenement</span></a></li>
+        </ul>
+      </section>
+      <section class="aanbieders-plaats" id="groesbeek">
+        <h2>Groesbeek</h2>
+        <ul class="aanbieders">
+          <li class="aanbieders__klant"><a href="vrijheidsmuseum/"><strong>Vrijheidsmuseum</strong><span>4 evenementen</span></a></li>
+        </ul>
+      </section>
+      <section class="aanbieders-plaats" id="kleef">
+        <h2>Kleef</h2>
+        <ul class="aanbieders">
+          <li class="aanbieders__klant"><a href="kleve/"><strong>Kleve</strong><span>4 evenementen</span></a></li>
+        </ul>
+      </section>
+      <section class="aanbieders-plaats" id="kranenburg">
+        <h2>Kranenburg</h2>
+        <ul class="aanbieders">
+          <li class="aanbieders__klant"><a href="de-brauerij/"><strong>De Brauerij</strong><span>5 evenementen</span></a></li>
+        </ul>
+      </section>
     </div>
   </main>
 
@@ -146,6 +176,8 @@
       <nav aria-label="Ontdekken">
         <h2>Ontdekken</h2>
         <ul>
+          <li><a href="../zien-en-doen/">Zien en doen</a></li>
+          <li><a href="../plan-je-bezoek/">Plan je bezoek</a></li>
           <li><a href="../nijmegen-evenementen-overzicht/">Agenda</a></li>
           <li><a href="../nieuwsberichten/">Nieuws</a></li>
           <li><a href="../blog/">Inspiratie opdoen</a></li>

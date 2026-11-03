@@ -35,6 +35,19 @@ pagina in de repo staat, maakt hetzelfde script de links ernaartoe automatisch i
       geheimen `STATISTIEK_WACHTWOORD`, `DATAFORSEO_LOGIN`, `DATAFORSEO_PASSWORD` en `GSC_SERVICE_ACCOUNT_JSON` zetten,
       dan meet `.github/workflows/statistiek.yml` elke maandag. De cijfers staan versleuteld in `statistiek/data.json`
 
+## Nieuwsarchief van nieuwsnijmegen.nl (november 2026)
+
+De 7.267 berichten van nieuwsnijmegen.nl staan op `/nieuwsoverzicht/<slug>/`, met dezelfde slug als op de oude site.
+Na het mergen, op de server bij Zxcs:
+
+- [ ] Back-up van de WordPress-site van nieuwsnijmegen.nl (bestanden + database)
+- [ ] `docs/nieuwsnijmegen-htaccess.txt` als `.htaccess` in de hoofdmap van nieuwsnijmegen.nl, WordPress daar weg
+- [ ] Hetzelfde voor nieuws.nijmegenonline.nl
+- [ ] Testen: https://nieuwsnijmegen.nl/koningsdag-vrijmarkt-goffert/ geeft één 301 naar /nieuwsoverzicht/koningsdag-vrijmarkt-goffert/
+- [ ] eigenomgeving.nl: menulink "Nieuws" naar https://www.nijmegenonline.nl/nieuwsberichten/
+- [ ] Search Console, property nieuwsnijmegen.nl: Instellingen → Adreswijziging → www.nijmegenonline.nl
+- [ ] Domein nieuwsnijmegen.nl en de .htaccess minstens een jaar houden, liefst blijvend
+
 ## Op de dag zelf
 
 De site blijft op GitHub Pages. Cloudflare Pages is niet nodig: `_redirects` werkt daar niet, maar elk oud adres heeft

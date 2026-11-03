@@ -20910,8 +20910,8 @@
   "naam": "Café De Kroon",
   "openingstijden": "",
   "opmerkingen": "De website http://www.cafe-dekroon.nl/ kon niet worden opgehaald (foutmelding: url_not_allowed). Daarom is er geen tekst geschreven en zijn er geen gegevens ingevuld. De categorie 'lunch' is de vermoedelijke categorie en is niet gecontroleerd. Op basis van de naam kan het ook een café of kroeg zijn. Graag handmatig controleren.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 23-10-2026)",
-  "status": "verwijderd",
+  "reden": "redactie: weer in de gids, organiseert evenementen (Frans, 3-11-2026)",
+  "status": "voorstel",
   "tekst": "",
   "website": "http://www.cafe-dekroon.nl/",
   "website_bereikbaar": false
@@ -26176,8 +26176,8 @@
   "naam": "Concertgebouw de Vereeniging",
   "openingstijden": "",
   "opmerkingen": "De website https://www.stadsschouwburgendevereeniging.nl/ was niet bereikbaar (url_not_accessible), dus ik heb geen informatie kunnen controleren en geen tekst geschreven. De categorie 'podia' komt van de vermoedelijke categorie, maar is niet nagekeken op de site. Probeer de site later nog eens.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 24-10-2026)",
-  "status": "verwijderd",
+  "reden": "redactie: weer in de gids, organiseert evenementen (Frans, 3-11-2026)",
+  "status": "voorstel",
   "tekst": "",
   "website": "https://www.stadsschouwburgendevereeniging.nl/",
   "website_bereikbaar": false
@@ -96944,8 +96944,8 @@
   "naam": "Pop Culture Arcade",
   "openingstijden": "",
   "opmerkingen": "Ik kon de website niet lezen. Bij http://www.popculturearcade.nl/, https://www.popculturearcade.nl/ en https://popculturearcade.nl/ gaf de ophaaltool steeds de fout 'url_not_allowed'. Ik weet dus niet of de site zelf werkt of dat alleen onze tool er niet bij mocht. Daarom heb ik geen tekst, kenmerken, openingstijden of adres ingevuld. 'Lijkt actief' staat op true omdat de standaardwaarde ja of nee moet zijn, maar dat heb ik niet kunnen controleren. De hoofdcategorie 'uitjes' heb ik overgenomen van de vermoedelijke categorie en alleen op de naam gebaseerd (arcade). Graag handmatig nakijken. Het adres bij ons heeft geen straatnaam, alleen 6511 MR Nijmegen.",
-  "reden": "automatisch: website niet uit te lezen, liever geen halve gegevens (scan 24-10-2026)",
-  "status": "verwijderd",
+  "reden": "redactie: weer in de gids, organiseert evenementen (Frans, 3-11-2026)",
+  "status": "voorstel",
   "tekst": "",
   "website": "http://www.popculturearcade.nl/",
   "website_bereikbaar": false

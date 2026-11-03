@@ -40,7 +40,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     melding.classList.toggle("formulier__melding--fout", !!fout);
   }
   function label(v) {
-    var l = v.type === "checkbox" ? v.closest("fieldset").querySelector("legend") : form.querySelector('label[for="' + v.id + '"]');
+    var l = v.type === "checkbox" || v.type === "radio" ? v.closest("fieldset").querySelector("legend") : form.querySelector('label[for="' + v.id + '"]');
     return (l ? l.textContent : v.name).replace(/\s*\*\s*$/, "").replace(/\s*\(.*\)$/, "");
   }
   function mailknop() {
@@ -79,12 +79,16 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     });
   });
   landHint();
+  var bijschrift = fotobron(form);
   var tijden = openingstijden(form);
   huidigeVermelding(form, tijden);
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var ontbreekt = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (v) {
+      if (v.type === "radio") return !form.querySelector('input[name="' + v.name + '"]:checked');
       return v.type === "file" ? !v.files.length : !v.value.trim();
+    }).filter(function (v, i, alle) {   // een groep keuzes telt één keer
+      return v.type !== "radio" || alle.findIndex(function (w) { return w.name === v.name; }) === i;
     });
     var foto = form.querySelector('input[type="file"]');
     if (foto && foto.files.length && foto.files[0].size > MAX_FOTO) { meld("De foto is groter dan 10 MB. Kies een kleinere foto.", true); foto.focus(); return; }
@@ -111,6 +115,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
         meld("Het einde ligt voor het begin. Controleer de datums en tijden.", true); eind.focus(); return;
       }
     }
+    if (bijschrift) bijschrift();
     if (!form.dataset.url) { mailknop(); return; }
 
     form.pagina.value = location.href;
@@ -156,6 +161,30 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       .then(function () { knop.disabled = false; });
   });
 });
+
+// Verplicht bijschrift bij de foto: Eigen foto, Rechtenvrije afbeelding of Fotocredits bij: (naam verplicht).
+// Het naamveld verschijnt alleen bij fotocredits. Het bijschrift zelf gaat mee in het verborgen veld "bijschrift",
+// zoals het onder de foto op de evenementpagina komt: "Eigen foto", "Rechtenvrije afbeelding" of "Foto: Naam".
+function fotobron(form) {
+  var groep = form.querySelector("[data-fotobron]");
+  if (!groep) return;
+  var blok = form.querySelector("[data-fotocredit]");
+  var naam = blok.querySelector("input");
+  var uit = form.querySelector('input[type="hidden"][name="bijschrift"]');
+  var keuzes = groep.querySelectorAll('input[type="radio"]');
+  var credits = keuzes[keuzes.length - 1];
+  function bijwerken() {
+    blok.hidden = !credits.checked;
+    naam.required = credits.checked;
+    var gekozen = groep.querySelector("input:checked");
+    uit.value = !gekozen ? "" : gekozen === credits ? (naam.value.trim() ? "Foto: " + naam.value.trim() : "") : gekozen.value;
+  }
+  groep.addEventListener("change", function () { bijwerken(); if (credits.checked) naam.focus(); });
+  naam.addEventListener("input", bijwerken);
+  form.addEventListener("reset", function () { setTimeout(bijwerken, 0); });
+  bijwerken();
+  return bijwerken;
+}
 
 // Openingstijden per dag, zoals bij Google. Het tekstveld zelf blijft (verborgen) bestaan en krijgt
 // één regel per dag ("ma 09:00-17:00" of "ma gesloten"); zo hoeft het Apps Script niets te weten van dit schema.
@@ -263,3 +292,129 @@ function huidigeVermelding(form, tijden) {
     })
     .catch(function () {});
 }
+
+// "Zoek je bedrijf": kies het bedrijf uit de bedrijvengids, zodat een evenement (en straks een vacature) eraan
+// gekoppeld is (besluit Frans, 2-11-2026). De lijst (data/bedrijven-zoek.json, gemaakt door tools/bedrijvengids.py)
+// laadt pas als iemand begint te typen. Het gekozen bedrijf gaat als sleutel mee in het verborgen veld "bedrijf"; lege
+// velden zoals website en adres worden alvast ingevuld. ?bedrijf=<sleutel> in de url kiest het bedrijf meteen.
+document.querySelectorAll("[data-bedrijfzoeker]").forEach(function (blok) {
+  var form = blok.closest("form");
+  var invoer = blok.querySelector('input[type="search"]');
+  var lijst = blok.querySelector(".bedrijfzoeker__lijst");
+  var verborgen = blok.querySelector('input[name="bedrijf"]');
+  var gekozen = blok.querySelector(".bedrijfzoeker__gekozen");
+  var zoek = blok.querySelector(".bedrijfzoeker__zoek");
+  var vullen = JSON.parse(blok.getAttribute("data-vullen") || "{}");   // veldnaam -> kolom in de lijst
+  var KOLOM = { naam: 1, adres: 2, postcode: 3, plaats: 4, site: 5 };
+  var bedrijven = null, laden = null, treffers = [], actief = -1;
+  function sleutel(t) {
+    return String(t || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  }
+  function laad() {
+    if (!laden) {
+      laden = fetch(new URL("../../data/bedrijven-zoek.json", SCRIPT.src))
+        .then(function (r) { return r.json(); })
+        .then(function (rijen) {
+          bedrijven = rijen.map(function (r) { return { rij: r, naam: sleutel(r[1]), alles: sleutel(r[1] + " " + r[4] + " " + r[2]) }; });
+          return bedrijven;
+        })
+        .catch(function () { bedrijven = []; return bedrijven; });
+    }
+    return laden;
+  }
+  function sluit() {
+    lijst.hidden = true;
+    invoer.setAttribute("aria-expanded", "false");
+    actief = -1;
+  }
+  function toon() {
+    var woorden = sleutel(invoer.value).split(" ").filter(Boolean);
+    if (!bedrijven || !woorden.length || sleutel(invoer.value).length < 2) { sluit(); return; }
+    var q = woorden.join(" ");
+    treffers = bedrijven.filter(function (b) {
+      return woorden.every(function (w) { return b.alles.indexOf(w) !== -1; });
+    }).map(function (b) {
+      // Begint met de zoektekst eerst, dan een woord dat ermee begint, dan de rest
+      var score = b.naam.indexOf(q) === 0 ? 0 : (" " + b.naam).indexOf(" " + woorden[0]) !== -1 ? 1 : 2;
+      return { b: b, score: score };
+    }).sort(function (x, y) { return x.score - y.score || x.b.naam.localeCompare(y.b.naam); })
+      .slice(0, 8).map(function (x) { return x.b.rij; });
+    lijst.innerHTML = "";
+    if (!treffers.length) {
+      var leeg = document.createElement("li");
+      leeg.className = "bedrijfzoeker__niets";
+      // Nog niet in de gids: eerst (gratis) aanmelden, in een nieuw tabblad zodat dit formulier blijft staan
+      leeg.appendChild(document.createTextNode("Niet gevonden. "));
+      var aanmaken = document.createElement("a");
+      aanmaken.href = new URL("../../bedrijf-aanmelden/", SCRIPT.src).href;
+      aanmaken.target = "_blank";
+      aanmaken.rel = "noopener";
+      aanmaken.textContent = "Meld je bedrijf of organisatie eerst gratis aan";
+      leeg.appendChild(aanmaken);
+      leeg.appendChild(document.createTextNode(", of laat dit veld leeg."));
+      leeg.addEventListener("mousedown", function (e) { if (e.target !== aanmaken) e.preventDefault(); });
+      aanmaken.addEventListener("mousedown", function (e) { e.preventDefault(); });
+      lijst.appendChild(leeg);
+    }
+    treffers.forEach(function (r, i) {
+      var li = document.createElement("li");
+      li.id = invoer.id + "-optie-" + i;
+      li.setAttribute("role", "option");
+      li.textContent = r[1];
+      var regel = document.createElement("span");
+      regel.textContent = [r[2], r[4]].filter(Boolean).join(", ") + (r[6] ? " · " + r[6] : "");
+      li.appendChild(regel);
+      li.addEventListener("mousedown", function (e) { e.preventDefault(); kies(r); });
+      lijst.appendChild(li);
+    });
+    lijst.hidden = false;
+    invoer.setAttribute("aria-expanded", "true");
+    actief = -1;
+  }
+  function markeer(i) {
+    var items = lijst.querySelectorAll('[role="option"]');
+    if (!items.length) return;
+    actief = (i + items.length) % items.length;
+    items.forEach(function (li, j) { li.setAttribute("aria-selected", String(j === actief)); });
+    invoer.setAttribute("aria-activedescendant", items[actief].id);
+    items[actief].scrollIntoView({ block: "nearest" });
+  }
+  function kies(r) {
+    verborgen.value = r[0];
+    gekozen.querySelector("strong").textContent = r[1];
+    gekozen.querySelector(".bedrijfzoeker__regel").textContent = [r[2], r[4]].filter(Boolean).join(", ");
+    gekozen.hidden = false;
+    zoek.hidden = true;
+    sluit();
+    Object.keys(vullen).forEach(function (veld) {
+      var v = form.querySelector('[name="' + veld + '"]');
+      var waarde = r[KOLOM[vullen[veld]]];
+      if (v && waarde && !v.value.trim()) v.value = waarde;
+    });
+  }
+  function opnieuw() {
+    verborgen.value = "";
+    gekozen.hidden = true;
+    zoek.hidden = false;
+    invoer.value = "";
+    invoer.focus();
+  }
+  invoer.addEventListener("focus", laad);
+  invoer.addEventListener("input", function () { laad().then(toon); });
+  invoer.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowDown") { e.preventDefault(); if (lijst.hidden) toon(); markeer(actief + 1); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); markeer(actief - 1); }
+    else if (e.key === "Enter") { if (!lijst.hidden && treffers.length) { e.preventDefault(); kies(treffers[Math.max(actief, 0)]); } }
+    else if (e.key === "Escape") { sluit(); }
+  });
+  invoer.addEventListener("blur", function () { setTimeout(sluit, 150); });
+  gekozen.querySelector("button").addEventListener("click", opnieuw);
+  form.addEventListener("reset", function () { setTimeout(function () { verborgen.value = ""; gekozen.hidden = true; zoek.hidden = false; }, 0); });
+  // Vooraf gekozen via de url (knop op de bedrijfspagina)
+  if (verborgen.value) {
+    laad().then(function (alle) {
+      var b = alle.filter(function (x) { return x.rij[0] === verborgen.value; })[0];
+      if (b) kies(b.rij); else verborgen.value = "";
+    });
+  }
+});

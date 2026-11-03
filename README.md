@@ -16,10 +16,13 @@ partners/             centrale partnerlijst + roterende slider, zie partners/REA
 category/<rubriek>/   overzicht per rubriek (8 rubrieken + partnerbijdragen)
 blog/                 "Inspiratie opdoen": alle rubrieken op één pagina
 data/indeling-artikelen.csv   welke rubriek elk artikel heeft
+data/nieuws-archief.json      nieuwsarchief van nieuwsnijmegen.nl (2006-2024), zie tools/import_nieuwsnijmegen.py
+nieuwsberichten/<jaar>/       al het nieuws per jaar (tools/nieuws.py)
 _redirects            301's van oude WordPress-categoriepagina's (voor Cloudflare Pages)
 partials/             gedeelde header, footer en zijbalk
 tools/import_wordpress.py     zet de WordPress-export om naar pagina's
 tools/build.py        zet de onderdelen uit partials/ in alle pagina's
+zien-en-doen/, plan-je-bezoek/  bezoekersrubrieken, gemaakt door tools/bezoekers.py uit data/bezoekers.json
 zoeken/               zoekpagina (Pagefind), het zoekveld in de zijbalk stuurt hierheen
 pagefind/             zoekindex, gebouwd door tools/zoekindex.py (niet met de hand aanpassen)
 robots.txt            blokkeert zoekmachines zolang dit een test is
@@ -114,6 +117,35 @@ homepage en in de zijbalk). `.github/workflows/agenda.yml` draait dit elke nacht
 Volgorde bij een volledige herbouw:
 `python tools/import_wordpress.py && python tools/agenda.py && python tools/afbeeldingen.py && python tools/build.py`.
 De eenmalige import uit WordPress staat in `tools/import_evenementen.py`.
+
+### Bedrijf en plaats koppelen (besluit Frans, 2-11-2026)
+
+De bedrijvengids is de basis: een evenement, nieuwsbericht (en straks een vacature) wijst naar een bedrijf met de sleutel uit
+`/bedrijvengids/<sleutel>/`. Zie `tools/koppeling.py`.
+
+- **Evenementen**: veld `"bedrijf"` in `data/evenementen.json`, of `"bedrijf"` bij de aanbieder in `data/aanbieders.json`.
+  Plekken (kerken, parken, de binnenstad) krijgen `"bedrijf": ""` en blijven gewoon een locatie.
+- **Nieuws**: veld `"bedrijven"` (lijst) in `data/nieuws.json`, of automatisch als de tekst naar de website van het bedrijf linkt.
+- **Plaats**: elk evenement en elke aanbieder heeft een plaats (`"plaats"`, anders uit het adres of de postcode). Dorpen
+  horen bij hun gemeente (Malden bij Heumen, Beek bij Berg en Dal). Het agenda-overzicht filtert op plaats
+  (`assets/js/agendafilter.js`, samen met het filter op datum, ook via `?plaats=Wijchen`), en elke plaatspagina in `/bestemmingen/` toont de agenda van die
+  plaats tussen `<!-- agenda-plaats -->` en `<!-- /agenda-plaats -->`.
+- **Wat de bezoeker ziet**: op de bedrijfspagina de blokken Agenda en In het nieuws (boven de kaart); op de evenement- en
+  nieuwspagina's het kaartje "Over <bedrijf>" en in de gestructureerde gegevens `organizer` / `about`.
+- **Formulier**: het evenementformulier heeft een zoekveld "Zoek je bedrijf" (`data/bedrijven-zoek.json`, gemaakt door
+  `tools/bedrijvengids.py`). `?bedrijf=<sleutel>` in de url kiest het bedrijf meteen; elke bedrijfspagina linkt zo naar het
+  formulier. Op de beoordeelpagina in het Apps Script staat hetzelfde zoekveld, met een voorstel op het domein van de website
+  of het e-mailadres. `tools/aanmeldingen.py` neemt `bedrijf` en `plaats` mee.
+- **Eenmalig koppelen**: `python tools/koppelen.py` geeft elke aanbieder een plaats, koppelt aanbieders met dezelfde sleutel of
+  naam, en zet de rest met een voorstel in `docs/koppellijst-<jaar-maand>.md` voor de redactie.
+
+Na de eerste koppellijst (Frans, 2-11-2026): elke locatie in de agenda heet "naam plus plaats" (Boskapel Nijmegen,
+Kleine Kirche Kleve), ook nieuwe uit het formulier. Dubbele locaties worden samengevoegd via
+`data/aanbieders-samengevoegd.json` (oud -> nieuw); `python tools/koppelen.py` verwerkt dat en het oude
+`/event-location/<oud>/` verwijst door.
+Locaties die een bedrijf zijn maar niet in de gids stonden, zet de redactie in `data/bedrijvengids-toegevoegd.json`
+(naam, categorie, adres, website, ligging); `tools/bedrijvengids.py` neemt ze op in die categorie. Zonder eigen tekst
+staan ze als concept (noindex) online tot de websitescan een tekst heeft.
 
 ## Nieuwsbrief (MailerLite)
 

@@ -112,6 +112,11 @@ img { max-width: 100%; height: auto; display: block; }
 .hoofdmenu a:hover { background: rgba(255, 255, 255, 0.14); color: var(--wit); }
 .hoofdmenu a[aria-current] { background: rgba(13, 58, 99, 0.35); color: var(--wit); box-shadow: inset 0 -3px 0 #b9e58f; }
 .hoofdmenu__extra { display: none; }
+/* Acht menu-onderdelen: op desktop geen Home (het logo gaat al naar home) en iets compacter; onder 1100px het mobiele menu */
+.logo { flex-shrink: 0; }
+.hoofdmenu a { white-space: nowrap; }
+.hoofdmenu__home { display: none; }
+@media (min-width: 1101px) { .hoofdmenu a { padding: 8px 9px; font-size: 0.85rem; letter-spacing: 0.3px; } }
 .kop__knop { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.14); color: var(--wit); cursor: pointer; padding: 0; flex: none; transition: background-color 0.15s ease; }
 .kop__knop:hover { background: rgba(255, 255, 255, 0.26); color: var(--wit); }
 .kop__knop svg { width: 20px; height: 20px; }
@@ -119,8 +124,9 @@ img { max-width: 100%; height: auto; display: block; }
 .kop__menuknop .dicht { display: none; }
 .kop__menuknop[aria-expanded="true"] .open { display: none; }
 .kop__menuknop[aria-expanded="true"] .dicht { display: block; }
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
   html { scroll-padding-top: 80px; }
+  .hoofdmenu__home { display: block; }
   .bovenbalk { display: none; }
   .kop { flex-wrap: wrap; padding: 8px 16px; }
   .logo img { height: 44px; }
@@ -417,10 +423,15 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .uitgelicht__geenfoto { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 10; padding: 16px; background: var(--groen); color: var(--wit); font-weight: 700; font-size: 1.15rem; text-align: center; }
 .rubriek-kop--uitgelicht { border: 2px solid var(--groen); }
 .rubriek-kop .gids-cta { margin-top: 16px; }
-.aanbieders { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; align-items: start; }
-.aanbieders li { background: var(--wit); border-radius: var(--radius); padding: 12px 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; align-items: baseline; }
-.aanbieders li span { color: var(--grijs); font-size: .9rem; white-space: nowrap; }
-.aanbieders__klant { border-left: 4px solid var(--groen); }
+.aanbieders-plaats { margin: 28px 0; scroll-margin-top: 90px; }
+.aanbieders-plaats > h2 { margin: 0 0 12px; font-size: 1.3rem; }
+.aanbieders { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.aanbieders li { display: flex; }
+.aanbieders a { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 2px; background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); padding: 12px 16px; text-decoration: none; color: var(--tekst); min-height: 64px; }
+.aanbieders a:hover, .aanbieders a:focus-visible { border-color: var(--groen); box-shadow: var(--schaduw-hover); }
+.aanbieders strong { color: var(--kop); font-weight: 600; line-height: 1.3; }
+.aanbieders span { color: var(--grijs); font-size: .85rem; }
+.aanbieders__klant a { border-left: 4px solid var(--groen); }
 .pagina__intro { font-size: 1.1rem; }
 .pagina__let-op { background: #fff8e1; border-radius: var(--radius); padding: 12px 16px; }
 .contactgegevens { list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 8px; }
@@ -507,14 +518,15 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .bedrijfkaart--uitgelicht { border: 2px solid var(--groen); background: #eef6e8; }
 @media (min-width: 640px) { .bedrijfkaart--uitgelicht { flex-direction: row; } .bedrijfkaart--uitgelicht img { width: 45%; aspect-ratio: 4 / 3; } .bedrijfkaart--uitgelicht .bedrijfkaart__tekst { padding: 16px 20px; font-size: 1rem; } .bedrijfkaart--uitgelicht strong { font-size: 1.25rem; } }
 .bedrijfkaart__label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--groen); }
-.gidskaart { height: 460px; border: 1px solid var(--rand); border-radius: var(--radius); margin-top: 12px; z-index: 0; }
+/* Kaart in de bedrijvengids: op id, zodat de gidskaarten op /thema/ niet 460px hoog worden */
+#gidskaart { height: 460px; border: 1px solid var(--rand); border-radius: var(--radius); margin-top: 12px; z-index: 0; }
 .kaartgroepen { display: flex; flex-wrap: wrap; gap: 8px; }
 .kaartgroepen button { font: inherit; font-size: 0.9rem; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--groen); background: var(--wit); color: var(--groen); cursor: pointer; }
 .kaartgroepen button[aria-pressed="true"] { background: var(--groen); color: var(--wit); }
 .gidsgroepen { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 14px; }
 .gidsgroepen h3 { margin: 0 0 6px; font-size: 1.05rem; }
 .gidsgroepen ul { margin: 0; padding-left: 18px; }
-@media (max-width: 600px) { .gidskaart { height: 360px; } }
+@media (max-width: 600px) { #gidskaart { height: 360px; } }
 .kaartpunt span { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; box-sizing: border-box; border-radius: 50%; background: var(--groen); color: var(--wit); border: 2px solid var(--wit); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35); transition: transform 0.15s ease; }
 .kaartpunt svg { width: 16px; height: 16px; }
 .kaartgroepen button svg { width: 1.1em; height: 1.1em; vertical-align: -0.2em; margin-right: 2px; }
@@ -536,8 +548,8 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .kaartpartner__foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .kaartpartner__label { display: block; width: max-content; margin: 22px auto 0; padding: 2px 9px; border-radius: 999px; background: var(--groen); color: var(--wit); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.3px; line-height: 1.4; white-space: nowrap; }
 .kaartpartner:hover .kaartpartner__speld, .kaartpartner:focus .kaartpartner__speld { transform: rotate(-45deg) scale(1.08); }
-.gidskaart .leaflet-popup-content { font-family: inherit; font-size: 0.95rem; }
-.gidskaart .leaflet-popup-content a { font-weight: 700; }
+#gidskaart .leaflet-popup-content { font-family: inherit; font-size: 0.95rem; }
+#gidskaart .leaflet-popup-content a { font-weight: 700; }
 
 /* Bedrijvengids: kenmerken en filter */
 .bedrijfkaart[hidden], .gids-sectie[hidden] { display: none; }
@@ -629,3 +641,61 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .pagina th, .pagina td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #ddd; vertical-align: top; }
 .pagina th { font-weight: 700; }
 @media (max-width: 600px) { .pagina table { display: block; overflow-x: auto; } }
+
+/* Bezoekersrubrieken /zien-en-doen/ en /plan-je-bezoek/ (tools/bezoekers.py) */
+.gidsen-filter .knop-link { font-size: 0.9rem; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rand); background: var(--wit); color: var(--tekst); text-decoration: none; }
+.gidsen-filter .knop-link:hover, .gidsen-filter .knop-link:focus-visible { border-color: var(--groen); color: var(--groen); }
+.bezoekers-groep { margin: 32px 0; scroll-margin-top: 90px; }
+.bezoekers-groep > h2 { margin: 0 0 6px; }
+.bezoekers-groep > p { margin: 0 0 16px; color: var(--grijs); max-width: 720px; }
+.gidskaart h3 { margin: 0; font-size: 1.1rem; color: var(--kop); }
+
+/* Agenda: filter op datum (assets/js/agendafilter.js) */
+.agendafilter { align-items: center; }
+.agendafilter__uitkomst { margin: 0 0 12px; font-size: 0.9rem; color: var(--grijs); }
+.eventkaart[hidden], .agenda-maand[hidden] { display: none; }
+
+/* Agenda: tweede filterregel met plaats, soort, gratis en kinderen (assets/js/agendafilter.js, tools/agenda.py meerfilter) */
+.uitgelicht[hidden], .agenda-uitgelicht[hidden], .agenda-meer[hidden], .agenda-wis[hidden] { display: none; }
+.agenda-meer { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: -8px 0 16px; padding-top: 14px; border-top: 1px solid var(--rand); }
+.agenda-keuze { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 0.9rem; font-weight: 600; color: var(--grijs); }
+.agenda-keuze select { font: inherit; font-weight: 600; color: var(--tekst); padding: 8px 32px 8px 14px; border: 1px solid var(--rand); border-radius: 999px; background: var(--wit) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23333' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center; -webkit-appearance: none; appearance: none; cursor: pointer; max-width: 100%; }
+.agenda-keuze select:hover { border-color: var(--groen); }
+.agenda-keuze select.is-actief { border-color: var(--groen); color: var(--groen); }
+.agenda-schakel { font: inherit; font-size: 0.9rem; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rand); background: var(--wit); color: var(--tekst); cursor: pointer; }
+.agenda-schakel::before { content: "+ "; color: var(--grijs); }
+.agenda-schakel:hover { border-color: var(--groen); }
+.agenda-schakel[aria-pressed="true"] { background: var(--groen); border-color: var(--groen); color: var(--wit); }
+.agenda-schakel[aria-pressed="true"]::before { content: "✓ "; color: var(--wit); }
+.agenda-wis { font: inherit; font-size: 0.9rem; background: none; border: 0; padding: 0; color: var(--blauw); text-decoration: underline; cursor: pointer; }
+.agendafilter + .agenda-meer { margin-top: -8px; }
+.eventkaart__prijs { color: var(--grijs); font-weight: 500; }
+
+/* Kaartje "Over <bedrijf>" onder evenementen en nieuws (tools/koppeling.py) */
+.over-bedrijf { margin: 32px 0; }
+.over-bedrijf h2 { margin: 0 0 12px; }
+.over-bedrijf__kaart { display: flex; gap: 16px; align-items: center; padding: 14px; background: var(--wit); border: 1px solid var(--rand); border-radius: var(--radius); text-decoration: none; color: var(--tekst); transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.over-bedrijf__kaart:hover, .over-bedrijf__kaart:focus-visible { border-color: var(--groen); box-shadow: var(--schaduw-hover); }
+.over-bedrijf__kaart img { flex: 0 0 96px; width: 96px; height: 72px; object-fit: cover; border-radius: 6px; }
+.over-bedrijf__kaart > span { display: flex; flex-direction: column; gap: 2px; }
+.over-bedrijf__kaart strong { color: var(--kop); font-size: 1.1rem; }
+.over-bedrijf__regel { color: var(--grijs); font-size: 0.9rem; }
+.over-bedrijf__meer { color: var(--groen); font-weight: 700; font-size: 0.9rem; }
+.over-bedrijf__meer::after { content: " \2192"; }
+
+/* Zoekveld "Zoek je bedrijf" in de formulieren (assets/js/formulier.js) */
+.bedrijfzoeker { position: relative; margin-bottom: 18px; }
+.bedrijfzoeker__lijst { list-style: none; margin: 4px 0 0; padding: 0; background: var(--wit); border: 1px solid var(--rand); border-radius: 8px; box-shadow: var(--schaduw); max-height: 320px; overflow-y: auto; }
+.bedrijfzoeker__lijst[hidden], .bedrijfzoeker__gekozen[hidden], .bedrijfzoeker__zoek[hidden] { display: none; }
+.bedrijfzoeker__lijst li { padding: 8px 12px; cursor: pointer; line-height: 1.35; }
+.bedrijfzoeker__lijst li span { display: block; color: var(--grijs); font-size: 0.85rem; }
+.bedrijfzoeker__lijst li[aria-selected="true"], .bedrijfzoeker__lijst li:hover { background: var(--licht); }
+.bedrijfzoeker__gekozen { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding: 10px 14px; background: var(--licht); border-radius: 8px; }
+.bedrijfzoeker__gekozen strong { color: var(--kop); }
+.bedrijfzoeker button.link { font: inherit; font-size: 0.9rem; background: none; border: 0; padding: 0; color: var(--blauw); text-decoration: underline; cursor: pointer; }
+
+/* nieuwsarchief per jaar (tools/nieuws.py) */
+.jarenlijst { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.jarenlijst a { color: var(--kop); font-weight: 600; }
+.jarenlijst span { color: var(--grijs); font-size: 0.85rem; }
+.archief-melding { font-size: 0.9rem; color: var(--grijs); border-left: 3px solid var(--rand); padding-left: 12px; }

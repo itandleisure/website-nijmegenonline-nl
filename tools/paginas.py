@@ -17,6 +17,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import SITE, VOET, esc, kop, schoon  # noqa: E402
+import evenement_indeling  # noqa: E402
 
 # /exec-URL van de Google Apps Script-web-app (tools/google-formulier/Code.gs); leeg = mailknop
 GOOGLE_FORM_URL = "https://script.google.com/macros/s/AKfycbyELOZGBRvXanmgy7LSaQD4G5WnAZbACtAWVvcKoslJHT0-NxunjLngM7fJJOrxQyIM/exec"
@@ -31,8 +32,8 @@ VACATURES = [
      "Voor NijmegenOnline zoeken we toppers die hun schrijfervaring willen uitbreiden. Als redacteur ga je veel op pad in "
      "Nijmegen en ben je het visitekaartje van onze organisatie."),
     ("vacature-accountmanager", "Lokale partner en mede-eigenaar", True,
-     "We zoeken iemand die NijmegenOnline in de stad een gezicht geeft, partners binnenhaalt en daarvoor provisie en "
-     "aandelen krijgt."),
+     "We zoeken iemand die NijmegenOnline in de stad een gezicht geeft en lokale ondernemers helpt zichtbaarder te "
+     "worden en meer omzet te halen."),
     ("vacature-fotograaf", "Fotograaf", False,
      "Ben jij dag en nacht op pad met je camera en vind je het leuk om Nijmegen en omgeving vast te leggen?"),
     ("vacature-social-media-strateeg", "Social media strateeg", False,
@@ -44,7 +45,7 @@ VACATURES = [
 EIGEN_TEKST = {"vacature-accountmanager"}
 
 # Pakketten uit het advies Verdienmodel NijmegenOnline (okt 2026): naam, prijs per jaar excl. btw, toelichting
-PAKKETTEN = [("Gratis", "0", "voor elk bedrijf"), ("Uitgelicht", "149", "eerste jaar &euro; 99*"),
+PAKKETTEN = [("Gratis", "0", "voor elk bedrijf"), ("Uitgelicht", "149", ""),
              ("Partner", "449", ""), ("Hoofdpartner", "1.200", "maximaal 10")]
 KENMERKEN = [
     ("Eigen pagina in de bedrijvengids met adres, kaart en openingstijden", ["ja", "ja", "ja", "ja"]),
@@ -126,10 +127,13 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=11" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=16" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
+
+# Keuzes voor het verplichte fotobijschrift; bij de laatste vult de inzender een naam in (zie formulier.js)
+FOTOBRONNEN = ["Eigen foto", "Rechtenvrije afbeelding", "Fotocredits bij:"]
 
 KWARTIEREN = ["%02d:%02d" % (u, m) for u in range(24) for m in (0, 15, 30, 45)]
 
@@ -178,6 +182,47 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
             regels += ['            <label><input type="radio" name="%s" value="%s"%s> %s</label>' % (veld, esc(w), " checked" if i == 0 else "", esc(o))
                        for i, (w, o) in enumerate(opties)]
             regels.append("          </fieldset>")
+        elif soort == "radio":
+            # Eén keuze (radio) zonder vooraf gekozen waarde; opties = teksten, of (waarde, tekst)
+            regels.append('          <fieldset class="formulier__keuzes"><legend>%s%s</legend>' % (esc(label), ster))
+            regels += ['            <label><input type="radio" name="%s" value="%s"%s> %s</label>' % (veld, esc(w), req, esc(o))
+                       for w, o in (x if isinstance(x, tuple) else (x, x) for x in opties)]
+            regels.append("          </fieldset>")
+        elif soort == "lijst":
+            regels.append('          <label for="%s">%s%s</label>\n          <select id="%s" name="%s"%s><option value="">Kies</option>%s</select>'
+                          % (id_, esc(label), ster, id_, veld, req, "".join('<option>%s</option>' % esc(o) for o in opties)))
+        elif soort == "prijs":
+            regels.append('          <label for="%s">%s%s</label>\n          <input id="%s" name="%s" type="text" inputmode="decimal" autocomplete="off" maxlength="10"%s>'
+                          % (id_, esc(label), ster, id_, veld, req))
+            if opties:
+                regels.append('          <p class="formulier__hint">%s</p>' % esc(opties))
+        elif soort == "bedrijf":
+            # Zoekveld "Zoek je bedrijf" (assets/js/formulier.js); opties = {veld: kolom} om lege velden in te vullen
+            regels += ['          <div class="bedrijfzoeker" data-bedrijfzoeker data-vullen="%s">' % esc(json.dumps(opties or {})),
+                       '            <label for="%s">%s</label>' % (id_, esc(label)),
+                       '            <div class="bedrijfzoeker__zoek"><input id="%s" type="search" autocomplete="off" role="combobox" '
+                       'aria-autocomplete="list" aria-expanded="false" aria-controls="%s-lijst" placeholder="Typ de naam, bijvoorbeeld Doornroosje"></div>'
+                       % (id_, id_),
+                       '            <ul class="bedrijfzoeker__lijst" id="%s-lijst" role="listbox" hidden></ul>' % id_,
+                       '            <div class="bedrijfzoeker__gekozen" hidden><span>Gekozen: <strong></strong> '
+                       '<span class="bedrijfzoeker__regel"></span></span><button type="button" class="link">Ander bedrijf kiezen</button></div>',
+                       '            <p class="formulier__hint">Staat je bedrijf of organisatie in onze bedrijvengids? Kies het hier, dan komt '
+                       'je evenement ook op je bedrijfspagina. Staat het er nog niet in? <a href="%sbedrijf-aanmelden/" target="_blank" '
+                       'rel="noopener">Meld het dan eerst gratis aan</a> en kies het daarna hier. Ben je geen bedrijf of organisatie, '
+                       'laat dit veld dan leeg.</p>' % "../",
+                       '            <input type="hidden" name="%s" value="">' % veld,
+                       '          </div>']
+        elif soort == "fotobron":
+            # Verplicht bijschrift bij de foto: één keuze, niets vooraf gekozen. Bij de laatste keuze (fotocredits)
+            # moet er een naam bij; formulier.js toont dat veld en zet het bijschrift in het verborgen veld (veld).
+            regels.append('          <fieldset class="formulier__keuzes" data-fotobron><legend>%s%s</legend>' % (esc(label), ster))
+            regels += ['            <label><input type="radio" name="fotobron" value="%s"%s> %s</label>' % (esc(o), req, esc(o)) for o in opties]
+            regels.append("          </fieldset>")
+            regels.append('          <div class="formulier__fotocredit" data-fotocredit hidden>'
+                          '<label for="%s-credit">Naam van de fotograaf of bron%s</label>'
+                          '<input id="%s-credit" name="fotocredit" type="text" autocomplete="off" placeholder="Bijvoorbeeld Jan Jansen"></div>'
+                          % (id_, ster, id_))
+            regels.append('          <input type="hidden" name="%s" value="">' % veld)
         elif soort == "verborgen":
             regels.append('          <input type="hidden" name="%s" value="">' % veld)
         elif soort == "bestand":
@@ -271,7 +316,7 @@ def algemene_voorwaarden(tekst, meta):
 # Zie het verdienmodel (Claude Doc "Verdienmodel NijmegenOnline"); prijzen per jaar, excl. btw
 BEDRIJF_PAKKETTEN = [
     ("gratis", "Gratis: eigen pagina met adres, kaart, openingstijden, een korte tekst en één foto"),
-    ("uitgelicht", "Uitgelicht (€149 per jaar, het eerste jaar €99): bovenaan je categorie, met logo, foto's en een actieknop"),
+    ("uitgelicht", "Uitgelicht (€149 per jaar): bovenaan je categorie, met logo, foto's en een actieknop"),
     ("partner", "Partner (€449 per jaar): Uitgelicht, plus een banner in je branche, een artikel en de nieuwsbrief"),
 ]
 
@@ -309,7 +354,7 @@ def evenement_aanmelden():
         <h2>Zo werkt het</h2>
         <ul>
           <li>Vul het formulier zo volledig mogelijk in. Hoe meer we weten, hoe beter we je evenement kunnen laten zien.</li>
-          <li>Voeg een rechtenvrije foto van het evenement toe. Zonder foto kunnen we het helaas niet plaatsen.</li>
+          <li>Voeg een foto van het evenement toe en geef aan van wie die is: je eigen foto, een rechtenvrije afbeelding of een foto van een fotograaf (dan vermelden we de naam). Zonder foto kunnen we het helaas niet plaatsen.</li>
           <li>Onze redactie bekijkt elke aanmelding. Soms schaven we de tekst wat bij, zodat die goed op de website past.</li>
           <li>Je krijgt een e-mail zodra je evenement online staat, of als we het niet kunnen plaatsen.</li>
         </ul>
@@ -317,11 +362,19 @@ def evenement_aanmelden():
         <p>Een gratis aanmelding komt in de agenda, met je website, e-mailadres en telefoonnummer als je die invult. Je evenement wordt dan niet uitgelicht in onze wekelijkse nieuwsbrief, op social media en op onze websites. Wil je die extra aandacht wel? Mail naar <a href="mailto:{email}">{email}</a> en vraag naar de mogelijkheden, of bekijk de <a href="{site}/adverteren-bij-nijmegenonline/">pakketten</a>.</p>
         <h2>Je evenement</h2>
 {formulier}""".format(email=EMAIL, site=SITE, formulier=formulier("evenement", "Evenement aangemeld via NijmegenOnline", [
+        ("kop", "Organisator", "kop", False, None),
+        ("bedrijf", "Zoek je bedrijf of organisatie", "bedrijf", False,
+         {"locatie": "naam", "adres": "adres", "postcode": "postcode", "plaats": "plaats", "site": "site"}),
         ("kop", "Het evenement", "kop", False, None),
         ("titel", "Naam van het evenement", "text", True, None),
         (("datum", "starttijd"), ("Begindatum", "Begintijd"), "datumtijd", True, None),
         (("einddatum", "eindtijd"), ("Einddatum", "Eindtijd"), "datumtijd", True, None),
         ("omschrijving", "Omschrijving van het evenement", "tekst", True, None),
+        ("kop", "Soort en toegang", "kop", False, "Hiermee vinden bezoekers je evenement via de filters in de agenda."),
+        ("soort", "Soort evenement", "lijst", True, evenement_indeling.SOORTEN),
+        ("toegang", "Toegang", "radio", True, [("gratis", "Gratis"), ("vrije gift", "Vrije gift"), ("betaald", "Betaald")]),
+        ("prijs", "Prijs vanaf (in euro per persoon)", "prijs", False, "Alleen bij betaald: de laagste prijs voor een volwassene, bijvoorbeeld 12,50."),
+        ("kenmerken", "Wat geldt er nog meer?", "keuzes", False, list(evenement_indeling.KENMERKEN.values())),
         ("kop", "Locatie", "kop", False, None),
         ("locatie", "Naam van de locatie", "text", True, None),
         ("adres", "Straat en huisnummer", "text", True, None),
@@ -332,7 +385,8 @@ def evenement_aanmelden():
         ("evenementmail", "E-mailadres", "email", False, None),
         ("evenementtelefoon", "Telefoonnummer", "tel", False, None),
         ("kop", "Foto", "kop", False, None),
-        ("foto", "Foto van het evenement", "bestand", True, "Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 10 MB."),
+        ("foto", "Foto van het evenement", "bestand", True, "Een foto die we mogen gebruiken, liefst liggend. JPG, PNG of WebP, maximaal 10 MB."),
+        ("bijschrift", "Bijschrift bij de foto", "fotobron", True, FOTOBRONNEN),
         ("kop", "Jouw gegevens", "kop", False, "Deze gegevens komen niet op de website. We gebruiken ze alleen als we nog vragen hebben over je aanmelding."),
         ("naam", "Je naam", "text", True, None),
         ("email", "Je e-mailadres", "email", True, None),
@@ -414,7 +468,7 @@ def adverteren(meta, root="../"):
             </tbody>
           </table>
         </div>
-        <p>Prijzen per jaar, exclusief btw. * Introductieprijs voor de eerste 50 klanten, en de prijs staat twee jaar vast. Een pakket loopt twaalf maanden en wordt daarna steeds met een jaar verlengd. Opzeggen kan tot een maand voor de einddatum, met een mail. Zie <a href="{site}/algemene-voorwaarden/">artikel 13 van de algemene voorwaarden</a>.</p>
+        <p>Prijzen per jaar, exclusief btw. Een pakket loopt twaalf maanden en wordt daarna steeds met een jaar verlengd. Opzeggen kan tot een maand voor de einddatum, met een mail. Zie <a href="{site}/algemene-voorwaarden/">artikel 13 van de algemene voorwaarden</a>.</p>
         <h2>Losse mogelijkheden</h2>
         <div class="pakketten">
           <table>
