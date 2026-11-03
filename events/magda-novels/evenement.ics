@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:magda-novels@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261108T150000
+DTEND;TZID=Europe/Amsterdam:20261108T170000
+SUMMARY:Magda Novels bij de Brauerij
+URL:https://www.nijmegenonline.nl/events/magda-novels/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/magda-novels/
+LOCATION:De Brauerij Kranenburg\, Mehrer Straße 1 Kranenburg
+END:VEVENT
+END:VCALENDAR

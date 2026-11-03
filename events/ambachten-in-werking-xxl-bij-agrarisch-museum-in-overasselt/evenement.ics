@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:ambachten-in-werking-xxl-bij-agrarisch-museum-in-overasselt@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260926T100000
+DTEND;TZID=Europe/Amsterdam:20260926T160000
+SUMMARY:Ambachten in werking XXL bij Agrarisch Museum in Overasselt
+URL:https://www.nijmegenonline.nl/events/ambachten-in-werking-xxl-bij-agrarisch-museum-in-overasselt/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/ambachten-in-werking-xxl-bij-agrarisch-museum-in-overasselt/
+LOCATION:Buurderij de Lage Hof Heumen\, Kasteelsestraat 5 Overasselt
+END:VEVENT
+END:VCALENDAR

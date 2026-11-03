@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:guy-verlinde@nijmegenonline.nl
+DTSTAMP:20260324T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261213T150000
+DTEND;TZID=Europe/Amsterdam:20261213T170000
+SUMMARY:Guy Verlinde bij de Brauerij
+URL:https://www.nijmegenonline.nl/events/guy-verlinde/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/guy-verlinde/
+LOCATION:De Brauerij Kranenburg\, Mehrer Straße 1 Kranenburg
+END:VEVENT
+END:VCALENDAR

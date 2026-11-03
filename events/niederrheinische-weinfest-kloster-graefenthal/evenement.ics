@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:niederrheinische-weinfest-kloster-graefenthal@nijmegenonline.nl
+DTSTAMP:20260220T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260814T160000
+DTEND;TZID=Europe/Amsterdam:20260814T190000
+SUMMARY:Niederrheinische Weinfest Kloster Graefenthal
+URL:https://www.nijmegenonline.nl/events/niederrheinische-weinfest-kloster-graefenthal/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/niederrheinische-weinfest-kloster-graefenthal/
+LOCATION:Kloster Graefenthal Goch\, Maasstraße 48\, 47574 Goch\, Deutschland
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:stadfeest-koopzondag-klever-winterzauber@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261129T130000
+DTEND;TZID=Europe/Amsterdam:20261129T180000
+SUMMARY:Stadfeest & Koopzondag: Klever Winterzauber
+URL:https://www.nijmegenonline.nl/events/stadfeest-koopzondag-klever-winterzauber/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/stadfeest-koopzondag-klever-winterzauber/
+LOCATION:Kleve
+END:VEVENT
+END:VCALENDAR

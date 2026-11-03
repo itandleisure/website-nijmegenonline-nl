@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:schrijfworkshop-groep-zwarte-vrouwen-nijmegen@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260906T100000
+DTEND;TZID=Europe/Amsterdam:20260906T120000
+SUMMARY:Schrijfworkshop: Groep Zwarte Vrouwen Nijmegen
+URL:https://www.nijmegenonline.nl/events/schrijfworkshop-groep-zwarte-vrouwen-nijmegen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/schrijfworkshop-groep-zwarte-vrouwen-nijmegen/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

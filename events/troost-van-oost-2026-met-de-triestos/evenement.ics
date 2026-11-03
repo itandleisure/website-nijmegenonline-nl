@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:troost-van-oost-2026-met-de-triestos@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261107T210000
+DTEND;TZID=Europe/Amsterdam:20261107T235500
+SUMMARY:Troost van Oost 2026 met De Triesto’s
+URL:https://www.nijmegenonline.nl/events/troost-van-oost-2026-met-de-triestos/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/troost-van-oost-2026-met-de-triestos/
+LOCATION:Cafe 't Haantje Nijmegen\, Daalseweg 19
+END:VEVENT
+END:VCALENDAR

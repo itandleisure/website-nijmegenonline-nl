@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:in-extase-gay-dansfeest-voor-mannen-30-2@nijmegenonline.nl
+DTSTAMP:20261027T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261226T210000
+DTEND;TZID=Europe/Amsterdam:20261227T030000
+SUMMARY:IN EXTASE – Gay dansfeest voor mannen 30+
+URL:https://www.nijmegenonline.nl/events/in-extase-gay-dansfeest-voor-mannen-30-2/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/in-extase-gay-dansfeest-voor-mannen-30-2/
+LOCATION:De Witte Raaf Nijmegen\, Grotestraat 11\, 6511 VB Nijmegen
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:tent-van-troost@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261030T110000
+DTEND;TZID=Europe/Amsterdam:20261102T170000
+SUMMARY:Tent van Troost
+URL:https://www.nijmegenonline.nl/events/tent-van-troost/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/tent-van-troost/
+LOCATION:Grote Markt en Stevenskerk Nijmegen\, Grote Markt\, Nijmegen
+END:VEVENT
+END:VCALENDAR

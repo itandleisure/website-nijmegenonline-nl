@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:maak-kennis-met-intuitieve-ontwikkeling-open-les-7@nijmegenonline.nl
+DTSTAMP:20261101T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261123T163000
+DTEND;TZID=Europe/Amsterdam:20261123T183000
+SUMMARY:Maak kennis met intuïtieve ontwikkeling (open les)
+URL:https://www.nijmegenonline.nl/events/maak-kennis-met-intuitieve-ontwikkeling-open-les-7/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/maak-kennis-met-intuitieve-ontwikkeling-open-les-7/
+LOCATION:Bosatelier Nijmegen\, Scheidingsweg 99\, 6581 KN Nijmegen
+END:VEVENT
+END:VCALENDAR

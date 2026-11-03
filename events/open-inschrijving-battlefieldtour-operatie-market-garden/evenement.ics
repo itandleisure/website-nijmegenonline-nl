@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:open-inschrijving-battlefieldtour-operatie-market-garden@nijmegenonline.nl
+DTSTAMP:20260703T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260926T093000
+DTEND;TZID=Europe/Amsterdam:20260926T143000
+SUMMARY:Open inschrijving: Battlefieldtour Operatie Market Garden
+URL:https://www.nijmegenonline.nl/events/open-inschrijving-battlefieldtour-operatie-market-garden/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/open-inschrijving-battlefieldtour-operatie-market-garden/
+LOCATION:Vrijheidsmuseum Groesbeek\, Wylerbaan 4\, 6561 KR Groesbeek
+END:VEVENT
+END:VCALENDAR

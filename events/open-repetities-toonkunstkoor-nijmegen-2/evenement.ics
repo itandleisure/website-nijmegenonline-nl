@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:open-repetities-toonkunstkoor-nijmegen-2@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260914T193000
+DTEND;TZID=Europe/Amsterdam:20260914T220000
+SUMMARY:Open repetities Toonkunstkoor Nijmegen
+URL:https://www.nijmegenonline.nl/events/open-repetities-toonkunstkoor-nijmegen-2/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/open-repetities-toonkunstkoor-nijmegen-2/
+LOCATION:Ark van Oost Nijmegen\, Cipresstraat 154
+END:VEVENT
+END:VCALENDAR

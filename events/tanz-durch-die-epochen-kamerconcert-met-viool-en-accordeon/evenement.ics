@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:tanz-durch-die-epochen-kamerconcert-met-viool-en-accordeon@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261121T180000
+DTEND;TZID=Europe/Amsterdam:20261121T200000
+SUMMARY:“Tanz durch die Epochen” – Kamerconcert met viool en accordeon
+URL:https://www.nijmegenonline.nl/events/tanz-durch-die-epochen-kamerconcert-met-viool-en-accordeon/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/tanz-durch-die-epochen-kamerconcert-met-viool-en-accordeon/
+LOCATION:Kleve\, Böllenstege\, D-47533 Kleve
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:expositie-marlie-duizings-in-kunst-in-het-kerkje@nijmegenonline.nl
+DTSTAMP:20261102T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261120T090000
+DTEND;TZID=Europe/Amsterdam:20261206T150000
+SUMMARY:Expositie Marlie Duizings in kunst in het kerkje
+URL:https://www.nijmegenonline.nl/events/expositie-marlie-duizings-in-kunst-in-het-kerkje/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/expositie-marlie-duizings-in-kunst-in-het-kerkje/
+LOCATION:Kerkje van Persingen\, Persingense straat 7 Persingen\, 5363 VE Velp
+END:VEVENT
+END:VCALENDAR

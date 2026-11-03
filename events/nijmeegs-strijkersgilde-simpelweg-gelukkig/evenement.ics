@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:nijmeegs-strijkersgilde-simpelweg-gelukkig@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261003T163000
+DTEND;TZID=Europe/Amsterdam:20261003T171500
+SUMMARY:Nijmeegs Strijkersgilde – Simpelweg gelukkig
+URL:https://www.nijmegenonline.nl/events/nijmeegs-strijkersgilde-simpelweg-gelukkig/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/nijmeegs-strijkersgilde-simpelweg-gelukkig/
+LOCATION:Lutherse kerk Nijmegen\, Prins Hendrikstraat 79\, 6521 AX  Nijmegen
+END:VEVENT
+END:VCALENDAR

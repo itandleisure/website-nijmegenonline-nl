@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:halloween-festival@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261031T203000
+DTEND;TZID=Europe/Amsterdam:20261101T030000
+SUMMARY:Halloween festival
+URL:https://www.nijmegenonline.nl/events/halloween-festival/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/halloween-festival/
+LOCATION:Kloster Graefenthal Goch\, Maasstraße 48\, 47574 Goch\, Deutschland
+END:VEVENT
+END:VCALENDAR

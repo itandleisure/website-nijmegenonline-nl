@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:emma-actie-gratis-toegang@nijmegenonline.nl
+DTSTAMP:20260703T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260704T100000
+DTEND;TZID=Europe/Amsterdam:20260830T150000
+SUMMARY:Emma actie – gratis toegang
+URL:https://www.nijmegenonline.nl/events/emma-actie-gratis-toegang/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/emma-actie-gratis-toegang/
+LOCATION:Vrijheidsmuseum Groesbeek\, Wylerbaan 4\, 6561 KR Groesbeek
+END:VEVENT
+END:VCALENDAR

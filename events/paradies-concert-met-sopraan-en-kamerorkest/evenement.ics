@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:paradies-concert-met-sopraan-en-kamerorkest@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260922T200000
+DTEND;TZID=Europe/Amsterdam:20260922T220000
+SUMMARY:Paradies – Concert met sopraan en kamerorkest
+URL:https://www.nijmegenonline.nl/events/paradies-concert-met-sopraan-en-kamerorkest/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/paradies-concert-met-sopraan-en-kamerorkest/
+LOCATION:Kleve\, Lohstätte 7\, D-47533 Kleve
+END:VEVENT
+END:VCALENDAR

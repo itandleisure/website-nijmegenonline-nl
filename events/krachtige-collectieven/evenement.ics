@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:krachtige-collectieven@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261103T193000
+DTEND;TZID=Europe/Amsterdam:20261103T213000
+SUMMARY:Krachtige collectieven
+URL:https://www.nijmegenonline.nl/events/krachtige-collectieven/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/krachtige-collectieven/
+LOCATION:Thiemeloods Nijmegen\, Leemptstraat 34 Nijmegen 
+END:VEVENT
+END:VCALENDAR

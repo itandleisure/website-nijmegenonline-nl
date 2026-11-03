@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:pubquiz-bij-cafe-t-haantje2@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261114T203000
+DTEND;TZID=Europe/Amsterdam:20261114T223000
+SUMMARY:Pubquiz bij café ’t Haantje
+URL:https://www.nijmegenonline.nl/events/pubquiz-bij-cafe-t-haantje2/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/pubquiz-bij-cafe-t-haantje2/
+LOCATION:Cafe 't Haantje Nijmegen\, Daalseweg 19
+END:VEVENT
+END:VCALENDAR

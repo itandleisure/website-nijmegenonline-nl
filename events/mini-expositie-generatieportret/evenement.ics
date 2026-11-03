@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:mini-expositie-generatieportret@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260825T100000
+DTEND;TZID=Europe/Amsterdam:20260825T170000
+SUMMARY:Mini-expositie: Generatieportret
+URL:https://www.nijmegenonline.nl/events/mini-expositie-generatieportret/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/mini-expositie-generatieportret/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

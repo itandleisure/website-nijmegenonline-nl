@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:van-vakantiekiekje-tot-sterke-foto-laat-je-vakantiefotos-spreken-tijdens-het-fotografencafe-in-nijmegen@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260927T150000
+DTEND;TZID=Europe/Amsterdam:20260927T210000
+SUMMARY:Van vakantiekiekje tot sterke foto: Laat je vakantiefoto’s spreken tijdens het FotografenCafé in Nijmegen
+URL:https://www.nijmegenonline.nl/events/van-vakantiekiekje-tot-sterke-foto-laat-je-vakantiefotos-spreken-tijdens-het-fotografencafe-in-nijmegen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/van-vakantiekiekje-tot-sterke-foto-laat-je-vakantiefotos-spreken-tijdens-het-fotografencafe-in-nijmegen/
+LOCATION:De Vasim Nijmegen\, Winselingseweg 86\, Nijmegen 6545 AH
+END:VEVENT
+END:VCALENDAR

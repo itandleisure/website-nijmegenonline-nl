@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:sean-taylor@nijmegenonline.nl
+DTSTAMP:20260324T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261024T200000
+DTEND;TZID=Europe/Amsterdam:20261024T220000
+SUMMARY:Sean Taylor
+URL:https://www.nijmegenonline.nl/events/sean-taylor/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/sean-taylor/
+LOCATION:De Brauerij Kranenburg\, Mehrer Straße 1 Kranenburg
+END:VEVENT
+END:VCALENDAR

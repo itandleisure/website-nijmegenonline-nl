@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:uitwisselingsconcert-harmonie-hatert-met-dov-wijchen@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261025T130000
+DTEND;TZID=Europe/Amsterdam:20261025T170000
+SUMMARY:Uitwisselingsconcert Harmonie Hatert met DOV Wijchen
+URL:https://www.nijmegenonline.nl/events/uitwisselingsconcert-harmonie-hatert-met-dov-wijchen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/uitwisselingsconcert-harmonie-hatert-met-dov-wijchen/
+LOCATION:Molenveldlaan 146 6523 RN Nijmegen
+END:VEVENT
+END:VCALENDAR

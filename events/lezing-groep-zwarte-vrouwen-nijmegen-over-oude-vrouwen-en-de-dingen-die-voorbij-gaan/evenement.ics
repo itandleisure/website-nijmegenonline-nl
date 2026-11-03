@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:lezing-groep-zwarte-vrouwen-nijmegen-over-oude-vrouwen-en-de-dingen-die-voorbij-gaan@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260929T200000
+DTEND;TZID=Europe/Amsterdam:20260929T210000
+SUMMARY:Lezing: Groep Zwarte Vrouwen Nijmegen:  Over oude vrouwen\, en de dingen die voorbij gaan
+URL:https://www.nijmegenonline.nl/events/lezing-groep-zwarte-vrouwen-nijmegen-over-oude-vrouwen-en-de-dingen-die-voorbij-gaan/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/lezing-groep-zwarte-vrouwen-nijmegen-over-oude-vrouwen-en-de-dingen-die-voorbij-gaan/
+LOCATION:Huis van de Nijmeegse Geschiedenis\, Mariënburg 26\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR

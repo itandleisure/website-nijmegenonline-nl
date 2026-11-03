@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:science-cafe-cybersecurity-in-het-ai-tijdperk@nijmegenonline.nl
+DTSTAMP:20260924T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261012T193000
+DTEND;TZID=Europe/Amsterdam:20261012T220000
+SUMMARY:Science Café & Cybersecurity in het AI-Tijdperk
+URL:https://www.nijmegenonline.nl/events/science-cafe-cybersecurity-in-het-ai-tijdperk/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/science-cafe-cybersecurity-in-het-ai-tijdperk/
+LOCATION:Irish pub The Shamrock Nijmegen\, Smetiusstraat 17 Nijmegen
+END:VEVENT
+END:VCALENDAR

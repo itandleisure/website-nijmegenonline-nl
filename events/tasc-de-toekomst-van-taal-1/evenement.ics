@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:tasc-de-toekomst-van-taal-1@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261006T200000
+DTEND;TZID=Europe/Amsterdam:20261006T220000
+SUMMARY:TASC – De Toekomst Van Taal #1
+URL:https://www.nijmegenonline.nl/events/tasc-de-toekomst-van-taal-1/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/tasc-de-toekomst-van-taal-1/
+LOCATION:Lux Nijmegen\, Mariënburg 38 – 39\, Nijmegen
+END:VEVENT
+END:VCALENDAR

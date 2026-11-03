@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:nkstevenskerk@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260829T153000
+DTEND;TZID=Europe/Amsterdam:20260829T161500
+SUMMARY:Zuiderkapel Stevenskerk
+URL:https://www.nijmegenonline.nl/events/nkstevenskerk/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/nkstevenskerk/
+LOCATION:Stevenskerk Nijmegen\, Sint Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR

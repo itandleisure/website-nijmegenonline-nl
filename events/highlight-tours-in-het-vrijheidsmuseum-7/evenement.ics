@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:highlight-tours-in-het-vrijheidsmuseum-7@nijmegenonline.nl
+DTSTAMP:20260605T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260830T140000
+DTEND;TZID=Europe/Amsterdam:20260830T153000
+SUMMARY:Highlight Tours in het Vrijheidsmuseum
+URL:https://www.nijmegenonline.nl/events/highlight-tours-in-het-vrijheidsmuseum-7/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/highlight-tours-in-het-vrijheidsmuseum-7/
+LOCATION:Vrijheidsmuseum Groesbeek\, Wylerbaan 4\, 6561 KR Groesbeek
+END:VEVENT
+END:VCALENDAR

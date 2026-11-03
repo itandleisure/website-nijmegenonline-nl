@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:dansavond-met-jan-kersten-3@nijmegenonline.nl
+DTSTAMP:20260904T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260908T193000
+DTEND;TZID=Europe/Amsterdam:20260908T223000
+SUMMARY:Dansavond met Jan Kersten
+URL:https://www.nijmegenonline.nl/events/dansavond-met-jan-kersten-3/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/dansavond-met-jan-kersten-3/
+LOCATION:OBG Nijmegen\, Prof. Cornelissenstraat 2
+END:VEVENT
+END:VCALENDAR

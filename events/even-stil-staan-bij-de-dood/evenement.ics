@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:even-stil-staan-bij-de-dood@nijmegenonline.nl
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261101T120000
+DTEND;TZID=Europe/Amsterdam:20261101T130000
+SUMMARY:Even stil staan bij de dood
+URL:https://www.nijmegenonline.nl/events/even-stil-staan-bij-de-dood/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/even-stil-staan-bij-de-dood/
+LOCATION:Stevenskerk Nijmegen\, Sint Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR

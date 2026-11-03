@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:glaskunst-en-schilderijen-in-het-kerkje-van-persingen@nijmegenonline.nl
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=Europe/Amsterdam:20260829T110000
+DTEND;TZID=Europe/Amsterdam:20260829T170000
+SUMMARY:Glaskunst en schilderijen in het Kerkje van Persingen
+URL:https://www.nijmegenonline.nl/events/glaskunst-en-schilderijen-in-het-kerkje-van-persingen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/glaskunst-en-schilderijen-in-het-kerkje-van-persingen/
+LOCATION:Kerkje van Persingen\, Persingense straat 7 Persingen
+END:VEVENT
+END:VCALENDAR
