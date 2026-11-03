@@ -2568,6 +2568,9 @@ def pakketten_toepassen(bedrijven, pad, vandaag):
         if p.get("fotos"):
             b["foto"] = b["foto"] or p["fotos"][0]
             b["fotos"] = [f for f in p["fotos"] if f != b["foto"]]
+        elif b.get("fotos_aangeleverd"):
+            # Geen foto's in het pakket zelf: dan de foto's die het bedrijf via het formulier meestuurde
+            b["fotos"] = b["fotos_aangeleverd"]
         if (p.get("knop") or {}).get("link"):
             b["knop"] = p["knop"]
         actie = p.get("actie") or {}
@@ -2925,6 +2928,9 @@ def wijzigingen_toepassen(bedrijven, pad):
         if w.get("omschrijving"):
             b["tekst"] = "\n".join("<p>%s</p>" % esc(a.strip()).replace("\n", "<br>") for a in re.split(r"\n\s*\n", w["omschrijving"]) if a.strip())
             b["concept"] = False
+        if w.get("fotos"):
+            # Meer foto's via het formulier: alleen zichtbaar met een betaald pakket (pakketten_toepassen)
+            b["fotos_aangeleverd"] = [f["foto"] for f in w["fotos"] if f.get("foto")]
         if w.get("openingstijden"):
             b["openingstijden"] = []
             b["tijden_site"] = w["openingstijden"]

@@ -62,13 +62,18 @@ var FORMULIEREN = {
   },
   bedrijf: {
     tabblad: 'Bedrijven', bewaarMaanden: 3, onderwerp: 'Aanmelding bedrijvengids', goedkeuren: true,
-    openbaar: ['vermelding', 'bedrijf', 'categorie', 'adres', 'postcode', 'plaats', 'land', 'site', 'telefoon', 'bedrijfsmail', 'openingstijden', 'omschrijving'],
+    openbaar: ['vermelding', 'bedrijf', 'categorie', 'adres', 'postcode', 'plaats', 'land', 'site', 'telefoon', 'bedrijfsmail', 'openingstijden', 'omschrijving',
+      'fotogebruik'],
     velden: [['bedrijf', 'Bedrijf'], ['categorie', 'Soort bedrijf'], ['adres', 'Adres'], ['postcode', 'Postcode'],
       ['plaats', 'Plaats'], ['land', 'Land'], ['site', 'Website'],
       ['telefoon', 'Telefoon'], ['bedrijfsmail', 'E-mail bedrijf'], ['openingstijden', 'Openingstijden'],
       ['omschrijving', 'Omschrijving'], ['foto', 'Logo of foto'], ['naam', 'Contactpersoon'], ['email', 'E-mail'],
       ['pakket', 'Pakket'],            // gratis, uitgelicht of partner
-      ['vermelding', 'Bestaande vermelding']]   // slug van de pagina in de gids, via de knop Dit is mijn bedrijf
+      ['vermelding', 'Bestaande vermelding'],   // slug van de pagina in de gids, via de knop Dit is mijn bedrijf
+      // Tot 5 foto's per aanmelding: de eerste is "foto", de rest staat hier (Drive-ID's). Gratis toont alleen de eerste,
+      // Uitgelicht en Partner alle (tools/bedrijvengids.py). fotogebruik = toestemming om ze ook in artikelen te gebruiken.
+      ['extrafotos', "Andere foto's (Drive-ID's)"], ['fotocredits', "Bijschriften andere foto's"],
+      ['fotogebruik', "Foto's ook in artikelen"]]
   },
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 3, onderwerp: 'Evenement aangemeld', goedkeuren: true,
@@ -123,6 +128,9 @@ var FORMULIEREN = {
 var EXTRA = ['Status', 'ID', 'Foto-ID', 'Tekst site', 'Controle'];
 var WACHT = 'Wacht op akkoord';
 
+// Hoeveel foto's een formulier met "multiple" hooguit meestuurt (zie MAX_BEDRIJFSFOTOS in tools/paginas.py)
+var MAX_FOTOS = 5;
+
 // Map in Google Drive voor meegestuurde foto's (wordt vanzelf aangemaakt)
 var FOTOMAP = "NijmegenOnline formulierfoto's";
 
@@ -160,6 +168,22 @@ function doPost(e) {
     }
   } else {
     g.foto = '';
+  }
+  // Meer foto's tegelijk (bedrijvengids): foto_2 t/m foto_5 komen in extrafotos, elk met de bedrijfsnaam als bijschrift
+  if (cfg.velden.some(function (v) { return v[0] === 'extrafotos'; })) {
+    var extra = [], cr = {};
+    for (var n = 2; n <= MAX_FOTOS; n++) {
+      if (!/^data:image\/(jpeg|png|webp);base64,/.test(p['foto_' + n] || '')) continue;
+      try {
+        var los = bewaarFoto(p['foto_' + n], schoon(p['foto_' + n + '_naam'], 100) || 'foto', g.titel || g.bedrijf || g.naam);
+        extra.push(los.getId());
+        if (g.bedrijf) cr[los.getId()] = 'Foto: ' + g.bedrijf;
+      } catch (fout) {
+        console.error('Foto ' + n + ' opslaan mislukt: ' + fout);
+      }
+    }
+    g.extrafotos = extra.join(',');
+    g.fotocredits = extra.length ? JSON.stringify(cr) : '';
   }
 
   // Controles (gelijk aan verzenden.php)
@@ -867,7 +891,7 @@ function bewerkPagina(type, id) {
       '<button type="button" class="kies" data-id="' + html_(fid) + '" onclick="kiesFoto(this)">Hoofdfoto maken</button></div></div>';
   }).join('');
   if (andere) {
-    foto += '<p><b>Andere foto\'s uit de mail</b> (komen onder de tekst, in deze volgorde)</p>' + andere +
+    foto += '<p><b>Andere foto\'s' + (type === 'bedrijf' ? '' : ' uit de mail') + '</b> (komen onder de tekst, in deze volgorde)</p>' + andere +
       '<input type="hidden" name="kiesfoto" id="kiesfoto" value="">';
   }
 
@@ -1511,6 +1535,13 @@ function label(cfg, veld) {
 function stuurMail(cfg, g, onderwerp) {
   var rijen = cfg.velden.filter(function (v) { return ['extrafotos', 'fotocredits', 'berichtid'].indexOf(v[0]) < 0; })
     .map(function (v) { return [v[1], g[v[0]]]; }).concat([['Pagina', g.pagina]]);
+  // Andere foto's (bedrijvengids): als links naar Drive, de foto's zelf staan op de beoordeelpagina
+  var andereFotos = String(g.extrafotos || '').split(',').filter(String);
+  if (andereFotos.length) {
+    rijen.splice(cfg.velden.map(function (v) { return v[0]; }).indexOf('foto') + 1, 0, ["Andere foto's", andereFotos.map(function (fid) {
+      return 'https://drive.google.com/file/d/' + fid + '/view';
+    }).join('\n')]);
+  }
   var stijl = 'font-family:Arial,sans-serif;font-size:14px';
   var html = '<table cellpadding="6" style="border-collapse:collapse;' + stijl + '">' +
     rijen.filter(function (r) { return r[1]; }).map(function (r) {

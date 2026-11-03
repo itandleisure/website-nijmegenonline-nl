@@ -46,7 +46,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
   function mailknop() {
     var regels = [];
     form.querySelectorAll("input[id], select[id], textarea[id], fieldset input:checked").forEach(function (v) {
-      if (v.type === "file") { if (v.files.length) regels.push(label(v) + ": stuur de foto mee als bijlage"); return; }
+      if (v.type === "file") { if (v.files.length) regels.push(label(v) + (v.files.length > 1 ? ": stuur de foto's mee als bijlage" : ": stuur de foto mee als bijlage")); return; }
       if (v.value.trim()) regels.push(label(v) + ": " + v.value.trim());
     });
     location.href = "mailto:" + form.dataset.email + "?subject=" + encodeURIComponent(form.dataset.onderwerp) +
@@ -91,7 +91,14 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       return v.type !== "radio" || alle.findIndex(function (w) { return w.name === v.name; }) === i;
     });
     var foto = form.querySelector('input[type="file"]');
-    if (foto && foto.files.length && foto.files[0].size > MAX_FOTO) { meld("De foto is groter dan 10 MB. Kies een kleinere foto.", true); foto.focus(); return; }
+    // Met "multiple" (bedrijvengids) mogen er meer foto's mee, hooguit data-max; de eerste is de hoofdfoto
+    var bestanden = foto ? Array.prototype.slice.call(foto.files) : [];
+    var maxFotos = foto && foto.multiple ? parseInt(foto.dataset.max, 10) || 5 : 1;
+    if (bestanden.length > maxFotos) { meld("Kies hooguit " + maxFotos + " foto's.", true); foto.focus(); return; }
+    if (bestanden.some(function (b) { return b.size > MAX_FOTO; })) {
+      meld(bestanden.length > 1 ? "Een van de foto's is groter dan 10 MB. Kies een kleinere foto." : "De foto is groter dan 10 MB. Kies een kleinere foto.", true);
+      foto.focus(); return;
+    }
     if (ontbreekt.length) { meld("Vul alle velden met een * in.", true); ontbreekt[0].focus(); return; }
     var email = Array.prototype.filter.call(form.querySelectorAll('input[type="email"]'), function (v) {
       return (v.required || v.value.trim()) && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v.value.trim());
@@ -126,14 +133,18 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     var stop = new AbortController();
     var timer;
     var gegevens = new URLSearchParams();
-    var fotoKlaar = foto && foto.files.length ? leesFoto(foto.files[0]) : Promise.resolve("");
-    fotoKlaar
-      .then(function (data) {
+    Promise.all(bestanden.map(leesFoto))
+      .then(function (fotos) {
         new FormData(form).forEach(function (waarde, sleutel) {
           if (typeof waarde === "string") gegevens.append(sleutel, waarde);
         });
-        if (data.length > 7 * 1024 * 1024) throw new Error("foto");
-        if (data) { gegevens.append(foto.name, data); gegevens.append(foto.name + "_naam", foto.files[0].name); }
+        // De eerste als "foto", de andere als "foto_2", "foto_3" enzovoort (Code.gs zet ze in Drive)
+        fotos.forEach(function (data, i) {
+          if (data.length > 7 * 1024 * 1024) throw new Error("foto");
+          var veld = i ? foto.name + "_" + (i + 1) : foto.name;
+          gegevens.append(veld, data);
+          gegevens.append(veld + "_naam", bestanden[i].name);
+        });
         timer = setTimeout(function () { stop.abort(); }, 90000);
         return fetch(form.dataset.url, { method: "POST", body: gegevens, signal: stop.signal });
       })
