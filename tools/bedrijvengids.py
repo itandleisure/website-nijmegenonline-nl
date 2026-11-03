@@ -2913,6 +2913,15 @@ def websites_toepassen(bedrijven, pad):
             b["website"] = c["eind_url"]
 
 
+def emails_toepassen(bedrijven, pad):
+    """Mailadressen die we op de eigen website van het bedrijf vonden (data/bedrijvengids-emails.json), alleen als
+    het bedrijf er nog geen had. Een adres via Dit is mijn bedrijf gaat daarna weer voor (wijzigingen_toepassen)."""
+    mails = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
+    for b in bedrijven:
+        if not b.get("email") and mails.get(b["slug"]):
+            b["email"] = mails[b["slug"]]
+
+
 def wijzigingen_toepassen(bedrijven, pad):
     """Door de redactie goedgekeurde wijzigingen via Dit is mijn bedrijf (tools/aanmeldingen.py). Die gaan voor
     op alles wat we zelf verzamelden (oude gids, OpenStreetMap, websitescan)."""
@@ -3136,6 +3145,7 @@ def main(bron):
         scan_toepassen(gids, ROOT / "data" / "bedrijvengids-scan.json", eigen_tekst=True)
         correcties_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-correcties.json")
         websites_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-websites.json")
+        emails_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-emails.json")
         wijzigingen_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-wijzigingen.json")
         pakketten_toepassen(gids + overig, ROOT / "data" / "bedrijvengids-pakketten.json", datetime.date.today())
         # Zonder werkende website geen vermelding (afgesproken met Frans, 23-10-2026): het bedrijf bestaat dan
