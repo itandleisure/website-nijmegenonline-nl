@@ -124,10 +124,13 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=12" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=14" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
+
+# Keuzes voor het verplichte fotobijschrift; bij de laatste vult de inzender een naam in (zie formulier.js)
+FOTOBRONNEN = ["Eigen foto", "Rechtenvrije afbeelding", "Fotocredits bij:"]
 
 KWARTIEREN = ["%02d:%02d" % (u, m) for u in range(24) for m in (0, 15, 30, 45)]
 
@@ -190,6 +193,17 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
                        'je evenement ook op je bedrijfspagina. Staat het er niet in, laat dit veld dan leeg.</p>',
                        '            <input type="hidden" name="%s" value="">' % veld,
                        '          </div>']
+        elif soort == "fotobron":
+            # Verplicht bijschrift bij de foto: één keuze, niets vooraf gekozen. Bij de laatste keuze (fotocredits)
+            # moet er een naam bij; formulier.js toont dat veld en zet het bijschrift in het verborgen veld (veld).
+            regels.append('          <fieldset class="formulier__keuzes" data-fotobron><legend>%s%s</legend>' % (esc(label), ster))
+            regels += ['            <label><input type="radio" name="fotobron" value="%s"%s> %s</label>' % (esc(o), req, esc(o)) for o in opties]
+            regels.append("          </fieldset>")
+            regels.append('          <div class="formulier__fotocredit" data-fotocredit hidden>'
+                          '<label for="%s-credit">Naam van de fotograaf of bron%s</label>'
+                          '<input id="%s-credit" name="fotocredit" type="text" autocomplete="off" placeholder="Bijvoorbeeld Jan Jansen"></div>'
+                          % (id_, ster, id_))
+            regels.append('          <input type="hidden" name="%s" value="">' % veld)
         elif soort == "verborgen":
             regels.append('          <input type="hidden" name="%s" value="">' % veld)
         elif soort == "bestand":
@@ -321,7 +335,7 @@ def evenement_aanmelden():
         <h2>Zo werkt het</h2>
         <ul>
           <li>Vul het formulier zo volledig mogelijk in. Hoe meer we weten, hoe beter we je evenement kunnen laten zien.</li>
-          <li>Voeg een rechtenvrije foto van het evenement toe. Zonder foto kunnen we het helaas niet plaatsen.</li>
+          <li>Voeg een foto van het evenement toe en geef aan van wie die is: je eigen foto, een rechtenvrije afbeelding of een foto van een fotograaf (dan vermelden we de naam). Zonder foto kunnen we het helaas niet plaatsen.</li>
           <li>Onze redactie bekijkt elke aanmelding. Soms schaven we de tekst wat bij, zodat die goed op de website past.</li>
           <li>Je krijgt een e-mail zodra je evenement online staat, of als we het niet kunnen plaatsen.</li>
         </ul>
@@ -347,7 +361,8 @@ def evenement_aanmelden():
         ("evenementmail", "E-mailadres", "email", False, None),
         ("evenementtelefoon", "Telefoonnummer", "tel", False, None),
         ("kop", "Foto", "kop", False, None),
-        ("foto", "Foto van het evenement", "bestand", True, "Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 10 MB."),
+        ("foto", "Foto van het evenement", "bestand", True, "Een foto die we mogen gebruiken, liefst liggend. JPG, PNG of WebP, maximaal 10 MB."),
+        ("bijschrift", "Bijschrift bij de foto", "fotobron", True, FOTOBRONNEN),
         ("kop", "Jouw gegevens", "kop", False, "Deze gegevens komen niet op de website. We gebruiken ze alleen als we nog vragen hebben over je aanmelding."),
         ("naam", "Je naam", "text", True, None),
         ("email", "Je e-mailadres", "email", True, None),

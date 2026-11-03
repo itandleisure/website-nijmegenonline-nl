@@ -147,6 +147,11 @@ function doPost(e) {
   if (type === 'contact' && !g.bericht) fouten.push('bericht');
   if (type === 'evenement') {
     if (!g.einddatum) g.einddatum = g.datum;
+    // Verplicht fotobijschrift (formulier.js zet het in "bijschrift"); anders opbouwen uit de keuze en de naam
+    if (!g.bijschrift && p.fotobron) {
+      g.bijschrift = /^Fotocredits/.test(p.fotobron) ? (p.fotocredit ? 'Foto: ' + schoon(p.fotocredit, 200) : '') : schoon(p.fotobron, 100);
+    }
+    if (g.foto && !g.bijschrift) fouten.push('bijschrift');
     ['titel', 'datum', 'starttijd', 'einddatum', 'eindtijd', 'omschrijving', 'locatie', 'adres', 'postcode', 'plaats', 'telefoon'].forEach(function (v) { if (!g[v]) fouten.push(v); });
   }
   if (type === 'bedrijf') {

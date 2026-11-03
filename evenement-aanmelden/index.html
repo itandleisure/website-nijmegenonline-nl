@@ -113,7 +113,7 @@
         <h2>Zo werkt het</h2>
         <ul>
           <li>Vul het formulier zo volledig mogelijk in. Hoe meer we weten, hoe beter we je evenement kunnen laten zien.</li>
-          <li>Voeg een rechtenvrije foto van het evenement toe. Zonder foto kunnen we het helaas niet plaatsen.</li>
+          <li>Voeg een foto van het evenement toe en geef aan van wie die is: je eigen foto, een rechtenvrije afbeelding of een foto van een fotograaf (dan vermelden we de naam). Zonder foto kunnen we het helaas niet plaatsen.</li>
           <li>Onze redactie bekijkt elke aanmelding. Soms schaven we de tekst wat bij, zodat die goed op de website past.</li>
           <li>Je krijgt een e-mail zodra je evenement online staat, of als we het niet kunnen plaatsen.</li>
         </ul>
@@ -162,7 +162,14 @@
           <h3 class="formulier__kop">Foto</h3>
           <label for="evenement-foto">Foto van het evenement <span aria-hidden="true">*</span></label>
           <input id="evenement-foto" name="foto" type="file" accept="image/jpeg,image/png,image/webp" required>
-          <p class="formulier__hint">Een rechtenvrije foto, liefst liggend. JPG, PNG of WebP, maximaal 10 MB.</p>
+          <p class="formulier__hint">Een foto die we mogen gebruiken, liefst liggend. JPG, PNG of WebP, maximaal 10 MB.</p>
+          <fieldset class="formulier__keuzes" data-fotobron><legend>Bijschrift bij de foto <span aria-hidden="true">*</span></legend>
+            <label><input type="radio" name="fotobron" value="Eigen foto" required> Eigen foto</label>
+            <label><input type="radio" name="fotobron" value="Rechtenvrije afbeelding" required> Rechtenvrije afbeelding</label>
+            <label><input type="radio" name="fotobron" value="Fotocredits bij:" required> Fotocredits bij:</label>
+          </fieldset>
+          <div class="formulier__fotocredit" data-fotocredit hidden><label for="evenement-bijschrift-credit">Naam van de fotograaf of bron <span aria-hidden="true">*</span></label><input id="evenement-bijschrift-credit" name="fotocredit" type="text" autocomplete="off" placeholder="Bijvoorbeeld Jan Jansen"></div>
+          <input type="hidden" name="bijschrift" value="">
           <h3 class="formulier__kop">Jouw gegevens</h3>
           <p class="formulier__hint">Deze gegevens komen niet op de website. We gebruiken ze alleen als we nog vragen hebben over je aanmelding.</p>
           <label for="evenement-naam">Je naam <span aria-hidden="true">*</span></label>
@@ -229,7 +236,7 @@
       </div>
     </div>
   </main>
-  <script src="../assets/js/formulier.js?v=12" defer></script>
+  <script src="../assets/js/formulier.js?v=14" defer></script>
 
   <!-- footer -->
   <footer>

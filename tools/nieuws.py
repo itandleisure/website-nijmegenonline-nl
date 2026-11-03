@@ -222,8 +222,8 @@ def overzicht(berichten):
         out.append('      <section class="gids-sectie">\n        <h2>Archief</h2>\n'
                    '        <p>Ouder nieuws per jaar, ook het archief van nieuwsnijmegen.nl (2006 tot 2024).</p>\n'
                    '        <ul class="jarenlijst">')
-        out.extend('          <li><a href="%s/%s/">%s</a> <span>%d</span></li>'
-                   % (j, j, j, sum(1 for b in berichten if b["datum"][:4] == j)) for j in jaren)
+        out.extend('          <li><a href="%s/">%s</a> <span>%d</span></li>'
+                   % (j, j, sum(1 for b in berichten if b["datum"][:4] == j)) for j in jaren)
         out.append("        </ul>\n      </section>")
     out.append('      <div class="partner-slider" data-plaatsing="blog"></div>')
     out.append("    </div>\n  </main>")
