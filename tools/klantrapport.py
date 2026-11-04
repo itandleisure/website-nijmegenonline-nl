@@ -205,6 +205,19 @@ def rapport(b, pakket, nu, toen, van, tot, voorbeeld):
        "melding": melding, "regels": "\n".join(regels), "url": url, "legenda": legenda(nu)}
 
 
+def mailen(inhoud, onderwerp):
+    """Stuurt het rapport naar de redactie. Het Apps Script (actie 'rapport') mailt alleen naar
+    redactie@nijmegenonline.nl; een klantadres kan hier niet worden meegegeven."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from paginas import GOOGLE_FORM_URL
+    r = requests.post(GOOGLE_FORM_URL, data={"actie": "rapport", "sleutel": os.environ["NIEUWS_SLEUTEL"],
+                                             "onderwerp": onderwerp, "html": inhoud}, timeout=120)
+    r.raise_for_status()
+    antwoord = r.json()
+    if not antwoord.get("ok"):
+        raise RuntimeError("mailen mislukt: %s" % antwoord)
+
+
 def main():
     a = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     a.add_argument("--bedrijf", action="append", default=[], help="slug uit /bedrijvengids/<slug>/")
@@ -214,6 +227,8 @@ def main():
     a.add_argument("--tot", type=datetime.date.fromisoformat)
     a.add_argument("--voorbeeld", action="store_true", help="verzonnen cijfers, zonder Analytics")
     a.add_argument("--uit", default=str(ROOT / "rapporten"))
+    a.add_argument("--mail", action="store_true",
+                   help="mail elk rapport naar de redactie (redactie@nijmegenonline.nl) via het Apps Script; nooit naar de klant. Nodig: NIEUWS_SLEUTEL")
     args = a.parse_args()
 
     pakketten = json.loads((ROOT / "data" / "bedrijvengids-pakketten.json").read_text())
@@ -246,6 +261,10 @@ def main():
         pad = map_ / ("%s.html" % slug)
         pad.write_text(rapport(b, pakket, nu, toen, van, tot, args.voorbeeld))
         print("%s: %d weergaven, %d kliks → %s" % (slug, nu["weergaven"], nu["kliks"], pad))
+        if args.mail:
+            mailen(pad.read_text(), "Klantrapport %s (%s t/m %s)%s" % (b["naam"], van.isoformat(), tot.isoformat(),
+                                                                       " [VOORBEELD]" if args.voorbeeld else ""))
+            print("  gemaild naar de redactie")
 
 
 if __name__ == "__main__":

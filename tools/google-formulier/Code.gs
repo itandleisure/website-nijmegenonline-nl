@@ -141,6 +141,7 @@ function doPost(e) {
   var p = (e && e.parameter) || {};
   var lijsten = (e && e.parameters) || {};   // meerdere waarden, bijv. aangevinkte keuzes
   if (p.actie === 'nieuws') return nieuwsOntvangen(p);
+  if (p.actie === 'rapport') return rapportOntvangen(p);
 
   // Verborgen veld ingevuld of binnen 3 seconden na openen verstuurd = spambot: doen alsof het gelukt is.
   // "duur" is de invultijd in milliseconden, gemeten in de browser (onafhankelijk van de klok).
@@ -573,6 +574,18 @@ function maakNieuwsSleutel() {
     props.setProperty('NIEUWS_SLEUTEL', sleutel);
   }
   console.log('Zet deze waarde in GitHub als secret NIEUWS_SLEUTEL: ' + sleutel);
+}
+
+// Een klantrapport van tools/klantrapport.py --mail: alleen naar de redactie (ONTVANGER), nooit naar de klant.
+// p: sleutel (zelfde NIEUWS_SLEUTEL als bij het nieuws), onderwerp, html.
+function rapportOntvangen(p) {
+  var sleutel = PropertiesService.getScriptProperties().getProperty('NIEUWS_SLEUTEL');
+  if (!sleutel || p.sleutel !== sleutel) return antwoord({ ok: false, fout: 'sleutel' });
+  var html = String(p.html || '');
+  if (!html || html.length > 200000) return antwoord({ ok: false, fout: 'html' });
+  MailApp.sendEmail({ to: ONTVANGER, subject: schoon(p.onderwerp, 200) || 'Klantrapport', htmlBody: html,
+                      body: 'Dit klantrapport is in HTML; open de mail in een programma dat HTML toont.', name: AFZENDER_NAAM });
+  return antwoord({ ok: true });
 }
 
 // Een doorgestuurde mail van tools/nieuws_ophalen.py: opslaan, door Claude laten herschrijven en de redactie

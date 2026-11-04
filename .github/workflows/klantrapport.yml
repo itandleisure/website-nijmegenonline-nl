@@ -1,6 +1,8 @@
 # Maakt op verzoek klantrapporten (tools/klantrapport.py) en zet ze als download bij de run (Actions → run → Artifacts).
 # Nodig: secret GSC_SERVICE_ACCOUNT_JSON (hetzelfde serviceaccount als de statistiekpagina), met de rol Lezer
 # op Google Analytics-property 337370292. De rapporten komen niet in de repo, want die is openbaar.
+# Elk rapport wordt ook gemaild naar redactie@nijmegenonline.nl (nooit naar de klant), via het Apps Script
+# met de secret NIEUWS_SLEUTEL.
 name: Klantrapport maken
 
 on:
@@ -38,12 +40,13 @@ jobs:
       - name: Rapporten maken
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          NIEUWS_SLEUTEL: ${{ secrets.NIEUWS_SLEUTEL }}
           BEDRIJF: ${{ inputs.bedrijf }}
           PARTNER: ${{ inputs.partner }}
           VAN: ${{ inputs.van }}
           TOT: ${{ inputs.tot }}
         run: |
-          args=()
+          args=(--mail)
           if [ -n "$BEDRIJF" ]; then args+=(--bedrijf "$BEDRIJF"); else args+=(--alle); fi
           [ -n "$PARTNER" ] && args+=(--partner "$PARTNER")
           [ -n "$VAN" ] && args+=(--van "$VAN")
