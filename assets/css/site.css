@@ -758,3 +758,11 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .stadskaart-lijst li { margin: 3px 0; break-inside: avoid; }
 .stadskaart-lijst li span { color: var(--grijs); font-size: 0.88rem; }
 @media (max-width: 700px) { .stadskaart { height: 440px; } }
+
+/* /aanmelden/: keuzekaarten naar de formulieren (tools/paginas.py, AANMELDEN) */
+.aanmelden { margin: 24px 0 8px; }
+@media (min-width: 640px) { .aanmelden { grid-template-columns: repeat(2, 1fr); } }
+.aanmelden .kaart a { display: flex; flex-direction: column; }
+.aanmelden .kaart p { flex: 1; }
+.kaart__knop { align-self: flex-start; margin-top: 14px; background: var(--groen); color: #fff; font-weight: 700; padding: 8px 16px; border-radius: 6px; font-size: 0.95rem; }
+.kaart a:hover .kaart__knop { background: var(--blauw); }

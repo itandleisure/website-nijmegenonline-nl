@@ -111,8 +111,8 @@ var FORMULIEREN = {
       // Niet in het formulier: de werkgever kiest verlengen of sluiten via de link in de mail (zie beheerPagina)
       ['wijziging', 'Verlengen of sluiten']]
   },
-  // Geen formulier op de site: mails die de redactie doorstuurt naar nieuws@nijmegenonline.nl.
-  // tools/nieuws_ophalen.py (GitHub, elke 15 minuten) stuurt ze hierheen, zie nieuwsOntvangen().
+  // Mails die de redactie doorstuurt naar nieuws@nijmegenonline.nl (tools/nieuws_ophalen.py, elke 15 minuten,
+  // zie nieuwsOntvangen()) en het formulier op /nieuws-insturen/ (gewone doPost met form=nieuws).
   nieuws: {
     tabblad: 'Nieuws', bewaarMaanden: 3, onderwerp: 'Nieuwsbericht', goedkeuren: true,
     openbaar: ['titel', 'samenvatting', 'bijschrift', 'omschrijving', 'bedrijf'],
@@ -214,7 +214,35 @@ function doPost(e) {
     if (!g.bedrijf) fouten.push('bedrijf');
     if (!g.telefoon) fouten.push('telefoon');
   }
+  if (type === 'nieuws') {
+    ['titel', 'omschrijving'].forEach(function (v) { if (!g[v]) fouten.push(v); });
+    if (g.foto && !g.bijschrift) fouten.push('bijschrift');
+  }
   if (fouten.length) return antwoord({ ok: false, fout: 'velden', velden: fouten });
+
+  // Nieuws via het formulier op /nieuws-insturen/: net als een doorgestuurde mail laat Claude het in eigen woorden
+  // schrijven. Naam en e-mail komen uit het formulier, niet uit de tekst.
+  if (type === 'nieuws') {
+    g.onderwerp = g.titel;
+    g.berichtid = '';
+    var controle = [];
+    if (apiSleutel()) {
+      try {
+        var ai = herschrijfNieuws(g, '');
+        g.titel = ai.titel || g.titel;
+        g.samenvatting = ai.samenvatting;
+        g.bijschrift = g.bijschrift || ai.bijschrift;
+        g.tekstSite = ai.tekst;
+        controle = ai.controle;
+      } catch (fout) {
+        controle.push('Claude kon het bericht niet herschrijven (' + fout.message + '). Probeer het op de beoordeelpagina opnieuw.');
+      }
+    } else {
+      controle.push('Er is geen ANTHROPIC_API_KEY ingesteld, dus de tekst is niet herschreven.');
+    }
+    if (!g.fotoId) controle.push('Er zat geen foto bij het bericht.');
+    g.controle = controle.join('\n');
+  }
 
   // 1. Opslaan in de spreadsheet (slot voorkomt dat twee inzendingen tegelijk botsen)
   var slot = LockService.getScriptLock();
@@ -225,7 +253,7 @@ function doPost(e) {
     }));
     if (cfg.goedkeuren) {
       g.id = Utilities.getUuid().slice(0, 8);
-      rij = rij.concat([WACHT, g.id, g.fotoId || '', '', '']);
+      rij = rij.concat([WACHT, g.id, g.fotoId || '', veiligVoorSheet(g.tekstSite || ''), veiligVoorSheet(g.controle || '')]);
     }
     blad(cfg).appendRow(rij);
   } finally {
