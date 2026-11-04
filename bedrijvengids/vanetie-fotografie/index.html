@@ -117,7 +117,8 @@
         <h2><strong>Venetie Fotografie – Fotografie met passie en beleving in Nijmegen</strong></h2>
         <p>Op zoek naar een gepassioneerde fotograaf in Nijmegen? Henk Vanetie van <strong>Venetie Fotografie</strong> legt met veel enthousiasme en oog voor detail de mooiste momenten vast. Of het nu gaat om een <strong>portretshoot, loveshoot, familyshoot</strong> of een unieke <strong>fotowandeling door Nijmegen</strong>, Henk zorgt ervoor dat elke foto een verhaal vertelt.</p>
         <h3><strong>Wat biedt Ventie Fotografie?</strong></h3>
-        <ul><p><li><strong>Fotoshoots op maat</strong> – Portretten, loveshoots en familieshoots met een persoonlijke touch.</li></p>
+        <ul>
+        <p><li><strong>Fotoshoots op maat</strong> – Portretten, loveshoots en familieshoots met een persoonlijke touch.</li></p>
         <p><li><strong>Fotowandelingen &amp; workshops</strong> – Ontdek Nijmegen en de omliggende natuur op een unieke manier.</li></p>
         <p><li><strong>Creatieve en spontane fotografie</strong> – Altijd met oog voor detail en sfeer.</li></p>
         <p><li><strong>Connected-by-the-Light concept</strong> – Een bijzondere fotoshoot waarbij licht en emotie samenkomen.</li></p>
@@ -259,6 +260,27 @@
       <p>&copy; NijmegenOnline</p>
     </div>
   </footer>
+  <!-- Meting voor het klantrapport (tools/klantrapport.py): elke uitgelichte bedrijfskaart die echt in beeld komt (de helft
+       zichtbaar), telt één keer per paginabezoek als "bedrijf_in_lijst" in Google Analytics. Alleen betaalde kaarten. -->
+  <script>
+  (function () {
+    if (!("IntersectionObserver" in window)) return;
+    var kaarten = document.querySelectorAll("a.bedrijfkaart--uitgelicht[href*='bedrijvengids/']");
+    if (!kaarten.length) return;
+    var gezien = {};
+    var kijker = new IntersectionObserver(function (items) {
+      items.forEach(function (i) {
+        if (!i.isIntersecting || typeof window.gtag !== "function") return;
+        kijker.unobserve(i.target);
+        var m = i.target.getAttribute("href").match(/bedrijvengids\/([^\/]+)\//);
+        if (!m || gezien[m[1]]) return;
+        gezien[m[1]] = true;
+        window.gtag("event", "bedrijf_in_lijst", { bedrijf: m[1] });
+      });
+    }, { threshold: 0.5 });
+    kaarten.forEach(function (k) { kijker.observe(k); });
+  })();
+  </script>
   <!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknoppen in de zijbalk en de footer (pop-upformulier qG49m3) -->
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])

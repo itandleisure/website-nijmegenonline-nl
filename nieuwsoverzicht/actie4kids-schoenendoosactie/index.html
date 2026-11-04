@@ -235,6 +235,27 @@ Nijmegen, 29 oktober 2017<h2>EEN ACTIE4KIDS SCHOENENDOOS:
       <p>&copy; NijmegenOnline</p>
     </div>
   </footer>
+  <!-- Meting voor het klantrapport (tools/klantrapport.py): elke uitgelichte bedrijfskaart die echt in beeld komt (de helft
+       zichtbaar), telt één keer per paginabezoek als "bedrijf_in_lijst" in Google Analytics. Alleen betaalde kaarten. -->
+  <script>
+  (function () {
+    if (!("IntersectionObserver" in window)) return;
+    var kaarten = document.querySelectorAll("a.bedrijfkaart--uitgelicht[href*='bedrijvengids/']");
+    if (!kaarten.length) return;
+    var gezien = {};
+    var kijker = new IntersectionObserver(function (items) {
+      items.forEach(function (i) {
+        if (!i.isIntersecting || typeof window.gtag !== "function") return;
+        kijker.unobserve(i.target);
+        var m = i.target.getAttribute("href").match(/bedrijvengids\/([^\/]+)\//);
+        if (!m || gezien[m[1]]) return;
+        gezien[m[1]] = true;
+        window.gtag("event", "bedrijf_in_lijst", { bedrijf: m[1] });
+      });
+    }, { threshold: 0.5 });
+    kaarten.forEach(function (k) { kijker.observe(k); });
+  })();
+  </script>
   <!-- MailerLite Universal (account 364874): nodig voor de nieuwsbriefknoppen in de zijbalk en de footer (pop-upformulier qG49m3) -->
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
