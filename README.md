@@ -164,7 +164,8 @@ De nieuwsberichten staan in `data/nieuws.json`; `python tools/nieuws.py` bouwt d
 het overzicht `/nieuwsberichten/` en het nieuwsblok op de homepage (daarna `tools/build.py`).
 `tools/import_nieuws.py` maakt die lijst opnieuw uit de WordPress-export en overschrijft dan ook nieuwere berichten.
 
-Nieuw nieuws komt per mail binnen:
+Nieuw nieuws komt binnen via het formulier op `/nieuws-insturen/` (formulier `nieuws` in `tools/google-formulier/Code.gs`;
+Claude herschrijft het net als een mail, daarna gaat het verder vanaf stap 3 hieronder) of per mail:
 
 1. De redactie stuurt een ingezonden mail door naar **nieuws@nijmegenonline.nl** (Vimexx).
 2. Elke 15 minuten haalt GitHub die mails op (`.github/workflows/nieuws-ophalen.yml`, `tools/nieuws_ophalen.py`):
@@ -213,7 +214,7 @@ workflow met test = ja.
 
 ## Losse pagina's en formulieren
 
-`tools/paginas.py` maakt Kom in contact, Adverteren (met de vergelijking), de vacatures, Algemene voorwaarden,
+`tools/paginas.py` maakt Kom in contact, Aanmelden (`/aanmelden/`: één pagina met doorklikkaarten naar alle formulieren), Nieuws insturen, Adverteren (met de vergelijking), de vacatures, Algemene voorwaarden,
 Bedrijf aanmelden en Evenement aanmelden, met de teksten uit de
 WordPress-export. Een vacature open of dicht zetten: pas `VACATURES` bovenin dat script aan en draai
 `python tools/paginas.py && python tools/build.py`.

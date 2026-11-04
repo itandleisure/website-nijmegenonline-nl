@@ -420,6 +420,66 @@ def evenement_aanmelden():
                   "evenement-aanmelden", '<a href="../nijmegen-evenementen-overzicht/">Agenda</a> › Evenement aanmelden', inhoud)
 
 
+def nieuws_insturen():
+    inhoud = """        <h1>Nieuws insturen</h1>
+        <p class="pagina__intro">Heb je nieuws uit Nijmegen of de regio? Een persbericht, een opening, een mijlpaal van je vereniging of een tip voor de redactie? Stuur het hier in.</p>
+        <h2>Zo werkt het</h2>
+        <ul>
+          <li>Vul de kop en je bericht in. Een persbericht kun je er gewoon in plakken.</li>
+          <li>Een foto maakt je bericht sterker. Geef aan van wie de foto is, dan zetten we dat erbij.</li>
+          <li>De redactie bekijkt elk bericht en schrijft het waar nodig in eigen woorden, zodat het goed op de website past.</li>
+          <li>Je krijgt een e-mail met de link zodra je bericht online staat.</li>
+        </ul>
+        <p>Gaat het om een evenement? <a href="../evenement-aanmelden/">Meld het aan voor de agenda</a>, dan komt het met datum en locatie in de agenda. Promotionele berichten van bedrijven plaatsen we kosteloos voor <a href="../adverteren-bij-nijmegenonline/">klanten</a>.</p>
+        <h2>Je bericht</h2>
+{formulier}""".format(formulier=formulier("nieuws", "Nieuws ingestuurd via NijmegenOnline", [
+        ("titel", "Kop of onderwerp", "text", True, None),
+        ("omschrijving", "Je bericht", "tekst", True, None),
+        ("bedrijf", "Gaat het over een bedrijf of organisatie uit de bedrijvengids?", "bedrijf", False,
+         {"_hint": "Kies het hier, dan komt het bericht ook op de bedrijfspagina. Gaat het niet over een bedrijf of organisatie, "
+                   "laat dit veld dan leeg."}),
+        ("kop", "Foto", "kop", False, None),
+        ("foto", "Foto bij het bericht (optioneel)", "bestand", False, "Een foto die we mogen gebruiken, liefst liggend. JPG, PNG of WebP, maximaal 10 MB."),
+        ("bijschrift", "Van wie is de foto?", "fotobron", False, FOTOBRONNEN),
+        ("kop", "Jouw gegevens", "kop", False, "Deze gegevens komen niet op de website. We gebruiken ze alleen als we nog vragen hebben over je bericht."),
+        ("naam", "Je naam", "text", True, None),
+        ("email", "Je e-mailadres", "email", True, None)], "Bericht insturen",
+        "Bedankt! De redactie heeft je bericht ontvangen en bekijkt het zo snel mogelijk. Je krijgt een e-mail zodra het online staat, "
+        "of als we het niet kunnen plaatsen."))
+    return pagina("Nieuws insturen", "Heb je nieuws uit Nijmegen of omgeving? Stuur je bericht of persbericht in bij de redactie van NijmegenOnline.",
+                  "nieuws-insturen", '<a href="../aanmelden/">Aanmelden</a> › Nieuws insturen', inhoud)
+
+
+# Keuzes op /aanmelden/: (adres, label, titel, uitleg, knop)
+AANMELDEN = [
+    ("evenement-aanmelden", "Agenda", "Evenement aanmelden", "Organiseer je een concert, markt, voorstelling of workshop? "
+     "Zet het gratis in de agenda van NijmegenOnline.", "Evenement aanmelden"),
+    ("nieuws-insturen", "Nieuws", "Nieuws insturen", "Een persbericht, een opening of een tip voor de redactie? "
+     "Stuur je bericht in, wij maken er een nieuwsbericht van.", "Nieuws insturen"),
+    ("bedrijf-aanmelden", "Bedrijvengids", "Bedrijf aanmelden", "Zet je bedrijf, winkel, praktijk of vereniging gratis "
+     "in de bedrijvengids van Nijmegen.", "Bedrijf aanmelden"),
+    ("vacature-plaatsen", "Vacatures", "Vacature plaatsen", "Zoek je personeel in Nijmegen of omgeving? "
+     "Plaats je vacature gratis, ook zichtbaar in Google for Jobs.", "Vacature plaatsen"),
+]
+
+
+def aanmelden():
+    kaarten = "\n".join(
+        '          <div class="kaart"><a href="../%s/"><span class="label">%s</span><h3>%s</h3><p>%s</p>'
+        '<span class="kaart__knop">%s</span></a></div>' % (pad, esc(label), esc(titel), esc(uitleg), esc(knop))
+        for pad, label, titel, uitleg, knop in AANMELDEN)
+    inhoud = """        <h1>Aanmelden bij NijmegenOnline</h1>
+        <p class="pagina__intro">Wil je iets op NijmegenOnline zetten? Kies hieronder wat je wilt aanmelden. Alles is gratis en de redactie bekijkt elke aanmelding voordat die online komt.</p>
+        <div class="raster aanmelden">
+{kaarten}
+        </div>
+        <h2>Meer aandacht?</h2>
+        <p>Wil je dat je evenement, bedrijf of bericht extra opvalt, bijvoorbeeld in onze wekelijkse nieuwsbrief, op social media of met een banner? Bekijk de mogelijkheden bij <a href="../adverteren-bij-nijmegenonline/">adverteren</a>.</p>
+        <p>Iets anders? <a href="../kom-in-contact/">Neem contact op</a> met de redactie.</p>""".format(kaarten=kaarten)
+    return pagina("Aanmelden", "Meld je evenement aan, stuur nieuws in of zet je bedrijf of vacature op NijmegenOnline. Alles op één plek.",
+                  "aanmelden", "Aanmelden", inhoud, zijbalk=False)
+
+
 def kom_in_contact(meta):
     inhoud = """        <h1>Kom in contact</h1>
         <p class="pagina__intro">Wil je adverteren, een persbericht sturen of je evenement aanmelden? Of heb je een vraag of tip voor de redactie? We horen graag van je.</p>
@@ -690,6 +750,8 @@ def main(bron):
     schrijf("bedrijf-aanmelden", bedrijf_aanmelden(sorted({html.unescape(c) for c in re.findall(
         r'<category domain="listdom-category" nicename="[^"]*"><!\[CDATA\[([^\]]*)', lijst)})))
     schrijf("evenement-aanmelden", evenement_aanmelden())
+    schrijf("nieuws-insturen", nieuws_insturen())
+    schrijf("aanmelden", aanmelden())
     schrijf("markten-nijmegen", markten(pag["markten-nijmegen"][2]))
     schrijf("openingstijden-centrum-nijmegen", openingstijden(pag["openingstijden-centrum-nijmegen"][2]))
     print("Pagina's: kom-in-contact, adverteren, vergelijking, vacatures (%d)%s"
