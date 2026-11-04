@@ -4,10 +4,11 @@ Bron: Google Analytics 4 (property 337370292). De site stuurt al per bedrijfspag
   bedrijf_bekeken            bij elke weergave van /bedrijvengids/<slug>/      (assets/js/bedrijf.js)
   bedrijf_klik  soort=...    bij een klik op website, telefoon, route, google of de actieknop
   partner_vertoning/_klik    voor banners in de partnerbalk, met partner=<id>  (partners/slider.js)
+  bedrijf_in_lijst           als een uitgelichte kaart in een lijst in beeld komt, met bedrijf=<slug> (partials/footer.html)
 
 Weergaven en het totaal aan kliks halen we op via het paginapad, dat werkt altijd. Voor kliks per soort en
-voor de banners moeten in Analytics de aangepaste dimensies "soort" en "partner" bestaan (Beheer →
-Aangepaste definities → Aangepaste dimensie maken, bereik Gebeurtenis, parameter soort / partner).
+voor de banners en de vertoningen in lijsten moeten in Analytics de aangepaste dimensies "soort", "partner" en "bedrijf" bestaan (Beheer →
+Aangepaste definities → Aangepaste dimensie maken, bereik Gebeurtenis, parameter soort / partner / bedrijf).
 Analytics vult die pas vanaf het moment van aanmaken. Ontbreken ze, dan laat het rapport die regels weg.
 
 Toegang: het serviceaccount uit GA_SERVICE_ACCOUNT_JSON (of GSC_SERVICE_ACCOUNT_JSON, hetzelfde account als
@@ -61,11 +62,11 @@ def token():
     return cred.token
 
 
-def vraag(tok, van, tot, dimensies, filters):
+def vraag(tok, van, tot, dimensies, filters, metriek="eventCount"):
     """Eén runReport; filters = {dimensie: [waarden]}. Geeft {(dimensiewaarden...): aantal}."""
     expr = [{"filter": {"fieldName": d, "inListFilter": {"values": w}}} for d, w in filters.items()]
     body = {"dateRanges": [{"startDate": van.isoformat(), "endDate": tot.isoformat()}],
-            "dimensions": [{"name": d} for d in dimensies], "metrics": [{"name": "eventCount"}],
+            "dimensions": [{"name": d} for d in dimensies], "metrics": [{"name": metriek}],
             "dimensionFilter": {"andGroup": {"expressions": expr}}, "limit": 10000}
     r = requests.post(API, headers={"Authorization": "Bearer " + tok}, json=body, timeout=120)
     if r.status_code == 400 and "customEvent:" in r.text:
@@ -77,11 +78,18 @@ def vraag(tok, van, tot, dimensies, filters):
 
 def cijfers(tok, slug, partner, van, tot):
     pad = "/bedrijvengids/%s/" % slug
-    uit = {"weergaven": 0, "kliks": 0, "soorten": None, "banner": None}
+    uit = {"weergaven": 0, "bezoekers": 0, "lijst": None, "kliks": 0, "soorten": None, "banner": None}
     basis = vraag(tok, van, tot, ["eventName"], {"pagePath": [pad], "eventName": ["bedrijf_bekeken", "bedrijf_klik", "page_view"]})
     # bedrijf_bekeken is de eigen teller; page_view als vangnet voor de periode voordat bedrijf.js er stond
     uit["weergaven"] = basis.get(("bedrijf_bekeken",), 0) or basis.get(("page_view",), 0)
     uit["kliks"] = basis.get(("bedrijf_klik",), 0)
+    # unieke bezoekers van de bedrijfspagina (totalUsers over de hele periode, niet opgeteld per dag)
+    uit["bezoekers"] = vraag(tok, van, tot, ["pagePath"], {"pagePath": [pad]}, "totalUsers").get((pad,), 0)
+    try:
+        lijst = vraag(tok, van, tot, ["eventName"], {"customEvent:bedrijf": [slug], "eventName": ["bedrijf_in_lijst"]})
+        uit["lijst"] = lijst.get(("bedrijf_in_lijst",), 0)
+    except GeenDimensie as e:
+        print("  vertoningen in lijsten overgeslagen: %s" % e, file=sys.stderr)
     try:
         per = vraag(tok, van, tot, ["customEvent:soort"], {"pagePath": [pad], "eventName": ["bedrijf_klik"]})
         uit["soorten"] = {k[0]: n for k, n in per.items()}
@@ -102,7 +110,8 @@ def voorbeeldcijfers(slug, partner):
     w = r.randint(600, 2400)
     soorten = {"website": int(w * r.uniform(.08, .14)), "telefoon": int(w * r.uniform(.02, .05)),
                "route": int(w * r.uniform(.03, .07)), "google": int(w * r.uniform(.01, .03))}
-    return {"weergaven": w, "kliks": sum(soorten.values()), "soorten": soorten,
+    return {"weergaven": w, "bezoekers": int(w * r.uniform(.6, .8)), "lijst": w * r.randint(4, 9),
+            "kliks": sum(soorten.values()), "soorten": soorten,
             "banner": {"vertoningen": r.randint(20000, 60000), "kliks": r.randint(80, 300)} if partner else None}
 
 
@@ -135,9 +144,39 @@ def rij(label, nu, toen):
             % (html.escape(label), verschil(nu, toen), "{:,}".format(nu).replace(",", ".")))
 
 
+LEGENDA = [
+    ("lijst", "In beeld in onze lijsten", "Hoe vaak je bedrijf zichtbaar was in een categorie van de bedrijvengids, "
+     "bijvoorbeeld bij Restaurants. We tellen pas als je kaart echt op het scherm stond, en één keer per bezoek aan die pagina."),
+    ("weergaven", "Weergaven van je pagina", "Hoe vaak je eigen pagina in de bedrijvengids is geopend. Opent iemand hem twee keer, "
+     "dan telt dat twee keer."),
+    ("bezoekers", "Unieke bezoekers", "Hoeveel verschillende mensen je pagina hebben bekeken. Iemand die vaker terugkomt, telt één keer "
+     "(per apparaat en browser)."),
+    ("kliks", "Kliks", "Hoe vaak een bezoeker op je pagina doorklikte: naar je website, op je telefoonnummer, voor een route of naar "
+     "je Google-profiel. Een klik op je telefoonnummer betekent dat iemand op bellen drukte; of het gesprek tot stand kwam, zien we niet."),
+    ("banner", "Banner", "Vertoningen: hoe vaak je banner in beeld kwam op onze site. Kliks: hoe vaak erop geklikt werd."),
+    ("verschil", "t.o.v. vorige periode", "Het verschil met de even lange periode daarvoor."),
+]
+
+
+def legenda(nu):
+    """Korte uitleg onder de cijfers, alleen voor de regels die in het rapport staan."""
+    toon = {"weergaven", "bezoekers", "kliks", "verschil"} | ({"lijst"} if nu["lijst"] is not None else set()) | (
+        {"banner"} if nu["banner"] else set())
+    items = "".join('<p style="margin:0 0 6px"><b>%s:</b> %s</p>' % (html.escape(n), html.escape(u))
+                    for k, n, u in LEGENDA if k in toon)
+    return ('<div style="font-size:13px;color:#4b5563;margin-top:20px;padding:14px 16px;background:#f9fafb;border-radius:6px">'
+            '<p style="margin:0 0 8px;font-weight:700;color:#111827">Wat betekenen deze cijfers?</p>%s'
+            '<p style="margin:8px 0 0">Alle cijfers komen uit Google Analytics en zijn gemeten, niet geschat. Bezoekers met een '
+            'adblocker tellen niet mee, dus de werkelijke aantallen liggen iets hoger.</p></div>' % items)
+
+
 def rapport(b, pakket, nu, toen, van, tot, voorbeeld):
-    regels = [rij("Weergaven van je pagina", nu["weergaven"], toen and toen["weergaven"]),
-              rij("Kliks op je pagina, totaal", nu["kliks"], toen and toen["kliks"])]
+    regels = []
+    if nu["lijst"] is not None:
+        regels.append(rij("In beeld in onze lijsten", nu["lijst"], toen and toen["lijst"]))
+    regels += [rij("Weergaven van je pagina", nu["weergaven"], toen and toen["weergaven"]),
+               rij("Unieke bezoekers van je pagina", nu["bezoekers"], toen and toen["bezoekers"]),
+               rij("Kliks op je pagina, totaal", nu["kliks"], toen and toen["kliks"])]
     if nu["soorten"] is not None:
         for sleutel, label in SOORTEN:
             if nu["soorten"].get(sleutel):
@@ -158,13 +197,12 @@ def rapport(b, pakket, nu, toen, van, tot, voorbeeld):
 <p style="margin:0 0 18px;color:#4b5563">%(pakket)s · %(van)s t/m %(tot)s</p>
 %(melding)s
 <table style="width:100%%;border-collapse:collapse;font-size:15px">%(regels)s</table>
-<p style="font-size:13px;color:#6b7280;margin-top:18px">Een klik op je telefoonnummer betekent dat iemand op bellen drukte;
-of het gesprek tot stand kwam, zien wij niet. Bezoekers met een adblocker tellen niet mee, dus de echte aantallen liggen iets hoger.</p>
+%(legenda)s
 <p><a href="%(url)s" style="display:inline-block;background:#b91c1c;color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none">Bekijk je pagina</a></p>
 <p style="font-size:13px;color:#6b7280">Iets aanpassen aan je pagina, een nieuwe actie of foto's? Antwoord op deze mail.</p>
 </div></body></html>
 """ % {"naam": html.escape(b["naam"]), "pakket": html.escape(pakket.capitalize()), "van": datum(van), "tot": datum(tot),
-       "melding": melding, "regels": "\n".join(regels), "url": url}
+       "melding": melding, "regels": "\n".join(regels), "url": url, "legenda": legenda(nu)}
 
 
 def main():
@@ -198,7 +236,8 @@ def main():
         if args.voorbeeld:
             nu = voorbeeldcijfers(slug, partner)
             f = random.Random(slug + "-vorig").uniform(.75, .95)
-            toen = {"weergaven": int(nu["weergaven"] * f), "kliks": int(nu["kliks"] * f),
+            toen = {"weergaven": int(nu["weergaven"] * f), "bezoekers": int(nu["bezoekers"] * f), "lijst": int(nu["lijst"] * f),
+                    "kliks": int(nu["kliks"] * f),
                     "soorten": {k: int(v * f) for k, v in nu["soorten"].items()},
                     "banner": {k: int(v * f) for k, v in nu["banner"].items()} if nu["banner"] else None}
         else:
