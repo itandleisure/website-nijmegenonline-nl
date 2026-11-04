@@ -145,7 +145,22 @@ def nieuwsbericht(a, berichten):
         "tekst": tekst,
         "aanmelding": a["id"],
         **({"bedrijven": [bedrijf_sleutel(a)]} if bedrijf_sleutel(a) else {}),
+        **contact_bezoekers(a),
     }
+
+
+def contact_bezoekers(a):
+    """Optionele contactgegevens voor bezoekers uit /nieuws-insturen/ (website, e-mail, telefoon); alleen wat is ingevuld."""
+    site = (a.get("site") or "").strip()
+    if site and not re.match(r"https?://", site):
+        site = "https://" + site
+    mail = (a.get("nieuwsmail") or "").strip()
+    tel = (a.get("nieuwstelefoon") or "").strip()
+    contact = {"site": site if re.match(r"https?://[^\s]+\.[^\s]+$", site) else "",
+               "email": mail if re.match(r"^[^@\s]+@[^@\s]+\.[^@\s]+$", mail) else "",
+               "telefoon": tel if len(re.sub(r"\D", "", tel)) >= 6 else ""}
+    contact = {k: v for k, v in contact.items() if v}
+    return {"contact": contact} if contact else {}
 
 
 def vacature_html(tekst):

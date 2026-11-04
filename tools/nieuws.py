@@ -143,6 +143,21 @@ def nieuwskaart(b, root):
             "<h3>%s</h3></div></a></article>" % (root, b["slug"], img, esc(datum_nl(b["datum"])), esc(b["titel"])))
 
 
+def contact_html(c):
+    """Contactgegevens voor bezoekers bij een ingestuurd bericht (zie contact_bezoekers in tools/aanmeldingen.py)."""
+    regels = []
+    if c.get("site"):
+        tekst = re.sub(r"^https?://(www\.)?", "", c["site"]).rstrip("/")
+        regels.append('<li><span>Website</span><a href="%s" rel="noopener" target="_blank">%s</a></li>' % (esc(c["site"]), esc(tekst)))
+    if c.get("email"):
+        regels.append('<li><span>E-mail</span><a href="mailto:%s">%s</a></li>' % (esc(c["email"]), esc(c["email"])))
+    if c.get("telefoon"):
+        nummer = re.sub(r"[^\d+]", "", c["telefoon"])
+        regels.append('<li><span>Telefoon</span><a href="tel:%s">%s</a></li>' % (esc(nummer), esc(c["telefoon"])))
+    return ('        <h2>Meer informatie</h2>\n        <ul class="contactgegevens">\n%s\n        </ul>'
+            % "\n".join("          " + r for r in regels))
+
+
 def bericht_pagina(b, nieuwer, ouder, bedrijven=(), vermeldingen=None):
     """bedrijven: (sleutel, naam) uit de gids waar het bericht over gaat; die krijgen een kaartje "Over <bedrijf>"."""
     root = "../../"
@@ -183,6 +198,8 @@ def bericht_pagina(b, nieuwer, ouder, bedrijven=(), vermeldingen=None):
     out.append('        <div class="inhoud-tekst">\n%s\n        </div>' % tekst)
     if b.get("fotos"):
         out.append(extra_fotos_html(b["fotos"], b["titel"], root))
+    if b.get("contact"):
+        out.append(contact_html(b["contact"]))
     if over:
         out.extend(koppeling.over_bedrijf(s, v, root) for s, v in over[:3])
     nav = []

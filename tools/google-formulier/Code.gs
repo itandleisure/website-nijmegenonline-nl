@@ -115,12 +115,14 @@ var FORMULIEREN = {
   // zie nieuwsOntvangen()) en het formulier op /nieuws-insturen/ (gewone doPost met form=nieuws).
   nieuws: {
     tabblad: 'Nieuws', bewaarMaanden: 3, onderwerp: 'Nieuwsbericht', goedkeuren: true,
-    openbaar: ['titel', 'samenvatting', 'bijschrift', 'omschrijving', 'bedrijf'],
-    bewerkbaar: ['titel', 'samenvatting', 'bijschrift', 'bedrijf', 'naam', 'email'],   // naam en e-mail niet naar de site
+    openbaar: ['titel', 'samenvatting', 'bijschrift', 'omschrijving', 'bedrijf', 'site', 'nieuwsmail', 'nieuwstelefoon'],
+    bewerkbaar: ['titel', 'samenvatting', 'bijschrift', 'bedrijf', 'site', 'nieuwsmail', 'nieuwstelefoon', 'naam', 'email'],   // naam en e-mail niet naar de site
     velden: [['titel', 'Titel'], ['samenvatting', 'Samenvatting (Google)'], ['bijschrift', 'Fotobijschrift'],
       ['omschrijving', 'Ingestuurde tekst'], ['foto', 'Foto'], ['extrafotos', "Andere foto's (Drive-ID's)"],
       ['fotocredits', "Bijschriften andere foto's"], ['naam', 'Inzender'], ['email', 'E-mail inzender'], ['onderwerp', 'Onderwerp mail'], ['berichtid', 'Bericht-ID mail'],
-      ['bedrijf', 'Bedrijf in de gids']]   // gekozen op de beoordeelpagina; het bericht komt dan op de bedrijfspagina
+      ['bedrijf', 'Bedrijf in de gids'],   // gekozen op de beoordeelpagina; het bericht komt dan op de bedrijfspagina
+      // Contactgegevens voor bezoekers (optioneel, alleen via /nieuws-insturen/): komen onder het bericht op de site
+      ['site', 'Website'], ['nieuwsmail', 'E-mail bezoekers'], ['nieuwstelefoon', 'Telefoon bezoekers']]
   }
 };
 
@@ -881,8 +883,8 @@ function bewerkPagina(type, id) {
 
   var velden = (cfg.bewerkbaar || cfg.openbaar).filter(function (veld) { return veld !== 'omschrijving'; }).map(function (veld) {
     if (veld === 'bijschrift') return '';   // staat onder de foto
-    var soort = { datum: 'date', einddatum: 'date', starttijd: 'time', eindtijd: 'time', site: 'url', bedrijfsmail: 'email', evenementmail: 'email',
-      telefoon: 'tel', evenementtelefoon: 'tel', email: 'email', sluitdatum: 'date', uren_van: 'number', uren_tot: 'number' }[veld] || 'text';
+    var soort = { datum: 'date', einddatum: 'date', starttijd: 'time', eindtijd: 'time', site: 'url', bedrijfsmail: 'email', evenementmail: 'email', nieuwsmail: 'email',
+      telefoon: 'tel', evenementtelefoon: 'tel', nieuwstelefoon: 'tel', email: 'email', sluitdatum: 'date', uren_van: 'number', uren_tot: 'number' }[veld] || 'text';
     if (veld === 'aanbieder') return aanbiederKeuze(g);
     if (veld === 'bedrijf') return bedrijfKeuze(g);
     var invoer = veld === 'openingstijden' || veld === 'samenvatting'
