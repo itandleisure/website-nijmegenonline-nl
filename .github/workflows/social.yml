@@ -1,15 +1,17 @@
 # Elke dag een post op Facebook en Instagram (tools/social.py, instellingen in data/social-instellingen.json).
-# 's Ochtends vroeg: post kiezen, beelden maken, Claude de tekst laten schrijven en /social/ (link in bio) bijwerken.
+# 's Ochtends: post kiezen, beelden maken, Claude de tekst laten schrijven en /social/ (link in bio) bijwerken.
 # In de controleperiode komt de post ook in een issue: sluit het issue om hem over te slaan.
-# Rond het middaguur: plaatsen via de Meta Graph API.
+# Daarna elk uur een poging tot plaatsen via de Meta Graph API, tussen 11 en 21 uur (plaatsen_tussen). GitHub start
+# geplande runs soms uren te laat (op 3 en 4 november ruim 7 uur), daarom meer kansen; er komt maar één post per dag.
 # Geheimen (Settings → Secrets and variables → Actions): ANTHROPIC_API_KEY (bestaat al), META_TOKEN en optioneel
 # META_PAGE_ID. Zie docs/social-media-koppelen.md.
 name: Social media
 
 on:
   schedule:
-    - cron: "15 5 * * *"   # voorbereiden, 06.15 of 07.15 uur Nederlandse tijd
-    - cron: "0 10 * * *"   # plaatsen, 11.00 of 12.00 uur
+    - cron: "15 3 * * *"     # voorbereiden; de tweede alleen als de eerste niet (op tijd) kwam
+    - cron: "15 6 * * *"
+    - cron: "5 8-19 * * *"   # plaatsen, elk uur een poging
   workflow_dispatch:
     inputs:
       stap:
@@ -31,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      STAP: ${{ github.event_name == 'workflow_dispatch' && inputs.stap || (github.event.schedule == '0 10 * * *' && 'plaatsen' || 'voorbereiden') }}
+      STAP: ${{ github.event_name == 'workflow_dispatch' && inputs.stap || (startsWith(github.event.schedule, '15 ') && 'voorbereiden' || 'plaatsen') }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
