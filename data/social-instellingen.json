@@ -1,6 +1,7 @@
 {
- "_uitleg": "Instellingen voor tools/social.py (elke dag een post op Facebook en Instagram). aan: false zet het plaatsen uit (voorbereiden en de linkpagina gaan door). controle_posts: zolang er minder posts geplaatst zijn dan dit aantal, maakt het script elke ochtend een issue met de post erin; sluit je dat issue voor het plaatsingstijdstip, dan wordt de post overgeslagen. betaald_per_week: hoeveel betaalde posts (partners, uitgelichte bedrijven) er hoogstens in 7 dagen komen; uitgelichte evenementen gaan altijd voor als hun laatste kans vandaag is. partner_elke_dagen: om de hoeveel dagen een partner of hoofdpartner een eigen post krijgt (0 = nooit). Afgesproken met Frans 02-11-2026: 1 post per dag, nog geen advertentiebudget, partners voorrang op gratis content.",
- "aan": false,
+ "_uitleg": "Instellingen voor tools/social.py (elke dag een post op Facebook en Instagram). aan: false zet het plaatsen uit (voorbereiden en de linkpagina gaan door). plaatsen_tussen: alleen tussen deze uren (Nederlandse tijd) wordt geplaatst; de workflow probeert het elk uur, omdat GitHub geplande runs soms uren later start. controle_posts: zolang er minder posts geplaatst zijn dan dit aantal, maakt het script elke ochtend een issue met de post erin; sluit je dat issue voor het plaatsingstijdstip, dan wordt de post overgeslagen. betaald_per_week: hoeveel betaalde posts (partners, uitgelichte bedrijven) er hoogstens in 7 dagen komen; uitgelichte evenementen gaan altijd voor als hun laatste kans vandaag is. partner_elke_dagen: om de hoeveel dagen een partner of hoofdpartner een eigen post krijgt (0 = nooit). Afgesproken met Frans 02-11-2026: 1 post per dag, nog geen advertentiebudget, partners voorrang op gratis content.",
+ "aan": true,
+ "plaatsen_tussen": [11, 21],
  "facebook": true,
  "instagram": true,
  "controle_posts": 14,

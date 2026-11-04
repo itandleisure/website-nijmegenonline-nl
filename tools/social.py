@@ -56,6 +56,7 @@ GEPLAATST = DATA / "social-geplaatst.json"
 GEPLAND = DATA / "social-gepland.json"
 BEELDEN = ROOT / "assets" / "social"
 PAGINA = "social"
+CONTROLE_UREN = 3      # in de controleperiode staat het issue minstens zo lang open voordat de post online gaat
 BEWAAR_BEELDEN = 45   # dagen; daarna mogen de jpg's weg (Facebook en Instagram hebben hun eigen kopie)
 MODEL = os.environ.get("MODEL_SOCIAL") or "claude-sonnet-5-5"
 GRAPH = "https://graph.facebook.com/v23.0"
@@ -539,7 +540,8 @@ def plan_maken(vandaag, log, inst, url, map_, naam):
     fb, ig = bijschriften(k, tekst, tags, inst)
     plan = {"datum": vandaag.isoformat(), "soort": k["soort"], "betaald": k["betaald"], "sleutels": k["sleutels"],
             "titel": k["titel"], "link": k["link"], "beelden": beelden, "story": None, "facebook": fb, "instagram": ig,
-            "tekst_door": door, "status": "gepland"}
+            "tekst_door": door, "status": "gepland",
+            "gemaakt": datetime.datetime.now(AMSTERDAM).isoformat(timespec="minutes")}
     e = story_vandaag(vandaag, log)
     if e:
         plan["story"], plan["story_sleutel"] = maak_story(e, map_, naam, vandaag), "story:" + e["slug"]
@@ -550,8 +552,9 @@ def voorbereiden(vandaag):
     inst, log = instellingen(), geplaatst()
     url = basis()
     gepland = lees(GEPLAND, {})
-    if gepland.get(vandaag.isoformat(), {}).get("status") == "geplaatst":
-        print("social: post van %s staat al online" % vandaag)
+    if vandaag.isoformat() in gepland and "--opnieuw" not in sys.argv:
+        # draait meer keer per ochtend (GitHub start geplande runs soms uren te laat): de eerste keer telt
+        print("social: post van %s is al voorbereid (%s)" % (vandaag, gepland[vandaag.isoformat()]["status"]))
         return
     plan = plan_maken(vandaag, log, inst, url, BEELDEN, vandaag.isoformat())
     grens = (vandaag - datetime.timedelta(days=14)).isoformat()
@@ -646,7 +649,7 @@ def melden(vandaag):
         return
     ruw = "https://raw.githubusercontent.com/%s/main/" % os.environ["GITHUB_REPOSITORY"]
     plaatjes = " ".join('<img src="%s%s" width="220">' % (ruw, b) for b in plan["beelden"])
-    tekst = ("@itandleisure, dit gaat vandaag rond het middaguur op Facebook en Instagram%s.\n\n"
+    tekst = ("@itandleisure, dit gaat vandaag over een paar uur (tussen 11 en 21 uur) op Facebook en Instagram%s.\n\n"
              "**Niets doen = plaatsen.** Wil je deze post niet? Sluit dit issue, dan wordt hij overgeslagen.\n\n%s\n\n"
              "### Facebook\n\n```text\n%s\n```\n\n### Instagram\n\n```text\n%s\n```\n\n"
              "_Controleperiode: nog %d posts met een issue (instelling controle_posts in data/social-instellingen.json)._"
@@ -750,6 +753,11 @@ def plaatsen(vandaag):
     if not inst.get("aan"):
         print("social: koppeling werkt, maar plaatsen staat uit (aan: false in data/social-instellingen.json)")
         return
+    nu = datetime.datetime.now(AMSTERDAM)
+    van, tot = inst.get("plaatsen_tussen", [11, 21])
+    if "--nu" not in sys.argv and not van <= nu.hour < tot:
+        print("social: buiten de plaatsingstijd (%d tot %d uur)" % (van, tot))
+        return
     if not meta.ig and inst.get("instagram", True):
         print("::warning::Geen Instagram-bedrijfsaccount gekoppeld aan de Facebookpagina; alleen Facebook")
     weghalen(meta, log)
@@ -757,6 +765,11 @@ def plaatsen(vandaag):
         print("social: geen post klaar voor %s" % vandaag)
         schrijf(GEPLAATST, log)
         return
+    if plan.get("issue") and plan.get("gemaakt") and "--nu" not in sys.argv:
+        klaar = datetime.datetime.fromisoformat(plan["gemaakt"])
+        if nu - klaar < datetime.timedelta(hours=CONTROLE_UREN):
+            print("social: issue #%d staat nog geen %d uur open, volgende run" % (plan["issue"], CONTROLE_UREN))
+            return
     if plan.get("issue") and os.environ.get("GITHUB_TOKEN"):
         issue = github("GET", "/issues/%d" % plan["issue"])
         if issue["state"] == "closed":
