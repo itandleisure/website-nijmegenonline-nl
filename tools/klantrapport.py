@@ -29,6 +29,7 @@ import json
 import os
 import pathlib
 import random
+import re
 import sys
 
 import requests
@@ -208,9 +209,9 @@ def rapport(b, pakket, nu, toen, van, tot, voorbeeld):
 def mailen(inhoud, onderwerp):
     """Stuurt het rapport naar de redactie. Het Apps Script (actie 'rapport') mailt alleen naar
     redactie@nijmegenonline.nl; een klantadres kan hier niet worden meegegeven."""
-    sys.path.insert(0, str(ROOT / "tools"))
-    from paginas import GOOGLE_FORM_URL
-    r = requests.post(GOOGLE_FORM_URL, data={"actie": "rapport", "sleutel": os.environ["NIEUWS_SLEUTEL"],
+    # De URL staat in paginas.py; niet importeren, want die module heeft bs4 nodig.
+    url = re.search(r'^GOOGLE_FORM_URL = "([^"]+)"', (ROOT / "tools" / "paginas.py").read_text(), re.M).group(1)
+    r = requests.post(url, data={"actie": "rapport", "sleutel": os.environ["NIEUWS_SLEUTEL"],
                                              "onderwerp": onderwerp, "html": inhoud}, timeout=120)
     r.raise_for_status()
     antwoord = r.json()
