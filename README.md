@@ -296,3 +296,14 @@ Zo is de categorie sportscholen opgezet; elke volgende categorie gaat op dezelfd
 
 **Subpagina's (besluit Frans, 25-10-2026):** veelgezochte onderwerpen binnen een categorie (binnenuitjes, sushi, pizza, Chinees, ontbijt en brunch, high tea, tapas, all-you-can-eat, sauna en spa, barbershops) krijgen een eigen pagina onder `/bedrijvengids-categorie/<onderwerp>/`. Ze staan in `SUBCATEGORIEEN` in `tools/bedrijvengids.py` en tonen de bedrijven van de oudercategorieën die op naam, keuken of kenmerk passen; er is geen eigen verzameling of scan voor nodig. Een nieuw onderwerp toevoegen = een regel in die lijst. Bowlen, escape rooms, lasergamen en trampolineparken blijven bij Uitjes, ook als de scan ze een eigen soort geeft.
 
+
+## IndexNow (Bing)
+
+Nieuwe en gewijzigde pagina's worden automatisch gemeld bij [IndexNow](https://www.indexnow.org), zodat Bing (en
+Yandex, Seznam, Naver) ze snel opnieuw ophalen. De workflow `IndexNow melden` draait na elke publicatie van GitHub Pages
+en meldt de pagina's uit `sitemap.xml` die sinds de tag `indexnow-gemeld` zijn gewijzigd (`tools/indexnow.py`). De
+sleutel staat in `9bfe479a53559268de2f355760b6383c.txt` in de hoofdmap: niet verwijderen of hernoemen. Handmatig
+proberen zonder te melden: `python tools/indexnow.py --droog`.
+
+`tools/build.py` houdt daarnaast elke `<title>` op hoogstens 70 tekens en meldt pagina's in de sitemap met meer of
+minder dan één `<title>` of `<h1>`, of zonder meta description.
