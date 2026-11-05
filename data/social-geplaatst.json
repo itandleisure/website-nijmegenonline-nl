@@ -1,0 +1,31 @@
+[
+ {
+  "datum": "2026-11-05",
+  "soort": "weekend",
+  "betaald": false,
+  "sleutels": [
+   "evenement:magda-novels",
+   "evenement:spurensuche-kamerconcert-met-strijkkwartet",
+   "evenement:theatervoorstelling-buiten-bereik",
+   "evenement:van-kermistent-tot-lichtpaleis-130-jaar-nijmegen-bioscoopstad",
+   "evenement:doe-maar-lekker-disco-w-mias-house-of-disco-the-ultimate-disco-house-experience"
+  ],
+  "titel": "Dit weekend in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "beelden": [
+   "assets/social/2026-11-05-0.jpg",
+   "assets/social/2026-11-05-1.jpg",
+   "assets/social/2026-11-05-2.jpg",
+   "assets/social/2026-11-05-3.jpg",
+   "assets/social/2026-11-05-4.jpg",
+   "assets/social/2026-11-05-5.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1781026520699083",
+  "instagram_id": "18057367937807257",
+  "instagram_link": "https://www.instagram.com/p/DfXT9zek7wU/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
+ }
+]
