@@ -115,6 +115,18 @@
         <div class="kruimelpad"><a href="../">Home</a> › Bedrijvengids</div>
         <h1>Bedrijvengids Nijmegen</h1>
         <div class="inhoud-tekst"><p>Op zoek naar een sportschool, een kapper of een plek om te lunchen? In de bedrijvengids vind je de bedrijven van Nijmegen, op de kaart en per categorie. Klik op een punt voor het adres en de pagina van het bedrijf.</p></div>
+        <div class="gidszoeker" data-gidszoeker data-pagefind-ignore="all">
+          <form role="search" method="get" action="../zoeken/">
+            <label for="gidszoek">Zoek een bedrijf</label>
+            <div class="zoekveld">
+              <input id="gidszoek" type="search" name="q" placeholder="Naam, categorie of straat, bijvoorbeeld kapper of Molenstraat" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="gidszoeker-lijst">
+              <button type="submit">Zoek</button>
+            </div>
+            <ul id="gidszoeker-lijst" class="gidszoeker__lijst" role="listbox" aria-label="Gevonden bedrijven" hidden></ul>
+            <p class="gidszoeker__status" role="status" aria-live="polite"></p>
+          </form>
+          <script src="../assets/js/gidszoeker.js?v=1" defer></script>
+        </div>
         <section class="gids-sectie">
           <h2>Op de kaart</h2>
           <div id="kaartgroepen" class="kaartgroepen"></div>
