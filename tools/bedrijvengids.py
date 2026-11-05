@@ -2392,7 +2392,7 @@ def adresregel(b):
     return ", ".join(x for x in (b["adres"], " ".join(x for x in (pc, b["plaats"]) if x)) if x)
 
 
-def bedrijf_pagina(b, cat, anderen, root="../../", berichten=(), evenementen=(), vacatures_=()):
+def bedrijf_pagina(b, cat, root="../../", berichten=(), evenementen=(), vacatures_=()):
     canonical = "%s/bedrijvengids/%s/" % (SITE, b["slug"])
     soort = (b.get("soort") or cat["enkelvoud"]).lower()
     kort = "<p>%s is een %s aan de %s in %s.</p>" % (esc(b["naam"]), esc(soort), esc(b["adres"]), esc(b["plaats"])) if b["adres"] else ""
@@ -2509,6 +2509,14 @@ def bedrijf_pagina(b, cat, anderen, root="../../", berichten=(), evenementen=(),
         out.extend('            <li><time datetime="%s">%s</time> <a href="%snieuwsoverzicht/%s/">%s</a></li>'
                    % (x["datum"][:10], esc(datum_tijd_nl(x["datum"])), root, x["slug"], esc(x["titel"])) for x in berichten[:5])
         out.append("          </ul>\n        </section>")
+    if not evenementen and not berichten:
+        # Geen andere bedrijven meer onder een bedrijf (besluit Frans, 5-11-2026): alleen nieuws en agenda van het
+        # bedrijf zelf. Is er nog niets, dan een uitnodiging om het in te sturen (komt dan vanzelf op deze pagina).
+        out.append('        <section class="gids-sectie" id="nieuws-agenda">\n          <h2>Nieuws en agenda</h2>\n'
+                   '          <p>Er staat nog geen nieuws of evenement van %s op NijmegenOnline.</p>\n'
+                   '          <p class="bron">Is dit jouw bedrijf? <a href="%snieuws-insturen/?bedrijf=%s">Stuur gratis nieuws in</a> of '
+                   '<a href="%sevenement-aanmelden/?bedrijf=%s">zet je evenement in de agenda</a>, dan staat het hier.</p>\n        </section>'
+                   % (esc(b["naam"]), root, b["slug"], root, b["slug"]))
     if b["lat"]:
         lat, lon = float(b["lat"]), float(b["lon"])
         bbox = "%.5f,%.5f,%.5f,%.5f" % (lon - 0.006, lat - 0.003, lon + 0.006, lat + 0.003)
@@ -2517,11 +2525,6 @@ def bedrijf_pagina(b, cat, anderen, root="../../", berichten=(), evenementen=(),
                    'src="https://www.openstreetmap.org/export/embed.html?bbox=%s&amp;layer=mapnik&amp;marker=%s,%s"></iframe>'
                    % (esc(b["naam"]), bbox, b["lat"], b["lon"]))
         out.append('          <p class="bron">Kaart: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap-bijdragers</a></p>\n        </section>')
-    if anderen:
-        out.append('        <section class="gids-sectie">\n          <h2>Meer %s in Nijmegen</h2>\n          <div class="bedrijflijst">' % esc(cat["meervoud"]))
-        out.extend("            " + (uitgelicht_kaart(x, root) if x.get("uitgelicht") else gewone_kaart(x, root)) for x in anderen[:4])
-        out.append('          </div>\n          <p class="gids-verder"><a href="%sbedrijvengids-categorie/%s/">Bekijk alle %s</a></p>\n        </section>'
-                   % (root, cat["slug"], esc(cat["naam"][0].lower() + cat["naam"][1:])))
     out.append('        <script src="%sassets/js/bedrijf.js?v=2" defer data-bedrijf="%s"></script>' % (root, esc(b["slug"])))
     out.append("      </article>\n\n      <!-- zijbalk --><!-- /zijbalk -->\n      </div>\n    </div>\n  </main>")
     out.append(VOET)
@@ -3194,8 +3197,7 @@ def main(bron):
         artikelen = [(s_, titel_van(s_)) for s_ in cat["artikelen"] if titel_van(s_)]
         schrijf("bedrijvengids-categorie/%s" % cat["slug"], categorie_pagina(cat, gids, overig + extra, artikelen))
         for b in gids + overig:
-            anderen = [x for x in gids if x is not b] + [x for x in overig if x is not b]
-            schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, anderen, berichten=per_bedrijf.get(b["slug"], ()),
+            schrijf("bedrijvengids/%s" % b["slug"], bedrijf_pagina(b, cat, berichten=per_bedrijf.get(b["slug"], ()),
                                                                      evenementen=evenementen_per.get(b["slug"], ()),
                                                                      vacatures_=vacatures_per.get(b["slug"], ())))
         blog_blokken(cat, gids + overig + extra)
