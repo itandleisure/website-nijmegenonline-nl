@@ -1,24 +1,23 @@
 # Elke dag een post op Facebook en Instagram (tools/social.py, instellingen in data/social-instellingen.json).
 # 's Ochtends: post kiezen, beelden maken, Claude de tekst laten schrijven en /social/ (link in bio) bijwerken.
 # In de controleperiode komt de post ook in een issue: sluit het issue om hem over te slaan.
-# Daarna elk uur een poging tot plaatsen via de Meta Graph API, tussen 11 en 21 uur (plaatsen_tussen). GitHub start
-# geplande runs soms uren te laat (op 3 en 4 november ruim 7 uur), daarom meer kansen; er komt maar één post per dag.
+# Daarna plaatsen via de Meta Graph API, tussen 11 en 21 uur (plaatsen_tussen). GitHub start geplande runs vaak uren
+# te laat (3 tot 5 november 7 tot 8,5 uur), daarom draait de workflow elk uur en doet elke geplande run alles wat op dat
+# moment nodig is: plan maken als dat er nog niet is, issue maken, en plaatsen als het tijd is. Er komt maar één post per dag.
 # Geheimen (Settings → Secrets and variables → Actions): ANTHROPIC_API_KEY (bestaat al), META_TOKEN en optioneel
 # META_PAGE_ID. Zie docs/social-media-koppelen.md.
 name: Social media
 
 on:
   schedule:
-    - cron: "15 3 * * *"     # voorbereiden; de tweede alleen als de eerste niet (op tijd) kwam
-    - cron: "15 6 * * *"
-    - cron: "5 8-19 * * *"   # plaatsen, elk uur een poging
+    - cron: "5 * * * *"      # elk uur; voorbereiden en plaatsen slaan zichzelf over als er niets te doen is
   workflow_dispatch:
     inputs:
       stap:
         description: "Wat moet er gebeuren?"
         type: choice
-        options: [voorbereiden, plaatsen]
-        default: voorbereiden
+        options: [alles, voorbereiden, plaatsen]
+        default: alles
 
 permissions:
   contents: write
@@ -33,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      STAP: ${{ github.event_name == 'workflow_dispatch' && inputs.stap || (startsWith(github.event.schedule, '15 ') && 'voorbereiden' || 'plaatsen') }}
+      STAP: ${{ github.event_name == 'workflow_dispatch' && inputs.stap || 'alles' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -41,13 +40,28 @@ jobs:
           python-version: "3.12"
       - run: pip install anthropic beautifulsoup4 pillow requests
       - name: Voorbereiden
-        if: env.STAP == 'voorbereiden'
+        if: env.STAP != 'plaatsen'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MODEL_SOCIAL: ${{ vars.MODEL_SOCIAL }}
-        run: python tools/social.py voorbereiden && python tools/build.py
+        run: |
+          python tools/social.py voorbereiden
+          # alleen opnieuw bouwen als er een nieuw plan is (de linkpagina /social/ verandert dan)
+          git diff --quiet data/social-gepland.json || python tools/build.py
+      - name: Plan opslaan
+        if: always()
+        run: |
+          git config user.name "agenda-bot"
+          git config user.email "agenda-bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Social media: voorbereiden $(date +%F)" && git pull --rebase && git push)
+      - name: Issue voor de controleperiode
+        if: env.STAP != 'plaatsen'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/social.py melden   # na het opslaan, want het issue toont de beelden van main
       - name: Plaatsen
-        if: env.STAP == 'plaatsen'
+        if: env.STAP != 'voorbereiden'
         env:
           META_TOKEN: ${{ secrets.META_TOKEN }}
           META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
@@ -56,15 +70,5 @@ jobs:
       - name: Wijzigingen opslaan
         if: always()
         run: |
-          git config user.name "agenda-bot"
-          git config user.email "agenda-bot@users.noreply.github.com"
           git add -A
           git diff --cached --quiet || (git commit -m "Social media: $STAP $(date +%F)" && git pull --rebase && git push)
-      - name: Issue voor de controleperiode
-        if: env.STAP == 'voorbereiden'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          python tools/social.py melden
-          git add -A data
-          git diff --cached --quiet || (git commit -m "Social media: issue gemaakt" && git pull --rebase && git push)

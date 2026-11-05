@@ -55,7 +55,7 @@ GitHub → deze repository → *Settings* → *Secrets and variables* → *Actio
    alleen de koppeling: in het logboek staat dan "pagina NijmegenOnline, Instagram 1784…". Er wordt niets geplaatst.
 2. Zet in `data/social-instellingen.json` `"aan": true` (of vraag Claude dat te doen).
 3. De eerste 14 posts komen elke ochtend ook in een GitHub-issue (je krijgt er een mail van). Niets doen = de post gaat
-   rond het middaguur online. Sluit je het issue, dan wordt hij overgeslagen. Daarna gaat het helemaal vanzelf.
+   tussen 11 en 21 uur online. Sluit je het issue, dan wordt hij overgeslagen. Daarna gaat het helemaal vanzelf.
 
 ## Als het misgaat
 
