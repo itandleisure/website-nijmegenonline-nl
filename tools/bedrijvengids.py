@@ -2486,8 +2486,8 @@ def bedrijf_pagina(b, cat, root="../../", berichten=(), evenementen=(), vacature
                                                 for n, f in enumerate(b["fotos"]))))
     out.append('        <section class="gids-sectie">\n          <h2>Contact en openingstijden</h2>')
     out.append('          <ul class="evenement-info%s">%s</ul>\n        </section>' % (" evenement-info--uitgelicht" if b.get("uitgelicht") else "", "".join(regels)))
-    if not b.get("uitgelicht"):
-        out.append(mijn_bedrijf(b, cat, root))
+    # Ook bij uitgelichte bedrijven (vraag Frans, 5-11-2026): de eigenaar moet altijd aanpassingen kunnen doorgeven
+    out.append(mijn_bedrijf(b, cat, root))
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
     # Alles van dit bedrijf op NijmegenOnline (besluit Frans, 2-11-2026): vacatures, agenda, nieuws, boven de kaart
     if vacatures_:
@@ -2538,12 +2538,16 @@ def mijn_bedrijf(b, cat, root):
               "plaats": b["plaats"], "land": "Duitsland" if re.match(r"^\d{5}$", pc) else "Nederland",
               "site": b.get("website") or "", "telefoon": b.get("telefoon") or ""}
     link = "%sbedrijf-aanmelden/?%s" % (root, urllib.parse.urlencode({k: v for k, v in velden.items() if v}))
-    return ('        <aside class="mijnbedrijf">\n          <p><strong>Is %s jouw bedrijf?</strong> Vul je gegevens aan met foto\'s, openingstijden '
-            'en een eigen tekst. Je vermelding is en blijft gratis; wil je meer opvallen, dan kun je hem laten uitlichten.</p>\n'
+    if b.get("uitgelicht"):
+        uitleg = "Klopt er iets niet meer, of wil je foto's, openingstijden of je tekst aanpassen? Geef het hier door."
+    else:
+        uitleg = ("Vul je gegevens aan met foto's, openingstijden en een eigen tekst. Je vermelding is en blijft gratis; "
+                  "wil je meer opvallen, dan kun je hem laten uitlichten.")
+    return ('        <aside class="mijnbedrijf">\n          <p><strong>Is %s jouw bedrijf?</strong> %s</p>\n'
             '          <p><a class="knop" href="%s">Dit is mijn bedrijf</a></p>\n'
             '          <p>Organiseer je een evenement? <a href="%sevenement-aanmelden/?bedrijf=%s">Zet het gratis in de agenda</a>, '
             'dan staat het ook op deze pagina. Personeel nodig? <a href="%svacature-plaatsen/?bedrijf=%s">Plaats gratis een vacature</a>.</p>\n'
-            '        </aside>' % (esc(b["naam"]), esc(link), root, b["slug"], root, b["slug"]))
+            '        </aside>' % (esc(b["naam"]), esc(uitleg), esc(link), root, b["slug"], root, b["slug"]))
 
 
 def datum_nl(iso):
