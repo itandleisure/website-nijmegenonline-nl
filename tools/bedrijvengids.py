@@ -2750,9 +2750,10 @@ def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
              ("Artikel over je bedrijf en een plek in de nieuwsbrief", "nee", "nee", "ja"),
              ("Overzicht van weergaven en kliks", "jaarlijks", "jaarlijks", "elk kwartaal")]
     enk = esc(cat["enkelvoud"].lower())
-    out.append('        <section class="gids-sectie pakketvergelijk">\n          <h2>Heb je een %s in Nijmegen?</h2>'
-               '\n          <p>Elk%s %s staat gratis in onze gids. Wil je opvallen tussen %d %s? Kies dan voor Uitgelicht of Partner.</p>'
-               % (enk, "e" if cat.get("de_woord", True) else "", enk, len(alle), esc(cat["meervoud"])))
+    # Kop voor ondernemers die voor elke categorie klopt; "Heb je een kapper" las als "ben je klant" (Frans, 5-11-2026)
+    out.append('        <section class="gids-sectie pakketvergelijk">\n          <h2>Voor ondernemers: val op tussen %d %s</h2>'
+               '\n          <p>Elk%s %s staat gratis in onze gids. Wil je beter gezien worden? Kies dan voor Uitgelicht of Partner.</p>'
+               % (len(alle), esc(cat["meervoud"]), "e" if cat.get("de_woord", True) else "", enk))
     out.append('          <div class="tabel-scroll"><table>\n            <thead><tr><th></th><th>Gratis</th><th>Uitgelicht<br><small>&euro; 149 per jaar</small></th>'
                '<th>Partner<br><small>&euro; 449 per jaar</small></th></tr></thead>\n            <tbody>')
     def cel(w):
