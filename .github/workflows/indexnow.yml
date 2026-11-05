@@ -1,0 +1,43 @@
+# Meldt nieuwe en gewijzigde pagina's bij IndexNow (Bing en andere zoekmachines), zie tools/indexnow.py.
+# Draait zodra GitHub Pages een nieuwe versie van de site heeft gepubliceerd, zodat de pagina's al live staan.
+# De nachtelijke scripts pushen met GITHUB_TOKEN; die pushes starten zelf geen workflows, maar de Pages-publicatie
+# erna wel. De tag indexnow-gemeld onthoudt tot welke commit alles gemeld is; een tag starten geen nieuwe Pages-build.
+name: IndexNow melden
+
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: [completed]
+  schedule:
+    - cron: "15 6 * * *"   # vangnet, voor als een melding is mislukt
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  melden:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Melden bij IndexNow
+        env:
+          COMMIT: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          git fetch --tags --force
+          python tools/indexnow.py --commit "$COMMIT"
+      - name: Tag bijwerken
+        env:
+          COMMIT: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          # niet terugzetten als een latere commit al gemeld is
+          if git rev-parse -q --verify indexnow-gemeld >/dev/null && git merge-base --is-ancestor "$COMMIT" indexnow-gemeld; then exit 0; fi
+          git tag -f indexnow-gemeld "$COMMIT"
+          git push -f origin refs/tags/indexnow-gemeld

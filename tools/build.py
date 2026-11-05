@@ -20,10 +20,15 @@
 8. Live (met --live, of vanzelf zodra het bestand CNAME bestaat): testbalk en noindex eruit, robots.txt open voor
    zoekmachines en 404.html zonder het pad van de testsite (zie LIVEGANG.md). Door de CNAME-controle blijft de site
    live als de nachtelijke scripts pagina's opnieuw maken.
+9. Houdt de <title> op hoogstens 70 tekens (Bing meldt langere titels als fout): eerst valt " | NijmegenOnline" weg,
+   dan wordt ingekort tot het eerste deel voor " | " (minstens 30 tekens), en anders op een woordgrens met "…".
+   og:title en de kop op de pagina blijven de volledige titel houden.
+10. Meldt aan het eind indexeerbare pagina's met meer of minder dan één <title> of <h1>, of zonder meta description.
 
 Gebruik: python tools/build.py [--live]
 """
 import collections
+import html as html_lib
 import pathlib
 import re
 import sys
@@ -42,6 +47,10 @@ SOORTEN = {
 }
 KAART = re.compile(r'(<a\b[^>]*>)(.*?)</a>')
 TITEL = re.compile(r"<(?:strong|h[2-4])\b[^>]*>(.*?)</(?:strong|h[2-4])>", re.S)
+TITLE = re.compile(r"<title>(.*?)</title>", re.S)
+MAX_TITEL = 70
+LOSSE_WOORDEN = {"de", "het", "een", "en", "of", "met", "op", "van", "voor", "naar", "in", "aan", "bij", "uit", "te",
+                 "door", "om", "over", "tot", "na", "tijdens", "onder", "als", "dat", "die", "is", "zijn", "wordt", "the", "and", "of", "w/"}
 LINK = re.compile(r'(<a\b[^>]*?\bhref=")https?://(?:www\.)?nijmegenonline\.nl(/[^"#?]*)([^"]*")')
 
 
@@ -142,6 +151,7 @@ def main(live=False):
         nieuw = UPLOAD.sub(afbeelding, nieuw)
 
         nieuw = KAART.sub(alt_tekst, nieuw)
+        nieuw = TITLE.sub(korte_titel, nieuw, count=1)
         nieuw = zoekbaar(page, nieuw)
 
         if live:
@@ -152,6 +162,7 @@ def main(live=False):
             page.write_text(nieuw, encoding="utf-8")
 
     sitemap(live)
+    seo_controle()
     ongebruikte_doorverwijzingen_weg()
 
     if live:
@@ -165,6 +176,45 @@ def main(live=False):
         print("Nog naar de huidige site (%d pagina's nog niet gebouwd):" % len(extern))
         for pad, n in extern.most_common():
             print("  %4dx %s" % (n, pad))
+
+
+def korte_titel(m):
+    """Stap 9: een <title> van meer dan MAX_TITEL tekens inkorten (lengte geteld zonder HTML-entiteiten)."""
+    titel = m.group(1).strip()
+    if len(html_lib.unescape(titel)) <= MAX_TITEL:
+        return m.group(0)
+    kort = html_lib.unescape(titel)
+    for staart in (" | NijmegenOnline", " - NijmegenOnline", " – NijmegenOnline"):
+        if kort.endswith(staart):
+            kort = kort[: -len(staart)].rstrip()
+    if len(kort) > MAX_TITEL:
+        for scheiding in (" | ",):
+            deel = kort.split(scheiding)[0].strip()
+            if 30 <= len(deel) <= MAX_TITEL:
+                kort = deel
+                break
+    if len(kort) > MAX_TITEL:
+        woorden = kort[: MAX_TITEL - 1].rsplit(" ", 1)[0].split(" ")
+        while len(woorden) > 1 and (woorden[-1].lower() in LOSSE_WOORDEN or woorden[-1] in "-–|•&:"):
+            woorden.pop()
+        kort = " ".join(woorden).rstrip(" ,;:") + "…"
+    return "<title>%s</title>" % html_lib.escape(kort, quote=False)
+
+
+def seo_controle():
+    """Stap 10: telt per indexeerbare pagina (de pagina's in sitemap.xml) <title>, <h1> en meta description."""
+    fouten = []
+    for loc in re.findall(r"<loc>%s/([^<]*)</loc>" % re.escape(SITE), (ROOT / "sitemap.xml").read_text(encoding="utf-8")):
+        page = ROOT / loc / "index.html"
+        if not page.is_file():
+            continue
+        html = page.read_text(encoding="utf-8")
+        titels, koppen = len(re.findall(r"<title[\s>]", html, re.I)), len(re.findall(r"<h1[\s>]", html, re.I))
+        if titels != 1 or koppen != 1 or '<meta name="description"' not in html:
+            fouten.append("  /%s: %d title, %d h1%s" % (loc, titels, koppen, "" if '<meta name="description"' in html else ", geen description"))
+    if fouten:
+        print("SEO-controle: %d pagina's met een afwijkende title, h1 of description:" % len(fouten))
+        print("\n".join(fouten[:50]))
 
 
 def alt_tekst(m):
