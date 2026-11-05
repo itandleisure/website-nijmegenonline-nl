@@ -2614,6 +2614,24 @@ def kaart_blok(bedrijven, root, knoppen=False):
             % ('          <div id="kaartgroepen" class="kaartgroepen"></div>\n' if knoppen else "", data, root))
 
 
+def zoekbalk(root):
+    """Zoekbalk op /bedrijvengids/ (assets/js/gidszoeker.js): zoekt in data/bedrijven-zoek.json op naam, categorie,
+    straat, postcode en plaats. Zonder JavaScript gaat het formulier naar de gewone zoekpagina."""
+    return ('        <div class="gidszoeker" data-gidszoeker data-pagefind-ignore="all">\n'
+            '          <form role="search" method="get" action="%szoeken/">\n'
+            '            <label for="gidszoek">Zoek een bedrijf</label>\n'
+            '            <div class="zoekveld">\n'
+            '              <input id="gidszoek" type="search" name="q" placeholder="Naam, categorie of straat, bijvoorbeeld kapper of Molenstraat" '
+            'autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="gidszoeker-lijst">\n'
+            '              <button type="submit">Zoek</button>\n'
+            '            </div>\n'
+            '            <ul id="gidszoeker-lijst" class="gidszoeker__lijst" role="listbox" aria-label="Gevonden bedrijven" hidden></ul>\n'
+            '            <p class="gidszoeker__status" role="status" aria-live="polite"></p>\n'
+            '          </form>\n'
+            '          <script src="%sassets/js/gidszoeker.js?v=1" defer></script>\n'
+            '        </div>' % (root, root))
+
+
 def start_pagina(groepen, root="../"):
     """/bedrijvengids/: kaart met alle bedrijven en de categorieën per groep."""
     canonical = "%s/bedrijvengids/" % SITE
@@ -2625,6 +2643,7 @@ def start_pagina(groepen, root="../"):
     out.append("        <h1>Bedrijvengids Nijmegen</h1>")
     out.append('        <div class="inhoud-tekst"><p>Op zoek naar een sportschool, een kapper of een plek om te lunchen? In de bedrijvengids '
                'vind je de bedrijven van Nijmegen, op de kaart en per categorie. Klik op een punt voor het adres en de pagina van het bedrijf.</p></div>')
+    out.append(zoekbalk(root))
     out.append('        <section class="gids-sectie">\n          <h2>Op de kaart</h2>')
     out.append(kaart_blok(alle, root, knoppen=True))
     out.append('          <p class="bron">Gegevens: onze eigen gids, aangevuld met © OpenStreetMap-bijdragers en Overture Maps.</p>\n        </section>')
