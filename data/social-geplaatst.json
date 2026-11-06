@@ -27,5 +27,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-06",
+  "soort": "evenement",
+  "betaald": true,
+  "sleutels": [
+   "evenement:magda-novels"
+  ],
+  "titel": "Magda Novels bij de Brauerij",
+  "link": "https://www.nijmegenonline.nl/events/magda-novels/",
+  "beelden": [
+   "assets/social/2026-11-06-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1782035503931518",
+  "instagram_id": "18112525088223971",
+  "instagram_link": "https://www.instagram.com/p/DfZazZMjbnf/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
