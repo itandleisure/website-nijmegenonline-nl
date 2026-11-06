@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:thema-avond-amerika-internationale-wereldorde@nijmegenonline.nl
+DTSTAMP:20261106T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261208T173000
+DTEND;TZID=Europe/Amsterdam:20261208T193000
+SUMMARY:Thema-avond Amerika: Internationale Wereldorde
+URL:https://www.nijmegenonline.nl/events/thema-avond-amerika-internationale-wereldorde/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/thema-avond-amerika-internationale-wereldorde/
+LOCATION:Infocentrum WO2 Nijmegen\, Ridderstraat 27 6511 TM Nijmegen
+END:VEVENT
+END:VCALENDAR

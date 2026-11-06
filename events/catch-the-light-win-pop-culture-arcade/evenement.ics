@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:catch-the-light-win-pop-culture-arcade@nijmegenonline.nl
+DTSTAMP:20261105T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261110T120000
+DTEND;TZID=Europe/Amsterdam:20261110T200000
+SUMMARY:Catch the Light & win - pop Culture Arcade
+URL:https://www.nijmegenonline.nl/events/catch-the-light-win-pop-culture-arcade/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/catch-the-light-win-pop-culture-arcade/
+LOCATION:Pop Culture Arcade Nijmegen\, Van Welderenstraat 80\, 6511 MR Nijmegen
+END:VEVENT
+END:VCALENDAR

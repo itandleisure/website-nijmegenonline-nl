@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:expositie-natuurlijk-in-het-kwadraat@nijmegenonline.nl
+DTSTAMP:20261103T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261114T090000
+DTEND;TZID=Europe/Amsterdam:20261115T150000
+SUMMARY:Expositie “Natuurlijk in het kwadraat"
+URL:https://www.nijmegenonline.nl/events/expositie-natuurlijk-in-het-kwadraat/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/expositie-natuurlijk-in-het-kwadraat/
+LOCATION:Het Kerkje van Persingen\, Persingensestraat 7\, 6575 JA Persingen
+END:VEVENT
+END:VCALENDAR

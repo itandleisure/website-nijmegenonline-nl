@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:europe-next-door-dialoog-in-nijmegen@nijmegenonline.nl
+DTSTAMP:20261106T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261115T173000
+DTEND;TZID=Europe/Amsterdam:20261115T190000
+SUMMARY:Europe Next Door Dialoog in Nijmegen
+URL:https://www.nijmegenonline.nl/events/europe-next-door-dialoog-in-nijmegen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/europe-next-door-dialoog-in-nijmegen/
+LOCATION:Thiemeloods Nijmegen\, Leemptstraat 34\, 6512 EN Nijmegen
+END:VEVENT
+END:VCALENDAR

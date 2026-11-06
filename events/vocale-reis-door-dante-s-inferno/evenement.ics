@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:vocale-reis-door-dante-s-inferno@nijmegenonline.nl
+DTSTAMP:20261106T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261121T180000
+DTEND;TZID=Europe/Amsterdam:20261121T191500
+SUMMARY:Vocale reis door Dante's Inferno
+URL:https://www.nijmegenonline.nl/events/vocale-reis-door-dante-s-inferno/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/vocale-reis-door-dante-s-inferno/
+LOCATION:Kapel Sancta Maria Nijmegen\, Bredestraat 174\, 6543 ZZ Nijmegen
+END:VEVENT
+END:VCALENDAR

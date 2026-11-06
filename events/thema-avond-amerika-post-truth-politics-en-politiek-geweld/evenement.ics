@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:thema-avond-amerika-post-truth-politics-en-politiek-geweld@nijmegenonline.nl
+DTSTAMP:20261106T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261124T173000
+DTEND;TZID=Europe/Amsterdam:20261124T193000
+SUMMARY:Thema-avond Amerika: post-truth politics en politiek geweld
+URL:https://www.nijmegenonline.nl/events/thema-avond-amerika-post-truth-politics-en-politiek-geweld/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/thema-avond-amerika-post-truth-politics-en-politiek-geweld/
+LOCATION:Infocentrum WO2 Nijmegen\, Ridderstraat 27 6511 TM Nijmegen
+END:VEVENT
+END:VCALENDAR

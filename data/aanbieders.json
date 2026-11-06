@@ -250,7 +250,7 @@
  },
  "het-kerkje-van-persingen": {
   "naam": "Het Kerkje van Persingen",
-  "adres": "Persingensestraat 7, Persingen, Gelderland 6575JA, Nederland",
+  "adres": "Persingensestraat 7, 6575 JA Persingen",
   "bedrijf": "",
   "plaats": "Berg en Dal"
  },
@@ -299,6 +299,11 @@
   "naam": "Irish pub The Shamrock Nijmegen",
   "adres": "Smetiusstraat 17 Nijmegen",
   "plaats": "Nijmegen"
+ },
+ "kapel-sancta-maria": {
+  "naam": "Kapel Sancta Maria Nijmegen",
+  "plaats": "Nijmegen",
+  "adres": "Bredestraat 174, 6543 ZZ Nijmegen"
  },
  "kasteel-wijchen": {
   "naam": "Kasteel Wijchen",
@@ -438,7 +443,7 @@
  },
  "pop-culture-arcade": {
   "naam": "Pop Culture Arcade Nijmegen",
-  "adres": "Van Welderenstraat 80, Nijmegen, Gelderland 6511MR, Nederland",
+  "adres": "Van Welderenstraat 80, 6511 MR Nijmegen",
   "plaats": "Nijmegen",
   "bedrijf": "pop-culture-arcade"
  },
@@ -510,7 +515,7 @@
  },
  "thiemeloods": {
   "naam": "Thiemeloods Nijmegen",
-  "adres": "Leemptstraat 34 Nijmegen ",
+  "adres": "Leemptstraat 34, 6512 EN Nijmegen",
   "plaats": "Nijmegen",
   "bedrijf": "thiemeloods"
  },

@@ -8,6 +8,15 @@
     <lastBuildDate>Fri, 06 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Fototentoonstelling Gastvrij Nijmegen in Studio MONK</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/fototentoonstelling-gastvrij-nijmegen-in-studio-monk/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/fototentoonstelling-gastvrij-nijmegen-in-studio-monk/</guid>
+      <pubDate>Fri, 06 Nov 2026 16:52:36 +0100</pubDate>
+      <description>Van 21 tot en met 27 november toont Studio MONK aan het Korenpad portretten van ongedocumenteerde Nijmegenaren. De entree is gratis.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-fototentoonstelling-gastvrij-nijmegen-in-studio-monk.jpg" length="69334" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-fototentoonstelling-gastvrij-nijmegen-in-studio-monk.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Orkest Phion speelt Mahlers Zesde in de kersttijd</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/orkest-phion-speelt-mahlers-zesde-in-de-kersttijd/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/orkest-phion-speelt-mahlers-zesde-in-de-kersttijd/</guid>
@@ -177,15 +186,6 @@
       <description>De Grenzland-Draisine in Kranenburg stopt op 31 oktober met het reguliere seizoen. In november kunnen groepen op vrijdag en zaterdag nog op aanvraag rijden.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-grenzland-draisine-sluit-seizoen-af-in-november-ritten-op-aanvraag.jpg" length="69168" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-grenzland-draisine-sluit-seizoen-af-in-november-ritten-op-aanvraag.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Elf kinderen in regio Nijmegen wachten op een pleeggezin</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/elf-kinderen-in-regio-nijmegen-wachten-op-een-pleeggezin/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/elf-kinderen-in-regio-nijmegen-wachten-op-een-pleeggezin/</guid>
-      <pubDate>Tue, 27 Oct 2026 15:22:44 +0100</pubDate>
-      <description>In het Rijk van Nijmegen wachten elf kinderen op een pleeggezin. Tijdens de Week van de Pleegzorg vragen gemeenten en zorgaanbieders aandacht voor het tekort.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-elf-kinderen-in-regio-nijmegen-wachten-op-een-pleeggezin.jpg" length="73643" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-elf-kinderen-in-regio-nijmegen-wachten-op-een-pleeggezin.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
