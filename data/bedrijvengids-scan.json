@@ -96396,7 +96396,7 @@
    "uit": 686
   },
   "lijkt_actief": true,
-  "naam": "Podium jin",
+  "naam": "Podium JIN",
   "openingstijden": "",
   "opmerkingen": "Podium JIN is een stichting zonder eigen zaal; concerten vinden op wisselende locaties plaats (De Lindenberg, Brebl, Thiemeloods). Het adres Ridderstraat 23 is van De Lindenberg. Geen openingstijden of ticketinformatie op de gelezen pagina's.",
   "status": "voorstel",
@@ -96413,6 +96413,7 @@
    "https://jinjazz.nl/bezoekers-over-de-jin-concerten/"
   ],
   "categorie_scan": "podia",
+  "dubbel_van": "podium-jin",
   "extra_categorieen": [],
   "gescand": "2026-10-24",
   "hoofdcategorie": "podia",
@@ -96428,7 +96429,8 @@
   "naam": "Podium JIN Nijmegen",
   "openingstijden": "",
   "opmerkingen": "Opgegeven website podiumjin.nl leidt naar jinjazz.nl. Podium JIN is een stichting zonder eigen vaste zaal; concerten vinden plaats op wisselende locaties (Brebl, Thiemeloods, De Lindenberg). Leemptstraat 34 is het adres van de Thiemeloods, niet per se van JIN zelf. Geen openingstijden of contactadres gevonden.",
-  "status": "voorstel",
+  "reden": "redactie: dubbel, dezelfde stichting als podium-jin (Ubersuggest-audit dubbele metabeschrijvingen, 6-11-2026)",
+  "status": "verwijderd",
   "tekst": "Zin om midden in de week even helemaal op te gaan in live muziek? Podium JIN organiseert in Nijmegen concerten met jazz en vernieuwende muziek, van ingetogen en verstild tot stevig en dansbaar, van experimenteel tot filmisch. Met de Breek-de-week-concerten zit je dicht op de musici, en na afloop is er altijd gelegenheid om ze te ontmoeten.\n\nDe concerten vinden plaats op verschillende plekken in de stad, zoals Brebl in het Honigcomplex, de Thiemeloods aan de Leemptstraat en De Lindenberg aan de Ridderstraat. Daarnaast staat JIN achter Festival Jazz International Nijmegen, dat in het najaar internationale artiesten en jong talent naar podia door de hele stad brengt.\n\nBenieuwd wat er binnenkort speelt? Kijk in de agenda op de site en schrijf je in voor de concertaankondigingen per mail.",
   "website": "http://www.podiumjin.nl/",
   "website_bereikbaar": true

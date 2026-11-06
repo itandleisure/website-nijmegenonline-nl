@@ -4787,30 +4787,6 @@
   "kenmerken": []
  },
  {
-  "slug": "anne-frank-middag",
-  "titel": "Anne Frank middag",
-  "start": "2026-08-10T14:00",
-  "eind": "2026-08-10T16:00",
-  "locatie": "Vrijheidsmuseum Groesbeek",
-  "adres": "Wylerbaan 4, 6561 KR Groesbeek",
-  "afbeelding": "https://www.nijmegenonline.nl/wp-content/uploads/2025/07/Anne-Frank-middag-Vrijheidsmuseum-4-1200x800.jpg",
-  "alt": "",
-  "uitgelicht": true,
-  "aanbieder": "vrijheidsmuseum",
-  "link": "https://vrijheidsmuseum.nl/",
-  "terugkerend": false,
-  "gepubliceerd": "2025-07-23",
-  "tekst": "<p>Wie was Anne eigenlijk en in welke wereld groeide zij op? Kinderen (10 tot 12 jaar) worden aan de hand van verschillende thema’s meegenomen door het verhaal van Anne Frank en het Vrijheidsmuseum. Gedurende deze interactieve en educatieve middag leren kinderen ook meer over het verhaal van Anne en de Tweede Wereldoorlog.</p>\n        <p>De Anne Frank middag start om 14.00 uur en is uiterlijk om 16.00 uur afgelopen. Deelname kost € 9,00 p.p. (geldt ook voor begeleidende ouders of grootouders, maximaal 1 begeleider per aanmelding). De Museumkaart is geldig.</p>\n        <p>Reserveren is noodzakelijk en kan via de website.</p>",
-  "soort": "Lezing en rondleiding",
-  "toegang": "betaald",
-  "prijs": "9",
-  "kenmerken": [
-   "kinderen",
-   "museumkaart",
-   "reserveren"
-  ]
- },
- {
   "slug": "anne-frank-middag-3",
   "titel": "Anne Frank middag",
   "start": "2026-08-10T14:00",

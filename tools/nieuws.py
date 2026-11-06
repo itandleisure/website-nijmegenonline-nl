@@ -158,12 +158,29 @@ def contact_html(c):
             % "\n".join("          " + r for r in regels))
 
 
-def bericht_pagina(b, nieuwer, ouder, bedrijven=(), vermeldingen=None):
+def beschrijvingen(berichten):
+    """Metabeschrijving per bericht: "beschrijving" uit de data, anders het begin van de tekst. Is die leeg (alleen een
+    video) of hetzelfde als bij een ander bericht (dezelfde persbericht-inleiding, de voettekst van RN7), dan een
+    beschrijving uit de titel en de datum. Zo krijgt geen enkele pagina dezelfde metabeschrijving als een andere
+    (Ubersuggest-audit, 6-11-2026). Echte dubbele berichten horen in data/nieuws-verwijderd.json, met een
+    doorverwijzing naar het bericht dat blijft."""
+    uit = {b["slug"]: b["beschrijving"] or samenvatting(zonder_dubbele_foto(b)) for b in berichten}
+    aantal = {}
+    for t in uit.values():
+        aantal[t] = aantal.get(t, 0) + 1
+    for b in berichten:
+        if not uit[b["slug"]] or aantal[uit[b["slug"]]] > 1:
+            titel = b["titel"].strip().rstrip(".:!?")
+            uit[b["slug"]] = samenvatting("<p>%s. Nieuws uit Nijmegen en omgeving van %s.</p>" % (esc(titel), datum_nl(b["datum"])))
+    return uit
+
+
+def bericht_pagina(b, nieuwer, ouder, bedrijven=(), vermeldingen=None, beschrijving=None):
     """bedrijven: (sleutel, naam) uit de gids waar het bericht over gaat; die krijgen een kaartje "Over <bedrijf>"."""
     root = "../../"
     canonical = "%s/nieuwsoverzicht/%s/" % (SITE, b["slug"])
     tekst = zonder_dubbele_foto(b)
-    beschrijving = b["beschrijving"] or samenvatting(tekst)
+    beschrijving = beschrijving or b["beschrijving"] or samenvatting(tekst)
     ld = [{"@context": "https://schema.org", "@type": "NewsArticle", "headline": b["titel"], "url": canonical,
            "datePublished": b["datum"], "dateModified": b["gewijzigd"], "description": beschrijving,
            "publisher": {"@type": "Organization", "name": "NijmegenOnline", "url": SITE + "/"}},
@@ -297,7 +314,10 @@ def doorverwijzingen(verwijderd, vermeldingen):
 
 
 def main():
-    berichten = sorted(laad() + laad_archief(), key=lambda b: (b["datum"], b["slug"]), reverse=True)
+    verwijderd = laad_verwijderd()
+    berichten = sorted((b for b in laad() + laad_archief() if b["slug"] not in verwijderd),
+                       key=lambda b: (b["datum"], b["slug"]), reverse=True)
+    meta = beschrijvingen(berichten)
     vermeldingen = json.load(open(VERMELDINGEN, encoding="utf-8")) if VERMELDINGEN.exists() else {}
     per_bedrijf = koppelingen(berichten, [(s, v.get("site")) for s, v in vermeldingen.items()])
     bij = {}
@@ -309,8 +329,8 @@ def main():
         d.mkdir(parents=True, exist_ok=True)
         nieuwer = berichten[n - 1] if n > 0 else None
         ouder = berichten[n + 1] if n + 1 < len(berichten) else None
-        (d / "index.html").write_text(bericht_pagina(b, nieuwer, ouder, bij.get(b["slug"], ()), vermeldingen), encoding="utf-8")
-    verwijderd = laad_verwijderd()
+        (d / "index.html").write_text(bericht_pagina(b, nieuwer, ouder, bij.get(b["slug"], ()), vermeldingen, meta[b["slug"]]),
+                                      encoding="utf-8")
     doorverwijzingen(verwijderd, vermeldingen)
     (ROOT / OVERZICHT).mkdir(exist_ok=True)
     (ROOT / OVERZICHT / "index.html").write_text(overzicht(berichten), encoding="utf-8")

@@ -3007,12 +3007,22 @@ def cat_pad(cat):
     return cat.get("pad") or "bedrijvengids-categorie/%s" % cat["slug"]
 
 
+def dubbel_doel(b, scan):
+    """Doel voor een dubbele vermelding: hetzelfde bedrijf staat er al onder een andere slug (status "verwijderd" met
+    "dubbel_van" in data/bedrijvengids-scan.json). Zo krijgen twee pagina's niet dezelfde tekst en metabeschrijving."""
+    naar = scan.get(b["slug"], {}).get("dubbel_van")
+    if not naar:
+        return None
+    return {"naam": scan.get(naar, {}).get("naam") or naar, "pad": "bedrijvengids/%s" % naar, "zin": "Dit bedrijf staat in onze gids als"}
+
+
 def doorverwijzen(b, cat):
     """De pagina van een verdwenen bedrijf stuurt door naar de categorie (ook in _redirects voor de echte server)."""
     map_ = ROOT / "bedrijvengids" / b["slug"]
     map_.mkdir(parents=True, exist_ok=True)
     tekst = DOORVERWIJZING % {"titel": esc(cat["naam"]), "url": "%s/%s/" % (SITE, cat_pad(cat)), "pad": "../../%s/" % cat_pad(cat)}
-    (map_ / "index.html").write_text(tekst.replace("Dit artikel is samengevoegd met", "Dit bedrijf staat niet meer in onze gids. Bekijk de"),
+    zin = cat.get("zin", "Dit bedrijf staat niet meer in onze gids. Bekijk de")
+    (map_ / "index.html").write_text(tekst.replace("Dit artikel is samengevoegd met", zin),
                                      encoding="utf-8")
 
 
@@ -3184,9 +3194,11 @@ def main(bron):
                or not (b.get("website") or b.get("uitgelicht") or b.get("geclaimd"))]
         gids = [b for b in gids if b not in weg]
         overig = [b for b in overig if b not in weg]
+        # Een dubbele vermelding ("dubbel_van" in de scan) stuurt door naar de pagina van het bedrijf dat blijft
+        doel = {b["slug"]: dubbel_doel(b, scan) or cat for b in weg}
         for b in weg:
-            doorverwijzen(b, cat)
-        alle_weg += [(b, cat) for b in weg]
+            doorverwijzen(b, doel[b["slug"]])
+        alle_weg += [(b, doel[b["slug"]]) for b in weg]
         alle_vermeldingen.update(vermeldingen(gids + overig, cat))
         gebouwd.append((cat, gids, overig))
         print("%s: %d uit de gids, %d aangevuld, %d niet (meer) in de gids" % (cat["slug"], len(gids), len(overig), len(weg)))
