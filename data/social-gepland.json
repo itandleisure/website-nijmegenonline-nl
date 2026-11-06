@@ -73,5 +73,24 @@
   "instagram_id": "18112525088223971",
   "instagram_link": "https://www.instagram.com/p/DfZazZMjbnf/",
   "fouten": []
+ },
+ "2026-11-07": {
+  "datum": "2026-11-07",
+  "soort": "partner",
+  "betaald": true,
+  "sleutels": [
+   "bedrijf:cafe-t-haantje"
+  ],
+  "titel": "Café ’t Haantje",
+  "link": "https://www.nijmegenonline.nl/bedrijvengids/cafe-t-haantje/",
+  "beelden": [
+   "assets/social/2026-11-07-1.jpg"
+  ],
+  "story": null,
+  "facebook": "Advertentie\n\nEen bruin café dat al generaties meegaat: Café 't Haantje in Nijmegen-Oost is een familiebedrijf, opgericht in 1957 door An en Piet Puijn en nu in handen van de derde generatie. Je kunt er terecht voor koffie, thee of een speciaalbiertje, en er zijn live muziek, sportuitzendingen en een biljart. 🍺\n\n📍 Daalseweg 19, Nijmegen\n\n👉 https://www.nijmegenonline.nl/bedrijvengids/cafe-t-haantje/",
+  "instagram": "Advertentie\n\nEen bruin café dat al generaties meegaat: Café 't Haantje in Nijmegen-Oost is een familiebedrijf, opgericht in 1957 door An en Piet Puijn en nu in handen van de derde generatie. Je kunt er terecht voor koffie, thee of een speciaalbiertje, en er zijn live muziek, sportuitzendingen en een biljart. 🍺\n\n📍 Daalseweg 19, Nijmegen\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #bruincafe #livemuziek #uitinnijmegen",
+  "tekst_door": "claude",
+  "status": "gepland",
+  "gemaakt": "2026-11-07T00:00+01:00"
  }
 }
