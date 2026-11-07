@@ -47,5 +47,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-07",
+  "soort": "partner",
+  "betaald": true,
+  "sleutels": [
+   "bedrijf:cafe-t-haantje"
+  ],
+  "titel": "Café ’t Haantje",
+  "link": "https://www.nijmegenonline.nl/bedrijvengids/cafe-t-haantje/",
+  "beelden": [
+   "assets/social/2026-11-07-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1783693683765700",
+  "instagram_id": "17919219282262547",
+  "instagram_link": "https://www.instagram.com/p/DfcmMA_l1L7/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
