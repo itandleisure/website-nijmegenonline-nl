@@ -307,3 +307,27 @@ proberen zonder te melden: `python tools/indexnow.py --droog`.
 
 `tools/build.py` houdt daarnaast elke `<title>` op hoogstens 70 tekens en meldt pagina's in de sitemap met meer of
 minder dan één `<title>` of `<h1>`, of zonder meta description.
+
+## Webshop (eerste versie, nog dicht)
+
+`python tools/webshop.py` bouwt `/webshop/` (overzicht), `/webshop/<categorie>/`, `/webshop/<product>/`, de winkelwagen,
+een bedankpagina en `/webshop/voorwaarden/` uit `data/webshop.json`. Zolang `"open": false` staat in de instellingen
+heeft elke pagina noindex, staat de winkel niet in de sitemap of de zoekfunctie en is er geen link in het menu.
+
+- **Soorten producten:** `eigen` (wij versturen het, bijv. een poster), `dienst` (voor ondernemers, bijv. vacature
+  uitgelicht; prijs ook excl. btw) en `partner` (affiliatelink naar bol.com e.d., knop met `rel="sponsored nofollow"`,
+  klik telt als `partnerlink` in Google Analytics). De producten die er nu in staan zijn voorbeelden (`"voorbeeld": true`).
+- **Beheer:** tabblad *Webshop* in de Google Sheet van de formulieren (kopregel maakt `installeer`). Eén product per regel:
+  naam, soort, categorie, prijs incl. btw, btw %, korte tekst, tekst, foto's (Drive-links of internetadressen), opties
+  (`Papier: Mat, Glans` voor een keuzelijst, of alleen een vraag voor een tekstveld), voorraad (leeg = onbeperkt),
+  verzenden, partner, partnerlink, volgorde en actief. Elk uur zet `python tools/webshop.py --ophalen` (workflow
+  *Aanmeldingen publiceren*) het tabblad in `data/webshop.json`, met de foto's als webp in `assets/uploads/webshop/`.
+  Is het tabblad leeg, dan blijft `data/webshop.json` zoals het is.
+- **Bestellen en betalen:** de winkelwagen staat in de browser. Afrekenen gaat naar het Apps Script (`form=bestelling`),
+  dat de prijzen narekent met `data/webshop.json` op GitHub, de bestelling in het tabblad *Bestellingen* zet en een
+  betaling bij Mollie maakt (iDEAL, Bancontact, creditcard). Scripteigenschappen: `MOLLIE_API_KEY` (live, als de winkel
+  open is) en `MOLLIE_TEST_API_KEY` (testbetalingen zolang hij dicht is). Zonder sleutel krijgen klant en redactie een
+  mail en stuurt de redactie zelf een betaalverzoek. Na betaling: status *Betaald*, voorraad in het tabblad omlaag,
+  bevestiging aan de klant, mail aan de redactie. Bestellingen worden niet opgeruimd (7 jaar bewaarplicht).
+- **Open zetten:** voorwaarden nalopen, voorbeeldproducten vervangen, Mollie live-sleutel instellen, `"open": true`,
+  en een link in het menu of de footer.

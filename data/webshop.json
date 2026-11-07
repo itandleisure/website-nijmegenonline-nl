@@ -1,0 +1,192 @@
+{
+ "instellingen": {
+  "open": false,
+  "verzendkosten": 4.95,
+  "gratis_verzending_vanaf": 40,
+  "levertijd": "Binnen 3 werkdagen in je brievenbus.",
+  "bedrijfsnaam": "NijmegenOnline, handelsnaam van The Badass Group B.V.",
+  "kvk": "82473897",
+  "btw_nummer": "",
+  "adres": "Het Bolwerk 70, 8332 GZ Steenwijk",
+  "email": "redactie@nijmegenonline.nl"
+ },
+ "categorieen": [
+  {
+   "slug": "nijmegen-in-huis",
+   "naam": "Nijmegen in huis",
+   "intro": "Posters, kaarten en prints met de mooiste plekken van de stad."
+  },
+  {
+   "slug": "cadeaus",
+   "naam": "Cadeaus uit Nijmegen",
+   "intro": "Iets van Nijmegen voor jezelf of voor iemand die de stad mist."
+  },
+  {
+   "slug": "tips",
+   "naam": "Tips van de redactie",
+   "intro": "Spullen die we zelf aanraden, te koop bij onze partners. Via deze links krijgen wij een kleine vergoeding; jij betaalt niets extra."
+  },
+  {
+   "slug": "ondernemers",
+   "naam": "Voor ondernemers",
+   "intro": "Meer bezoekers voor je bedrijf, evenement of vacature. Meteen betalen met iDEAL, dan staat het er snel."
+  }
+ ],
+ "producten": [
+  {
+   "slug": "poster-waal-bij-zonsondergang",
+   "naam": "Poster De Waal bij zonsondergang",
+   "soort": "eigen",
+   "categorie": "nijmegen-in-huis",
+   "prijs": 24.95,
+   "btw": 21,
+   "kort": "De Waal en de Waalbrug in het laatste avondlicht, gedrukt op stevig mat papier (50 × 70 cm).",
+   "tekst": "Een foto van onze eigen fotograaf, op de Waalkade gemaakt op een zomeravond. Gedrukt op 200 grams mat posterpapier, 50 bij 70 centimeter, zonder lijst. We versturen hem opgerold in een stevige koker.",
+   "fotos": [
+    "assets/img/standaard/nijmegen-waal-zonsondergang.webp"
+   ],
+   "opties": [
+    {
+     "naam": "Papier",
+     "keuzes": [
+      "Mat",
+      "Glans"
+     ]
+    }
+   ],
+   "voorraad": null,
+   "verzenden": true,
+   "volgorde": 1,
+   "actief": true,
+   "voorbeeld": true
+  },
+  {
+   "slug": "poster-skyline-stevenskerk",
+   "naam": "Poster Skyline met de Stevenskerk",
+   "soort": "eigen",
+   "categorie": "nijmegen-in-huis",
+   "prijs": 24.95,
+   "btw": 21,
+   "kort": "Het bekendste silhouet van de oudste stad van Nederland, 50 × 70 cm.",
+   "tekst": "De skyline van Nijmegen met de Stevenskerk, vanaf de overkant van de Waal. Gedrukt op 200 grams mat posterpapier, 50 bij 70 centimeter, zonder lijst. Opgerold verstuurd in een koker.",
+   "fotos": [
+    "assets/img/standaard/nijmegen-skyline-stevenskerk.webp"
+   ],
+   "opties": [
+    {
+     "naam": "Papier",
+     "keuzes": [
+      "Mat",
+      "Glans"
+     ]
+    }
+   ],
+   "voorraad": null,
+   "verzenden": true,
+   "volgorde": 2,
+   "actief": true,
+   "voorbeeld": true
+  },
+  {
+   "slug": "ansichtkaarten-nijmegen",
+   "naam": "Set van 8 ansichtkaarten van Nijmegen",
+   "soort": "eigen",
+   "categorie": "cadeaus",
+   "prijs": 9.95,
+   "btw": 21,
+   "kort": "Acht kaarten met foto's van de Waalkade, de Stevenskerk, de Grote Markt en meer.",
+   "tekst": "Acht verschillende ansichtkaarten met foto's uit ons eigen archief: de Waalkade, de Waalbrug, de Stevenskerk, de Grote Markt, het Valkhof, de Ooijpolder, de Vierdaagse en het Goffertpark. Formaat A6, met enveloppen.",
+   "fotos": [
+    "assets/img/standaard/nijmegen-skyline-waalkade.webp"
+   ],
+   "opties": [],
+   "voorraad": 50,
+   "verzenden": true,
+   "volgorde": 3,
+   "actief": true,
+   "voorbeeld": true
+  },
+  {
+   "slug": "blarenpleisters-vierdaagse",
+   "naam": "Blarenpleisters voor de Vierdaagse",
+   "soort": "partner",
+   "categorie": "tips",
+   "prijs": 9.99,
+   "partner": "bol.com",
+   "link": "https://www.bol.com/nl/nl/s/?searchtext=blarenpleisters",
+   "kort": "Lopers op de Vierdaagse zweren erbij: pleisters die de blaar beschermen en dagen blijven zitten.",
+   "tekst": "Uit onze veelgestelde vragen over de Vierdaagse: neem blarenpleisters mee en plak ze al op een plek die begint te schuren, niet pas als de blaar er is. Wissel ze niet elke dag; ze blijven zitten tot ze vanzelf loslaten.",
+   "fotos": [],
+   "verzenden": false,
+   "volgorde": 4,
+   "actief": true,
+   "voorbeeld": true
+  },
+  {
+   "slug": "vacature-uitgelicht",
+   "naam": "Vacature uitgelicht (30 dagen)",
+   "soort": "dienst",
+   "categorie": "ondernemers",
+   "prijs": 59.29,
+   "btw": 21,
+   "zakelijk": true,
+   "kort": "Je vacature bovenaan de vacaturebank, 90 dagen online en elke week in de nieuwsbrief.",
+   "tekst": "Met Uitgelicht staat je vacature bovenaan op de vacaturebank van NijmegenOnline, blijft hij 90 dagen online in plaats van 45 en komt hij elke week in onze nieuwsbrief. Plaats de vacature eerst via het formulier en vul hieronder de functie en je bedrijfsnaam in, dan zetten wij hem op Uitgelicht.",
+   "fotos": [],
+   "opties": [
+    {
+     "naam": "Functie en bedrijfsnaam",
+     "tekst": true
+    }
+   ],
+   "verzenden": false,
+   "volgorde": 5,
+   "actief": true,
+   "voorbeeld": true
+  },
+  {
+   "slug": "evenement-uitgelicht",
+   "naam": "Evenement uitgelicht",
+   "soort": "dienst",
+   "categorie": "ondernemers",
+   "prijs": 47.19,
+   "btw": 21,
+   "zakelijk": true,
+   "kort": "Twee weken uitgelicht in de agenda en op de homepage, met een post en een story op Instagram.",
+   "tekst": "Je evenement staat de twee weken ervoor uitgelicht in de agenda en op de homepage. We plaatsen een post op Facebook en Instagram en op de dag zelf een Instagram-story. Meld het evenement eerst aan via het formulier en vul hieronder de naam en de datum in.",
+   "fotos": [],
+   "opties": [
+    {
+     "naam": "Naam en datum van het evenement",
+     "tekst": true
+    }
+   ],
+   "verzenden": false,
+   "volgorde": 6,
+   "actief": true,
+   "voorbeeld": true
+  },
+  {
+   "slug": "bedrijvengids-uitgelicht",
+   "naam": "Uitgelicht in de bedrijvengids (1 jaar)",
+   "soort": "dienst",
+   "categorie": "ondernemers",
+   "prijs": 180.29,
+   "btw": 21,
+   "zakelijk": true,
+   "kort": "Bovenaan je categorie, foto's, een actieknop en een uitgebreide tekst door onze redactie.",
+   "tekst": "Een jaar lang bovenaan je categorie in de bedrijvengids (maximaal 3 per categorie), tot 10 foto's met logo, een actieknop voor reserveren of een offerte, en een uitgebreide tekst die we jaarlijks bijwerken. Vul hieronder de naam van je bedrijf in; daarna nemen we contact op voor de foto's.",
+   "fotos": [],
+   "opties": [
+    {
+     "naam": "Naam van je bedrijf",
+     "tekst": true
+    }
+   ],
+   "verzenden": false,
+   "volgorde": 7,
+   "actief": true,
+   "voorbeeld": true
+  }
+ ]
+}
