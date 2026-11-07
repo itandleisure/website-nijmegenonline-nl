@@ -142,6 +142,8 @@ function doPost(e) {
   var lijsten = (e && e.parameters) || {};   // meerdere waarden, bijv. aangevinkte keuzes
   if (p.actie === 'nieuws') return nieuwsOntvangen(p);
   if (p.actie === 'rapport') return rapportOntvangen(p);
+  if (p.actie === 'mollie') return mollieWebhook(p);
+  if (p.form === 'bestelling') return bestellingOntvangen(p);
 
   // Verborgen veld ingevuld of binnen 3 seconden na openen verstuurd = spambot: doen alsof het gelukt is.
   // "duur" is de invultijd in milliseconden, gemeten in de browser (onafhankelijk van de klok).
@@ -283,6 +285,10 @@ function doPost(e) {
 function doGet(e) {
   var p = (e && e.parameter) || {};
   if (p.actie === 'lijst') return antwoord(lijst());
+  // Webshop: producten uit het tabblad Webshop (tools/webshop.py --ophalen), een foto daaruit, en de status van een bestelling
+  if (p.actie === 'webshop') return antwoord({ producten: webshopProducten() });
+  if (p.actie === 'webshopfoto') return antwoord(webshopFoto(p.id));
+  if (p.actie === 'bestelstatus') return bestelstatus(p);
   // Vacature verlengen of sluiten: de werkgever opent de link uit de mail
   if (p.actie === 'beheer') return beheerPagina(p.id, p.t);
   // De workflow (tools/aanmeldingen.py) vraagt om een verlengmail of meldt een wijziging als verwerkt
@@ -1487,6 +1493,7 @@ function pagina(tekst) {
 // Eenmalig uitvoeren: maakt de tabbladen aan en zet de nachtelijke opruimtaak aan
 function installeer() {
   Object.keys(FORMULIEREN).forEach(function (k) { blad(FORMULIEREN[k]); });
+  installeerWebshop();
   var taken = ScriptApp.getProjectTriggers().map(function (t) { return t.getHandlerFunction(); });
   if (taken.indexOf('opruimen') < 0) {
     ScriptApp.newTrigger('opruimen').timeBased().everyDays(1).atHour(3).create();
@@ -1790,4 +1797,325 @@ function stuurVerlengmail(id, sluit, url) {
     htmlBody: '<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5">' +
       html_(tekst).replace(/(https:\/\/[^\s<]+[^\s<.,])/g, '<a href="$1">$1</a>').replace(/\n/g, '<br>') + '</div>'
   });
+}
+
+// ---------- Webshop (tools/webshop.py, assets/js/webshop.js) ----------
+// Producten beheren: tabblad "Webshop" in deze Sheet, één product per regel (kolommen zie PRODUCT_KOLOMMEN; installeer
+// maakt de kopregel). Elk uur haalt de website het tabblad op (?actie=webshop) en zet het in data/webshop.json.
+// Bestellen: de winkelwagen stuurt form=bestelling. Het script rekent de prijzen na met data/webshop.json op GitHub (wat
+// de klant op de site zag), zet de bestelling in het tabblad "Bestellingen" en maakt een betaling bij Mollie.
+//   Scripteigenschap MOLLIE_API_KEY (live_...) = echte betalingen; MOLLIE_TEST_API_KEY (test_...) = testbetalingen zolang
+//   de winkel dicht is ("open": false in data/webshop.json). Zonder sleutel: de klant krijgt een betaalverzoek van de
+//   redactie (Tikkie of factuur) en de bestelling krijgt de status "Wacht op betaalverzoek".
+// Mollie meldt elke betaling aan dit script (?actie=mollie); de bedankpagina vraagt de status ook zelf op.
+// Bestellingen worden NIET opgeruimd door opruimen(): ze moeten 7 jaar bewaard blijven voor de administratie.
+
+var WEBSHOP_URL = 'https://raw.githubusercontent.com/itandleisure/website-nijmegenonline-nl/main/data/webshop.json';
+var PRODUCTEN_TAB = 'Webshop';
+var PRODUCT_KOLOMMEN = [['naam', 'Naam'], ['soort', 'Soort (eigen, dienst of partner)'], ['categorie', 'Categorie'],
+  ['prijs', 'Prijs incl. btw'], ['btw', 'Btw %'], ['kort', 'Korte tekst'], ['tekst', 'Tekst'],
+  ['fotos', "Foto's (Drive-links of internetadressen)"], ['opties', 'Opties (bijv. Maat: S, M, L)'], ['voorraad', 'Voorraad (leeg = onbeperkt)'],
+  ['verzenden', 'Verzenden (ja/nee)'], ['partner', 'Partner (bijv. bol.com)'], ['link', 'Partnerlink'], ['volgorde', 'Volgorde'],
+  ['actief', 'Actief (ja/nee)'], ['slug', 'Adres (leeg = uit de naam)']];
+var BESTEL_TAB = 'Bestellingen';
+var BESTEL_KOLOMMEN = ['Datum', 'Bestelnummer', 'Status', 'Naam', 'E-mail', 'Telefoon', 'Bedrijf', 'Adres', 'Postcode', 'Plaats',
+  'Producten', 'Subtotaal', 'Verzendkosten', 'Totaal', 'Waarvan btw', 'Opmerking', 'Mollie-ID', 'Betaald op', 'Verzonden op', 'Notitie', 'Regels (JSON)'];
+
+function tab(naam, kop) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(naam);
+  if (!sheet) {
+    sheet = ss.insertSheet(naam);
+    sheet.setFrozenRows(1);
+  }
+  if (!sheet.getLastRow()) sheet.getRange(1, 1, 1, kop.length).setValues([kop]).setFontWeight('bold');
+  return sheet;
+}
+
+function installeerWebshop() {
+  tab(PRODUCTEN_TAB, PRODUCT_KOLOMMEN.map(function (k) { return k[1]; }));
+  var b = tab(BESTEL_TAB, BESTEL_KOLOMMEN);
+  b.getRange('A:A').setNumberFormat('dd-mm-yyyy hh:mm');
+  b.getRange('L:O').setNumberFormat('€ #,##0.00');
+}
+
+// Het tabblad Webshop als lijst van producten (sleutels uit PRODUCT_KOLOMMEN); kolommen zoeken op de kop, zodat je ze mag verschuiven
+function webshopProducten() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(PRODUCTEN_TAB);
+  if (!sheet || sheet.getLastRow() < 2) return [];
+  var waarden = sheet.getDataRange().getValues();
+  var kop = waarden[0].map(String);
+  return waarden.slice(1).map(function (r, i) {
+    var p = { rij: i + 2 };
+    PRODUCT_KOLOMMEN.forEach(function (k) {
+      var j = kop.indexOf(k[1]);
+      p[k[0]] = j < 0 ? '' : r[j];
+    });
+    return p;
+  }).filter(function (p) { return String(p.naam).trim(); });
+}
+
+function webshopFoto(id) {
+  // Alleen foto's die in het tabblad staan, anders zou elk bestand in Drive op te vragen zijn
+  var bekend = webshopProducten().some(function (p) { return String(p.fotos).indexOf(id) >= 0; });
+  if (!id || !bekend) return { ok: false };
+  var blob = DriveApp.getFileById(id).getBlob();
+  return { ok: true, type: blob.getContentType(), data: Utilities.base64Encode(blob.getBytes()) };
+}
+
+// data/webshop.json zoals de site hem nu toont (5 minuten bewaard)
+function webshopCatalogus() {
+  var cache = CacheService.getScriptCache();
+  var tekst = cache.get('webshop');
+  if (!tekst) {
+    tekst = UrlFetchApp.fetch(WEBSHOP_URL + '?t=' + Date.now(), { muteHttpExceptions: true }).getContentText();
+    try { cache.put('webshop', tekst, 300); } catch (fout) { /* te groot voor de cache: dan elke keer ophalen */ }
+  }
+  return JSON.parse(tekst);
+}
+
+function webshopSlug(tekst) {
+  return String(tekst || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80);
+}
+
+function bedrag(x) {
+  return '€ ' + Number(x).toFixed(2).replace('.', ',');
+}
+
+function mollieSleutel(open) {
+  var props = PropertiesService.getScriptProperties();
+  return ((open ? props.getProperty('MOLLIE_API_KEY') : props.getProperty('MOLLIE_TEST_API_KEY')) || '').trim();
+}
+
+function bestellingOntvangen(p) {
+  if (p.website || (p.duur !== undefined && p.duur !== '' && parseInt(p.duur, 10) < 3000)) return antwoord({ ok: false, melding: 'Probeer het opnieuw.' });
+  var cat = webshopCatalogus();
+  var inst = cat.instellingen || {};
+  var producten = {};
+  (cat.producten || []).forEach(function (x) { producten[x.slug] = x; });
+  // Voorraad zoals hij nu in de Sheet staat (de site kan een uur achterlopen)
+  var voorraadNu = {};
+  webshopProducten().forEach(function (x) {
+    var s = webshopSlug(x.slug || x.naam);
+    if (String(x.voorraad).trim() !== '' && !isNaN(Number(x.voorraad))) voorraadNu[s] = Number(x.voorraad);
+  });
+
+  var regels;
+  try { regels = JSON.parse(p.regels || '[]'); } catch (fout) { regels = []; }
+  if (!regels.length || regels.length > 30) return antwoord({ ok: false, melding: 'Je winkelwagen is leeg.' });
+
+  var lijst = [], subtotaal = 0, btw = 0, verzenden = false, perProduct = {};
+  for (var i = 0; i < regels.length; i++) {
+    var r = regels[i];
+    var prod = producten[r.slug];
+    var aantal = parseInt(r.aantal, 10);
+    if (!prod || prod.actief === false || (prod.soort !== 'eigen' && prod.soort !== 'dienst')) {
+      return antwoord({ ok: false, melding: 'Een product in je winkelwagen is niet meer te koop. Haal het weg en probeer het opnieuw.' });
+    }
+    if (!(aantal >= 1 && aantal <= 20)) return antwoord({ ok: false, melding: 'Controleer de aantallen.' });
+    var opties = [];
+    var gekozen = r.opties || {};
+    for (var j = 0; j < (prod.opties || []).length; j++) {
+      var o = prod.opties[j];
+      var w = schoon(gekozen[o.naam], 200);
+      if (o.tekst ? !w : (o.keuzes || []).indexOf(w) < 0) {
+        return antwoord({ ok: false, melding: 'Kies of vul "' + o.naam + '" in bij ' + prod.naam + '.' });
+      }
+      opties.push(o.naam + ': ' + w);
+    }
+    perProduct[prod.slug] = (perProduct[prod.slug] || 0) + aantal;
+    var voorraad = prod.slug in voorraadNu ? voorraadNu[prod.slug] : (typeof prod.voorraad === 'number' ? prod.voorraad : null);
+    if (prod.soort === 'eigen' && voorraad !== null && perProduct[prod.slug] > voorraad) {
+      return antwoord({ ok: false, melding: voorraad > 0 ? 'Van ' + prod.naam + ' zijn er nog ' + voorraad + '.' : prod.naam + ' is uitverkocht.' });
+    }
+    var regelBedrag = Math.round(prod.prijs * aantal * 100) / 100;
+    subtotaal += regelBedrag;
+    btw += regelBedrag - regelBedrag / (1 + (prod.btw === undefined ? 21 : prod.btw) / 100);
+    if (prod.verzenden) verzenden = true;
+    lijst.push({ slug: prod.slug, naam: prod.naam, aantal: aantal, prijs: prod.prijs, opties: opties, btw: prod.btw });
+  }
+  subtotaal = Math.round(subtotaal * 100) / 100;
+  var verzend = verzenden && !(inst.gratis_verzending_vanaf && subtotaal >= inst.gratis_verzending_vanaf) ? (inst.verzendkosten || 0) : 0;
+  btw += verzend - verzend / 1.21;
+  var totaal = Math.round((subtotaal + verzend) * 100) / 100;
+
+  var g = { naam: schoon(p.naam, 100), email: schoon(p.email, 150), telefoon: schoon(p.telefoon, 30), bedrijf: schoon(p.bedrijf, 150),
+    adres: schoon(p.adres, 150), postcode: postcode(schoon(p.postcode, 10)), plaats: schoon(p.plaats, 80), opmerking: schoon(p.opmerking, 1000) };
+  var fouten = [];
+  if (!g.naam) fouten.push('naam');
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email)) fouten.push('e-mailadres');
+  if (verzenden && (!g.adres || !/^\d{4} [A-Z]{2}$/.test(g.postcode) || !g.plaats)) fouten.push('bezorgadres');
+  if (p.voorwaarden !== 'akkoord') fouten.push('akkoord met de voorwaarden');
+  if (fouten.length) return antwoord({ ok: false, melding: 'Controleer: ' + fouten.join(', ') + '.' });
+
+  var id = 'NO-' + Utilities.formatDate(new Date(), 'Europe/Amsterdam', 'yyMMdd') + '-' + Utilities.getUuid().slice(0, 4).toUpperCase();
+  var t = teken('bestelling', id);
+  var open = !!inst.open;
+  var sleutel = mollieSleutel(open);
+  var omschrijving = lijst.map(function (x) {
+    return x.aantal + '× ' + x.naam + (x.opties.length ? ' (' + x.opties.join('; ') + ')' : '') + ' à ' + bedrag(x.prijs);
+  }).join('\n');
+
+  var status = sleutel ? 'Open' : 'Wacht op betaalverzoek';
+  if (!open) g.opmerking = '[TEST, winkel nog dicht] ' + g.opmerking;
+  var slot = LockService.getScriptLock();
+  slot.waitLock(10000);
+  try {
+    tab(BESTEL_TAB, BESTEL_KOLOMMEN).appendRow([new Date(), id, status, veiligVoorSheet(g.naam), g.email, veiligVoorSheet(g.telefoon),
+      veiligVoorSheet(g.bedrijf), veiligVoorSheet(g.adres), g.postcode, veiligVoorSheet(g.plaats), veiligVoorSheet(omschrijving),
+      subtotaal, verzend, totaal, Math.round(btw * 100) / 100, veiligVoorSheet(g.opmerking), '', '', '', '', JSON.stringify(lijst)]);
+  } finally {
+    slot.releaseLock();
+  }
+
+  var betaalUrl = '';
+  if (sleutel) {
+    var antw = UrlFetchApp.fetch('https://api.mollie.com/v2/payments', {
+      method: 'post', contentType: 'application/json', muteHttpExceptions: true,
+      headers: { Authorization: 'Bearer ' + sleutel },
+      payload: JSON.stringify({
+        amount: { currency: 'EUR', value: totaal.toFixed(2) },
+        description: 'NijmegenOnline bestelling ' + id,
+        redirectUrl: SITE + '/webshop/bedankt/?b=' + id + '&t=' + t,
+        webhookUrl: ScriptApp.getService().getUrl() + '?actie=mollie',
+        locale: 'nl_NL',
+        metadata: { bestelling: id }
+      })
+    });
+    var betaling = JSON.parse(antw.getContentText() || '{}');
+    if (antw.getResponseCode() >= 300 || !betaling._links) {
+      console.error('Mollie: ' + antw.getContentText());
+      zetBestelling(id, { 'Status': 'Betaling aanmaken mislukt' });
+      return antwoord({ ok: false, melding: 'Betalen lukt op dit moment niet.' });
+    }
+    zetBestelling(id, { 'Mollie-ID': betaling.id });
+    betaalUrl = betaling._links.checkout.href;
+  } else {
+    bestelMails(id, false);
+  }
+  return antwoord({ ok: true, bestelling: id, t: t, totaal: totaal, betaalUrl: betaalUrl });
+}
+
+// Rij van een bestelling: { nr, g } met g per kolomnaam
+function zoekBestelling(id, mollieId) {
+  var sheet = tab(BESTEL_TAB, BESTEL_KOLOMMEN);
+  var waarden = sheet.getDataRange().getValues();
+  var kop = waarden[0];
+  var kolom = kop.indexOf(mollieId ? 'Mollie-ID' : 'Bestelnummer');
+  for (var i = waarden.length - 1; i >= 1; i--) {
+    if (String(waarden[i][kolom]) === String(mollieId || id)) {
+      var g = {};
+      kop.forEach(function (k, j) { g[k] = waarden[i][j]; });
+      return { nr: i + 1, g: g };
+    }
+  }
+  return null;
+}
+
+function zetBestelling(id, velden) {
+  var rij = zoekBestelling(id);
+  if (!rij) return;
+  var sheet = tab(BESTEL_TAB, BESTEL_KOLOMMEN);
+  var kop = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  Object.keys(velden).forEach(function (k) {
+    var j = kop.indexOf(k);
+    if (j >= 0) sheet.getRange(rij.nr, j + 1).setValue(velden[k]);
+  });
+}
+
+// Mollie meldt een betaling (alleen het ID; de status vragen we zelf op, dan kan niemand een betaling nadoen)
+function mollieWebhook(p) {
+  if (/^tr_\w+$/.test(p.id || '')) verwerkBetaling(p.id);
+  return ContentService.createTextOutput('ok');
+}
+
+function verwerkBetaling(mollieId) {
+  var betaling = null;
+  [mollieSleutel(true), mollieSleutel(false)].filter(String).some(function (sleutel) {
+    var antw = UrlFetchApp.fetch('https://api.mollie.com/v2/payments/' + mollieId, {
+      muteHttpExceptions: true, headers: { Authorization: 'Bearer ' + sleutel } });
+    if (antw.getResponseCode() === 200) betaling = JSON.parse(antw.getContentText());
+    return !!betaling;
+  });
+  if (!betaling) return null;
+  var id = (betaling.metadata || {}).bestelling;
+  var slot = LockService.getScriptLock();
+  slot.waitLock(10000);
+  var nieuwBetaald = false, status;
+  try {
+    var rij = zoekBestelling(id);
+    if (!rij || String(rij.g['Mollie-ID']) !== mollieId) return null;
+    status = betaling.status === 'paid' ? 'Betaald'
+      : ['open', 'pending', 'authorized'].indexOf(betaling.status) >= 0 ? 'Open' : 'Niet betaald (' + betaling.status + ')';
+    if (rij.g['Status'] === 'Betaald' || rij.g['Status'] === 'Verzonden') {
+      status = rij.g['Status'];
+    } else if (status !== rij.g['Status']) {
+      var velden = { 'Status': status };
+      if (status === 'Betaald') {
+        velden['Betaald op'] = new Date();
+        nieuwBetaald = true;
+      }
+      zetBestelling(id, velden);
+    }
+  } finally {
+    slot.releaseLock();
+  }
+  if (nieuwBetaald) {
+    try { verlaagVoorraad(id); } catch (fout) { console.error('Voorraad: ' + fout); }
+    try { bestelMails(id, true); } catch (fout) { console.error('Bestelmail: ' + fout); }
+  }
+  return { status: status, betaalUrl: status === 'Open' && betaling._links && betaling._links.checkout ? betaling._links.checkout.href : '' };
+}
+
+function verlaagVoorraad(id) {
+  var rij = zoekBestelling(id);
+  var regels = JSON.parse(rij.g['Regels (JSON)'] || '[]');
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(PRODUCTEN_TAB);
+  if (!sheet) return;
+  var kop = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  var kolom = kop.indexOf(PRODUCT_KOLOMMEN.filter(function (k) { return k[0] === 'voorraad'; })[0][1]) + 1;
+  if (!kolom) return;
+  webshopProducten().forEach(function (x) {
+    var s = webshopSlug(x.slug || x.naam);
+    var aantal = regels.filter(function (r) { return r.slug === s; }).reduce(function (som, r) { return som + r.aantal; }, 0);
+    if (aantal && String(x.voorraad).trim() !== '' && !isNaN(Number(x.voorraad))) {
+      sheet.getRange(x.rij, kolom).setValue(Math.max(0, Number(x.voorraad) - aantal));
+    }
+  });
+}
+
+// De bedankpagina vraagt hoe het met de betaling staat
+function bestelstatus(p) {
+  if (!p.b || p.t !== teken('bestelling', p.b)) return antwoord({ ok: false });
+  var rij = zoekBestelling(p.b);
+  if (!rij) return antwoord({ ok: false });
+  var status = rij.g['Status'], betaalUrl = '';
+  if (status === 'Open' && rij.g['Mollie-ID']) {
+    var nu = verwerkBetaling(String(rij.g['Mollie-ID']));
+    if (nu) { status = nu.status; betaalUrl = nu.betaalUrl; }
+  }
+  return antwoord({ ok: true, status: status === 'Verzonden' ? 'Betaald' : status, totaal: rij.g['Totaal'], betaalUrl: betaalUrl });
+}
+
+// Bevestiging aan de klant en een mail aan de redactie (betaald = via Mollie, anders: betaalverzoek sturen)
+function bestelMails(id, betaald) {
+  var g = zoekBestelling(id).g;
+  var test = /^\[TEST/.test(String(g['Opmerking']));
+  var overzicht = String(g['Producten']) + '\n' + (Number(g['Verzendkosten']) ? 'Verzendkosten: ' + bedrag(g['Verzendkosten']) + '\n' : '') +
+    'Totaal: ' + bedrag(g['Totaal']) + ' (waarvan btw ' + bedrag(g['Waarvan btw']) + ')';
+  var adres = g['Adres'] ? '\n\nBezorgadres:\n' + g['Naam'] + '\n' + g['Adres'] + '\n' + g['Postcode'] + ' ' + g['Plaats'] : '';
+  var klant = 'Beste ' + g['Naam'] + ',\n\nBedankt voor je bestelling bij NijmegenOnline (bestelnummer ' + id + ').\n\n' + overzicht + adres +
+    (betaald ? '\n\nJe betaling is binnen. We gaan meteen voor je aan de slag.'
+      : '\n\nJe krijgt binnen een werkdag een betaalverzoek. Zodra dat betaald is, gaan we voor je aan de slag.') +
+    (g['Bedrijf'] ? ' De factuur op naam van ' + g['Bedrijf'] + ' sturen we apart.' : '') +
+    '\n\nVragen? Beantwoord deze mail.\n\nMet vriendelijke groet,\nNijmegenOnline';
+  mailInzender({ to: g['E-mail'], name: 'NijmegenOnline', subject: (test ? '[TEST] ' : '') + 'Je bestelling ' + id, body: klant,
+    htmlBody: '<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5">' + html_(klant).replace(/\n/g, '<br>') + '</div>' });
+  var redactie = (betaald ? 'Betaald via Mollie. Versturen of uitvoeren, en zet daarna de datum in de kolom "Verzonden op".'
+      : 'Er is (nog) geen Mollie-koppeling. Stuur de klant een betaalverzoek (Tikkie of factuur) en zet de status op Betaald zodra het binnen is.') +
+    '\n\nBestelnummer: ' + id + '\nKlant: ' + g['Naam'] + ' <' + g['E-mail'] + '>' + (g['Telefoon'] ? ', ' + g['Telefoon'] : '') +
+    (g['Bedrijf'] ? '\nBedrijf: ' + g['Bedrijf'] : '') + '\n\n' + overzicht + adres + (g['Opmerking'] ? '\n\nOpmerking: ' + g['Opmerking'] : '');
+  MailApp.sendEmail({ to: ONTVANGER, name: AFZENDER_NAAM, replyTo: g['E-mail'],
+    subject: (test ? '[TEST] ' : '') + (betaald ? 'Webshop: betaalde bestelling ' : 'Webshop: nieuwe bestelling, betaalverzoek sturen ') + id,
+    body: redactie });
 }
