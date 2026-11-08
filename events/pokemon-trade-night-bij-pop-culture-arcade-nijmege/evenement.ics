@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:pokemon-trade-night-bij-pop-culture-arcade-nijmege@nijmegenonline.nl
+DTSTAMP:20261107T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261207T160000
+DTEND;TZID=Europe/Amsterdam:20261207T200000
+SUMMARY:Pokémon Trade-Night bij Pop Culture Arcade Nijmege
+URL:https://www.nijmegenonline.nl/events/pokemon-trade-night-bij-pop-culture-arcade-nijmege/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/pokemon-trade-night-bij-pop-culture-arcade-nijmege/
+LOCATION:Pop Culture Arcade Nijmegen\, Van Welderenstraat 80\, 6511 MR Nijmegen
+END:VEVENT
+END:VCALENDAR

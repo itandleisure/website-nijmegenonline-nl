@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:instawalk-iconisch-nijmegen-voorbij-de-cliches@nijmegenonline.nl
+DTSTAMP:20261107T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261128T100000
+DTEND;TZID=Europe/Amsterdam:20261128T140000
+SUMMARY:InstaWalk Iconisch Nijmegen voorbij de clichés
+URL:https://www.nijmegenonline.nl/events/instawalk-iconisch-nijmegen-voorbij-de-cliches/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/instawalk-iconisch-nijmegen-voorbij-de-cliches/
+LOCATION:Lindenberg Cultuurhuis Nijmegen\, Ridderstraat 23\, 6511 TM Nijmegen
+END:VEVENT
+END:VCALENDAR
