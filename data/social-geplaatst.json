@@ -67,5 +67,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-08",
+  "soort": "partner",
+  "betaald": true,
+  "sleutels": [
+   "bedrijf:de-brauerij"
+  ],
+  "titel": "De Brauerij",
+  "link": "https://www.nijmegenonline.nl/bedrijvengids/de-brauerij/",
+  "beelden": [
+   "assets/social/2026-11-08-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1784853480316387",
+  "instagram_id": "17985091980066807",
+  "instagram_link": "https://www.instagram.com/p/DffCCsbl32J/",
+  "story_sleutel": "story:magda-novels",
+  "story_id": "18128170096918977",
+  "status": "geplaatst"
  }
 ]
