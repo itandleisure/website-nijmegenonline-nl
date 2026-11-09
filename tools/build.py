@@ -23,7 +23,8 @@
 9. Houdt de <title> op hoogstens 70 tekens (Bing meldt langere titels als fout): eerst valt " | NijmegenOnline" weg,
    dan wordt ingekort tot het eerste deel voor " | " (minstens 30 tekens), en anders op een woordgrens met "…".
    og:title en de kop op de pagina blijven de volledige titel houden.
-10. Meldt aan het eind indexeerbare pagina's met meer of minder dan één <title> of <h1>, of zonder meta description.
+10. tools/vindbaar.py: "Bijgewerkt op" en "In het kort" op de gidsen, organisatiegegevens op de homepage en llms.txt.
+11. Meldt aan het eind indexeerbare pagina's met meer of minder dan één <title> of <h1>, of zonder meta description.
 
 Gebruik: python tools/build.py [--live]
 """
@@ -32,6 +33,9 @@ import html as html_lib
 import pathlib
 import re
 import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import vindbaar  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PARTIALS = ROOT / "partials"
@@ -161,6 +165,7 @@ def main(live=False):
         if nieuw != html:
             page.write_text(nieuw, encoding="utf-8")
 
+    vindbaar.main()
     sitemap(live)
     seo_controle()
     ongebruikte_doorverwijzingen_weg()
