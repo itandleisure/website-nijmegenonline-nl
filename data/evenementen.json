@@ -6794,6 +6794,34 @@
   "kenmerken": []
  },
  {
+  "slug": "women-and-war-documentaire-vertoning-met-korte-introducties-door-nijmegen4ukrain",
+  "titel": "“Women and War” documentaire vertoning met korte introducties door Nijmegen4Ukraine en de Oekraïense ambassade",
+  "start": "2026-11-21T11:30",
+  "eind": "2026-11-21T13:00",
+  "locatie": "Lux Nijmegen",
+  "adres": "Mariënburg 38 – 39, Nijmegen",
+  "afbeelding": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/women-and-war-documentaire-vertoning-met-korte-introducties-door-nijmegen4ukrain.webp",
+  "alt": "“Women and War” documentaire vertoning met korte introducties door Nijmegen4Ukraine en de Oekraïense ambassade",
+  "bijschrift": "Eigen foto",
+  "fotos": [],
+  "uitgelicht": false,
+  "aanbieder": "lux-nijmegen",
+  "bedrijf": "",
+  "plaats": "Nijmegen",
+  "link": "",
+  "terugkerend": false,
+  "gepubliceerd": "2026-11-08",
+  "tekst": "<p>In Women and War volgen we vier Oekraïense vrouwen die gevangenschap en geweld overleefden. In therapie zoeken ze de weg terug naar zichzelf. Rustig verteld, zonder sensatie, en juist daardoor komt het zo binnen.</p>\n<p>Geen oorlogsfilm. Wel een film over wat er ná de oorlog komt. Een van de negen IDFA-documentaires die dit jaar in LUX draaien.</p>\n<p>Kom kijken, neem iemand mee en praat erna nog even na.</p>",
+  "aanmelding": "fe49f065",
+  "website": "",
+  "contactmail": "",
+  "telefoon": "",
+  "soort": "Film",
+  "toegang": "betaald",
+  "prijs": "",
+  "kenmerken": []
+ },
+ {
   "slug": "de-wereld-is-klein",
   "titel": "De wereld is klein",
   "start": "2026-11-21T17:30",
@@ -7021,6 +7049,37 @@
   "prijs": "",
   "kenmerken": [
    "reserveren"
+  ]
+ },
+ {
+  "slug": "noordse-klanken",
+  "titel": "Noordse klanken",
+  "start": "2026-11-28T20:00",
+  "eind": "2026-11-28T22:00",
+  "locatie": "Boskapel Nijmegen",
+  "adres": "Graafseweg 276, 6532 ZV Nijmegen",
+  "afbeelding": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/noordse-klanken.webp",
+  "alt": "Noordse klanken",
+  "bijschrift": "Eigen foto",
+  "fotos": [],
+  "uitgelicht": false,
+  "aanbieder": "boskapel",
+  "bedrijf": "",
+  "plaats": "Nijmegen",
+  "link": "",
+  "terugkerend": false,
+  "gepubliceerd": "2026-11-08",
+  "tekst": "<p>In het weekend van 28 en 29 november is het feest voor muziekgezelschap Flos Campi.<br>Op zaterdag 28 november geeft het orkest om 20.00 uur een concert – Noordse klanken - in de Boskapel in Nijmegen. Op het programma staan Entry of the Boyards van Halvorsen, het Pianoconcert in A-mineur op. 16 van Grieg en Symfonie nr. 1 op. 4 van Svendsen. Yuewen Yin, een pianiste met een uitzonderlijk talent, is de solist. Zij won in 2023 op dertienjarige leeftijd de tweede prijs van het Prinses Christina Concours. Dit alles staat onder muzikale leiding van Dick Bolt.</p>\n<p>Gewoonlijk kunt u voor concerten van Flos Campi een kaartje kopen via de website van Flos Campi. Maar op dit moment is dat helaas niet mogelijk, omdat de website niet toegankelijk is. Dit komt doordat de website is gehackt. We doen er alles aan om dit zo snel mogelijk op te lossen.<br>In de tussentijd starten we een alternatief bestelsysteem op. U kunt op de volgende manier tickets reserveren.</p>\n<p>Maak het juiste bedrag (aantal tickets x €20 (volwassenen) / €8 (CJP) over naar:<br>Rekeningnummer: NL20 ABNA 0537 2304 32<br>T.n.v. Stichting N.M.E. Flos Campi<br>Onder vermelding van:  tickets 28 november + uw naam (voorletter en achternaam) + het aantal tickets (bijvoorbeeld 2)<br> Uw naam en het aantal door u gekochte tickets komen op een lijst te staan. Op 28 november kunt u zich dan melden bij de ingang van de Boskapel.</p>",
+  "aanmelding": "996da3fa",
+  "website": "https://www.floscampi.nl",
+  "contactmail": "wjoosen62@gmail.com",
+  "telefoon": "+31640304302",
+  "soort": "Muziek",
+  "toegang": "betaald",
+  "prijs": "20",
+  "kenmerken": [
+   "korting",
+   "kinderprijs"
   ]
  },
  {
