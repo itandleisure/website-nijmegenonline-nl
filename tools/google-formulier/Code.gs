@@ -333,7 +333,7 @@ function lijst() {
     if (!cfg.goedkeuren) return;
     var sheet = blad(cfg);
     var k = kolommen(cfg);
-    var rijen = sheet.getLastRow() > 1 ? sheet.getRange(2, 1, sheet.getLastRow() - 1, k.length).getValues() : [];
+    var rijen = sheet.getLastRow() > 1 ? waarden(sheet.getRange(2, 1, sheet.getLastRow() - 1, k.length)) : [];
     uit[type] = rijen.filter(function (r) {
       return String(r[k.indexOf('Status')]).trim().toLowerCase() === 'akkoord';
     }).map(function (r) {
@@ -359,6 +359,20 @@ function lijst() {
   return uit;
 }
 
+// getValues(), maar een cel die Sheets als tijd heeft opgeslagen (een datum in 1899) komt als de tekst die in de
+// Sheet staat. Zo'n tijd omrekenen met formatDate gaat mis: in 1899 gold in Nederland nog een andere tijdzone dan
+// waar Sheets mee rekent, waardoor 20:00 op de beoordeelpagina en de site als 19:00 verscheen.
+function waarden(range) {
+  var w = range.getValues(), getoond = null;
+  return w.map(function (r, i) {
+    return r.map(function (c, j) {
+      if (!(c instanceof Date) || c.getFullYear() >= 1900) return c;
+      getoond = getoond || range.getDisplayValues();
+      return getoond[i][j];
+    });
+  });
+}
+
 // Eén regel uit de Sheet als object met de veldnamen van het formulier
 function rijNaarG(cfg, r, k) {
   var g = { pagina: String(r[1] || '') };
@@ -368,6 +382,9 @@ function rijNaarG(cfg, r, k) {
     if (waarde instanceof Date) {
       waarde = Utilities.formatDate(waarde, 'Europe/Amsterdam', /datum$/.test(v[0]) ? 'yyyy-MM-dd' : 'HH:mm');
     }
+    // Een tijd uit waarden() komt als getoonde tekst, bijvoorbeeld "20:00:00": terug naar UU:MM
+    var tijd = /tijd$/.test(v[0]) && /^(\d{1,2}):(\d{2})(:\d{2})?$/.exec(String(waarde));
+    if (tijd) waarde = ('0' + tijd[1]).slice(-2) + ':' + tijd[2];
     g[v[0]] = String(waarde === undefined || waarde === null ? '' : waarde).replace(/^'/, '');
   });
   if (cfg.goedkeuren) {
@@ -896,7 +913,7 @@ function bewerkPagina(type, id) {
   var nr = zoekRij(cfg, id);
   if (!nr) return pagina('Deze aanmelding staat niet (meer) in de spreadsheet.');
   var k = kolommen(cfg);
-  var g = rijNaarG(cfg, blad(cfg).getRange(nr, 1, 1, k.length).getValues()[0], k);
+  var g = rijNaarG(cfg, waarden(blad(cfg).getRange(nr, 1, 1, k.length))[0], k);
   var t = teken(type, id);
   var basis = ScriptApp.getService().getUrl() + '?type=' + type + '&id=' + encodeURIComponent(id) + '&t=' + t + '&actie=';
 
@@ -1026,7 +1043,7 @@ function bewaarBewerking(d) {
     if (!nr) throw new Error('Deze aanmelding staat niet (meer) in de spreadsheet.');
     var sheet = blad(cfg);
     var k = kolommen(cfg);
-    var r = sheet.getRange(nr, 1, 1, k.length).getValues()[0];
+    var r = waarden(sheet.getRange(nr, 1, 1, k.length))[0];
     var status = String(r[k.indexOf('Status')]);
     if (status === 'Gepubliceerd') {
       throw new Error('Deze aanmelding staat al op de website; wijzigingen moeten daar worden gedaan.');
@@ -1137,7 +1154,7 @@ function afwijsPagina(type, id) {
   var nr = zoekRij(cfg, id);
   if (!nr) return pagina('Deze aanmelding staat niet (meer) in de spreadsheet.');
   var k = kolommen(cfg);
-  var g = rijNaarG(cfg, blad(cfg).getRange(nr, 1, 1, k.length).getValues()[0], k);
+  var g = rijNaarG(cfg, waarden(blad(cfg).getRange(nr, 1, 1, k.length))[0], k);
   if (g.status === 'Gepubliceerd') return pagina('Deze aanmelding staat al op de website.');
   if (g.status === 'Afgewezen') return pagina('Deze aanmelding is al afgewezen.');
   var naam = g.titel || (g.functie ? g.functie + ' bij ' + g.werkgever : '') || g.bedrijf;
@@ -1196,7 +1213,7 @@ function wijsAf(d) {
   if (!nr) throw new Error('Deze aanmelding staat niet (meer) in de spreadsheet.');
   var sheet = blad(cfg);
   var k = kolommen(cfg);
-  var g = rijNaarG(cfg, sheet.getRange(nr, 1, 1, k.length).getValues()[0], k);
+  var g = rijNaarG(cfg, waarden(sheet.getRange(nr, 1, 1, k.length))[0], k);
   if (g.status === 'Gepubliceerd') throw new Error('Deze aanmelding staat al op de website.');
   sheet.getRange(nr, k.indexOf('Status') + 1).setValue('Afgewezen');
   var reden = (d.redenen || []).join(' ');
@@ -1222,7 +1239,7 @@ function stuurPlaatsingsmail(type, id, url) {
   var nr = zoekRij(cfg, id);
   if (!nr) return;
   var k = kolommen(cfg);
-  var g = rijNaarG(cfg, blad(cfg).getRange(nr, 1, 1, k.length).getValues()[0], k);
+  var g = rijNaarG(cfg, waarden(blad(cfg).getRange(nr, 1, 1, k.length))[0], k);
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email)) return;
   var naam = g.titel || (g.functie ? g.functie + ' bij ' + g.werkgever : '') || g.bedrijf;
   if (type === 'nieuws') {
@@ -1644,7 +1661,9 @@ function schoon(waarde, max) {
 // Voorkomt dat tekst die met = + - @ begint als formule wordt uitgevoerd, en dat Sheets
 // de voorloopnul van een telefoonnummer weghaalt (0612... wordt anders 612...)
 function veiligVoorSheet(tekst) {
-  return /^[=+\-@]/.test(tekst) || /^0\d/.test(tekst) ? "'" + tekst : tekst;
+  // Ook een losse tijd of datum: anders maakt Sheets er een tijd- of datumwaarde van (zie waarden())
+  return /^[=+\-@]/.test(tekst) || /^0\d/.test(tekst) || /^\d{1,2}[:.]\d{2}(:\d{2})?$/.test(tekst) ||
+    /^\d{4}-\d{2}-\d{2}$/.test(tekst) ? "'" + tekst : tekst;
 }
 
 // JSON voor in een <script>: geen </script> uit ingestuurde tekst
@@ -1683,7 +1702,7 @@ function vacatureRij(id) {
   var nr = zoekRij(cfg, id);
   if (!nr) return null;
   var k = kolommen(cfg);
-  return { nr: nr, g: rijNaarG(cfg, blad(cfg).getRange(nr, 1, 1, k.length).getValues()[0], k) };
+  return { nr: nr, g: rijNaarG(cfg, waarden(blad(cfg).getRange(nr, 1, 1, k.length))[0], k) };
 }
 
 function zetWijziging(nr, waarde) {
@@ -1699,7 +1718,7 @@ function vacatureBeheer() {
   var k = kolommen(cfg);
   if (sheet.getLastRow() < 2) return [];
   var basis = ScriptApp.getService().getUrl();
-  return sheet.getRange(2, 1, sheet.getLastRow() - 1, k.length).getValues().map(function (r) {
+  return waarden(sheet.getRange(2, 1, sheet.getLastRow() - 1, k.length)).map(function (r) {
     return rijNaarG(cfg, r, k);
   }).filter(function (g) { return g.status === 'Gepubliceerd' && g.id; }).map(function (g) {
     var t = teken('herinner', g.id);
