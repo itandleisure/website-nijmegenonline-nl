@@ -31,11 +31,16 @@ def main():
                   if (ROOT / g["url"].strip("/") / "index.html").is_file()])
     rond = "%d.%03d" % divmod(bedrijven // 100 * 100, 1000) if bedrijven >= 1000 else str(bedrijven)
     ld = {"@context": "https://schema.org", "@type": "AboutPage", "name": "Over NijmegenOnline", "url": SITE + "/over-ons/",
-          "inLanguage": "nl-NL", "about": {"@id": SITE + "/#organisatie"}, "publisher": {"@id": SITE + "/#organisatie"}}
+          "inLanguage": "nl-NL", "about": {"@id": SITE + "/#organisatie"},
+          "mainEntity": {"@type": "Person", "name": "Frans", "jobTitle": "Eigenaar",
+                         "worksFor": {"@id": SITE + "/#organisatie"}}, "publisher": {"@id": SITE + "/#organisatie"}}
     extra = '\n  <script type="application/ld+json">%s</script>' % json.dumps(ld, ensure_ascii=False)
     inhoud = """        <h1>Over NijmegenOnline</h1>
         <div class="inhoud-tekst">
           <p>NijmegenOnline is de stadsgids van Nijmegen en omgeving. Al ruim 22 jaar zetten we op één plek wat er in de stad te doen is: de agenda, lokaal nieuws, gidsen over uitgaan, eten, natuur en evenementen, en een bedrijvengids met de bedrijven uit de stad.</p>
+
+          <h2>Wie we zijn</h2>
+          <p>NijmegenOnline is van Frans, eigenaar van de site. Samen met een klein team zorgt hij dat evenementen, nieuws en bedrijven in Nijmegen zichtbaar zijn voor iedereen die in de stad woont of ernaartoe gaat: studenten, ondernemers, toeristen en Nijmegenaren zelf. Ons doel: alle informatie over Nijmegen overzichtelijk op één plek, zodat je maar één platform nodig hebt.</p>
 
           <h2>Wat je op de site vindt</h2>
           <ul>
