@@ -64,6 +64,7 @@
   ],
   "bedrijvengids": "/bedrijvengids/",
   "kort": "Trouwlocaties, fotograaf, jurk, ringen, muziek en een handige checklist.",
+  "samenvatting": "Trouwen in Nijmegen kan op historische plekken als de Stevenskerk en het Valkhofpark, aan de Waal of op een landgoed in de heuvels rond de stad. Deze gids loopt de voorbereiding stap voor stap door: de checklist, de trouwlocatie en het feest, de jurk en ringen, haar en make-up, en de fotograaf en muziek.",
   "foto": "/wp-content/uploads/2023/03/bruiloft-fotograaf-nijmegen-533x400.png"
  },
  {
@@ -136,7 +137,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/eten-drinken/",
-  "kort": "De beste adressen per keuken en per gelegenheid, van lunch tot diner."
+  "kort": "De beste adressen per keuken en per gelegenheid, van lunch tot diner.",
+  "samenvatting": "Nijmegen heeft restaurants uit alle keukens, vooral in de binnenstad, op de Waalkade en in Oost en Bottendaal. Deze gids zet onze restauranttips op een rij: de beste restaurants in het centrum, per keuken (van Italiaans en Thais tot sushi en vegan) en per gelegenheid, zoals betaalbaar uit eten, met kinderen of exclusief dineren."
  },
  {
   "url": "/thema/cafes-in-nijmegen/",
@@ -181,7 +183,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/eten-drinken/",
-  "kort": "Historische kroegen, biercafés, eetcafés en uitgaan."
+  "kort": "Historische kroegen, biercafés, eetcafés en uitgaan.",
+  "samenvatting": "Nijmegen heeft een lange caféhistorie, met bruine kroegen in de binnenstad, biercafés met lokale brouwers en eetcafés in de wijken. Deze gids bundelt onze tips voor historische cafés en biercafés, cafés buiten het centrum en uitgaan."
  },
  {
   "url": "/thema/massage-nijmegen/",
@@ -224,7 +227,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/massage/",
-  "kort": "Soorten massage, salons en wat je kunt verwachten."
+  "kort": "Soorten massage, salons en wat je kunt verwachten.",
+  "samenvatting": "In Nijmegen zijn salons en praktijken voor ontspanningsmassage, sportmassage, hot stone en Thaise massage. Deze gids legt uit welke massage bij je past, wat je bij een eerste bezoek kunt verwachten en wat sporters en Vierdaagselopers eraan hebben."
  },
  {
   "url": "/thema/nagelsalon-in-nijmegen/",
@@ -260,7 +264,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/nagelsalon/",
-  "kort": "Manicure, gellak en nagelverlenging, en een goede salon kiezen."
+  "kort": "Manicure, gellak en nagelverlenging, en een goede salon kiezen.",
+  "samenvatting": "Nijmegen heeft tientallen nagelsalons voor manicure, gellak, biab en nagelverlenging. Deze gids helpt je een goede salon te kiezen en geeft tips om je nagels thuis gezond te houden."
  },
  {
   "url": "/thema/pedicures-in-nijmegen/",
@@ -304,7 +309,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/pedicure/",
-  "kort": "Luxe en medische pedicure, en voetverzorging thuis."
+  "kort": "Luxe en medische pedicure, en voetverzorging thuis.",
+  "samenvatting": "Een pedicure in Nijmegen helpt bij eelt, ingegroeide nagels en een droge huid; voor mensen met diabetes is een medisch pedicure aan te raden. Deze gids beschrijft de behandelingen, wanneer je naar een medisch pedicure gaat en hoe je je voeten thuis verzorgt."
  },
  {
   "url": "/thema/permanente-make-up-in-nijmegen/",
@@ -344,7 +350,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/permanente-make-up/",
-  "kort": "Hoe het werkt, voor wie het is en waar je op let."
+  "kort": "Hoe het werkt, voor wie het is en waar je op let.",
+  "samenvatting": "Permanente make-up is pigment in de huid voor wenkbrauwen, eyeliner of lippen, dat enkele jaren meegaat. Deze gids legt uit hoe het werkt, voor wie het geschikt is en hoe je in Nijmegen een goede specialist kiest."
  },
  {
   "url": "/thema/kappers-in-nijmegen/",
@@ -381,7 +388,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/kapper/",
-  "kort": "Kapsalons, barbiers en tips voor je haar."
+  "kort": "Kapsalons, barbiers en tips voor je haar.",
+  "samenvatting": "In Nijmegen kun je kiezen uit kapsalons, barbiers, haarstylisten voor een bruiloft en kappers aan huis. Deze gids bundelt onze tips: adressen voor mannen, kappers voor ouderen en advies over haarverzorging en styling."
  },
  {
   "url": "/thema/cursus-nijmegen/",
@@ -431,7 +439,8 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Talen, edelsmeden, houtbewerking, fotografie en meer."
+  "kort": "Talen, edelsmeden, houtbewerking, fotografie en meer.",
+  "samenvatting": "In Nijmegen kun je naast de Radboud Universiteit en de HAN bij tientallen kleine opleiders terecht voor een taal, een ambacht of een creatieve hobby. Deze gids zet de cursussen op een rij: talen (Engels, Spaans, Frans), edelsmeden, houtbewerking, fotografie en meer."
  },
  {
   "url": "/thema/zaal-huren-in-nijmegen/",
@@ -466,6 +475,7 @@
   ],
   "bedrijvengids": "",
   "kort": "Locaties voor feesten, vergaderingen en teamuitjes.",
+  "samenvatting": "In en rond Nijmegen zijn zalen voor tien tot honderden gasten, in de stad en in het groen. Deze gids geeft locatietips voor feesten, vergaderingen en teamuitjes en zegt waar je op let bij het kiezen.",
   "foto": "/wp-content/uploads/2022/12/trouwlocatie-huren-in-nijmegen.png"
  },
  {
@@ -503,7 +513,8 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Een kamer vinden en wegwijs worden in de stad."
+  "kort": "Een kamer vinden en wegwijs worden in de stad.",
+  "samenvatting": "Nijmegen is een studentenstad met de Radboud Universiteit en de HAN. Deze gids helpt nieuwe studenten op weg: een kamer vinden en wegwijs worden in de stad in de eerste weken."
  },
  {
   "url": "/ondernemen-in-nijmegen/",
@@ -560,7 +571,8 @@
    }
   ],
   "bedrijvengids": "/bedrijf-aanmelden/",
-  "kort": "Starten, subsidies, financiering, marketing en netwerken."
+  "kort": "Starten, subsidies, financiering, marketing en netwerken.",
+  "samenvatting": "Deze gids zet alles voor ondernemers in Nijmegen bij elkaar: een bedrijf starten, subsidies en financiering, zichtbaar worden en netwerken, en personeel. Een bedrijf uit Nijmegen kan gratis in de bedrijvengids van NijmegenOnline."
  },
  {
   "url": "/thema/overnachten-in-nijmegen/",
@@ -606,7 +618,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/overnachten/",
-  "kort": "Hotels, Airbnb's, vakantieparken en campings."
+  "kort": "Hotels, Airbnb's, vakantieparken en campings.",
+  "samenvatting": "In Nijmegen overnacht je in een hotel of Airbnb in de stad, in een B&B in Nijmegen-Oost, Groesbeek of Wijchen, of op een vakantiepark, camping of camperplaats in de omgeving. Deze gids bundelt onze tips per soort overnachting."
  },
  {
   "url": "/thema/bb-nijmegen/",
@@ -629,7 +642,8 @@
   "faq": [],
   "bedrijvengids": "/bedrijvengids-categorie/overnachten/",
   "hoofdgids": "/thema/overnachten-in-nijmegen/",
-  "kort": "Bed and breakfasts in Nijmegen, Groesbeek en Wijchen."
+  "kort": "Bed and breakfasts in Nijmegen, Groesbeek en Wijchen.",
+  "samenvatting": "Deze gids zet de leukste bed and breakfasts in Nijmegen en de dorpen eromheen op een rij, waaronder Nijmegen-Oost, Groesbeek en Wijchen. Een B&B is persoonlijker dan een hotel: de gastheer of gastvrouw kent de omgeving."
  },
  {
   "url": "/thema/campings-in-nijmegen/",
@@ -739,7 +753,8 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Musea, historische kerken, film en cultuur."
+  "kort": "Musea, historische kerken, film en cultuur.",
+  "samenvatting": "Nijmegen is de oudste stad van Nederland, en dat zie je in de musea en historische kerken: van de Romeinen tot de Tweede Wereldoorlog. Deze gids zet de musea, kerken en plekken voor film en cultuur op een rij."
  },
  {
   "url": "/thema/winkelen-in-nijmegen/",
@@ -838,7 +853,8 @@
   ],
   "faq": [],
   "bedrijvengids": "",
-  "kort": "Een fotograaf kiezen en de mooiste fotospots."
+  "kort": "Een fotograaf kiezen en de mooiste fotospots.",
+  "samenvatting": "De Waal, de Waalbrug, de Ooijpolder en de historische binnenstad zijn de bekendste fotospots van Nijmegen. Deze gids helpt je een fotograaf te kiezen en geeft tips en workshops om zelf beter te fotograferen."
  },
  {
   "url": "/jaarlijkse-evenementen/nijmeegse-vierdaagse/",
@@ -888,7 +904,8 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Afstanden, voorbereiding, blessures voorkomen en overnachten."
+  "kort": "Afstanden, voorbereiding, blessures voorkomen en overnachten.",
+  "samenvatting": "De Nijmeegse Vierdaagse is elk jaar in juli het grootste meerdaagse wandelevenement ter wereld, met tegelijk een week feest in de stad: de Vierdaagsefeesten. Deze gids helpt je meelopen, voorbereiden, blessures voorkomen en een overnachting vinden."
  },
  {
   "url": "/thema/centrum-nijmegen/",
@@ -960,7 +977,8 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Pleinen, Waalkade, winkels, markten en parkeren in de binnenstad."
+  "kort": "Pleinen, Waalkade, winkels, markten en parkeren in de binnenstad.",
+  "samenvatting": "Het centrum van Nijmegen is compact: van het station loop je in een kwartier naar de Grote Markt en van daar in vijf minuten naar de Waalkade. Deze gids zet de pleinen en de Stevenskerk, de plekken aan de Waal, de winkelstraten, markten en openingstijden, en het parkeren in de binnenstad op een rij."
  },
  {
   "url": "/thema/parkeren-nijmegen/",
@@ -1022,7 +1040,8 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Parkeergarages, tarieven, P+R, station, bus en fiets."
+  "kort": "Parkeergarages, tarieven, P+R, station, bus en fiets.",
+  "samenvatting": "Onder het centrum van Nijmegen liggen vier parkeergarages, en aan de rand van de stad P+R-terreinen; het station ligt een kwartier lopen van de Grote Markt. Deze gids geeft per garage de tarieven, de goedkope en gratis alternatieven, en hoe je met trein, bus en fiets in de stad komt."
  },
  {
   "url": "/thema/natuur-nijmegen/",
@@ -1090,7 +1109,8 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Ooijpolder, Duivelsberg, Mookerheide, Sint-Jansberg, Heumensoord en de stadsparken."
+  "kort": "Ooijpolder, Duivelsberg, Mookerheide, Sint-Jansberg, Heumensoord en de stadsparken.",
+  "samenvatting": "Rond Nijmegen liggen de Ooijpolder aan de Waal, de stuwwal met de Duivelsberg, de Mookerheide en de Sint-Jansberg, en de bossen van Heumensoord en Heilig Landstichting. In de stad zijn het Kronenburgerpark, het Goffertpark en het Valkhof. Deze gids geeft per gebied de routes, waar je parkeert en wat je er ziet."
  },
  {
   "url": "/thema/evenementen-nijmegen/",
@@ -1166,7 +1186,8 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Jaarkalender: carnaval, Koningsdag, Vierdaagse, kermis, Zevenheuvelenloop en kerst."
+  "kort": "Jaarkalender: carnaval, Koningsdag, Vierdaagse, kermis, Zevenheuvelenloop en kerst.",
+  "samenvatting": "De vaste evenementen in Nijmegen door het jaar: carnaval (Knotsenburg) en de Stevensloop in het voorjaar, Koningsdag en het Bevrijdingsfestival op 5 mei, de Vierdaagse en Vierdaagsefeesten in juli, en in het najaar de kermis, de Zevenheuvelenloop, Sint Maarten en de kerstmarkten. Elk evenement heeft een eigen pagina met data en tips; wat er deze week is, staat in de agenda."
  },
  {
   "url": "/thema/sporten-in-nijmegen/",
@@ -1238,7 +1259,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/sportschool/",
-  "kort": "Zwembaden, buitenwater, hardlopen, schaatsen, dansen en N.E.C."
+  "kort": "Zwembaden, buitenwater, hardlopen, schaatsen, dansen en N.E.C.",
+  "samenvatting": "In Nijmegen zwem je in drie overdekte zwembaden en twee buitenbaden, schaats je op de ijsbaan van Triavium en loop je de Zevenheuvelenloop, de Stevensloop of de Vierdaagse. N.E.C. speelt in het Goffertstadion. Deze gids zet zwemmen, hardlopen, schaatsen, dansen en fit blijven op een rij."
  },
  {
   "url": "/thema/uitjes-nijmegen/",
@@ -1320,7 +1342,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/uitjes/",
-  "kort": "Escape rooms, op het water, met kinderen, workshops en dagjes uit."
+  "kort": "Escape rooms, op het water, met kinderen, workshops en dagjes uit.",
+  "samenvatting": "Uitjes in Nijmegen zijn onder meer escape rooms, boottochten en suppen op de Waal, musea, workshops van edelsmeden tot fotografie, en de natuur rond de stad. Deze gids sorteert de ideeën: met vrienden of collega's, op het water, met kinderen, cultuur en workshops, en net buiten de stad."
  },
  {
   "url": "/thema/film-theater-nijmegen/",
@@ -1385,7 +1408,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/podia/",
-  "kort": "Bioscopen, Stadsschouwburg, De Vereeniging, Doornroosje en festivals."
+  "kort": "Bioscopen, Stadsschouwburg, De Vereeniging, Doornroosje en festivals.",
+  "samenvatting": "Nijmegen heeft drie bioscopen (waaronder arthouse LUX), de Stadsschouwburg en De Vereeniging aan het Keizer Karelplein, poppodium Doornroosje naast het station en in de zomer openluchtconcerten in het Goffertpark. Deze gids zet bioscopen, theater, concerten en festivals op een rij; wat er vanavond speelt, staat in de agenda."
  },
  {
   "url": "/thema/lunch-nijmegen/",
@@ -1447,7 +1471,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/lunch/",
-  "kort": "Lunchrooms, ontbijt en brunch, high tea en high wine."
+  "kort": "Lunchrooms, ontbijt en brunch, high tea en high wine.",
+  "samenvatting": "Lunchen in Nijmegen doe je vooral aan de Grote Markt, in de Lange Hezelstraat, op de Waalkade en in de wijken. In de bedrijvengids staan 55 lunchrooms, 31 zaken voor ontbijt en brunch en 17 plekken voor high tea. Deze gids helpt kiezen per gelegenheid, ook met kinderen."
  },
  {
   "url": "/thema/sauna-wellness-nijmegen/",
@@ -1507,7 +1532,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/sauna/",
-  "kort": "Thermen, spa, massage en verzorging."
+  "kort": "Thermen, spa, massage en verzorging.",
+  "samenvatting": "Voor sauna in Nijmegen ga je naar de Thermen van Sanadome, met water uit eigen bronnen, of naar Thermen Berendonck in Wijchen, een kwartier verderop. Voor massage en hammam zijn er kleine spa's in de binnenstad. Deze gids zet sauna, spa, massage en verzorging op een rij, met prijzen, tijden en regels."
  },
  {
   "url": "/thema/kringloop-nijmegen/",
@@ -1553,7 +1579,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/tweedehands-winkel/",
-  "kort": "Kringloopwinkels, vintage kleding, antiek en markten."
+  "kort": "Kringloopwinkels, vintage kleding, antiek en markten.",
+  "samenvatting": "De grootste kringloopwinkel van Nijmegen is Het Goed in Nijmegen-West; in de binnenstad zitten Basta, Habbekrats en vintagezaken, en aan de Stationsweg de antiekhallen. In de bedrijvengids staan 22 kringloop-, vintage- en antiekwinkels met adres en openingstijden."
  },
  {
   "url": "/thema/uitgaan-nijmegen/",
@@ -1622,7 +1649,8 @@
    }
   ],
   "bedrijvengids": "/bedrijvengids-categorie/cafe/",
-  "kort": "Kroegen, biercafés, clubs, bars en eetcafés."
+  "kort": "Kroegen, biercafés, clubs, bars en eetcafés.",
+  "samenvatting": "Uitgaan in Nijmegen doe je rond de Grote Markt, de Molenstraat en de Waalkade, in bruine kroegen, biercafés en cocktailbars; voor dansen zijn er Doornroosje en Merleyn. In de bedrijvengids staan 64 cafés. Deze gids zet kroegen, bars, clubs, eetcafés en livemuziek op een rij."
  },
  {
   "url": "/thema/over-de-grens/",
@@ -1681,6 +1709,7 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Kleef, Emmerik, Goch en Kranenburg: winkelen, kerstmarkten en de Rijn."
+  "kort": "Kleef, Emmerik, Goch en Kranenburg: winkelen, kerstmarkten en de Rijn.",
+  "samenvatting": "De Duitse grens ligt tien kilometer van het centrum van Nijmegen: Kleef is in een kwartier bereikt, Kranenburg is nog dichterbij, Goch en Emmerik liggen op een half uur. Nijmegenaren gaan er voor de supermarkten en drogisterijen, de kerstmarkten en de Rijn. Let op: in Duitsland zijn de winkels op zondag dicht."
  }
 ]
