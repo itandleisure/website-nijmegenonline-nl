@@ -8,6 +8,15 @@
     <lastBuildDate>Tue, 10 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Honderd saffraankrokussen geplant in stadspark Groene perron</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/honderd-saffraankrokussen-geplant-in-stadspark-groene-perron/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/honderd-saffraankrokussen-geplant-in-stadspark-groene-perron/</guid>
+      <pubDate>Tue, 10 Nov 2026 10:39:56 +0100</pubDate>
+      <description>Kunstenaar Boudewijn Corstiaensen en werkgroep Hortus Civitatis planten honderd saffraankrokusbollen in Groene perron als onderdeel van Flora Romana.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-honderd-saffraankrokussen-geplant-in-stadspark-groene-perron.jpg" length="83039" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-honderd-saffraankrokussen-geplant-in-stadspark-groene-perron.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Fototentoonstelling Gastvrij Nijmegen in Studio MONK</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/fototentoonstelling-gastvrij-nijmegen-in-studio-monk/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/fototentoonstelling-gastvrij-nijmegen-in-studio-monk/</guid>
@@ -177,15 +186,6 @@
       <description>Mediamaker Eva Metselaar presenteert op 12 november in Bibliotheek Hatert haar boek 'Molukse Lente' over tien Molukse rolmodellen. Gratis, aanmelden nodig.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-boekpresentatie-molukse-lente-in-bibliotheek-hatert.jpg" length="56841" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-boekpresentatie-molukse-lente-in-bibliotheek-hatert.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Grenzland-Draisine sluit seizoen af, in november ritten op aanvraag</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/grenzland-draisine-sluit-seizoen-af-in-november-ritten-op-aanvraag/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/grenzland-draisine-sluit-seizoen-af-in-november-ritten-op-aanvraag/</guid>
-      <pubDate>Tue, 27 Oct 2026 15:22:44 +0100</pubDate>
-      <description>De Grenzland-Draisine in Kranenburg stopt op 31 oktober met het reguliere seizoen. In november kunnen groepen op vrijdag en zaterdag nog op aanvraag rijden.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-grenzland-draisine-sluit-seizoen-af-in-november-ritten-op-aanvraag.jpg" length="69168" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-grenzland-draisine-sluit-seizoen-af-in-november-ritten-op-aanvraag.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

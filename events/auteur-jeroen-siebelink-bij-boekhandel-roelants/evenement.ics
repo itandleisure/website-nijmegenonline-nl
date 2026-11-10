@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:auteur-jeroen-siebelink-bij-boekhandel-roelants@nijmegenonline.nl
+DTSTAMP:20261109T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261121T170000
+DTEND;TZID=Europe/Amsterdam:20261121T184500
+SUMMARY:Auteur Jeroen Siebelink bij boekhandel Roelants
+URL:https://www.nijmegenonline.nl/events/auteur-jeroen-siebelink-bij-boekhandel-roelants/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/auteur-jeroen-siebelink-bij-boekhandel-roelants/
+LOCATION:Boekhandel Roelants Nijmegen\, Van Broeckhuysenstraat 34\, 6511 PJ NIJMEGEN
+END:VEVENT
+END:VCALENDAR

@@ -66,6 +66,12 @@
   "bedrijf": "",
   "plaats": "Nijmegen"
  },
+ "boekhandel-roelants": {
+  "naam": "Boekhandel Roelants Nijmegen",
+  "plaats": "Nijmegen",
+  "bedrijf": "boekhandel-roelants",
+  "adres": "Van Broeckhuysenstraat 34, 6511 PJ NIJMEGEN"
+ },
  "bosatelier": {
   "naam": "Bosatelier Nijmegen",
   "adres": "Scheidingsweg 99, 6581 KN Nijmegen",
@@ -518,6 +524,11 @@
   "adres": "Leemptstraat 34, 6512 EN Nijmegen",
   "plaats": "Nijmegen",
   "bedrijf": "thiemeloods"
+ },
+ "tint-teken-en-schilderschool-nijmegen": {
+  "naam": "TINT Teken- en schilderschool Nijmegen",
+  "plaats": "Nijmegen",
+  "adres": "Winselingseweg 51 (De Vasim), 6541 AH Nijmegen"
  },
  "titus-brandsma-gedachteniskerk": {
   "naam": "Titus Brandsma Gedachteniskerk Nijmegen",

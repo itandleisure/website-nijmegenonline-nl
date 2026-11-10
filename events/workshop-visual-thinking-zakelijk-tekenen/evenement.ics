@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:workshop-visual-thinking-zakelijk-tekenen@nijmegenonline.nl
+DTSTAMP:20261109T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261213T100000
+DTEND;TZID=Europe/Amsterdam:20261213T160000
+SUMMARY:Workshop Visual Thinking (zakelijk tekenen)
+URL:https://www.nijmegenonline.nl/events/workshop-visual-thinking-zakelijk-tekenen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/workshop-visual-thinking-zakelijk-tekenen/
+LOCATION:TINT Teken- en schilderschool Nijmegen\, Winselingseweg 51 (De Vasim)\, 6541 AH Nijmegen
+END:VEVENT
+END:VCALENDAR
