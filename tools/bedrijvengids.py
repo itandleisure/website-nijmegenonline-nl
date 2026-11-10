@@ -2128,13 +2128,39 @@ SUBCATEGORIEEN = [{
     "zoek": r"escape|bowl|laser|trampolin|jump|prison island|kart|midget|planet awesome|enjoyvr",
     "naam": "Binnenuitjes in Nijmegen", "enkelvoud": "Binnenuitje", "meervoud": "binnenuitjes", "de_woord": False,
     "beschrijving": "Binnenuitjes in Nijmegen: escape rooms, bowlen, lasergamen, Prison Island en trampolinespringen. Voor vrienden, familie, kinderfeestjes en bedrijfsuitjes.",
-    "intro": "<p>Regen, kou of gewoon zin in een avond vol actie: in Nijmegen kun je binnen terecht voor een escape room, een potje bowlen, "
+    "intro": "<p>Regen, kou of gewoon zin in een avond vol actie: in Nijmegen kun je binnen terecht voor een "
+             "<a href=\"../escape-room/\">escape room</a>, een potje bowlen, "
              "lasergamen, Prison Island of een middag trampolinespringen. Ideaal voor een kinderfeestje, een vrijgezellenfeest of een teamuitje.</p>"
              "<p>Op deze pagina vind je alle binnenuitjes in Nijmegen.</p>",
     "faq": [("Wat kun je in Nijmegen doen bij slecht weer?",
              "Op deze pagina staan de uitjes die binnen zijn: escape rooms, bowlen, lasergamen, Prison Island en trampolinespringen."),
             ("Waar kun je in Nijmegen bowlen?", "Kijk hieronder: de bowlingcentra staan tussen de andere binnenuitjes, met adres en kaart."),
             ("Waar vier je een kinderfeestje in Nijmegen?", "Veel binnenuitjes hebben arrangementen voor kinderfeestjes. Filter op kinderfeestje.")],
+    "filtervoorbeeld": "bedrijfsuitje, kinderfeestje of vrijgezellenfeest",
+    "blogs": [],
+}, {
+    # Eigen pagina voor "escape room nijmegen" (2.900/mnd, november 2026 op plek 18 met de pagina van één bedrijf)
+    "slug": "escape-room", "ouders": ["uitjes"],
+    "zoek": r"escape|xcape",
+    "naam": "Escape rooms in Nijmegen", "enkelvoud": "Escape room", "meervoud": "escape rooms",
+    "beschrijving": "Alle escape rooms in Nijmegen op een rij, met adressen, kaart en tips: op een boot aan de Waal, in de stad of als teamuitje. Voor 2 tot grote groepen.",
+    "intro": "<p>Een uur opgesloten, puzzels oplossen en samen op tijd de uitgang vinden: een escape room is in Nijmegen een populair "
+             "uitje voor vrienden, familie, een vrijgezellenfeest of een teamuitje. Je speelt met een vast team in je eigen kamer, "
+             "met raadsels, sloten en verborgen aanwijzingen. Kom je er niet uit, dan geeft de spelleider een hint.</p>"
+             "<p>In Nijmegen kun je kiezen uit verschillende escape rooms, van een kamer op een schip aan de Waalkade tot locaties "
+             "in de stad met meerdere thema's. Let bij het kiezen op het aantal spelers per kamer, de moeilijkheidsgraad en de "
+             "minimumleeftijd, en boek vooral in het weekend en in de schoolvakanties ruim van tevoren.</p>"
+             "<p>Op deze pagina vind je alle escape rooms in Nijmegen.</p>",
+    "faq": [("Hoeveel escape rooms zijn er in Nijmegen?",
+             "Hieronder staan alle escape rooms in Nijmegen, met adres, eigen pagina en kaart. Elke locatie heeft één of meer kamers met een eigen thema."),
+            ("Hoe lang duurt een escape room?",
+             "Meestal een uur in de kamer. Reken met uitleg vooraf en napraten op ongeveer anderhalf uur."),
+            ("Met hoeveel personen doe je een escape room?",
+             "De meeste kamers zijn voor 2 tot 6 spelers. Met een grotere groep, zoals een teamuitje, speel je in meerdere kamers tegelijk; vraag de locatie wat kan."),
+            ("Is een escape room geschikt voor kinderen?",
+             "Vaak wel, vanaf een jaar of 10 tot 12 en onder begeleiding van een volwassene. De minimumleeftijd verschilt per kamer, kijk op de site van de locatie."),
+            ("Wat kun je nog meer binnen doen in Nijmegen?",
+             "Bowlen, lasergamen, Prison Island en trampolinespringen. Die staan bij de binnenuitjes in onze bedrijvengids.")],
     "filtervoorbeeld": "bedrijfsuitje, kinderfeestje of vrijgezellenfeest",
     "blogs": [],
 }, {
@@ -2208,7 +2234,9 @@ SUBCATEGORIEEN = [{
     "blogs": ["tapas-eten-in-nijmegen-hier-kan-je-dat-doen", "op-zoek-naar-iets-nieuws-probeer-deze-spaanse-restaurants-in-nijmegen"],
 }, {
     "slug": "all-you-can-eat", "ouders": ["restaurant", "afhaal"], "tekst": True,
-    "zoek": r"all[- ]you[- ]can[- ]eat",
+    # Ook "all you can dine", onbeperkt tapas en bestellen in rondes voor een vaste prijs (Lent Plaza, La Cubanita, Triavium,
+    # Mister Panda, Osteria Pomodoro): dat zoeken mensen ook met "all you can eat nijmegen"
+    "zoek": r"all[- ]you[- ]can[- ](eat|dine)|onbeperkt (tapas|uit allerlei)|bestel je hier in rondes|per ronde een paar gerechtjes|je bestelt hier in rondes",
     "naam": "All-you-can-eat in Nijmegen", "enkelvoud": "All-you-can-eat-restaurant", "meervoud": "all-you-can-eat-restaurants", "de_woord": False,
     "beschrijving": "All-you-can-eat in Nijmegen: sushi, wok en grill onbeperkt, met adressen en een kaart.",
     "intro": "<p>Onbeperkt sushi, wokken of grillen voor een vaste prijs: all-you-can-eat is in Nijmegen populair voor een verjaardag "
@@ -3239,7 +3267,9 @@ def main(bron):
         blog_blokken(cat, gids + overig + extra)
         groepen.setdefault(cat["groep"], []).append((cat, gids, overig + extra))
     for c, lijst in subs:
-        schrijf("bedrijvengids-categorie/%s" % c["slug"], categorie_pagina(c, [], lijst, []))
+        # De blogs van het onderwerp als "Lees ook", zodat gids en artikel naar elkaar linken
+        lees = [(s_, titel_van(s_)) for s_ in c.get("blogs", []) if titel_van(s_)]
+        schrijf("bedrijvengids-categorie/%s" % c["slug"], categorie_pagina(c, [], lijst, lees))
         blog_blokken(c, lijst)
     if xml_.exists():
         pad.write_text(json.dumps(opgeslagen, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
