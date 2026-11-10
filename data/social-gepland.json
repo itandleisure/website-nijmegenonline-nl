@@ -156,5 +156,24 @@
   "instagram_id": "18151554571540341",
   "instagram_link": "https://www.instagram.com/p/Dfh3E4wj6cp/",
   "fouten": []
+ },
+ "2026-11-10": {
+  "datum": "2026-11-10",
+  "soort": "nieuws",
+  "betaald": false,
+  "sleutels": [
+   "nieuws:fototentoonstelling-gastvrij-nijmegen-in-studio-monk"
+  ],
+  "titel": "Fototentoonstelling Gastvrij Nijmegen in Studio MONK",
+  "link": "https://www.nijmegenonline.nl/nieuwsoverzicht/fototentoonstelling-gastvrij-nijmegen-in-studio-monk/",
+  "beelden": [
+   "assets/social/2026-11-10-1.jpg"
+  ],
+  "story": null,
+  "facebook": "Wie schuilt er eigenlijk achter het begrip ongedocumenteerden dat zo vaak in het nieuws valt? In Studio MONK zie je zwart-witportretten van stadsgenoten zonder verblijfspapieren, met bij elk portret een poëtische tekst. Veel van hen wonen al jaren in Nijmegen. De entree is gratis. 📸\n\n👉 https://www.nijmegenonline.nl/nieuwsoverzicht/fototentoonstelling-gastvrij-nijmegen-in-studio-monk/",
+  "instagram": "Wie schuilt er eigenlijk achter het begrip ongedocumenteerden dat zo vaak in het nieuws valt? In Studio MONK zie je zwart-witportretten van stadsgenoten zonder verblijfspapieren, met bij elk portret een poëtische tekst. Veel van hen wonen al jaren in Nijmegen. De entree is gratis. 📸\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #tentoonstelling #fotografie #stichtinggast",
+  "tekst_door": "claude",
+  "status": "gepland",
+  "gemaakt": "2026-11-10T02:27+01:00"
  }
 }
