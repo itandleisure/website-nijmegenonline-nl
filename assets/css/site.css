@@ -112,11 +112,25 @@ img { max-width: 100%; height: auto; display: block; }
 .hoofdmenu a:hover { background: rgba(255, 255, 255, 0.14); color: var(--wit); }
 .hoofdmenu a[aria-current] { background: rgba(13, 58, 99, 0.35); color: var(--wit); box-shadow: inset 0 -3px 0 #b9e58f; }
 .hoofdmenu__extra { display: none; }
-/* Acht menu-onderdelen: op desktop geen Home (het logo gaat al naar home) en iets compacter; onder 1100px het mobiele menu */
+/* Aanmelden: groene knop aan het eind van het menu, zodat bezoekers zien dat ze zelf iets kunnen aanmelden */
+.hoofdmenu__aanmelden { margin-left: 4px; }
+.hoofdmenu .hoofdmenu__aanmelden a { background: var(--groen); border-radius: 999px; padding-left: 16px; padding-right: 16px; }
+.hoofdmenu .hoofdmenu__aanmelden a:hover { background: #46851b; }
+.hoofdmenu .hoofdmenu__aanmelden a[aria-current] { background: #46851b; box-shadow: inset 0 0 0 2px #b9e58f; }
+/* Menu-onderdelen: op desktop geen Home (het logo gaat al naar home) en iets compacter; onder 1100px het mobiele menu */
 .logo { flex-shrink: 0; }
 .hoofdmenu a { white-space: nowrap; }
 .hoofdmenu__home { display: none; }
-@media (min-width: 1101px) { .hoofdmenu a { padding: 8px 9px; font-size: 0.85rem; letter-spacing: 0.3px; } }
+@media (min-width: 1101px) {
+  .hoofdmenu ul { gap: 2px; }
+  .hoofdmenu a { padding: 8px 6px; font-size: 0.85rem; letter-spacing: 0; }
+  .hoofdmenu .hoofdmenu__aanmelden a { padding-left: 13px; padding-right: 13px; }
+}
+/* Negen menu-onderdelen (met Aanmelden): op smalle desktops logo en tekst iets kleiner zodat alles op één regel past */
+@media (min-width: 1101px) and (max-width: 1239px) {
+  .logo img { height: 50px; }
+  .hoofdmenu a { padding: 8px 5px; font-size: 0.8rem; letter-spacing: 0; }
+}
 .kop__knop { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.14); color: var(--wit); cursor: pointer; padding: 0; flex: none; transition: background-color 0.15s ease; }
 .kop__knop:hover { background: rgba(255, 255, 255, 0.26); color: var(--wit); }
 .kop__knop svg { width: 20px; height: 20px; }
@@ -135,6 +149,8 @@ img { max-width: 100%; height: auto; display: block; }
   .hoofdmenu.open { display: block; }
   .hoofdmenu ul { flex-direction: column; gap: 2px; padding: 6px 0 10px; border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 6px; }
   .hoofdmenu a { font-size: 1rem; padding: 10px 12px; }
+  .hoofdmenu__aanmelden { margin: 6px 0 0; }
+  .hoofdmenu .hoofdmenu__aanmelden a { display: inline-block; }
   .hoofdmenu__extra { display: block; }
   .hoofdmenu__extra a { text-transform: none; font-weight: 500; font-size: 0.95rem; opacity: 0.9; }
   .hoofdmenu__extra:first-of-type { margin-top: 6px; padding-top: 6px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
@@ -260,6 +276,12 @@ footer a:hover { color: #b9e58f; text-decoration: underline; }
 .zijbalk__link { font-weight: 600; font-size: 0.95rem; }
 .zijbalk__cta { background: #eef6e8; }
 .zijbalk__cta button.knop { border: 0; cursor: pointer; font: inherit; font-weight: 700; }
+.zijbalk__aanmeldlijst { list-style: none; margin: 0 0 14px; padding: 0; font-size: 0.95rem; }
+.zijbalk__aanmeldlijst li { padding: 6px 0; border-bottom: 1px solid #d6e8c8; }
+.zijbalk__aanmeldlijst li:last-child { border-bottom: 0; }
+.zijbalk__aanmeldlijst a { font-weight: 600; text-decoration: none; }
+.zijbalk__aanmeldlijst a::before { content: "+ "; color: var(--groen); font-weight: 700; }
+.zijbalk__aanmeldlijst a:hover { text-decoration: underline; }
 .zoekveld { display: flex; gap: 6px; }
 .zoekveld input { flex: 1; min-width: 0; padding: 8px 10px; border: 1px solid var(--rand); border-radius: 6px; font: inherit; font-size: 0.95rem; }
 .zoekveld button { background: var(--blauw); color: var(--wit); border: 0; border-radius: 6px; padding: 8px 12px; font: inherit; font-weight: 700; cursor: pointer; }

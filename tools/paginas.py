@@ -715,10 +715,10 @@ def openingstijden(meta):
         <h2>Markt in het centrum</h2>
         <p>Op maandag en zaterdag is er markt in de binnenstad, van de Grote Markt tot de Augustijnenstraat en op het Kelfkensbos. Alle dagen en tijden staan in het overzicht van de <a href="../markten-nijmegen/">markten in en om Nijmegen</a>.</p>
         <h2>Handig voor je bezoek</h2>
-        <p>Kom je met de auto? Lees dan eerst onze tips over <a href="../parkeren-in-nijmegen-met-een-aantal-slimme-tips/">parkeren in Nijmegen</a>. Op zoek naar leuke winkels? Kijk bij <a href="../thema/winkelen-in-nijmegen/">winkelen in Nijmegen</a> of in de <a href="../bedrijvengids/">bedrijvengids</a>.</p>
+        <p>Kom je met de auto? Lees dan eerst onze tips over <a href="../parkeren-in-nijmegen-met-een-aantal-slimme-tips/">parkeren in Nijmegen</a>. Op zoek naar leuke winkels? In onze gids <a href="../thema/winkelen-in-nijmegen/">winkelen in Nijmegen</a> lees je welke winkelstraten de moeite waard zijn, van de Broerstraat tot de Lange Hezelstraat. Alle winkels staan in de <a href="../bedrijvengids/">bedrijvengids</a>.</p>
         <p class="formulier__hint">Gecontroleerd in {datum}. Rond feestdagen kunnen de tijden afwijken.</p>
         </div>""".format(tijden=tabel(("Dag", "Openingstijden"), WINKELTIJDEN), datum=GECONTROLEERD)
-    return pagina("Openingstijden centrum Nijmegen en koopzondag", meta.get("rank_math_description", "").strip('"'), "openingstijden-centrum-nijmegen",
+    return pagina("Openingstijden centrum Nijmegen en koopzondag", "Openingstijden van de winkels in het centrum van Nijmegen: maandag vanaf 12.00 uur, koopavond op donderdag tot 21.00 uur en elke zondag koopzondag van 12.00 tot 17.00 uur.", "openingstijden-centrum-nijmegen",
                   "Openingstijden centrum Nijmegen", inhoud)
 
 

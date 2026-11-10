@@ -649,15 +649,29 @@
   "url": "/thema/campings-in-nijmegen/",
   "naam": "Campings in Nijmegen",
   "zoekwoord": "camping nijmegen",
-  "seo_titel": "Campings en camperplaatsen in en rond Nijmegen",
-  "beschrijving": "Kamperen bij Nijmegen? De leukste campings en camperplaatsen in en rond de stad, plus een handige paklijst zodat je niets vergeet.",
-  "intro": "<p>Het Rijk van Nijmegen, de Ooijpolder en de Mookerplas zijn prachtig om te kamperen. Van kleine natuurcamping tot camperplaats dicht bij de stad.</p>",
+  "seo_titel": "Camping Nijmegen: campings en camperplaatsen in en rond de stad",
+  "beschrijving": "Kamperen in Nijmegen? Campings aan de Waal en in de natuur rond de stad, Vierdaagsecampings, camperplaatsen en vakantieparken, plus een paklijst en tips.",
+  "intro": "<p>Kamperen bij Nijmegen is kamperen in de natuur, op een kwartiertje van de oudste stad van Nederland. Rond de stad liggen de uiterwaarden van de Waal, de Ooijpolder, de bossen en heuvels van Berg en Dal en Groesbeek en de Mookerplas. Je kunt er kamperen met tent, caravan of camper, van een rustige camping aan de rivier tot een vakantiepark met zwembad.</p><p>In deze gids vind je de campings in en rond Nijmegen, de tijdelijke campings tijdens de Vierdaagse, camperplaatsen en vakantieparken, en tips om je kampeervakantie voor te bereiden.</p>",
   "secties": [
    {
-    "kop": "Campings en camperplaatsen",
-    "tekst": "<p>Met tent, caravan of camper.</p>",
+    "kop": "Campings in en rond Nijmegen",
+    "tekst": "<p>Aan de overkant van de Waal, aan de Waaldijk in Oosterhout, ligt <a href=\"../../bedrijvengids/camping-de-grote-altena/\">Camping De Grote Altena</a>, met plekken direct aan het water en lodges om te huren. Wie de natuur in wil, vindt kleine campings en boerencampings in de Ooijpolder en rond Groesbeek, Berg en Dal en Heumen, op fietsafstand van het centrum. In ons artikel over campings rond Nijmegen lees je waar je moet zijn voor een camping met zwembad, een kleine natuurcamping of een plek aan de Waal.</p>",
     "artikelen": [
      "campings-rond-nijmegen",
+     "de-leukste-vakantieparken-in-nijmegen-vind-je-hier"
+    ]
+   },
+   {
+    "kop": "Kamperen tijdens de Vierdaagse",
+    "tekst": "<p>Tijdens de Nijmeegse Vierdaagse in juli zitten hotels en B&amp;B's snel vol. Dan gaan er speciale Vierdaagsecampings open voor lopers en supporters, zoals <a href=\"../../bedrijvengids/de-vierdaagsecamping/\">De Vierdaagsecamping</a> aan de Griftdijk, de <a href=\"../../bedrijvengids/waalcamping-vierdaagsecamping/\">Waalcamping</a>, <a href=\"../../bedrijvengids/vierdaagsecamping-de-dennen/\">De Dennen</a> in Nijmegen-West, <a href=\"../../bedrijvengids/vierdaagsecamping-dvol/\">DVOL</a> in Lent en het <a href=\"../../bedrijvengids/scouting-4daagsekamp-nijmegen/\">Scouting 4daagsekamp</a>. Vaak met wekdienst, voetverzorging en vroege bussen naar de start. Boek op tijd.</p>",
+    "artikelen": [
+     "jaarlijkse-evenementen/nijmeegse-vierdaagse"
+    ]
+   },
+   {
+    "kop": "Camperplaatsen",
+    "tekst": "<p>Met de camper naar Nijmegen? Er zijn camperplaatsen in en rond de stad, sommige vlak bij het centrum en andere in het groen aan de Waal.</p>",
+    "artikelen": [
      "de-5-leukste-camperplaatsen-in-nijmegen"
     ]
    },
@@ -669,11 +683,29 @@
     ]
    }
   ],
-  "faq": [],
+  "faq": [
+   {
+    "v": "Is er een camping in Nijmegen?",
+    "a": "Ja. Camping De Grote Altena ligt aan de Waaldijk in Oosterhout, aan de overkant van de Waal bij Nijmegen. Rond de stad liggen nog veel meer campings, in de Ooijpolder en rond Groesbeek, Berg en Dal en Heumen."
+   },
+   {
+    "v": "Waar kun je kamperen tijdens de Vierdaagse?",
+    "a": "Op een van de tijdelijke Vierdaagsecampings, zoals De Vierdaagsecamping aan de Griftdijk, de Waalcamping, De Dennen, DVOL in Lent of het Scouting 4daagsekamp. Ze zijn alleen in de Vierdaagseweek open; boek op tijd."
+   },
+   {
+    "v": "Waar staat je camper in Nijmegen?",
+    "a": "Op een camperplaats in of rond de stad. In ons artikel over de leukste camperplaatsen in Nijmegen staan de adressen en voorzieningen."
+   },
+   {
+    "v": "Hoe kom je van de camping naar het centrum van Nijmegen?",
+    "a": "Vanaf de meeste campings rond Nijmegen fiets je in een halfuur naar het centrum. Vanaf Oosterhout en Lent ga je via de Waalbrug of de Snelbinder."
+   }
+  ],
   "bedrijvengids": "/bedrijvengids-categorie/overnachten/",
   "hoofdgids": "/thema/overnachten-in-nijmegen/",
-  "kort": "Campings, camperplaatsen en een handige paklijst.",
-  "samenvatting": "Rond Nijmegen kampeer je in het Rijk van Nijmegen, de Ooijpolder en bij de Mookerplas, op natuurcampings en camperplaatsen dicht bij de stad. Deze gids geeft de adressen en een paklijst om niets te vergeten."
+  "kort": "Campings, Vierdaagsecampings, camperplaatsen en een paklijst.",
+  "hand": true,
+  "foto": "/assets/uploads/2022/09/Ooijpolder-in-nijmegen.webp"
  },
  {
   "url": "/thema/museums-nijmegen/",
@@ -728,30 +760,71 @@
   "url": "/thema/winkelen-in-nijmegen/",
   "naam": "Winkelen in Nijmegen",
   "zoekwoord": "winkelen nijmegen",
-  "seo_titel": "Winkelen in Nijmegen: tips, parkeren en speciaalzaken",
-  "beschrijving": "Een dagje winkelen in Nijmegen? Tips voor kringloopwinkels, bloemisten, parfumerieën en juweliers, plus waar je parkeert en wanneer de winkels open zijn.",
-  "intro": "<p>De binnenstad van Nijmegen is compact en gezellig om te winkelen, met grote ketens in de hoofdstraten en kleine speciaalzaken in straatjes als de Lange Hezelstraat.</p><p>Hier vind je onze winkeltips en praktische info voor een dagje stad.</p>",
+  "seo_titel": "Winkelen in Nijmegen: winkelstraten, koopzondag en tips",
+  "beschrijving": "Winkelen in Nijmegen: de leukste winkelstraten in de binnenstad, elke zondag koopzondag, koopavond op donderdag, de markt en waar je parkeert. Plus speciaalzaken.",
+  "intro": "<p>Nijmegen is een fijne stad om te winkelen. De binnenstad is compact, je loopt alles in een paar uur, en de winkels zijn elke dag open, ook op zondag. In de hoofdstraten vind je de bekende ketens, en in de oude straatjes richting de Waal zitten boetiekjes, conceptstores, delicatessenwinkels en tweedehandszaken.</p><p>In deze gids lees je welke winkelstraten de moeite waard zijn, wanneer de winkels open zijn, waar je parkeert en waar je naartoe gaat voor kleding, cadeaus, bloemen of vintage.</p>",
   "secties": [
    {
-    "kop": "Praktisch",
-    "tekst": "<p>Waar parkeer je en hoe kom je er? Alle parkeergarages, tarieven en de goedkope en gratis plekken staan in onze gids <a href=\"../../parkeren-in-nijmegen/\">Parkeren in Nijmegen</a>.</p>",
-    "artikelen": []
+    "kop": "De winkelstraten in de binnenstad",
+    "tekst": "<p>Het hart van het winkelgebied ligt tussen Plein 1944 en de Grote Markt. In de <strong>Broerstraat</strong>, de <strong>Molenstraat</strong>, de <strong>Burchtstraat</strong> en de <strong>Marikenstraat</strong> zitten de grote ketens en warenhuizen, en via <strong>Passage Molenpoort</strong> winkel je overdekt. Wie van kleine winkels houdt, loopt door naar de <strong>Lange Hezelstraat</strong>, een van de oudste winkelstraten van Nederland, en de <strong>Stikke Hezelstraat</strong>, met boetieks, interieurwinkels en speciaalzaken. Ook de <strong>Hertogstraat</strong> en de <strong>Van Welderenstraat</strong> zijn leuk voor eigenzinnige winkels en een hapje tussendoor.</p><p>Op maandag en zaterdag staat de markt in de binnenstad. Combineer je dagje winkelen met een terras op de Grote Markt of aan de Waalkade.</p>",
+    "artikelen": [
+     "openingstijden-centrum-nijmegen",
+     "markten-nijmegen"
+    ]
+   },
+   {
+    "kop": "Parkeren en bereikbaarheid",
+    "tekst": "<p>Met de trein stap je uit op station Nijmegen, op tien minuten lopen van de winkels. Met de auto parkeer je in een garage onder of naast het winkelgebied, zoals Mariënburg, Keizer Karel of de Eiermarkt, of goedkoper op een P+R met de bus naar het centrum. Alle garages, tarieven en gratis plekken staan in onze gids <a href=\"../../parkeren-in-nijmegen/\">Parkeren in Nijmegen</a>.</p>",
+    "artikelen": [
+     "parkeren-in-nijmegen",
+     "parkeergarage-marienburg-nijmegen"
+    ]
    },
    {
     "kop": "Speciaalzaken",
-    "tekst": "<p>Voor tweedehands parels, bloemen, geuren en sieraden.</p>",
+    "tekst": "<p>Voor tweedehands parels, bloemen, geuren en sieraden. Alle <a href=\"../../bedrijvengids-categorie/kledingwinkel/\">kledingwinkels</a>, <a href=\"../../bedrijvengids-categorie/woonwinkel/\">woonwinkels</a> en andere winkels staan in onze <a href=\"../../bedrijvengids/\">bedrijvengids</a>.</p>",
     "artikelen": [
      "parels-vinden-in-nijmeegse-kringloopwinkels",
      "bloemist-nijmegen-waar-kun-je-terecht",
      "laat-je-verleiden-door-de-geuren-uit-de-parfumerieen-van-nijmegen",
      "ga-eens-naar-de-juwelier-om-te-shinen"
     ]
+   },
+   {
+    "kop": "Winkelen buiten het centrum",
+    "tekst": "<p>Buiten de binnenstad heeft elke wijk een eigen winkelcentrum. Het grootste is winkelcentrum Dukenburg, bij station Dukenburg. Voor meubels, keukens en woonaccessoires ga je naar de Woonboulevard aan de Wijchenseweg, waar je gratis voor de deur parkeert. En voor de boodschappen over de grens is Kleef een klein halfuur rijden.</p>",
+    "artikelen": [
+     "bestemmingen/nijmegen-dukenburg",
+     "bestemmingen/kleve"
+    ]
    }
   ],
-  "faq": [],
+  "faq": [
+   {
+    "v": "Wat zijn de leukste winkelstraten in Nijmegen?",
+    "a": "Voor de grote ketens de Broerstraat, Molenstraat, Burchtstraat en Marikenstraat. Voor boetieks en speciaalzaken de Lange Hezelstraat, de Stikke Hezelstraat en de Hertogstraat."
+   },
+   {
+    "v": "Zijn de winkels in Nijmegen op zondag open?",
+    "a": "Ja, in Nijmegen is het elke zondag koopzondag. De meeste winkels in de binnenstad zijn dan open van 12.00 tot 17.00 uur."
+   },
+   {
+    "v": "Wanneer is de koopavond in Nijmegen?",
+    "a": "Op donderdag. Veel winkels in het centrum zijn dan open tot 21.00 uur."
+   },
+   {
+    "v": "Hoe laat gaan de winkels in Nijmegen open?",
+    "a": "Dinsdag tot en met zaterdag meestal om 10.00 uur, op maandag om 12.00 uur. Ze sluiten meestal om 18.00 uur, op zaterdag soms om 17.00 uur."
+   },
+   {
+    "v": "Waar parkeer je als je gaat winkelen in Nijmegen?",
+    "a": "In de garages Mariënburg, Keizer Karel, Eiermarkt of Kelfkensbos, of goedkoper op een P+R aan de rand van de stad met de bus naar het centrum."
+   }
+  ],
   "bedrijvengids": "/bedrijvengids-categorie/winkelen/",
   "kort": "Speciaalzaken, kringloop en waar je parkeert.",
-  "samenvatting": "De binnenstad van Nijmegen is compact, met ketens in de hoofdstraten en speciaalzaken in straten als de Lange Hezelstraat. Deze gids geeft tips voor speciaalzaken in de stad: kringloopwinkels, bloemisten, parfumerieën en juweliers."
+  "hand": true,
+  "foto": "/assets/uploads/2023/01/Skyline-1.webp"
  },
  {
   "url": "/thema/fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen/",
@@ -1061,7 +1134,7 @@
    },
    {
     "kop": "Zomer: Vierdaagse en festivals",
-    "tekst": "<p>Half juni staat de zomerkermis aan de Waalkade. De derde week van juli is van de Vierdaagse (20 tot en met 23 juli 2027) en de Vierdaagsefeesten (17 tot en met 23 juli 2027), met de intocht over de Via Gladiola op vrijdag. Festivals als het Valkhof Festival en Music Meeting staan in ons festivaloverzicht.</p>",
+    "tekst": "<p>Half juni staat de zomerkermis aan de Waalkade (alles over de <a href=\"../../kermis-nijmegen/\">kermis in Nijmegen</a>). De derde week van juli is van de Vierdaagse (20 tot en met 23 juli 2027) en de Vierdaagsefeesten (17 tot en met 23 juli 2027), met de intocht over de Via Gladiola op vrijdag. Festivals als het Valkhof Festival en Music Meeting staan in ons festivaloverzicht.</p>",
     "artikelen": [
      "vierdaagse-2027",
      "vierdaagsefeesten-nijmegen",
@@ -1072,7 +1145,7 @@
    },
    {
     "kop": "Najaar en kerst",
-    "tekst": "<p>Begin oktober is de najaarskermis, negen dagen in de binnenstad. Op zondag 15 november 2026 loopt de Zevenheuvelenloop door de heuvels van Berg en Dal, op 11 november lopen de kinderen met lampionnen voor Sint Maarten, en in december zijn er de kerstmarkten in het Kronenburgerpark, de binnenstad en over de grens in Kleef.</p>",
+    "tekst": "<p>Begin oktober is de <a href=\"../../kermis-nijmegen/\">najaarskermis</a>, negen dagen in de binnenstad. Op zondag 15 november 2026 loopt de Zevenheuvelenloop door de heuvels van Berg en Dal, op 11 november lopen de kinderen met lampionnen voor Sint Maarten, en in december zijn er de kerstmarkten in het Kronenburgerpark, de binnenstad en over de grens in Kleef.</p>",
     "artikelen": [
      "zevenheuvelenloop",
      "sint-maarten-nijmegen",
@@ -1201,7 +1274,7 @@
   "secties": [
    {
     "kop": "Met vrienden of collega's",
-    "tekst": "<p>Van escape room tot een avond happen en stappen: de leukste activiteiten om samen te doen, en ideeën voor een teamuitje met spanning, natuur en eten.</p>",
+    "tekst": "<p>Van <a href=\"../../bedrijvengids-categorie/escape-room/\">escape room</a> tot een avond happen en stappen: de leukste activiteiten om samen te doen, en ideeën voor een teamuitje met spanning, natuur en eten.</p>",
     "artikelen": [
      "activiteiten-in-nijmegen",
      "5x-een-bijzonder-uitje-in-nijmegen",
@@ -1241,7 +1314,7 @@
    },
    {
     "kop": "Net buiten de stad",
-    "tekst": "<p>Wandelen in de Ooijpolder of op de Duivelsberg, een dagje Kleef net over de grens, of verder weg naar zee of stad.</p>",
+    "tekst": "<p>Wandelen in de Ooijpolder of op de Duivelsberg, een dagje <a href=\"../../bestemmingen/kleve/\">Kleef</a> net over de grens, of verder weg naar zee of stad.</p>",
     "artikelen": [
      "ooijpolder",
      "duivelsberg",
@@ -1584,7 +1657,7 @@
   "hand": true,
   "foto": "/assets/uploads/2023/08/kleve-kleef-duitsland-winkelstraat.webp",
   "naam": "Over de grens: Kleef, Emmerik, Goch en Kranenburg",
-  "zoekwoord": "kleef",
+  "zoekwoord": "over de grens nijmegen",
   "seo_titel": "Over de grens bij Nijmegen: Kleef, Emmerik, Goch en Kranenburg",
   "beschrijving": "Een dagje Duitsland vanuit Nijmegen: Kleef met de Schwanenburg en de kerstmarkt, Emmerik aan de Rijn, Goch met klooster Graefenthal en het grensdorp Kranenburg, met tips voor winkelen en bereikbaarheid.",
   "intro": "<p>De Duitse grens ligt op tien kilometer van het centrum van Nijmegen. Kleef, met de Schwanenburg en de barokke tuinen, is in een kwartier bereikt; Kranenburg ligt nog dichterbij, Goch en Emmerik op een half uur. Veel Nijmegenaren gaan voor de supermarkten en drogisterijen, de kerstmarkten en de terrassen aan de Rijn.</p><p>In deze gids staan onze bestemmingen en artikelen over de grensstreek bij elkaar. Let op: in Duitsland zijn de winkels op zondag gesloten.</p>",

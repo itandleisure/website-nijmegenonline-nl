@@ -50,7 +50,11 @@ OUDE_PAGINAS = list(csv.DictReader(open(ROOT / "data" / "oude-paginas.csv", enco
 VERHUISD = {r["oud"] for r in OUDE_PAGINAS}  # artikelen die vervangen zijn door een nieuwe pagina komen niet terug
 # Kleine tekstcorrecties per artikel (verouderde jaartallen, gesloten zaken)
 CORRECTIES = json.load(open(ROOT / "data" / "correcties.json", encoding="utf-8"))
-HANDGEMAAKT = {"kerstmarkten-in-nijmegen"}  # deze pagina's niet overschrijven
+HANDGEMAAKT = {"kerstmarkten-in-nijmegen",  # deze pagina's niet overschrijven
+               # herschreven met adressen uit de bedrijvengids (november 2026)
+               "sushi-liefhebbers-dit-zijn-de-beste-japanse-restaurants-in-nijmegen",
+               "pizza-liefhebbers-dit-zijn-de-beste-pizzerias-in-nijmegen",
+               "waarom-is-een-all-you-can-eat-restaurant-in-nijmegen-een-goede-keuze"}
 
 RUBRIEKEN = [
     ("eten-drinken-in-nijmegen", "Eten & drinken",
