@@ -116,5 +116,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-10",
+  "soort": "nieuws",
+  "betaald": false,
+  "sleutels": [
+   "nieuws:fototentoonstelling-gastvrij-nijmegen-in-studio-monk"
+  ],
+  "titel": "Fototentoonstelling Gastvrij Nijmegen in Studio MONK",
+  "link": "https://www.nijmegenonline.nl/nieuwsoverzicht/fototentoonstelling-gastvrij-nijmegen-in-studio-monk/",
+  "beelden": [
+   "assets/social/2026-11-10-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1787635403371528",
+  "instagram_id": "18025352213929659",
+  "instagram_link": "https://www.instagram.com/p/DfkeTWGD8PN/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
