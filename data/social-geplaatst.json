@@ -87,5 +87,34 @@
   "story_sleutel": "story:magda-novels",
   "story_id": "18128170096918977",
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-09",
+  "soort": "week",
+  "betaald": false,
+  "sleutels": [
+   "evenement:catch-the-light-win-pop-culture-arcade",
+   "evenement:swingende-senioren-in-obg",
+   "evenement:lezing-vrijheid-heeft-een-geheugen-herinneringscultuur-en-europese-identiteit",
+   "evenement:expositie-natuurlijk-in-het-kwadraat",
+   "evenement:toonkunstkoor-nijmegen-zingt-brahms"
+  ],
+  "titel": "Deze week in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "beelden": [
+   "assets/social/2026-11-09-0.jpg",
+   "assets/social/2026-11-09-1.jpg",
+   "assets/social/2026-11-09-2.jpg",
+   "assets/social/2026-11-09-3.jpg",
+   "assets/social/2026-11-09-4.jpg",
+   "assets/social/2026-11-09-5.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1786326480169087",
+  "instagram_id": "18151554571540341",
+  "instagram_link": "https://www.instagram.com/p/Dfh3E4wj6cp/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]

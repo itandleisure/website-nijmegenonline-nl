@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:noordse-klanken@nijmegenonline.nl
+DTSTAMP:20261108T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261128T200000
+DTEND;TZID=Europe/Amsterdam:20261128T220000
+SUMMARY:Noordse klanken
+URL:https://www.nijmegenonline.nl/events/noordse-klanken/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/noordse-klanken/
+LOCATION:Boskapel Nijmegen\, Graafseweg 276\, 6532 ZV Nijmegen
+END:VEVENT
+END:VCALENDAR

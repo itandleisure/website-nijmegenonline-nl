@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:women-and-war-documentaire-vertoning-met-korte-introducties-door-nijmegen4ukrain@nijmegenonline.nl
+DTSTAMP:20261108T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261121T113000
+DTEND;TZID=Europe/Amsterdam:20261121T130000
+SUMMARY:“Women and War” documentaire vertoning met korte introducties door Nijmegen4Ukraine en de Oekraïense ambassade
+URL:https://www.nijmegenonline.nl/events/women-and-war-documentaire-vertoning-met-korte-introducties-door-nijmegen4ukrain/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/women-and-war-documentaire-vertoning-met-korte-introducties-door-nijmegen4ukrain/
+LOCATION:Lux Nijmegen\, Mariënburg 38 – 39\, Nijmegen
+END:VEVENT
+END:VCALENDAR

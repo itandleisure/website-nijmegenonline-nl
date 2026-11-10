@@ -66,7 +66,7 @@ KENMERKEN = [
 LOSSE = [
     ("Evenement uitgelicht in de agenda en op de homepage, 2 weken voor de datum, met een post op Facebook en Instagram "
      "en een Instagram-story op de dag zelf", "&euro; 39"),
-    ("Artikel over je bedrijf of evenement, door ons geschreven", "&euro; 249"),
+    ("Artikel over je bedrijf of evenement", "&euro; 300"),
     ("Tegel in de nieuwsbrief, per editie", "&euro; 49"),
     ("Vacature uitgelicht, 30 dagen", "&euro; 49"),
     ("Sponsor van een seizoenspagina (Kerstmarkten, Vierdaagse, Koningsdag), per seizoen", "vanaf &euro; 250"),
