@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:zajedno@nijmegenonline.nl
+DTSTAMP:20261110T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261128T200000
+DTEND;TZID=Europe/Amsterdam:20261128T223000
+SUMMARY:Zajedno
+URL:https://www.nijmegenonline.nl/events/zajedno/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/zajedno/
+LOCATION:Lindenberg Cultuurhuis Nijmegen\, Ridderstraat 23\, 6511 TM Nijmegen
+END:VEVENT
+END:VCALENDAR

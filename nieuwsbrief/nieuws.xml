@@ -8,6 +8,15 @@
     <lastBuildDate>Tue, 10 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Museum De Bastei houdt groene publieksdag op 15 november</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/museum-de-bastei-houdt-groene-publieksdag-op-15-november/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/museum-de-bastei-houdt-groene-publieksdag-op-15-november/</guid>
+      <pubDate>Tue, 10 Nov 2026 18:42:12 +0100</pubDate>
+      <description>Museum De Bastei in Nijmegen viert zijn finaleplaats voor de Museumprijs 2026 op 15 november met lezingen, een film, workshops en een Waalwandeling.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-museum-de-bastei-houdt-groene-publieksdag-op-15-november.jpg" length="47272" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-museum-de-bastei-houdt-groene-publieksdag-op-15-november.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Honderd saffraankrokussen geplant in stadspark Groene perron</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/honderd-saffraankrokussen-geplant-in-stadspark-groene-perron/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/honderd-saffraankrokussen-geplant-in-stadspark-groene-perron/</guid>
@@ -177,15 +186,6 @@
       <description>Bezoekers van Stadsschouwburg Nijmegen en Concertgebouw De Vereeniging reizen voor 2,50 euro heen en terug met RRReis. Kinderen tot 13 jaar gaan gratis mee.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro.jpg" length="69344" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Boekpresentatie 'Molukse Lente' in Bibliotheek Hatert</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/boekpresentatie-molukse-lente-in-bibliotheek-hatert/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/boekpresentatie-molukse-lente-in-bibliotheek-hatert/</guid>
-      <pubDate>Wed, 28 Oct 2026 13:42:30 +0100</pubDate>
-      <description>Mediamaker Eva Metselaar presenteert op 12 november in Bibliotheek Hatert haar boek 'Molukse Lente' over tien Molukse rolmodellen. Gratis, aanmelden nodig.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-boekpresentatie-molukse-lente-in-bibliotheek-hatert.jpg" length="56841" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-boekpresentatie-molukse-lente-in-bibliotheek-hatert.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

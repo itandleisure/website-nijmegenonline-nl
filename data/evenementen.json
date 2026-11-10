@@ -7131,6 +7131,38 @@
   "kenmerken": []
  },
  {
+  "slug": "zajedno",
+  "titel": "Zajedno",
+  "start": "2026-11-28T20:00",
+  "eind": "2026-11-28T22:30",
+  "locatie": "Lindenberg Cultuurhuis Nijmegen",
+  "adres": "Ridderstraat 23, 6511 TM Nijmegen",
+  "afbeelding": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/zajedno.webp",
+  "alt": "Zajedno",
+  "bijschrift": "Eigen foto",
+  "fotos": [],
+  "uitgelicht": false,
+  "aanbieder": "lindenberg-cultuurhuis",
+  "bedrijf": "lindenberg-aldenhof",
+  "plaats": "Nijmegen",
+  "link": "",
+  "terugkerend": false,
+  "gepubliceerd": "2026-11-10",
+  "tekst": "<p>Een folkloredansvoorstelling uitgevoerd door Kansemble (Nijmegen) en Veselin Maslesa (Banja Luka Bosnië) m.m.v. Nederlandse en Kroatische muzikanten.</p>\n<p>De voorstelling is een soort van dansreis door de landen van voormalig Joegoslavië.</p>",
+  "aanmelding": "c0ebe556",
+  "website": "https://www.delindenberg.com",
+  "contactmail": "guus_van_kan@hotmail.com",
+  "telefoon": "+31625028880",
+  "soort": "Theater en dans",
+  "toegang": "betaald",
+  "prijs": "21,50",
+  "kenmerken": [
+   "kinderen",
+   "kinderprijs",
+   "reserveren"
+  ]
+ },
+ {
   "slug": "johnny-and-the-rockets",
   "titel": "Johnny and the Rockets",
   "start": "2026-11-28T20:30",
