@@ -270,6 +270,8 @@ def event_pagina(e, vandaag, komend, aanbieders, vermeldingen):
     if e.get("toegang") == "betaald":
         # "Vanaf" tenzij de organisator één vaste prijs opgeeft (prijs_vast in data/evenementen.json)
         toegang = ("€ %s per persoon" if e.get("prijs_vast") else "Vanaf € %s per persoon") % e["prijs"] if e.get("prijs") else "Betaald"
+        if e.get("prijs_tekst"):   # bijv. "€ 12 voor volwassenen, € 5 voor kinderen" (prijs_tekst in data/evenementen.json)
+            toegang = e["prijs_tekst"]
     extra = [evenement_indeling.KENMERKEN[k] for k in evenement_indeling.KENMERKEN if k in e.get("kenmerken", [])]
     if toegang or extra:
         regels.append('<li><span class="evenement-info__kop">Toegang</span>%s</li>' % "<br>".join(esc(x) for x in [toegang] + extra if x))

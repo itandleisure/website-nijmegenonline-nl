@@ -7514,7 +7514,7 @@
   "link": "",
   "terugkerend": false,
   "gepubliceerd": "2026-11-11",
-  "tekst": "<p>Drum Twins<br>Aron Leijendeckers, Dan Townsend - Percussie</p>\n<p>Populaire stukken uit de klassieke muziek, pop en filmmuziek, met humor en precisie uitgevoerd op drumstel, marimba, cajón, koebellen, surdo, castagnetten en nog veel meer. Het publiek leert eenvoudige ritmes met behulp van lichaamspercussie en ontdekt spelenderwijs hoe maatsoorten te herkennen, welke rol ritme speelt in muziek en hoe je &quot;correct&quot; moet klappen. Een geestige en snelle concertbeleving waarbij het bijna onmogelijk is om stil te zitten!<br>Met muziek van W. A. Mozart, J. Offenbach, R. Strauss, J. Williams, Queen en anderen.</p>\n<p>Toegang: € 12 voor volwassenen, € 5 voor kinderen.</p>",
+  "tekst": "<p>Drum Twins<br>Aron Leijendeckers, Dan Townsend - Percussie</p>\n<p>Populaire stukken uit de klassieke muziek, pop en filmmuziek, met humor en precisie uitgevoerd op drumstel, marimba, cajón, koebellen, surdo, castagnetten en nog veel meer. Het publiek leert eenvoudige ritmes met behulp van lichaamspercussie en ontdekt spelenderwijs hoe maatsoorten te herkennen, welke rol ritme speelt in muziek en hoe je &quot;correct&quot; moet klappen. Een geestige en snelle concertbeleving waarbij het bijna onmogelijk is om stil te zitten!<br>Met muziek van W. A. Mozart, J. Offenbach, R. Strauss, J. Williams, Queen en anderen.</p>",
   "aanmelding": "6780aa1c",
   "website": "https://www.reservix.de/tickets-no-rhythm-no-music-familienkonzert-mit-den-drum-twins-in-kleve-stadthalle-am-13-12-2026/e2562644",
   "contactmail": "konzerte@kleve.de",
@@ -7522,6 +7522,7 @@
   "soort": "Muziek",
   "toegang": "betaald",
   "prijs": "5",
+  "prijs_tekst": "€ 12 voor volwassenen, € 5 voor kinderen",
   "kenmerken": [
    "kinderen",
    "kinderprijs"
