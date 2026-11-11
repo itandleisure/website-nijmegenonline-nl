@@ -585,6 +585,7 @@
 /listdom-category/* /bedrijvengids/ 301
 # agenda (tools/agenda.py)
 /events/anne-frank-middag/ /nijmegen-evenementen-overzicht/ 301
+/events/anne-frank-middag-3/ /nijmegen-evenementen-overzicht/ 301
 /events/arcade-van-de-maand-kun-jij-perry-ubeda-verslaan/ /nijmegen-evenementen-overzicht/ 301
 /events/arcade-van-de-maand-kun-jij-perry-ubeda-verslaan-2/ /nijmegen-evenementen-overzicht/ 301
 /events/benefietconcert-nijmeegs-mannenkoor/ /nijmegen-evenementen-overzicht/ 301
