@@ -8,6 +8,15 @@
     <lastBuildDate>Wed, 11 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Aqua-Novio'94 verstevigt achtste plaats in de Eredivisie</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/aqua-novio-94-verstevigt-achtste-plaats-in-de-eredivisie/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/aqua-novio-94-verstevigt-achtste-plaats-in-de-eredivisie/</guid>
+      <pubDate>Wed, 11 Nov 2026 22:21:40 +0100</pubDate>
+      <description>Zwemploeg Aqua-Novio'94 staat na de tweede ronde achtste in de Eredivisie. Bij de O14 is de club volgens de KNZB-krachtenmatrix zelfs tweede.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-aqua-novio-94-verstevigt-achtste-plaats-in-de-eredivisie.jpg" length="79502" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-aqua-novio-94-verstevigt-achtste-plaats-in-de-eredivisie.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Museum De Bastei houdt groene publieksdag op 15 november</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/museum-de-bastei-houdt-groene-publieksdag-op-15-november/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/museum-de-bastei-houdt-groene-publieksdag-op-15-november/</guid>
@@ -177,15 +186,6 @@
       <description>Op zondag 8 november strijkt de twaalfde editie van Clowns Got Talent neer in Nijmegen, met acht clowneske acts in De Lindenberg.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-clowns-got-talent-met-acht-acts-in-cultuurhuis-de-lindenberg.jpg" length="65857" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-clowns-got-talent-met-acht-acts-in-cultuurhuis-de-lindenberg.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Met de bus naar De Vereeniging en schouwburg voor 2,50 euro</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro/</guid>
-      <pubDate>Wed, 28 Oct 2026 13:42:30 +0100</pubDate>
-      <description>Bezoekers van Stadsschouwburg Nijmegen en Concertgebouw De Vereeniging reizen voor 2,50 euro heen en terug met RRReis. Kinderen tot 13 jaar gaan gratis mee.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro.jpg" length="69344" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-met-de-bus-naar-de-vereeniging-en-schouwburg-voor-2-50-euro.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
