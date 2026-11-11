@@ -340,6 +340,10 @@ FOTOGEBRUIK = ["Jullie mogen mijn foto's ook gebruiken in artikelen op NijmegenO
                "Jullie mogen ook foto's van mijn website of social media gebruiken, met mijn bedrijfsnaam als fotocredit."]
 
 
+# Laatste keuze in "Soort bedrijf" voor wie zijn soort niet in de lijst ziet
+ANDERS_CATEGORIE = "Staat er niet tussen (noem het in de omschrijving)"
+
+
 def bedrijf_aanmelden(categorieen):
     inhoud = """        <h1>Bedrijf aanmelden</h1>
         <p class="pagina__intro">Zet je bedrijf in de bedrijvengids van NijmegenOnline. Vul het formulier in, dan maken we je vermelding aan en nemen we contact met je op.</p>
@@ -347,7 +351,8 @@ def bedrijf_aanmelden(categorieen):
 {formulier}""".format(site=SITE, formulier=formulier("bedrijf", "Aanmelding bedrijvengids NijmegenOnline", [
         ("vermelding", "", "verborgen", False, None),
         ("bedrijf", "Naam van het bedrijf", "text", True, None),
-        ("categorie", "Soort bedrijf", "text", True, categorieen),
+        # Keuzelijst (select) i.p.v. invoerveld met datalist: één klik toont alle soorten (verzoek Frans 11-11-2026)
+        ("categorie", "Soort bedrijf", "lijst", True, categorieen + [ANDERS_CATEGORIE]),
         ("adres", "Straat en huisnummer", "text", True, None),
         ("postcode", "Postcode", "postcode", True, None),
         ("plaats", "Plaats", "text", True, None),
