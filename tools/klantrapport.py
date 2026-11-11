@@ -29,6 +29,7 @@ import json
 import os
 import pathlib
 import random
+import re
 import sys
 
 import requests
@@ -80,14 +81,20 @@ def cijfers(tok, slug, partner, van, tot):
     pad = "/bedrijvengids/%s/" % slug
     uit = {"weergaven": 0, "bezoekers": 0, "lijst": None, "kliks": 0, "soorten": None, "banner": None}
     basis = vraag(tok, van, tot, ["eventName"], {"pagePath": [pad], "eventName": ["bedrijf_bekeken", "bedrijf_klik", "page_view"]})
-    # bedrijf_bekeken is de eigen teller; page_view als vangnet voor de periode voordat bedrijf.js er stond
-    uit["weergaven"] = basis.get(("bedrijf_bekeken",), 0) or basis.get(("page_view",), 0)
+    # bedrijf_bekeken is de eigen teller, maar telt pas sinds kort; neem de hoogste van de twee, zodat de periode
+    # voordat bedrijf.js er stond niet wegvalt
+    uit["weergaven"] = max(basis.get(("bedrijf_bekeken",), 0), basis.get(("page_view",), 0))
     uit["kliks"] = basis.get(("bedrijf_klik",), 0)
     # unieke bezoekers van de bedrijfspagina (totalUsers over de hele periode, niet opgeteld per dag)
     uit["bezoekers"] = vraag(tok, van, tot, ["pagePath"], {"pagePath": [pad]}, "totalUsers").get((pad,), 0)
     try:
         lijst = vraag(tok, van, tot, ["eventName"], {"customEvent:bedrijf": [slug], "eventName": ["bedrijf_in_lijst"]})
         uit["lijst"] = lijst.get(("bedrijf_in_lijst",), 0)
+        if not uit["lijst"]:
+            # ter controle: komt het event überhaupt binnen, en voor welke bedrijven?
+            alle = vraag(tok, van, tot, ["customEvent:bedrijf"], {"eventName": ["bedrijf_in_lijst"]})
+            print("  lijst 0; bedrijf_in_lijst op de hele site: %s" % (dict(sorted(alle.items(), key=lambda x: -x[1])[:10]) or "geen"),
+                  file=sys.stderr)
     except GeenDimensie as e:
         print("  vertoningen in lijsten overgeslagen: %s" % e, file=sys.stderr)
     try:
@@ -208,9 +215,9 @@ def rapport(b, pakket, nu, toen, van, tot, voorbeeld):
 def mailen(inhoud, onderwerp):
     """Stuurt het rapport naar de redactie. Het Apps Script (actie 'rapport') mailt alleen naar
     redactie@nijmegenonline.nl; een klantadres kan hier niet worden meegegeven."""
-    sys.path.insert(0, str(ROOT / "tools"))
-    from paginas import GOOGLE_FORM_URL
-    r = requests.post(GOOGLE_FORM_URL, data={"actie": "rapport", "sleutel": os.environ["NIEUWS_SLEUTEL"],
+    # De URL staat in paginas.py; niet importeren, want die module heeft bs4 nodig.
+    url = re.search(r'^GOOGLE_FORM_URL = "([^"]+)"', (ROOT / "tools" / "paginas.py").read_text(), re.M).group(1)
+    r = requests.post(url, data={"actie": "rapport", "sleutel": os.environ["NIEUWS_SLEUTEL"],
                                              "onderwerp": onderwerp, "html": inhoud}, timeout=120)
     r.raise_for_status()
     antwoord = r.json()
