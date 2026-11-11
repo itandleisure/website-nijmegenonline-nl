@@ -3179,6 +3179,69 @@ def toegevoegd(cat, bekend):
             for slug, v in sorted(lijst.items()) if not slug.startswith("_") and v.get("categorie") == cat["slug"] and slug not in bekend]
 
 
+# Soort bedrijf uit het aanmeldformulier die niet vanzelf bij een categorie past (zie aangemeld_categorie)
+# (OUDE_CATEGORIE_NAAR telt ook mee). Wat nergens past, komt niet in de gids: zet dan gidscategorie in
+# data/bedrijven-aangemeld.json.
+AANGEMELD_NAAR = {"fotografie-workshop": "opleiding-en-training", "personal-training": "sportschool",
+                  "elektronicazaak": "elektronica", "vintage": "tweedehands-winkel", "trouwen": "zaalverhuur"}
+
+
+_GEMELD = set()
+
+
+def aangemeld_categorie(a):
+    """De categorie (slug) van een aangemeld bedrijf: het veld gidscategorie als de redactie dat zette, anders de
+    'Soort bedrijf' uit het formulier, vergeleken met de slug, de oude Listdom-categorieën, het enkelvoud en de
+    soorten van elke categorie. Bij 'Pedicure/Voetverzorging' telt ook het deel voor de schuine streep."""
+    if a.get("gidscategorie"):
+        return a["gidscategorie"]
+    tekst = (a.get("categorie") or "").strip()
+    for s in (slug(tekst), slug(tekst.split("/")[0])):
+        if s in AANGEMELD_NAAR or s in OUDE_CATEGORIE_NAAR:
+            return AANGEMELD_NAAR.get(s) or OUDE_CATEGORIE_NAAR[s]
+        for cat in CATEGORIEEN:
+            if s and (s == cat["slug"] or s in cat["listdom"] or s == slug(cat["enkelvoud"])
+                      or s in {slug(x) for x in cat["soorten"]}):
+                return cat["slug"]
+    if a.get("id") not in _GEMELD:
+        _GEMELD.add(a.get("id"))
+        print("Aangemeld bedrijf %r: soort %r past bij geen categorie, zet gidscategorie" % (a.get("bedrijf"), tekst))
+    return ""
+
+
+def aangemeld(cat, bekend):
+    """Nieuwe bedrijven die zich via /bedrijf-aanmelden/ aanmeldden en die de redactie goedkeurde
+    (data/bedrijven-aangemeld.json, gevuld door tools/aanmeldingen.py). De gegevens van het bedrijf zelf gaan voor:
+    tekst, openingstijden en foto staan er meteen in, net als bij Dit is mijn bedrijf (wijzigingen_toepassen)."""
+    pad = ROOT / "data" / "bedrijven-aangemeld.json"
+    lijst = json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else []
+    uit = []
+    for a in lijst:
+        if aangemeld_categorie(a) != cat["slug"] or not a.get("bedrijf"):
+            continue
+        s = a.get("slug") or slug(a["bedrijf"])
+        if s in bekend:
+            s = "%s-%s" % (s, slug(a.get("adres") or a["id"]))
+        if s in bekend:
+            continue
+        site = (a.get("site") or "").strip()
+        b = {"naam": a["bedrijf"].strip(), "adres": a.get("adres", ""), "postcode": a.get("postcode", ""), "plaats": a.get("plaats", ""),
+             "telefoon": a.get("telefoon", ""), "website": met_schema(site) if site else "", "lat": a.get("lat", ""), "lon": a.get("lon", ""),
+             "soort": a.get("categorie", ""), "bron": "aanmelding", "in_gids": False, "email": a.get("bedrijfsmail", ""),
+             "facebook": "", "instagram": "", "openingstijden": [], "foto": a.get("foto", ""), "beschrijving": "", "tekst": "",
+             "slug": s, "geclaimd": True, "concept": False}
+        if a.get("omschrijving"):
+            b["tekst"] = "\n".join("<p>%s</p>" % esc(x.strip()).replace("\n", "<br>") for x in re.split(r"\n\s*\n", a["omschrijving"]) if x.strip())
+        if a.get("openingstijden"):
+            b["tijden_site"] = a["openingstijden"]
+            b["tijden_bron"] = "volgens het bedrijf"
+        if a.get("fotos"):
+            b["fotos_aangeleverd"] = [f["foto"] for f in a["fotos"] if f.get("foto")]
+        bekend = bekend | {s}
+        uit.append(b)
+    return uit
+
+
 def main(bron):
     bron = pathlib.Path(bron)
     xml_ = bron / "bron" / "wp-xml" / "bedrijvengids-listdom.xml"
@@ -3198,6 +3261,7 @@ def main(bron):
         else:
             continue
         overig += toegevoegd(cat, gebruikt | {b["slug"] for b in gids + overig})
+        overig += aangemeld(cat, gebruikt | {b["slug"] for b in gids + overig})
         # Een bedrijf uit de oude gids kan in meer categorieën staan; het krijgt één pagina (bij de eerste categorie)
         # Hoort het volgens de scan bij een andere categorie, dan valt het hier stil weg (geen doorverwijzing: het
         # komt bij die andere categorie).

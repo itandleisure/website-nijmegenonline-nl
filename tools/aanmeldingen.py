@@ -66,6 +66,22 @@ def ophalen(url):
         return json.loads(r.read().decode("utf-8"))
 
 
+def ligging(a):
+    """Lengte- en breedtegraad van het adres via de Locatieserver van PDOK (Kadaster), voor de kaart in de bedrijvengids.
+    Geeft ("", "") als het adres niet te vinden is."""
+    q = " ".join(x for x in (a.get("adres"), a.get("postcode"), a.get("plaats")) if x)
+    if not q.strip():
+        return "", ""
+    try:
+        r = ophalen("https://api.pdok.nl/bzk/locatieserver/search/v3_1/free?rows=1&fq=type:adres&fl=centroide_ll&q="
+                    + urllib.parse.quote(q))
+        m = re.match(r"POINT\(([\d.]+) ([\d.]+)\)", r["response"]["docs"][0]["centroide_ll"])
+        return m.group(2), m.group(1)
+    except Exception as fout:  # geen ligging: het bedrijf komt wel in de gids, alleen niet op de kaart
+        print("Geen ligging voor %r: %s" % (q, fout))
+        return "", ""
+
+
 def bewaar_foto(foto, naam):
     """Foto (base64) als webp van maximaal 1200 px breed; geeft het pad terug."""
     from PIL import Image
@@ -427,6 +443,11 @@ def main(test=None):
     wijzigingen = json.load(open(wijzigingen_pad, encoding="utf-8")) if wijzigingen_pad.exists() else {}
     berichten = nieuws.laad()
     nieuw, terugmelden = [], []
+    # Bedrijven van voor de ligging (zie ligging()) krijgen die alsnog, zodat ze op de kaart komen
+    for b in bedrijven:
+        if "lat" not in b:
+            b["lat"], b["lon"] = ligging(b)
+            nieuw.append("ligging bedrijf %s" % b.get("bedrijf"))
     for a in lijst.get("evenement", []):
         if a["id"] not in verwerkt:
             try:
@@ -455,6 +476,7 @@ def main(test=None):
                 wijzigingen[a["vermelding"]] = b
                 nieuw.append("wijziging bedrijf %s" % a["vermelding"])
             else:
+                b["lat"], b["lon"] = ligging(b)
                 bedrijven.append(b)
                 nieuw.append("bedrijf %s" % a.get("bedrijf"))
             verwerkt.add(a["id"])
