@@ -136,5 +136,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-11",
+  "soort": "gids",
+  "betaald": false,
+  "sleutels": [
+   "pagina:/kerstmarkten-in-nijmegen/"
+  ],
+  "titel": "Kerstmarkten in Nijmegen 2026: data, locaties en tips",
+  "link": "https://www.nijmegenonline.nl/kerstmarkten-in-nijmegen/",
+  "beelden": [
+   "assets/social/2026-11-11-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1788778126590589",
+  "instagram_id": "18645116506002605",
+  "instagram_link": "https://www.instagram.com/p/Dfmp1DinFGm/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
