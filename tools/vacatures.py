@@ -408,6 +408,7 @@ def plaatsen_pagina():
         ("notitie", "Opmerking voor de redactie", "tekst", False, None),
         ("voorwaarden", "Voorwaarden", "radio", True,
          [("akkoord", "Ik ga akkoord: de vacature is echt, sollicitanten hoeven nergens voor te betalen, en NijmegenOnline mag hem weigeren of offline halen.")]),
+        paginas.FOTOVERKLARING_VELD,
     ]
     inhoud = """        <h1>Vacature plaatsen</h1>
         <p class="pagina__intro">Zoek je personeel in Nijmegen of omgeving? Plaats je vacature op NijmegenOnline. Voor lokale werkgevers is dat gratis.</p>

@@ -86,6 +86,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
     e.preventDefault();
     var ontbreekt = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (v) {
       if (v.type === "radio") return !form.querySelector('input[name="' + v.name + '"]:checked');
+      if (v.type === "checkbox") return !v.checked;   // verplicht vinkje, zoals de verklaring over de foto's
       return v.type === "file" ? !v.files.length : !v.value.trim();
     }).filter(function (v, i, alle) {   // een groep keuzes telt één keer
       return v.type !== "radio" || alle.findIndex(function (w) { return w.name === v.name; }) === i;
