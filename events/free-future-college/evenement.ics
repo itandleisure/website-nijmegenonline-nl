@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:free-future-college@nijmegenonline.nl
+DTSTAMP:20261111T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261207T193000
+DTEND;TZID=Europe/Amsterdam:20261210T210000
+SUMMARY:Free Future College
+URL:https://www.nijmegenonline.nl/events/free-future-college/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/free-future-college/
+LOCATION:Lindenberg Cultuurhuis Nijmegen\, Karperborch 25\, 5247 VH Rosmalen
+END:VEVENT
+END:VCALENDAR

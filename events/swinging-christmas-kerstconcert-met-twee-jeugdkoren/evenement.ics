@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:swinging-christmas-kerstconcert-met-twee-jeugdkoren@nijmegenonline.nl
+DTSTAMP:20261111T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261205T200000
+DTEND;TZID=Europe/Amsterdam:20261205T220000
+SUMMARY:Swinging Christmas - Kerstconcert met twee jeugdkoren
+URL:https://www.nijmegenonline.nl/events/swinging-christmas-kerstconcert-met-twee-jeugdkoren/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/swinging-christmas-kerstconcert-met-twee-jeugdkoren/
+LOCATION:Kleve\, Lohstätte 7\, 47533 Kleve (Duitsland)
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:massada-unplugged-bij-sapa-punja@nijmegenonline.nl
+DTSTAMP:20261111T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261127T201500
+DTEND;TZID=Europe/Amsterdam:20261127T213000
+SUMMARY:Massada unplugged bij 'Sapa punja?'
+URL:https://www.nijmegenonline.nl/events/massada-unplugged-bij-sapa-punja/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/massada-unplugged-bij-sapa-punja/
+LOCATION:Stevenskerk Nijmegen\, Sint Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR

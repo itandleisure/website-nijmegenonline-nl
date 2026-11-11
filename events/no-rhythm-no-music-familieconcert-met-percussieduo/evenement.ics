@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:no-rhythm-no-music-familieconcert-met-percussieduo@nijmegenonline.nl
+DTSTAMP:20261111T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261213T170000
+DTEND;TZID=Europe/Amsterdam:20261213T181500
+SUMMARY:No rhythm\, no music - Familieconcert met percussieduo
+URL:https://www.nijmegenonline.nl/events/no-rhythm-no-music-familieconcert-met-percussieduo/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/no-rhythm-no-music-familieconcert-met-percussieduo/
+LOCATION:Kleve\, Lohstätte 7\, 47533 Kleve (Duitsland)
+END:VEVENT
+END:VCALENDAR
