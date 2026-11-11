@@ -127,13 +127,23 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=17" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=18" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
 
 # Keuzes voor het verplichte fotobijschrift; bij de laatste vult de inzender een naam in (zie formulier.js)
 FOTOBRONNEN = ["Eigen foto", "Rechtenvrije afbeelding", "Fotocredits bij:"]
+
+# Verplichte verklaring over de rechten op foto's (verzoek Frans 11-11-2026) op de vier aanmeldformulieren:
+# nieuws, evenement, vacature en bedrijf. Code.gs bewaart het akkoord met tijdstip en deze tekst (FOTOVERKLARING daar):
+# pas je de tekst aan, pas hem dan ook in Code.gs aan en zet daar een nieuwe FOTOVERKLARING_VERSIE.
+FOTOVERKLARING = ("Ik heb het recht om de foto's die ik meestuur of laat gebruiken op NijmegenOnline te laten plaatsen: "
+                  "ik heb ze zelf gemaakt, heb er een licentie voor of heb toestemming van de fotograaf. Mensen die herkenbaar "
+                  "op de foto's staan, vinden dat goed. Krijgt NijmegenOnline toch een claim, boete of factuur van een fotograaf "
+                  "of andere rechthebbende voor een van deze foto's, dan stuurt NijmegenOnline die één-op-één naar mij door en "
+                  "betaal ik het volledige bedrag. Ik vrijwaar NijmegenOnline hiervoor.")
+FOTOVERKLARING_VELD = ("fotoverklaring", "Rechten op foto's", "akkoord", True, FOTOVERKLARING)
 
 KWARTIEREN = ["%02d:%02d" % (u, m) for u in range(24) for m in (0, 15, 30, 45)]
 
@@ -187,6 +197,11 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
             regels.append('          <fieldset class="formulier__keuzes"><legend>%s%s</legend>' % (esc(label), ster))
             regels += ['            <label><input type="radio" name="%s" value="%s"%s> %s</label>' % (veld, esc(w), req, esc(o))
                        for w, o in (x if isinstance(x, tuple) else (x, x) for x in opties)]
+            regels.append("          </fieldset>")
+        elif soort == "akkoord":
+            # Eén verplicht vinkje (bijv. de fotoverklaring); opties = de tekst waarmee de inzender akkoord gaat
+            regels.append('          <fieldset class="formulier__keuzes formulier__akkoord"><legend>%s%s</legend>' % (esc(label), ster))
+            regels.append('            <label><input type="checkbox" name="%s" value="akkoord"%s> %s</label>' % (veld, req, esc(opties)))
             regels.append("          </fieldset>")
         elif soort == "lijst":
             regels.append('          <label for="%s">%s%s</label>\n          <select id="%s" name="%s"%s><option value="">Kies</option>%s</select>'
@@ -368,7 +383,8 @@ def bedrijf_aanmelden(categorieen):
         ("fotogebruik", "Foto's in artikelen", "keuzes", False, FOTOGEBRUIK),
         ("naam", "Je naam (contactpersoon)", "text", True, None),
         ("email", "Je e-mailadres", "email", True, None),
-        ("pakket", "Hoe wil je in de gids staan?", "keuze", True, BEDRIJF_PAKKETTEN)], "Aanmelden",
+        ("pakket", "Hoe wil je in de gids staan?", "keuze", True, BEDRIJF_PAKKETTEN),
+        FOTOVERKLARING_VELD], "Aanmelden",
         "Bedankt! De redactie heeft je aanmelding ontvangen en bekijkt die zo snel mogelijk. Soms passen we de tekst wat aan, "
         "zodat die goed op de website past. Je krijgt een e-mail zodra je bedrijf in de bedrijvengids staat, of als we het niet kunnen plaatsen."))
     return pagina("Bedrijf aanmelden", "Zet je bedrijf in de bedrijvengids van NijmegenOnline: vul het formulier in en wij maken je vermelding aan.",
@@ -418,7 +434,8 @@ def evenement_aanmelden():
         ("naam", "Je naam", "text", True, None),
         ("email", "Je e-mailadres", "email", True, None),
         ("telefoon", "Je telefoonnummer", "tel", True, None),
-        ("notitie", "Opmerking voor de redactie", "tekst", False, None)], "Evenement aanmelden",
+        ("notitie", "Opmerking voor de redactie", "tekst", False, None),
+        FOTOVERKLARING_VELD], "Evenement aanmelden",
         "Bedankt! De redactie heeft je evenement ontvangen en bekijkt het zo snel mogelijk. Soms passen we de tekst wat aan, "
         "zodat die goed op de website past. Je krijgt een e-mail zodra je evenement online staat, of als we het niet kunnen plaatsen."))
     return pagina("Evenement aanmelden", "Organiseer je een evenement in Nijmegen of omgeving? Meld het gratis aan voor de agenda van NijmegenOnline.",
@@ -452,7 +469,8 @@ def nieuws_insturen():
         ("nieuwstelefoon", "Telefoonnummer", "tel", False, None),
         ("kop", "Jouw gegevens", "kop", False, "Deze gegevens komen niet op de website. We gebruiken ze alleen als we nog vragen hebben over je bericht."),
         ("naam", "Je naam", "text", True, None),
-        ("email", "Je e-mailadres", "email", True, None)], "Bericht insturen",
+        ("email", "Je e-mailadres", "email", True, None),
+        FOTOVERKLARING_VELD], "Bericht insturen",
         "Bedankt! De redactie heeft je bericht ontvangen en bekijkt het zo snel mogelijk. Je krijgt een e-mail zodra het online staat, "
         "of als we het niet kunnen plaatsen."))
     return pagina("Nieuws insturen", "Heb je nieuws uit Nijmegen of omgeving? Stuur je bericht of persbericht in bij de redactie van NijmegenOnline.",

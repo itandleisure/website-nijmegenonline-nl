@@ -476,7 +476,7 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .formulier__val { position: absolute; left: -9999px; }
 .formulier__keuzes { border: 0; padding: 0; margin: 0; display: grid; gap: 4px; }
 .formulier__keuzes label { font-weight: 400; margin: 0; display: flex; gap: 8px; align-items: center; }
-.formulier__keuzes input[type="radio"] { flex: none; margin-top: 4px; align-self: flex-start; }
+.formulier__keuzes input[type="radio"], .formulier__keuzes input[type="checkbox"] { flex: none; margin-top: 4px; align-self: flex-start; }
 .formulier__melding { margin: 8px 0 0; padding: 10px 14px; border-radius: 6px; background: #eef7e6; }
 .formulier__melding--fout { background: #fdecea; }
 .artikel-layout--breed { max-width: 1000px; grid-template-columns: minmax(0, 1fr) !important; }

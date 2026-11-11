@@ -21,6 +21,10 @@
      Eenmalig: voer "maakNieuwsSleutel" uit en zet de waarde uit het logboek in GitHub als secret NIEUWS_SLEUTEL.
      Begint het onderwerp met "Agenda", dan wordt het een evenement (evenementUitMail): Claude vult datum, tijden en
      locatie in en schrijft de tekst; het komt in het tabblad Evenementen met de gewone goedkeuringsmail.
+   - Rechten op foto's: op de formulieren voor nieuws, evenementen, vacatures en bedrijven vinkt de inzender verplicht de
+     fotoverklaring aan (FOTOVERKLARING hieronder). Het akkoord komt met tijdstip in de kolom "Rechten op foto's" en
+     daarnaast in het tabblad Fotoverklaringen, met de volledige tekst. Dat tabblad blijft 5 jaar bewaard, zodat je bij een
+     claim van een fotograaf kunt laten zien wie de foto aanleverde en waarmee die akkoord ging.
    - Er gaat een e-mail naar ONTVANGER (antwoorden gaat rechtstreeks naar de invuller).
    - Regels ouder dan de bewaartermijn (3 maanden) worden elke nacht verwijderd, met hun foto in Drive (privacy, zie de privacyverklaring op /privacy-policy/).
 
@@ -49,6 +53,18 @@ function model(stroom) {
   return (eigen && eigen.trim()) || MODELLEN[stroom];
 }
 
+// Verklaring over de rechten op foto's (verzoek Frans 11-11-2026). Moet gelijk zijn aan FOTOVERKLARING in
+// tools/paginas.py (de tekst naast het vinkje). Tekst aangepast? Zet dan ook een nieuwe datum in FOTOVERKLARING_VERSIE.
+var FOTOVERKLARING = "Ik heb het recht om de foto's die ik meestuur of laat gebruiken op NijmegenOnline te laten plaatsen: " +
+  "ik heb ze zelf gemaakt, heb er een licentie voor of heb toestemming van de fotograaf. Mensen die herkenbaar " +
+  "op de foto's staan, vinden dat goed. Krijgt NijmegenOnline toch een claim, boete of factuur van een fotograaf " +
+  "of andere rechthebbende voor een van deze foto's, dan stuurt NijmegenOnline die één-op-één naar mij door en " +
+  "betaal ik het volledige bedrag. Ik vrijwaar NijmegenOnline hiervoor.";
+var FOTOVERKLARING_VERSIE = '2026-11-11';
+// Apart tabblad met alle akkoorden; langer bewaard dan de inzendingen zelf (een claim komt vaak pas na jaren)
+var FOTOVERKLARINGEN = { tabblad: 'Fotoverklaringen', bewaarJaren: 5,
+  kop: ['Tijdstip', 'Formulier', 'ID', 'Naam', 'E-mail', 'Onderwerp', 'Pagina', "Foto's", 'Versie tekst', 'Verklaring'] };
+
 // Per formuliertype: tabblad, kolommen, bewaartermijn en onderwerp van de mail
 var FORMULIEREN = {
   contact: {
@@ -73,7 +89,7 @@ var FORMULIEREN = {
       // Tot 5 foto's per aanmelding: de eerste is "foto", de rest staat hier (Drive-ID's). Gratis toont alleen de eerste,
       // Uitgelicht en Partner alle (tools/bedrijvengids.py). fotogebruik = toestemming om ze ook in artikelen te gebruiken.
       ['extrafotos', "Andere foto's (Drive-ID's)"], ['fotocredits', "Bijschriften andere foto's"],
-      ['fotogebruik', "Foto's ook in artikelen"]]
+      ['fotogebruik', "Foto's ook in artikelen"], ['fotoverklaring', "Rechten op foto's"]]
   },
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 3, onderwerp: 'Evenement aangemeld', goedkeuren: true,
@@ -89,7 +105,8 @@ var FORMULIEREN = {
       ['naam', 'Naam'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking'],
       ['aanbieder', 'Aanbieder'],   // gekozen op de beoordeelpagina (slug uit data/aanbieders.json, of "nieuw")
       ['extrafotos', "Andere foto's (Drive-ID's)"], ['fotocredits', "Bijschriften andere foto's"],
-      ['bedrijf', 'Bedrijf in de gids']]   // sleutel uit /bedrijvengids/<sleutel>/, gekozen in het formulier of op de beoordeelpagina
+      ['bedrijf', 'Bedrijf in de gids'],   // sleutel uit /bedrijvengids/<sleutel>/, gekozen in het formulier of op de beoordeelpagina
+      ['fotoverklaring', "Rechten op foto's"]]
   },
   // Vacaturebank (besluit Frans, 3-11-2026): formulier op /vacature-plaatsen/, tools/vacatures.py bouwt de pagina's.
   // "bureau" = uitzend-, wervings- of selectiebureau (ja/nee); die betalen € 19 per vacature.
@@ -109,7 +126,7 @@ var FORMULIEREN = {
       ['pakket', 'Pakket (Basis of Uitgelicht)'], ['factuur', 'Factuurgegevens'], ['foto', 'Logo'],
       ['naam', 'Contactpersoon'], ['email', 'E-mail'], ['telefoon', 'Telefoon'], ['notitie', 'Opmerking'], ['voorwaarden', 'Voorwaarden'],
       // Niet in het formulier: de werkgever kiest verlengen of sluiten via de link in de mail (zie beheerPagina)
-      ['wijziging', 'Verlengen of sluiten']]
+      ['wijziging', 'Verlengen of sluiten'], ['fotoverklaring', "Rechten op foto's"]]
   },
   // Mails die de redactie doorstuurt naar nieuws@nijmegenonline.nl (tools/nieuws_ophalen.py, elke 15 minuten,
   // zie nieuwsOntvangen()) en het formulier op /nieuws-insturen/ (gewone doPost met form=nieuws).
@@ -122,7 +139,9 @@ var FORMULIEREN = {
       ['fotocredits', "Bijschriften andere foto's"], ['naam', 'Inzender'], ['email', 'E-mail inzender'], ['onderwerp', 'Onderwerp mail'], ['berichtid', 'Bericht-ID mail'],
       ['bedrijf', 'Bedrijf in de gids'],   // gekozen op de beoordeelpagina; het bericht komt dan op de bedrijfspagina
       // Contactgegevens voor bezoekers (optioneel, alleen via /nieuws-insturen/): komen onder het bericht op de site
-      ['site', 'Website'], ['nieuwsmail', 'E-mail bezoekers'], ['nieuwstelefoon', 'Telefoon bezoekers']]
+      ['site', 'Website'], ['nieuwsmail', 'E-mail bezoekers'], ['nieuwstelefoon', 'Telefoon bezoekers'],
+      // Alleen via /nieuws-insturen/; bij doorgestuurde mails blijft deze kolom leeg
+      ['fotoverklaring', "Rechten op foto's"]]
   }
 };
 
@@ -223,6 +242,13 @@ function doPost(e) {
     ['titel', 'omschrijving'].forEach(function (v) { if (!g[v]) fouten.push(v); });
     if (g.foto && !g.bijschrift) fouten.push('bijschrift');
   }
+  // Fotoverklaring verplicht aangevinkt; in de Sheet komt het akkoord met tijdstip (zie FOTOVERKLARING)
+  var ontvangen = new Date();
+  if (cfg.velden.some(function (v) { return v[0] === 'fotoverklaring'; })) {
+    if (g.fotoverklaring !== 'akkoord') fouten.push('fotoverklaring');
+    else g.fotoverklaring = 'Akkoord op ' + Utilities.formatDate(ontvangen, 'Europe/Amsterdam', 'dd-MM-yyyy HH:mm:ss') +
+      ' (tekst van ' + FOTOVERKLARING_VERSIE + ', zie tabblad ' + FOTOVERKLARINGEN.tabblad + ')';
+  }
   if (fouten.length) return antwoord({ ok: false, fout: 'velden', velden: fouten });
 
   // Nieuws via het formulier op /nieuws-insturen/: net als een doorgestuurde mail laat Claude het in eigen woorden
@@ -253,7 +279,7 @@ function doPost(e) {
   var slot = LockService.getScriptLock();
   slot.waitLock(10000);
   try {
-    var rij = [new Date(), g.pagina].concat(cfg.velden.map(function (v) {
+    var rij = [ontvangen, g.pagina].concat(cfg.velden.map(function (v) {
       return veiligVoorSheet(g[v[0]]);
     }));
     if (cfg.goedkeuren) {
@@ -261,6 +287,7 @@ function doPost(e) {
       rij = rij.concat([WACHT, g.id, g.fotoId || '', veiligVoorSheet(g.tekstSite || ''), veiligVoorSheet(g.controle || '')]);
     }
     blad(cfg).appendRow(rij);
+    if (g.fotoverklaring) bewaarFotoverklaring(ontvangen, type, g, p);
   } finally {
     slot.releaseLock();
   }
@@ -1510,6 +1537,7 @@ function pagina(tekst) {
 // Eenmalig uitvoeren: maakt de tabbladen aan en zet de nachtelijke opruimtaak aan
 function installeer() {
   Object.keys(FORMULIEREN).forEach(function (k) { blad(FORMULIEREN[k]); });
+  fotoverklaringBlad();
   installeerWebshop();
   var taken = ScriptApp.getProjectTriggers().map(function (t) { return t.getHandlerFunction(); });
   if (taken.indexOf('opruimen') < 0) {
@@ -1520,6 +1548,7 @@ function installeer() {
 
 // Verwijdert per tabblad de regels die ouder zijn dan de bewaartermijn
 function opruimen() {
+  opruimenFotoverklaringen();
   Object.keys(FORMULIEREN).forEach(function (k) {
     var cfg = FORMULIEREN[k];
     var sheet = blad(cfg);
@@ -1544,6 +1573,48 @@ function opruimen() {
       sheet.deleteRow(i + 2);
     }
   });
+}
+
+// Tabblad Fotoverklaringen: één regel per akkoord, met de tekst zoals die op dat moment gold. Los van de inzending,
+// omdat die (met de foto in Drive) na 3 maanden wordt verwijderd en een claim van een fotograaf later kan komen.
+function fotoverklaringBlad() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(FOTOVERKLARINGEN.tabblad);
+  if (!sheet) {
+    sheet = ss.insertSheet(FOTOVERKLARINGEN.tabblad);
+    sheet.setFrozenRows(1);
+    sheet.getRange(1, 1, 1, FOTOVERKLARINGEN.kop.length).setValues([FOTOVERKLARINGEN.kop]).setFontWeight('bold');
+    sheet.getRange('A:A').setNumberFormat('dd-mm-yyyy hh:mm:ss');
+    sheet.getRange(1, 2, sheet.getMaxRows(), FOTOVERKLARINGEN.kop.length - 1).setNumberFormat('@');
+  }
+  return sheet;
+}
+
+function bewaarFotoverklaring(tijdstip, type, g, p) {
+  try {
+    // Bestandsnamen van de meegestuurde foto's (de Drive-kopie verdwijnt na 3 maanden, de naam blijft hier staan)
+    var namen = [schoon(p.foto_naam, 100)];
+    for (var n = 2; n <= MAX_FOTOS; n++) namen.push(schoon(p['foto_' + n + '_naam'], 100));
+    var fotos = namen.filter(String).join(', ') || 'geen foto meegestuurd';
+    if (String(g.fotogebruik || '').indexOf("foto's van mijn website") >= 0) fotos += "; mag ook foto's van eigen website of social media gebruiken";
+    fotoverklaringBlad().appendRow([tijdstip, type, g.id || '', veiligVoorSheet(g.naam), veiligVoorSheet(g.email),
+      veiligVoorSheet(g.onderwerp || g.titel || g.functie || g.bedrijf || ''), veiligVoorSheet(g.pagina), veiligVoorSheet(fotos),
+      FOTOVERKLARING_VERSIE, FOTOVERKLARING]);
+  } catch (fout) {
+    console.error('Fotoverklaring opslaan mislukt: ' + fout);
+  }
+}
+
+function opruimenFotoverklaringen() {
+  var sheet = fotoverklaringBlad();
+  var laatste = sheet.getLastRow();
+  if (laatste < 2) return;
+  var grens = new Date();
+  grens.setFullYear(grens.getFullYear() - FOTOVERKLARINGEN.bewaarJaren);
+  var datums = sheet.getRange(2, 1, laatste - 1, 1).getValues();
+  for (var i = datums.length - 1; i >= 0; i--) {
+    if (datums[i][0] instanceof Date && datums[i][0] < grens) sheet.deleteRow(i + 2);
+  }
 }
 
 function bewaarFoto(dataUrl, naam, titel) {
