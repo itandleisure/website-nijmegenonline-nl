@@ -204,5 +204,29 @@
   "instagram_id": "18645116506002605",
   "instagram_link": "https://www.instagram.com/p/Dfmp1DinFGm/",
   "fouten": []
+ },
+ "2026-11-12": {
+  "datum": "2026-11-12",
+  "soort": "weekend",
+  "betaald": false,
+  "sleutels": [
+   "evenement:europe-next-door-dialoog-in-nijmegen",
+   "evenement:expositie-natuurlijk-in-het-kwadraat",
+   "evenement:toonkunstkoor-nijmegen-zingt-brahms"
+  ],
+  "titel": "Dit weekend in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "beelden": [
+   "assets/social/2026-11-12-0.jpg",
+   "assets/social/2026-11-12-1.jpg",
+   "assets/social/2026-11-12-2.jpg",
+   "assets/social/2026-11-12-3.jpg"
+  ],
+  "story": null,
+  "facebook": "Zin om dit weekend eens iets anders te doen? Zondag ga je in de Thiemeloods in gesprek over Europa en Oekraïne, en in de Stevenskerk zingt Toonkunstkoor Nijmegen Brahms' Ein Deutsches Requiem, een stuk over verdriet, troost en hoop. Liever iets met natuur? Dan is er de expositie van Marjon Meulenbrugge in Het Kerkje van Persingen. 🎶\n\n• Europe Next Door Dialoog in Nijmegen (zo 15 nov, 17.30 uur, Thiemeloods Nijmegen)\n• Expositie “Natuurlijk in het kwadraat\" (za 14 nov t/m zo 15 nov, Het Kerkje van Persingen)\n• Toonkunstkoor Nijmegen zingt Brahms (zo 15 nov, 15.00 uur, Stevenskerk Nijmegen)\n\n👉 https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "instagram": "Zin om dit weekend eens iets anders te doen? Zondag ga je in de Thiemeloods in gesprek over Europa en Oekraïne, en in de Stevenskerk zingt Toonkunstkoor Nijmegen Brahms' Ein Deutsches Requiem, een stuk over verdriet, troost en hoop. Liever iets met natuur? Dan is er de expositie van Marjon Meulenbrugge in Het Kerkje van Persingen. 🎶\n\n• Europe Next Door Dialoog in Nijmegen (zo 15 nov, 17.30 uur, Thiemeloods Nijmegen)\n• Expositie “Natuurlijk in het kwadraat\" (za 14 nov t/m zo 15 nov, Het Kerkje van Persingen)\n• Toonkunstkoor Nijmegen zingt Brahms (zo 15 nov, 15.00 uur, Stevenskerk Nijmegen)\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #weekend #cultuur #agenda",
+  "tekst_door": "claude",
+  "status": "gepland",
+  "gemaakt": "2026-11-12T03:51+01:00"
  }
 }
