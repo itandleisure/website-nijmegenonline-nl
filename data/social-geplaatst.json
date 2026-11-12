@@ -156,5 +156,30 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-12",
+  "soort": "weekend",
+  "betaald": false,
+  "sleutels": [
+   "evenement:europe-next-door-dialoog-in-nijmegen",
+   "evenement:expositie-natuurlijk-in-het-kwadraat",
+   "evenement:toonkunstkoor-nijmegen-zingt-brahms"
+  ],
+  "titel": "Dit weekend in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "beelden": [
+   "assets/social/2026-11-12-0.jpg",
+   "assets/social/2026-11-12-1.jpg",
+   "assets/social/2026-11-12-2.jpg",
+   "assets/social/2026-11-12-3.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1789870336481368",
+  "instagram_id": "18415022065093444",
+  "instagram_link": "https://www.instagram.com/p/Dfo5BYCF0tM/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
