@@ -65,6 +65,20 @@ var FOTOVERKLARING_VERSIE = '2026-11-11';
 var FOTOVERKLARINGEN = { tabblad: 'Fotoverklaringen', bewaarJaren: 5,
   kop: ['Tijdstip', 'Formulier', 'ID', 'Naam', 'E-mail', 'Onderwerp', 'Pagina', "Foto's", 'Versie tekst', 'Verklaring'] };
 
+// Zakelijke nieuwsbrief (verzoek Frans 13-11-2026): op /bedrijf-aanmelden/ (ook "Dit is mijn bedrijf" en wijzigingen)
+// staat een vrijwillig vinkje, nooit vooraf aangevinkt. Bij akkoord zet doPost het e-mailadres van de contactpersoon via
+// de MailerLite-API in de zakelijke groep (naarMailerLite). Moet gelijk zijn aan ZAKELIJK_NIEUWSBRIEF in tools/paginas.py.
+// Eenmalig in Projectinstellingen → Scripteigenschappen:
+//   MAILERLITE_API_KEY  sleutel uit MailerLite → Integrations → API → Generate new token
+//   MAILERLITE_GROEP    naam van de zakelijke groep (zoals in MailerLite → Subscribers → Groups) of het groeps-ID
+// Daarna "mailerliteTest" uitvoeren: die laat in het logboek zien of de sleutel werkt en welke groep gevonden is.
+// Zonder sleutel gaat de aanmelding gewoon door; het akkoord staat dan in de kolom "Zakelijke nieuwsbrief" met
+// "nog niet in MailerLite", en "mailerliteNalopen" zet die adressen er later alsnog in.
+var NIEUWSBRIEF_TOESTEMMING = 'Ja, stuur mij de zakelijke nieuwsbrief van NijmegenOnline op het e-mailadres hierboven, ' +
+  'met nieuws, tips en acties voor ondernemers in Nijmegen.';
+var NIEUWSBRIEF_VERSIE = '2026-11-13';
+var IN_MAILERLITE = 'in MailerLite';
+
 // Per formuliertype: tabblad, kolommen, bewaartermijn en onderwerp van de mail
 var FORMULIEREN = {
   contact: {
@@ -89,7 +103,8 @@ var FORMULIEREN = {
       // Tot 5 foto's per aanmelding: de eerste is "foto", de rest staat hier (Drive-ID's). Gratis toont alleen de eerste,
       // Uitgelicht en Partner alle (tools/bedrijvengids.py). fotogebruik = toestemming om ze ook in artikelen te gebruiken.
       ['extrafotos', "Andere foto's (Drive-ID's)"], ['fotocredits', "Bijschriften andere foto's"],
-      ['fotogebruik', "Foto's ook in artikelen"], ['fotoverklaring', "Rechten op foto's"]]
+      ['fotogebruik', "Foto's ook in artikelen"], ['fotoverklaring', "Rechten op foto's"],
+      ['nieuwsbrief', 'Zakelijke nieuwsbrief']]   // akkoord met tijdstip en of het adres in MailerLite staat
   },
   evenement: {
     tabblad: 'Evenementen', bewaarMaanden: 3, onderwerp: 'Evenement aangemeld', goedkeuren: true,
@@ -250,6 +265,16 @@ function doPost(e) {
       ' (tekst van ' + FOTOVERKLARING_VERSIE + ', zie tabblad ' + FOTOVERKLARINGEN.tabblad + ')';
   }
   if (fouten.length) return antwoord({ ok: false, fout: 'velden', velden: fouten });
+
+  // Zakelijke nieuwsbrief: alleen bij een aangevinkt vakje. Eerst naar MailerLite, zodat de uitkomst in de Sheet komt.
+  if (type === 'bedrijf') {
+    if (g.nieuwsbrief === 'ja') {
+      g.nieuwsbrief = 'Akkoord op ' + Utilities.formatDate(ontvangen, 'Europe/Amsterdam', 'dd-MM-yyyy HH:mm:ss') +
+        ' (tekst van ' + NIEUWSBRIEF_VERSIE + '); ' + naarMailerLite(g.email, g, ontvangen);
+    } else {
+      g.nieuwsbrief = '';
+    }
+  }
 
   // Nieuws via het formulier op /nieuws-insturen/: net als een doorgestuurde mail laat Claude het in eigen woorden
   // schrijven. Naam en e-mail komen uit het formulier, niet uit de tekst.
@@ -1573,6 +1598,91 @@ function opruimen() {
       sheet.deleteRow(i + 2);
     }
   });
+}
+
+// ---------- Zakelijke nieuwsbrief (MailerLite) ----------
+
+function mailerliteSleutel() {
+  return (PropertiesService.getScriptProperties().getProperty('MAILERLITE_API_KEY') || '').trim();
+}
+
+function mailerlite(methode, pad, data) {
+  var opties = {
+    method: methode,
+    headers: { Authorization: 'Bearer ' + mailerliteSleutel(), Accept: 'application/json' },
+    muteHttpExceptions: true
+  };
+  if (data) {
+    opties.contentType = 'application/json';
+    opties.payload = JSON.stringify(data);
+  }
+  var antw = UrlFetchApp.fetch('https://connect.mailerlite.com/api/' + pad, opties);
+  var code = antw.getResponseCode();
+  if (code < 200 || code > 299) throw new Error('MailerLite ' + code + ': ' + antw.getContentText().slice(0, 300));
+  return JSON.parse(antw.getContentText() || '{}');
+}
+
+// Groeps-ID van de zakelijke groep: MAILERLITE_GROEP is een ID (alleen cijfers) of de naam van de groep
+function mailerliteGroep() {
+  var groep = (PropertiesService.getScriptProperties().getProperty('MAILERLITE_GROEP') || '').trim();
+  if (!groep) throw new Error('geen MAILERLITE_GROEP ingesteld');
+  if (/^\d+$/.test(groep)) return groep;
+  var cache = CacheService.getScriptCache();
+  var bekend = cache.get('mailerlite_groep_' + groep);
+  if (bekend) return bekend;
+  var gevonden = (mailerlite('get', 'groups?limit=100&filter[name]=' + encodeURIComponent(groep)).data || [])
+    .filter(function (x) { return String(x.name).trim().toLowerCase() === groep.toLowerCase(); })[0];
+  if (!gevonden) throw new Error('groep "' + groep + '" niet gevonden in MailerLite');
+  cache.put('mailerlite_groep_' + groep, String(gevonden.id), 21600);
+  return String(gevonden.id);
+}
+
+// Zet één adres in de zakelijke groep. Bestaat het adres al in MailerLite, dan komt de groep erbij (de andere groepen
+// blijven). Geeft een korte uitkomst voor in de Sheet; gooit nooit, zodat de aanmelding zelf altijd doorgaat.
+function naarMailerLite(email, g, tijdstip) {
+  if (!mailerliteSleutel()) return 'nog niet in MailerLite (geen MAILERLITE_API_KEY)';
+  try {
+    mailerlite('post', 'subscribers', {
+      email: email,
+      fields: { name: g.naam || '', company: g.bedrijf || '', city: g.plaats || '' },
+      groups: [mailerliteGroep()],
+      status: 'active',   // net zelf aangevinkt, dus ook een eerder afgemeld adres weer aanmelden
+      opted_in_at: Utilities.formatDate(tijdstip || new Date(), 'UTC', 'yyyy-MM-dd HH:mm:ss')
+    });
+    return IN_MAILERLITE + ' gezet op ' + Utilities.formatDate(new Date(), 'Europe/Amsterdam', 'dd-MM-yyyy HH:mm');
+  } catch (fout) {
+    console.error('MailerLite mislukt voor ' + email + ': ' + fout);
+    return 'nog niet in MailerLite (' + fout.message + ')';
+  }
+}
+
+// Handmatig uitvoeren na het instellen van de sleutel en de groep: laat zien of alles werkt.
+function mailerliteTest() {
+  if (!mailerliteSleutel()) { console.log('Geen MAILERLITE_API_KEY in de scripteigenschappen.'); return; }
+  var groepen = mailerlite('get', 'groups?limit=100').data || [];
+  console.log('Sleutel werkt. Groepen in MailerLite: ' + groepen.map(function (x) { return x.name + ' (' + x.id + ')'; }).join(', '));
+  console.log('Zakelijke groep gevonden, ID ' + mailerliteGroep());
+}
+
+// Handmatig uitvoeren: zet alle akkoorden in het tabblad Bedrijven die nog niet in MailerLite staan er alsnog in
+// (bijvoorbeeld aangemeld voordat de sleutel er was, of toen MailerLite even niet bereikbaar was).
+function mailerliteNalopen() {
+  var cfg = FORMULIEREN.bedrijf;
+  var sheet = blad(cfg);
+  var laatste = sheet.getLastRow();
+  if (laatste < 2) return;
+  var kol = plek(cfg, 'nieuwsbrief'), mail = plek(cfg, 'email');
+  var rijen = sheet.getRange(2, 1, laatste - 1, kolommen(cfg).length).getValues();
+  var gedaan = 0;
+  rijen.forEach(function (r, i) {
+    var stand = String(r[kol] || '');
+    if (stand.indexOf('Akkoord op') !== 0 || stand.indexOf(IN_MAILERLITE + ' gezet') >= 0) return;
+    var g = { naam: r[plek(cfg, 'naam')], bedrijf: r[plek(cfg, 'bedrijf')], plaats: r[plek(cfg, 'plaats')] };
+    var uitkomst = naarMailerLite(String(r[mail]).trim(), g, r[0] instanceof Date ? r[0] : new Date());
+    sheet.getRange(i + 2, kol + 1).setValue(stand.split('; ')[0] + '; ' + uitkomst);
+    if (uitkomst.indexOf(IN_MAILERLITE + ' gezet') === 0) gedaan++;
+  });
+  console.log(gedaan + ' adres(sen) in MailerLite gezet.');
 }
 
 // Tabblad Fotoverklaringen: één regel per akkoord, met de tekst zoals die op dat moment gold. Los van de inzending,
