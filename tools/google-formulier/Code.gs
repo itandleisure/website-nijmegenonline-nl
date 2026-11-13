@@ -70,7 +70,7 @@ var FOTOVERKLARINGEN = { tabblad: 'Fotoverklaringen', bewaarJaren: 5,
 // de MailerLite-API in de zakelijke groep (naarMailerLite). Moet gelijk zijn aan ZAKELIJK_NIEUWSBRIEF in tools/paginas.py.
 // Eenmalig in Projectinstellingen → Scripteigenschappen:
 //   MAILERLITE_API_KEY  sleutel uit MailerLite → Integrations → API → Generate new token
-//   MAILERLITE_GROEP    naam van de zakelijke groep (zoals in MailerLite → Subscribers → Groups) of het groeps-ID
+//   MAILERLITE_GROEP_ONDERNEMERS  naam van de zakelijke groep (zoals in MailerLite → Subscribers → Groups) of het groeps-ID
 // Daarna "mailerliteTest" uitvoeren: die laat in het logboek zien of de sleutel werkt en welke groep gevonden is.
 // Zonder sleutel gaat de aanmelding gewoon door; het akkoord staat dan in de kolom "Zakelijke nieuwsbrief" met
 // "nog niet in MailerLite", en "mailerliteNalopen" zet die adressen er later alsnog in.
@@ -1622,10 +1622,10 @@ function mailerlite(methode, pad, data) {
   return JSON.parse(antw.getContentText() || '{}');
 }
 
-// Groeps-ID van de zakelijke groep: MAILERLITE_GROEP is een ID (alleen cijfers) of de naam van de groep
+// Groeps-ID van de zakelijke groep: MAILERLITE_GROEP_ONDERNEMERS is een ID (alleen cijfers) of de naam van de groep
 function mailerliteGroep() {
-  var groep = (PropertiesService.getScriptProperties().getProperty('MAILERLITE_GROEP') || '').trim();
-  if (!groep) throw new Error('geen MAILERLITE_GROEP ingesteld');
+  var groep = (PropertiesService.getScriptProperties().getProperty('MAILERLITE_GROEP_ONDERNEMERS') || '').trim();
+  if (!groep) throw new Error('geen MAILERLITE_GROEP_ONDERNEMERS ingesteld');
   if (/^\d+$/.test(groep)) return groep;
   var cache = CacheService.getScriptCache();
   var bekend = cache.get('mailerlite_groep_' + groep);
