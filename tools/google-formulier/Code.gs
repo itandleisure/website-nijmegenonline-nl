@@ -1637,14 +1637,14 @@ function mailerliteGroep() {
   return String(gevonden.id);
 }
 
-// Zet één adres in de zakelijke groep. Bestaat het adres al in MailerLite, dan komt de groep erbij (de andere groepen
+// Zet één adres (met naam en bedrijfsnaam) in de zakelijke groep. Bestaat het adres al in MailerLite, dan komt de groep erbij (de andere groepen
 // blijven). Geeft een korte uitkomst voor in de Sheet; gooit nooit, zodat de aanmelding zelf altijd doorgaat.
 function naarMailerLite(email, g, tijdstip) {
   if (!mailerliteSleutel()) return 'nog niet in MailerLite (geen MAILERLITE_API_KEY)';
   try {
     mailerlite('post', 'subscribers', {
       email: email,
-      fields: { name: g.naam || '', company: g.bedrijf || '', city: g.plaats || '' },
+      fields: { name: g.naam || '', company: g.bedrijf || '' },   // bewust geen plaats: alleen wat nodig is (AVG)
       groups: [mailerliteGroep()],
       status: 'active',   // net zelf aangevinkt, dus ook een eerder afgemeld adres weer aanmelden
       opted_in_at: Utilities.formatDate(tijdstip || new Date(), 'UTC', 'yyyy-MM-dd HH:mm:ss')
