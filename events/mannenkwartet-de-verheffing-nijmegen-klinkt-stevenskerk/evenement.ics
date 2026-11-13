@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:mannenkwartet-de-verheffing-nijmegen-klinkt-stevenskerk@nijmegenonline.nl
+DTSTAMP:20261113T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261128T153000
+DTEND;TZID=Europe/Amsterdam:20261128T161500
+SUMMARY:Mannenkwartet De Verheffing – Nijmegen Klinkt @ Stevenskerk
+URL:https://www.nijmegenonline.nl/events/mannenkwartet-de-verheffing-nijmegen-klinkt-stevenskerk/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/mannenkwartet-de-verheffing-nijmegen-klinkt-stevenskerk/
+LOCATION:Stevenskerk Nijmegen\, Sint Stevenskerkhof 62\,\, 6511 VX Nijmegen
+END:VEVENT
+END:VCALENDAR
