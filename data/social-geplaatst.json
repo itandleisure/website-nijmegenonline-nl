@@ -181,5 +181,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-13",
+  "soort": "evenement",
+  "betaald": true,
+  "sleutels": [
+   "evenement:hilde-vos-trio"
+  ],
+  "titel": "Hilde Vos Trio",
+  "link": "https://www.nijmegenonline.nl/events/hilde-vos-trio/",
+  "beelden": [
+   "assets/social/2026-11-13-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1791518679649867",
+  "instagram_id": "17888919423501673",
+  "instagram_link": "https://www.instagram.com/p/DfsB0FOF4I4/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
