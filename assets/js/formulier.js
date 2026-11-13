@@ -73,7 +73,7 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
   new URLSearchParams(location.search).forEach(function (waarde, sleutel) {
     if (["form", "pagina", "duur", "website"].indexOf(sleutel) !== -1) return;
     form.querySelectorAll('[name="' + sleutel.replace(/[^\w-]/g, "") + '"]').forEach(function (v) {
-      if (v.type === "file") return;
+      if (v.type === "file" || v.hasAttribute("data-nooit-vooraf")) return;   // toestemming (nieuwsbrief) nooit via een link aanvinken
       if (v.type === "radio" || v.type === "checkbox") { if (v.value === waarde) v.checked = true; return; }
       v.value = waarde;
     });

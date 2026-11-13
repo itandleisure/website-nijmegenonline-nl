@@ -127,7 +127,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=18" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=19" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -203,6 +203,14 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
             regels.append('          <fieldset class="formulier__keuzes formulier__akkoord"><legend>%s%s</legend>' % (esc(label), ster))
             regels.append('            <label><input type="checkbox" name="%s" value="akkoord"%s> %s</label>' % (veld, req, esc(opties)))
             regels.append("          </fieldset>")
+        elif soort == "vinkje":
+            # Eén vrijwillig vinkje dat nooit vooraf aan staat (AVG), ook niet via de url (formulier.js slaat het over).
+            # opties = (tekst bij het vinkje, uitleg eronder als HTML)
+            tekst, uitleg = opties
+            regels.append('          <fieldset class="formulier__keuzes formulier__akkoord"><legend>%s</legend>' % esc(label))
+            regels.append('            <label><input type="checkbox" name="%s" value="ja" data-nooit-vooraf> %s</label>' % (veld, esc(tekst)))
+            regels.append("          </fieldset>")
+            regels.append('          <p class="formulier__hint">%s</p>' % uitleg)
         elif soort == "lijst":
             regels.append('          <label for="%s">%s%s</label>\n          <select id="%s" name="%s"%s><option value="">Kies</option>%s</select>'
                           % (id_, esc(label), ster, id_, veld, req, "".join('<option>%s</option>' % esc(o) for o in opties)))
@@ -355,6 +363,15 @@ FOTOGEBRUIK = ["Jullie mogen mijn foto's ook gebruiken in artikelen op NijmegenO
                "Jullie mogen ook foto's van mijn website of social media gebruiken, met mijn bedrijfsnaam als fotocredit."]
 
 
+# Toestemming voor de zakelijke nieuwsbrief in MailerLite (verzoek Frans 13-11-2026). Vrijwillig en niet vooraf
+# aangevinkt. Code.gs zet het e-mailadres van de contactpersoon bij akkoord in de zakelijke groep (zie MAILERLITE daar).
+# Pas je de tekst aan, pas hem dan ook in Code.gs aan (NIEUWSBRIEF_TOESTEMMING) en zet daar een nieuwe versie.
+ZAKELIJK_NIEUWSBRIEF = ("Ja, stuur mij de zakelijke nieuwsbrief van NijmegenOnline op het e-mailadres hierboven, "
+                        "met nieuws, tips en acties voor ondernemers in Nijmegen.")
+ZAKELIJK_NIEUWSBRIEF_UITLEG = ("Niet verplicht: je aanmelding werkt ook zonder. Afmelden kan altijd met één klik onderaan elke "
+                               'nieuwsbrief. Lees meer in onze <a href="%s/privacy-policy/" target="_blank" rel="noopener">privacyverklaring</a>.' % SITE)
+
+
 # Laatste keuze in "Soort bedrijf" voor wie zijn soort niet in de lijst ziet
 ANDERS_CATEGORIE = "Staat er niet tussen (noem het in de omschrijving)"
 
@@ -384,6 +401,7 @@ def bedrijf_aanmelden(categorieen):
         ("naam", "Je naam (contactpersoon)", "text", True, None),
         ("email", "Je e-mailadres", "email", True, None),
         ("pakket", "Hoe wil je in de gids staan?", "keuze", True, BEDRIJF_PAKKETTEN),
+        ("nieuwsbrief", "Zakelijke nieuwsbrief", "vinkje", False, (ZAKELIJK_NIEUWSBRIEF, ZAKELIJK_NIEUWSBRIEF_UITLEG)),
         FOTOVERKLARING_VELD], "Aanmelden",
         "Bedankt! De redactie heeft je aanmelding ontvangen en bekijkt die zo snel mogelijk. Soms passen we de tekst wat aan, "
         "zodat die goed op de website past. Je krijgt een e-mail zodra je bedrijf in de bedrijvengids staat, of als we het niet kunnen plaatsen."))
