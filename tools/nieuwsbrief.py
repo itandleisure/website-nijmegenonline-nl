@@ -41,7 +41,7 @@ import nieuws  # noqa: E402
 import vacatures  # noqa: E402
 
 TESTSITE = "https://itandleisure.github.io/website-nijmegenonline-nl"
-DAGEN_VOORUIT = 14
+DAGEN_VOORUIT = 9   # verzenddag t/m 9 dagen later, bij vrijdag beide weekenden (besluit Frans, 13-11-2026)
 DAGEN_UITGELICHT = 30   # klanten mogen al eerder in de nieuwsbrief
 MAX_UITGELICHT = 20   # Frans kiest er in MailerLite zelf uit
 MAX_EVENEMENTEN = 40
@@ -130,7 +130,7 @@ def main(vandaag):
     n_uitgelicht = evenementen_feed("uitgelicht.xml", "Uitgelicht in Nijmegen", "Uitgelichte evenementen van onze partners",
                                     vandaag + datetime.timedelta(days=DAGEN_UITGELICHT), lambda e: e["uitgelicht"],
                                     MAX_UITGELICHT, True)
-    n_overig = evenementen_feed("agenda.xml", "Agenda NijmegenOnline", "Wat er de komende twee weken nog meer te doen is in Nijmegen",
+    n_overig = evenementen_feed("agenda.xml", "Agenda NijmegenOnline", "Wat er de komende negen dagen nog meer te doen is in Nijmegen",
                                 vandaag + datetime.timedelta(days=DAGEN_VOORUIT),
                                 lambda e: not e["uitgelicht"] and nieuw_genoeg(e, vandaag), MAX_EVENEMENTEN, True)
 
