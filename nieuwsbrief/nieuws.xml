@@ -8,6 +8,15 @@
     <lastBuildDate>Fri, 13 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Lezing Mansoureh Shojaee over Iraans vrouwenverzet in Vrijheidsmuseum</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/lezing-mansoureh-shojaee-over-iraans-vrouwenverzet-in-vrijheidsmuseum/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/lezing-mansoureh-shojaee-over-iraans-vrouwenverzet-in-vrijheidsmuseum/</guid>
+      <pubDate>Fri, 13 Nov 2026 23:07:02 +0100</pubDate>
+      <description>Op 25 november geeft activist Mansoureh Shojaee in het Vrijheidsmuseum in Groesbeek een lezing en rondleiding over het Iraanse vrouwenverzet.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-lezing-mansoureh-shojaee-over-iraans-vrouwenverzet-in-vrijheidsmuseum.jpg" length="34725" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-lezing-mansoureh-shojaee-over-iraans-vrouwenverzet-in-vrijheidsmuseum.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Provincie reserveert bijdrage voor herontwikkeling Basiliek Orientalis</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/provincie-reserveert-bijdrage-voor-herontwikkeling-basiliek-orientalis/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/provincie-reserveert-bijdrage-voor-herontwikkeling-basiliek-orientalis/</guid>
@@ -177,15 +186,6 @@
       <description>Festival Jazz International Nijmegen start met de tiende editie op verschillende plekken in de stad. Op 4 november speelt het Philipp Rüttgers Trio in de Thiemeloods.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-festival-jazz-international-nijmegen-viert-tiende-editie.jpg" length="47461" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-festival-jazz-international-nijmegen-viert-tiende-editie.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Expositie over 130 jaar bioscoopgeschiedenis in Mariënburgkapel</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/expositie-over-130-jaar-bioscoopgeschiedenis-in-marienburgkapel/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/expositie-over-130-jaar-bioscoopgeschiedenis-in-marienburgkapel/</guid>
-      <pubDate>Fri, 30 Oct 2026 13:43:11 +0100</pubDate>
-      <description>Het Huis van de Nijmeegse Geschiedenis toont van 7 november tot 28 februari 2027 de expositie over 130 jaar Nijmegen bioscoopstad. De toegang is gratis.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-expositie-over-130-jaar-bioscoopgeschiedenis-in-marienburgkapel.jpg" length="44902" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-expositie-over-130-jaar-bioscoopgeschiedenis-in-marienburgkapel.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
