@@ -201,5 +201,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-14",
+  "soort": "partner",
+  "betaald": true,
+  "sleutels": [
+   "bedrijf:de-bruijn-lunchen-op-de-markt"
+  ],
+  "titel": "De Bruijn Lunchen op de Markt",
+  "link": "https://www.nijmegenonline.nl/bedrijvengids/de-bruijn-lunchen-op-de-markt/",
+  "beelden": [
+   "assets/social/2026-11-14-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1792514316216970",
+  "instagram_id": "18151009255603371",
+  "instagram_link": "https://www.instagram.com/p/Dft-BdHl1yP/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
