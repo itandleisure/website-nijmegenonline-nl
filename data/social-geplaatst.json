@@ -221,5 +221,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-15",
+  "soort": "partner",
+  "betaald": true,
+  "sleutels": [
+   "bedrijf:de-opstap-het-cursuscentrum-in-nijmegen"
+  ],
+  "titel": "De Opstap - Het cursuscentrum in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/bedrijvengids/de-opstap-het-cursuscentrum-in-nijmegen/",
+  "beelden": [
+   "assets/social/2026-11-15-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1794214842713584",
+  "instagram_id": "17884003533630681",
+  "instagram_link": "https://www.instagram.com/p/DfxRBQWDSOF/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
