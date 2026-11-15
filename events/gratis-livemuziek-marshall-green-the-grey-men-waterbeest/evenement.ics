@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:gratis-livemuziek-marshall-green-the-grey-men-waterbeest@nijmegenonline.nl
+DTSTAMP:20261114T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261127T203000
+DTEND;TZID=Europe/Amsterdam:20261127T230000
+SUMMARY:Gratis livemuziek: Marshall Green & The Grey Men + WaterbeesT
+URL:https://www.nijmegenonline.nl/events/gratis-livemuziek-marshall-green-the-grey-men-waterbeest/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/gratis-livemuziek-marshall-green-the-grey-men-waterbeest/
+LOCATION:Café Hop en Heivuur Nijmegen\, Heidebloemstraat 7\, 6533 SL Nijmegen
+END:VEVENT
+END:VCALENDAR
