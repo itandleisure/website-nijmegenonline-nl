@@ -126,5 +126,25 @@
   "foto": "assets/uploads/aangemeld/bedrijf-badass-games.webp",
   "lat": "52.72388106",
   "lon": "6.07904338"
+ },
+ {
+  "id": "e222f34d",
+  "ontvangen": "2026-11-14T20:35:47.332Z",
+  "vermelding": "",
+  "bedrijf": "Café Hop en Heivuur",
+  "categorie": "Cafe",
+  "adres": "Heidebloemstraat 7",
+  "postcode": "6533 SL",
+  "plaats": "Nijmegen",
+  "land": "Nederland",
+  "site": "hopenheivuur.nl",
+  "telefoon": "+31637167520",
+  "bedrijfsmail": "cafehopenheivuur@gmail.com",
+  "openingstijden": "ma gesloten\ndi gesloten\nwo 14:00-22:00\ndo 14:00-00:00\nvr 14:00-00:00\nza 14:00-23:00\nzo 14:00-20:00",
+  "omschrijving": "Café Hop en Heivuur is een gezellig speciaalbiercafé in de Nijmeegse wijk Hatertse Hei. Met een ruime keuze aan speciaalbieren, huisgerookte spareribs en loaded fries is er voor ieder wat wils. Naast een gezellige borrel organiseren we regelmatig livemuziek, pubquizzen, proeverijen en andere leuke activiteiten. Of je nu langskomt voor een goed biertje, een hapje of een avond vol gezelligheid: bij Hop en Heivuur voel je je snel thuis!",
+  "fotogebruik": "Jullie mogen ook foto's van mijn website of social media gebruiken, met mijn bedrijfsnaam als fotocredit.",
+  "foto": "assets/uploads/aangemeld/bedrijf-cafe-hop-en-heivuur.webp",
+  "lat": "51.81523046",
+  "lon": "5.85142921"
  }
 ]
