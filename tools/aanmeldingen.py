@@ -13,12 +13,14 @@ Zo werkt de flow (zie ook tools/google-formulier/Code.gs):
    Nieuwsberichten komen niet via een formulier maar per mail binnen: zie tools/nieuws_ophalen.py.
 
 Gebruik: python tools/aanmeldingen.py [--test bestand.json]   (--test: lijst uit een bestand, niets terugmelden)
+Omgeving: NIEUWS_SLEUTEL (verplicht, behalve met --test), dezelfde waarde als de scripteigenschap in het Apps Script.
 """
 import base64
 import datetime
 import html
 import io
 import json
+import os
 import pathlib
 import re
 import sys
@@ -433,7 +435,16 @@ def main(test=None):
     if not GOOGLE_FORM_URL:
         print("GOOGLE_FORM_URL is leeg, niets op te halen")
         return
-    lijst = json.load(open(test)) if test else ophalen(GOOGLE_FORM_URL + "?actie=lijst")
+    if test:
+        lijst = json.load(open(test))
+    else:
+        # De lijst geeft het Apps Script alleen met de geheime sleutel (secret NIEUWS_SLEUTEL, zie maakNieuwsSleutel in Code.gs)
+        sleutel = os.environ.get("NIEUWS_SLEUTEL", "")
+        if not sleutel:
+            sys.exit("Het secret NIEUWS_SLEUTEL ontbreekt; zonder die sleutel geeft het Apps Script de aanmeldingen niet")
+        lijst = ophalen(GOOGLE_FORM_URL + "?" + urllib.parse.urlencode({"actie": "lijst", "sleutel": sleutel}))
+        if lijst.get("fout") == "sleutel":
+            sys.exit("Het Apps Script weigert de sleutel: NIEUWS_SLEUTEL in GitHub klopt niet met de scripteigenschap NIEUWS_SLEUTEL")
     verwerkt = set(VERWERKT.read_text().split()) if VERWERKT.exists() else set()
     evenementen = json.load(open(ROOT / "data" / "evenementen.json", encoding="utf-8"))
     aanbieders = json.load(open(ROOT / "data" / "aanbieders.json", encoding="utf-8"))

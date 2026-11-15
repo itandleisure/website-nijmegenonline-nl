@@ -157,6 +157,10 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
         meld(form.dataset.bedankt || "Bedankt! We hebben je bericht ontvangen en nemen snel contact met je op.");
       })
       .catch(function (e) {
+        if (e && e.message === "controle") {
+          meld("De controle tegen spam lukte niet. Probeer het nog een keer.", true);
+          return;
+        }
         if (e && e.message === "foto") {
           meld("Deze foto kunnen we niet verkleinen en is te groot. Kies een jpg of png kleiner dan 5 MB.", true);
           return;
@@ -170,7 +174,12 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
         meld("Versturen lukte niet. We openen je mailprogramma, dan kun je het bericht daar versturen.", true);
         setTimeout(mailknop, 1500);
       })
-      .then(function () { knop.disabled = false; });
+      .then(function () {
+        knop.disabled = false;
+        // Een Turnstile-bewijs (tegen spambots) geldt maar één keer: na elke poging een nieuw laten maken
+        var vak = form.querySelector(".cf-turnstile");
+        if (vak && window.turnstile) try { window.turnstile.reset(vak); } catch (e) { /* geen Turnstile */ }
+      });
   });
 });
 

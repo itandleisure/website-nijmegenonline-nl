@@ -34,14 +34,14 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from import_wordpress import SITE, VOET, esc, kop  # noqa: E402
-from paginas import GOOGLE_FORM_URL  # noqa: E402
+from paginas import GOOGLE_FORM_URL, turnstile_html  # noqa: E402
 
 DATA = ROOT / "data" / "webshop.json"
 MAP = "webshop"
 FOTOMAP = ROOT / "assets" / "uploads" / "webshop"
 SOORTEN = ("eigen", "dienst", "partner")
 CSS = "assets/css/webshop.css?v=1"
-JS = "assets/js/webshop.js?v=1"
+JS = "assets/js/webshop.js?v=2"
 
 
 def laad():
@@ -265,9 +265,10 @@ def bouw():
   <label>Opmerking<textarea name="opmerking" rows="3" maxlength="1000"></textarea></label>
   <label class="webshop-akkoord"><input type="checkbox" name="voorwaarden" value="akkoord" required> Ik ga akkoord met de %s. *</label>
   <div class="formulier__val" aria-hidden="true"><label>Laat dit veld leeg <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+  %s
   <button class="knop" type="submit">Bestellen en betalen</button>
   <p class="webshop-melding" role="status"></p>
-</form>""" % voorwaarden
+</form>""" % (voorwaarden, turnstile_html())
     schrijf(MAP + "/winkelwagen", pagina("Winkelwagen", "Je winkelwagen in de webshop van NijmegenOnline.", MAP + "/winkelwagen",
                                          '<a href="%swebshop/">Webshop</a> › Winkelwagen' % root, inhoud, inst, indexeren=False))
 

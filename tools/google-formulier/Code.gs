@@ -7,8 +7,10 @@
      een pagina waarop je alle gegevens, de tekst en de foto aanpast en dan publiceert of afwijst (afwijzen opent
      een pagina waarop je de reden aanvinkt; de inzender krijgt als je wilt een mail met die reden)
      (of zet zelf "Akkoord" in de kolom Status). Elk uur haalt de website (GitHub Actions,
-     tools/aanmeldingen.py) de goedgekeurde aanmeldingen op met ?actie=lijst, zet ze op de site en
-     meldt ze terug, waarna de status "Gepubliceerd" wordt.
+     tools/aanmeldingen.py) de goedgekeurde aanmeldingen op met ?actie=lijst&sleutel=<NIEUWS_SLEUTEL>, zet ze op de
+     site en meldt ze terug, waarna de status "Gepubliceerd" wordt. Zonder de juiste sleutel geeft de lijst niets.
+   - Spam: elk formulier van de site heeft een verborgen veld en meet de invultijd (zie doPost). Daarnaast een limiet per
+     uur (LIMIETEN) en, als de scripteigenschap TURNSTILE_SECRET is gezet, de controle van Cloudflare Turnstile.
    - Claude (optioneel): staat er een Anthropic API-sleutel in de scripteigenschap ANTHROPIC_API_KEY, dan heeft
      de bewerkpagina twee extra knoppen. "Nieuwe tekst laten schrijven" laat Claude een eigen, unieke omschrijving
      schrijven (kolom "Tekst site") met opmerkingen in de kolom "Controle" (geen foto, foto past niet, lege tekst).
@@ -170,6 +172,71 @@ var MAX_FOTOS = 5;
 // Map in Google Drive voor meegestuurde foto's (wordt vanzelf aangemaakt)
 var FOTOMAP = "NijmegenOnline formulierfoto's";
 
+// ---------- Spambeveiliging (besluit Frans, 15-11-2026) ----------
+// Hoeveel inzendingen per uur: per formulier in totaal, en per e-mailadres per formulier. Daarboven weigert het script,
+// zodat een bot de Sheet, Drive, de mailbox, het Claude-tegoed en het mailquotum van Google niet kan volspuiten.
+var LIMIETEN = {
+  standaard: { totaal: 30, adres: 5 },
+  bestelling: { totaal: 20, adres: 3 }   // elke bestelling stuurt een mail naar het opgegeven adres
+};
+
+// Verborgen veld "website" ingevuld, of de invultijd ontbreekt of is korter dan 3 seconden: een bot.
+// "duur" is de invultijd in milliseconden, gemeten in de browser (formulier.js en webshop.js sturen hem altijd mee).
+function isBot(p) {
+  return !!p.website || !(parseInt(p.duur, 10) >= 3000);
+}
+
+// Telt de inzending mee en zegt of hij binnen de limiet van dit uur valt
+function binnenLimiet(type, email) {
+  var max = LIMIETEN[type] || LIMIETEN.standaard;
+  var uur = Utilities.formatDate(new Date(), 'UTC', 'yyyyMMddHH');
+  var tellers = [['limiet:' + type + ':' + uur, max.totaal]];
+  var adres = String(email || '').trim().toLowerCase();
+  if (adres) {
+    var hash = Utilities.base64EncodeWebSafe(Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, adres)).slice(0, 22);
+    tellers.push(['limiet:' + type + ':' + uur + ':' + hash, max.adres]);
+  }
+  var cache = CacheService.getScriptCache();
+  var slot = LockService.getScriptLock();
+  slot.waitLock(10000);
+  try {
+    var nu = cache.getAll(tellers.map(function (t) { return t[0]; }));
+    if (tellers.some(function (t) { return Number(nu[t[0]] || 0) >= t[1]; })) {
+      console.warn('Limiet bereikt voor ' + type);
+      return false;
+    }
+    tellers.forEach(function (t) { cache.put(t[0], String(Number(nu[t[0]] || 0) + 1), 3600); });
+    return true;
+  } finally {
+    slot.releaseLock();
+  }
+}
+
+// Cloudflare Turnstile: alleen als de scripteigenschap TURNSTILE_SECRET is gezet (zie TURNSTILE_SITEKEY in tools/paginas.py).
+// Is Cloudflare zelf even onbereikbaar, dan gaat de inzending door: de andere controles blijven gelden.
+function turnstileOk(p) {
+  var geheim = (PropertiesService.getScriptProperties().getProperty('TURNSTILE_SECRET') || '').trim();
+  if (!geheim) return true;
+  var token = String(p['cf-turnstile-response'] || '');
+  if (!token) return false;
+  try {
+    var antw = UrlFetchApp.fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'post', muteHttpExceptions: true, payload: { secret: geheim, response: token }
+    });
+    if (antw.getResponseCode() >= 500) return true;
+    return JSON.parse(antw.getContentText() || '{}').success === true;
+  } catch (fout) {
+    console.error('Turnstile niet bereikbaar: ' + fout);
+    return true;
+  }
+}
+
+// De geheime sleutel die GitHub meestuurt (dezelfde NIEUWS_SLEUTEL als bij het nieuws en de klantrapporten)
+function sleutelOk(p) {
+  var sleutel = PropertiesService.getScriptProperties().getProperty('NIEUWS_SLEUTEL');
+  return !!sleutel && p.sleutel === sleutel;
+}
+
 // Ontvangt een formulier van de website
 function doPost(e) {
   var p = (e && e.parameter) || {};
@@ -179,13 +246,15 @@ function doPost(e) {
   if (p.actie === 'mollie') return mollieWebhook(p);
   if (p.form === 'bestelling') return bestellingOntvangen(p);
 
-  // Verborgen veld ingevuld of binnen 3 seconden na openen verstuurd = spambot: doen alsof het gelukt is.
-  // "duur" is de invultijd in milliseconden, gemeten in de browser (onafhankelijk van de klok).
-  if (p.website || (p.duur !== undefined && p.duur !== '' && parseInt(p.duur, 10) < 3000)) return antwoord({ ok: true });
+  // Spambot (zie isBot): doen alsof het gelukt is, zodat hij niet gaat proberen hoe het wel lukt
+  if (isBot(p)) return antwoord({ ok: true });
 
   var type = schoon(p.form, 40);
   var cfg = FORMULIEREN[type];
   if (!cfg) return antwoord({ ok: false, fout: 'onbekend formulier' });
+  // Eerst de controles, pas daarna foto's opslaan, Claude laten schrijven en mailen
+  if (!turnstileOk(p)) return antwoord({ ok: false, fout: 'controle' });
+  if (!binnenLimiet(type, p.email)) return antwoord({ ok: false, fout: 'druk' });
 
   var g = {};
   cfg.velden.forEach(function (v) {
@@ -331,12 +400,13 @@ function doPost(e) {
 //  ?actie=akkoord|afwijzen&type=..&id=..&t=..   knoppen in de mail (t = handtekening, zie teken())
 //  ?actie=bewerken&type=..&id=..&t=..           bewerkpagina (knop in de mail)
 //  ?actie=afwijzen&type=..&id=..&t=..           pagina om af te wijzen, met reden en mail aan de inzender
-//  ?actie=lijst                                 goedgekeurde aanmeldingen voor de website (alleen openbare velden)
+//  ?actie=lijst&sleutel=..                     goedgekeurde aanmeldingen voor de website (alleen openbare velden)
 //  ?actie=gepubliceerd&type=..&id=..&t=..       de website meldt dat een aanmelding online staat
 //  zonder actie                                 laat zien dat het script werkt
 function doGet(e) {
   var p = (e && e.parameter) || {};
-  if (p.actie === 'lijst') return antwoord(lijst());
+  // Alleen voor GitHub (tools/aanmeldingen.py): de lijst bevat links waarmee je aanmeldingen als gepubliceerd meldt
+  if (p.actie === 'lijst') return antwoord(sleutelOk(p) ? lijst() : { ok: false, fout: 'sleutel' });
   // Webshop: producten uit het tabblad Webshop (tools/webshop.py --ophalen), een foto daaruit, en de status van een bestelling
   if (p.actie === 'webshop') return antwoord({ producten: webshopProducten() });
   if (p.actie === 'webshopfoto') return antwoord(webshopFoto(p.id));
@@ -2088,7 +2158,11 @@ function mollieSleutel(open) {
 }
 
 function bestellingOntvangen(p) {
-  if (p.website || (p.duur !== undefined && p.duur !== '' && parseInt(p.duur, 10) < 3000)) return antwoord({ ok: false, melding: 'Probeer het opnieuw.' });
+  if (isBot(p)) return antwoord({ ok: false, melding: 'Probeer het opnieuw.' });
+  if (!turnstileOk(p)) return antwoord({ ok: false, melding: 'De controle tegen spam lukte niet.' });
+  if (!binnenLimiet('bestelling', p.email)) {
+    return antwoord({ ok: false, melding: 'Er komen nu heel veel bestellingen binnen. Probeer het over een uur nog eens, of mail ons.' });
+  }
   var cat = webshopCatalogus();
   var inst = cat.instellingen || {};
   var producten = {};

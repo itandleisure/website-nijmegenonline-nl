@@ -21,6 +21,10 @@ import evenement_indeling  # noqa: E402
 
 # /exec-URL van de Google Apps Script-web-app (tools/google-formulier/Code.gs); leeg = mailknop
 GOOGLE_FORM_URL = "https://script.google.com/macros/s/AKfycbyELOZGBRvXanmgy7LSaQD4G5WnAZbACtAWVvcKoslJHT0-NxunjLngM7fJJOrxQyIM/exec"
+# Cloudflare Turnstile tegen spambots (gratis, meestal zonder puzzel). Leeg = uit. Aanzetten: in Cloudflare → Turnstile een
+# widget maken voor www.nijmegenonline.nl, de sitekey hier invullen en de geheime sleutel in het Apps Script als
+# scripteigenschap TURNSTILE_SECRET (pas nadat de pagina's met de sitekey online staan, anders weigert het script alles).
+TURNSTILE_SITEKEY = ""
 EMAIL = "redactie@nijmegenonline.nl"
 TELEFOON = "085 0047 701"
 MEDIAKIT = "2025/05/NijmegenOnline-Advertentiegids-2025.pdf"
@@ -127,7 +131,7 @@ def pagina(titel, beschrijving, pad, kruimel, inhoud, extra="", zijbalk=True, af
     if zijbalk:
         out.append("\n      <!-- zijbalk --><!-- /zijbalk -->")
     out.append("      </div>\n    </div>\n  </main>")
-    out.append('  <script src="%sassets/js/formulier.js?v=19" defer></script>' % root if "<form" in inhoud else "")
+    out.append('  <script src="%sassets/js/formulier.js?v=20" defer></script>' % root if "<form" in inhoud else "")
     out.append(VOET)
     return "\n".join(r for r in out if r)
 
@@ -146,6 +150,15 @@ FOTOVERKLARING = ("Ik heb het recht om de foto's die ik meestuur of laat gebruik
 FOTOVERKLARING_VELD = ("fotoverklaring", "Rechten op foto's", "akkoord", True, FOTOVERKLARING)
 
 KWARTIEREN = ["%02d:%02d" % (u, m) for u in range(24) for m in (0, 15, 30, 45)]
+
+
+def turnstile_html():
+    """Het Turnstile-vakje (Cloudflare) in een formulier, of niets als TURNSTILE_SITEKEY leeg is. Turnstile zet zelf een
+    verborgen veld cf-turnstile-response in het formulier; Code.gs controleert dat bij Cloudflare."""
+    if not TURNSTILE_SITEKEY:
+        return ""
+    return ('<div class="cf-turnstile" data-sitekey="%s" data-language="nl" data-size="flexible"></div>'
+            '<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>' % esc(TURNSTILE_SITEKEY))
 
 
 def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
@@ -273,6 +286,8 @@ def formulier(naam, onderwerp, velden, knop="Verstuur", bedankt=""):
                           % (id_, esc(label), ster, id_, veld, soort, auto, lijst, req))
             if opties:
                 regels.append('          <datalist id="%s-lijst">%s</datalist>' % (id_, "".join('<option value="%s">' % esc(o) for o in opties)))
+    if turnstile_html():
+        regels.append("          " + turnstile_html())
     regels.append('          <p class="formulier__melding" role="status" hidden></p>')
     regels.append('          <button class="knop" type="submit">%s</button>' % esc(knop))
     regels.append("        </form>")
