@@ -25,6 +25,8 @@ jobs:
           python-version: "3.12"
       - run: pip install beautifulsoup4 pillow "pagefind[bin]"
       - run: python tools/aanmeldingen.py
+        env:
+          NIEUWS_SLEUTEL: ${{ secrets.NIEUWS_SLEUTEL }}
       # Webshop: producten uit het tabblad Webshop van de Google Sheet (tools/webshop.py)
       - run: python tools/webshop.py --ophalen
       - name: Site bouwen en opslaan

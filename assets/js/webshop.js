@@ -150,6 +150,9 @@
         meld(melding, (e && e.message && !/fetch|JSON/i.test(e.message) ? e.message : "Bestellen lukte niet.") +
           " Probeer het opnieuw of mail ons.", true);
         knop.disabled = false;
+        // Een Turnstile-bewijs (tegen spambots) geldt maar één keer
+        var vak = afrekenen.querySelector(".cf-turnstile");
+        if (vak && window.turnstile) try { window.turnstile.reset(vak); } catch (e2) { /* geen Turnstile */ }
       });
   });
 
