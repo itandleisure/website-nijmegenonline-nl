@@ -5,8 +5,17 @@
     <link>https://www.nijmegenonline.nl/nieuwsberichten/</link>
     <description>Het laatste nieuws uit Nijmegen</description>
     <language>nl-nl</language>
-    <lastBuildDate>Sun, 15 Nov 2026 06:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Hilde Vos Trio speelt op 22 november in De Brauerij in Kranenburg-Niel</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/hilde-vos-trio-speelt-op-22-november-in-de-brauerij-in-kranenburg-niel/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/hilde-vos-trio-speelt-op-22-november-in-de-brauerij-in-kranenburg-niel/</guid>
+      <pubDate>Mon, 16 Nov 2026 10:30:14 +0100</pubDate>
+      <description>Het Hilde Vos Trio geeft op 22 november 2026 een countryconcert in De Brauerij in Kranenburg-Niel. Entree is 20 euro; reserveren wordt aangeraden.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-hilde-vos-trio-speelt-op-22-november-in-de-brauerij-in-kranenburg-niel.jpg" length="37837" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-hilde-vos-trio-speelt-op-22-november-in-de-brauerij-in-kranenburg-niel.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Lezing Mansoureh Shojaee over Iraans vrouwenverzet in Vrijheidsmuseum</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/lezing-mansoureh-shojaee-over-iraans-vrouwenverzet-in-vrijheidsmuseum/</link>
@@ -177,15 +186,6 @@
       <description>Groei &amp; Bloei organiseert op 27 november in Alverna een kerstdemonstratie bloemschikken door Ben Clevers. Aanmelden vóór 15 november.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-kerstdemonstratie-bloemschikken-door-ben-clevers-in-alverna.jpg" length="8809" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-kerstdemonstratie-bloemschikken-door-ben-clevers-in-alverna.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Festival Jazz International Nijmegen viert tiende editie</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/festival-jazz-international-nijmegen-viert-tiende-editie/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/festival-jazz-international-nijmegen-viert-tiende-editie/</guid>
-      <pubDate>Fri, 30 Oct 2026 13:43:11 +0100</pubDate>
-      <description>Festival Jazz International Nijmegen start met de tiende editie op verschillende plekken in de stad. Op 4 november speelt het Philipp Rüttgers Trio in de Thiemeloods.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-festival-jazz-international-nijmegen-viert-tiende-editie.jpg" length="47461" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-festival-jazz-international-nijmegen-viert-tiende-editie.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
