@@ -8,6 +8,15 @@
     <lastBuildDate>Tue, 17 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>VR-fiets op Night of the Nerds toont gevaar van appen op de fiets</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/vr-fiets-op-night-of-the-nerds-toont-gevaar-van-appen-op-de-fiets/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/vr-fiets-op-night-of-the-nerds-toont-gevaar-van-appen-op-de-fiets/</guid>
+      <pubDate>Tue, 17 Nov 2026 23:13:32 +0100</pubDate>
+      <description>Op Night of the Nerds in Nijmegen kunnen bezoekers op 25 november met een VR-bril ervaren hoe gevaarlijk telefoongebruik op de fiets is.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-vr-fiets-op-night-of-the-nerds-toont-gevaar-van-appen-op-de-fiets.jpg" length="26140" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-vr-fiets-op-night-of-the-nerds-toont-gevaar-van-appen-op-de-fiets.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Nijmegen krijgt openluchtmuseum rond Romeinse 'Godin van de levende Flora'</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/nijmegen-krijgt-openluchtmuseum-rond-romeinse-godin-van-de-levende-flora/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/nijmegen-krijgt-openluchtmuseum-rond-romeinse-godin-van-de-levende-flora/</guid>
@@ -177,15 +186,6 @@
       <description>De Gebroeders Van Lymborch Experience is tot 3 januari 2027 te zien in de Stevenskerk. Zondag 1 november is de officiële opening.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-gebroeders-van-lymborch-experience-geopend-in-stevenskerk.jpg" length="53612" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-gebroeders-van-lymborch-experience-geopend-in-stevenskerk.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Dirk Groenen van EnergyLabs is StartUpper van het Jaar 2026</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/dirk-groenen-van-energylabs-is-startupper-van-het-jaar-2026/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/dirk-groenen-van-energylabs-is-startupper-van-het-jaar-2026/</guid>
-      <pubDate>Fri, 30 Oct 2026 13:43:12 +0100</pubDate>
-      <description>Dirk Groenen van EnergyLabs won donderdagavond de verkiezing StartUpper van het Jaar 2026 van StartUp Nijmegen op Landgoed Brakkesteyn.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-dirk-groenen-van-energylabs-is-startupper-van-het-jaar-2026.jpg" length="44887" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-dirk-groenen-van-energylabs-is-startupper-van-het-jaar-2026.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
