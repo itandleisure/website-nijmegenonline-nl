@@ -241,5 +241,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-17",
+  "soort": "nieuws",
+  "betaald": false,
+  "sleutels": [
+   "nieuws:nijmegen-krijgt-openluchtmuseum-rond-romeinse-godin-van-de-levende-flora"
+  ],
+  "titel": "Nijmegen krijgt openluchtmuseum rond Romeinse 'Godin van de levende Flora'",
+  "link": "https://www.nijmegenonline.nl/nieuwsoverzicht/nijmegen-krijgt-openluchtmuseum-rond-romeinse-godin-van-de-levende-flora/",
+  "beelden": [
+   "assets/social/2026-11-17-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1796887892446279",
+  "instagram_id": "18037920056665024",
+  "instagram_link": "https://www.instagram.com/p/Df2AQBNjazA/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
