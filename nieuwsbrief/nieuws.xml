@@ -8,6 +8,15 @@
     <lastBuildDate>Wed, 18 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Musical SPINOZA in juni 2027 op campus Radboud Universiteit</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/musical-spinoza-in-juni-2027-op-campus-radboud-universiteit/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/musical-spinoza-in-juni-2027-op-campus-radboud-universiteit/</guid>
+      <pubDate>Wed, 18 Nov 2026 14:52:29 +0100</pubDate>
+      <description>Stadsschouwburg en De Vereeniging brengt in juni 2027 de openluchtvoorstelling SPINOZA naar de campus van de Radboud Universiteit. Kaartverkoop start 19 november.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-musical-spinoza-in-juni-2027-op-campus-radboud-universiteit.jpg" length="53082" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-musical-spinoza-in-juni-2027-op-campus-radboud-universiteit.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>VR-fiets op Night of the Nerds toont gevaar van appen op de fiets</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/vr-fiets-op-night-of-the-nerds-toont-gevaar-van-appen-op-de-fiets/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/vr-fiets-op-night-of-the-nerds-toont-gevaar-van-appen-op-de-fiets/</guid>
@@ -177,15 +186,6 @@
       <description>Sportbedrijf Arnhem en BoostYourVitality sluiten een partnerschap: de Sportkaart komt in de Lifeport Vitaal App, die in februari 2027 live gaat.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-sportkaart-arnhem-wordt-onderdeel-van-lifeport-vitaal-app.jpg" length="42641" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-sportkaart-arnhem-wordt-onderdeel-van-lifeport-vitaal-app.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Gebroeders Van Lymborch Experience geopend in Stevenskerk</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/gebroeders-van-lymborch-experience-geopend-in-stevenskerk/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/gebroeders-van-lymborch-experience-geopend-in-stevenskerk/</guid>
-      <pubDate>Fri, 30 Oct 2026 13:43:12 +0100</pubDate>
-      <description>De Gebroeders Van Lymborch Experience is tot 3 januari 2027 te zien in de Stevenskerk. Zondag 1 november is de officiële opening.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-gebroeders-van-lymborch-experience-geopend-in-stevenskerk.jpg" length="53612" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-gebroeders-van-lymborch-experience-geopend-in-stevenskerk.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
