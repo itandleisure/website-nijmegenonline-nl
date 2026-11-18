@@ -261,5 +261,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-18",
+  "soort": "gids",
+  "betaald": false,
+  "sleutels": [
+   "pagina:/zevenheuvelenloop/"
+  ],
+  "titel": "Zevenheuvelenloop 2026: datum, parcours, records en tips",
+  "link": "https://www.nijmegenonline.nl/zevenheuvelenloop/",
+  "beelden": [
+   "assets/social/2026-11-18-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1798154885652913",
+  "instagram_id": "18134393716741708",
+  "instagram_link": "https://www.instagram.com/p/Df4pyqol8eS/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
