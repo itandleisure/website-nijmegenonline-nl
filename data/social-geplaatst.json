@@ -281,5 +281,34 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-19",
+  "soort": "weekend",
+  "betaald": false,
+  "sleutels": [
+   "evenement:hilde-vos-trio",
+   "evenement:expositie-marlie-duizings-in-kunst-in-het-kerkje",
+   "evenement:parkinson-cafe-nijmegen-3",
+   "evenement:women-and-war-documentaire-vertoning-met-korte-introducties-door-nijmegen4ukrain",
+   "evenement:auteur-jeroen-siebelink-bij-boekhandel-roelants"
+  ],
+  "titel": "Dit weekend in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "beelden": [
+   "assets/social/2026-11-19-0.jpg",
+   "assets/social/2026-11-19-1.jpg",
+   "assets/social/2026-11-19-2.jpg",
+   "assets/social/2026-11-19-3.jpg",
+   "assets/social/2026-11-19-4.jpg",
+   "assets/social/2026-11-19-5.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1799288448872890",
+  "instagram_id": "18167804785491704",
+  "instagram_link": "https://www.instagram.com/p/Df7H9oIF9ol/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
