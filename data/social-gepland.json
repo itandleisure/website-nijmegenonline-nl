@@ -1,22 +1,4 @@
 {
- "2026-11-04": {
-  "datum": "2026-11-04",
-  "soort": "evenement",
-  "betaald": true,
-  "sleutels": [
-   "evenement:magda-novels"
-  ],
-  "titel": "Magda Novels bij de Brauerij",
-  "link": "https://www.nijmegenonline.nl/events/magda-novels/",
-  "beelden": [
-   "assets/social/2026-11-04-1.jpg"
-  ],
-  "story": null,
-  "facebook": "Advertentie\n\nZin in dromerige indiefolk op een zondagmiddag? Magda Novels, de artiestennaam van de Zweedse zangeres Magda Andersson uit Umeå, speelt in De Brauerij. Haar muziek gaat over zelfreflectie, verlies en identiteit, en ze neemt extra muzikale begeleiding mee voor een duoconcert. Haar debuutalbum Vol. 1: Shadow Work verscheen in 2025.\n\n📅 Zondag 8 november 2026, 15.00 tot 17.00 uur\n📍 De Brauerij Kranenburg, Mehrer Straße 1 Kranenburg\n\n👉 https://www.nijmegenonline.nl/events/magda-novels/",
-  "instagram": "Advertentie\n\nZin in dromerige indiefolk op een zondagmiddag? Magda Novels, de artiestennaam van de Zweedse zangeres Magda Andersson uit Umeå, speelt in De Brauerij. Haar muziek gaat over zelfreflectie, verlies en identiteit, en ze neemt extra muzikale begeleiding mee voor een duoconcert. Haar debuutalbum Vol. 1: Shadow Work verscheen in 2025.\n\n📅 Zondag 8 november 2026, 15.00 tot 17.00 uur\n📍 De Brauerij Kranenburg, Mehrer Straße 1 Kranenburg\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #indiefolk #livemuziek #concert",
-  "tekst_door": "claude",
-  "status": "gepland"
- },
  "2026-11-05": {
   "datum": "2026-11-05",
   "soort": "weekend",
@@ -382,5 +364,33 @@
   "instagram_id": "18134393716741708",
   "instagram_link": "https://www.instagram.com/p/Df4pyqol8eS/",
   "fouten": []
+ },
+ "2026-11-19": {
+  "datum": "2026-11-19",
+  "soort": "weekend",
+  "betaald": false,
+  "sleutels": [
+   "evenement:hilde-vos-trio",
+   "evenement:expositie-marlie-duizings-in-kunst-in-het-kerkje",
+   "evenement:parkinson-cafe-nijmegen-3",
+   "evenement:women-and-war-documentaire-vertoning-met-korte-introducties-door-nijmegen4ukrain",
+   "evenement:auteur-jeroen-siebelink-bij-boekhandel-roelants"
+  ],
+  "titel": "Dit weekend in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "beelden": [
+   "assets/social/2026-11-19-0.jpg",
+   "assets/social/2026-11-19-1.jpg",
+   "assets/social/2026-11-19-2.jpg",
+   "assets/social/2026-11-19-3.jpg",
+   "assets/social/2026-11-19-4.jpg",
+   "assets/social/2026-11-19-5.jpg"
+  ],
+  "story": null,
+  "facebook": "Zin in een weekend vol muziek, kunst, film en verhalen? Van een optreden van het Hilde Vos Trio tot een documentaire in Lux en een boekpresentatie bij Roelants: er valt weer genoeg te beleven. Hieronder zie je wat er van 20 t/m 22 november allemaal op de agenda staat.\n\n• Hilde Vos Trio (zo 22 nov, 15.00 uur, De Brauerij Kranenburg)\n• Expositie Marlie Duizings in kunst in het kerkje (vr 20 nov t/m zo 6 dec, Vincentiuskerkje Velp)\n• Parkinson Café Nijmegen (vr 20 nov, 12.00 uur, Wijkcentrum Hatert)\n• “Women and War” documentaire vertoning met korte introducties door Nijmegen4Ukraine en de Oekraïense ambassade (za 21 nov, 11.30 uur, Lux Nijmegen)\n• Auteur Jeroen Siebelink bij boekhandel Roelants (za 21 nov, 17.00 uur, Boekhandel Roelants Nijmegen)\n\n👉 https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "instagram": "Zin in een weekend vol muziek, kunst, film en verhalen? Van een optreden van het Hilde Vos Trio tot een documentaire in Lux en een boekpresentatie bij Roelants: er valt weer genoeg te beleven. Hieronder zie je wat er van 20 t/m 22 november allemaal op de agenda staat.\n\n• Hilde Vos Trio (zo 22 nov, 15.00 uur, De Brauerij Kranenburg)\n• Expositie Marlie Duizings in kunst in het kerkje (vr 20 nov t/m zo 6 dec, Vincentiuskerkje Velp)\n• Parkinson Café Nijmegen (vr 20 nov, 12.00 uur, Wijkcentrum Hatert)\n• “Women and War” documentaire vertoning met korte introducties door Nijmegen4Ukraine en de Oekraïense ambassade (za 21 nov, 11.30 uur, Lux Nijmegen)\n• Auteur Jeroen Siebelink bij boekhandel Roelants (za 21 nov, 17.00 uur, Boekhandel Roelants Nijmegen)\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #weekend #uitagenda #cultuur",
+  "tekst_door": "claude",
+  "status": "gepland",
+  "gemaakt": "2026-11-19T04:14+01:00"
  }
 }
