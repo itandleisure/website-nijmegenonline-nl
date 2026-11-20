@@ -310,5 +310,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-20",
+  "soort": "evenement",
+  "betaald": true,
+  "sleutels": [
+   "evenement:johnny-and-the-rockets"
+  ],
+  "titel": "Johnny and the Rockets",
+  "link": "https://www.nijmegenonline.nl/events/johnny-and-the-rockets/",
+  "beelden": [
+   "assets/social/2026-11-20-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1800421225426279",
+  "instagram_id": "17881096890562091",
+  "instagram_link": "https://www.instagram.com/p/Df9is31DUMk/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
