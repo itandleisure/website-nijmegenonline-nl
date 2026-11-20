@@ -363,8 +363,9 @@
   "secties": [
    {
     "kop": "Kappers en barbiers",
-    "tekst": "<p>Voor een strak kapsel of een verzorgde baard.</p>",
+    "tekst": "<p>Onze tien favoriete kappers, van krullenspecialist tot barbershop, en adressen voor een strak kapsel of een verzorgde baard.</p>",
     "artikelen": [
+     "de-10-beste-kappers-in-nijmegen",
      "waar-in-nijmegen-kunnen-mannen-terecht-voor-een-stijlvolle-look",
      "wie-verzorgt-je-haar-als-je-op-leeftijd-bent"
     ]
@@ -1281,8 +1282,9 @@
   "secties": [
    {
     "kop": "Met vrienden of collega's",
-    "tekst": "<p>Van <a href=\"../../bedrijvengids-categorie/escape-room/\">escape room</a> tot een avond happen en stappen: de leukste activiteiten om samen te doen, en ideeën voor een teamuitje met spanning, natuur en eten.</p>",
+    "tekst": "<p>Van de beste <a href=\"../../bedrijvengids-categorie/escape-room/\">escape rooms</a>, zoals de outdoor escape game The Hunt door de binnenstad, tot een avond happen en stappen: de leukste activiteiten om samen te doen, en ideeën voor een teamuitje met spanning, natuur en eten.</p>",
     "artikelen": [
+     "de-beste-escape-rooms-in-nijmegen",
      "activiteiten-in-nijmegen",
      "5x-een-bijzonder-uitje-in-nijmegen",
      "teamuitje-nijmegen-spanning-natuur-en-culinair-genieten",
@@ -1453,6 +1455,14 @@
      "de-10-beste-koffiebars-in-nijmegen",
      "barista-training-in-nijmegen-word-koffie-expert-2",
      "het-belang-van-goede-koffie-op-het-werk"
+    ]
+   },
+   {
+    "kop": "Bakkers, taart en ijs",
+    "tekst": "<p>Desembrood, Franse patisserie, een bruidstaart op maat of een bolletje ambachtelijk ijs: onze tien favoriete bakkers en ijssalons. Alle <a href=\"../../bedrijvengids-categorie/bakkerij/\">bakkerijen</a> en <a href=\"../../bedrijvengids-categorie/ijssalon/\">ijssalons</a> staan in de bedrijvengids.</p>",
+    "artikelen": [
+     "de-10-beste-bakkers-in-nijmegen",
+     "de-10-beste-ijssalons-in-nijmegen"
     ]
    },
    {
