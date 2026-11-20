@@ -84,11 +84,15 @@ def dataforseo(pad, taak):
     for poging in range(3):
         try:
             r = requests.post(API + pad, json=[taak], auth=auth, timeout=180)
-            t = r.json()["tasks"][0]
+            antwoord = r.json()
+            if not antwoord.get("tasks"):  # bijv. 40200 Payment Required: tegoed op, opnieuw proberen helpt niet
+                fout = "%s %s" % (antwoord.get("status_code"), antwoord.get("status_message"))
+                break
+            t = antwoord["tasks"][0]
             if t["status_code"] == 20000:
                 return t
             fout = t["status_message"]
-        except (requests.RequestException, KeyError, ValueError) as e:
+        except (requests.RequestException, KeyError, ValueError, TypeError) as e:
             fout = str(e)
     print("  mislukt (%s): %s" % (pad, fout), file=sys.stderr)
     return None
