@@ -382,7 +382,9 @@ def clarity_meten():
     bots = eerste(verkeer, "totalBotSessionCount", 0)
     meting = {
         "datum": (VANDAAG - datetime.timedelta(days=1)).isoformat(),  # de meting van vannacht gaat over gisteren
-        "sessies": sessies - bots, "bots": bots,
+        # totalSessionCount telt bots niet mee: op 19-11-2026 waren er 289 bots tegen 229 sessies.
+        # Bots er nog eens aftrekken gaf negatieve aantallen en telde eerder te weinig echte bezoekers.
+        "sessies": sessies, "bots": bots,
         "gebruikers": eerste(verkeer, "distinctUserCount", 0),
         "scrolldiepte": eerste(totaal.get("ScrollDepth"), "averageScrollDepth"),
         "actieve_tijd": eerste(totaal.get("EngagementTime"), "activeTime"),
@@ -401,7 +403,7 @@ def clarity_meten():
     for u in per_url.get("Traffic", []):
         if "Url" not in u or not u["Url"].startswith(INSTELLINGEN["search_console_property"]):
             continue
-        echt = u["totalSessionCount"] - u.get("totalBotSessionCount", 0)
+        echt = u["totalSessionCount"]
         if echt > 0:
             paginas.append({"naam": urllib.parse.urlsplit(u["Url"]).path, "sessies": echt,
                             "scrolldiepte": scroll.get(u["Url"]), "actieve_tijd": tijd.get(u["Url"])})
