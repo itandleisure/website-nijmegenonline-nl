@@ -1197,7 +1197,7 @@
   "zoekwoord": "zwemmen nijmegen",
   "seo_titel": "Sporten en zwemmen in Nijmegen: zwembaden, hardlopen, schaatsen en meer",
   "beschrijving": "Sporten in Nijmegen: de zwembaden en het buitenwater, hardloopevenementen als de Zevenheuvelenloop en de Stevensloop, schaatsen bij Triavium, dansscholen, het Goffertstadion en tips om fit te blijven.",
-  "intro": "<p>Nijmegen is een sportstad: de Zevenheuvelenloop en de Stevensloop trekken elk jaar tienduizenden lopers, de Vierdaagse is het grootste wandelevenement ter wereld en N.E.C. speelt in het Goffertstadion. Zelf bewegen kan in drie overdekte zwembaden en twee buitenbaden, op de ijsbaan van Triavium, in de heuvels en bossen rond de stad en bij tientallen sportscholen en verenigingen.</p><p>In deze gids staan de pagina's over sporten en zwemmen bij elkaar: waar je zwemt, loopt en schaatst, welke evenementen er zijn en hoe je blessures voorkomt.</p>",
+  "intro": "<p>Nijmegen is een sportstad: de Zevenheuvelenloop en de Stevensloop trekken elk jaar tienduizenden lopers, de Vierdaagse is het grootste wandelevenement ter wereld en N.E.C. speelt in het Goffertstadion. Zelf bewegen kan in drie overdekte zwembaden en twee buitenbaden, op de ijsbaan van Triavium, in de heuvels en bossen rond de stad en bij tientallen sportscholen en verenigingen.</p><p>In deze gids staan de pagina's over sporten en zwemmen bij elkaar: waar je zwemt, loopt en schaatst, welke evenementen er zijn, welke sportschool bij je past en hoe je blessures voorkomt.</p>",
   "secties": [
    {
     "kop": "Zwemmen",
@@ -1227,6 +1227,13 @@
      "de-beste-dansscholen-in-nijmegen",
      "goffertstadion-nijmegen",
      "goffertpark-nijmegen"
+    ]
+   },
+   {
+    "kop": "Sportscholen",
+    "tekst": "<p>Nijmegen heeft ruim vijftig sportscholen, van ketens die dag en nacht open zijn tot boutique gyms, CrossFit-boxen en een sportschool alleen voor vrouwen. Onze top 10 helpt je kiezen; alle adressen staan in de <a href=\"../../bedrijvengids-categorie/sportschool/\">bedrijvengids</a>.</p>",
+    "artikelen": [
+     "de-10-beste-sportscholen-in-nijmegen"
     ]
    },
    {
@@ -1441,8 +1448,9 @@
    },
    {
     "kop": "Ontbijt, brunch en koffie",
-    "tekst": "<p>Alle 31 zaken voor <a href=\"../../bedrijvengids-categorie/ontbijt-en-brunch/\">ontbijt en brunch</a> en de <a href=\"../../bedrijvengids-categorie/koffiezaak/\">koffiebars</a> staan in de bedrijvengids. Zelf leren hoe je de perfecte cappuccino maakt? Volg een baristatraining.</p>",
+    "tekst": "<p>Onze tien favoriete koffiebars, van specialty coffee tot Zweedse fika. Alle 31 zaken voor <a href=\"../../bedrijvengids-categorie/ontbijt-en-brunch/\">ontbijt en brunch</a> en de <a href=\"../../bedrijvengids-categorie/koffiezaak/\">koffiebars</a> staan in de bedrijvengids. Zelf leren hoe je de perfecte cappuccino maakt? Volg een baristatraining.</p>",
     "artikelen": [
+     "de-10-beste-koffiebars-in-nijmegen",
      "barista-training-in-nijmegen-word-koffie-expert-2",
      "het-belang-van-goede-koffie-op-het-werk"
     ]
