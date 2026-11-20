@@ -84,11 +84,15 @@ def dataforseo(pad, taak):
     for poging in range(3):
         try:
             r = requests.post(API + pad, json=[taak], auth=auth, timeout=180)
-            t = r.json()["tasks"][0]
+            antwoord = r.json()
+            if not antwoord.get("tasks"):  # bijv. 40200 Payment Required: tegoed op, opnieuw proberen helpt niet
+                fout = "%s %s" % (antwoord.get("status_code"), antwoord.get("status_message"))
+                break
+            t = antwoord["tasks"][0]
             if t["status_code"] == 20000:
                 return t
             fout = t["status_message"]
-        except (requests.RequestException, KeyError, ValueError) as e:
+        except (requests.RequestException, KeyError, ValueError, TypeError) as e:
             fout = str(e)
     print("  mislukt (%s): %s" % (pad, fout), file=sys.stderr)
     return None
@@ -378,7 +382,9 @@ def clarity_meten():
     bots = eerste(verkeer, "totalBotSessionCount", 0)
     meting = {
         "datum": (VANDAAG - datetime.timedelta(days=1)).isoformat(),  # de meting van vannacht gaat over gisteren
-        "sessies": sessies - bots, "bots": bots,
+        # totalSessionCount telt bots niet mee: op 19-11-2026 waren er 289 bots tegen 229 sessies.
+        # Bots er nog eens aftrekken gaf negatieve aantallen en telde eerder te weinig echte bezoekers.
+        "sessies": sessies, "bots": bots,
         "gebruikers": eerste(verkeer, "distinctUserCount", 0),
         "scrolldiepte": eerste(totaal.get("ScrollDepth"), "averageScrollDepth"),
         "actieve_tijd": eerste(totaal.get("EngagementTime"), "activeTime"),
@@ -397,7 +403,7 @@ def clarity_meten():
     for u in per_url.get("Traffic", []):
         if "Url" not in u or not u["Url"].startswith(INSTELLINGEN["search_console_property"]):
             continue
-        echt = u["totalSessionCount"] - u.get("totalBotSessionCount", 0)
+        echt = u["totalSessionCount"]
         if echt > 0:
             paginas.append({"naam": urllib.parse.urlsplit(u["Url"]).path, "sessies": echt,
                             "scrolldiepte": scroll.get(u["Url"]), "actieve_tijd": tijd.get(u["Url"])})
