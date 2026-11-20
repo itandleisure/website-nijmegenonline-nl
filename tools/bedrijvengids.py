@@ -67,7 +67,7 @@ CATEGORIEEN = [{
          "Bijna alle sportscholen in Nijmegen bieden een gratis proefles of proefweek aan. Zo zie je of de sfeer, "
          "de drukte en de begeleiding bij je passen voordat je een abonnement afsluit."),
     ],
-    "artikelen": ["bammmm-en-je-bent-fit", "afvallen-met-sport-tips-voor-een-kleinere-maat", "7x-de-beste-warming-up-oefeningen"],
+    "artikelen": ["de-10-beste-sportscholen-in-nijmegen", "bammmm-en-je-bent-fit", "afvallen-met-sport-tips-voor-een-kleinere-maat", "7x-de-beste-warming-up-oefeningen"],
     # Blogberichten over het onderwerp: daaronder komt het blok met de uitgelichte bedrijven (onderdeel van Uitgelicht)
     "blogs": ["bammmm-en-je-bent-fit", "afvallen-met-sport-tips-voor-een-kleinere-maat", "7x-de-beste-warming-up-oefeningen",
               "hoe-kan-een-dietist-je-helpen-gezonder-te-gaan-leven"],
@@ -226,7 +226,7 @@ CATEGORIEEN = [{
         ("Is een coffeeshop hetzelfde als een koffiebar?",
          "Nee. In Nederland verkoopt een coffeeshop cannabis. In dit overzicht staan alleen koffiebars waar je voor koffie komt."),
     ],
-    "artikelen": ["barista-training-in-nijmegen-word-koffie-expert-2", "het-belang-van-goede-koffie-op-het-werk"],
+    "artikelen": ["de-10-beste-koffiebars-in-nijmegen", "barista-training-in-nijmegen-word-koffie-expert-2", "het-belang-van-goede-koffie-op-het-werk"],
     "blogs": ["barista-training-in-nijmegen-word-koffie-expert-2", "het-belang-van-goede-koffie-op-het-werk"],
     "meervoud": "koffiebars",
     "blogonderwerp": "koffie",
