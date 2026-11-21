@@ -12,13 +12,19 @@
   <meta property="og:url" content="https://www.nijmegenonline.nl/bedrijvengids/healing-retreat-spanje/">
   <meta property="og:site_name" content="NijmegenOnline">
   <meta property="og:image" content="https://www.nijmegenonline.nl/assets/img/logo-nijmegenonline.png">
-  <link rel="stylesheet" href="../../assets/css/site.css?v=35">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=36">
   <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="../../partners/slider.css?v=5">
   <script src="../../partners/slider.js?v=6" defer></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "Healing Retreat Spanje", "url": "https://www.nijmegenonline.nl/bedrijvengids/healing-retreat-spanje/", "address": {"@type": "PostalAddress", "streetAddress": "Aldenhof 8638", "postalCode": "6537 CK", "addressLocality": "Nijmegen", "addressCountry": "NL"}, "telephone": "31616415554", "geo": {"@type": "GeoCoordinates", "latitude": 51.806038, "longitude": 5.796499}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nijmegenonline.nl/"}, {"@type": "ListItem", "position": 2, "name": "Alternatieve geneeswijzen in Nijmegen", "item": "https://www.nijmegenonline.nl/bedrijvengids-categorie/alternatief/"}, {"@type": "ListItem", "position": 3, "name": "Healing Retreat Spanje", "item": "https://www.nijmegenonline.nl/bedrijvengids/healing-retreat-spanje/"}]}</script>
+  <!-- pwa -->
+  <!-- App-gegevens (PWA): bezoekers kunnen de site op hun beginscherm zetten. Zie manifest.webmanifest en sw.js. -->
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#408fc6">
+  <link rel="preload" href="../../assets/fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- /pwa -->
   <!-- analytics -->
   <!-- Search Console: verificatiecode van de property https://www.nijmegenonline.nl/ (HTML-tag). -->
   <meta name="google-site-verification" content="DvTKwDdZ4RPX1t_mRT4x6b5YhA5R_AMz0w_hEi2foeQ">
@@ -250,6 +256,29 @@
       <p>&copy; NijmegenOnline</p>
     </div>
   </footer>
+  <!-- Vaste onderbalk op telefoon en tablet: de vijf onderdelen waar bezoekers het vaakst naartoe gaan, binnen bereik van de duim.
+       Op desktop verborgen (daar staat alles in het hoofdmenu). data-paden zegt bij welke adressen een knop oplicht. -->
+  <nav class="onderbalk" aria-label="Snel naar">
+    <a href="../../nijmegen-evenementen-overzicht/" data-paden="nijmegen-evenementen-overzicht/ events/ event-location/ event-directory/ agenda/ jaarlijkse-evenementen/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Agenda</a>
+    <a href="../../bedrijvengids/" data-paden="bedrijvengids/ bedrijvengids-categorie/ overzicht/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5V20h16v-9.5M3 10.5 5 4h14l2 6.5a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM10 20v-5h4v5"/></svg>Bedrijven</a>
+    <a href="../../nieuwsberichten/" data-paden="nieuwsberichten/ nieuwsoverzicht/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h12v14a1.5 1.5 0 0 0 3 0V9h-3M4 5v13.5A1.5 1.5 0 0 0 5.5 20H18M7.5 9h5M7.5 12.5h5M7.5 16h3"/></svg>Nieuws</a>
+    <a href="../../vacatures/" data-paden="vacatures/ vacature-plaatsen/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg>Vacatures</a>
+    <a href="../../zoeken/" data-paden="zoeken/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>Zoeken</a>
+  </nav>
+  <script>
+    /* Onderbalk: knop van het onderdeel waar je bent oplichten. Service worker (sw.js) aanmelden: sneller laden en offline lezen. */
+    (function () {
+      var logo = document.querySelector(".logo"), basis = new URL(logo ? logo.href : "../../", location.href).pathname;
+      var pad = location.pathname.indexOf(basis) === 0 ? location.pathname.slice(basis.length) : "";
+      document.querySelectorAll(".onderbalk a").forEach(function (a) {
+        var paden = a.getAttribute("data-paden").split(" ");
+        if (paden.some(function (p) { return pad.indexOf(p) === 0; })) a.setAttribute("aria-current", "page");
+      });
+      if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+        window.addEventListener("load", function () { navigator.serviceWorker.register("../../sw.js").catch(function () {}); });
+      }
+    })();
+  </script>
   <!-- Meting voor het klantrapport (tools/klantrapport.py): elke uitgelichte bedrijfskaart die echt in beeld komt (de helft
        zichtbaar), telt één keer per paginabezoek als "bedrijf_in_lijst" in Google Analytics. Alleen betaalde kaarten. -->
   <script>

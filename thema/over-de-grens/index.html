@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://www.nijmegenonline.nl/thema/over-de-grens/">
   <meta property="og:site_name" content="NijmegenOnline">
   <meta property="og:image" content="https://www.nijmegenonline.nl/assets/uploads/2023/08/kleve-kleef-duitsland-winkelstraat.webp">
-  <link rel="stylesheet" href="../../assets/css/site.css?v=35">
+  <link rel="stylesheet" href="../../assets/css/site.css?v=36">
   <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="../../partners/slider.css?v=5">
@@ -20,6 +20,12 @@
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Over de grens: Kleef, Emmerik, Goch en Kranenburg", "url": "https://www.nijmegenonline.nl/thema/over-de-grens/", "description": "Een dagje Duitsland vanuit Nijmegen: Kleef met de Schwanenburg en de kerstmarkt, Emmerik aan de Rijn, Goch met klooster Graefenthal en het grensdorp Kranenburg, met tips voor winkelen en bereikbaarheid.", "dateModified": "2026-11-10", "abstract": "De Duitse grens ligt tien kilometer van het centrum van Nijmegen: Kleef is in een kwartier bereikt, Kranenburg is nog dichterbij, Goch en Emmerik liggen op een half uur. Nijmegenaren gaan er voor de supermarkten en drogisterijen, de kerstmarkten en de Rijn. Let op: in Duitsland zijn de winkels op zondag dicht.", "publisher": {"@id": "https://www.nijmegenonline.nl/#organisatie"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nijmegenonline.nl/"}, {"@type": "ListItem", "position": 2, "name": "Gidsen", "item": "https://www.nijmegenonline.nl/thema/"}, {"@type": "ListItem", "position": 3, "name": "Over de grens: Kleef, Emmerik, Goch en Kranenburg", "item": "https://www.nijmegenonline.nl/thema/over-de-grens/"}]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoe ver is Kleef van Nijmegen?", "acceptedAnswer": {"@type": "Answer", "text": "Ongeveer 20 kilometer, een kwartier tot twintig minuten rijden. Snelbus 58 rijdt vanaf station Nijmegen naar Kleef en door naar Emmerik."}}, {"@type": "Question", "name": "Zijn de winkels in Kleef op zondag open?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. In Duitsland zijn de winkels op zondag gesloten, op enkele koopzondagen per jaar na."}}, {"@type": "Question", "name": "Wanneer is de kerstmarkt in Kleef?", "acceptedAnswer": {"@type": "Answer", "text": "De Klever Weihnachtsmarkt is in 2026 van 27 november tot en met 6 december. Zie onze pagina over de kerstmarkt in Kleef."}}, {"@type": "Question", "name": "Wat is er te zien in Emmerik?", "acceptedAnswer": {"@type": "Answer", "text": "De Rijnpromenade, de Rijnbrug (de langste hangbrug van Duitsland), de Sint-Martinikerk en Sint-Aldegundiskerk, het Rheinmuseum en het PAN kunstforum."}}]}</script>
+  <!-- pwa -->
+  <!-- App-gegevens (PWA): bezoekers kunnen de site op hun beginscherm zetten. Zie manifest.webmanifest en sw.js. -->
+  <link rel="manifest" href="../../manifest.webmanifest">
+  <meta name="theme-color" content="#408fc6">
+  <link rel="preload" href="../../assets/fonts/raleway-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- /pwa -->
   <!-- analytics -->
   <!-- Search Console: verificatiecode van de property https://www.nijmegenonline.nl/ (HTML-tag). -->
   <meta name="google-site-verification" content="DvTKwDdZ4RPX1t_mRT4x6b5YhA5R_AMz0w_hEi2foeQ">
@@ -281,6 +287,29 @@
       <p>&copy; NijmegenOnline</p>
     </div>
   </footer>
+  <!-- Vaste onderbalk op telefoon en tablet: de vijf onderdelen waar bezoekers het vaakst naartoe gaan, binnen bereik van de duim.
+       Op desktop verborgen (daar staat alles in het hoofdmenu). data-paden zegt bij welke adressen een knop oplicht. -->
+  <nav class="onderbalk" aria-label="Snel naar">
+    <a href="../../nijmegen-evenementen-overzicht/" data-paden="nijmegen-evenementen-overzicht/ events/ event-location/ event-directory/ agenda/ jaarlijkse-evenementen/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Agenda</a>
+    <a href="../../bedrijvengids/" data-paden="bedrijvengids/ bedrijvengids-categorie/ overzicht/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10.5V20h16v-9.5M3 10.5 5 4h14l2 6.5a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0zM10 20v-5h4v5"/></svg>Bedrijven</a>
+    <a href="../../nieuwsberichten/" data-paden="nieuwsberichten/ nieuwsoverzicht/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h12v14a1.5 1.5 0 0 0 3 0V9h-3M4 5v13.5A1.5 1.5 0 0 0 5.5 20H18M7.5 9h5M7.5 12.5h5M7.5 16h3"/></svg>Nieuws</a>
+    <a href="../../vacatures/" data-paden="vacatures/ vacature-plaatsen/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></svg>Vacatures</a>
+    <a href="../../zoeken/" data-paden="zoeken/"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>Zoeken</a>
+  </nav>
+  <script>
+    /* Onderbalk: knop van het onderdeel waar je bent oplichten. Service worker (sw.js) aanmelden: sneller laden en offline lezen. */
+    (function () {
+      var logo = document.querySelector(".logo"), basis = new URL(logo ? logo.href : "../../", location.href).pathname;
+      var pad = location.pathname.indexOf(basis) === 0 ? location.pathname.slice(basis.length) : "";
+      document.querySelectorAll(".onderbalk a").forEach(function (a) {
+        var paden = a.getAttribute("data-paden").split(" ");
+        if (paden.some(function (p) { return pad.indexOf(p) === 0; })) a.setAttribute("aria-current", "page");
+      });
+      if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+        window.addEventListener("load", function () { navigator.serviceWorker.register("../../sw.js").catch(function () {}); });
+      }
+    })();
+  </script>
   <!-- Meting voor het klantrapport (tools/klantrapport.py): elke uitgelichte bedrijfskaart die echt in beeld komt (de helft
        zichtbaar), telt één keer per paginabezoek als "bedrijf_in_lijst" in Google Analytics. Alleen betaalde kaarten. -->
   <script>

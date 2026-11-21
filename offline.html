@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#408fc6">
+  <title>Geen internetverbinding | NijmegenOnline</title>
+  <!-- Deze pagina toont sw.js als er geen internet is en de pagina nog niet eerder bekeken is.
+       Opmaak staat erin, omdat de pagina op elk adres van de site kan verschijnen. -->
+  <style>
+    body { margin: 0; font-family: Raleway, system-ui, -apple-system, "Segoe UI", sans-serif; background: #f3f5f7; color: #333; line-height: 1.6; }
+    header { background: #408fc6; padding: 14px 16px; color: #fff; font-weight: 700; font-size: 1.2rem; }
+    main { max-width: 560px; margin: 0 auto; padding: 32px 16px; }
+    h1 { font-size: 1.6rem; color: #000; margin: 0 0 8px; }
+    button { font: inherit; font-weight: 700; background: #539c20; color: #fff; border: 0; border-radius: 999px; padding: 14px 24px; min-height: 48px; cursor: pointer; }
+    ul { padding: 0; list-style: none; }
+    li a { display: block; padding: 12px 0; border-bottom: 1px solid #e3e6ea; color: #2f7db5; font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>NijmegenOnline</header>
+  <main>
+    <h1>Je bent offline</h1>
+    <p>Deze pagina kunnen we nu niet laden, want er is geen internetverbinding. Probeer het zo nog eens.</p>
+    <button type="button" onclick="location.reload()">Opnieuw proberen</button>
+    <div id="eerder" hidden>
+      <h2>Eerder bekeken, ook offline te lezen</h2>
+      <ul id="lijst"></ul>
+    </div>
+  </main>
+  <script>
+    if ("caches" in window) {
+      caches.open("no-paginas").then(function (c) { return c.keys(); }).then(function (sleutels) {
+        var lijst = document.getElementById("lijst");
+        sleutels.slice(-15).reverse().forEach(function (req) {
+          var a = document.createElement("a");
+          a.href = req.url;
+          var pad = new URL(req.url).pathname.replace(/\/$/, "").split("/").pop() || "Home";
+          a.textContent = pad.replace(/-/g, " ").replace(/^./, function (l) { return l.toUpperCase(); });
+          var li = document.createElement("li");
+          li.appendChild(a);
+          lijst.appendChild(li);
+        });
+        if (sleutels.length) document.getElementById("eerder").hidden = false;
+      });
+    }
+  </script>
+</body>
+</html>
