@@ -33,6 +33,7 @@ import nieuws  # noqa: E402
 import agenda  # noqa: E402
 import vacatures  # noqa: E402
 import koppeling  # noqa: E402
+import genoemd  # noqa: E402
 
 NS = {"wp": "http://wordpress.org/export/1.2/", "content": "http://purl.org/rss/1.0/modules/content/"}
 BETAALD = ("uitgelicht", "partner", "hoofdpartner")
@@ -108,7 +109,7 @@ CATEGORIEEN = [{
          "In het weekend en bij kleinere restaurants is reserveren verstandig. Bij de meeste zaken kan dat online via "
          "hun eigen website of telefonisch."),
     ],
-    "artikelen": ["de-10-beste-restaurants-in-nijmegen-centrum", "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
+    "artikelen": ["de-3-beste-ramenzaken-in-nijmegen", "de-10-beste-restaurants-in-nijmegen-centrum", "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
                   "waar-kun-je-het-best-vegan-uit-eten-in-nijmegen", "uit-eten-met-kinderen-in-nijmegen-deze-locaties-mag-je-niet-missen"],
     "blogs": ["de-10-beste-restaurants-in-nijmegen-centrum", "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
               "waar-kun-je-het-best-vegan-uit-eten-in-nijmegen", "uit-eten-met-kinderen-in-nijmegen-deze-locaties-mag-je-niet-missen",
@@ -153,7 +154,7 @@ CATEGORIEEN = [{
         ("Kan ik vegan lunchen in Nijmegen?",
          "Ja, steeds meer lunchrooms hebben vegan broodjes, bowls of taart. Filter op vegan om ze te vinden."),
     ],
-    "artikelen": ["lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes", "hapje-eten-en-drinken-in-nijmegen",
+    "artikelen": ["de-7-beste-plekken-om-te-ontbijten-in-nijmegen", "lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes", "hapje-eten-en-drinken-in-nijmegen",
                   "op-zoek-naar-de-beste-high-tea-locaties-in-nijmegen-5-tips-waar-je-meteen-enthousiast-van-wordt"],
     "blogs": ["lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes", "hapje-eten-en-drinken-in-nijmegen",
               "op-zoek-naar-de-beste-high-tea-locaties-in-nijmegen-5-tips-waar-je-meteen-enthousiast-van-wordt"],
@@ -190,7 +191,7 @@ CATEGORIEEN = [{
         ("Waar kun je in Nijmegen op een terras zitten?",
          "Op de Grote Markt, de Waalkade en het Kelfkensbos zitten de grootste terrassen. Filter op terras voor de cafés die er een hebben."),
     ],
-    "artikelen": ["de-7-cafes-met-de-meeste-historie-van-nijmegen", "de-7-gezelligste-cafes-buiten-het-centrum-van-nijmegen",
+    "artikelen": ["wijnbars-in-nijmegen-welke-past-bij-jouw-avond", "de-7-cafes-met-de-meeste-historie-van-nijmegen", "de-7-gezelligste-cafes-buiten-het-centrum-van-nijmegen",
                   "de-8-beste-biercafes-van-nijmegen", "lekker-uitgaan-in-nijmegen-hier-doe-je-dat"],
     "blogs": ["de-7-cafes-met-de-meeste-historie-van-nijmegen", "de-7-gezelligste-cafes-buiten-het-centrum-van-nijmegen",
               "de-8-beste-biercafes-van-nijmegen", "de-dit-zijn-de-6-leukste-eetcafes-van-nijmegen",
@@ -1012,7 +1013,7 @@ CATEGORIEEN = [{
         ("Waar vind ik een bruidskapper?",
          "Filter op bruidskapsel. Plan een proefkapsel ruim voor de bruiloft."),
     ],
-    "artikelen": ["de-10-beste-kappers-in-nijmegen", "de-perfecte-krul-deze-haarstylistes-maken-jouw-kapsel-tot-een-waar-plaatje"],
+    "artikelen": ["barbershop-nijmegen-de-beste-barbier-per-wijk", "de-10-beste-kappers-in-nijmegen", "de-perfecte-krul-deze-haarstylistes-maken-jouw-kapsel-tot-een-waar-plaatje"],
     "blogs": ["kapper-nijmegen-top-kapsalons-voor-knippen-kleuren-en-styling", "de-perfecte-krul-deze-haarstylistes-maken-jouw-kapsel-tot-een-waar-plaatje", "haarstyling-tips-schitter-met-een-unieke-look", "voorkom-een-bad-hair-day-met-deze-fantastische-haarverzorgingstips", "wie-verzorgt-je-haar-als-je-op-leeftijd-bent", "hoe-ga-je-om-met-veranderingen-van-je-haar-tijdens-een-zwangerschap"],
     "meervoud": "kappers",
     "blogonderwerp": "haar en kapsels",
@@ -1188,7 +1189,7 @@ CATEGORIEEN = [{
         ("Waar vier je een kinderfeestje in Nijmegen?",
          "Filter op kinderfeestje."),
     ],
-    "artikelen": ["de-beste-escape-rooms-in-nijmegen", "5x-een-bijzonder-uitje-in-nijmegen", "teamuitje-nijmegen-spanning-natuur-en-culinair-genieten", "activiteiten-in-nijmegen"],
+    "artikelen": ["bowlen-in-nijmegen-olround-of-planet-awesome", "de-beste-escape-rooms-in-nijmegen", "5x-een-bijzonder-uitje-in-nijmegen", "teamuitje-nijmegen-spanning-natuur-en-culinair-genieten", "activiteiten-in-nijmegen"],
     "blogs": ["5x-een-bijzonder-uitje-in-nijmegen", "teamuitje-nijmegen-spanning-natuur-en-culinair-genieten", "activiteiten-in-nijmegen", "lekker-uitgaan-in-nijmegen-hier-doe-je-dat"],
     "meervoud": "uitjes",
     "blogonderwerp": "uitjes en activiteiten",
@@ -2016,7 +2017,7 @@ CATEGORIEEN = [{
         ("Geven hobbywinkels in Nijmegen workshops?",
          "Een aantal wel. Filter op workshops."),
     ],
-    "artikelen": ["7-populaire-hobbys-voor-senioren-in-nijmegen"],
+    "artikelen": ["platenzaken-in-nijmegen-wandelroute", "7-populaire-hobbys-voor-senioren-in-nijmegen"],
     "blogs": ["7-populaire-hobbys-voor-senioren-in-nijmegen"],
     "meervoud": "winkels",
     "blogonderwerp": "hobby",
@@ -2512,6 +2513,10 @@ def bedrijf_pagina(b, cat, root="../../", berichten=(), evenementen=(), vacature
                    '<button type="button" class="gidsfotos__pijl gidsfotos__pijl--volgende" aria-label="Volgende foto" hidden>&#8250;</button></div>'
                    % (esc(b["naam"]), "".join('<img src="%s" alt="%s, foto %d" loading="lazy">' % (esc(foto_url(f, root)), esc(b["naam"]), n + 1)
                                                 for n, f in enumerate(b["fotos"]))))
+    # Terug naar de lijstartikelen waarin dit bedrijf staat (vraag Frans, 21-11-2026), zie tools/genoemd.py
+    aangeraden = genoemd.blok(b["slug"], b["naam"], root)
+    if aangeraden:
+        out.append(aangeraden)
     out.append('        <section class="gids-sectie">\n          <h2>Contact en openingstijden</h2>')
     out.append('          <ul class="evenement-info%s">%s</ul>\n        </section>' % (" evenement-info--uitgelicht" if b.get("uitgelicht") else "", "".join(regels)))
     # Ook bij uitgelichte bedrijven (vraag Frans, 5-11-2026): de eigenaar moet altijd aanpassingen kunnen doorgeven
