@@ -89,6 +89,9 @@
     "kop": "Per keuken",
     "tekst": "<p>Van pizza en pasta tot sushi, curry en mezze: dit zijn de beste adressen per keuken.</p>",
     "artikelen": [
+     "chinees-in-nijmegen-afhalen-of-uit-eten",
+     "tapas-in-nijmegen-onze-3-favorieten",
+     "sushi-in-nijmegen-afhalen-bezorgen-of-aan-tafel",
      "de-3-beste-poke-bowls-in-nijmegen",
      "indonesisch-eten-in-nijmegen-rijsttafel",
      "de-3-beste-ramenzaken-in-nijmegen",
@@ -114,6 +117,7 @@
     "kop": "Per gelegenheid",
     "tekst": "<p>Lunchen tijdens een dagje stad, een high tea met vriendinnen of uit eten met de kinderen: hier vind je de plekken die daar het best bij passen.</p>",
     "artikelen": [
+     "all-you-can-eat-in-nijmegen-de-5-beste",
      "lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes",
      "op-zoek-naar-de-beste-high-tea-locaties-in-nijmegen-5-tips-waar-je-meteen-enthousiast-van-wordt",
      "droom-je-van-een-high-wine-in-nijmegen-dit-zijn-de-5-mooiste-locaties",
@@ -638,6 +642,7 @@
     "kop": "B&B's in Nijmegen en omgeving",
     "tekst": "<p>In de stad, in de heuvels van Groesbeek of bij het kasteel van Wijchen.</p>",
     "artikelen": [
+     "bed-and-breakfast-nijmegen-per-wijk",
      "de-leukste-bbs-in-nijmegen-oost",
      "ontspannen-bij-een-bb-in-groesbeek-hier-kan-je-dat-doen",
      "3x-een-leuke-bed-and-breakfast-in-wijchen"
@@ -789,6 +794,8 @@
     "kop": "Speciaalzaken",
     "tekst": "<p>Voor tweedehands parels, bloemen, geuren en sieraden. Alle <a href=\"../../bedrijvengids-categorie/kledingwinkel/\">kledingwinkels</a>, <a href=\"../../bedrijvengids-categorie/woonwinkel/\">woonwinkels</a> en andere winkels staan in onze <a href=\"../../bedrijvengids/\">bedrijvengids</a>.</p>",
     "artikelen": [
+     "opticien-nijmegen-per-wijk",
+     "juwelier-nijmegen-per-wens",
      "boekhandels-in-nijmegen-voor-elke-lezer",
      "speelgoedwinkels-in-nijmegen-cadeautips-per-leeftijd",
      "platenzaken-in-nijmegen-wandelroute",
@@ -1212,6 +1219,7 @@
     "kop": "Zwemmen",
     "tekst": "<p>Overdekt zwem je in Sportfondsenbad Nijmegen-West, het Erica Terpstra Sportfondsenbad en Sportfondsenbad Dukenburg; in de zomer gaan de buitenbaden van de Goffert en Nijmegen-West open. Buiten zwem je in de Spiegelwaal, de Bisonbaai en de Mookerplas.</p>",
     "artikelen": [
+     "welk-zwembad-in-nijmegen-past-bij-jou",
      "zwembaden-nijmegen",
      "ooijpolder",
      "over-het-water-nijmegen-verkennen-zo-doe-je-dat"
@@ -1232,6 +1240,7 @@
     "kop": "Schaatsen, dansen en voetbal",
     "tekst": "<p>Bij Triavium in Dukenburg schaats je het hele seizoen overdekt. Dansen leer je bij een van de dansscholen in de stad, en N.E.C. speelt in het Goffertstadion, midden in het Goffertpark.</p>",
     "artikelen": [
+     "dansschool-nijmegen-per-dansstijl",
      "boulderen-en-klimmen-in-nijmegen-zo-begin-je",
      "schaatsen-in-nijmegen",
      "de-beste-dansscholen-in-nijmegen",
@@ -1250,6 +1259,8 @@
     "kop": "Fit blijven",
     "tekst": "<p>Tips voor een goede warming-up, afvallen met sport en herstel bij een fysiotherapeut.</p>",
     "artikelen": [
+     "yoga-in-nijmegen-per-stijl",
+     "padel-in-nijmegen-waar-kun-je-spelen",
      "bammmm-en-je-bent-fit",
      "7x-de-beste-warming-up-oefeningen",
      "afvallen-met-sport-tips-voor-een-kleinere-maat",
@@ -1455,6 +1466,7 @@
     "kop": "High tea en high wine",
     "tekst": "<p>Een middag lang thee, taartjes en sandwiches, of de hartige variant met wijn: de mooiste high tea- en high wine-locaties van de stad.</p>",
     "artikelen": [
+     "high-tea-in-nijmegen-per-gelegenheid",
      "op-zoek-naar-de-beste-high-tea-locaties-in-nijmegen-5-tips-waar-je-meteen-enthousiast-van-wordt",
      "droom-je-van-een-high-wine-in-nijmegen-dit-zijn-de-5-mooiste-locaties"
     ]
