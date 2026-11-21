@@ -1391,6 +1391,7 @@ function stuurPlaatsingsmail(type, id, url) {
       : g.vermelding ? 'de wijzigingen voor "' + naam + '" staan nu in de bedrijvengids van NijmegenOnline.'
       : 'je bedrijf "' + naam + '" staat nu in de bedrijvengids van NijmegenOnline.') +
     (url ? '\n\nBekijk het hier: ' + url : '') +
+    (type !== 'evenement' && type !== 'vacature' ? badgeTip(url) : '') +
     '\n\nWe hebben de tekst misschien wat aangepast, zodat die goed op de website past. Klopt er iets niet? ' +
     'Beantwoord dan deze mail.\n\nMet vriendelijke groet,\nRedactie NijmegenOnline';
   mailInzender({
@@ -1401,6 +1402,15 @@ function stuurPlaatsingsmail(type, id, url) {
     htmlBody: '<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.5">' +
       html_(tekst).replace(/(https:\/\/[^\s<]+[^\s<.,])/g, '<a href="$1">$1</a>').replace(/\n/g, '<br>') + '</div>'
   });
+}
+
+// Tip in de mail aan een bedrijf dat in de gids staat: een compleet profiel staat hoger in de lijst van de categorie
+// (tools/bedrijvengids.py, actief_score), en de badge voor de eigen website (/link-naar-ons/).
+function badgeTip(url) {
+  var m = /\/bedrijvengids\/([a-z0-9-]+)\//.exec(url || '');
+  return '\n\nTip: hoe completer je profiel, hoe hoger je in de lijst van je categorie staat. Een foto, openingstijden en een ' +
+    'goede omschrijving helpen daarbij. Laat ook op je eigen website zien dat je op NijmegenOnline staat, met onze badge: ' +
+    SITE + '/link-naar-ons/' + (m ? '?bedrijf=' + m[1] : '');
 }
 
 // Mail aan een inzender. Staat redactie@nijmegenonline.nl in Gmail als "Verzenden als"-adres

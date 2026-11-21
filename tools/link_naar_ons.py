@@ -74,6 +74,7 @@ INHOUD = """        <h1>Laat zien dat je op NijmegenOnline staat</h1>
           <h2>Vragen</h2>
           <ul>
             <li><strong>Moet ik linken om in de gids te blijven?</strong> Nee. Je vermelding blijft gratis staan, met of zonder link.</li>
+            <li><strong>Hoe kom ik hoger in de lijst van mijn categorie?</strong> Hoe completer je profiel, hoe hoger je staat. Voeg via <em>Dit is mijn bedrijf</em> een foto, je openingstijden en een goede omschrijving toe, en zet onze badge op je website.</li>
             <li><strong>Klopt je vermelding niet meer?</strong> Pas hem aan via de knop <em>Dit is mijn bedrijf</em> op je pagina in de gids, of mail naar <a href="mailto:{email}">{email}</a>.</li>
             <li><strong>Niet gevonden?</strong> Dan sta je nog niet in de gids. <a href="../bedrijf-aanmelden/">Meld je bedrijf gratis aan</a>.</li>
           </ul>
