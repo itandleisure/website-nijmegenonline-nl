@@ -330,5 +330,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-21",
+  "soort": "evenement",
+  "betaald": true,
+  "sleutels": [
+   "evenement:highlight-tours-in-het-vrijheidsmuseum-3"
+  ],
+  "titel": "Highlight Tours in het Vrijheidsmuseum",
+  "link": "https://www.nijmegenonline.nl/events/highlight-tours-in-het-vrijheidsmuseum-3/",
+  "beelden": [
+   "assets/social/2026-11-21-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1802051591929909",
+  "instagram_id": "18290255371290484",
+  "instagram_link": "https://www.instagram.com/p/DgAwgiejMIB/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
