@@ -109,7 +109,7 @@ CATEGORIEEN = [{
          "In het weekend en bij kleinere restaurants is reserveren verstandig. Bij de meeste zaken kan dat online via "
          "hun eigen website of telefonisch."),
     ],
-    "artikelen": ["de-3-beste-ramenzaken-in-nijmegen", "de-10-beste-restaurants-in-nijmegen-centrum", "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
+    "artikelen": ["indonesisch-eten-in-nijmegen-rijsttafel", "de-3-beste-ramenzaken-in-nijmegen", "de-10-beste-restaurants-in-nijmegen-centrum", "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
                   "waar-kun-je-het-best-vegan-uit-eten-in-nijmegen", "uit-eten-met-kinderen-in-nijmegen-deze-locaties-mag-je-niet-missen"],
     "blogs": ["de-10-beste-restaurants-in-nijmegen-centrum", "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
               "waar-kun-je-het-best-vegan-uit-eten-in-nijmegen", "uit-eten-met-kinderen-in-nijmegen-deze-locaties-mag-je-niet-missen",
@@ -2087,7 +2087,7 @@ CATEGORIEEN = [{
         ("Kan ik in Nijmegen een fiets huren?",
          "Ja, een paar fietsenwinkels verhuren fietsen. Filter op fietsverhuur."),
     ],
-    "artikelen": [],
+    "artikelen": ["fietsenmaker-nijmegen-per-wijk", "zo-vind-je-een-e-bike-die-bij-jou-past"],
     "blogs": [],
     "meervoud": "fietsenwinkels",
     "blogonderwerp": "fietsen",
