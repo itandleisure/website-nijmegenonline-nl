@@ -153,8 +153,17 @@ document.querySelectorAll("form.formulier").forEach(function (form) {
       .then(function (res) {
         clearTimeout(timer);
         if (!res.ok) throw new Error(res.fout || "mislukt");
+        var vermelding = form.elements.vermelding ? form.elements.vermelding.value : "";
         form.reset();
         meld(form.dataset.bedankt || "Bedankt! We hebben je bericht ontvangen en nemen snel contact met je op.");
+        // Na "Dit is mijn bedrijf": tip om het profiel compleet te maken, met de badge voor de eigen site
+        if (vermelding) {
+          var tip = document.createElement("p");
+          tip.innerHTML = 'Tip: hoe completer je profiel, hoe hoger je in de lijst van je categorie staat. Een foto, openingstijden ' +
+            'en een goede omschrijving helpen daarbij, net als <a href="/link-naar-ons/?bedrijf=' + encodeURIComponent(vermelding) +
+            '">onze badge op je eigen website</a>.';
+          melding.appendChild(tip);
+        }
       })
       .catch(function (e) {
         if (e && e.message === "controle") {

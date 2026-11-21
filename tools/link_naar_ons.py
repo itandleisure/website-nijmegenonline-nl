@@ -2,8 +2,8 @@
 
 Met ?bedrijf=<slug> staat het bedrijf al gekozen en wijst de code naar zijn eigen pagina in de gids; die link staat
 in de mail aan de bedrijven en op elke bedrijfspagina (knop bij "Is dit jouw bedrijf?"). Bedrijven uit een top-lijst
-(data/badge-aanraders.json, tools/badges.py) krijgen ook de groene badge "Aanrader van NijmegenOnline", met een link
-naar die lijst.
+(data/badge-aanraders.json, tools/badges.py) krijgen ook de groene badge "Aanrader van NijmegenOnline". Elke badge linkt naar de eigen
+bedrijfspagina in de gids (één regel, besluit Frans 21-11-2026); die pagina linkt zelf door naar de top-lijst.
 
 De link is een vriendelijk verzoek, geen voorwaarde: een vermelding blijft gratis, ook zonder link. Google ziet een
 verplichte link in ruil voor een vermelding als linkruil; een vrijwillige badge is een gewone, natuurlijke link.
@@ -74,6 +74,7 @@ INHOUD = """        <h1>Laat zien dat je op NijmegenOnline staat</h1>
           <h2>Vragen</h2>
           <ul>
             <li><strong>Moet ik linken om in de gids te blijven?</strong> Nee. Je vermelding blijft gratis staan, met of zonder link.</li>
+            <li><strong>Hoe kom ik hoger in de lijst van mijn categorie?</strong> Hoe completer je profiel, hoe hoger je staat. Voeg via <em>Dit is mijn bedrijf</em> een foto, je openingstijden en een goede omschrijving toe, en zet onze badge op je website.</li>
             <li><strong>Klopt je vermelding niet meer?</strong> Pas hem aan via de knop <em>Dit is mijn bedrijf</em> op je pagina in de gids, of mail naar <a href="mailto:{email}">{email}</a>.</li>
             <li><strong>Niet gevonden?</strong> Dan sta je nog niet in de gids. <a href="../bedrijf-aanmelden/">Meld je bedrijf gratis aan</a>.</li>
           </ul>
@@ -94,7 +95,6 @@ INHOUD = """        <h1>Laat zien dat je op NijmegenOnline staat</h1>
             }}
             var alt = naam ? esc(naam) + " is te vinden op NijmegenOnline" : "Te vinden op NijmegenOnline";
             if (soort === "aanrader-van-nijmegenonline" && lijst) {{
-              href = lijst.url;
               alt = esc(naam) + ": aanrader in " + esc(lijst.titel) + " op NijmegenOnline";
             }}
             return '<a href="' + href + '"><img src="' + SITE + "assets/img/badge/" + soort + '.png" alt="' + alt + '" width="200" height="73"></a>';
@@ -114,7 +114,7 @@ INHOUD = """        <h1>Laat zien dat je op NijmegenOnline staat</h1>
             $("zoekblok").hidden = true;
             $("keuzeaanrader").hidden = !lijst;
             if (lijst) {{
-              $("aanradertekst").textContent = "Je staat in " + lijst.map(function (l) {{ return l.titel; }}).join(" en ") + ". Deze badge linkt naar die lijst.";
+              $("aanradertekst").textContent = "Je staat in " + lijst.map(function (l) {{ return l.titel; }}).join(" en ") + ". Ook deze badge linkt naar je eigen pagina in de gids.";
               $("keuzeaanrader").querySelector("input").checked = true;
             }} else if (document.querySelector('input[name="badge"]:checked').value === "aanrader-van-nijmegenonline") {{
               document.querySelector('input[name="badge"]').checked = true;

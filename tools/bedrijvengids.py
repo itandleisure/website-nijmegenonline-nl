@@ -2730,11 +2730,33 @@ def gewone_kaart(b, root):
             % (root, b["slug"], esc("|".join(km)), esc(b["naam"]), esc(adresregel(b)), chips))
 
 
+def _json(naam):
+    pad = ROOT / "data" / naam
+    return json.loads(pad.read_text(encoding="utf-8")) if pad.exists() else {}
+
+
+GECLAIMD = set(_json("bedrijvengids-wijzigingen.json"))
+TERUGLINKS = {s for s, v in _json("bedrijvengids-teruglinks.json").items() if isinstance(v, dict) and v.get("link")}
+ACTIEF_VANAF = 3
+
+
+def actief_score(b):
+    """Hoe compleet en actief een gratis vermelding is (besluit Frans 21-11-2026). Op de categoriepagina's staan
+    actieve bedrijven (score >= ACTIEF_VANAF) boven de rest, elk deel op alfabet; Uitgelicht staat daar weer boven.
+    Punten: foto 1, eigen tekst van 400+ tekens 1, openingstijden 1, geclaimd via Dit is mijn bedrijf 2, en een link
+    naar ons op de eigen website 1 (data/bedrijvengids-teruglinks.json, elke maandag gemeten door tools/teruglinks.py).
+    Alleen de categoriepagina's; de redactionele gidsen en top-lijsten kiezen zelf."""
+    tekst = re.sub(r"<[^>]+>", "", b.get("tekst") or "")
+    return (bool(b.get("foto")) + (len(tekst) >= 400) + any(t for t in (b.get("openingstijden") or []) if t)
+            + 2 * (b["slug"] in GECLAIMD) + (b["slug"] in TERUGLINKS))
+
+
 def categorie_pagina(cat, gids, overig, artikelen, root="../../"):
     """Indeling oktober 2026: alle gratis vermeldingen gelijk en zonder foto; alleen Uitgelicht valt op, lege plekken
-    zijn advertentie, en onderaan staat wat Uitgelicht en Partner opleveren."""
+    zijn advertentie, en onderaan staat wat Uitgelicht en Partner opleveren. Sinds 21-11-2026 staan actieve
+    bedrijven (zie actief_score) in de lijst boven de rest."""
     canonical = "%s/bedrijvengids-categorie/%s/" % (SITE, cat["slug"])
-    alle = sorted(gids + overig, key=lambda b: b["naam"].lower())
+    alle = sorted(gids + overig, key=lambda b: (actief_score(b) < ACTIEF_VANAF, b["naam"].lower()))
     lijst = {"@context": "https://schema.org", "@type": "ItemList", "name": cat["naam"], "itemListElement": [
         {"@type": "ListItem", "position": n + 1, "name": b["naam"],
          "url": "%s/bedrijvengids/%s/" % (SITE, b["slug"])} for n, b in enumerate(alle)]}
