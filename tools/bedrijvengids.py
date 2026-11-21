@@ -2580,7 +2580,8 @@ def mijn_bedrijf(b, cat, root):
             '          <p><a class="knop" href="%s">Dit is mijn bedrijf</a></p>\n'
             '          <p>Organiseer je een evenement? <a href="%sevenement-aanmelden/?bedrijf=%s">Zet het gratis in de agenda</a>, '
             'dan staat het ook op deze pagina. Personeel nodig? <a href="%svacature-plaatsen/?bedrijf=%s">Plaats gratis een vacature</a>.</p>\n'
-            '        </aside>' % (esc(b["naam"]), esc(uitleg), esc(link), root, b["slug"], root, b["slug"]))
+            '          <p>Laat op je eigen website zien dat je hier staat: <a href="%slink-naar-ons/?bedrijf=%s">haal je badge</a>.</p>\n'
+            '        </aside>' % (esc(b["naam"]), esc(uitleg), esc(link), root, b["slug"], root, b["slug"], root, b["slug"]))
 
 
 def datum_nl(iso):
