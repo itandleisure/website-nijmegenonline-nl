@@ -27,6 +27,8 @@
 11. Mobiel en app (PWA): zet partials/pwa.html (manifest, themakleur) in elke <head> en houdt de versie van site.css
     in alle pagina's en in sw.js gelijk aan CSS_VERSIE. De vaste onderbalk voor telefoons staat in partials/footer.html.
 12. Meldt aan het eind indexeerbare pagina's met meer of minder dan één <title> of <h1>, of zonder meta description.
+13. tools/klikbaar.py: webadressen (http://, https://, www.) en e-mailadressen die als gewone tekst in <main> staan,
+    zoals een ticketlink in een evenement of een mailadres in een persbericht, worden klikbare links.
 
 Gebruik: python tools/build.py [--live]
 """
@@ -37,6 +39,7 @@ import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import klikbaar  # noqa: E402
 import vindbaar  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -140,6 +143,8 @@ def main(live=False):
                 return "%s<!-- %s -->\n%s\n%s<!-- /%s -->" % (insprong, naam, regels, insprong, naam)
 
             nieuw = patroon.sub(vervang, nieuw)
+
+        nieuw = klikbaar.maak_klikbaar(nieuw, lambda pad: bestaat(eindadres(pad, kaart)))
 
         def intern(m):
             pad = eindadres(m.group(2), kaart)
