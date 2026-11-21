@@ -24,7 +24,9 @@
    dan wordt ingekort tot het eerste deel voor " | " (minstens 30 tekens), en anders op een woordgrens met "…".
    og:title en de kop op de pagina blijven de volledige titel houden.
 10. tools/vindbaar.py: "Bijgewerkt op" en "In het kort" op de gidsen, organisatiegegevens op de homepage en llms.txt.
-11. Meldt aan het eind indexeerbare pagina's met meer of minder dan één <title> of <h1>, of zonder meta description.
+11. Mobiel en app (PWA): zet partials/pwa.html (manifest, themakleur) in elke <head> en houdt de versie van site.css
+    in alle pagina's en in sw.js gelijk aan CSS_VERSIE. De vaste onderbalk voor telefoons staat in partials/footer.html.
+12. Meldt aan het eind indexeerbare pagina's met meer of minder dan één <title> of <h1>, of zonder meta description.
 
 Gebruik: python tools/build.py [--live]
 """
@@ -41,6 +43,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PARTIALS = ROOT / "partials"
 SITE = "https://www.nijmegenonline.nl"
 UPLOAD = re.compile(r'(src="|srcset=")?https?://(?:www\.)?nijmegenonline\.nl/wp-content/uploads/([^"\'\s)]+?)\.(?:png|jpe?g|gif|webp)', re.I)
+# Versie van site.css: verhoog dit getal na een wijziging in de opmaak. build.py zet het in elke pagina en in sw.js,
+# zodat telefoons de nieuwe opmaak meteen ophalen (en de service worker zijn cache vernieuwt).
+CSS_VERSIE = "site.css?v=36"
+CSS = re.compile(r"site\.css\?v=\d+")
 MAIN = re.compile(r"<main\b(?![^>]*data-pagefind-body)([^>]*)>")
 # soort per eerste deel van het pad, voor het filter op de zoekpagina; de rest is "Artikelen"
 SOORTEN = {
@@ -121,6 +127,9 @@ def main(live=False):
         root = root_prefix(page)
         if "<!-- analytics -->" not in nieuw:
             nieuw = re.sub(r"\n([ \t]*)</head>", r"\n\1  <!-- analytics --><!-- /analytics -->\n\1</head>", nieuw, count=1)
+        if "<!-- pwa -->" not in nieuw:
+            nieuw = re.sub(r"\n([ \t]*)<!-- analytics -->", r"\n\1<!-- pwa --><!-- /pwa -->\n\1<!-- analytics -->", nieuw, count=1)
+        nieuw = CSS.sub(CSS_VERSIE, nieuw)
         for naam, inhoud in partials.items():
             blok = inhoud.replace("{{root}}", root)
             patroon = re.compile(r"([ \t]*)<!-- %s -->.*?<!-- /%s -->" % (naam, naam), re.S)
@@ -165,6 +174,9 @@ def main(live=False):
         if nieuw != html:
             page.write_text(nieuw, encoding="utf-8")
 
+    sw = ROOT / "sw.js"
+    if sw.exists():
+        sw.write_text(re.sub(r'var VERSIE = "\d+";', 'var VERSIE = "%s";' % CSS_VERSIE.split("=")[1], sw.read_text(encoding="utf-8")), encoding="utf-8")
     vindbaar.main()
     sitemap(live)
     seo_controle()

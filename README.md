@@ -55,6 +55,19 @@ zonder partners (die staan daar al in de tekst).
 
 Zie [LIVEGANG.md](LIVEGANG.md) voor de stappen naar www.nijmegenonline.nl.
 
+## Mobiel en app (PWA)
+
+De opmaak is mobile first: `assets/css/site.css` beschrijft eerst de telefoon en daarna (min-width) wat er op desktop anders is.
+
+- **Onderbalk**: op telefoon en tablet een vaste balk met Agenda, Bedrijven, Nieuws, Vacatures en Zoeken. Staat in
+  `partials/footer.html`; een knop toevoegen of wijzigen kan daar, daarna `python tools/build.py`.
+- **Op het beginscherm zetten**: `manifest.webmanifest` (naam, kleuren, iconen in `assets/img/icoon-*.png`) en
+  `partials/pwa.html`, dat build.py in elke `<head>` zet.
+- **Sneller en offline**: `sw.js` bewaart opmaak en foto's en de laatst bekeken pagina's. Pagina's komen altijd eerst
+  van het netwerk, dus nieuwe inhoud is meteen zichtbaar. Zonder internet ziet de bezoeker `offline.html`.
+- **Na een wijziging in de opmaak**: verhoog `CSS_VERSIE` in `tools/build.py` en draai build.py. Dat zet de nieuwe versie
+  in alle pagina's en in `sw.js`, zodat telefoons de nieuwe opmaak meteen ophalen.
+
 ## Zoeken
 
 De zoekpagina `zoeken/` gebruikt [Pagefind](https://pagefind.app): een zoekindex van losse bestanden in `pagefind/`,

@@ -98,62 +98,67 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 6px 16px;
 }
 
-/* Header: bovenbalk scrolt mee weg, hoofdbalk met logo en menu blijft bovenin staan */
-.bovenbalk { background: var(--donkerblauw); font-size: 0.85rem; }
+/* Header, mobile first: eerst de opmaak voor de telefoon, daarna (min-width: 1101px) wat er op desktop anders is.
+   Telefoon: compacte balk met logo en menuknop; Agenda, Bedrijven, Nieuws, Vacatures en Zoeken staan in de onderbalk.
+   Desktop: bovenbalk die meescrolt, hoofdbalk met logo en het hele menu blijft bovenin staan. */
+html { scroll-padding-top: 72px; }
+.bovenbalk { display: none; background: var(--donkerblauw); font-size: 0.85rem; }
 .bovenbalk ul { list-style: none; margin: 0; padding: 8px 0; display: flex; gap: 20px; justify-content: flex-end; flex-wrap: wrap; }
 .bovenbalk a { color: var(--wit); text-decoration: none; font-weight: 600; }
 .sitekop { position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(13, 58, 99, 0.18); }
 .hoofdbalk { background: var(--blauw); }
-.kop { display: flex; align-items: center; gap: 8px 20px; padding: 10px 16px; }
-.logo { margin-right: auto; }
-.logo img { height: 60px; width: auto; }
-.hoofdmenu ul { list-style: none; display: flex; gap: 4px; margin: 0; padding: 0; }
-.hoofdmenu a { display: block; color: var(--wit); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.4px; padding: 8px 12px; border-radius: 6px; transition: background-color 0.15s ease; }
+.kop { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 6px 16px; }
+.logo { margin-right: auto; flex-shrink: 0; }
+.logo img { height: 40px; width: auto; }
+.hoofdmenu { order: 3; flex-basis: 100%; display: none; max-height: calc(100vh - 140px); overflow-y: auto; }
+.hoofdmenu.open { display: block; }
+.hoofdmenu ul { list-style: none; display: flex; flex-direction: column; gap: 2px; margin: 6px 0 0; padding: 6px 0 10px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+.hoofdmenu a { display: flex; align-items: center; min-height: 48px; color: var(--wit); text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 1rem; letter-spacing: 0.4px; padding: 10px 12px; border-radius: 6px; white-space: nowrap; transition: background-color 0.15s ease; }
 .hoofdmenu a:hover { background: rgba(255, 255, 255, 0.14); color: var(--wit); }
 .hoofdmenu a[aria-current] { background: rgba(13, 58, 99, 0.35); color: var(--wit); box-shadow: inset 0 -3px 0 #b9e58f; }
-.hoofdmenu__extra { display: none; }
-/* Aanmelden: groene knop aan het eind van het menu, zodat bezoekers zien dat ze zelf iets kunnen aanmelden */
-.hoofdmenu__aanmelden { margin-left: 4px; }
-.hoofdmenu .hoofdmenu__aanmelden a { background: var(--groen); border-radius: 999px; padding-left: 16px; padding-right: 16px; }
+/* Aanmelden: groene knop, zodat bezoekers zien dat ze zelf iets kunnen aanmelden */
+.hoofdmenu__aanmelden { margin: 6px 0 0; }
+.hoofdmenu .hoofdmenu__aanmelden a { display: inline-flex; background: var(--groen); border-radius: 999px; padding-left: 16px; padding-right: 16px; }
 .hoofdmenu .hoofdmenu__aanmelden a:hover { background: #46851b; }
 .hoofdmenu .hoofdmenu__aanmelden a[aria-current] { background: #46851b; box-shadow: inset 0 0 0 2px #b9e58f; }
-/* Menu-onderdelen: op desktop geen Home (het logo gaat al naar home) en iets compacter; onder 1100px het mobiele menu */
-.logo { flex-shrink: 0; }
-.hoofdmenu a { white-space: nowrap; }
-.hoofdmenu__home { display: none; }
+.hoofdmenu__extra a { text-transform: none; font-weight: 500; font-size: 0.95rem; opacity: 0.9; }
+.hoofdmenu__extra:first-of-type { margin-top: 6px; padding-top: 6px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+.kop__knop { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.14); color: var(--wit); cursor: pointer; padding: 0; flex: none; transition: background-color 0.15s ease; }
+.kop__knop:hover { background: rgba(255, 255, 255, 0.26); color: var(--wit); }
+.kop__knop svg { width: 20px; height: 20px; }
+.kop > .kop__knop[href] { display: none; } /* zoeken staat op de telefoon in de onderbalk */
+.kop__menuknop .dicht { display: none; }
+.kop__menuknop[aria-expanded="true"] .open { display: none; }
+.kop__menuknop[aria-expanded="true"] .dicht { display: block; }
+
+/* Vaste onderbalk (partials/footer.html): vijf grote knoppen binnen bereik van de duim, ook naast de "home"-streep van iPhones */
+.onderbalk { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000; display: grid; grid-template-columns: repeat(5, 1fr); background: var(--wit); border-top: 1px solid var(--rand); box-shadow: 0 -2px 12px rgba(13, 58, 99, 0.12); padding-bottom: env(safe-area-inset-bottom, 0); }
+.onderbalk a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 58px; padding: 6px 2px; color: var(--grijs); text-decoration: none; font-size: 0.72rem; font-weight: 700; line-height: 1.2; -webkit-tap-highlight-color: transparent; }
+.onderbalk svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.onderbalk a:hover, .onderbalk a:active { color: var(--donkerblauw); }
+.onderbalk a[aria-current] { color: var(--blauw); box-shadow: inset 0 3px 0 var(--blauw); }
+body:has(.onderbalk) { padding-bottom: calc(58px + env(safe-area-inset-bottom, 0px)); }
+
 @media (min-width: 1101px) {
-  .hoofdmenu ul { gap: 2px; }
-  .hoofdmenu a { padding: 8px 6px; font-size: 0.85rem; letter-spacing: 0; }
-  .hoofdmenu .hoofdmenu__aanmelden a { padding-left: 13px; padding-right: 13px; }
+  html { scroll-padding-top: 96px; }
+  .bovenbalk { display: block; }
+  .kop { flex-wrap: nowrap; gap: 8px 20px; padding: 10px 16px; }
+  .logo img { height: 60px; }
+  .hoofdmenu { order: 0; flex-basis: auto; display: block; max-height: none; overflow: visible; }
+  .hoofdmenu ul { flex-direction: row; gap: 2px; margin: 0; padding: 0; border: 0; }
+  .hoofdmenu a { display: block; min-height: 0; padding: 8px 6px; font-size: 0.85rem; letter-spacing: 0; }
+  .hoofdmenu__home, .hoofdmenu__extra { display: none; }
+  .hoofdmenu__aanmelden { margin: 0 0 0 4px; }
+  .hoofdmenu .hoofdmenu__aanmelden a { display: block; padding-left: 13px; padding-right: 13px; }
+  .kop > .kop__knop[href] { display: inline-flex; width: 42px; height: 42px; }
+  .kop__menuknop { display: none; }
+  .onderbalk { display: none; }
+  body:has(.onderbalk) { padding-bottom: 0; }
 }
 /* Negen menu-onderdelen (met Aanmelden): op smalle desktops logo en tekst iets kleiner zodat alles op één regel past */
 @media (min-width: 1101px) and (max-width: 1239px) {
   .logo img { height: 50px; }
-  .hoofdmenu a { padding: 8px 5px; font-size: 0.8rem; letter-spacing: 0; }
-}
-.kop__knop { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.14); color: var(--wit); cursor: pointer; padding: 0; flex: none; transition: background-color 0.15s ease; }
-.kop__knop:hover { background: rgba(255, 255, 255, 0.26); color: var(--wit); }
-.kop__knop svg { width: 20px; height: 20px; }
-.kop__menuknop { display: none; }
-.kop__menuknop .dicht { display: none; }
-.kop__menuknop[aria-expanded="true"] .open { display: none; }
-.kop__menuknop[aria-expanded="true"] .dicht { display: block; }
-@media (max-width: 1100px) {
-  html { scroll-padding-top: 80px; }
-  .hoofdmenu__home { display: block; }
-  .bovenbalk { display: none; }
-  .kop { flex-wrap: wrap; padding: 8px 16px; }
-  .logo img { height: 44px; }
-  .kop__menuknop { display: inline-flex; }
-  .hoofdmenu { order: 3; flex-basis: 100%; display: none; }
-  .hoofdmenu.open { display: block; }
-  .hoofdmenu ul { flex-direction: column; gap: 2px; padding: 6px 0 10px; border-top: 1px solid rgba(255, 255, 255, 0.2); margin-top: 6px; }
-  .hoofdmenu a { font-size: 1rem; padding: 10px 12px; }
-  .hoofdmenu__aanmelden { margin: 6px 0 0; }
-  .hoofdmenu .hoofdmenu__aanmelden a { display: inline-block; }
-  .hoofdmenu__extra { display: block; }
-  .hoofdmenu__extra a { text-transform: none; font-weight: 500; font-size: 0.95rem; opacity: 0.9; }
-  .hoofdmenu__extra:first-of-type { margin-top: 6px; padding-top: 6px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+  .hoofdmenu a { padding: 8px 5px; font-size: 0.8rem; }
 }
 
 /* Homepage */
@@ -807,3 +812,32 @@ h1, h2, h3 { hyphens: auto; overflow-wrap: break-word; }
 .gidszoeker__cat strong { color: var(--groen); }
 .gidszoeker__niets, .gidszoeker__meer { padding: 8px 14px; color: var(--grijs); font-size: 0.9rem; }
 .gidszoeker__status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); margin: 0; }
+
+/* ---- Staat bewust onderaan, zodat deze regels voor telefoons voorgaan op de algemene regels hierboven ---- */
+/* Telefoon: lees- en tikgemak. Grotere tikvlakken (minstens 44px), invoervelden van 16px zodat iPhones niet inzoomen,
+   en artikelen over de volle breedte in plaats van een kaart met een rand eromheen. */
+input, select, textarea { font-size: max(16px, 1em); }
+@media (max-width: 640px) {
+  body { font-size: 1rem; line-height: 1.65; }
+  .artikel-wrap { padding: 0 0 32px; }
+  .artikel-wrap > .container:has(> .artikel-layout, > .artikel) { padding: 0; }
+  .artikel-wrap > .container > .artikel, .artikel-layout > .artikel { border-radius: 0; box-shadow: none; padding: 16px 16px 28px; }
+  .artikel-layout { gap: 16px; }
+  .artikel-layout > .zijbalk, .artikel-wrap > .container > .gerelateerd { padding: 0 16px; }
+  .intro { font-size: 1.08rem; }
+  .artikel h2 { font-size: 1.35rem; margin-top: 32px; }
+  .kruimelpad { font-size: 0.85rem; }
+  .kruimelpad a { display: inline-block; padding: 6px 0; }
+  .rubriek-menu a, .gidsen-filter button, .delen__knop { min-height: 44px; display: inline-flex; align-items: center; }
+  .voet ul { gap: 0; }
+  .voet ul a { display: block; padding: 8px 0; }
+  .voet__social a { width: 44px; height: 44px; }
+  footer { padding-top: 32px; }
+}
+@media (max-width: 640px) {
+  .hero { padding: 28px 0 36px; }
+  .hero__intro { font-size: 1.02rem; margin-bottom: 20px; }
+  .hero__snel { gap: 8px; margin-top: 16px; }
+  .hero__snel a { min-height: 44px; padding: 8px 14px; }
+  .hero__zoek button { min-height: 44px; }
+}
