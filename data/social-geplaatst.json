@@ -350,5 +350,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-22",
+  "soort": "evenement",
+  "betaald": true,
+  "sleutels": [
+   "evenement:stadfeest-koopzondag-klever-winterzauber"
+  ],
+  "titel": "Stadfeest & Koopzondag: Klever Winterzauber",
+  "link": "https://www.nijmegenonline.nl/events/stadfeest-koopzondag-klever-winterzauber/",
+  "beelden": [
+   "assets/social/2026-11-22-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1802871065181295",
+  "instagram_id": "17953800666055507",
+  "instagram_link": "https://www.instagram.com/p/DgCqxeaDXbb/",
+  "story_sleutel": "story:hilde-vos-trio",
+  "story_id": "18101363612209465",
+  "status": "geplaatst"
  }
 ]
