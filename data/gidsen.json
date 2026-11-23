@@ -97,6 +97,7 @@
      "de-3-beste-ramenzaken-in-nijmegen",
      "culinair-genieten-in-italiaanse-sfeer-probeer-deze-restaurants-in-nijmegen",
      "pizza-liefhebbers-dit-zijn-de-beste-pizzerias-in-nijmegen",
+     "pizza-bestellen-in-nijmegen-per-wijk",
      "thais-eten-in-nijmegen-onze-top-3-thaise-restaurants",
      "sushi-liefhebbers-dit-zijn-de-beste-japanse-restaurants-in-nijmegen",
      "laat-je-culinair-verrassen-in-chinese-sfeer-de-beste-restaurants-in-nijmegen",
@@ -110,7 +111,8 @@
      "mexicaans-genieten-in-nijmegen-dit-zijn-de-beste-adresjes",
      "ontdek-de-franse-keuken-in-nijmegen",
      "geniet-van-de-hollandse-pot-in-deze-nederlandse-restaurants-in-nijmegen",
-     "zin-in-een-broodje-shoarma-bezoek-deze-tentjes-in-nijmegen"
+     "zin-in-een-broodje-shoarma-bezoek-deze-tentjes-in-nijmegen",
+     "snackbar-en-friet-in-nijmegen-onze-top-7"
     ]
    },
    {
@@ -511,6 +513,7 @@
     "kop": "Wegwijs in de stad",
     "tekst": "<p>Handig voor je eerste weken in Nijmegen.</p>",
     "artikelen": [
+     "huisarts-nijmegen-nieuwe-patienten-per-wijk",
      "nieuw-in-nijmegen-voor-studie-of-werk-zo-start-je-slim-met-een-prepaid-simkaart",
      "nijmegen-in-je-broekzak-digitale-hulpmiddelen-voor-iedere-inwoner",
      "betaalbaar-uit-eten-in-nijmegen-zo-doe-je-dat",
@@ -569,6 +572,7 @@
     "kop": "Personeel en team",
     "tekst": "<p>Mensen vinden en je team bij elkaar brengen.</p>",
     "artikelen": [
+     "uitzendbureau-nijmegen-per-soort-werk",
      "zin-om-te-werken-ga-dan-naar-een-uitzendbureau-in-nijmegen",
      "teamuitje-nijmegen-spanning-natuur-en-culinair-genieten",
      "het-belang-van-goede-koffie-op-het-werk",
@@ -1039,6 +1043,7 @@
     "kop": "Onderweg in de stad",
     "tekst": "<p>Deelauto's, deelscooters en de pont over de Waal: zo kom je rond zonder eigen auto. En over de Waalbrug rijden dagelijks tienduizenden voertuigen de stad in en uit.</p>",
     "artikelen": [
+     "garage-en-apk-in-nijmegen-per-wijk",
      "mobiliteit-in-nijmegen-hoe-flexibele-oplossingen-het-dagelijks-leven-vergemakkelijken",
      "over-het-water-nijmegen-verkennen-zo-doe-je-dat",
      "waalbrug-nijmegen"
@@ -1262,6 +1267,7 @@
     "kop": "Sportscholen",
     "tekst": "<p>Nijmegen heeft ruim vijftig sportscholen, van ketens die dag en nacht open zijn tot boutique gyms, CrossFit-boxen en een sportschool alleen voor vrouwen. Onze top 10 helpt je kiezen; alle adressen staan in de <a href=\"../../bedrijvengids-categorie/sportschool/\">bedrijvengids</a>.</p>",
     "artikelen": [
+     "vechtsport-in-nijmegen-per-sport",
      "de-10-beste-sportscholen-in-nijmegen"
     ]
    },
@@ -1269,6 +1275,7 @@
     "kop": "Fit blijven",
     "tekst": "<p>Tips voor een goede warming-up, afvallen met sport en herstel bij een fysiotherapeut.</p>",
     "artikelen": [
+     "pilates-in-nijmegen-reformer-of-mat",
      "fysiotherapie-nijmegen-per-klacht",
      "yoga-in-nijmegen-per-stijl",
      "padel-in-nijmegen-waar-kun-je-spelen",
