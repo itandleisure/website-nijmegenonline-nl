@@ -1,30 +1,4 @@
 {
- "2026-11-08": {
-  "datum": "2026-11-08",
-  "soort": "partner",
-  "betaald": true,
-  "sleutels": [
-   "bedrijf:de-brauerij"
-  ],
-  "titel": "De Brauerij",
-  "link": "https://www.nijmegenonline.nl/bedrijvengids/de-brauerij/",
-  "beelden": [
-   "assets/social/2026-11-08-1.jpg"
-  ],
-  "story": "assets/social/2026-11-08-story.jpg",
-  "facebook": "Advertentie\n\nEen monumentale boerderij uit circa 1900, op een terp tegenover de St. Bonifatiuskerk: dat is De Brauerij in Niel, vlak bij Nijmegen. Het is een culturele ontmoetingsplaats voor concerten, zakelijke bijeenkomsten en speciale gelegenheden. De centrale ruimte van circa 80 m² biedt plek aan maximaal 50 bezoekers, met onder meer geluidsinstallatie en theaterlicht.\n\n📍 Mehrer Straße 1, Kranenburg\n\n👉 https://www.nijmegenonline.nl/bedrijvengids/de-brauerij/",
-  "instagram": "Advertentie\n\nEen monumentale boerderij uit circa 1900, op een terp tegenover de St. Bonifatiuskerk: dat is De Brauerij in Niel, vlak bij Nijmegen. Het is een culturele ontmoetingsplaats voor concerten, zakelijke bijeenkomsten en speciale gelegenheden. De centrale ruimte van circa 80 m² biedt plek aan maximaal 50 bezoekers, met onder meer geluidsinstallatie en theaterlicht.\n\n📍 Mehrer Straße 1, Kranenburg\n\n📸 @debrauerij\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #evenementenlocatie #kranenburg #cultuur",
-  "tekst_door": "claude",
-  "status": "geplaatst",
-  "gemaakt": "2026-11-08T01:27+01:00",
-  "story_sleutel": "story:magda-novels",
-  "issue": 114,
-  "facebook_id": "101515831757744_1784853480316387",
-  "instagram_id": "17985091980066807",
-  "instagram_link": "https://www.instagram.com/p/DffCCsbl32J/",
-  "story_id": "18128170096918977",
-  "fouten": []
- },
  "2026-11-09": {
   "datum": "2026-11-09",
   "soort": "week",
@@ -387,5 +361,33 @@
   "instagram_link": "https://www.instagram.com/p/DgCqxeaDXbb/",
   "story_id": "18101363612209465",
   "fouten": []
+ },
+ "2026-11-23": {
+  "datum": "2026-11-23",
+  "soort": "week",
+  "betaald": false,
+  "sleutels": [
+   "evenement:maak-kennis-met-intuitieve-ontwikkeling-open-les-7",
+   "evenement:nijmegen-veilig-de-nacht-in-actie-aletta",
+   "evenement:thema-avond-amerika-post-truth-politics-en-politiek-geweld",
+   "evenement:swingende-senioren-in-obg-2",
+   "evenement:kerstmarkt-klooster-graefenthal-twee-weekenden"
+  ],
+  "titel": "Deze week in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "beelden": [
+   "assets/social/2026-11-23-0.jpg",
+   "assets/social/2026-11-23-1.jpg",
+   "assets/social/2026-11-23-2.jpg",
+   "assets/social/2026-11-23-3.jpg",
+   "assets/social/2026-11-23-4.jpg",
+   "assets/social/2026-11-23-5.jpg"
+  ],
+  "story": null,
+  "facebook": "Van intuïtie tot dansen, van muziek tot politiek: deze week in Nijmegen is er genoeg om je agenda mee te vullen. Er is een avond over een veiliger uitgaansleven, een lezing over Amerikaanse politiek en een dansavond voor zestig-plussers. Wil je alvast aan kerst denken? In Goch start eind van de week een kerstmarkt. 🎄\n\n• Maak kennis met intuïtieve ontwikkeling (open les) (ma 23 nov, 16.30 uur, Bosatelier Nijmegen)\n• Nijmegen veilig de nacht in - Actie Aletta (di 24 nov, 17.30 uur, Doornroosje Nijmegen)\n• Thema-avond Amerika: post-truth politics en politiek geweld (di 24 nov, 17.30 uur, Infocentrum WO2 Nijmegen)\n• Swingende senioren in OBG (di 24 nov, 19.30 uur, OBG Nijmegen)\n• Kerstmarkt Klooster Graefenthal (vr 27 nov t/m zo 6 dec, Kloster Graefenthal Goch)\n\n👉 https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "instagram": "Van intuïtie tot dansen, van muziek tot politiek: deze week in Nijmegen is er genoeg om je agenda mee te vullen. Er is een avond over een veiliger uitgaansleven, een lezing over Amerikaanse politiek en een dansavond voor zestig-plussers. Wil je alvast aan kerst denken? In Goch start eind van de week een kerstmarkt. 🎄\n\n• Maak kennis met intuïtieve ontwikkeling (open les) (ma 23 nov, 16.30 uur, Bosatelier Nijmegen)\n• Nijmegen veilig de nacht in - Actie Aletta (di 24 nov, 17.30 uur, Doornroosje Nijmegen)\n• Thema-avond Amerika: post-truth politics en politiek geweld (di 24 nov, 17.30 uur, Infocentrum WO2 Nijmegen)\n• Swingende senioren in OBG (di 24 nov, 19.30 uur, OBG Nijmegen)\n• Kerstmarkt Klooster Graefenthal (vr 27 nov t/m zo 6 dec, Kloster Graefenthal Goch)\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #agenda #weekendtips #uitjes",
+  "tekst_door": "claude",
+  "status": "gepland",
+  "gemaakt": "2026-11-23T01:46+01:00"
  }
 }
