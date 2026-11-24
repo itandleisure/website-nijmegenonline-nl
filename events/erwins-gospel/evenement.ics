@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:erwins-gospel@nijmegenonline.nl
+DTSTAMP:20261118T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261206T150000
+DTEND;TZID=Europe/Amsterdam:20261206T170000
+SUMMARY:Erwin’s Gospel
+URL:https://www.nijmegenonline.nl/events/erwins-gospel/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/erwins-gospel/
+LOCATION:Lindenberg Cultuurhuis Nijmegen\, Ridderstraat 23\, 6511 TM Nijmegen
+END:VEVENT
+END:VCALENDAR

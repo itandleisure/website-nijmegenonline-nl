@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:expositie-fusion-5-en-6-december-kerkje-van-persingen@nijmegenonline.nl
+DTSTAMP:20261119T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261205T110000
+DTEND;TZID=Europe/Amsterdam:20261206T170000
+SUMMARY:Expositie fusion 5 en 6 december kerkje van Persingen
+URL:https://www.nijmegenonline.nl/events/expositie-fusion-5-en-6-december-kerkje-van-persingen/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/expositie-fusion-5-en-6-december-kerkje-van-persingen/
+LOCATION:Het Kerkje van Persingen\, Persingensestraat 7\, 6575 JA Persingen
+END:VEVENT
+END:VCALENDAR

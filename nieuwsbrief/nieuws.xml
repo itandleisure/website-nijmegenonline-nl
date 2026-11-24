@@ -8,6 +8,15 @@
     <lastBuildDate>Tue, 24 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Aqua-Novio'94 haalt recordaantal medailles op Gelderse Kampioenschappen</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/aqua-novio-94-haalt-recordaantal-medailles-op-gelderse-kampioenschappen/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/aqua-novio-94-haalt-recordaantal-medailles-op-gelderse-kampioenschappen/</guid>
+      <pubDate>Tue, 24 Nov 2026 18:34:08 +0100</pubDate>
+      <description>Zwemvereniging Aqua-Novio'94 won op de Gelderse Kampioenschappen korte baan in Nijmegen 202 medailles, waaronder 101 keer goud, en een regiorecord.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-aqua-novio-94-haalt-recordaantal-medailles-op-gelderse-kampioenschappen.jpg" length="57627" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-aqua-novio-94-haalt-recordaantal-medailles-op-gelderse-kampioenschappen.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Musical SPINOZA in juni 2027 op campus Radboud Universiteit</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/musical-spinoza-in-juni-2027-op-campus-radboud-universiteit/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/musical-spinoza-in-juni-2027-op-campus-radboud-universiteit/</guid>
@@ -177,15 +186,6 @@
       <description>Het Basteicafé in Museum De Bastei draait op 12 november om de Nijmeegse maakindustrie, van Romeinse dakpannen tot de fabrieken van de twintigste eeuw.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu.jpg" length="74646" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Sportkaart Arnhem wordt onderdeel van Lifeport Vitaal App</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/sportkaart-arnhem-wordt-onderdeel-van-lifeport-vitaal-app/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/sportkaart-arnhem-wordt-onderdeel-van-lifeport-vitaal-app/</guid>
-      <pubDate>Fri, 30 Oct 2026 13:43:12 +0100</pubDate>
-      <description>Sportbedrijf Arnhem en BoostYourVitality sluiten een partnerschap: de Sportkaart komt in de Lifeport Vitaal App, die in februari 2027 live gaat.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-sportkaart-arnhem-wordt-onderdeel-van-lifeport-vitaal-app.jpg" length="42641" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-sportkaart-arnhem-wordt-onderdeel-van-lifeport-vitaal-app.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

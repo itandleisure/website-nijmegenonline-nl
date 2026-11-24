@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:de-oudejaarsquiz-2026-2@nijmegenonline.nl
+DTSTAMP:20261120T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261216T200000
+DTEND;TZID=Europe/Amsterdam:20261216T230000
+SUMMARY:De Oudejaarsquiz 2026
+URL:https://www.nijmegenonline.nl/events/de-oudejaarsquiz-2026-2/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/de-oudejaarsquiz-2026-2/
+LOCATION:Le Café Nijmegen\, Grotestraat 6\, 6511 VD Nijmegen
+END:VEVENT
+END:VCALENDAR

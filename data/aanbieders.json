@@ -236,6 +236,11 @@
   "bedrijf": "extrapool",
   "plaats": "Nijmegen"
  },
+ "fletcher-erica": {
+  "naam": "Fletcher Erica Berg en Dal",
+  "plaats": "Berg en Dal",
+  "adres": "Molenbosweg 17, 6571 BA Berg en dal"
+ },
  "groenestraatkerk": {
   "naam": "Groenestraatkerk Nijmegen",
   "adres": "Groenestraat 229 Nijmegen",
@@ -358,6 +363,12 @@
   "plaats": "Wijchen",
   "bedrijf": "kunstkring-wijchen"
  },
+ "le-cafe": {
+  "naam": "Le Café Nijmegen",
+  "plaats": "Nijmegen",
+  "bedrijf": "le-cafe",
+  "adres": "Grotestraat 6, 6511 VD Nijmegen"
+ },
  "lieskes-wengs": {
   "naam": "Lieskes Wengs Berg en Dal",
   "adres": "Lieskes Wengs 1, Leuth 6587 JK, Nederland",
@@ -377,7 +388,7 @@
  },
  "lux-nijmegen": {
   "naam": "Lux Nijmegen",
-  "adres": "Mariënburg 38 – 39, Nijmegen",
+  "adres": "Marienburg 39, 6511 PS Nijmegen",
   "bedrijf": "lux",
   "plaats": "Nijmegen"
  },
@@ -488,7 +499,7 @@
  },
  "stevenskerk": {
   "naam": "Stevenskerk Nijmegen",
-  "adres": "Sint Stevenskerkhof 62,, 6511 VX Nijmegen",
+  "adres": "St. Stevenskerkhof 62, 6511 VZ Nijmegen",
   "bedrijf": "",
   "plaats": "Nijmegen"
  },

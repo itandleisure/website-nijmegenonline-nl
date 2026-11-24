@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:trianon-top-2000-delux@nijmegenonline.nl
+DTSTAMP:20261120T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261228T200000
+DTEND;TZID=Europe/Amsterdam:20261229T000000
+SUMMARY:Trianon TOP 2000 DELUX
+URL:https://www.nijmegenonline.nl/events/trianon-top-2000-delux/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/trianon-top-2000-delux/
+LOCATION:Lux Nijmegen\, Marienburg 39\, 6511 PS Nijmegen
+END:VEVENT
+END:VCALENDAR
