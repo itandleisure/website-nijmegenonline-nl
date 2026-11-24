@@ -390,7 +390,7 @@ function doPost(e) {
   try {
     stuurMail(cfg, g, cfg.onderwerp + ': ' + (g.titel || g.functie || g.bedrijf || g.naam));
   } catch (fout) {
-    console.error('Mail versturen mislukt: ' + fout);
+    mailMislukt(fout);
   }
 
   return antwoord({ ok: true });
@@ -408,6 +408,8 @@ function doGet(e) {
   // Alleen voor GitHub (tools/aanmeldingen.py): de lijst bevat links waarmee je aanmeldingen als gepubliceerd meldt
   if (p.actie === 'lijst') return antwoord(sleutelOk(p) ? lijst() : { ok: false, fout: 'sleutel' });
   // Webshop: producten uit het tabblad Webshop (tools/webshop.py --ophalen), een foto daaruit, en de status van een bestelling
+  // Controle van het mailen: hoeveel mails Google vandaag nog toestaat en de laatste fout (zie mailMislukt)
+  if (p.actie === 'mailstatus') return antwoord(mailStatus());
   if (p.actie === 'webshop') return antwoord({ producten: webshopProducten() });
   if (p.actie === 'webshopfoto') return antwoord(webshopFoto(p.id));
   if (p.actie === 'bestelstatus') return bestelstatus(p);
@@ -789,7 +791,7 @@ function nieuwsOntvangen(p) {
   try {
     stuurMail(cfg, g, cfg.onderwerp + ': ' + g.titel);
   } catch (fout) {
-    console.error('Mail versturen mislukt: ' + fout);
+    mailMislukt(fout);
   }
   return antwoord({ ok: true, id: g.id });
 }
@@ -956,7 +958,7 @@ function evenementUitMail(p) {
   try {
     stuurMail(cfg, g, cfg.onderwerp + ' (per mail): ' + g.titel);
   } catch (fout) {
-    console.error('Mail versturen mislukt: ' + fout);
+    mailMislukt(fout);
   }
   return antwoord({ ok: true, id: g.id });
 }
@@ -1908,7 +1910,46 @@ function stuurMail(cfg, g, onderwerp) {
   }
   var mail = { to: ONTVANGER, name: AFZENDER_NAAM, subject: onderwerp, htmlBody: html };
   if (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(g.email || '')) mail.replyTo = g.email;
-  MailApp.sendEmail(mail);
+  try {
+    MailApp.sendEmail(mail);
+  } catch (fout) {
+    // Tweede poging via Gmail (bijvoorbeeld als MailApp zijn dagelijkse maximum heeft bereikt). Lukt ook dat niet,
+    // dan gaat de fout naar de aanroeper, die hem met mailMislukt bewaart.
+    console.error('MailApp mislukt, nu via Gmail: ' + fout);
+    var opties = { name: AFZENDER_NAAM, htmlBody: html };
+    if (mail.replyTo) opties.replyTo = mail.replyTo;
+    GmailApp.sendEmail(ONTVANGER, onderwerp, 'Deze mail heeft een HTML-versie.', opties);
+  }
+}
+
+// Een mail aan de redactie lukte niet. De inzending staat dan wel in de Sheet, maar zonder mail merk je dat niet:
+// daarom komt de fout met tijdstip in de scripteigenschap LAATSTE_MAILFOUT. Bekijk hem met ?actie=mailstatus
+// achter de /exec-URL, of voer mailTest uit in de editor.
+function mailMislukt(fout) {
+  console.error('Mail versturen mislukt: ' + fout);
+  try {
+    PropertiesService.getScriptProperties().setProperty('LAATSTE_MAILFOUT',
+      Utilities.formatDate(new Date(), 'Europe/Amsterdam', 'dd-MM-yyyy HH:mm') + ': ' + String(fout).slice(0, 300));
+  } catch (e) { /* niets aan te doen */ }
+}
+
+function mailStatus() {
+  var quota = null;
+  try { quota = MailApp.getRemainingDailyQuota(); } catch (e) { quota = 'onbekend: ' + e; }
+  return {
+    ok: true,
+    mails_vandaag_nog: quota,
+    laatste_fout: PropertiesService.getScriptProperties().getProperty('LAATSTE_MAILFOUT') || ''
+  };
+}
+
+// Handmatig uit te voeren in de editor (kies "mailTest" en klik op Uitvoeren): laat zien hoeveel mails Google
+// vandaag nog toestaat en stuurt een testmail naar de redactie. Een fout zie je meteen in het logboek.
+function mailTest() {
+  console.log(JSON.stringify(mailStatus()));
+  MailApp.sendEmail({ to: ONTVANGER, name: AFZENDER_NAAM, subject: 'Test: mail vanuit het aanmeldscript',
+    htmlBody: '<p>Komt deze mail aan, dan kan het aanmeldscript mailen naar ' + ONTVANGER + '.</p>' });
+  console.log('Testmail verstuurd naar ' + ONTVANGER + '. Nog over vandaag: ' + MailApp.getRemainingDailyQuota());
 }
 
 function antwoord(obj) {
