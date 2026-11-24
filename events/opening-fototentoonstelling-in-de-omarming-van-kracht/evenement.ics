@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:opening-fototentoonstelling-in-de-omarming-van-kracht@nijmegenonline.nl
+DTSTAMP:20261122T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261205T140000
+DTEND;TZID=Europe/Amsterdam:20261205T150000
+SUMMARY:Opening fototentoonstelling ‘In de omarming van kracht’
+URL:https://www.nijmegenonline.nl/events/opening-fototentoonstelling-in-de-omarming-van-kracht/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/opening-fototentoonstelling-in-de-omarming-van-kracht/
+LOCATION:Stevenskerk Nijmegen\, St. Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR

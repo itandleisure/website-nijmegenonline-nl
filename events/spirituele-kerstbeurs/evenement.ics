@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:spirituele-kerstbeurs@nijmegenonline.nl
+DTSTAMP:20261123T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261213T110000
+DTEND;TZID=Europe/Amsterdam:20261213T170000
+SUMMARY:Spirituele kerstbeurs
+URL:https://www.nijmegenonline.nl/events/spirituele-kerstbeurs/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/spirituele-kerstbeurs/
+LOCATION:Fletcher Erica Berg en Dal\, Molenbosweg 17\, 6571 BA Berg en dal
+END:VEVENT
+END:VCALENDAR
