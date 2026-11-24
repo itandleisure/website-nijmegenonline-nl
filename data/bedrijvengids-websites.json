@@ -7359,9 +7359,9 @@
  "de-sjalot": {
   "eind_url": "https://restaurant-sjalot.nl/",
   "gecontroleerd": "2026-11-23",
-  "reden": "200",
+  "reden": "domein overgenomen door gokwebsite (24-11-2026)",
   "website": "http://restaurant-sjalot.nl",
-  "werkt": true
+  "werkt": false
  },
  "de-smedery": {
   "eind_url": "https://www.smedery.com/",
