@@ -370,5 +370,25 @@
   "story_sleutel": "story:hilde-vos-trio",
   "story_id": "18101363612209465",
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-24",
+  "soort": "gids",
+  "betaald": false,
+  "sleutels": [
+   "pagina:/de-10-beste-restaurants-in-nijmegen-centrum/"
+  ],
+  "titel": "De 10 beste restaurants in Nijmegen centrum",
+  "link": "https://www.nijmegenonline.nl/de-10-beste-restaurants-in-nijmegen-centrum/",
+  "beelden": [
+   "assets/social/2026-11-24-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1805718531563215",
+  "instagram_id": "18112834748460022",
+  "instagram_link": "https://www.instagram.com/p/DgIf5FBF9je/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
