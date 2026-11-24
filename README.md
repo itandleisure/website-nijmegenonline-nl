@@ -23,6 +23,8 @@ partials/             gedeelde header, footer en zijbalk
 tools/import_wordpress.py     zet de WordPress-export om naar pagina's
 tools/build.py        zet de onderdelen uit partials/ in alle pagina's
 tools/genoemd.py      bedrijfspagina's linken terug naar de lijstartikelen waarin ze staan (ook in bedrijvengids.py)
+tools/bedrijflinks.py  bedrijfsnamen in artikelen en gidsen linken naar de bedrijvengids (data/artikel-bedrijflinks.json,
+                      build.py zet ze; --voorstellen geeft nieuwe namen om na te kijken)
 zien-en-doen/, plan-je-bezoek/  bezoekersrubrieken, gemaakt door tools/bezoekers.py uit data/bezoekers.json
 zoeken/               zoekpagina (Pagefind), het zoekveld in de zijbalk stuurt hierheen
 pagefind/             zoekindex, gebouwd door tools/zoekindex.py (niet met de hand aanpassen)

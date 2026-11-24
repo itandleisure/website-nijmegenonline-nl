@@ -29,6 +29,8 @@
 12. Meldt aan het eind indexeerbare pagina's met meer of minder dan één <title> of <h1>, of zonder meta description.
 13. tools/klikbaar.py: webadressen (http://, https://, www.) en e-mailadressen die als gewone tekst in <main> staan,
     zoals een ticketlink in een evenement of een mailadres in een persbericht, worden klikbare links.
+14. tools/bedrijflinks.py: bedrijven die in een artikel of gids genoemd worden, linken naar hun pagina in de
+    bedrijvengids (welke naam bij welk bedrijf hoort staat in data/artikel-bedrijflinks.json).
 
 Gebruik: python tools/build.py [--live]
 """
@@ -39,6 +41,7 @@ import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import bedrijflinks  # noqa: E402
 import klikbaar  # noqa: E402
 import vindbaar  # noqa: E402
 
@@ -145,6 +148,9 @@ def main(live=False):
             nieuw = patroon.sub(vervang, nieuw)
 
         nieuw = klikbaar.maak_klikbaar(nieuw, lambda pad: bestaat(eindadres(pad, kaart)))
+        pagina = page.parent.relative_to(ROOT).as_posix()
+        if pagina in bedrijflinks.koppelingen() or 'class="bedrijflink"' in nieuw:
+            nieuw = bedrijflinks.koppel(pagina, nieuw, root)[0]
 
         def intern(m):
             pad = eindadres(m.group(2), kaart)
