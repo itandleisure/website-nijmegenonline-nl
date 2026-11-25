@@ -1,28 +1,4 @@
 {
- "2026-11-10": {
-  "datum": "2026-11-10",
-  "soort": "nieuws",
-  "betaald": false,
-  "sleutels": [
-   "nieuws:fototentoonstelling-gastvrij-nijmegen-in-studio-monk"
-  ],
-  "titel": "Fototentoonstelling Gastvrij Nijmegen in Studio MONK",
-  "link": "https://www.nijmegenonline.nl/nieuwsoverzicht/fototentoonstelling-gastvrij-nijmegen-in-studio-monk/",
-  "beelden": [
-   "assets/social/2026-11-10-1.jpg"
-  ],
-  "story": null,
-  "facebook": "Wie schuilt er eigenlijk achter het begrip ongedocumenteerden dat zo vaak in het nieuws valt? In Studio MONK zie je zwart-witportretten van stadsgenoten zonder verblijfspapieren, met bij elk portret een poëtische tekst. Veel van hen wonen al jaren in Nijmegen. De entree is gratis. 📸\n\n👉 https://www.nijmegenonline.nl/nieuwsoverzicht/fototentoonstelling-gastvrij-nijmegen-in-studio-monk/",
-  "instagram": "Wie schuilt er eigenlijk achter het begrip ongedocumenteerden dat zo vaak in het nieuws valt? In Studio MONK zie je zwart-witportretten van stadsgenoten zonder verblijfspapieren, met bij elk portret een poëtische tekst. Veel van hen wonen al jaren in Nijmegen. De entree is gratis. 📸\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #tentoonstelling #fotografie #stichtinggast",
-  "tekst_door": "claude",
-  "status": "geplaatst",
-  "gemaakt": "2026-11-10T02:27+01:00",
-  "issue": 120,
-  "facebook_id": "101515831757744_1787635403371528",
-  "instagram_id": "18025352213929659",
-  "instagram_link": "https://www.instagram.com/p/DfkeTWGD8PN/",
-  "fouten": []
- },
  "2026-11-11": {
   "datum": "2026-11-11",
   "soort": "gids",
@@ -379,5 +355,24 @@
   "instagram_id": "18112834748460022",
   "instagram_link": "https://www.instagram.com/p/DgIf5FBF9je/",
   "fouten": []
+ },
+ "2026-11-25": {
+  "datum": "2026-11-25",
+  "soort": "gids",
+  "betaald": false,
+  "sleutels": [
+   "pagina:/exclusief-dineren-in-nijmegen-wat-kan-je-verwachten/"
+  ],
+  "titel": "Exclusief dineren in Nijmegen: wat kun je verwachten?",
+  "link": "https://www.nijmegenonline.nl/exclusief-dineren-in-nijmegen-wat-kan-je-verwachten/",
+  "beelden": [
+   "assets/social/2026-11-25-1.jpg"
+  ],
+  "story": null,
+  "facebook": "Zin in een avond waarop je écht in de watten wordt gelegd? In Nijmegen zijn er restaurants waar exclusief dineren draait om kwaliteit en een menukaart vol bijzondere gerechten. Landgoed Brakkesteijn is er een van, met plek voor groepen van 12 tot 250 personen. Lees in onze gids wat je kunt verwachten. 🍽️\n\n👉 https://www.nijmegenonline.nl/exclusief-dineren-in-nijmegen-wat-kan-je-verwachten/",
+  "instagram": "Zin in een avond waarop je écht in de watten wordt gelegd? In Nijmegen zijn er restaurants waar exclusief dineren draait om kwaliteit en een menukaart vol bijzondere gerechten. Landgoed Brakkesteijn is er een van, met plek voor groepen van 12 tot 250 personen. Lees in onze gids wat je kunt verwachten. 🍽️\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #dineren #restaurants #uiteten",
+  "tekst_door": "claude",
+  "status": "gepland",
+  "gemaakt": "2026-11-25T03:17+01:00"
  }
 }
