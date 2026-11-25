@@ -1265,7 +1265,7 @@ CATEGORIEEN = [{
         ("Is er een filmhuis in Nijmegen?",
          "Ja, filter op arthouse."),
     ],
-    "artikelen": [],
+    "artikelen": ["bioscopen-in-nijmegen"],
     "blogs": [],
     "meervoud": "bioscopen",
     "blogonderwerp": "film",

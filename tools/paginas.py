@@ -733,28 +733,63 @@ def tabel(koppen, rijen):
     return "\n".join(regels + ["        </table></div>"])
 
 
+MARKT_PER_DAG = [
+    (1, "Maandag", "weekmarkt in de binnenstad (Grote Markt, Burchtstraat en Augustijnenstraat), versmarkt op het Kelfkensbos en de Lusemert, de vlooienmarkt rond de Stevenskerk"),
+    (2, "Dinsdag", "markt bij winkelcentrum Leuvensbroek"),
+    (3, "Woensdag", "markt in Hatert en in Lent (Frankrijkstraat)"),
+    (4, "Donderdag", "markt in Heseveld (Daniëlsplein)"),
+    (5, "Vrijdag", "markt bij winkelcentrum Meijhorst"),
+    (6, "Zaterdag", "weekmarkt in de binnenstad, boerenmarkt op het Kelfkensbos en de boekenmarkt op het Mariënburgplein"),
+    (0, "Zondag", "geen vaste weekmarkt; kijk in de agenda voor rommelmarkten, brocante en makersmarkten"),
+]
+MARKTEN_FAQ = [
+    ("Welke markt is er vandaag in Nijmegen?", "Op maandag en zaterdag is de grote weekmarkt in de binnenstad. Dinsdag is er markt in Leuvensbroek, woensdag in Hatert en Lent, donderdag in Heseveld en vrijdag in Meijhorst. Op zondag is er geen vaste weekmarkt."),
+    ("Hoe laat is de markt in Nijmegen?", "De weekmarkt in de binnenstad is op maandag en zaterdag van 9.00 tot 17.00 uur, van oktober tot en met maart tot 16.00 uur. De versmarkt op het Kelfkensbos stopt rond 14.00 uur, de wijkmarkten zijn alleen 's ochtends."),
+    ("Is er een rommelmarkt in Nijmegen?", "Ja. Elke maandagochtend is de Lusemert, een vlooienmarkt met curiosa rond de Stevenskerk. Op de laatste zaterdag van de maand staan er op het Mariënburgplein kunst en curiosa bij de boekenmarkt. Grotere rommel- en vlooienmarkten staan in de agenda."),
+    ("Is er op zondag markt in Nijmegen?", "Nee, op zondag is er geen vaste weekmarkt. Wel zijn er af en toe rommelmarkten, brocantemarkten en makersmarkten; die staan in de agenda."),
+    ("Staat de markt op de Grote Markt?", "Ja. Op maandag en zaterdag loopt de warenmarkt van de Grote Markt via de Burchtstraat tot aan de Augustijnenstraat. Groente, fruit, vis en kaas vind je op het Kelfkensbos."),
+]
+
+
 def markten(meta):
-    inhoud = """        <h1>Markten in en om Nijmegen</h1>
+    per_dag = "\n".join('          <li data-dag="%d"><strong>%s:</strong> %s</li>' % (n, d, esc(t)) for n, d, t in MARKT_PER_DAG)
+    faq = "".join("          <details><summary>%s</summary><p>%s</p></details>\n" % (esc(v), esc(a)) for v, a in MARKTEN_FAQ)
+    ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": v, "acceptedAnswer": {"@type": "Answer", "text": a}} for v, a in MARKTEN_FAQ]}, ensure_ascii=False)
+    inhoud = """        <h1>Markten in Nijmegen: welke markt is er vandaag?</h1>
         <div class="inhoud-tekst">
-        <p class="pagina__intro">Verse groente, een praatje met de visboer of snuffelen tussen oude spullen: in Nijmegen is er bijna elke dag wel ergens een markt. Op maandag en zaterdag staat de grote weekmarkt in de binnenstad, en door de week zijn er kleinere markten in de wijken.</p>
-        <h2>Weekmarkt in het centrum: maandag en zaterdag</h2>
-        <p>De markt in de binnenstad loopt van de Grote Markt via de Burchtstraat tot aan de Augustijnenstraat. Op het Kelfkensbos staan de kramen met groente, fruit en andere verse producten.</p>
+        <p class="pagina__intro">Verse groente, een praatje met de visboer of snuffelen tussen oude spullen: in Nijmegen is er bijna elke dag wel ergens een markt. Op maandag en zaterdag staat de grote weekmarkt in de binnenstad, rond de Grote Markt, en door de week zijn er kleinere markten in de wijken.</p>
+        <h2 id="vandaag">Welke markt is er vandaag?</h2>
+        <ul class="markt-per-dag">
+{per_dag}
+        </ul>
+        <script>(function(){{var li=document.querySelector('.markt-per-dag li[data-dag="'+new Date().getDay()+'"]');if(li){{li.style.fontWeight="600";li.insertAdjacentHTML("beforeend"," <em>(vandaag)</em>");}}}})();</script>
+        <h2 id="weekmarkt">Weekmarkt in het centrum: maandag en zaterdag</h2>
+        <p>De markt in de binnenstad loopt van de <a href="../grote-markt/">Grote Markt</a> via de Burchtstraat tot aan de Augustijnenstraat. Op het Kelfkensbos staan de kramen met groente, fruit en andere verse producten.</p>
 {centrum}
         <p>Tijdens de Vierdaagseweek in juli is er geen warenmarkt in de binnenstad. Door de herinrichting van het Kelfkensbos kan de markt daar af en toe tijdelijk ergens anders staan.</p>
-        <h2>Markten in de wijken</h2>
+        <h2 id="wijken">Markten in de wijken</h2>
         <p>Woon je niet in het centrum? Dan is er misschien een markt bij jou om de hoek. Dit zijn kleine markten met een paar kramen, vaak bij een winkelcentrum.</p>
 {wijken}
-        <h2>Markten in de buurt van Nijmegen</h2>
+        <h2 id="rommelmarkt">Rommelmarkt en vlooienmarkt in Nijmegen</h2>
+        <p>Zoek je een rommelmarkt in Nijmegen? Elke maandag van 9.00 tot 14.00 uur is de <strong>Lusemert</strong>, een vlooienmarkt met curiosa en oude spullen rond de Stevenskerk, vlak bij de Grote Markt. Op de laatste zaterdag van de maand staan er op het Mariënburgplein naast de boekenmarkt ook kunst en curiosa.</p>
+        <p>Daarnaast zijn er door het jaar grotere vlooien- en rommelmarkten, kofferbakmarkten en brocantemarkten, bijvoorbeeld op het evenemententerrein bij Park Winkelsteeg. Die vind je in onze <a href="../nijmegen-evenementen-overzicht/">agenda</a>. Liever het hele jaar door tweedehands? Lees dan onze tips voor <a href="../parels-vinden-in-nijmeegse-kringloopwinkels/">kringloopwinkels in Nijmegen</a>.</p>
+        <h2 id="regio">Markten in de buurt van Nijmegen</h2>
         <p>Ook in de dorpen en steden rond Nijmegen is er elke week markt:</p>
 {regio}
-        <h2>Bijzondere markten</h2>
-        <p>Naast de weekmarkten zijn er het hele jaar door themamarkten, zoals brocantemarkten, boekenmarkten, makersmarkten en in december de kerstmarkten. Die vind je in onze <a href="../nijmegen-evenementen-overzicht/">agenda</a>. Kijk voor december ook bij de <a href="../kerstmarkten-in-nijmegen/">kerstmarkten in Nijmegen</a>.</p>
-        <p>Liever tweedehands winkelen buiten de markt om? Lees dan onze tips voor <a href="../parels-vinden-in-nijmeegse-kringloopwinkels/">kringloopwinkels in Nijmegen</a>.</p>
+        <h2 id="bijzonder">Bijzondere markten</h2>
+        <p>Naast de weekmarkten zijn er het hele jaar door themamarkten, zoals brocantemarkten, boekenmarkten, makersmarkten en in december de kerstmarkten. Die vind je in onze <a href="../nijmegen-evenementen-overzicht/">agenda</a>. Kijk voor december ook bij de <a href="../kerstmarkten-in-nijmegen/">kerstmarkten in Nijmegen</a>. Combineer de markt met winkelen: lees onze gids <a href="../thema/winkelen-in-nijmegen/">winkelen in Nijmegen</a> of kijk waar je het makkelijkst <a href="../parkeren-in-nijmegen/">parkeert in het centrum</a>.</p>
         <p class="formulier__hint">Tijden en plaatsen gecontroleerd in {datum}. Ze kunnen veranderen, bijvoorbeeld rond feestdagen. Klopt er iets niet meer? <a href="../kom-in-contact/">Laat het ons weten</a>.</p>
-        </div>""".format(centrum=tabel(("Dag", "Waar", "Tijd", "Wat"), MARKTEN_CENTRUM),
+        </div>
+        <section class="faq" id="veelgestelde-vragen">
+          <h2>Veelgestelde vragen over de markt in Nijmegen</h2>
+{faq}        </section>""".format(per_dag=per_dag, faq=faq, centrum=tabel(("Dag", "Waar", "Tijd", "Wat"), MARKTEN_CENTRUM),
                          wijken=tabel(("Dag", "Wijk", "Waar", "Tijd"), MARKTEN_WIJKEN),
                          regio=tabel(("Plaats", "Waar", "Wanneer"), MARKTEN_REGIO), datum=GECONTROLEERD)
-    return pagina("Markten in en om Nijmegen", meta.get("rank_math_description", ""), "markten-nijmegen", "Markten in en om Nijmegen", inhoud)
+    return pagina("Markt in Nijmegen vandaag: alle markten per dag (2026)",
+                  "Welke markt is er vandaag in Nijmegen? De weekmarkt op maandag en zaterdag rond de Grote Markt, de markten in de wijken, de Lusemert-rommelmarkt en markten in de regio, met tijden.",
+                  "markten-nijmegen", "Markten in Nijmegen", inhoud,
+                  extra='\n  <script type="application/ld+json">%s</script>' % ld)
 
 
 def openingstijden(meta):
