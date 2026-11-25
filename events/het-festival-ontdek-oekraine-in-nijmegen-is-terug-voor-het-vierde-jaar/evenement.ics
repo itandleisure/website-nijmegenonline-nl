@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:het-festival-ontdek-oekraine-in-nijmegen-is-terug-voor-het-vierde-jaar@nijmegenonline.nl
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261221T100000
+DTEND;TZID=Europe/Amsterdam:20261230T170000
+SUMMARY:Het festival "Ontdek Oekraïne" in Nijmegen is terug voor het vierde jaar!
+URL:https://www.nijmegenonline.nl/events/het-festival-ontdek-oekraine-in-nijmegen-is-terug-voor-het-vierde-jaar/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/het-festival-ontdek-oekraine-in-nijmegen-is-terug-voor-het-vierde-jaar/
+LOCATION:Stevenskerk Nijmegen\, St. Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR
