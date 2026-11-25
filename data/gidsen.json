@@ -92,7 +92,6 @@
     "artikelen": [
      "chinees-in-nijmegen-afhalen-of-uit-eten",
      "tapas-in-nijmegen-onze-3-favorieten",
-     "sushi-in-nijmegen-afhalen-bezorgen-of-aan-tafel",
      "de-3-beste-poke-bowls-in-nijmegen",
      "indonesisch-eten-in-nijmegen-rijsttafel",
      "de-3-beste-ramenzaken-in-nijmegen",
@@ -1282,7 +1281,6 @@
     "kop": "Zwemmen",
     "tekst": "<p>Overdekt zwem je in Sportfondsenbad Nijmegen-West, het Erica Terpstra Sportfondsenbad en Sportfondsenbad Dukenburg; in de zomer gaan de buitenbaden van de Goffert en Nijmegen-West open. Buiten zwem je in de Spiegelwaal, de Bisonbaai en de Mookerplas.</p>",
     "artikelen": [
-     "welk-zwembad-in-nijmegen-past-bij-jou",
      "zwembaden-nijmegen",
      "ooijpolder",
      "over-het-water-nijmegen-verkennen-zo-doe-je-dat"
@@ -1645,53 +1643,6 @@
   "bedrijvengids": "/bedrijvengids-categorie/sauna/",
   "kort": "Thermen, spa, massage en verzorging.",
   "samenvatting": "Voor sauna in Nijmegen ga je naar de Thermen van Sanadome, met water uit eigen bronnen, of naar Thermen Berendonck in Wijchen, een kwartier verderop. Voor massage en hammam zijn er kleine spa's in de binnenstad. Deze gids zet sauna, spa, massage en verzorging op een rij, met prijzen, tijden en regels."
- },
- {
-  "url": "/thema/kringloop-nijmegen/",
-  "hand": true,
-  "hoofdgids": "/thema/winkelen-in-nijmegen/",
-  "foto": "/assets/uploads/2022/12/kringloopwinkels-in-nijmegen.webp",
-  "naam": "Kringloop en tweedehands in Nijmegen",
-  "zoekwoord": "kringloop nijmegen",
-  "seo_titel": "Kringloop en tweedehands in Nijmegen: kringloopwinkels, vintage en antiek",
-  "beschrijving": "Tweedehands winkelen in Nijmegen: alle kringloopwinkels, vintage kledingzaken en antiekwinkels, waar je spullen brengt, wie op zondag open is en tips om parels te vinden.",
-  "intro": "<p>Tweedehands is in Nijmegen nooit ver weg: Het Goed in Nijmegen-West is de grootste kringloopwinkel, in de binnenstad zitten Basta, Habbekrats en een rij vintagezaken, en aan de Stationsweg staan de antiekhallen. In onze bedrijvengids staan 22 kringloop-, vintage- en antiekwinkels met adres en openingstijden.</p>",
-  "secties": [
-   {
-    "kop": "Kringloopwinkels",
-    "tekst": "<p>Alle kringloop-, vintage- en antiekwinkels van de stad op een rij, met waar je spullen kunt brengen en wie op zondag open is, plus tips om echte vondsten te doen.</p>",
-    "artikelen": [
-     "kringloopwinkels-nijmegen",
-     "parels-vinden-in-nijmeegse-kringloopwinkels"
-    ]
-   },
-   {
-    "kop": "Markten en meubels",
-    "tekst": "<p>Rommel- en vlooienmarkten door het jaar, de vrijmarkt op Koningsdag, en voor wie liever nieuw op maat koopt: de meubelmaker.</p>",
-    "artikelen": [
-     "markten-nijmegen",
-     "koningsdag-nijmegen",
-     "kies-voor-een-unieke-meubels-ambachtelijke-gemaakt-door-de-meubelmaker"
-    ]
-   }
-  ],
-  "faq": [
-   {
-    "v": "Welke kringloopwinkels heeft Nijmegen?",
-    "a": "De grote zijn Het Goed (Industrieweg 54), Kringloopwinkel Marcel (Marie Curiestraat 72), Kleren Goed (Prins Hendrikstraat 14) en Riesruimt (Zwanenveld 6600). In de binnenstad zitten Basta, Habbekrats en de Terre des Hommes Shop."
-   },
-   {
-    "v": "Welke kringloopwinkel in Nijmegen is op zondag open?",
-    "a": "Het Goed, Kringloopwinkel Marcel en de Terre des Hommes Shop."
-   },
-   {
-    "v": "Waar vind je vintage kleding in Nijmegen?",
-    "a": "Bij Habbekrats, Just Vintage, Studio Zoef, 2ndMas, Appel & Ei en de ReShare Store in de binnenstad, en bij Secondhand Rose en Javco daarbuiten."
-   }
-  ],
-  "bedrijvengids": "/bedrijvengids-categorie/tweedehands-winkel/",
-  "kort": "Kringloopwinkels, vintage kleding, antiek en markten.",
-  "samenvatting": "De grootste kringloopwinkel van Nijmegen is Het Goed in Nijmegen-West; in de binnenstad zitten Basta, Habbekrats en vintagezaken, en aan de Stationsweg de antiekhallen. In de bedrijvengids staan 22 kringloop-, vintage- en antiekwinkels met adres en openingstijden."
  },
  {
   "url": "/thema/uitgaan-nijmegen/",

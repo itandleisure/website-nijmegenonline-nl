@@ -1540,7 +1540,7 @@ CATEGORIEEN = [{
         ("Is er een buitenbad in Nijmegen?",
          "Ja, filter op buitenbad."),
     ],
-    "artikelen": ["welk-zwembad-in-nijmegen-past-bij-jou"],
+    "artikelen": ["zwembaden-nijmegen"],
     "blogs": [],
     "meervoud": "zwembaden",
     "blogonderwerp": "zwemmen",
@@ -2176,7 +2176,7 @@ SUBCATEGORIEEN = [{
     "faq": [("Waar eet je sushi in Nijmegen?", "Hieronder staan alle sushirestaurants en Japanse zaken, van een sushibar tot afhalen, met adres en kaart."),
             ("Kun je in Nijmegen sushi laten bezorgen?", "Ja, een groot deel van de sushizaken bezorgt of heeft afhalen. Filter op bezorgen of afhalen.")],
     "filtervoorbeeld": "afhalen, bezorgen of terras",
-    "blogs": ["sushi-in-nijmegen-afhalen-bezorgen-of-aan-tafel", "sushi-liefhebbers-dit-zijn-de-beste-japanse-restaurants-in-nijmegen"],
+    "blogs": ["sushi-liefhebbers-dit-zijn-de-beste-japanse-restaurants-in-nijmegen"],
 }, {
     "slug": "pizza", "ouders": ["restaurant", "afhaal", "lunch"],
     "zoek": r"pizz|italia",
@@ -2871,7 +2871,7 @@ THEMA = {"massage-nijmegen": "massagesalon", "kappers-in-nijmegen": "kapper", "n
          "campings-in-nijmegen": "camping", "overnachten-in-nijmegen": "hotel", "zaal-huren-in-nijmegen": "zaalverhuur",
          "fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen": "fotograaf", "cursus-nijmegen": "opleiding-en-training",
          "winkelen-in-nijmegen": "kledingwinkel", "sporten-in-nijmegen": "sportschool", "uitjes-nijmegen": "uitjes",
-         "film-theater-nijmegen": "podia", "lunch-nijmegen": "lunch", "sauna-wellness-nijmegen": "wellness", "kringloop-nijmegen": "tweedehands-winkel",
+         "film-theater-nijmegen": "podia", "lunch-nijmegen": "lunch", "sauna-wellness-nijmegen": "wellness",
          "uitgaan-nijmegen": "cafe"}
 
 

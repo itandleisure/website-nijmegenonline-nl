@@ -565,7 +565,7 @@ GIDS_GROEPEN = [
     ("Bijzondere momenten", ["/thema/trouwen-in-nijmegen/", "/thema/zaal-huren-in-nijmegen/", "/jaarlijkse-evenementen/nijmeegse-vierdaagse/", "/thema/fotograaf-nijmegen-ontdek-de-mooiste-locaties-beste-fotografen/"]),
     ("Overnachten", ["/thema/overnachten-in-nijmegen/", "/thema/bb-nijmegen/", "/thema/campings-in-nijmegen/"]),
     ("Verzorging", ["/thema/kappers-in-nijmegen/", "/thema/massage-nijmegen/", "/thema/nagelsalon-in-nijmegen/", "/thema/pedicures-in-nijmegen/", "/thema/permanente-make-up-in-nijmegen/", "/thema/sauna-wellness-nijmegen/"]),
-    ("Wonen, leren en werken", ["/thema/studeren-in-nijmegen/", "/thema/cursus-nijmegen/", "/ondernemen-in-nijmegen/", "/thema/winkelen-in-nijmegen/", "/thema/kringloop-nijmegen/"]),
+    ("Wonen, leren en werken", ["/thema/studeren-in-nijmegen/", "/thema/cursus-nijmegen/", "/ondernemen-in-nijmegen/", "/thema/winkelen-in-nijmegen/"]),
 ]
 
 

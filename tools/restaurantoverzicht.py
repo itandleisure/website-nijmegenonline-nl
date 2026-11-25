@@ -26,7 +26,7 @@ KEUKENS = [
     ("Italiaans", "Italiaanse restaurants", "Pasta, pizza uit de houtoven en antipasti. Italiaans is de grootste keuken van Nijmegen.",
      "culinair-genieten-in-italiaanse-sfeer-probeer-deze-restaurants-in-nijmegen"),
     ("Japans", "Japanse restaurants en sushi", "Sushi aan tafel, all you can eat in rondes of ramen.",
-     "sushi-in-nijmegen-afhalen-bezorgen-of-aan-tafel"),
+     "sushi-liefhebbers-dit-zijn-de-beste-japanse-restaurants-in-nijmegen"),
     ("Aziatisch", "Aziatische restaurants", "Wok, dim sum en gerechten uit heel Azië onder één dak.",
      "geniet-van-deze-aziatische-hoogstandjes-in-nijmegen"),
     ("Chinees", "Chinese restaurants", "Van de klassieke Chinees-Indische kaart tot authentiek Chinees.",

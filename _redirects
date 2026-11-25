@@ -1,5 +1,9 @@
 # Doorverwijzingen (Cloudflare Pages / Netlify). Gemaakt door tools/import_wordpress.py
 /kapper-nijmegen-top-kapsalons-voor-knippen-kleuren-en-styling/ /thema/kappers-in-nijmegen/ 301
+/sushi-in-nijmegen-afhalen-bezorgen-of-aan-tafel/ /sushi-liefhebbers-dit-zijn-de-beste-japanse-restaurants-in-nijmegen/ 301
+/kringloopwinkels-nijmegen/ /parels-vinden-in-nijmeegse-kringloopwinkels/ 301
+/thema/kringloop-nijmegen/ /parels-vinden-in-nijmeegse-kringloopwinkels/ 301
+/welk-zwembad-in-nijmegen-past-bij-jou/ /zwembaden-nijmegen/ 301
 /en/* /:splat 301
 /webcam-waalkade/ /nijmegen-de-oudste-stad-met-de-jongste-energie/ 301
 /overzicht/ /bedrijvengids/ 301
@@ -77,7 +81,7 @@
 /kinderactiviteiten-nijmegen/ /nijmegen-met-kinderen/ 301
 /kinderfeestjes-nijmegen/ /blog/ 301
 /kranenburg/ /bestemmingen/kranenburg/ 301
-/kringloopwinkels/ /kringloopwinkels-nijmegen/ 301
+/kringloopwinkels/ /parels-vinden-in-nijmeegse-kringloopwinkels/ 301
 /lunchen/ /thema/lunch-nijmegen/ 301
 /koopzondag-nijmegen/ /openingstijden-centrum-nijmegen/ 301
 /nieuwsbrief/ /blog/ 301
