@@ -957,20 +957,22 @@
   "url": "/thema/centrum-nijmegen/",
   "hand": true,
   "foto": "/assets/uploads/2023/01/Skyline-1.webp",
-  "naam": "Het centrum van Nijmegen",
+  "naam": "Nijmegen centrum",
   "zoekwoord": "centrum nijmegen",
-  "seo_titel": "Centrum van Nijmegen: pleinen, Waalkade, winkelen en parkeren",
-  "beschrijving": "Gids voor het centrum van Nijmegen: de Grote Markt, Plein 1944, het Kelfkensbos, de Waalkade en de Waalbrug, plus openingstijden, markten en parkeren.",
-  "intro": "<p>Het centrum van Nijmegen ligt op de heuvel boven de Waal, tussen het station en de rivier. Het is compact: van het Stationsplein loop je in een kwartier naar de Grote Markt, en vandaar ben je in vijf minuten op de Waalkade. Onderweg kom je langs de Stevenskerk, de winkelstraten en de pleinen die elk hun eigen verhaal hebben, van het bombardement van 1944 tot de Romeinse vondsten onder het Kelfkensbos.</p><p>In deze gids staan de pleinen, straten en plekken aan de Waal op een rij, met de openingstijden van de winkels, de markten en de handigste plekken om te parkeren.</p>",
+  "seo_titel": "Nijmegen centrum: pleinen, Waalkade, winkels, eten en parkeren",
+  "beschrijving": "Alles over het centrum van Nijmegen: de Grote Markt, Plein 1944, het Keizer Karelplein, de Stevenskerk en de Waalkade, plus winkels, restaurants, cafés en parkeren.",
+  "intro": "<p>Het centrum van Nijmegen ligt op de heuvel boven de Waal, tussen het station en de rivier. Het is compact: van het Stationsplein loop je in een kwartier naar de Grote Markt, en vandaar ben je in vijf minuten op de Waalkade. Onderweg kom je langs het Keizer Karelplein, de winkelstraten, de Stevenskerk en pleinen die elk hun eigen verhaal hebben, van het bombardement van 1944 tot de Romeinse vondsten onder het Kelfkensbos.</p><p>In deze gids staat alles wat je in de binnenstad wilt weten: de pleinen en bezienswaardigheden, de plekken aan de Waal, winkelen en markten, eten, drinken en uitgaan, en waar je parkeert.</p>",
   "secties": [
    {
-    "kop": "Pleinen en kerk",
-    "tekst": "<p>Vier plekken vormen het hart van de binnenstad: de Grote Markt met de Waag en de Stevenskerk, Plein 1944 dat na het bombardement ontstond, het Kelfkensbos bij het Valkhof en de kerk zelf, al bijna acht eeuwen het hoogste punt van de stad.</p>",
+    "kop": "Pleinen en bezienswaardigheden",
+    "tekst": "<p>Vijf plekken vormen het hart van de binnenstad: de Grote Markt met de Waag, de Stevenskerk, al bijna acht eeuwen het hoogste punt van de stad, Plein 1944 dat na het bombardement ontstond, het Kelfkensbos bij het Valkhof en het Keizer Karelplein met de schouwburg en De Vereeniging.</p>",
     "artikelen": [
      "grote-markt",
+     "stevenskerk-nijmegen",
      "plein-1944",
      "kelfkensbos",
-     "stevenskerk-nijmegen"
+     "keizer-karelplein-nijmegen",
+     "24-uur-in-nijmegen"
     ]
    },
    {
@@ -985,12 +987,26 @@
    },
    {
     "kop": "Winkelen, markten en openingstijden",
-    "tekst": "<p>De winkels in het centrum zijn ook op zondag open, en op maandag en zaterdag staat de weekmarkt in de binnenstad. Hieronder de openingstijden, de markten en tips van een Nijmegenaar.</p>",
+    "tekst": "<p>De drukste winkelstraten zijn de Broerstraat, de Molenstraat, de Burchtstraat en de Lange Hezelstraat. De winkels in het centrum zijn ook op zondag open, en op maandag en zaterdag staat de weekmarkt in de binnenstad.</p>",
     "artikelen": [
+     "thema/winkelen-in-nijmegen",
      "openingstijden-centrum-nijmegen",
      "markten-nijmegen",
+     "platenzaken-in-nijmegen-wandelroute",
      "wat-te-doen-in-nijmegen",
      "ontdek-nijmegen-door-de-ogen-van-een-local"
+    ]
+   },
+   {
+    "kop": "Eten, drinken en uitgaan",
+    "tekst": "<p>De binnenstad heeft ruim 160 restaurants, vooral rond de Grote Markt, in de Lange Hezelstraat, aan het Kelfkensbos en op de Waalkade. 's Avonds is het druk in de cafés op de Grote Markt en in de Van Welderenstraat en de Molenstraat.</p>",
+    "artikelen": [
+     "thema/restaurants-in-nijmegen-restaurant",
+     "de-10-beste-restaurants-in-nijmegen-centrum",
+     "de-7-cafes-met-de-meeste-historie-van-nijmegen",
+     "de-10-beste-koffiebars-in-nijmegen",
+     "lekker-uitgaan-in-nijmegen-hier-doe-je-dat",
+     "lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes"
     ]
    },
    {
@@ -999,6 +1015,7 @@
     "artikelen": [
      "parkeren-in-nijmegen",
      "station-nijmegen",
+     "parkeergarage-keizer-karel-nijmegen",
      "parkeergarage-kelfkensbos-nijmegen",
      "parkeergarage-marienburg-nijmegen"
     ]
@@ -1006,16 +1023,28 @@
   ],
   "faq": [
    {
+    "v": "Wat is er te doen in het centrum van Nijmegen?",
+    "a": "Bezoek de Grote Markt en de Stevenskerk, loop naar het Valkhofpark en de Waalkade, winkel in de Broerstraat en de Molenstraat en sluit af op een terras of in een van de ruim 160 restaurants in de binnenstad."
+   },
+   {
     "v": "Wat is het centrale plein van Nijmegen?",
     "a": "De Grote Markt, met de Waag uit 1612 en de Stevenskerk erachter. Plein 1944 is het grootste plein en ontstond na het bombardement van 22 februari 1944."
+   },
+   {
+    "v": "Wat zijn de winkelstraten in het centrum van Nijmegen?",
+    "a": "De Broerstraat, de Molenstraat, de Burchtstraat en de Lange Hezelstraat, met Plein 1944 en de Marikenstraat ertussen. In de Lange Hezelstraat zitten veel kleine en bijzondere winkels."
+   },
+   {
+    "v": "Zijn de winkels in het centrum van Nijmegen op zondag open?",
+    "a": "Ja, de meeste winkels in de binnenstad zijn elke zondag open, meestal van 12.00 tot 17.00 uur. Kijk voor de precieze tijden bij de openingstijden van het centrum."
    },
    {
     "v": "Hoe ver is het van station Nijmegen naar het centrum?",
     "a": "Het station ligt aan de westrand van het centrum. Lopend ben je in een kwartier op de Grote Markt."
    },
    {
-    "v": "Zijn de winkels in het centrum van Nijmegen op zondag open?",
-    "a": "Ja, de meeste winkels in de binnenstad zijn elke zondag open, meestal van 12.00 tot 17.00 uur. Kijk voor de precieze tijden bij de openingstijden van het centrum."
+    "v": "Waar eet je in het centrum van Nijmegen?",
+    "a": "Rond de Grote Markt, in de Lange Hezelstraat, aan het Kelfkensbos en op de Waalkade. In onze restaurantgids staan alle restaurants in de binnenstad, en in De 10 beste restaurants in Nijmegen centrum onze favorieten."
    },
    {
     "v": "Waar parkeer je in het centrum van Nijmegen?",
@@ -1023,8 +1052,8 @@
    }
   ],
   "bedrijvengids": "",
-  "kort": "Pleinen, Waalkade, winkels, markten en parkeren in de binnenstad.",
-  "samenvatting": "Het centrum van Nijmegen is compact: van het station loop je in een kwartier naar de Grote Markt en van daar in vijf minuten naar de Waalkade. Deze gids zet de pleinen en de Stevenskerk, de plekken aan de Waal, de winkelstraten, markten en openingstijden, en het parkeren in de binnenstad op een rij."
+  "kort": "Pleinen, Waalkade, winkels, restaurants en parkeren in de binnenstad.",
+  "samenvatting": "Het centrum van Nijmegen is compact: van het station loop je in een kwartier naar de Grote Markt en van daar in vijf minuten naar de Waalkade. Deze gids zet de pleinen en bezienswaardigheden (Grote Markt, Stevenskerk, Plein 1944, Kelfkensbos, Keizer Karelplein), de Waalkade en het Valkhof, de winkelstraten en openingstijden, de ruim 160 restaurants en cafés in de binnenstad en het parkeren op een rij."
  },
  {
   "url": "/thema/parkeren-nijmegen/",
