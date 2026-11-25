@@ -97,7 +97,8 @@ CATEGORIEEN = [{
     "intro": "<p>Uit eten in Nijmegen? De oudste stad van Nederland heeft een keuken voor elk moment: een snelle hap in "
              "de Lange Hezelstraat, sushi op de Molenstraat, een terras aan de Waalkade of een avond tafelen in een "
              "van de restaurants rond de Grote Markt.</p>"
-             "<p>Op deze pagina vind je alle restaurants in Nijmegen.</p>",
+             "<p>Op deze pagina vind je alle restaurants in Nijmegen.</p>"
+             '<p>Liever alle restaurants per keuken en per buurt, met onze tips? Kijk dan in onze <a href="../../thema/restaurants-in-nijmegen-restaurant/">gids Restaurants in Nijmegen</a>.</p>',
     "faq": [
         ("Waar kun je in Nijmegen op een terras eten?",
          "De meeste terrassen vind je in het centrum: op de Grote Markt, de Waalkade, in de Lange Hezelstraat en rond "

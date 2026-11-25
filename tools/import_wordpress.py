@@ -465,14 +465,20 @@ def gids_pagina(g, per_slug):
     out.append("        <h1>%s</h1>" % esc(g["naam"]))
     out.append('        <div class="inhoud-tekst gids-intro">\n%s\n        </div>' % g["intro"])
     ankers = [(re.sub(r"[^a-z0-9]+", "-", sec["kop"].lower()).strip("-"), sec["kop"]) for sec in g["secties"]]
+    # Optioneel blok vóór de artikelen, bijv. de lijst met alle restaurants (tools/restaurantoverzicht.py)
+    blok = (ROOT / g["blok"]).read_text(encoding="utf-8") if g.get("blok") and (ROOT / g["blok"]).is_file() else ""
+    blokankers = [(a, html.unescape(re.sub(r"<[^>]+>", "", k)).strip()) for a, k in
+                  re.findall(r'<section class="gids-sectie" id="([^"]+)">\s*<h2>(.*?)</h2>', blok, re.S)]
     if len(ankers) > 1 or g["faq"]:
         out.append('        <nav class="gids-inhoud" aria-label="In deze gids"><strong>In deze gids</strong><ul>')
-        for an, k in ankers:
+        for an, k in blokankers + ankers:
             out.append('          <li><a href="#%s">%s</a></li>' % (an, esc(k)))
         if g["faq"]:
             out.append('          <li><a href="#veelgestelde-vragen">Veelgestelde vragen</a></li>')
         out.append("        </ul></nav>")
     out.append('        <div class="partner-slider" data-plaatsing="blog"></div>')
+    if blok:
+        out.append("\n".join("        " + r if r else r for r in blok.rstrip("\n").split("\n")))
     for (an, _), sec in zip(ankers, g["secties"]):
         out.append('        <section class="gids-sectie" id="%s">\n          <h2>%s</h2>\n          <div class="inhoud-tekst">%s</div>\n          <div class="raster">'
                    % (an, esc(sec["kop"]), sec["tekst"]))

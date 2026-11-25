@@ -71,13 +71,13 @@
  {
   "url": "/thema/restaurants-in-nijmegen-restaurant/",
   "naam": "Restaurants in Nijmegen",
-  "zoekwoord": "restaurants nijmegen",
-  "seo_titel": "Restaurants in Nijmegen: de beste adressen per keuken",
-  "beschrijving": "Uit eten in Nijmegen? De beste restaurants per keuken op een rij, van Italiaans en Thais tot vegan, high tea en uit eten met kinderen.",
-  "intro": "<p>Nijmegen is een echte eetstad. In de binnenstad, op de Waalkade en in wijken als Oost en Bottendaal vind je restaurants uit alle hoeken van de wereld, van gezellige eetcafés tot sterrenrestaurants.</p><p>Op deze pagina staan al onze restaurantgidsen bij elkaar. Kies een keuken of een gelegenheid, en lees welke adressen wij aanraden.</p>",
+  "zoekwoord": "restaurant nijmegen",
+  "seo_titel": "Restaurant in Nijmegen? Ruim 300 restaurants per keuken en buurt",
+  "beschrijving": "Alle restaurants in Nijmegen op een rij: per keuken, per buurt en van A tot Z. Met onze favorieten in het centrum, aan de Waalkade en in Oost.",
+  "intro": "<p>Op zoek naar een restaurant in Nijmegen? Dan heb je keuze genoeg. De stad heeft ruim 300 restaurants, van eetcafés en pizzeria's tot een restaurant met een Michelinster. De meeste zitten in de binnenstad, rond de Grote Markt, de Lange Hezelstraat en het Kelfkensbos, en aan de Waalkade. Maar ook in Oost, Bottendaal en Lent eet je goed.</p><p>Op deze pagina staan alle restaurants uit onze bedrijvengids: per keuken, per buurt en van A tot Z. Daaronder staan onze gidsen met de adressen die wij aanraden, per keuken en per gelegenheid.</p>",
   "secties": [
    {
-    "kop": "De beste restaurants",
+    "kop": "Onze favorieten",
     "tekst": "<p>Geen idee waar je zin in hebt? Begin met onze toplijst van de binnenstad, of kies voor een avond exclusief dineren.</p>",
     "artikelen": [
      "de-10-beste-restaurants-in-nijmegen-centrum",
@@ -87,7 +87,7 @@
     ]
    },
    {
-    "kop": "Per keuken",
+    "kop": "Onze gidsen per keuken",
     "tekst": "<p>Van pizza en pasta tot sushi, curry en mezze: dit zijn de beste adressen per keuken.</p>",
     "artikelen": [
      "chinees-in-nijmegen-afhalen-of-uit-eten",
@@ -119,10 +119,11 @@
     ]
    },
    {
-    "kop": "Per gelegenheid",
+    "kop": "Uit eten per gelegenheid",
     "tekst": "<p>Lunchen tijdens een dagje stad, een high tea met vriendinnen of uit eten met de kinderen: hier vind je de plekken die daar het best bij passen.</p>",
     "artikelen": [
      "all-you-can-eat-in-nijmegen-de-5-beste",
+     "de-dit-zijn-de-6-leukste-eetcafes-van-nijmegen",
      "lekker-lunchen-in-nijmegen-dit-zijn-de-beste-plekjes",
      "op-zoek-naar-de-beste-high-tea-locaties-in-nijmegen-5-tips-waar-je-meteen-enthousiast-van-wordt",
      "droom-je-van-een-high-wine-in-nijmegen-dit-zijn-de-5-mooiste-locaties",
@@ -136,8 +137,20 @@
   ],
   "faq": [
    {
+    "v": "Hoeveel restaurants heeft Nijmegen?",
+    "a": "In onze bedrijvengids staan ruim 300 restaurants in Nijmegen, Lent en Oosterhout. Ongeveer de helft zit in de binnenstad."
+   },
+   {
     "v": "Waar zitten de meeste restaurants in Nijmegen?",
-    "a": "De meeste restaurants vind je in de binnenstad rond de Grote Markt en de Lange Hezelstraat, op de Waalkade en in de wijken Oost en Bottendaal."
+    "a": "De meeste restaurants vind je in de binnenstad rond de Grote Markt, de Lange Hezelstraat, het Kelfkensbos en Plein 1944, en aan de Waalkade. Buiten het centrum zitten er veel in Nijmegen-Oost en Bottendaal."
+   },
+   {
+    "v": "Wat is een goed restaurant in het centrum van Nijmegen?",
+    "a": "Onze favorieten in de binnenstad staan in de gids De 10 beste restaurants in Nijmegen centrum, van betaalbaar tot sterrenrestaurant."
+   },
+   {
+    "v": "Waar eet je met uitzicht op de Waal?",
+    "a": "Aan de Waalkade zitten restaurants met uitzicht op de rivier en de Waalbrug. In Lent kijk je vanaf de overkant juist uit op de stad."
    },
    {
     "v": "Moet je in Nijmegen reserveren?",
@@ -148,9 +161,10 @@
     "a": "Als studentenstad heeft Nijmegen veel betaalbare adressen. In ons artikel over betaalbaar uit eten staan tips, en ook eetcafés en all you can eat restaurants zijn vaak voordelig."
    }
   ],
-  "bedrijvengids": "/bedrijvengids-categorie/eten-drinken/",
-  "kort": "De beste adressen per keuken en per gelegenheid, van lunch tot diner.",
-  "samenvatting": "Nijmegen heeft restaurants uit alle keukens, vooral in de binnenstad, op de Waalkade en in Oost en Bottendaal. Deze gids zet onze restauranttips op een rij: de beste restaurants in het centrum, per keuken (van Italiaans en Thais tot sushi en vegan) en per gelegenheid, zoals betaalbaar uit eten, met kinderen of exclusief dineren."
+  "bedrijvengids": "/bedrijvengids-categorie/restaurant/",
+  "kort": "Ruim 300 restaurants per keuken en per buurt, en onze tips per gelegenheid.",
+  "samenvatting": "Nijmegen heeft ruim 300 restaurants. Ongeveer de helft zit in de binnenstad en aan de Waalkade, de rest vooral in Oost, Bottendaal, Zuid en Lent. Italiaans en Japans zijn de grootste keukens. Op deze pagina staan alle restaurants per keuken, per buurt en van A tot Z, met links naar onze gidsen over de beste restaurants in het centrum, per keuken en per gelegenheid.",
+  "blok": "data/gidsblokken/restaurants.html"
  },
  {
   "url": "/thema/cafes-in-nijmegen/",
