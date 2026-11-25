@@ -54,7 +54,14 @@ HANDGEMAAKT = {"kerstmarkten-in-nijmegen", "de-dit-zijn-de-6-leukste-eetcafes-va
                # herschreven met adressen uit de bedrijvengids (november 2026)
                "sushi-liefhebbers-dit-zijn-de-beste-japanse-restaurants-in-nijmegen",
                "pizza-liefhebbers-dit-zijn-de-beste-pizzerias-in-nijmegen",
-               "waarom-is-een-all-you-can-eat-restaurant-in-nijmegen-een-goede-keuze"}
+               "waarom-is-een-all-you-can-eat-restaurant-in-nijmegen-een-goede-keuze",
+               # per keuken herschreven voor zoekwoorden op plek 11-30 (25 november 2026)
+               "thais-eten-in-nijmegen-onze-top-3-thaise-restaurants",
+               "culinair-genieten-in-italiaanse-sfeer-probeer-deze-restaurants-in-nijmegen",
+               "op-culinaire-ontdekkingsreis-probeer-deze-griekse-restaurants-in-nijmegen",
+               "indias-culinaire-parels-toprestaurants-in-nijmegen",
+               "tapas-eten-in-nijmegen-hier-kan-je-dat-doen",
+               "zin-in-een-broodje-shoarma-bezoek-deze-tentjes-in-nijmegen"}
 
 RUBRIEKEN = [
     ("eten-drinken-in-nijmegen", "Eten & drinken",
