@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:workshop-petrykivka-schilderen-met-kunstenares-anna-motsak@nijmegenonline.nl
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261221T110000
+DTEND;TZID=Europe/Amsterdam:20261221T170000
+SUMMARY:Workshop Petrykivka schilderen met kunstenares Anna Motsak
+URL:https://www.nijmegenonline.nl/events/workshop-petrykivka-schilderen-met-kunstenares-anna-motsak/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/workshop-petrykivka-schilderen-met-kunstenares-anna-motsak/
+LOCATION:Stevenskerk Nijmegen\, St. Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR
