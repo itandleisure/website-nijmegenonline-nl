@@ -390,5 +390,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-25",
+  "soort": "gids",
+  "betaald": false,
+  "sleutels": [
+   "pagina:/exclusief-dineren-in-nijmegen-wat-kan-je-verwachten/"
+  ],
+  "titel": "Exclusief dineren in Nijmegen: wat kun je verwachten?",
+  "link": "https://www.nijmegenonline.nl/exclusief-dineren-in-nijmegen-wat-kan-je-verwachten/",
+  "beelden": [
+   "assets/social/2026-11-25-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1806730698128665",
+  "instagram_id": "18107853578047974",
+  "instagram_link": "https://www.instagram.com/p/DgKjI_XE2GG/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
