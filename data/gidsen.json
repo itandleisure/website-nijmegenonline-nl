@@ -660,9 +660,9 @@
   "url": "/thema/bb-nijmegen/",
   "naam": "B&B in Nijmegen",
   "zoekwoord": "b&b nijmegen",
-  "seo_titel": "B&B in Nijmegen en omgeving: de leukste adressen",
-  "beschrijving": "Overnachten in een bed and breakfast in Nijmegen of omgeving? De leukste B&B's in Nijmegen-Oost, Groesbeek en Wijchen op een rij.",
-  "intro": "<p>Een bed and breakfast is persoonlijker dan een hotel: je slaapt bij een gastheer of gastvrouw die de omgeving kent, en het ontbijt is vaak een feestje.</p><p>Hier vind je de leukste B&amp;B's in Nijmegen en de dorpen eromheen.</p>",
+  "seo_titel": "B&B Nijmegen: alle bed and breakfasts in de stad (2026)",
+  "beschrijving": "B&B in Nijmegen: alle bed and breakfasts per buurt, van een schip in de haven tot een pipowagen in Lent, plus B&B's in Nijmegen-Oost, Groesbeek en Wijchen.",
+  "intro": "<p>Een B&amp;B in Nijmegen is persoonlijker dan een hotel: je slaapt bij een gastheer of gastvrouw die de stad kent, en het ontbijt is vaak een feestje. In Nijmegen zijn er bed and breakfasts in het centrum, in Bottendaal bij het station, in Nijmegen-Oost, bij het Radboudumc en in Lent.</p><p>Hieronder staan alle B&amp;B's in Nijmegen per buurt, en daarna onze tips voor Nijmegen-Oost, Groesbeek en Wijchen. Kom je rond de Vierdaagse in juli? Boek dan ruim op tijd.</p>",
   "secties": [
    {
     "kop": "B&B's in Nijmegen en omgeving",
@@ -675,11 +675,33 @@
     ]
    }
   ],
-  "faq": [],
-  "bedrijvengids": "/bedrijvengids-categorie/overnachten/",
+  "faq": [
+   {
+    "v": "Hoeveel B&B's zijn er in Nijmegen?",
+    "a": "In onze bedrijvengids staan dertien bed and breakfasts in Nijmegen en Lent, van een schip in de Lindenberghaven tot een pipowagen in Lent."
+   },
+   {
+    "v": "Welke B&B ligt het dichtst bij het station van Nijmegen?",
+    "a": "Pension Bottendaal en B&B Jan van Galen liggen in Bottendaal, op een paar minuten lopen van Nijmegen Centraal."
+   },
+   {
+    "v": "Is er een B&B bij het Radboudumc?",
+    "a": "Ja. Aan de Anna ligt recht tegenover het Radboudumc en heeft een rolstoeltoegankelijke kamer. Ook De Pauwenhof en B&B De Goffert liggen in de buurt."
+   },
+   {
+    "v": "Kun je in Nijmegen op een schip overnachten?",
+    "a": "Ja, bij Opoe Sientje slaap je op een schip uit 1885 in de Lindenberghaven, op een paar minuten lopen van het centrum."
+   },
+   {
+    "v": "Wanneer moet je een B&B in Nijmegen vroeg boeken?",
+    "a": "Rond de Vierdaagse in juli zijn bijna alle B&B's in Nijmegen maanden van tevoren vol. Boek dan zo vroeg mogelijk."
+   }
+  ],
+  "bedrijvengids": "/bedrijvengids-categorie/bed-and-breakfast/",
   "hoofdgids": "/thema/overnachten-in-nijmegen/",
   "kort": "Bed and breakfasts in Nijmegen, Groesbeek en Wijchen.",
-  "samenvatting": "Deze gids zet de leukste bed and breakfasts in Nijmegen en de dorpen eromheen op een rij, waaronder Nijmegen-Oost, Groesbeek en Wijchen. Een B&B is persoonlijker dan een hotel: de gastheer of gastvrouw kent de omgeving."
+  "samenvatting": "Deze gids zet de leukste bed and breakfasts in Nijmegen en de dorpen eromheen op een rij, waaronder Nijmegen-Oost, Groesbeek en Wijchen. Een B&B is persoonlijker dan een hotel: de gastheer of gastvrouw kent de omgeving.",
+  "blok": "data/gidsblokken/bb.html"
  },
  {
   "url": "/thema/campings-in-nijmegen/",
@@ -1587,11 +1609,11 @@
   "url": "/thema/sauna-wellness-nijmegen/",
   "hand": true,
   "foto": "/assets/uploads/2023/01/Sanadome-Hotel-Spa-Nijmegen-booking.webp",
-  "naam": "Sauna en wellness in Nijmegen",
+  "naam": "Spa, sauna en wellness in Nijmegen",
   "zoekwoord": "sauna nijmegen",
-  "seo_titel": "Sauna en wellness in Nijmegen: thermen, spa, massage en ontspanning",
-  "beschrijving": "Ontspannen in Nijmegen: de Thermen van Sanadome, Thermen Berendonck in Wijchen, de spa's in de binnenstad, massage, pedicure en tips om tot rust te komen.",
-  "intro": "<p>Even helemaal niets: in Nijmegen kan dat in de Thermen van Sanadome, met water uit eigen bronnen, of een kwartier verderop in Thermen Berendonck in Wijchen, een saunaresort met hotel. Voor een massage of hammam zijn er kleine spa's in de binnenstad, en in onze bedrijvengids staan alle massagesalons, pedicures en schoonheidssalons van de stad.</p><p>In deze gids staan sauna, spa, massage en verzorging bij elkaar, met prijzen, tijden en regels.</p>",
+  "seo_titel": "Spa in Nijmegen: sauna, thermen en wellness (2026)",
+  "beschrijving": "Een spa in Nijmegen: de Thermen van Sanadome, Thermen Berendonck in Wijchen en kleine spa's in de binnenstad voor massage en hammam. Met prijzen, tijden en tips.",
+  "intro": "<p>Op zoek naar een spa in Nijmegen? Even helemaal niets doen kan in de Thermen van Sanadome, met water uit eigen bronnen, of een kwartier verderop in Thermen Berendonck in Wijchen, een saunaresort met hotel. Voor een massage of hammam zijn er kleine spa's in de binnenstad, en in onze bedrijvengids staan alle massagesalons, pedicures en schoonheidssalons van de stad.</p><p>In deze gids staan sauna, spa, massage en verzorging bij elkaar, met prijzen, tijden en regels.</p>",
   "secties": [
    {
     "kop": "Sauna en thermen",
@@ -1627,6 +1649,10 @@
    }
   ],
   "faq": [
+   {
+    "v": "Welke spa is er in Nijmegen?",
+    "a": "De grootste spa van Nijmegen is de Thermen van Sanadome in Nijmegen-Zuid, met sauna's en baden met water uit eigen bronnen. Een kwartier verderop ligt Thermen Berendonck in Wijchen. Voor massage en hammam zijn er kleine spa's in de binnenstad."
+   },
    {
     "v": "Welke sauna's zijn er in en bij Nijmegen?",
     "a": "Sanadome in Nijmegen-Zuid en Thermen Berendonck in Wijchen. In de binnenstad zijn kleine spa's voor massage en hammam, zoals Golden Spa en Royal Thai Massage & Spa aan de Bloemerstraat."

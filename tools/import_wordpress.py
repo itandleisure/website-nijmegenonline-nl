@@ -61,7 +61,8 @@ HANDGEMAAKT = {"kerstmarkten-in-nijmegen", "de-dit-zijn-de-6-leukste-eetcafes-va
                "op-culinaire-ontdekkingsreis-probeer-deze-griekse-restaurants-in-nijmegen",
                "indias-culinaire-parels-toprestaurants-in-nijmegen",
                "tapas-eten-in-nijmegen-hier-kan-je-dat-doen",
-               "zin-in-een-broodje-shoarma-bezoek-deze-tentjes-in-nijmegen"}
+               "zin-in-een-broodje-shoarma-bezoek-deze-tentjes-in-nijmegen",
+               "bioscopen-in-nijmegen"}
 
 RUBRIEKEN = [
     ("eten-drinken-in-nijmegen", "Eten & drinken",
