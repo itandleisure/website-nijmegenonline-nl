@@ -410,5 +410,34 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-26",
+  "soort": "weekend",
+  "betaald": false,
+  "sleutels": [
+   "evenement:johnny-and-the-rockets",
+   "evenement:stadfeest-koopzondag-klever-winterzauber",
+   "evenement:highlight-tours-in-het-vrijheidsmuseum-3",
+   "evenement:kerstmarkt-klooster-graefenthal-twee-weekenden",
+   "evenement:massada-unplugged-bij-sapa-punja"
+  ],
+  "titel": "Dit weekend in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "beelden": [
+   "assets/social/2026-11-26-0.jpg",
+   "assets/social/2026-11-26-1.jpg",
+   "assets/social/2026-11-26-2.jpg",
+   "assets/social/2026-11-26-3.jpg",
+   "assets/social/2026-11-26-4.jpg",
+   "assets/social/2026-11-26-5.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1808233294645072",
+  "instagram_id": "18188760424421926",
+  "instagram_link": "https://www.instagram.com/p/DgNYLKQjRFh/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
