@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:dromen-als-messiaen-unieke-audiovisuele-orgelbeleving-in-de-eusebiuskerk@nijmegenonline.nl
+DTSTAMP:20261126T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261212T201500
+DTEND;TZID=Europe/Amsterdam:20261212T220000
+SUMMARY:Dromen als Messiaen\, unieke audiovisuele orgelbeleving in de Eusebiuskerk
+URL:https://www.nijmegenonline.nl/events/dromen-als-messiaen-unieke-audiovisuele-orgelbeleving-in-de-eusebiuskerk/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/dromen-als-messiaen-unieke-audiovisuele-orgelbeleving-in-de-eusebiuskerk/
+LOCATION:Eusebiuskerk Arnhem\, Kerkplein 1\, 6811 EB Arnhem
+END:VEVENT
+END:VCALENDAR

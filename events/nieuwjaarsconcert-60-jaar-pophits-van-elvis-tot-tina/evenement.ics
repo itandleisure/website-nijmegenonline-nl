@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:nieuwjaarsconcert-60-jaar-pophits-van-elvis-tot-tina@nijmegenonline.nl
+DTSTAMP:20261126T000000Z
+DTSTART;TZID=Europe/Amsterdam:20270110T140000
+DTEND;TZID=Europe/Amsterdam:20270110T170000
+SUMMARY:Nieuwjaarsconcert- 60 jaar pophits van Elvis tot Tina
+URL:https://www.nijmegenonline.nl/events/nieuwjaarsconcert-60-jaar-pophits-van-elvis-tot-tina/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/nieuwjaarsconcert-60-jaar-pophits-van-elvis-tot-tina/
+LOCATION:Theater De Kik Elst\, Dorpsstraat 39\,\, 6661 EG Elst
+END:VEVENT
+END:VCALENDAR

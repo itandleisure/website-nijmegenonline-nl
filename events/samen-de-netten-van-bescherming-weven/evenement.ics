@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:samen-de-netten-van-bescherming-weven@nijmegenonline.nl
+DTSTAMP:20261126T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261221T100000
+DTEND;TZID=Europe/Amsterdam:20261230T170000
+SUMMARY:Samen de “Netten van Bescherming” weven!
+URL:https://www.nijmegenonline.nl/events/samen-de-netten-van-bescherming-weven/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/samen-de-netten-van-bescherming-weven/
+LOCATION:Stevenskerk Nijmegen\, St. Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR

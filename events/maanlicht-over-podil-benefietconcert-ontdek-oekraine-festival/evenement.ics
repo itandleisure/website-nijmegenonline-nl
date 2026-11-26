@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:maanlicht-over-podil-benefietconcert-ontdek-oekraine-festival@nijmegenonline.nl
+DTSTAMP:20261125T000000Z
+DTSTART;TZID=Europe/Amsterdam:20261228T201500
+DTEND;TZID=Europe/Amsterdam:20261228T214500
+SUMMARY:Maanlicht over Podil – Benefietconcert Ontdek Oekraïne Festival
+URL:https://www.nijmegenonline.nl/events/maanlicht-over-podil-benefietconcert-ontdek-oekraine-festival/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/maanlicht-over-podil-benefietconcert-ontdek-oekraine-festival/
+LOCATION:Stevenskerk Nijmegen\, Sint Stevenskerkhof 62\, 6511 VZ Nijmegen
+END:VEVENT
+END:VCALENDAR

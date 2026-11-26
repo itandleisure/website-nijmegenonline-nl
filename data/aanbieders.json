@@ -218,6 +218,11 @@
   "bedrijf": "doornroosje-stationsplein",
   "plaats": "Nijmegen"
  },
+ "eusebiuskerk": {
+  "naam": "Eusebiuskerk Arnhem",
+  "plaats": "Arnhem",
+  "adres": "Kerkplein 1, 6811 EB Arnhem"
+ },
  "evenemententerrein-park-winkelsteeg": {
   "naam": "Evenemententerrein Park Winkelsteeg Nijmegen",
   "adres": "Vossendijk/Winkelsteegseweg 210, Nijmegen, nederland 6534AR",
@@ -499,13 +504,13 @@
  },
  "stevenskerk": {
   "naam": "Stevenskerk Nijmegen",
-  "adres": "St. Stevenskerkhof 62, 6511 VZ Nijmegen",
+  "adres": "Sint Stevenskerkhof 62, 6511 VZ Nijmegen",
   "bedrijf": "",
   "plaats": "Nijmegen"
  },
  "theater-de-kik": {
   "naam": "Theater De Kik Elst",
-  "adres": "Dorpstraat 39, 6661 EG Elst",
+  "adres": "Dorpsstraat 39,, 6661 EG Elst",
   "plaats": "Elst"
  },
  "theater-de-klif": {
