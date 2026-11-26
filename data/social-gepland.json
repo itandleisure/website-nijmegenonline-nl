@@ -1,28 +1,4 @@
 {
- "2026-11-11": {
-  "datum": "2026-11-11",
-  "soort": "gids",
-  "betaald": false,
-  "sleutels": [
-   "pagina:/kerstmarkten-in-nijmegen/"
-  ],
-  "titel": "Kerstmarkten in Nijmegen 2026: data, locaties en tips",
-  "link": "https://www.nijmegenonline.nl/kerstmarkten-in-nijmegen/",
-  "beelden": [
-   "assets/social/2026-11-11-1.jpg"
-  ],
-  "story": null,
-  "facebook": "Zin in glühwein, lichtjes en dat ene cadeautje dat je nergens anders vindt? In december hangt de binnenstad vol lichtjes, staat Winterburg in het Kronenburgerpark en zijn er kleine markten in de wijken. Wil je er een dagje op uit, dan ben je in een half uur bij de kerstmarkt in Kleef. In onze gids zetten we alles op een rij. 🎄\n\n👉 https://www.nijmegenonline.nl/kerstmarkten-in-nijmegen/",
-  "instagram": "Zin in glühwein, lichtjes en dat ene cadeautje dat je nergens anders vindt? In december hangt de binnenstad vol lichtjes, staat Winterburg in het Kronenburgerpark en zijn er kleine markten in de wijken. Wil je er een dagje op uit, dan ben je in een half uur bij de kerstmarkt in Kleef. In onze gids zetten we alles op een rij. 🎄\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #kerstmarkt #winterburg #kerst",
-  "tekst_door": "claude",
-  "status": "geplaatst",
-  "gemaakt": "2026-11-11T00:10+01:00",
-  "issue": 123,
-  "facebook_id": "101515831757744_1788778126590589",
-  "instagram_id": "18645116506002605",
-  "instagram_link": "https://www.instagram.com/p/Dfmp1DinFGm/",
-  "fouten": []
- },
  "2026-11-12": {
   "datum": "2026-11-12",
   "soort": "weekend",
@@ -378,5 +354,33 @@
   "instagram_id": "18107853578047974",
   "instagram_link": "https://www.instagram.com/p/DgKjI_XE2GG/",
   "fouten": []
+ },
+ "2026-11-26": {
+  "datum": "2026-11-26",
+  "soort": "weekend",
+  "betaald": false,
+  "sleutels": [
+   "evenement:johnny-and-the-rockets",
+   "evenement:stadfeest-koopzondag-klever-winterzauber",
+   "evenement:highlight-tours-in-het-vrijheidsmuseum-3",
+   "evenement:kerstmarkt-klooster-graefenthal-twee-weekenden",
+   "evenement:massada-unplugged-bij-sapa-punja"
+  ],
+  "titel": "Dit weekend in Nijmegen",
+  "link": "https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "beelden": [
+   "assets/social/2026-11-26-0.jpg",
+   "assets/social/2026-11-26-1.jpg",
+   "assets/social/2026-11-26-2.jpg",
+   "assets/social/2026-11-26-3.jpg",
+   "assets/social/2026-11-26-4.jpg",
+   "assets/social/2026-11-26-5.jpg"
+  ],
+  "story": null,
+  "facebook": "Zin in een weekend vol live muziek, kerstsfeer en een stukje geschiedenis? Van een unplugged optreden in de Stevenskerk tot kerstmarkten net over de grens: er is genoeg te kiezen. Hieronder zie je wat er van vrijdag tot en met zondag te doen is. 🎄\n\n• Johnny and the Rockets (za 28 nov, 20.30 uur, Cafe 't Haantje Nijmegen)\n• Stadfeest & Koopzondag: Klever Winterzauber (zo 29 nov, 13.00 uur, Kleve)\n• Highlight Tours in het Vrijheidsmuseum (zo 29 nov, 14.00 uur, Vrijheidsmuseum Groesbeek)\n• Kerstmarkt Klooster Graefenthal (vr 27 nov t/m zo 6 dec, Kloster Graefenthal Goch)\n• Massada unplugged bij 'Sapa punja?' (vr 27 nov, 20.15 uur, Stevenskerk Nijmegen)\n\n👉 https://www.nijmegenonline.nl/nijmegen-evenementen-overzicht/",
+  "instagram": "Zin in een weekend vol live muziek, kerstsfeer en een stukje geschiedenis? Van een unplugged optreden in de Stevenskerk tot kerstmarkten net over de grens: er is genoeg te kiezen. Hieronder zie je wat er van vrijdag tot en met zondag te doen is. 🎄\n\n• Johnny and the Rockets (za 28 nov, 20.30 uur, Cafe 't Haantje Nijmegen)\n• Stadfeest & Koopzondag: Klever Winterzauber (zo 29 nov, 13.00 uur, Kleve)\n• Highlight Tours in het Vrijheidsmuseum (zo 29 nov, 14.00 uur, Vrijheidsmuseum Groesbeek)\n• Kerstmarkt Klooster Graefenthal (vr 27 nov t/m zo 6 dec, Kloster Graefenthal Goch)\n• Massada unplugged bij 'Sapa punja?' (vr 27 nov, 20.15 uur, Stevenskerk Nijmegen)\n\nMeer info via de link in onze bio.\n\n#nijmegen #nijmegenonline #weekend #uitagenda #kerstmarkt",
+  "tekst_door": "claude",
+  "status": "gepland",
+  "gemaakt": "2026-11-26T05:56+01:00"
  }
 }
