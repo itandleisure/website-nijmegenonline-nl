@@ -35,18 +35,18 @@ VACATURES = [
     ("vacature-redacteur", "Redacteur (stage)", True,
      "Voor NijmegenOnline zoeken we toppers die hun schrijfervaring willen uitbreiden. Als redacteur ga je veel op pad in "
      "Nijmegen en ben je het visitekaartje van onze organisatie."),
-    ("vacature-accountmanager", "Lokale partner en mede-eigenaar", True,
-     "We zoeken iemand die NijmegenOnline in de stad een gezicht geeft en lokale ondernemers helpt zichtbaarder te "
-     "worden en meer omzet te halen."),
+    ("partner-nijmegenonline", "Partner gezocht (commercieel)", True,
+     "We zoeken een ondernemer die in NijmegenOnline gelooft, de commerciële kant oppakt en het platform als partner "
+     "samen met ons groot wil maken."),
     ("vacature-fotograaf", "Fotograaf", False,
      "Ben jij dag en nacht op pad met je camera en vind je het leuk om Nijmegen en omgeving vast te leggen?"),
     ("vacature-social-media-strateeg", "Social media strateeg", False,
      "We zochten iemand die alle ins en outs van social media kent en onze kanalen laat groeien."),
 ]
 # Vacatures met een eigen tekst (niet uit WordPress): de pagina staat met de hand in vacatures/<slug>/index.html en
-# wordt hier niet overschreven. De accountmanager was op WordPress vacature-sales-tijger (doorverwijzing in
-# data/oude-paginas.csv).
-EIGEN_TEKST = {"vacature-accountmanager"}
+# wordt hier niet overschreven. De partneroproep was op WordPress vacature-sales-tijger en daarna
+# vacature-accountmanager (beide doorverwijzingen in data/oude-paginas.csv).
+EIGEN_TEKST = {"partner-nijmegenonline"}
 
 # Pakketten uit het advies Verdienmodel NijmegenOnline (okt 2026): naam, prijs per jaar excl. btw, toelichting
 PAKKETTEN = [("Gratis", "0", "voor elk bedrijf"), ("Uitgelicht", "149", ""),
