@@ -102,6 +102,8 @@ def esc(s):
 
 
 def featured(post, maat="medium_large"):
+    if "uitgelicht" in post:  # nieuwe artikelen uit data/nieuwe-artikelen/ geven hun foto zelf op
+        return dict(post["uitgelicht"])
     try:
         fm = post["_embedded"]["wp:featuredmedia"][0]
     except (KeyError, IndexError):
@@ -795,6 +797,8 @@ def blog_pagina(per_rubriek):
 def main(bron):
     bron = pathlib.Path(bron)
     posts = [p for f in sorted(glob.glob(str(bron / "posts" / "posts-*.json"))) for p in json.load(open(f, encoding="utf-8"))]
+    # Nieuwe artikelen die niet (meer) uit WordPress komen: één JSON per artikel, zie data/nieuwe-artikelen/README.md
+    posts += [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(str(ROOT / "data" / "nieuwe-artikelen" / "*.json")))]
     cats = {c["id"]: c for c in json.load(open(bron / "categories.json", encoding="utf-8"))}
     indeling = {r["url"].strip("/"): r for r in csv.DictReader(open(ROOT / "data" / "indeling-artikelen.csv", encoding="utf-8"), delimiter=";")}
     slugs = {p["slug"] for p in posts}
