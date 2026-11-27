@@ -439,5 +439,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-27",
+  "soort": "evenement",
+  "betaald": true,
+  "sleutels": [
+   "evenement:lotte-walda"
+  ],
+  "titel": "Lotte Walda bij de Brauerij",
+  "link": "https://www.nijmegenonline.nl/events/lotte-walda/",
+  "beelden": [
+   "assets/social/2026-11-27-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1809764147825320",
+  "instagram_id": "18477015220141617",
+  "instagram_link": "https://www.instagram.com/p/DgQXZT6iUnE/",
+  "story_sleutel": null,
+  "story_id": null,
+  "status": "geplaatst"
  }
 ]
