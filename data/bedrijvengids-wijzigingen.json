@@ -88,5 +88,42 @@
   "site": "http://www.nightingalekaraokebar.nl/",
   "telefoon": "024234 0122",
   "vermelding": "nightingale-karaokebar"
+ },
+ "studio-monk-john-kraft-fotografie": {
+  "adres": "Korenpad 10",
+  "bedrijf": "Studio Monk/john Kraft Fotografie",
+  "bedrijfsmail": "info@johnkraft.nl",
+  "categorie": "Fotograaf",
+  "foto": "assets/uploads/aangemeld/bedrijf-studio-monk-john-kraft-fotografie.webp",
+  "fotogebruik": "Jullie mogen mijn foto's ook gebruiken in artikelen op NijmegenOnline, met mijn bedrijfsnaam als fotocredit. Ik heb de rechten op deze foto's.",
+  "fotos": [
+   {
+    "bijschrift": "Foto: Studio Monk/john Kraft Fotografie",
+    "foto": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/bedrijf-studio-monk-john-kraft-fotografie-2.webp"
+   },
+   {
+    "bijschrift": "Foto: Studio Monk/john Kraft Fotografie",
+    "foto": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/bedrijf-studio-monk-john-kraft-fotografie-3.webp"
+   },
+   {
+    "bijschrift": "Foto: Studio Monk/john Kraft Fotografie",
+    "foto": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/bedrijf-studio-monk-john-kraft-fotografie-4.webp"
+   },
+   {
+    "bijschrift": "Foto: Studio Monk/john Kraft Fotografie",
+    "foto": "https://www.nijmegenonline.nl/assets/uploads/aangemeld/bedrijf-studio-monk-john-kraft-fotografie-5.webp"
+   }
+  ],
+  "goedgekeurd": "2026-11-27",
+  "id": "d10c111d",
+  "land": "Nederland",
+  "omschrijving": "Als autonoom fotograaf hanteer ik graag een minimalistisch beeldtaal en onderzoek ik de relatie tussen tijd, vergankelijkheid , ruimte en menselijke aanwezigheid.\n\nIk vind mijn onderwerpen op zowel op straat als in de natuur, in architectuur of in de gecontroleerde omgeving van onze studio. Ogenschijnlijke alledaagse situaties vormen vaak het vertrekpunt voor mijn beelden.\n\nGraag onttrek ik beelden aan hun oorspronkelijke context en maak ze daardoor abstract, in te vullen door de toeschouwer. Minimalisme en verstilling spreken mij aan.",
+  "ontvangen": "2026-11-27T15:29:24.683Z",
+  "openingstijden": "za gesloten\nzo gesloten",
+  "plaats": "Nijmegen",
+  "postcode": "6534 AS",
+  "site": "http://www.johnkraft.nl/",
+  "telefoon": "31653396418",
+  "vermelding": "studio-monk-john-kraft-fotografie"
  }
 }

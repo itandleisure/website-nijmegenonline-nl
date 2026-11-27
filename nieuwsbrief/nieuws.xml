@@ -8,6 +8,15 @@
     <lastBuildDate>Fri, 27 Nov 2026 06:00:00 +0100</lastBuildDate>
     <atom:link href="https://www.nijmegenonline.nl/nieuwsbrief/nieuws.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Stevenstent op Grote Markt wordt centrale plek voor carnaval</title>
+      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/stevenstent-op-grote-markt-wordt-centrale-plek-voor-carnaval/</link>
+      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/stevenstent-op-grote-markt-wordt-centrale-plek-voor-carnaval/</guid>
+      <pubDate>Fri, 27 Nov 2026 19:53:24 +0100</pubDate>
+      <description>Van 5 tot en met 9 februari 2027 staat De Stevenstent op de Grote Markt in Nijmegen. De tent wordt de nieuwe centrale plek van het openbare carnaval.</description>
+      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-stevenstent-op-grote-markt-wordt-centrale-plek-voor-carnaval.jpg" length="145742" type="image/jpeg"/>
+      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-stevenstent-op-grote-markt-wordt-centrale-plek-voor-carnaval.jpg" medium="image" type="image/jpeg"/>
+    </item>
+    <item>
       <title>Aqua-Novio'94 haalt recordaantal medailles op Gelderse Kampioenschappen</title>
       <link>https://www.nijmegenonline.nl/nieuwsoverzicht/aqua-novio-94-haalt-recordaantal-medailles-op-gelderse-kampioenschappen/</link>
       <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/aqua-novio-94-haalt-recordaantal-medailles-op-gelderse-kampioenschappen/</guid>
@@ -177,15 +186,6 @@
       <description>De Zweedse zangeres Magda Novels geeft op 8 november een concert bij De Brauerij in Niel, vlak over de grens bij Leuth. Entree is 15 euro.</description>
       <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-magda-novels-speelt-indiefolk-bij-de-brauerij-in-niel.jpg" length="15696" type="image/jpeg"/>
       <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-magda-novels-speelt-indiefolk-bij-de-brauerij-in-niel.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Basteicafé over Nijmeegse maakindustrie van Romeinen tot nu</title>
-      <link>https://www.nijmegenonline.nl/nieuwsoverzicht/basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu/</link>
-      <guid isPermaLink="false">https://www.nijmegenonline.nl/nieuwsoverzicht/basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu/</guid>
-      <pubDate>Fri, 30 Oct 2026 19:33:43 +0100</pubDate>
-      <description>Het Basteicafé in Museum De Bastei draait op 12 november om de Nijmeegse maakindustrie, van Romeinse dakpannen tot de fabrieken van de twintigste eeuw.</description>
-      <enclosure url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu.jpg" length="74646" type="image/jpeg"/>
-      <media:content url="https://www.nijmegenonline.nl/assets/nieuwsbrief/nieuws-basteicafe-over-nijmeegse-maakindustrie-van-romeinen-tot-nu.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

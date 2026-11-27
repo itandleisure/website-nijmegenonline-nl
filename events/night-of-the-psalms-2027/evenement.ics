@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NijmegenOnline//Agenda//NL
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:night-of-the-psalms-2027@nijmegenonline.nl
+DTSTAMP:20261127T000000Z
+DTSTART;TZID=Europe/Amsterdam:20270122T200000
+DTEND;TZID=Europe/Amsterdam:20270122T223000
+SUMMARY:Night of the Psalms 2027
+URL:https://www.nijmegenonline.nl/events/night-of-the-psalms-2027/
+DESCRIPTION:Meer informatie: https://www.nijmegenonline.nl/events/night-of-the-psalms-2027/
+LOCATION:Boskapel Nijmegen\, Graafseweg 276\, 6532 ZV Nijmegen
+END:VEVENT
+END:VCALENDAR
