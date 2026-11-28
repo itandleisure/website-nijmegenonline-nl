@@ -459,5 +459,25 @@
   "story_sleutel": null,
   "story_id": null,
   "status": "geplaatst"
+ },
+ {
+  "datum": "2026-11-28",
+  "soort": "partner",
+  "betaald": true,
+  "sleutels": [
+   "bedrijf:fietsen-op-het-spoor"
+  ],
+  "titel": "Fietsen op het Spoor",
+  "link": "https://www.nijmegenonline.nl/bedrijvengids/fietsen-op-het-spoor/",
+  "beelden": [
+   "assets/social/2026-11-28-1.jpg"
+  ],
+  "tekst_door": "claude",
+  "facebook_id": "101515831757744_1810522917749443",
+  "instagram_id": "18121621925005773",
+  "instagram_link": "https://www.instagram.com/p/DgSA8OlABQf/",
+  "story_sleutel": "story:johnny-and-the-rockets",
+  "story_id": "17881563954567385",
+  "status": "geplaatst"
  }
 ]
