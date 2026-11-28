@@ -715,7 +715,7 @@ CATEGORIEEN = [{
     "soorten": {"Aannemer"},
     "schema": "GeneralContractor",
     "beschrijving": "Aannemers, bouw- en klusbedrijven in Nijmegen: verbouwen, renoveren, een nieuwe badkamer of keuken en verduurzamen.",
-    "intro": "<p>Een aanbouw, een nieuwe badkamer of je jarendertigwoning in Oost verduurzamen: met de juiste aannemer gaat een verbouwing een stuk soepeler. In Nijmegen zitten grote bouwbedrijven, kleine aannemers en klusbedrijven voor de kleinere klussen.</p><p>Op deze pagina vind je alle aannemers in Nijmegen.</p>",
+    "intro": "<p>Een aanbouw, een nieuwe badkamer of je jarendertigwoning in Oost verduurzamen: met de juiste aannemer gaat een verbouwing een stuk soepeler. In Nijmegen zitten grote bouwbedrijven, kleine aannemers en klusbedrijven voor de kleinere klussen. Verbouw je een bedrijfspand? Lees dan ook hoe je <a href=\"../../extra-ruimte-in-je-bedrijfspand-in-nijmegen-met-een-entresolvloer/\">extra ruimte maakt met een entresolvloer</a>.</p><p>Op deze pagina vind je alle aannemers in Nijmegen.</p>",
     "faq": [
         ("Hoe vind ik een goede aannemer in Nijmegen?",
          "Vraag bij twee of drie aannemers een offerte op en vraag naar eerdere projecten in de buurt. Filter hieronder op het soort werk, zoals badkamer of verduurzamen."),
